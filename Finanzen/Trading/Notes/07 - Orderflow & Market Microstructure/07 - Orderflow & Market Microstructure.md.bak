@@ -1,0 +1,120 @@
+﻿# 07 - Orderflow & Market Microstructure
+
+[[Themenübersicht|Zurück zur Themenübersicht]]
+
+## Übersicht
+
+### Orderbuch
+
+
+### A]BidA] Bid
+
+
+### A]AskA] Ask
+
+
+### A]Bid−Ask−SpreadA] Bid-Ask-Spread
+
+
+### A]LimitOrderA] Limit Order
+
+
+### A]MarketOrderA] Market Order
+
+
+### A]StopOrderA] Stop Order
+
+
+### A]OrderbuchA] Orderbuch
+
+
+### A]MarkttiefeA] Markttiefe
+
+
+### B]Level−II−DatenB] Level-II-Daten
+
+
+### B]QueuePositionB] Queue Position
+
+
+### Transaktionsfluss
+
+
+### A]TimeandSalesA] Time and Sales
+
+
+### A]DeltaA] Delta
+
+
+### A]CumulativeVolumeDeltaA] Cumulative Volume Delta
+
+
+### A]AggressiveBuyersA] Aggressive Buyers
+
+
+### A]AggressiveSellersA] Aggressive Sellers
+
+
+### B]FootprintChartB] Footprint Chart
+
+
+### B]Bid−Ask−ImbalanceB] Bid-Ask-Imbalance
+
+
+### B]StackedImbalanceB] Stacked Imbalance
+
+
+### B]DeltaDivergenceB] Delta Divergence
+
+
+### B]AbsorptionB] Absorption
+
+
+### Mikrostruktur
+
+
+### A]Liquidita¨tA] Liquidität
+
+
+### A]SlippageA] Slippage
+
+
+### A]MarketImpactA] Market Impact
+
+
+### A]PreisfindungA] Preisfindung
+
+
+### B]OrderFlowToxicityB] Order Flow Toxicity
+
+
+### B]AdverseSelectionB] Adverse Selection
+
+
+### B]HiddenLiquidityB] Hidden Liquidity
+
+
+### B]IcebergOrderB] Iceberg Order
+
+
+### B]DarkPoolB] Dark Pool
+
+
+### B]SmartOrderRoutingB] Smart Order Routing
+
+
+### C]Kyle’sLambdaC] Kyle’s Lambda
+
+
+### C]VPINC] VPIN
+
+
+### C]PaymentforOrderFlowC] Payment for Order Flow
+
+
+### C]LatencyArbitrageC] Latency Arbitrage
+
+
+### C]QuoteStuffingC] Quote Stuffing
+
+

@@ -1,0 +1,65 @@
+{
+  "toolLoading": {
+    "profile": "all",
+    "promoted": [],
+    "counters": {
+      "list_vault_files": 1,
+      "search_vault_simple": 3,
+      "get_vault_files": 1
+    },
+    "profiles": {
+      "default": {
+        "profile": "all",
+        "promoted": [],
+        "allowed": null
+      }
+    }
+  },
+  "mcpTransport": {
+    "tokens": [
+      {
+        "id": "default",
+        "label": "Default",
+        "token": "AFt9rVyl7oCPZBcGW6fmbZZzCk3KyxYu54biCleDn-c",
+        "createdAt": 1788457169299
+      },
+      {
+        "id": "lzCtNeXvKNSx",
+        "label": "ClaudeToken",
+        "token": "bwRSO5iRugWSOYVaVKKFolK7hY2rMjATQCkrzmtfg7A",
+        "createdAt": 1788457217089
+      }
+    ],
+    "bearerToken": "AFt9rVyl7oCPZBcGW6fmbZZzCk3KyxYu54biCleDn-c",
+    "livePort": 27200,
+    "eraCounters": {
+      "legacy": 66,
+      "modern": 14
+    },
+    "eraCountersByToken": {
+      "lzCtNeXvKNSx": {
+        "legacy": 66,
+        "modern": 14
+      }
+    }
+  },
+  "semanticSearch": {
+    "provider": "auto",
+    "indexingMode": "live",
+    "unloadModelWhenIdle": false
+  },
+  "mcpClientConfig": {
+    "autoWriteClaudeDesktopConfig": false,
+    "autoWriteTokenId": null
+  },
+  "mcpTools": {
+    "excludedFolders": [
+      "Immos",
+      "Steuern"
+    ],
+    "excludedFoldersConsent": {
+      "version": 1,
+      "acceptedAt": "2026-09-03T17:44:27.368Z"
+    }
+  }
+}

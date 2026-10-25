@@ -1,0 +1,230 @@
+{
+  "main": {
+    "id": "e486d5e528e630e6",
+    "type": "split",
+    "children": [
+      {
+        "id": "31c6874c1c7f9879",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f50330862f4c858e",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Neuer Tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "600636291eeda0b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "9b4866e4a3a62408",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "38b2d96a5fd225c0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Dateiexplorer"
+            }
+          },
+          {
+            "id": "aef66399e5b2a46e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Suchen"
+            }
+          },
+          {
+            "id": "5fd1d69152d6c033",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Lesezeichen"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 492.5
+  },
+  "right": {
+    "id": "f535ff35da511984",
+    "type": "split",
+    "children": [
+      {
+        "id": "047c420a27481ff4",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "482343eaf4ee94ec",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Trading/Notes/02 - Trendanalyse/02 - Trendanalyse.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Rückverweise"
+            }
+          },
+          {
+            "id": "9d53e7af8015c28f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Trading/Notes/02 - Trendanalyse/02 - Trendanalyse.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Ausgehende Links"
+            }
+          },
+          {
+            "id": "260ed6b7e5fd21d0",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "052d9506206742ba",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "Alle Eigenschaften"
+            }
+          },
+          {
+            "id": "baaadd23f0cfb749",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Trading/Notes/02 - Trendanalyse/02 - Trendanalyse.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Gliederung"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Schnellauswahl öffnen": false,
+      "graph:Graph-Ansicht öffnen": false,
+      "canvas:Neuen Canvas erstellen": false,
+      "daily-notes:Heutige Notiz öffnen": false,
+      "templates:Vorlage einfügen": false,
+      "command-palette:Befehlspalette öffnen": false,
+      "bases:Neue Base erstellen": false
+    }
+  },
+  "active": "38b2d96a5fd225c0",
+  "lastOpenFiles": [
+    "Trading/Inbox/Reviewed/_Errors/1a168e150e295b77.json",
+    "Trading/Research/Analysten/The Long Investor/Technisch/MSTR/Aktueller Stand/MSTR - Aktueller Analystenstand.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/LULU/Aktueller Stand/LULU - Aktueller Analystenstand.md",
+    "Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Aktueller Stand/ASTS - Aktueller Analystenstand.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Aktueller Stand/_History/2026-09-05T11-45-06-579Z - ASTS - Aktueller Analystenstand.md",
+    "Trading/Themenübersicht.md",
+    "Trading/Templates/Wissensnotiz.md",
+    "Trading/Templates/Quellenanalyse.md",
+    "Trading/System/Vault-Struktur.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/NFLX/Updates/2026-09-04 - NFLX - Analysten-Update.md",
+    "Trading/Research/Analysten/The Long Investor/LULU/Status/LULU - Aktueller Analystenstand.md",
+    "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen.md",
+    "Trading/Notes/11 - Indikatoren/11 - Indikatoren.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/TGT/Aktueller Stand/TGT - Aktueller Analystenstand.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Updates/2026-09-04 - ASTS - Analysten-Update.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Updates/ASTS - Aktueller Analystenstand - Review.md",
+    "Trading/Research/Analysten/The Long Investor/Technisch/NFLX/Aktueller Stand/NFLX - Aktueller Analystenstand.md",
+    "Trading/Templates/Analysten-Update.md",
+    "Trading/Notes/04 - Chartmuster/04 - Chartmuster.md",
+    "Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse.md",
+    "Trading/Books/01 - Marktstruktur & Price Action/David R. Aronson(auth.) - Evidence-Based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf.pdf",
+    "Trading/Research/Analysten/The Long Investor/Technisch/LULU/Aktueller Stand/_History/2026-09-05T11-54-52-924Z - LULU - Aktueller Analystenstand.md",
+    "Trading/Notes/18 - Positionsmanagement/18 - Positionsmanagement.md",
+    "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände.md",
+    "Trading/Books/01 - Marktstruktur & Price Action/Technical Analysis of the Financial Markets_ A Comprehensive Guide to Trading Methods and Applica...{John J. Murphy}(1999, New York Institute of Finance){114879498} libgen.li.pdf",
+    "Trading/Books/01 - Marktstruktur & Price Action/Markets in Profile (Profiting from the Auction Process) __ {Dalton, James_ Dalton, Robert Bevan_ Jones, Eric T.}(2012 January 02, John Wiley &amp_ Sons, Inc.)[10.1002_9781119196709]{84338612} libgen.li.pdf",
+    "Trading/Books/10 - Elliott-Wellen/Unbenannt.md",
+    "Trading/Research/Analysten/The Long Investor/LULU/Status",
+    "Trading/Research/Analysten/The Long Investor/LULU",
+    "Trading/Inbox/Reviewed/2026-09-12 - SE - Technische Analyse.md",
+    "Trading/System/Automation/MediaWork/aHR0cHM6Ly93d3cueW91dHViZS5jb20vd2F0Y2g_dj0wV193",
+    "Trading/Research/Quellen/Medien/Transkripte",
+    "Trading/Research/Quellen/Medien",
+    "Trading/Media/Inbox/media-queue.jsonl",
+    "Trading/System/Automation/MediaWork",
+    "Unbenannt.canvas",
+    "Pasted image 20260903204359.png",
+    "Pasted image 20260903204352.png",
+    "Pasted image 20260903204330.png"
+  ]
+}

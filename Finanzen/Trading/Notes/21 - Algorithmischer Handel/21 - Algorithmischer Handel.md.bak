@@ -1,0 +1,120 @@
+﻿# 21 - Algorithmischer Handel
+
+[[Themenübersicht|Zurück zur Themenübersicht]]
+
+## Übersicht
+
+### Systementwicklung
+
+
+### A]RegelbasiertesHandelssystemA] Regelbasiertes Handelssystem
+
+
+### A]SignaldefinitionA] Signaldefinition
+
+
+### A]Entry−LogikA] Entry-Logik
+
+
+### A]Exit−LogikA] Exit-Logik
+
+
+### A]BacktestingA] Backtesting
+
+
+### A]Out−of−Sample−TestA] Out-of-Sample-Test
+
+
+### A]Walk−Forward−AnalyseA] Walk-Forward-Analyse
+
+
+### A]TransaktionskostenmodellA] Transaktionskostenmodell
+
+
+### A]Slippage−ModellA] Slippage-Modell
+
+
+### A]SurvivorshipBiasA] Survivorship Bias
+
+
+### Validierung
+
+
+### A]Look−AheadBiasA] Look-Ahead Bias
+
+
+### A]DataSnoopingA] Data Snooping
+
+
+### A]OverfittingA] Overfitting
+
+
+### A]Parameterstabilita¨tA] Parameterstabilität
+
+
+### B]Cross−ValidationB] Cross-Validation
+
+
+### B]PurgedCross−ValidationB] Purged Cross-Validation
+
+
+### B]EmbargoingB] Embargoing
+
+
+### B]Sensitivita¨tsanalyseB] Sensitivitätsanalyse
+
+
+### B]RobustheitstestB] Robustheitstest
+
+
+### B]PaperTradingB] Paper Trading
+
+
+### Strategien und Ausführung
+
+
+### B]StatisticalArbitrageB] Statistical Arbitrage
+
+
+### B]PairsTradingB] Pairs Trading
+
+
+### B]MarketMakingB] Market Making
+
+
+### B]Trend−Following−SystemB] Trend-Following-System
+
+
+### B]Mean−Reversion−SystemB] Mean-Reversion-System
+
+
+### B]Event−Driven−SystemB] Event-Driven-System
+
+
+### B]VWAP−AlgorithmusB] VWAP-Algorithmus
+
+
+### B]TWAP−AlgorithmusB] TWAP-Algorithmus
+
+
+### B]ImplementationShortfallB] Implementation Shortfall
+
+
+### B]SmartOrderRouterB] Smart Order Router
+
+
+### C]ReinforcementLearningC] Reinforcement Learning
+
+
+### C]GeneticProgrammingC] Genetic Programming
+
+
+### C]EnsembleLearningC] Ensemble Learning
+
+
+### C]AlternativeDataPipelineC] Alternative Data Pipeline
+
+
+### C]FeatureEngineeringC] Feature Engineering
+
+
