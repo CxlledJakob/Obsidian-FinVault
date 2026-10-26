@@ -84,4 +84,5 @@ We have been here before.
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/SLV/Status/SLV - Aktueller Analystenstand|Aktueller Analystenstand]]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/SLV/Updates/2026-09-04 - SLV - Analysten-Update|2026-09-04]]

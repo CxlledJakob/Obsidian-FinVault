@@ -11,9 +11,6 @@ letztes_update: "[[ASTS - Aktueller Analystenstand - Review]]"
 anzahl_beruecksichtigter_updates: 2
 aktualisiert_am: 2026-09-05T11:43:55.296Z
 ---
-Lower High
-# ASTS - Aktueller Analystenstand
-
 # ASTS - Aktueller Analystenstand
 
 ## Zusammenfassung
@@ -84,7 +81,8 @@ Nicht genannt
 - Importart: Gmail-Automation
 
 ## Verknüpfungen
-- [[Trading/Research/Analysten/The Long Investor/ASTS/Status/ASTS - Aktueller Analystenstand|Aktueller Analystenstand]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Updates/2026-09-04 - ASTS - Analysten-Update|2026-09-04]]
 
 ## Offene Bestaetigungen
 
@@ -116,4 +114,4 @@ Nicht genannt.
 
 ## Verwendete Einzelupdates
 
-Nicht genannt.
+- [[Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Updates/2026-09-04 - ASTS - Analysten-Update|2026-09-04]]

@@ -89,4 +89,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/NFLX/Status/NFLX - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/NFLX/Aktueller Stand/NFLX - Aktueller Analystenstand|Aktueller Analystenstand]]

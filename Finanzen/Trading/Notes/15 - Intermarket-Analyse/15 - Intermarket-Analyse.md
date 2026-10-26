@@ -1,105 +1,48 @@
+---
+typ: übersicht
+status: aktiv
+hauptthema_nummer: 15
+---
+
 # 15 - Intermarket-Analyse
 
-[[Themenübersicht|Zurück zur Themenübersicht]]
-
-## Übersicht
-
-### Cross-Asset-Beziehungen
-
-
-### [A] Aktien-Anleihen-Korrelation
-
-
-### [A] Aktien-Dollar-Beziehung
-
-
-### [A] Rohstoff-Dollar-Beziehung
-
-
-### [A] Gold-Realzins-Beziehung
-
-
-### [A] Öl-Inflations-Beziehung
-
-
-### [A] Renditekurven-Aktien-Beziehung
-
-
-### [B] Kupfer-Gold-Ratio
-
-
-### [B] Gold-Silber-Ratio
-
-
-### [B] Öl-Gas-Ratio
-
-
-### [B] Aktien-Kredit-Korrelation
-
-
-### Risikoindikatoren
-
-
-### [A] Credit Spreads
-
-
-### [A] High-Yield-Spreads
-
-
-### [A] Volatilitätsindex
-
-
-### [A] Dollarindex
-
-
-### [A] Zinsstrukturkurve
-
-
-### [B] Swap Spreads
-
-
-### [B] Cross-Currency-Basis
-
-
-### [B] Emerging-Markets-Spreads
-
-
-### [B] Financial Conditions Index
-
-
-### [B] Baltic Dry Index
-
-
-### Relative Märkte
-
-
-### [A] Sektorrotation
-
-
-### [A] Style Rotation
-
-
-### [A] Risk-on
-
-
-### [A] Risk-off
-
-
-### [B] Defensiv-Zyklisch-Ratio
-
-
-### [B] Small-Cap-Large-Cap-Ratio
-
-
-### [B] Growth-Value-Ratio
-
-
-### [B] Marktbreite
-
-
-### [C] Cross-Asset-Momentum
-
-
-### [C] Lead-Lag-Beziehung
-
-
+[[Trading/Themenübersicht|Zurück zur Themenübersicht]]
+
+## Cross-Asset-Beziehungen
+
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Aktien-Anleihen-Korrelation|Aktien-Anleihen-Korrelation]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Aktien-Dollar-Beziehung|Aktien-Dollar-Beziehung]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Rohstoff-Dollar-Beziehung|Rohstoff-Dollar-Beziehung]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Gold-Realzins-Beziehung|Gold-Realzins-Beziehung]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Öl-Inflations-Beziehung|Öl-Inflations-Beziehung]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Renditekurven-Aktien-Beziehung|Renditekurven-Aktien-Beziehung]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Kupfer-Gold-Ratio|Kupfer-Gold-Ratio]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Gold-Silber-Ratio|Gold-Silber-Ratio]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Öl-Gas-Ratio|Öl-Gas-Ratio]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Aktien-Kredit-Korrelation|Aktien-Kredit-Korrelation]]
+
+## Risikoindikatoren
+
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Credit Spreads|Credit Spreads]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/High-Yield-Spreads|High-Yield-Spreads]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Volatilitätsindex|Volatilitätsindex]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Dollarindex|Dollarindex]]
+- [A] [[Trading/Notes/24 - Makroökonomie/Zinsstrukturkurve|Zinsstrukturkurve]] *(Hauptthema: [[Trading/Notes/24 - Makroökonomie/24 - Makroökonomie|24 - Makroökonomie]])*
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Swap Spreads|Swap Spreads]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Cross-Currency-Basis|Cross-Currency-Basis]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Emerging-Markets-Spreads|Emerging-Markets-Spreads]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Financial Conditions Index|Financial Conditions Index]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Baltic Dry Index|Baltic Dry Index]]
+
+## Relative Märkte
+
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Sektorrotation|Sektorrotation]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Style Rotation|Style Rotation]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Risk-on|Risk-on]]
+- [A] [[Trading/Notes/15 - Intermarket-Analyse/Risk-off|Risk-off]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Defensiv-Zyklisch-Ratio|Defensiv-Zyklisch-Ratio]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Small-Cap-Large-Cap-Ratio|Small-Cap-Large-Cap-Ratio]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Growth-Value-Ratio|Growth-Value-Ratio]]
+- [B] [[Trading/Notes/15 - Intermarket-Analyse/Marktbreite|Marktbreite]]
+- [C] [[Trading/Notes/15 - Intermarket-Analyse/Cross-Asset-Momentum|Cross-Asset-Momentum]]
+- [C] [[Trading/Notes/15 - Intermarket-Analyse/Lead-Lag-Beziehung|Lead-Lag-Beziehung]]

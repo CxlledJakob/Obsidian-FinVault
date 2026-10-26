@@ -14,8 +14,6 @@ aktualisiert_am: 2026-09-05T11:54:52.855Z
 
 # LULU - Aktueller Analystenstand
 
-# LULU - Aktueller Analystenstand
-
 # 2026-09-05 - LULU - Analysten-Update
 
 ## Zusammenfassung
@@ -84,7 +82,8 @@ $LULU management have to prove to investors that they have what it takes to prod
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/LULU/Status/LULU - Aktueller Analystenstand|Aktueller Analystenstand]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/LULU/Updates/2026-09-04 - LULU - Analysten-Update|2026-09-04]]
 
 ## Offene Bestaetigungen
 
@@ -116,4 +115,4 @@ Nicht genannt.
 
 ## Verwendete Einzelupdates
 
-Nicht genannt.
+- [[Trading/Research/Analysten/The Long Investor/Technisch/LULU/Updates/2026-09-04 - LULU - Analysten-Update|2026-09-04]]

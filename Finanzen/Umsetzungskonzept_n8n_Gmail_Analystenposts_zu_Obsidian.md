@@ -558,7 +558,7 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem späteren Status-Workflow
 
 ## Verknüpfungen
 
-- [[Trading/Research/Analysten/The Long Investor/<TICKER>/Status/<TICKER> - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/<TICKER>/Aktueller Stand/<TICKER> - Aktueller Analystenstand|Aktueller Analystenstand]]
 ```
 
 ## Node 11: Markdown in Datei umwandeln

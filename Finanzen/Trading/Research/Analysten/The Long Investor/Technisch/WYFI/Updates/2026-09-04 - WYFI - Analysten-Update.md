@@ -91,4 +91,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/WYFI/Status/WYFI - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/WYFI/Aktueller Stand/WYFI - Aktueller Analystenstand|Aktueller Analystenstand]]

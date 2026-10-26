@@ -1,71 +1,40 @@
----  
+---
+typ: wissen
+status: entwurf
+hauptthema: "[[Trading/Notes/NN - Hauptthema/NN - Hauptthema|NN - Hauptthema]]"
+weitere_hauptthemen: []
+unterthema: ""
+priorität: 
+aliases: []
+voraussetzung: []
+verwandt: []
+quellen: []
+erstellt: {{date:YYYY-MM-DD}}
+aktualisiert: {{date:YYYY-MM-DD}}
+---
 
-typ: wissen  
+# {{title}}
 
-status: entwurf  
+## Kurzdefinition
 
-hauptthema:  
+## Kernaussagen
 
-unterthema:  
+## Funktionsweise
 
-priorität:  
+## Voraussetzungen
 
-quellen: []  
+## Anwendung im Trading
 
-erstellt:  
+## Regeln und Kriterien
 
-aktualisiert:  
+## Risiken und Grenzen
 
----  
+## Beispiele
 
-  
+## Unterschiedliche Quellenpositionen
 
-# {{begriff}}  
+## Eigene Erkenntnisse
 
-  
-
-## Kurzdefinition  
-
-  
-
-## Kernaussagen  
-
-  
-
-## Funktionsweise  
-
-  
-
-## Voraussetzungen  
-
-  
-
-## Anwendung im Trading  
-
-  
-
-## Regeln und Kriterien  
-
-  
-
-## Risiken und Grenzen  
-
-  
-
-## Beispiele  
-
-  
-
-## Unterschiedliche Quellenpositionen  
-
-  
-
-## Eigene Erkenntnisse  
-
-  
-
-## Quellen und Fundstellen  
-
-  
+## Quellen und Fundstellen
 
 ## Verwandte Themen
