@@ -79,4 +79,5 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/MRAM/Status/MRAM - Aktueller Analystenstand|Aktueller Analystenstand]]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/MRAM/Updates/2026-09-04 - MRAM - Analysten-Update|2026-09-04]]

@@ -90,4 +90,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/NVO/Status/NVO - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/NVO/Aktueller Stand/NVO - Aktueller Analystenstand|Aktueller Analystenstand]]

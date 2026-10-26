@@ -85,4 +85,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/TGT/Status/TGT - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/TGT/Aktueller Stand/TGT - Aktueller Analystenstand|Aktueller Analystenstand]]

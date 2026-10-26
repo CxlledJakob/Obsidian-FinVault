@@ -82,4 +82,5 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknüpfungen
-- [[Trading/Research/Analysten/The Long Investor/OWL/Status/OWL - Aktueller Analystenstand|Aktueller Analystenstand]]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/OWL/Updates/2026-09-04 - OWL - Analysten-Update|2026-09-04]]

@@ -70,6 +70,8 @@ Die Priorität beschreibt die Lernreihenfolge. Sie ist keine Aussage über die Q
 
 - `inbox`: Quelle oder Inhalt wurde noch nicht verarbeitet  
 
+- `platzhalter`: Wissensnotiz ist als Gerüst angelegt (Frontmatter und Abschnitte), enthält aber noch keinen Inhalt  
+
 - `entwurf`: Inhalt wurde erstellt, aber noch nicht geprüft  
 
 - `review`: Inhalt wartet auf manuelle Prüfung  
@@ -193,3 +195,25 @@ Bei widersprüchlichen Aussagen bleiben die unterschiedlichen Quellenpositionen 
   
 
 Eine KI darf Widersprüche zusammenfassen, aber nicht eigenständig eine Position als abschließend richtig festlegen.
+
+
+## Verknüpfungsfelder in Wissensnotizen
+
+Beziehungen zwischen Notizen werden als Properties im Frontmatter gepflegt. Sie erscheinen in Obsidian im Graphen und in den Backlinks und sind für spätere Auswertungen (Graph-Export, Chatbot) maschinell lesbar. Links im Fließtext gelten nur als allgemeiner Verweis.
+
+| Feld | Bedeutung | Beispiel |
+|---|---|---|
+| `hauptthema` | genau ein primäres Hauptthema (Indexseite) | `"[[Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen\|10 - Elliott-Wellen]]"` |
+| `weitere_hauptthemen` | weitere Hauptthemen, in deren Index der Begriff ebenfalls geführt wird | `["[[…/13 - Volatilität\|13 - Volatilität]]"]` |
+| `unterthema` | Unterthema laut Taxonomie (Text) | `"Impulsstruktur"` |
+| `voraussetzung` | Begriffe, die zum Verständnis vorausgesetzt werden („baut auf“) | `["[[…/Swing High\|Swing High]]"]` |
+| `verwandt` | fachlich eng verwandte Begriffe ohne Rangfolge | `["[[…/Fibonacci-Projektion\|Fibonacci-Projektion]]"]` |
+| `quellen` | Quellenanalysen unter `Trading/Research/Quellen`, aus denen der Inhalt stammt | `["[[Trading/Research/Quellen/…\|Buch X]]"]` |
+| `aliases` | Synonyme und englische Kurzformen, über die Obsidian und n8n den Begriff finden | `[Fib, Fibo]` |
+
+Regeln:
+
+- Verknüpft wird nur auf Begriffe, die im Register `Trading/System/Automation/concept-links.json` stehen. Es werden keine neuen Begriffsnotizen über Links „erfunden“.
+- Jeder Begriff hat genau eine Notiz. Wird ein Begriff in mehreren Hauptthemen geführt, liegt die Notiz im primären Hauptthema (`primaer: true` im Register); die anderen Indexseiten verlinken auf dieselbe Notiz.
+- Wissensnotizen werden ausschließlich aus geprüften Quellen befüllt. Jede inhaltliche Aussage muss über `quellen` und den Abschnitt „Quellen und Fundstellen“ nachvollziehbar sein.
+

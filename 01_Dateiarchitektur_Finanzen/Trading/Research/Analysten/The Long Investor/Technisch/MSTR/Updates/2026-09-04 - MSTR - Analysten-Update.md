@@ -84,4 +84,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/MSTR/Status/MSTR - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/MSTR/Aktueller Stand/MSTR - Aktueller Analystenstand|Aktueller Analystenstand]]

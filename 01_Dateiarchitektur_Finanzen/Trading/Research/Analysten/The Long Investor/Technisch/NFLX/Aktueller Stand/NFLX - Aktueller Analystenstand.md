@@ -81,4 +81,5 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknüpfungen
-- [[Trading/Research/Analysten/The Long Investor/NFLX/Status/NFLX - Aktueller Analystenstand|Aktueller Analystenstand]]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/NFLX/Updates/2026-09-04 - NFLX - Analysten-Update|2026-09-04]]
