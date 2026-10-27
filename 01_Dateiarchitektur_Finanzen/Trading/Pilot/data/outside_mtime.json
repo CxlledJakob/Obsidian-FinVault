@@ -1,0 +1,749 @@
+{
+  "files": [
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Test.txt",
+      "mtime_ns": 1793050689753272100,
+      "size": 3
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Themenübersicht.md",
+      "mtime_ns": 1793050689753272100,
+      "size": 2297
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Vault-Struktur.md",
+      "mtime_ns": 1793050689750271000,
+      "size": 24866
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Templates\\Analysten-Update.md",
+      "mtime_ns": 1793050689751271200,
+      "size": 1453
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Templates\\Analysten-Wertpapierstatus.md",
+      "mtime_ns": 1793050689751271200,
+      "size": 968
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Templates\\Konventionen.md",
+      "mtime_ns": 1793050689752271500,
+      "size": 3860
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Templates\\Quellenanalyse.md",
+      "mtime_ns": 1793050689752271500,
+      "size": 1133
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Templates\\Wissensnotiz.md",
+      "mtime_ns": 1793050689753272100,
+      "size": 572
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\10 - Elliott-Wellen\\Unbenannt.md",
+      "mtime_ns": 1793050689647273100,
+      "size": 0
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\11 - Indikatoren\\11 - Indikatoren.md",
+      "mtime_ns": 1793050689648275300,
+      "size": 1186
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\11 - Indikatoren\\11 - Indikatoren.md.bak",
+      "mtime_ns": 1793050689648275300,
+      "size": 1777
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\12 - Momentum\\12 - Momentum.md",
+      "mtime_ns": 1793050689649276200,
+      "size": 1143
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\12 - Momentum\\12 - Momentum.md.bak",
+      "mtime_ns": 1793050689650276000,
+      "size": 1731
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\13 - Volatilität\\13 - Volatilität.md",
+      "mtime_ns": 1793050689650276000,
+      "size": 1206
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\13 - Volatilität\\13 - Volatilität.md.bak",
+      "mtime_ns": 1793050689651277200,
+      "size": 1851
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\14 - Marktzyklen\\14 - Marktzyklen.md",
+      "mtime_ns": 1793050689652276300,
+      "size": 1052
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\14 - Marktzyklen\\14 - Marktzyklen.md.bak",
+      "mtime_ns": 1793050689652276300,
+      "size": 1571
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\15 - Intermarket-Analyse\\15 - Intermarket-Analyse.md",
+      "mtime_ns": 1793050689653275900,
+      "size": 1164
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\15 - Intermarket-Analyse\\15 - Intermarket-Analyse.md.bak",
+      "mtime_ns": 1793050689654276300,
+      "size": 1831
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\16 - Quantitative & statistische Konzepte\\16 - Quantitative & statistische Konzepte.md",
+      "mtime_ns": 1793050689654276300,
+      "size": 1188
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\16 - Quantitative & statistische Konzepte\\16 - Quantitative & statistische Konzepte.md.bak",
+      "mtime_ns": 1793050689655274400,
+      "size": 1753
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\17 - Risikomanagement\\17 - Risikomanagement.md",
+      "mtime_ns": 1793050689656277000,
+      "size": 1189
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\17 - Risikomanagement\\17 - Risikomanagement.md.bak",
+      "mtime_ns": 1793050689656277000,
+      "size": 1740
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\18 - Positionsmanagement\\18 - Positionsmanagement.md",
+      "mtime_ns": 1793050689657272700,
+      "size": 1027
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\18 - Positionsmanagement\\18 - Positionsmanagement.md.bak",
+      "mtime_ns": 1793050689657272700,
+      "size": 1481
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\19 - Handelspsychologie\\19 - Handelspsychologie.md",
+      "mtime_ns": 1793050689658272400,
+      "size": 963
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\19 - Handelspsychologie\\19 - Handelspsychologie.md.bak",
+      "mtime_ns": 1793050689658272400,
+      "size": 1381
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\20 - Trading-Performance & Auswertung\\20 - Trading-Performance & Auswertung.md",
+      "mtime_ns": 1793050689659271300,
+      "size": 1284
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\20 - Trading-Performance & Auswertung\\20 - Trading-Performance & Auswertung.md.bak",
+      "mtime_ns": 1793050689660272800,
+      "size": 1891
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\21 - Algorithmischer Handel\\21 - Algorithmischer Handel.md",
+      "mtime_ns": 1793050689660272800,
+      "size": 1289
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\21 - Algorithmischer Handel\\21 - Algorithmischer Handel.md.bak",
+      "mtime_ns": 1793050689661271300,
+      "size": 1961
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\22 - Marktanomalien & Behavioral Finance\\22 - Marktanomalien & Behavioral Finance.md",
+      "mtime_ns": 1793050689662273400,
+      "size": 1284
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\22 - Marktanomalien & Behavioral Finance\\22 - Marktanomalien & Behavioral Finance.md.bak",
+      "mtime_ns": 1793050689662273400,
+      "size": 1932
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\23 - Fundamentalanalyse\\23 - Fundamentalanalyse.md",
+      "mtime_ns": 1793050689663273000,
+      "size": 1125
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\23 - Fundamentalanalyse\\23 - Fundamentalanalyse.md.bak",
+      "mtime_ns": 1793050689663273000,
+      "size": 1675
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\24 - Makroökonomie\\24 - Makroökonomie.md",
+      "mtime_ns": 1793050689664272400,
+      "size": 1455
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\24 - Makroökonomie\\24 - Makroökonomie.md.bak",
+      "mtime_ns": 1793050689664272400,
+      "size": 2175
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\25 - Unternehmenskennzahlen\\25 - Unternehmenskennzahlen.md",
+      "mtime_ns": 1793050689665272000,
+      "size": 1778
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\25 - Unternehmenskennzahlen\\25 - Unternehmenskennzahlen.md.bak",
+      "mtime_ns": 1793050689665272000,
+      "size": 2685
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\A Complete Guide to Volume Price Analysis.pdf",
+      "mtime_ns": 1793118955021298000,
+      "size": 5092033
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\A.J. Frost, Robert R. Prechter - Elliott Wave Principle_ Key To Market Behavior (2005, New Classics Library) - libgen.li.pdf",
+      "mtime_ns": 1764945559000000000,
+      "size": 69874947
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Advances in Financial Machine Learning.pdf",
+      "mtime_ns": 1793119491546885500,
+      "size": 8893995
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Algorithmic Trading_ Winning Strategies and Their Rationale.pdf",
+      "mtime_ns": 1793119456156056400,
+      "size": 9243351
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Encyclopedia of Chart Patterns.epub",
+      "mtime_ns": 1793118789603700000,
+      "size": 43568737
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf",
+      "mtime_ns": 1793119342054984000,
+      "size": 2102032
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf",
+      "mtime_ns": 1793119194753194000,
+      "size": 7671402
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Steve Nison - Japanese Candlestick Charting Techniques_ A Contemporary Guide to the Ancient Investment Techniques of the Far East (1991, New York Institute of Finance) - libgen.li.pdf",
+      "mtime_ns": 1764945532000000000,
+      "size": 28919487
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\The New Trading For a Living.pdf",
+      "mtime_ns": 1793119294058317200,
+      "size": 5515869
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\The Richard D.Wyckoff Method of Trading and Investing in Stocks.pdf",
+      "mtime_ns": 1793119065826256700,
+      "size": 3308649
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\The Three Skills of Top Trading_ Behavioral Systems Building, Pattern Recognition, and Mental State Management (Wiley Trading).pdf",
+      "mtime_ns": 1793119002610640800,
+      "size": 6879716
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Zero to Hero in Cryptocurrency Trading (1).epub",
+      "mtime_ns": 1793118821751530300,
+      "size": 25904133
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Books\\Sammlung\\Zero to Hero in Cryptocurrency Trading.epub",
+      "mtime_ns": 1793118788395412400,
+      "size": 25904133
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Analyst-New\\2026-08-31 - NVDA - Original.md",
+      "mtime_ns": 1793050689666273800,
+      "size": 1010
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Analyst-New\\2026-09-03 - NVDA - Original.md",
+      "mtime_ns": 1793050689667271600,
+      "size": 1051
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\New\\applsci-14-11897.pdf",
+      "mtime_ns": 1793050689679271400,
+      "size": 1966798
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Pilot_Py\\Markets in Profile_ Profiting from the Auction Process.pdf",
+      "mtime_ns": 1793118159237496700,
+      "size": 3711506
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Pilot_Py\\Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf",
+      "mtime_ns": 1793118221527017100,
+      "size": 17474053
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Pilot_Py\\Technical Analysis of the Financial Markets_ A Comprehensive Guide to Trading Methods and Applications (New York Institute of Finance).pdf",
+      "mtime_ns": 1793118016423992800,
+      "size": 21333139
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Reviewed\\2026-09-12 - SE - Technische Analyse.md",
+      "mtime_ns": 1793050689681273300,
+      "size": 3833
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Reviewed\\_Errors\\1a06bd154b34dff4.json",
+      "mtime_ns": 1793050689681273300,
+      "size": 8422
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Reviewed\\_Errors\\1a168e150e295b77.json",
+      "mtime_ns": 1793050689682272500,
+      "size": 16485
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Inbox\\Reviewed\\_Errors\\2026-09-04 - LULU - Analysten-Update.md",
+      "mtime_ns": 1793050689682272500,
+      "size": 2431
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Media\\Inbox\\media-queue.jsonl",
+      "mtime_ns": 1793050689683271800,
+      "size": 62
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\01 - Marktstruktur & Price Action\\01 - Marktstruktur & Price Action.md",
+      "mtime_ns": 1793050689684271400,
+      "size": 1176
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\01 - Marktstruktur & Price Action\\01 - Marktstruktur & Price Action.md.bak",
+      "mtime_ns": 1793050689685275600,
+      "size": 1570
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\02 - Trendanalyse\\02 - Trendanalyse.md",
+      "mtime_ns": 1793050689686272000,
+      "size": 1069
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\02 - Trendanalyse\\02 - Trendanalyse.md.bak",
+      "mtime_ns": 1793050689686272000,
+      "size": 1614
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\03 - Unterstützungen & Widerstände\\03 - Unterstützungen & Widerstände.md",
+      "mtime_ns": 1793050689687271900,
+      "size": 1151
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\03 - Unterstützungen & Widerstände\\03 - Unterstützungen & Widerstände.md.bak",
+      "mtime_ns": 1793050689688271300,
+      "size": 1714
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\04 - Chartmuster\\04 - Chartmuster.md",
+      "mtime_ns": 1793050689689271300,
+      "size": 1057
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\04 - Chartmuster\\04 - Chartmuster.md.bak",
+      "mtime_ns": 1793050689689271300,
+      "size": 1547
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\05 - Candlestick-Formationen\\05 - Candlestick-Formationen.md",
+      "mtime_ns": 1793050689690271900,
+      "size": 1014
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\05 - Candlestick-Formationen\\05 - Candlestick-Formationen.md.bak",
+      "mtime_ns": 1793050689691271700,
+      "size": 1427
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\06 - Volumenanalyse\\06 - Volumenanalyse.md",
+      "mtime_ns": 1793050689691271700,
+      "size": 1121
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\06 - Volumenanalyse\\06 - Volumenanalyse.md.bak",
+      "mtime_ns": 1793050689692271500,
+      "size": 1644
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\07 - Orderflow & Market Microstructure\\07 - Orderflow & Market Microstructure.md",
+      "mtime_ns": 1793050689693272200,
+      "size": 1137
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\07 - Orderflow & Market Microstructure\\07 - Orderflow & Market Microstructure.md.bak",
+      "mtime_ns": 1793050689693272200,
+      "size": 1618
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\08 - Smart Money Concepts (SMC)\\08 - Smart Money Concepts (SMC).md",
+      "mtime_ns": 1793050689694272200,
+      "size": 1179
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\08 - Smart Money Concepts (SMC)\\08 - Smart Money Concepts (SMC).md.bak",
+      "mtime_ns": 1793050689694272200,
+      "size": 1710
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\09 - Wyckoff-Methode\\09 - Wyckoff-Methode.md",
+      "mtime_ns": 1793050689695272300,
+      "size": 1070
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\09 - Wyckoff-Methode\\09 - Wyckoff-Methode.md.bak",
+      "mtime_ns": 1793050689696272200,
+      "size": 1542
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\10 - Elliott-Wellen\\10 - Elliott-Wellen.md",
+      "mtime_ns": 1793050689697272500,
+      "size": 999
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\10 - Elliott-Wellen\\10 - Elliott-Wellen.md.bak",
+      "mtime_ns": 1793050689697272500,
+      "size": 1424
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\11 - Indikatoren\\11 - Indikatoren.md",
+      "mtime_ns": 1793050689698273200,
+      "size": 1183
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\11 - Indikatoren\\11 - Indikatoren.md.bak",
+      "mtime_ns": 1793050689698273200,
+      "size": 1777
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\12 - Momentum\\12 - Momentum.md",
+      "mtime_ns": 1793050689699271900,
+      "size": 1143
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\12 - Momentum\\12 - Momentum.md.bak",
+      "mtime_ns": 1793050689700272200,
+      "size": 1731
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\13 - Volatilität\\13 - Volatilität.md",
+      "mtime_ns": 1793050689700272200,
+      "size": 1206
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\13 - Volatilität\\13 - Volatilität.md.bak",
+      "mtime_ns": 1793050689701272100,
+      "size": 1851
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\14 - Marktzyklen\\14 - Marktzyklen.md",
+      "mtime_ns": 1793050689702273500,
+      "size": 1052
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\14 - Marktzyklen\\14 - Marktzyklen.md.bak",
+      "mtime_ns": 1793050689702273500,
+      "size": 1571
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\15 - Intermarket-Analyse\\15 - Intermarket-Analyse.md",
+      "mtime_ns": 1793050689703271900,
+      "size": 1164
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\15 - Intermarket-Analyse\\15 - Intermarket-Analyse.md.bak",
+      "mtime_ns": 1793050689703271900,
+      "size": 1831
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\16 - Quantitative & statistische Konzepte\\16 - Quantitative & statistische Konzepte.md",
+      "mtime_ns": 1793050689704272600,
+      "size": 1188
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\16 - Quantitative & statistische Konzepte\\16 - Quantitative & statistische Konzepte.md.bak",
+      "mtime_ns": 1793050689705272900,
+      "size": 1753
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\17 - Risikomanagement\\17 - Risikomanagement.md",
+      "mtime_ns": 1793050689705272900,
+      "size": 1189
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\17 - Risikomanagement\\17 - Risikomanagement.md.bak",
+      "mtime_ns": 1793050689706273400,
+      "size": 1740
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\18 - Positionsmanagement\\18 - Positionsmanagement.md",
+      "mtime_ns": 1793050689706273400,
+      "size": 1024
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\18 - Positionsmanagement\\18 - Positionsmanagement.md.bak",
+      "mtime_ns": 1793050689707271700,
+      "size": 1481
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\19 - Handelspsychologie\\19 - Handelspsychologie.md",
+      "mtime_ns": 1793050689708273400,
+      "size": 963
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\19 - Handelspsychologie\\19 - Handelspsychologie.md.bak",
+      "mtime_ns": 1793050689708273400,
+      "size": 1381
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\20 - Trading-Performance & Auswertung\\20 - Trading-Performance & Auswertung.md",
+      "mtime_ns": 1793050689709271800,
+      "size": 1284
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\20 - Trading-Performance & Auswertung\\20 - Trading-Performance & Auswertung.md.bak",
+      "mtime_ns": 1793050689709271800,
+      "size": 1891
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\21 - Algorithmischer Handel\\21 - Algorithmischer Handel.md",
+      "mtime_ns": 1793050689710272100,
+      "size": 1289
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\21 - Algorithmischer Handel\\21 - Algorithmischer Handel.md.bak",
+      "mtime_ns": 1793050689711271700,
+      "size": 1961
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\22 - Marktanomalien & Behavioral Finance\\22 - Marktanomalien & Behavioral Finance.md",
+      "mtime_ns": 1793050689711271700,
+      "size": 1284
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\22 - Marktanomalien & Behavioral Finance\\22 - Marktanomalien & Behavioral Finance.md.bak",
+      "mtime_ns": 1793050689712273100,
+      "size": 1932
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\23 - Fundamentalanalyse\\23 - Fundamentalanalyse.md",
+      "mtime_ns": 1793050689712273100,
+      "size": 1125
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\23 - Fundamentalanalyse\\23 - Fundamentalanalyse.md.bak",
+      "mtime_ns": 1793050689713271500,
+      "size": 1675
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\24 - Makroökonomie\\24 - Makroökonomie.md",
+      "mtime_ns": 1793050689714273100,
+      "size": 1455
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\24 - Makroökonomie\\24 - Makroökonomie.md.bak",
+      "mtime_ns": 1793050689714273100,
+      "size": 2175
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\25 - Unternehmenskennzahlen\\25 - Unternehmenskennzahlen.md",
+      "mtime_ns": 1793050689715272000,
+      "size": 1778
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Notes\\25 - Unternehmenskennzahlen\\25 - Unternehmenskennzahlen.md.bak",
+      "mtime_ns": 1793050689715272000,
+      "size": 2685
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Taxonomie\\Themenstruktur.txt",
+      "mtime_ns": 1793050689745272300,
+      "size": 20319
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Sonstige\\2026-09-05 - Allgemein - News.md",
+      "mtime_ns": 1793050689718272100,
+      "size": 1790
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\LULU\\Status\\LULU - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689717272300,
+      "size": 0
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\ASTS\\Aktueller Stand\\ASTS - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689720271500,
+      "size": 3311
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\ASTS\\Updates\\2026-09-04 - ASTS - Analysten-Update.md",
+      "mtime_ns": 1793050689721274100,
+      "size": 3074
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\ASTS\\Updates\\ASTS - Aktueller Analystenstand - Review.md",
+      "mtime_ns": 1793050689722272900,
+      "size": 3132
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\ASTS\\Aktueller Stand\\_History\\2026-09-05T11-45-06-579Z - ASTS - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689721274100,
+      "size": 2912
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\KHC\\Aktueller Stand\\KHC - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689723271700,
+      "size": 3346
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\KHC\\Updates\\2026-09-04 - KHC - Analysten-Update.md",
+      "mtime_ns": 1793050689724271300,
+      "size": 3525
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\LULU\\Aktueller Stand\\LULU - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689725273200,
+      "size": 3861
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\LULU\\Updates\\2026-09-04 - LULU - Analysten-Update.md",
+      "mtime_ns": 1793050689727271500,
+      "size": 3663
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\LULU\\Aktueller Stand\\_History\\2026-09-05T11-54-52-924Z - LULU - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689726272700,
+      "size": 3497
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\MRAM\\Aktueller Stand\\MRAM - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689728270500,
+      "size": 2733
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\MRAM\\Updates\\2026-09-04 - MRAM - Analysten-Update.md",
+      "mtime_ns": 1793050689729272500,
+      "size": 2902
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\MSTR\\Aktueller Stand\\MSTR - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689730272000,
+      "size": 3293
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\MSTR\\Updates\\2026-09-04 - MSTR - Analysten-Update.md",
+      "mtime_ns": 1793050689731271500,
+      "size": 3440
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\NFLX\\Aktueller Stand\\NFLX - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689732272200,
+      "size": 2966
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\NFLX\\Updates\\2026-09-04 - NFLX - Analysten-Update.md",
+      "mtime_ns": 1793050689732272200,
+      "size": 3121
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\NVO\\Aktueller Stand\\NVO - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689733271800,
+      "size": 2536
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\NVO\\Updates\\2026-09-04 - NVO - Analysten-Update.md",
+      "mtime_ns": 1793050689734271700,
+      "size": 2710
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\ORCL\\Aktueller Stand\\ORCL - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689736271200,
+      "size": 3516
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\ORCL\\Updates\\2026-09-04 - ORCL - Analysten-Update.md",
+      "mtime_ns": 1793050689736271200,
+      "size": 3698
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\OWL\\Aktueller Stand\\OWL - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689738272300,
+      "size": 3120
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\OWL\\Updates\\2026-09-04 - OWL - Analysten-Update.md",
+      "mtime_ns": 1793050689739271900,
+      "size": 3288
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\SLV\\Aktueller Stand\\SLV - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689740272400,
+      "size": 2945
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\SLV\\Updates\\2026-09-04 - SLV - Analysten-Update.md",
+      "mtime_ns": 1793050689740272400,
+      "size": 3149
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\TGT\\Aktueller Stand\\TGT - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689741273500,
+      "size": 2648
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\TGT\\Updates\\2026-09-04 - TGT - Analysten-Update.md",
+      "mtime_ns": 1793050689742272000,
+      "size": 2802
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\WYFI\\Aktueller Stand\\WYFI - Aktueller Analystenstand.md",
+      "mtime_ns": 1793050689743271400,
+      "size": 2935
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\Research\\Analysten\\The Long Investor\\Technisch\\WYFI\\Updates\\2026-09-04 - WYFI - Analysten-Update.md",
+      "mtime_ns": 1793050689744272100,
+      "size": 3148
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Automation\\analyst-import-log.jsonl",
+      "mtime_ns": 1793050689746273400,
+      "size": 4181
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Automation\\analyst-routing-errors.jsonl",
+      "mtime_ns": 1793050689746273400,
+      "size": 189
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Automation\\analyst-routing-log.jsonl",
+      "mtime_ns": 1793050689747271100,
+      "size": 2700
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Automation\\analyst-status-draft-log.jsonl",
+      "mtime_ns": 1793050689747271100,
+      "size": 316
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Automation\\analyst-status-update-log.jsonl",
+      "mtime_ns": 1793050689748271600,
+      "size": 1158
+    },
+    {
+      "path": "C:\\Users\\Kuba\\Desktop\\Obsidian_Desktop\\Obsidian-FinVault\\01_Dateiarchitektur_Finanzen\\Trading\\System\\Automation\\concept-links.json",
+      "mtime_ns": 1793050689749271100,
+      "size": 290888
+    }
+  ]
+}

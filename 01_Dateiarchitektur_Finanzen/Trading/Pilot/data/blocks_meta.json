@@ -1,0 +1,24 @@
+{
+  "origin": "ollama",
+  "model": "qwen2.5:3b-instruct-q4_K_M",
+  "runs": [
+    {
+      "origin": "ollama",
+      "model": "qwen2.5:3b-instruct-q4_K_M",
+      "chunk_id": "mom-c05",
+      "file": "Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf",
+      "start": 21,
+      "end": 26,
+      "blocks_written_this_run": 19
+    },
+    {
+      "origin": "ollama",
+      "model": "qwen2.5:3b-instruct-q4_K_M",
+      "chunk_id": "mip-w02",
+      "file": "Markets in Profile_ Profiting from the Auction Process.pdf",
+      "start": 20,
+      "end": 39,
+      "blocks_written_this_run": 54
+    }
+  ]
+}

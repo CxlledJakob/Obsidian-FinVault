@@ -1,0 +1,5 @@
+data/pages.jsonl
+data/blocks.jsonl
+data/checkpoints/
+text/
+pipeline/__pycache__/

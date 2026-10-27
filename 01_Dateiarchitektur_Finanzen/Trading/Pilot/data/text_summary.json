@@ -1,0 +1,34 @@
+{
+  "repaired_records": 0,
+  "files": [
+    {
+      "file": "Markets in Profile_ Profiting from the Auction Process.pdf",
+      "key": "mip",
+      "pdf_pages": 225,
+      "stored_pages": 225,
+      "methods": {
+        "skipped": 225
+      }
+    },
+    {
+      "file": "Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf",
+      "key": "mom",
+      "pdf_pages": 370,
+      "stored_pages": 370,
+      "methods": {
+        "skipped": 370
+      }
+    }
+  ],
+  "chunks": 28,
+  "skipped": [
+    {
+      "file": "Technical Analysis of the Financial Markets_ A Comprehensive Guide to Trading Methods and Applications (New York Institute of Finance).pdf",
+      "key": "murphy",
+      "pdf_pages": 585,
+      "reason": "no text layer",
+      "sampled_chars": 0,
+      "sample_pages": 22
+    }
+  ]
+}
