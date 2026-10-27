@@ -94,4 +94,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/ORCL/Status/ORCL - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/ORCL/Aktueller Stand/ORCL - Aktueller Analystenstand|Aktueller Analystenstand]]

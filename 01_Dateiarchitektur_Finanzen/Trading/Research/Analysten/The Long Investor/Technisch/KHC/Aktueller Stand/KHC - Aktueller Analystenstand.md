@@ -87,4 +87,5 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknüpfungen
-- [[Trading/Research/Analysten/The Long Investor/KHC/Status/KHC - Aktueller Analystenstand|Aktueller Analystenstand]]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/KHC/Updates/2026-09-04 - KHC - Analysten-Update|2026-09-04]]

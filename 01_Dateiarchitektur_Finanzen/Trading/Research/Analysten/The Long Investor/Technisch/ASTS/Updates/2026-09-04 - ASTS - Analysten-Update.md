@@ -90,4 +90,4 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/ASTS/Status/ASTS - Aktueller Analystenstand|Aktueller Analystenstand]]
+- [[Trading/Research/Analysten/The Long Investor/Technisch/ASTS/Aktueller Stand/ASTS - Aktueller Analystenstand|Aktueller Analystenstand]]

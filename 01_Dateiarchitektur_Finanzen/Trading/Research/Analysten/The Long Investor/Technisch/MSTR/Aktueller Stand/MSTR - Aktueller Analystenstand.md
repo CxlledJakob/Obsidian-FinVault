@@ -77,4 +77,5 @@ Noch nicht automatisch bewertet. Dies erfolgt in einem spaeteren Status-Workflow
 - Importart: Gmail-Automation
 
 ## Verknuepfungen
-- [[Trading/Research/Analysten/The Long Investor/MSTR/Status/MSTR - Aktueller Analystenstand|Aktueller Analystenstand]]
+- Analysten-Updates:
+  - [[Trading/Research/Analysten/The Long Investor/Technisch/MSTR/Updates/2026-09-04 - MSTR - Analysten-Update|2026-09-04]]
