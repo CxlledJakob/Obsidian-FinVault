@@ -14,7 +14,7 @@
     {
       "parameters": {
         "mode": "raw",
-        "jsonOutput": "={\n  \"vault\": \"/vault/01_Dateiarchitektur_Finanzen/Trading\",\n  \"fragments\": \"/vault/01_Dateiarchitektur_Finanzen/Trading/Pilot/blocks\",\n  \"notes\": \"/vault/01_Dateiarchitektur_Finanzen/Trading/Notes\",\n  \"taxonomy\": \"/vault/01_Dateiarchitektur_Finanzen/Trading/Research/Taxonomie/Themenstruktur.txt\",\n  \"ollama\": \"http://host.docker.internal:11434/api/generate\",\n  \"model\": \"qwen2.5:3b-instruct-q4_K_M\",\n  \"append\": \"/vault/01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/append_source_link.sh\"\n}",
+        "jsonOutput": "={\n  \"vault\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading\",\n  \"fragments\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Pilot/blocks\",\n  \"notes\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Notes\",\n  \"taxonomy\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Research/Taxonomie/Themenstruktur.txt\",\n  \"ollama\": \"http://host.docker.internal:11434/api/generate\",\n  \"model\": \"qwen2.5:3b-instruct-q4_K_M\",\n  \"append\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/append_source_link.sh\"\n}",
         "options": {}
       },
       "id": "a1b2c3d4-0001-4000-8000-000000000002",

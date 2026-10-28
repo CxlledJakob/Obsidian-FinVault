@@ -17,6 +17,7 @@
     volumes:
       - n8n_data:/home/node/.n8n
       - "C:/Users/Kuba/Desktop/Obsidian_Desktop/Jakob_Obsidian_Finanzen:/vault"
+      - "C:/Users/Kuba/Desktop/Obsidian_Desktop/Obsidian-FinVault:/finvault"
       - "C:/Users/Kuba/n8n-media:/opt/media-pipeline"
     extra_hosts:
       - "host.docker.internal:host-gateway"
