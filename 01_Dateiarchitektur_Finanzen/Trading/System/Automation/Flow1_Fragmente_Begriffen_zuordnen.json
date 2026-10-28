@@ -174,7 +174,7 @@
     "Laufkonfiguration": { "main": [[{ "node": "Fragmentdateien auflisten", "type": "main", "index": 0 }]] },
     "Fragmentdateien auflisten": { "main": [[{ "node": "Ein Fragment pro Datensatz", "type": "main", "index": 0 }]] },
     "Ein Fragment pro Datensatz": { "main": [[{ "node": "Nächstes Fragment", "type": "main", "index": 0 }]] },
-    "Nächstes Fragment": { "main": [[{ "node": "Fragment und Themenliste lesen", "type": "main", "index": 0 }], []] },
+    "Nächstes Fragment": { "main": [[], [{ "node": "Fragment und Themenliste lesen", "type": "main", "index": 0 }]] },
     "Fragment und Themenliste lesen": { "main": [[{ "node": "Bewertungsauftrag bauen", "type": "main", "index": 0 }]] },
     "Bewertungsauftrag bauen": { "main": [[{ "node": "Fragment mit Ollama bewerten", "type": "main", "index": 0 }]] },
     "Fragment mit Ollama bewerten": { "main": [[{ "node": "Nur echte Begriffe behalten", "type": "main", "index": 0 }]] },
