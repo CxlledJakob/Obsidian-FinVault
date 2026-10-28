@@ -23,7 +23,7 @@
       "typeVersion": 3.4,
       "position": [480, 400],
       "notesInFlow": true,
-      "notes": "Einzige Stelle für Pfade und Modell. n8n in Docker: host.docker.internal. n8n direkt auf Windows: http://127.0.0.1:11434/api/generate. Kein API-Key."
+      "notes": "Pfade zeigen auf /finvault, das ist Obsidian-FinVault im Container. /vault bleibt der alte Jakob-Vault. Ollama: host.docker.internal, kein API-Key."
     },
     {
       "parameters": {
