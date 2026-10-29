@@ -1,21 +1,21 @@
 ---
-description: Use when the user asks to fill or extend FinVault concept notes from fragments already linked in those notes. No fragment folder is required.
+description: Use when the user says go to fill FinVault concept notes from fragments already linked in those notes. No folder is required.
 alwaysApply: false
 ---
 
 # Begriffsnotiz aus verlinkten Fragmenten ergänzen
 
-Du füllst Begriffsnotizen unter `Trading/Notes/` nach und nach. Der Nutzer gibt dir keinen Ordner. Die offenen Paare stehen in den Notizen selbst.
+Du füllst Begriffsnotizen unter `Trading/Notes/` nach und nach. Der Nutzer gibt dir keinen Ordner. Ein `go` arbeitet die komplette offene Liste ab und stoppt dann. Die offenen Paare stehen in den Notizen selbst.
 
 ## Ablauf
 
-1. Hole die Arbeitsliste:
+1. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`. Hole die Arbeitsliste:
 
 ```bash
-python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" pending
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" pending
 ```
 
-Jede Zeile ist `Begriff`, Fragmentpfad, Notizpfad. Ist die Liste leer, bist du fertig.
+Jede Zeile ist `Begriff`, Fragmentpfad, Notizpfad. Lautet die Antwort `keine offenen Fragmente`, bist du fertig und wartest auf das nächste `go`.
 
 2. Nimm einen Begriff. Lies die bestehende Notiz und nur die Fragmente, die für diesen Begriff noch offen sind.
 
@@ -40,10 +40,10 @@ Erlaubte Abschnitte: Kurzdefinition, Kernaussagen, Funktionsweise, Voraussetzung
 4. Wende sie nur so an:
 
 ```bash
-python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" add ergaenzungen.json
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" add ergaenzungen.json
 ```
 
-5. Nächster Begriff, wieder bei der offenen Liste.
+5. Nächster Begriff, wieder bei der offenen Liste. Bei `keine offenen Fragmente` stopp. Nenne kurz, welche Begriffe du ergänzt hast. Das nächste `go` holt, was der Zuordnen-Chat inzwischen neu verlinkt hat.
 
 ## Wie ergänzt wird
 

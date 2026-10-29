@@ -1,42 +1,53 @@
 ---
-description: Use when the user hands over a folder of book fragments and asks to assign them to FinVault concepts. Writes source lines only.
+description: Use when the user says go to assign the next unfinished FinVault book folder to concept notes. Writes source lines only.
 alwaysApply: false
 ---
 
 # Fragment einem Begriff zuordnen
 
-Du ordnest Fragmente aus `Trading/Pilot/blocks/` den bestehenden Begriffsnotizen zu. Den Inhalt der Notiz füllst du nicht.
+Du ordnest Fragmente aus `Trading/Pilot/blocks/` den bestehenden Begriffsnotizen zu. Den Inhalt der Notiz füllst du nicht. Der Nutzer nennt keinen Ordner. Ein `go` nimmt das nächste offene Buch, arbeitet es ab und stoppt vor dem darauffolgenden.
 
 ## Ablauf
 
-1. Lies nur den Ordner, den der Nutzer dir gibt. Arbeite fragmentweise, nicht das ganze Buch in einem Schritt.
+1. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" next
+```
+
+Die Zeile `ordner ...` ist dieses eine Buch. Darunter stehen die noch offenen Fragmentdateien. Lautet die Antwort `keine offenen Bücher`, bist du fertig und wartest auf das nächste `go`.
+
 2. Lies `Trading/Research/Taxonomie/Themenstruktur.txt`. Erst die 25 Hauptthemen, dann nur die Begriffe unter den getroffenen Themen.
-3. Ein Begriff passt nur, wenn das Fragment ihn definiert, eine Regel gibt oder ein Kriterium nennt. Ein einzelnes Wort reicht nicht. Keine neuen Begriffe.
-4. Schreibe die Treffer als JSON, ein Objekt pro Fragment:
+
+3. Lies die offenen Fragmente in Gruppen von höchstens fünf. Ein Begriff passt nur, wenn das Fragment ihn definiert, eine Regel gibt oder ein Kriterium nennt. Ein einzelnes Wort reicht nicht. Keine neuen Begriffe.
+
+4. Schreibe die Treffer als JSON, ein Objekt pro gelesenem Fragment. Jedes Fragment aus dieser Gruppe kommt genau einmal vor:
 
 ```json
 {"fragment": "Trading/Pilot/blocks/<buch>/<datei>.md", "begriffe": ["Exakter Begriff"]}
 ```
 
-`begriffe` bleibt leer, wenn nichts passt. Namen müssen exakt aus der Themenliste stammen.
+`begriffe` bleibt leer, wenn nichts passt. Namen müssen exakt aus der Themenliste stammen. Eine leere Liste hakt das Fragment ab.
 
 5. Wende die Liste nur so an:
 
 ```bash
-python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" link zuordnungen.json
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" link zuordnungen.json
 ```
 
-6. Die Begriffsdatei fasst du nicht selbst an. Das Skript hängt ausschließlich eine Zeile unter `## Quellen und Fundstellen` an.
+6. Ruf `next` erneut auf. Solange derselbe Ordner erscheint, nimm die nächsten offenen Fragmente. Wechselt der Ordner oder kommt `keine offenen Bücher`, stopp. Den neuen Ordner fasst du nicht an. Nenne den erledigten Ordner und den Namen des nächsten. Das nächste `go` startet den.
+
+7. Die Begriffsdatei fasst du nicht selbst an. Das Skript hängt ausschließlich eine Zeile unter `## Quellen und Fundstellen` an.
 
 ## Grenzen
 
 - Kein n8n, kein Ollama-Flow.
-- `status: geprüft` und `status: archiviert` bleiben unberührt. Wenn das Skript `gesperrt` oder `unbekannt` meldet, korrigierst du den Namen oder lässt den Begriff weg. Du umgehst das Skript nicht.
+- `status: geprüft` und `status: archiviert` bleiben unberührt. Wenn das Skript `gesperrt` oder `unbekannt` meldet, korrigierst du den Namen oder lässt den Begriff weg. Du umgehst das Skript nicht. Solange ein Fragment deshalb offen bleibt, zeigt `next` denselben Ordner.
 - Einen neuen Band parst du nur, wenn der Nutzer das ausdrücklich will:
 
 ```bash
-python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parser/parse_pdf.py" --pdf-dir "PFAD/ZUM/ORDNER"
-python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/splitter/split_blocks.py"
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parser/parse_pdf.py" --pdf-dir "PFAD/ZUM/ORDNER"
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/splitter/split_blocks.py"
 ```
 
 Für die Zuordnung sind die Fragmentdateien schon das Ausgangsmaterial.

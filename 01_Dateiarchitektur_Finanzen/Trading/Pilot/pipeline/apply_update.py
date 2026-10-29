@@ -6,6 +6,7 @@ Der Ergänzungs-Agent hängt nur neue Stichpunkte an (add).
 Keine der beiden Rollen schreibt eine Begriffsnotiz im Ganzen neu.
 
 Aufrufe:
+  python3 apply_update.py next
   python3 apply_update.py link zuordnungen.json
   python3 apply_update.py add ergaenzungen.json
   python3 apply_update.py pending
@@ -305,6 +306,38 @@ def append_ledger(roots: Roots, record: dict) -> None:
         handle.write(json.dumps(record, ensure_ascii=False) + "\n")
 
 
+def load_assigned(roots: Roots) -> set[str]:
+    if not roots.ledger.is_file():
+        return set()
+    assigned: set[str] = set()
+    for line in roots.ledger.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        row = json.loads(line)
+        if row.get("op") != "zugeordnet":
+            continue
+        fragment = str(row.get("fragment") or "").replace("\\", "/")
+        if fragment:
+            assigned.add(fragment)
+    return assigned
+
+
+def open_books(roots: Roots) -> list[tuple[Path, list[Path]]]:
+    if not roots.blocks.is_dir():
+        return []
+    assigned = load_assigned(roots)
+    found: list[tuple[Path, list[Path]]] = []
+    for folder in sorted(path for path in roots.blocks.iterdir() if path.is_dir()):
+        pending_files = [
+            fragment
+            for fragment in sorted(folder.glob("*.md"))
+            if vault_rel(roots, fragment) not in assigned
+        ]
+        if pending_files:
+            found.append((folder, pending_files))
+    return found
+
+
 def load_applied(roots: Roots) -> set[tuple[str, str]]:
     if not roots.ledger.is_file():
         return set()
@@ -355,10 +388,15 @@ def link_records(body: list[str]) -> list[str]:
 
 def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
     register = load_register(roots.register)
+    assigned = load_assigned(roots)
     errors = 0
     for record in records:
         raw_fragment = str(record.get("fragment") or "").strip()
-        names = record.get("begriffe") or []
+        if "begriffe" not in record:
+            print("fehler: fragment und begriffe fehlen", file=sys.stderr)
+            errors += 1
+            continue
+        names = record.get("begriffe")
         if isinstance(names, str):
             names = [names]
         if not raw_fragment or not isinstance(names, list):
@@ -373,11 +411,17 @@ def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
             continue
         line = source_line(roots, fragment)
         fragment_rel = vault_rel(roots, fragment)
+        if fragment_rel in assigned:
+            print(f"erledigt {fragment.name}")
+            continue
+        fragment_errors = 0
+        linked: list[str] = []
         for name in names:
             begriff = str(name).strip()
             row = register.get(begriff)
             if row is None:
                 print(f"unbekannt {begriff}")
+                fragment_errors += 1
                 errors += 1
                 continue
             try:
@@ -386,26 +430,32 @@ def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
                 front, body = split_document(text)
             except (OSError, ValueError) as exc:
                 print(f"fehler: {begriff}: {exc}", file=sys.stderr)
+                fragment_errors += 1
                 errors += 1
                 continue
             status = field_value(front, "status")
             if status in LOCKED_STATUS:
                 print(f"gesperrt {begriff} status={status}")
+                fragment_errors += 1
                 errors += 1
                 continue
             if line in text:
                 print(f"vorhanden {begriff}")
+                linked.append(begriff)
                 continue
             try:
                 body, added = append_bullets(body, "Quellen und Fundstellen", [line[2:]])
             except ValueError as exc:
                 print(f"fehler: {begriff}: {exc}", file=sys.stderr)
+                fragment_errors += 1
                 errors += 1
                 continue
             if added == 0:
                 print(f"vorhanden {begriff}")
+                linked.append(begriff)
                 continue
             print(f"verlinkt {begriff} <- {fragment.name}")
+            linked.append(begriff)
             if dry_run:
                 continue
             write_document(path, front, body)
@@ -420,6 +470,21 @@ def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
                     "line": line,
                 },
             )
+        if fragment_errors:
+            continue
+        print(f"zugeordnet {fragment.name}")
+        if dry_run:
+            continue
+        append_ledger(
+            roots,
+            {
+                "ts": today(),
+                "op": "zugeordnet",
+                "fragment": fragment_rel,
+                "begriffe": linked,
+            },
+        )
+        assigned.add(fragment_rel)
     return 1 if errors else 0
 
 
@@ -519,6 +584,19 @@ def cmd_add(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
             },
         )
     return 1 if errors else 0
+
+
+def cmd_next(roots: Roots) -> int:
+    books = open_books(roots)
+    if not books:
+        print("keine offenen Bücher")
+        return 0
+    folder, files = books[0]
+    print(f"ordner {vault_rel(roots, folder)}")
+    print(f"offen {len(files)}")
+    for fragment in files:
+        print(vault_rel(roots, fragment))
+    return 0
 
 
 def cmd_pending(roots: Roots) -> int:
@@ -629,12 +707,17 @@ def self_test() -> int:
         code = cmd_link(roots, load_records(link_file), dry_run=False)
         if code != 1:
             raise SystemExit(f"unbekannter Begriff muss fehlerhaft sein, code={code}")
+        open_names = [path.name for _, files in open_books(roots) for path in files]
+        if fragment.name not in open_names:
+            raise SystemExit("fehlerhafter Lauf hat das Fragment abgehakt")
         linked = note.read_text(encoding="utf-8")
         if "S. 10–12" not in linked or linked.count("S. 10–12") != 2:
             raise SystemExit(linked)
         again = cmd_link(roots, [{"fragment": str(fragment), "begriffe": ["Marktstruktur"]}], dry_run=False)
         if again != 0 or note.read_text(encoding="utf-8").count("[[") != 1:
             raise SystemExit("Quellenzeile wurde doppelt geschrieben")
+        if any(path.name == fragment.name for _, files in open_books(roots) for path in files):
+            raise SystemExit("abgehaktes Fragment bleibt offen")
         pending = cmd_pending(roots)
         if pending != 0:
             raise SystemExit("pending fehlgeschlagen")
@@ -687,6 +770,16 @@ def self_test() -> int:
         # Der Ledger kennt das Fragment schon. Eine neue Datei darf die geprüfte Notiz nicht anfassen.
         other = fragment.with_name("book-block-002-p013-p014.md")
         other.write_text(fragment.read_text(encoding="utf-8"), encoding="utf-8")
+        if cmd_link(roots, [{"fragment": str(other), "begriffe": []}], dry_run=False) != 0:
+            raise SystemExit("leere Zuordnung fehlgeschlagen")
+        if any(path.name == other.name for _, files in open_books(roots) for path in files):
+            raise SystemExit("Fragment ohne Begriff bleibt offen")
+        nxt = trading / "Pilot" / "blocks" / "zzz-next" / "zzz-next-block-001-p001-p002.md"
+        nxt.parent.mkdir(parents=True)
+        nxt.write_text("# Next — Chapter (pages 1–2)\n\n--- page 1 ---\nX.\n", encoding="utf-8")
+        opened = open_books(roots)
+        if len(opened) != 1 or opened[0][0].name != "zzz-next" or opened[0][1][0] != nxt:
+            raise SystemExit(f"nächstes Buch falsch: {[item[0].name for item in opened]}")
         before = note.read_text(encoding="utf-8")
         blocked = cmd_add(
             roots,
@@ -730,6 +823,8 @@ def main(argv: list[str]) -> int:
         return self_test()
     if command == "pending":
         return cmd_pending(roots)
+    if command == "next":
+        return cmd_next(roots)
     if command in {"link", "add"}:
         if len(args) != 1:
             print(f"Aufruf: apply_update.py {command} datei.json", file=sys.stderr)
