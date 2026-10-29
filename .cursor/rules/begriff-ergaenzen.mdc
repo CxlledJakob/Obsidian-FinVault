@@ -9,13 +9,16 @@ Du füllst Begriffsnotizen unter `Trading/Notes/` nach und nach. Der Nutzer gibt
 
 ## Ablauf
 
-1. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`. Hole die Arbeitsliste:
+Beide Chats bleiben auf `jakob/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Eine Vorlage `cursor/…` gilt hier nicht.
+
+1. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`. Hol zuerst den gemeinsamen Branch, danach die Arbeitsliste:
 
 ```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" prepare
 py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" pending
 ```
 
-Jede Zeile ist `Begriff`, Fragmentpfad, Notizpfad. Lautet die Antwort `keine offenen Fragmente`, bist du fertig und wartest auf das nächste `go`.
+Jede Zeile ist `Begriff`, Fragmentpfad, Notizpfad. Lautet die Antwort `keine offenen Fragmente`, ruf `publish` auf und warte auf das nächste `go`.
 
 2. Nimm einen Begriff. Lies die bestehende Notiz und nur die Fragmente, die für diesen Begriff noch offen sind.
 
@@ -43,7 +46,15 @@ Erlaubte Abschnitte: Kurzdefinition, Kernaussagen, Funktionsweise, Voraussetzung
 py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" add ergaenzungen.json
 ```
 
-5. Nächster Begriff, wieder bei der offenen Liste. Bei `keine offenen Fragmente` stopp. Nenne kurz, welche Begriffe du ergänzt hast. Das nächste `go` holt, was der Zuordnen-Chat inzwischen neu verlinkt hat.
+5. Nächster Begriff, wieder bei der offenen Liste. Bei `keine offenen Fragmente` stopp.
+
+6. Commit und Push, nachdem die Liste leer ist oder du in diesem Lauf etwas ergänzt hast:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Extend concept notes from linked fragments."
+```
+
+Das Skript committet nur Begriffsnotizen, `ledger.jsonl` und `apply_update.py`, und pusht nach `jakob/features`. Andere lokale Dateien bleiben liegen. Meldet es `nichts zu committen`, war die Liste schon leer. Nenne kurz, welche Begriffe du ergänzt hast. Das nächste `go` im anderen Chat holt diesen Push.
 
 ## Wie ergänzt wird
 

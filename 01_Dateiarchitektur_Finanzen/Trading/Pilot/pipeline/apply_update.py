@@ -6,10 +6,12 @@ Der Ergänzungs-Agent hängt nur neue Stichpunkte an (add).
 Keine der beiden Rollen schreibt eine Begriffsnotiz im Ganzen neu.
 
 Aufrufe:
+  python3 apply_update.py prepare
   python3 apply_update.py next
   python3 apply_update.py link zuordnungen.json
   python3 apply_update.py add ergaenzungen.json
   python3 apply_update.py pending
+  python3 apply_update.py publish "Commit-Nachricht"
   python3 apply_update.py self-test
 """
 
@@ -17,6 +19,7 @@ from __future__ import annotations
 
 import json
 import re
+import subprocess
 import sys
 from dataclasses import dataclass
 from datetime import datetime
@@ -40,6 +43,10 @@ FORBIDDEN_SECTIONS = frozenset({"Eigene Erkenntnisse"})
 LOCKED_STATUS = frozenset({"geprüft", "archiviert"})
 MAX_BULLET_CHARS = 800
 PAGE_DASH = "–"
+BRANCH = "jakob/features"
+NOTES_PREFIX = "01_Dateiarchitektur_Finanzen/Trading/Notes/"
+LEDGER_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/data/ledger.jsonl"
+APPLY_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py"
 
 
 @dataclass(frozen=True)
@@ -624,7 +631,200 @@ def cmd_pending(roots: Roots) -> int:
     return 0
 
 
+def allowed_work_path(path: str) -> bool:
+    path = path.replace("\\", "/").lstrip("./")
+    if path in {LEDGER_REL, APPLY_REL}:
+        return True
+    return path.startswith(NOTES_PREFIX)
+
+
+def parse_status_z(raw: str) -> list[str]:
+    paths: list[str] = []
+    index = 0
+    parts = raw.split("\0")
+    while index < len(parts):
+        entry = parts[index]
+        index += 1
+        if len(entry) < 4:
+            continue
+        status = entry[:2]
+        paths.append(entry[3:])
+        if "R" in status or "C" in status:
+            index += 1
+    return paths
+
+
+def selectable_paths(raw: str) -> list[str]:
+    return [path for path in parse_status_z(raw) if allowed_work_path(path)]
+
+
+def repo_root() -> Path:
+    result = subprocess.run(
+        ["git", "rev-parse", "--show-toplevel"],
+        cwd=Path(__file__).resolve().parent,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+    if result.returncode != 0 or not result.stdout.strip():
+        detail = (result.stderr or result.stdout).strip()
+        raise RuntimeError(detail or "git rev-parse fehlgeschlagen")
+    return Path(result.stdout.strip())
+
+
+def git(repo: Path, *args: str) -> subprocess.CompletedProcess[str]:
+    return subprocess.run(
+        ["git", *args],
+        cwd=repo,
+        text=True,
+        capture_output=True,
+        check=False,
+    )
+
+
+def git_text(repo: Path, *args: str) -> str:
+    result = git(repo, *args)
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout).strip()
+        raise RuntimeError(f"git {' '.join(args)}: {detail}")
+    return result.stdout
+
+
+def current_branch(repo: Path) -> str:
+    return git_text(repo, "rev-parse", "--abbrev-ref", "HEAD").strip()
+
+
+def stash_tracked(repo: Path) -> bool:
+    dirty = False
+    for line in git_text(repo, "status", "--porcelain").splitlines():
+        if line and not line.startswith("??"):
+            dirty = True
+            break
+    if not dirty:
+        return False
+    result = git(repo, "stash", "push", "-m", "finvault-prepare")
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout).strip()
+        raise RuntimeError(f"git stash: {detail}")
+    return True
+
+
+def pop_stash(repo: Path) -> None:
+    result = git(repo, "stash", "pop")
+    if result.returncode != 0:
+        detail = (result.stderr or result.stdout).strip()
+        raise RuntimeError(f"git stash pop: {detail}")
+
+
+def checkout_work_branch(repo: Path) -> None:
+    if current_branch(repo) == BRANCH:
+        return
+    stashed = stash_tracked(repo)
+    try:
+        exists = git(repo, "show-ref", "--verify", "--quiet", f"refs/heads/{BRANCH}")
+        if exists.returncode == 0:
+            checkout = git(repo, "checkout", BRANCH)
+        else:
+            checkout = git(repo, "checkout", "-B", BRANCH, f"origin/{BRANCH}")
+        if checkout.returncode != 0:
+            detail = (checkout.stderr or checkout.stdout).strip()
+            raise RuntimeError(f"Wechsel auf {BRANCH}: {detail}")
+    except Exception:
+        if stashed:
+            git(repo, "stash", "pop")
+        raise
+    if stashed:
+        pop_stash(repo)
+
+
+def cmd_prepare() -> int:
+    try:
+        repo = repo_root()
+        fetch = git(repo, "fetch", "origin", BRANCH)
+        if fetch.returncode != 0:
+            detail = (fetch.stderr or fetch.stdout).strip()
+            raise RuntimeError(f"git fetch: {detail}")
+        checkout_work_branch(repo)
+        pull = git(repo, "pull", "--rebase", "--autostash", "origin", BRANCH)
+        if pull.returncode != 0:
+            detail = (pull.stderr or pull.stdout).strip()
+            raise RuntimeError(f"git pull: {detail}")
+        head = git_text(repo, "rev-parse", "--short", "HEAD").strip()
+    except RuntimeError as exc:
+        print(f"fehler: {exc}", file=sys.stderr)
+        return 1
+    print(f"branch {BRANCH} {head}")
+    return 0
+
+
+def push_work_branch(repo: Path) -> None:
+    last_detail = ""
+    for _attempt in range(2):
+        pull = git(repo, "pull", "--rebase", "--autostash", "origin", BRANCH)
+        if pull.returncode != 0:
+            detail = (pull.stderr or pull.stdout).strip()
+            raise RuntimeError(f"git pull: {detail}")
+        push = git(repo, "push", "-u", "origin", f"HEAD:{BRANCH}")
+        if push.returncode == 0:
+            return
+        last_detail = (push.stderr or push.stdout).strip()
+    raise RuntimeError(f"git push: {last_detail}")
+
+
+def cmd_publish(message: str) -> int:
+    message = " ".join(message.split())
+    if not message:
+        print("fehler: Commit-Nachricht fehlt", file=sys.stderr)
+        return 2
+    try:
+        repo = repo_root()
+        if current_branch(repo) != BRANCH:
+            print(
+                f"fehler: Branch ist {current_branch(repo)}. Zuerst prepare.",
+                file=sys.stderr,
+            )
+            return 2
+        raw = git_text(repo, "status", "--porcelain", "-z")
+        paths = selectable_paths(raw)
+        if not paths:
+            print("nichts zu committen")
+            return 0
+        add = git(repo, "add", "--", *paths)
+        if add.returncode != 0:
+            detail = (add.stderr or add.stdout).strip()
+            raise RuntimeError(f"git add: {detail}")
+        commit = git(repo, "commit", "-m", message)
+        if commit.returncode != 0:
+            detail = (commit.stderr or commit.stdout).strip()
+            raise RuntimeError(f"git commit: {detail}")
+        if commit.stdout.strip():
+            print(commit.stdout.strip())
+        push_work_branch(repo)
+        head = git_text(repo, "rev-parse", "--short", "HEAD").strip()
+    except RuntimeError as exc:
+        print(f"fehler: {exc}", file=sys.stderr)
+        return 1
+    print(f"gepusht {BRANCH} {head}")
+    return 0
+
+
 def self_test() -> int:
+    sample = (
+        " M 01_Dateiarchitektur_Finanzen/Trading/Notes/A.md\0"
+        "?? 02_n8n Flows/Jakob/x\0"
+        " D 02_n8n Flows/Dockerfile\0"
+        "M  01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py\0"
+        "R  01_Dateiarchitektur_Finanzen/Trading/Pilot/data/ledger.jsonl\0"
+        "01_Dateiarchitektur_Finanzen/Trading/Notes/Old.md\0"
+    )
+    chosen = selectable_paths(sample)
+    expected = [
+        "01_Dateiarchitektur_Finanzen/Trading/Notes/A.md",
+        APPLY_REL,
+        LEDGER_REL,
+    ]
+    if chosen != expected:
+        raise SystemExit(f"Publish-Auswahl falsch: {chosen}")
     import tempfile
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -827,6 +1027,10 @@ def main(argv: list[str]) -> int:
     roots = default_roots()
     if command == "self-test":
         return self_test()
+    if command == "prepare":
+        return cmd_prepare()
+    if command == "publish":
+        return cmd_publish(" ".join(args))
     if command == "pending":
         return cmd_pending(roots)
     if command == "next":

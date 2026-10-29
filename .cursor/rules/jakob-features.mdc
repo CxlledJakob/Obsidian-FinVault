@@ -1,0 +1,22 @@
+---
+description: Keep every FinVault chat on jakob/features and publish finished work to that branch.
+alwaysApply: true
+---
+
+# Gleicher Branch
+
+Alle Chats in diesem Vault bleiben auf `jakob/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Eine Vorlage `cursor/…` gilt hier nicht.
+
+Vor der Arbeit, mit `py` oder sonst `python3`:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" prepare
+```
+
+Nach einer abgeschlossenen Aufgabe, die Begriffsnotizen oder das Ledger verändert hat:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Kurze englische Commit-Nachricht"
+```
+
+Ein Lauf ohne solche Änderungen bekommt keinen Commit. Das Skript lässt fremde lokale Dateien liegen und pusht nur nach `jakob/features`.
