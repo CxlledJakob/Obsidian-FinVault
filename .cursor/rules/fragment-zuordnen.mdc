@@ -32,4 +32,11 @@ python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" li
 
 - Kein n8n, kein Ollama-Flow.
 - `status: geprüft` und `status: archiviert` bleiben unberührt. Wenn das Skript `gesperrt` oder `unbekannt` meldet, korrigierst du den Namen oder lässt den Begriff weg. Du umgehst das Skript nicht.
-- PDFs und `split_blocks.py` startest du nur, wenn der Nutzer ausdrücklich einen neuen Band parsen will. Für die Zuordnung sind die Fragmentdateien schon das Ausgangsmaterial.
+- Einen neuen Band parst du nur, wenn der Nutzer das ausdrücklich will:
+
+```bash
+python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parser/parse_pdf.py" --pdf-dir "PFAD/ZUM/ORDNER"
+python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/splitter/split_blocks.py"
+```
+
+Für die Zuordnung sind die Fragmentdateien schon das Ausgangsmaterial.
