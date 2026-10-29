@@ -50,5 +50,7 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Markets in Profile_ Profiting from the Auction Process.pdf, S. 120–139 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-010-p120-p139|S. 120–139]]
+- Markets in Profile_ Profiting from the Auction Process.pdf, S. 158–161 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-012-p158-p161|S. 158–161]]
 
 ## Verwandte Themen

@@ -16,6 +16,7 @@ Aufrufe:
 from __future__ import annotations
 
 import json
+import re
 import sys
 from dataclasses import dataclass
 from datetime import datetime
@@ -191,16 +192,12 @@ def book_and_pages(fragment: Path) -> tuple[str, str]:
             break
     book = heading.split(" — ")[0].strip() if heading else fragment.parent.name
     match = None
-    name = fragment.name
-    marker = "-p"
-    first = name.find(marker)
-    second = name.find(marker, first + 1) if first != -1 else -1
-    if first != -1 and second != -1:
-        start_raw = name[first + 2 : second]
-        end_raw = name[second + 2 :].removesuffix(".md")
-        if start_raw.isdigit() and end_raw.isdigit():
-            start, end = int(start_raw), int(end_raw)
-            match = f"S. {start}" if start == end else f"S. {start}{PAGE_DASH}{end}"
+    # The span is the trailing -pNNN-pNNN.md. The first "-p" in the name can
+    # belong to the book slug, as in markets-in-profile.
+    found = re.search(r"-p(\d+)-p(\d+)\.md$", fragment.name)
+    if found:
+        start, end = int(found.group(1)), int(found.group(2))
+        match = f"S. {start}" if start == end else f"S. {start}{PAGE_DASH}{end}"
     if match is None:
         match = "S. ?"
     return book, match
@@ -649,6 +646,15 @@ def self_test() -> int:
             "# Test Book — Chapter 1 (pages 10–12)\n\n--- page 10 ---\nBeispiel.\n",
             encoding="utf-8",
         )
+        profile = fragment.with_name("markets-in-profile-block-001-p001-p020.md")
+        profile.write_text(fragment.read_text(encoding="utf-8"), encoding="utf-8")
+        _, pages = book_and_pages(profile)
+        profile.unlink()
+        if pages != f"S. 1{PAGE_DASH}20":
+            raise SystemExit(f"Seitenspanne im Buchslug falsch: {pages}")
+        _, plain = book_and_pages(fragment)
+        if plain != f"S. 10{PAGE_DASH}12":
+            raise SystemExit(f"Seitenspanne falsch: {plain}")
         register.write_text(
             json.dumps(
                 {
