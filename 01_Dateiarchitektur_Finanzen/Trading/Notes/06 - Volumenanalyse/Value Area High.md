@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Volumenprofile"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Value Area High
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Value Area High ist die obere Grenze der Spanne, die 70 Prozent aller TPOs enthält und etwa einer Standardabweichung entspricht.
 
 ## Kernaussagen
 
+- Oberhalb dieser Grenze liegt der Preis von der Value entfernt, innerhalb sind Preis und Value dasselbe. Preise über der Value schrecken Käufer ab.
+- Die Grenze entsteht vom Point of Control aus: Die Summe der zwei Preise darüber wird mit den zwei darunter verglichen, die höhere Seite wird aufgenommen, bis 70 Prozent des Volumens erreicht sind.
+- Akzeptanz darüber sammelt TPOs auf dem neuen Niveau und verschiebt die Value Area. Ablehnung führt den Preis in die Area zurück, fast ohne Änderung der Volumenverteilung.
 
 ## Funktionsweise
 
@@ -35,12 +37,17 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Oberhalb der Value Area, der Spanne mit etwa 70 Prozent des Volumens, liegt der Preis über Value.
+- Im balancierten Day-Timeframe sind Käufe an den oberen Preisniveaus Käufe über Value. Die Chancen stehen schlecht, dass der Preis Value anhebt.
+- Führt der Preis Value nach oben, kann ein Kauf oberhalb der Value Area trotzdem auf oder unter diesem Value liegen.
+- Käufer im oberen Viertel der Range handeln über der Value Area und sind dort wahrscheinlich eine Überreaktion auf das Momentum der Auktion.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Im Beispiel liegt das Value Area High bei 99-28; die Area von 99-21 bis 99-28 deckt 73 Prozent von 78 TPOs ab.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -59,3 +66,7 @@ aktualisiert: 2026-10-26
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 200–213 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-015-p200-p213|S. 200–213]]
 
 ## Verwandte Themen
+
+- Point of Control
+- Akzeptanz
+- Ablehnung

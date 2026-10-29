@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Volumenprofile"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Session Volume Profile
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Mehrere fortlaufende Two-Way Auctions bilden die Range des Tages mit High, Low und Value Area.
+- Diese Marken entstehen in beliebiger Reihenfolge und stehen erst fest, wenn der Handel abgeschlossen ist und das Tagesprofil vollständig ist.
+- Die Value Area am Tagesende ist die Spanne, in der die meisten Teilnehmer mit Day-Timeframe-Geschäft dieses Geschäft ausführen wollten.
+- Am Tagesprofil lässt sich unterscheiden, ob der Preis zu Value zurückläuft oder Value nach oben führt.
 
 ## Funktionsweise
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Strukturwechsel"
@@ -10,19 +10,29 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Akzeptanz
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Akzeptanz ist die Annahme einer Bewegung weg von der Value Area, erkennbar daran, dass sich TPOs auf dem neuen Niveau sammeln.
+- Der Preis bewirbt Gelegenheiten; manche werden angenommen, andere abgelehnt.
+- Akzeptanz an einem Referenzpunkt liegt vor, wenn der Markt dort genug Zeit verbringt, um Value neu zu etablieren.
 
 ## Kernaussagen
 
+- Akzeptanz ändert die Form des Profils und verschiebt die Value Area.
+- Sie ist neben der Ablehnung der andere Ausgang, wenn der Preis die Value Area verlässt, und zwar auf jedem Timeframe.
+- Akzeptanz von Value zeigt sich an höherem Volumen, wenn die Auktion an den oberen Preisen neue Bieter anzieht.
+- Pausen in einer Auktion, die höher läuft, teilen neuen Käufern mit, dass Value höher akzeptiert wird.
+- Die Value Area am Tagesende ist die Spanne, in der die meisten Teilnehmer mit Day-Timeframe-Geschäft dieses Geschäft ausführen wollten.
+- Akzeptanz weg von einem fest etablierten Mittelwert braucht Kraft im Volumen.
+- Ein breiter Mittelwert wirkt als Anker, weil viele Teilnehmer den Preis dort für beide Seiten als fair angesehen haben.
+- Ein prominenter Point of Control ist ein jüngerer Bereich eines weithin akzeptierten fairen Preises.
+- Teilnehmer werden fortlaufend zu jüngeren Bereichen der Akzeptanz (Value) gezogen. Sind diese genommen, testet der Markt den nächsten Balance-Bereich.
 
 ## Funktionsweise
 
@@ -35,6 +45,22 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Neue Käufe oberhalb der Initial Balance, der Spanne der ersten zwei Handelsperioden, zeigen Kaufstärke. Akzeptanz unterhalb dieser Spanne zeigt Verkaufsstärke.
+- Ein neues Value-Niveau ist erst gefunden, wenn zweiseitiger Handel beginnt und der Markt in beide Richtungen mit relativ gleicher Stärke auktioniert.
+- Niedriges Volumen am oberen Bracket-Extrem bedeutet, dass höhere Preise nicht als fair akzeptiert werden und die Extreme bestätigt bleiben.
+- Hohes Volumen bei der Auktion zum oberen Extrem macht es wahrscheinlich, dass die höheren Preise nicht eingedämmt werden.
+- Scheitert ein Auktionsversuch, in eine Richtung Wert zu etablieren, und der Preis kehrt in eine zuvor akzeptierte Value-Spanne zurück, ist die Chance gut, dass der Markt nach unten läuft und das andere Ende dieser Spanne erkundet.
+- Je ausgeprägter der Mittelwert, desto mehr Gewicht hat er.
+- Bei einem breiten Marktprofil sucht der Preis das Gravitationszentrum mit hoher Chance wieder auf, sofern die Auktionen des Folgetags nicht bei hohem Volumen laufen.
+- Akzeptanz des tieferen Preises über die Zeit zeigt mehr Schwäche im nächstlängeren Timeframe.
+- Sind die tieferen Preise für den Day-Timeframe zu tief, entstehen Single-Print-Buying-Tails an diesen Tiefs.
+- Ein langer Buying Tail am Tief zeigt, dass mindestens der nächstlängere Käufer die beworbene Gelegenheit unter der Value annimmt.
+- Der Responsive Buyer akzeptiert ein neues Auktionstief schnell, wenn er die Preise für zu niedrig und ein gutes Geschäft hält.
+- Gelingt es nicht, für den Tag tieferen Value zu etablieren, sind die tieferen Preise nicht als Value angenommen.
+- Eine weite Range zeigt Akzeptanz an.
+- Wird ein tieferer Preis akzeptiert, steigen die Chancen, dass die Value ebenfalls nach unten wandert.
+- Fehlt über dem Hoch des Vortags die Akzeptanz über die Zeit, baut der Tag dort keine Value außerhalb der Balance auf.
+- In diesem Fall schneiden höhere Preise die Aktivität ab, statt sie fortzusetzen.
 
 ## Risiken und Grenzen
 
@@ -61,3 +87,8 @@ aktualisiert: 2026-10-26
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 200–213 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-015-p200-p213|S. 200–213]]
 
 ## Verwandte Themen
+
+- Ablehnung
+- Point of Control
+- Balance
+- Responsive Activity

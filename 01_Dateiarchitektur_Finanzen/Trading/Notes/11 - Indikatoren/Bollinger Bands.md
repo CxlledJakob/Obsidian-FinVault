@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/11 - Indikatoren/11 - Indikatoren|11 - Indikatoren]]"
 weitere_hauptthemen: []
 unterthema: "Kanalindikatoren"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Bollinger Bands
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Bänder liegen eine Standardabweichung über und unter dem Moving Average, der als wahrer Wert oder Mean gilt.
 
 ## Kernaussagen
 
+- Die Bänder bestehen aus zwei Kanälen und einer Mittellinie, und diese Mittellinie ist ein Exponential Moving Average.
+- Grundlage ist die Idee, dass der Preis zum Mean zurückkehrt.
+- Oberes und unteres Band werden zu Kurszielen.
+- Im Aufwärtstrend gilt die Rotation zum unteren Band als überverkauft und als Kaufgelegenheit.
 
 ## Funktionsweise
 
@@ -38,6 +41,8 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Der gleitende Durchschnitt beruht nur auf dem Preis und zeichnet die Wanderung des Means unvollständig.
+- Zeit, Preis und Volumen im Marktprofil zeigen die Wanderung des Means vollständiger.
 
 ## Beispiele
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Marktphasen"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Kompression
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Vor einem langfristigen Ausbruch kann eine sehr enge Balance mit extrem niedriger Volatilität und begrenzten Handelsgelegenheiten liegen.
 
 ## Funktionsweise
 
@@ -35,12 +34,16 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Sammeln sich kleinere Balancebereiche an den Extremen des größeren Intermediate-Brackets, kommt der Markt in eine immer engere Balance.
+- Dieses Clustering ist häufig die letzte Stufe vom Bracket zum Trend, aber nicht immer.
+- Je breiter die Balance ist, aus der der Übergang kommt, desto mehr Zeitebenen sind beim Breakout beteiligt und desto größer ist die Chance auf eine bedeutende Bewegung.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Im Beispiel hielt diese enge Spanne etwa vier Monate bei ungefähr fünf Dollar, innerhalb eines Brackets von etwa 35 bis 59 Dollar über drei Jahre.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/09 - Wyckoff-Methode/09 - Wyckoff-Methode|09 - Wyckoff-Methode]]"
 weitere_hauptthemen: []
 unterthema: "Grundkonzepte"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Akkumulation
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,11 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Geduldige, längerfristige Käufer bauen stetig Inventar auf, das sie lange halten wollen.
+- Besonders in Zwischenzeit-Auktionen läuft das oft über mehrere Tage, bevor es Late Majority und Laggards eindeutig wird.
+- In der b-Form sind die Käufer mindestens etwas geduldiger als die Verkäufer und mindestens über Nacht engagiert, nicht nur für den Tag.
+- Sie können große Positionen schrittweise aufbauen; die Wirkung zeigt sich oft erst nach einigen Tagen.
+- Dieser Aufbau, während der Markt sich nach unten abmüht, führt zu Umkehrungen oder zumindest bedeutsamen Korrekturen.
 
 ## Risiken und Grenzen
 

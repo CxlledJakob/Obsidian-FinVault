@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Basisgrößen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Volumendivergenz
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,10 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ein Aufwärtstrend kann höhere Preise erzielen und dabei fortlaufend weniger Volumen haben. Ist dieses Volumen zusätzlich schlecht über das Profil verteilt, fehlt der Auktion die Stärke.
+- Auktionen in Trendrichtung haben in manchen Fällen weniger Volumen als Tage, an denen der Markt gegen den Trend läuft.
+- Neue Hochs bei Volumen am unteren Ende der üblichen Spanne widersprechen der Stärke, die Volumen über dem oberen Ende verlangen würde.
+- Ziehen höhere Preise weniger Volumen an, ist das Mittel unter dem aktuellen Preis geblieben. Die Chance ist hoch, dass der Preis auf diese Niveaus zurückkehrt.
 
 ## Risiken und Grenzen
 

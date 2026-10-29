@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendlinien"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Kanaluntergrenze
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Untergrenze ist die untere Seite der Trendlinie. Der Abstand zur Obergrenze beträgt im gezeigten Verlauf etwa 5 Prozent und bei steigender Volatilität nicht selten 8 bis 10 Prozent.
 
 ## Funktionsweise
 
@@ -32,12 +31,15 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Gängige Theorie im Aufwärtstrend: einen Rücksetzer zur Untergrenze des Kanals kaufen.
 
 ## Regeln und Kriterien
 
+- Soll der Preis im Bracket bleiben, ist am unteren Extrem, unter dem Mittel, responsive Kauf zu erwarten.
 
 ## Risiken und Grenzen
 
+- Wer den Rückgang bis zur Kanaluntergrenze ohne Absicherung aussitzt und von dort nach unten ausgebrochen wird, hat den vorherigen Gewinn abgegeben. Wer den Rückgang schon im Minus begann, braucht eine starke Rally nur bis zum Einstieg.
 
 ## Beispiele
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendbestimmung"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Trendstärke
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,14 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Je stärker der Trend, desto größer der Abstand zwischen aufeinanderfolgenden Balancebereichen. Altert er, wird der Abstand kleiner.
+- Echte Stärke eines Aufwärtsausbruchs zu neuen Kontrakthochs verlangt Volumen über dem oberen Ende der üblichen Spanne. Volumen am unteren Ende widerspricht dieser Stärke.
+- Hohes Ausbruchvolumen und ein Schluss nahe dem Tageshoch zeigen, dass höhere Preise mehr Aktivität anziehen.
+- Höhere Preise bei fortlaufend sinkendem und schlecht über das Profil verteiltem Volumen zeigen Schwäche.
+- Schwäche liegt vor, wenn Tage mit dem Trend weniger Volumen haben als Tage gegen den Trend.
+- Gegenauktionen, die stärker sind als der Trend oder ihm mindestens gleichkommen, zeigen einen gealterten oder nicht mehr tragfähigen Aufwärtstrend.
+- Ein ermüdeter Trend erzeugt mehr Volatilität, ohne noch viel gerichteten Fortschritt zu liefern.
+- In der späten, nachlassenden Phase liegt die nächste Balance auf oder innerhalb der vorherigen, oder die Balancebereiche überlappen fortlaufend.
 
 ## Risiken und Grenzen
 

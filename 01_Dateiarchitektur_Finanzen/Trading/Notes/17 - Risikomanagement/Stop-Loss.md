@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Verlustrisiko"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Stop-Loss
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ein Rücklauf über das Bracket-Extrem hinaus soll den Ausstieg auslösen.
+- Den Trade aus eigenem Entschluss beenden, statt zu warten, bis Stops einen herausnehmen.
+- Beginnt die anfängliche Zuversicht eines Open-Drive nachzulassen, ist das der Anlass zum Ausstieg.
 
 ## Risiken und Grenzen
 

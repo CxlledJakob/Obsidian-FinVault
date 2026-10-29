@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Marktphasen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Expansion
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,8 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Leichte Bracket-Ausweitungen nach oben oder unten werden bedeutsam, sobald sie bei steigendem Volumen auftreten und ein neuer Trend aus dem Bracket ausbricht.
+- Steigende Volatilität weitet den Kanal. Ein Abstand von 8 bis 10 Prozent ist dann nicht ungewöhnlich.
 
 ## Risiken und Grenzen
 

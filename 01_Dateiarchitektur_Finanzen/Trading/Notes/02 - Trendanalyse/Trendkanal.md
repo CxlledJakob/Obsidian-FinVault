@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendbestimmung"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Trendkanal
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein Trendkanal ist der Preisabstand von der Ober- zur Unterseite der Trendlinie.
 
 ## Kernaussagen
 
@@ -32,15 +31,19 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Gängige Theorie im Aufwärtstrend: einen Rücksetzer zur Untergrenze kaufen und eine Rally zur Obergrenze verkaufen.
 
 ## Regeln und Kriterien
 
+- Steigt die Volatilität, weitet sich der Kanal. Ein Abstand von 8 bis 10 Prozent ist dann nicht ungewöhnlich.
 
 ## Risiken und Grenzen
 
+- Wer ohne Absicherung bis zur Untergrenze im Markt bleibt und dort nach unten ausgebrochen wird, hat den Gewinn auf diesem Weg bereits abgegeben.
 
 ## Beispiele
 
+- Am gezeigten längerfristigen Verlauf misst dieser Abstand etwa 5 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 

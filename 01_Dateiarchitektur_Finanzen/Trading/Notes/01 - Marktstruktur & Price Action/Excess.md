@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Marktphasen"
@@ -10,22 +10,31 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Excess
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Excess ist eine erkennbare Form am Ende einer Auktion.
+- Excess entsteht, wenn der Markt ein dramatisches Hoch oder Tief auf niedrigem Volumen macht und die Gegenseite den Preis schnell und aggressiv in die entgegengesetzte Richtung auktioniert.
+- Excess markiert das Ende einer Auktion und den Beginn einer Auktion in die entgegengesetzte Richtung.
 
 ## Kernaussagen
 
+- Als Indikator zeigt Excess, wann der Status quo wechselt, und trennt damit günstige von ungünstigen Chancen.
+- Objektiv gelesen dient Excess dazu, Risiko zu steuern.
+- Excess ist das häufigere der beiden einzelnen Trendenden. Seltener endet der Trend allein dadurch, dass das Volumen in Trendrichtung austrocknet.
+- Das häufigste echte Trendende, und das Signal, dass ein Bracket beginnt, ist die Kombination aus sinkendem Volumen in Trendrichtung und einem Excess-High oder Excess-Low.
+- Ein Excess-Low ist ein gutes Low: der Markt auktioniert tiefer, zwingt die letzten Nachzügler dieser Zeitebene heraus und findet sofort aggressive Käufer, die die Abwärtsauktion drehen.
+- Wiederholte Versuche, tiefer zu auktionieren, ohne Excess zu bilden, sind gewöhnlich ein Zeichen von Imbalance: der Markt ist zu short für ein weiteres Tief.
 
 ## Funktionsweise
 
+- Eine extreme Form von Excess ist die Gap. Preise bleiben unhandelt, weil die Auktion sie überspringt oder weil auf einem völlig anderen Niveau zu handeln begonnen wird.
+- Ein Excess-High zeigt, dass der Preis für den Käufer als unfair galt. Eine Gap am Auktionsende gegen den letzten Trend signalisiert eine Neuordnung der Überzeugungen.
 
 ## Voraussetzungen
 
@@ -35,6 +44,11 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ein Excess-High oder Excess-Low entsteht auf leichtem oder niedrigem Volumen. Nachzügler können vorher mit gesundem Volumen abgeben; die letzten Preise im Excess-Spike bleiben auf niedrigem Volumen.
+- Das hohe Volumen, das oft als Kapitulation gilt, entsteht meist erst in der Gegenrichtung, wenn der Spike schnell abgelehnt wird. Nach dem Excess zieht die Gegenauktion das Volumen oft stark an.
+- Ob ein Spike tatsächlich ein Excess Low ist, lässt sich erst beim Open des Folgetags bestimmen. Das Nachtvolumen reicht für eine verlässliche Bestimmung nicht.
+- Wird dieses Excess Low nicht ernsthaft herausgefordert, wiegt das schwerer als nur überlappend bis tiefer liegende Value.
+- Vergangene Excess-Bereiche, einschließlich Gaps, werden vom letzten Tag an rückwärts identifiziert.
 
 ## Risiken und Grenzen
 
@@ -60,3 +74,5 @@ aktualisiert: 2026-10-26
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 181–200 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-014-p181-p200|S. 181–200]]
 
 ## Verwandte Themen
+
+- Imbalance

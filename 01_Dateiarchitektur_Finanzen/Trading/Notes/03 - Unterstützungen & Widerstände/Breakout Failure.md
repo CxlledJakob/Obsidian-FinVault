@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|03 - Unterstützungen & Widerstände]]"
 weitere_hauptthemen: []
 unterthema: "Reaktionen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Breakout Failure
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Scheitert der Versuch, über ein Bracket-Hoch zu auktionieren, ist die Chance gut, dass Verkäufer den Preis zum anderen Ende des Brackets führen.
+- Scheitert der Versuch, in eine Richtung Wert zu etablieren, und der Preis kehrt in die zuvor akzeptierte Value-Spanne zurück, ist die Chance gut, dass der Markt nach unten das andere Ende dieser Spanne erkundet.
+- Ein Aufwärtsausbruch zu neuen Hochs am unteren Ende der üblichen Volumenspanne hat die Stärke nicht bestätigt. Bestätigt wäre Volumen über dem oberen Ende dieser Spanne.
 
 ## Risiken und Grenzen
 

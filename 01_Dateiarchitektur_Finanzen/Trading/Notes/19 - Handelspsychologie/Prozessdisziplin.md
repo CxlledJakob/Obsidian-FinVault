@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Disziplin"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Prozessdisziplin
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,14 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Erfolgreiches Trading verlangt, lange Datenketten zusammenzusetzen und sie bei sich ändernden Bedingungen objektiv erinnern zu können.
+- Den Tag an Parametern überwachen, statt sich nur auf den Preis als Werbemechanismus zu verlassen.
+- Nicht nur fragen, was der Markt getan hat, sondern was nicht geschehen ist.
+- Details der entstehenden Profilform gehören in eine fortlaufende Untersuchung jedes Tages.
+- Alles muss im passenden Kontext gelesen werden.
+- Der Blick gilt der Value, nicht dem Preis.
+- Bei jeder Auktion und jeder Zeitebene ist die leitende Frage, was die anderen Teilnehmer tun.
+- Der Experte urteilt kontextbezogen: A führt unter den Bedingungen X und Y zu B, unter anderen Bedingungen zu C. Der Novize denkt, A führe immer zu B.
 
 ## Risiken und Grenzen
 

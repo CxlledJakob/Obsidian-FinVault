@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Emotionen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # FOMO
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,8 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ein verpasster großer Move wird zu spät nachgekauft, mit schlechter Trade-Location und überhöhtem Risiko.
+- Ein letzter Aufwärts-Spike zieht die verbliebenen Käufer hinein; gewöhnlich ist die Auktion erst danach vorbei.
 
 ## Risiken und Grenzen
 

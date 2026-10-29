@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Strukturwechsel"
@@ -10,22 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Rotation
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Im Intraday-Handel, von Minuten bis Stunden, können an einem Tag mehrere rotierende Auktionen auftreten.
 
 ## Funktionsweise
 
+- Liegt der Preis für das eigene Timeframe über Value und lässt die Nachfrage nach, übersteigen die Angebote die Gebote, und die Auktion läuft in die Gegenrichtung.
 
 ## Voraussetzungen
 
@@ -35,6 +35,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ist keine versuchte Richtung erkennbar, war der Markt wahrscheinlich balanciert, und die Auktionen haben relativ gleich zwischen Hoch und Tief rotiert.
+- In einem solchen Tagesbild rotiert der Preis mehrfach über und unter den Mittelpunkt, ohne eine klare Richtung.
+- Auf 5- und 10-Minuten-Bars kann die Richtung noch klar sein. Im längeren Timeframe desselben Tages wird sie unproduktiv.
 
 ## Risiken und Grenzen
 

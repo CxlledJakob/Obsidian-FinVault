@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/13 - Volatilität/13 - Volatilität|13 - Volatilität]]"
 weitere_hauptthemen: []
 unterthema: "Volatilitätsdynamik"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Volatilitätskompression
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- In einer sehr engen Balance vor einem langfristigen Ausbruch kann die Volatilität extrem niedrig sein, bei begrenzten Handelsgelegenheiten.
+- Über mehrere Jahre vor dem nichtlinearen Bruch lag die durchschnittliche Volatilität deutlich unter ihrem historischen Durchschnitt.
 
 ## Funktionsweise
 
@@ -41,6 +41,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Im Beispiel hielt diese Phase etwa vier Monate in einer Spanne von ungefähr fünf Dollar.
 
 ## Unterschiedliche Quellenpositionen
 

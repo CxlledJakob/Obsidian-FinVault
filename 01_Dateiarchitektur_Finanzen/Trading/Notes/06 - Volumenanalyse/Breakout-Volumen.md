@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Basisgrößen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Breakout-Volumen
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -29,12 +27,40 @@ aktualisiert: 2026-10-26
 
 ## Voraussetzungen
 
+- Gesamtvolumen wird nur verwendet, wenn klar ist, in welche Richtung der Markt den Tag über zu auktionieren versucht.
 
 ## Anwendung im Trading
 
 
 ## Regeln und Kriterien
 
+- Fallendes Volumen bei einem versuchten Bruch macht die Rückkehr des Preises zum Mittel wahrscheinlich.
+- Steigendes Volumen beim versuchten Bruch zeigt neue aggressive Teilnehmer, und neue Value Areas für alle Timeframes sind wahrscheinlich.
+- Für den langfristigen Teilnehmer zählt Volumen, wenn der Preis ein Extrem der Intermediate-Range anläuft oder dieses Extrem bricht.
+- Liegen Intermediate-Balance und kurzfristige Balance zugleich vor, ist Volumen für den langfristigen Teilnehmer nachrangig.
+- Hohes Volumen bei einer Auktion zum oberen Bracket-Extrem macht es wahrscheinlich, dass die Spanne die Aufwärtsbewegung nicht hält.
+- Niedriges Volumen am oberen Extrem bedeutet, dass höhere Preise die Aktivität abschneiden, das Extrem bestätigt bleibt und weitere Balance zu erwarten ist.
+- Nimmt das Volumen am oberen Extrem deutlich ab, sind die Chancen einer Aufwärtsfortsetzung stark gesunken.
+- Eine neue Value Area setzt sich nur durch, wenn Volumen die nötige Kraft hat. Ohne diese Kraft wird der Preis zur bisherigen Verteilung zurückgezogen.
+- Nachlassendes Volumen zeigt das Bedürfnis zu balancieren und damit auch, wie wahrscheinlich ein Extrem die Bewegung noch hält.
+- Ein Ausbruch auf hohem Volumen mit Schluss nahe dem Tageshoch zeigt, dass höhere Preise mehr Aktivität anziehen. Die Auktion sollte weiterlaufen.
+- Ein Aufwärtsausbruch zu neuen Kontrakthochs bestätigt Stärke, wenn das Volumen das obere Ende der üblichen Spanne überschreitet.
+- Volumen am unteren Ende dieser Spanne bei neuen Hochs ist das Warnsignal, dass keine neue Kaufkraft angezogen wird.
+- Eine Ausweitung des Brackets trägt einen neuen Trend, sobald sie bei steigendem Volumen erfolgt.
+- Akzeptanz weg von einem fest etablierten Mittelwert braucht Kraft im Volumen.
+- Ohne hohes Volumen am Folgetag sucht ein breites Profil das Gravitationszentrum des Mittelwerts mit hoher Chance wieder auf.
+- Läuft der Preis bei abnehmendem Volumen nur an ein Extrem der Balance, ist das das Gegenteil eines Breakout-Trades.
+- Trägt das Volumen die Preiswerbung am Extrem der Balance nicht, wird gefadet.
+- Ein neues Life-of-Contract-Hoch auf dem letzten Aufwärts-Breakout, dessen Volumen deutlich unter dem Bereich der Hochvolumentage liegt, ist ein Hoch auf unterdurchschnittlichem Volumen.
+- Breakout-Volumen liegt vor, wenn ein Bruch aus der Balance-Range steigendes Volumen anzieht.
+- Bewegungen an die Extreme der Balance-Area bei niedrigem Volumen werden gefadet und nicht als Bruch genommen.
+- Breakouts aus Balance-Ranges, die zunehmendes Volumen anziehen, werden gesucht; Bewegungen an die Extreme bei niedrigem Volumen werden gefadet.
+- Schwaches Volumen beim Ausbruchsversuch und das Nicht-Nehmen des Vortageshochs sind zwei Schlüsselindikatoren gegen den Breakout.
+- Diese beiden Indikatoren bereiten den Reversion-to-the-Mean-Trade vor.
+- Ohne ausreichendes Volumen wird der Preis nicht in neue Value Areas migriert, und der Ausbruch aus der Balance scheitert.
+- Gap, Elongation, ordentliches Volumen und ein Close nahe dem Tief sprechen für die Fortsetzung eines Abwärtsausbruchs.
+- Der genannte Rahmen für durchschnittliches Volumen liegt bei 1,6 Milliarden Aktien unten und 2 Milliarden oben; 1,8 Milliarden an diesem Tag galt als ordentlich.
+- Ohne beträchtliches Volumen weg vom Mean, dem Bauch der b-Formation, werden diese Preise wahrscheinlich wieder besucht.
 
 ## Risiken und Grenzen
 

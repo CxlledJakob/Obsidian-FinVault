@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendmodelle"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Trend-Exhaustion
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Kauferschöpfung durch austrocknendes Volumen in Trendrichtung löst die gegenläufige zwischenfristige Auktion aus. Das ist das seltenere, ruhige Ende; die treibenden Teilnehmer sind vollständig positioniert.
 
 ## Funktionsweise
 
@@ -35,9 +34,22 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Überlappt am Ende einer Abwärtsauktion die tiefere Balance die vorherige höhere, ist die Auktion spät. Das Ende bleibt offen, das Risiko kurzer Positionen ist höher.
+- Der Abstand zwischen aufeinanderfolgenden Balancebereichen schrumpft mit dem Alter. Spät liegt die nächste Balance auf oder in der vorherigen, auch wenn der Preis noch steigt.
+- Eine Balance nur knapp über und noch innerhalb der vorherigen zeigt einen alternden Trend. Das Ende ist damit noch nicht gegeben.
+- Ermüdete Trends erzeugen mehr Volatilität ohne viel weiteren Richtungsfortschritt. Das Volumen sinkt, und Tage mit dem Trend haben teils weniger Volumen als Tage gegen den Trend.
+- Gegenauktionen, die stärker sind als die Trendauktionen, zeigen einen gealterten Aufwärtstrend. Mindestens gleich starke Gegenauktionen sprechen gegen die Fortsetzung.
+- Die letzten Preise im Excess-Spike, der das häufigere Ende markiert, entstehen auf niedrigem Volumen.
+- Ein Bruch, der nach dem Durchbruch nicht sofort weiterläuft, ist eine frühe Warnung, dass die Abwärtsauktion beginnt, sich zu erschöpfen.
+- Eine nicht elongierte Profilform ist ein weiterer Hinweis, dass die Auktion ermüdet.
+- Eine fette Profilform zeigt, dass tiefere Preise keine Fortsetzung nach unten erzeugen.
+- Der Preis kann stetig tiefer wandern, während der Markt sich ohne die Überzeugung einer haltbaren Richtungsbewegung abmüht.
+- Die b-Form senkt die Chancen auf tiefere Kurse, hebt sie aber nicht auf.
+- Die p-Form warnt früh, dass der Markt Mühe hat, höher zu auktionieren.
 
 ## Risiken und Grenzen
 
+- Überlappend bis höherer Value bei Preisen, die unter der vorherigen Balance bleiben, zeigt, dass die Zwischenzeit-Auktion nach unten ermüden kann, aber nicht zwingend vorbei ist. Das Risiko, short zu bleiben, ist dann stark gewachsen.
 
 ## Beispiele
 
@@ -56,3 +68,5 @@ aktualisiert: 2026-10-26
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 181–200 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-014-p181-p200|S. 181–200]]
 
 ## Verwandte Themen
+
+- Strukturbruch

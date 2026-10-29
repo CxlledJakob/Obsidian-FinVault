@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Volumenprofile"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Fixed Range Volume Profile
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Mit dem passenden Kurssystem lässt sich ein Profil über jede gewünschte Spanne von Tagen erzeugen.
+- Dieselbe feste Spanne zeigt als Balkenchart nur den Preis. Das Profil derselben Spanne ergänzt Zeit und, über Preis mal Zeit, Volumen.
 
 ## Funktionsweise
 

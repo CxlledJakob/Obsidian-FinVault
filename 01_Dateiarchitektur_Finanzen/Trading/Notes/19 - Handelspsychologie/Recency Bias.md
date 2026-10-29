@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Mentale Fehler"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Recency Bias
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Recency Bias ist die Neigung, in einem Strom widersprüchlicher Information das jüngste Stück überzugewichten.
 
 ## Kernaussagen
 
+- Läuft etwas in der eigenen Zeitebene schon eine Weile, wird die Fortsetzung für wahrscheinlich gehalten.
+- Das Gedächtnis ist kurz, und je länger sich das wiederholt, desto geringer erscheint das Risiko.
 
 ## Funktionsweise
 

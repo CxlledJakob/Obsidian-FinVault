@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/11 - Indikatoren/11 - Indikatoren|11 - Indikatoren]]"
 weitere_hauptthemen: []
 unterthema: "Trendindikatoren"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Exponential Moving Average
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Mittellinie der Bollinger Bands ist ein Exponential Moving Average.
+- Dieser Durchschnitt gilt als wahrer Wert oder Mean.
 
 ## Funktionsweise
 
@@ -38,6 +38,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Der Durchschnitt beruht nur auf dem Preis und zeigt die Wanderung des Means unvollständig.
 
 ## Beispiele
 

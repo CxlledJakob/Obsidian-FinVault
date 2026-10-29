@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/09 - Wyckoff-Methode/09 - Wyckoff-Methode|09 - Wyckoff-Methode]]"
 weitere_hauptthemen: []
 unterthema: "Grundkonzepte"
@@ -10,22 +10,28 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Angebot und Nachfrage
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Der Auktionsprozess läuft über den Preis auf und ab, um Angebot und Nachfrage aufzudecken und aufzunehmen.
+- Zu jedem Verkauf gibt es einen Kauf. Für die mögliche Richtung zählt, welches Timeframe kauft und welches verkauft.
+- Liegt das Inventar nicht bei den langfristigen Käufern, muss der Preis sinken, um sie anzuziehen.
+- Fließen Mittel zu, auktioniert der Markt schließlich höher. Fließen sie ab, auktioniert er schließlich tiefer.
+- Gibt es mehr Bieter als Papiere, beginnt häufig sofort eine starke Aufwärtsauktion.
+- Bleibt das Inventar bei den Zwischenhändlern statt bei den langfristigen Investoren, wird es tiefer auktioniert, bis die Balance wiederhergestellt ist.
 
 ## Funktionsweise
 
+- Unter Value für die Verkäufer eines Timeframes werden nur wenige Gebote ausgeführt, und die Auktion steigt schnell. Sobald der Preis über der Vorstellung von fairem Wert liegt, steigen Bieter aus.
+- Kaufen danach nur noch jene weiter, die Nachfrage decken müssen oder im Auktionsrausch sind. Lässt die Nachfrage nach, übersteigen die Angebote die Gebote, und die Auktion dreht.
 
 ## Voraussetzungen
 
@@ -35,6 +41,11 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Auktioniert der Preis höher, wird erwartet, dass die Nachfrage schwindet und der Preis zum Tagesmittel zurückläuft.
+- Auktioniert der Preis tiefer, verringert sich in der Regel das Angebot, und der Preis läuft zum Tagesmittel oder zur Value Area zurück.
+- Ausnahme: Höhere Preise können die Nachfrage steigern, statt sie abzuschneiden. Dann ist die Auktion nicht abgeschlossen.
+- Am oberen Profilende trocknet das Kaufen aus, am unteren wird das Verkaufen abgeschnitten.
+- Die erwartete Reaktion auf tiefere Preise ist, dass das Angebot langsamer wird. Dort liegt Kaufgelegenheit unter Value.
 
 ## Risiken und Grenzen
 

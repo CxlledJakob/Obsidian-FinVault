@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Strukturwechsel"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Range Contraction
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,12 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ein Inside Day enthält seine gesamte Spanne in der Spanne des Vortags und ist eine Form von Balance.
+- Ein Open-Drive, der innerhalb der Vortagesspanne bleibt, ist noch in Balance und zieht weniger Aufmerksamkeit an als ein Lauf aus der Balance.
+- Fehlt nach einem Open-Auction über die ersten fünf Perioden die Überzeugung, ist für den Rest des Tages eine begrenzte Range wahrscheinlich.
+- Folgt auf einen Tag mit weiter Range und Akzeptanz ein Tag, der nicht über dieses Hoch auktioniert, ist ein enger, rangegebundener Tag zu erwarten.
+- Innerhalb der Balance bleiben Volatilität und Range kleiner als außerhalb der Balance.
+- Bleibt der Preis in der Range der Eröffnungsperiode, sind die Chancen auf eine wirkliche Veränderung gering.
 
 ## Risiken und Grenzen
 

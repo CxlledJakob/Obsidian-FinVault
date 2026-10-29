@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Volumenprofile"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Composite Volume Profile
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Ein Langfrist-Profil über eine Spanne von Tagen zeigt Zeit, Preis und, abgeleitet über Preis mal Zeit, Volumen.
+- Sichtbar werden die Verteilungen, also die breiten Bereiche, in denen der größte Teil des Volumens lag, und der Mittelwert jeder Verteilung.
+- Eine voll entwickelte Verteilung mit definiertem Mittel ist der Bereich, in dem Käufer und Verkäufer Value vereinbart haben. Ohne ausreichendes Volumen zieht dieser Bereich den Preis zurück.
 
 ## Funktionsweise
 

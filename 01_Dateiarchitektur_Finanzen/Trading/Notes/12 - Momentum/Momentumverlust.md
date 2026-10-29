@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/12 - Momentum/12 - Momentum|12 - Momentum]]"
 weitere_hauptthemen: []
 unterthema: "Momentumstruktur"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Momentumverlust
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ein müder Trend zeigt erhöhte Volatilität, ohne noch viel weiteren Fortschritt in Trendrichtung zu erzeugen.
+- Das Volumen beginnt zu sinken.
+- Auktionen in Trendrichtung können weniger Volumen haben als Tage, an denen der Markt gegen den Trend auktioniert.
 
 ## Risiken und Grenzen
 

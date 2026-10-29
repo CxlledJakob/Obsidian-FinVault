@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Liquidität
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Liquidität meint hier den ständigen Zufluss und Abfluss von Mitteln, nicht nur die Möglichkeit, eine einzelne Order auszuführen.
 
 ## Kernaussagen
 
+- Scalper stellen wesentliche Liquidität, weil sie auf den unmittelbaren Bedarf des Marktes reagieren und von allen Timeframes kaufen und verkaufen.
+- Day Trader stellen ebenfalls Liquidität, oft zu hohen eigenen Kosten.
+- Die kürzeren Timeframes existieren vor allem, um Liquidität zu ermöglichen. Langfristiges Geld ist klebriger, weil es substanzielle Orders in eine Richtung legt.
+- Market Profile ist vollständig liquiditätsgetrieben. Fließen Mittel hinein, auktioniert der Markt schließlich höher, und fließen sie hinaus, schließlich tiefer.
+- Das Profil erfasst diesen Fluss und damit die sich ändernden Haltungen der Teilnehmer in der Gegenwart.
+- Day-Trader stellen wie Scalper Liquidität bereit, sehr oft zu hohen eigenen Kosten.
 
 ## Funktionsweise
 
@@ -38,6 +43,9 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Verlässt der Markt eine Balance-Area, bewegt sich der Preis anfangs oft schnell und nichtlinear, die Liquidität schrumpft, und die Gelegenheit ist verloren.
+- Hat ein großer Verwalter die schwächer werdende Auktion verpasst, ist die Liquidität nach Beginn der Umkehr in der Regel begrenzt und kann das Ergebnis stark verschlechtern.
+- Sobald die Veränderung breit erkannt ist, trocknet die Liquidität aus. Für große Verwalter ist es dann meist zu spät, weil die Veränderung bereits der Normalfall ist.
 
 ## Beispiele
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Emotionen"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Überkonfidenz
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Überkonfidenz ist das wiederkehrende Gefühl von Sicherheit, das aus wenigen passenden Teilen des Gesamtbildes entsteht.
 
 ## Kernaussagen
 
+- Diese Überkonfidenz steht hinter der Annahme, dass Märkte auf eine vorhersehbar irrationale Weise verzerrt sind.
 
 ## Funktionsweise
 
@@ -54,3 +54,5 @@ aktualisiert: 2026-10-26
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 120–139 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-010-p120-p139|S. 120–139]]
 
 ## Verwandte Themen
+
+- Bestätigungsfehler

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|03 - Unterstützungen & Widerstände]]"
 weitere_hauptthemen: []
 unterthema: "Reaktionen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Breakdown
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,9 +33,12 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Im beginnenden Abwärtstrend ziehen tiefere Preise zusätzliches Verkaufsvolumen an, statt es abzuschneiden. Daraus wird der Abwärtsausbruch.
+- Eine Bracket-Ausweitung nach unten trägt einen neuen Trend, sobald sie bei steigendem Volumen erfolgt.
 
 ## Risiken und Grenzen
 
+- Ein Abwärtsausbruch an der Untergrenze eines Aufwärtskanals gibt den Gewinn ab, der auf dem Weg dorthin nicht abgesichert wurde.
 
 ## Beispiele
 

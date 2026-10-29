@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/13 - Volatilität/13 - Volatilität|13 - Volatilität]]"
 weitere_hauptthemen: []
 unterthema: "Volatilitätsdynamik"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-29
 ---
 
 # Volatilitätsexpansion
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Nach Jahren unter dem historischen Volatilitätsdurchschnitt stieg die Volatilität mit dem Bruch schnell an.
 
 ## Funktionsweise
 
@@ -35,12 +34,20 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Der Übergang zwischen Bracket und Trend geht immer mit steigender Volatilität einher, weil mehrere Zeitebenen gleichzeitig aktiv werden.
+- Ermüdete Trends zeigen höhere Volatilität, ohne noch viel weiteren gerichteten Fortschritt zu erzeugen.
+- Steigt die Volatilität, weitet sich der Kanal. Ein Abstand von 8 bis 10 Prozent ist dann nicht ungewöhnlich, gegenüber etwa 5 Prozent im engeren gezeigten Verlauf.
+- Bei großen Breakouts laufen mehrere Zeitebenen zusammen, und die Volatilität steigt.
+- Konzentrieren sich viele Teilnehmer auf ein Niveau oder einen Indikator, steigt die Chance erhöhter Volatilität.
+- Mit der höheren Volatilität kommt die Gelegenheit.
+- Kommt der Markt aus der Balance, zieht das wahrscheinlich mehrere Zeitebenen an und erhöht die Volatilität. Ein Inside Day ist eine Form dieser Balance.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- An einem viel beachteten gleitenden Durchschnitt steigt die Volatilität.
 
 ## Unterschiedliche Quellenpositionen
 
