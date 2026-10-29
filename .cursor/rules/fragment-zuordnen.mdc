@@ -1,0 +1,35 @@
+---
+description: Use when the user hands over a folder of book fragments and asks to assign them to FinVault concepts. Writes source lines only.
+alwaysApply: false
+---
+
+# Fragment einem Begriff zuordnen
+
+Du ordnest Fragmente aus `Trading/Pilot/blocks/` den bestehenden Begriffsnotizen zu. Den Inhalt der Notiz füllst du nicht.
+
+## Ablauf
+
+1. Lies nur den Ordner, den der Nutzer dir gibt. Arbeite fragmentweise, nicht das ganze Buch in einem Schritt.
+2. Lies `Trading/Research/Taxonomie/Themenstruktur.txt`. Erst die 25 Hauptthemen, dann nur die Begriffe unter den getroffenen Themen.
+3. Ein Begriff passt nur, wenn das Fragment ihn definiert, eine Regel gibt oder ein Kriterium nennt. Ein einzelnes Wort reicht nicht. Keine neuen Begriffe.
+4. Schreibe die Treffer als JSON, ein Objekt pro Fragment:
+
+```json
+{"fragment": "Trading/Pilot/blocks/<buch>/<datei>.md", "begriffe": ["Exakter Begriff"]}
+```
+
+`begriffe` bleibt leer, wenn nichts passt. Namen müssen exakt aus der Themenliste stammen.
+
+5. Wende die Liste nur so an:
+
+```bash
+python3 "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" link zuordnungen.json
+```
+
+6. Die Begriffsdatei fasst du nicht selbst an. Das Skript hängt ausschließlich eine Zeile unter `## Quellen und Fundstellen` an.
+
+## Grenzen
+
+- Kein n8n, kein Ollama-Flow.
+- `status: geprüft` und `status: archiviert` bleiben unberührt. Wenn das Skript `gesperrt` oder `unbekannt` meldet, korrigierst du den Namen oder lässt den Begriff weg. Du umgehst das Skript nicht.
+- PDFs und `split_blocks.py` startest du nur, wenn der Nutzer ausdrücklich einen neuen Band parsen will. Für die Zuordnung sind die Fragmentdateien schon das Ausgangsmaterial.
