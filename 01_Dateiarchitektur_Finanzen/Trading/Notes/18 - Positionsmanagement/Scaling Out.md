@@ -55,5 +55,8 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 81–100 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-006-p081-p100|S. 81–100]]
+- High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 177–196 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-014-p177-p196|S. 177–196]]
+- High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 196–214 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-015-p196-p214|S. 196–214]]
+- High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 215–234 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-016-p215-p234|S. 215–234]]
 
 ## Verwandte Themen
