@@ -22,6 +22,34 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Das Performancemaß dieses Buches ist die annualisierte durchschnittliche Tagesrendite auf trendbereinigten, um null zentrierten Marktdaten.
+- Die Leistung einer Regel lässt sich auf viele Arten definieren. Verbreitet sind die durchschnittliche Rendite, die Sharpe Ratio und der Profit Factor.
+- Die Performancehistorie einer künstlichen Handelsregel wird mit der Statistik mittlere Monatsrendite, annualisiert, zusammengefasst.
+- Eine künstliche Regel mit Gewinnwahrscheinlichkeit 1,0 hat eine erwartete Monatsrendite von +3,97 Prozent, entsprechend einer nicht aufgezinsten annualisierten Rendite von 47,6 Prozent.
+- Eine Gewinnwahrscheinlichkeit von null ergibt −3,97 Prozent pro Monat oder −47,6 Prozent pro Jahr.
+- Die in den Experimenten aufgetragenen Data-Mining-Verzerrungen sind annualisierte prozentuale Renditen; die Kurve gegen die Regelzahl gilt für eine 24-Monats-Historie, die Kurve gegen die Regelkorrelation für 100 Monatsbeobachtungen.
+- In den früheren Abbildungen ist die senkrechte Achse der Data-Mining-Bias in annualisierter prozentualer Rendite pro Jahr.
+- In Abbildung 6.43 ist die senkrechte Achse dagegen die wahre Güte, also die erwartete Rendite der Regel mit der höchsten beobachteten Performance.
+- Wird die beste aus 256 Regeln mit 1.000 Monaten Historie gewählt, beträgt ihre erwartete Rendite +10 Prozent im Jahr, weit über dem Universumsmittel von +1,4 Prozent pro Jahr.
+- Bei nur zwei Monaten überzeichnet die beobachtete Performance der besten von 256 ihre erwartete Rendite um über 200 Prozent pro Jahr; bei 100 Monaten beträgt der Bias etwa 18 Prozent und bei 1.000 Monaten weniger als 3 Prozent.
+- In den Abbildungen zur beobachteten und erwarteten Performance ist die senkrechte Achse die annualisierte Rendite; der senkrechte Abstand ist der Data-Mining-Bias, im Beispiel der besten von 10 bei 400 Monatsbeobachtungen.
+- Der Populationsparameter der Fallstudie ist die erwartete durchschnittliche annualisierte Rendite einer Regel in der unmittelbaren praktischen Zukunft.
+- Die Stichprobenstatistik ist die durchschnittliche annualisierte Rendite, die eine Regel auf den trendbereinigten Kursen des S&P 500 vom 1. November 1980 bis zum 1. Juli 2005 erzielt.
+- Die Performancestatistik, mit der jede Regel bewertet wird, ist ihre durchschnittliche Rendite über 1980 bis 2005 im Backtest auf trendbereinigten S&P-500-Daten.
+- Praktische Signifikanz hängt von den Zielen des Händlers ab. Einer kann mit einer erwarteten Rendite von 5 Prozent zufrieden sein, ein anderer lehnt jede Regel ab, deren erwartete Rendite unter 20 Prozent liegt.
+- In Michael Coopers Walk-forward-Simulation auf 300 Large-Cap-Aktien von 1978 bis 1993 erzielten die Long-Short-Portfolios eine annualisierte Rendite von 44,95 Prozent gegen 17,91 Prozent für Buy-and-hold.
+- Die beste Regel E-12-28-10-30 erzeugte auf trendbereinigten Marktdaten eine mittlere annualisierte Rendite von 10,25 Prozent.
+- Die Stichprobenverteilungen von White’s Reality Check und der Monte-Carlo-Permutation zentrieren beide bei etwa 11 Prozent mittlerer Rendite.
+- Die erwartete Rendite der besten von 6.402 konkurrierenden Regeln ohne Vorhersagekraft beträgt unter den konkreten Bedingungen der Fallstudie etwa 11 Prozent und nicht 0 Prozent.
+- Dieser Wert von etwa 11 Prozent folgt aus dem Satz von 6.402 Regeln, ihren Renditekorrelationen, der Zahl der Beobachtungen für die Mittelwerte und dem verwendeten S&P-Datensatz.
+- Die annualisierte Rendite von 10,25 Prozent liegt unter dem Zentrum der Stichprobenverteilung von 11 Prozent und damit im Bereich gewöhnlicher Stichprobenschwankung.
+- Die Stichprobenverteilung der mittleren Rendite der besten von N Regeln, zum Beispiel N gleich 6.402, ist nicht bei null zentriert, sondern bei einem positiveren Wert, der die Verteilung des Maximums von N Mitteln abbildet.
+- Annualisierte Renditen über 15 Prozent wären beim Signifikanzniveau 0,05 signifikant gewesen.
+- Annualisierte Renditen über 17 Prozent wären hochsignifikant gewesen, mit einem p-Wert unter 0,001.
+- In einem gewöhnlichen Signifikanztest, der den Data-Mining-Bias ignoriert, wäre die mittlere Rendite der besten Regel mit einem p-Wert von 0,0005 hochsignifikant erschienen; diese Einzelregel-Verteilung ist bei null zentriert.
+- Tabelle 9.1 listet die mittlere Rendite auf trendbereinigten S&P-Daten; die erste und höchste ausgewiesene Rendite ist 0,102501 für die Regel E-12-28-10-30.
+- Die zweite in Tabelle 9.1 genannte Rendite ist 0,102395 für die Regel D-8-4-10-60.
+- Die ersten in Tabelle 9.1 genannten Grenzen des 80-Prozent-Konfidenzintervalls sind −0,02932 und 0,23527, neben der Rendite 0,102501 der Regel E-12-28-10-30.
 
 ## Funktionsweise
 
@@ -47,11 +75,14 @@ aktualisiert: 2026-10-30
 - Die übliche lineare Mean-Reversion-Strategie auf dem VX-Kalenderspread, mit dem Ratio als Signal und einem Lookback von 15 Tagen für gleitenden Durchschnitt und Standardabweichungen, erzielt vom 27. Oktober 2008 bis zum 23. April 2012 eine annualisierte Rendite von 17,7 Prozent bei einer Sharpe Ratio von 1,5.
 - Dieselbe VX-Kalenderspread-Strategie schnitt vor Oktober 2008 deutlich schlechter ab.
 - Die Bollinger-Band-ähnliche Mean-Reversion-Strategie auf dem stationären Portfolio aus ES und VX erzielt auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 eine annualisierte Rendite von 12,3 Prozent bei einer Sharpe Ratio von 1,4.
+- Der Populationsparameter einer technischen Regel ist ihre erwartete Leistung über die unmittelbare praktische Zukunft. Gemessen wird sie in diesem Buch als annualisierte durchschnittliche Tagesrendite auf trendbereinigten, um null zentrierten Daten.
 
 ## Regeln und Kriterien
 
 - Eine erwartete APR von 10 Prozent, die auf 1 Prozent statistisch signifikant ist, bedeutet hier: Unter 10.000 simulierten Preisreihen gleicher Länge und mit denselben ersten drei Momenten wie die historische Preisreihe erreichen nur 100 Reihen eine APR von mindestens 10 Prozent.
 - Dieselbe Aussage bedeutet alternativ: Bei randomisierten Einstiegstagen erreicht nur eine von 100 Zufallspermutationen eine APR von mindestens 10 Prozent.
+- Ein Buy-and-Hold in einem Marktindex ist für einen Timing-Dienst, der Long- und Short-Positionen eingeht, möglicherweise kein geeigneter Vergleichsmaßstab.
+- Ein Maßstab, der die Nullhypothese für den Signifikanztest der Renditen von Long-Short-Signalen darstellt, ist ein Zufallssignal mit demselben Anteil von Long- und Short-Positionen.
 
 ## Risiken und Grenzen
 
@@ -85,6 +116,14 @@ aktualisiert: 2026-10-30
 - Hafez und Xie erzielen mit RavenPack-Sentiment, je nach Zahl der Aktien, vor Transaktionskosten annualisierte Renditen von 52 bis 156 Prozent bei Sharpe Ratios von 3,9 bis 5,3.
 - Das marktneutrale PRESSURE-Portfolio von Coval und Stafford erzielt vor Kosten etwa 17 Prozent annualisiert, das Front-Running der Fonds weitere 17 Prozent und die anschließende Mean Reversion weitere 7 Prozent, zusammen etwa 41 Prozent vor Transaktionskosten.
 - Die Rollrendite von VX kann bis minus 50 Prozent annualisiert betragen, die von ES ist mit etwa 1 Prozent annualisiert unbedeutend.
+- Die Regel TT-4-91 erzielte von November 1980 bis Juni 2005 auf trendbereinigten S&P-500-Daten eine annualisierte Rendite von 4,84 Prozent.
+- Die erwartete Jahresrendite einer Regel ohne Vorhersagekraft ist auf trendbereinigten Daten null.
+- Die mittlere Tagesrendite dieser Regel, die bei der Nullzentrierung von jedem Tagesertrag abgezogen wird, beträgt ungefähr 0,0192 Prozent.
+- Im Beispiel einer traditionellen Signifikanzprüfung beträgt die Rendite der Regel plus 10 Prozent annualisiert.
+- Die beste von 50 gebacktesteten Regeln erzielte eine annualisierte Rendite von plus 37 Prozent.
+- Eine Leistungskennzahl, auf die ein Backtest verdichtet wird, ist die annualisierte Durchschnittsrendite.
+- Nach den Langfristratings von Hulbert's Financial Digest vom Juli 2005 erzielte The Elliott Wave Financial Forecast mit Long- und Short-Signalen annualisierte Renditen von +1,1 Prozent über 5 Jahre, −28,2 Prozent über 10 Jahre, −25,9 Prozent über 15 Jahre und −18,2 Prozent über die Lebensdauer des Dienstes seit dem 31.12.1984.
+- Für dieselben Zeiträume gibt Hulbert für den Dow Jones Wilshire 5000 mit reinvestierten Dividenden −1,3 Prozent über 5 Jahre, +10 Prozent über 10 Jahre und +10,7 Prozent über 15 Jahre an.
 
 ## Unterschiedliche Quellenpositionen
 

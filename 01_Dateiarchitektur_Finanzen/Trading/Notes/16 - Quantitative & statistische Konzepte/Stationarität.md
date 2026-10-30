@@ -27,6 +27,12 @@ aktualisiert: 2026-10-30
 - Stationarität heißt, dass die Varianz der Logpreise langsamer wächst als bei einem geometrischen Random Walk, also sublinear in der Zeit, angenähert durch τ hoch 2H mit H kleiner als 0,5.
 - Stationarität ist ein irreführender Name: sie bedeutet nicht, dass die Preise notwendig in einer Spanne liegen und die Varianz zeitunabhängig mit Hurst-Exponent null ist, sondern nur, dass die Varianz langsamer wächst als normale Diffusion.
 - Stationarität bedeutet, dass Preise langsamer diffundieren als ein geometrischer Random Walk.
+- Es gibt eine strenge mathematische Definition einer stationären Zeitreihe; hier wird das Wort lockerer benutzt für eine Reihe mit über die Zeit relativ stabilem Durchschnitt und mit Schwankungen, die in einer ungefähr horizontalen Spanne bleiben.
+- Praktiker der technischen Analyse nennen solche Reihen oft Oszillatoren.
+- Probleme, deren statistische Eigenschaften über die Zeit stabil bleiben, heißen stationär. Probleme, in denen sich die statistischen Eigenschaften über die Zeit ändern, heißen nichtstationär.
+- Statistische Probleme, in denen der Populationsparameter fest bleibt, heißen stationär. Ändert sich der Populationsparameter, ist er instabil oder nichtstationär.
+- In dem Beispiel wird angenommen, das zugrunde liegende Phänomen sei stationär, das heißt, es bleibe über die Zeit unverändert.
+- Die dort verwendete Definition von stationär ist nicht streng richtig, aber für die Zwecke der Diskussion nahe genug.
 
 ## Kernaussagen
 
@@ -88,6 +94,27 @@ aktualisiert: 2026-10-30
 - Eine Preisreihe, die bisher mean-reverting war, kann künftig trendfolgen.
 - Die Kelly-Optimalität über das Portfolio setzt unveränderte erwartete Renditen und Volatilitäten voraus.
 - Nach einem schweren Drawdown ist zweifelhaft, ob diese Erwartungen noch gelten.
+- Im Perlenbeispiel wird jede Stichprobe zurück in die Schachtel gelegt, bevor die nächste gezogen wird. Dadurch bleibt der Grauanteil F-G über die 50 Ziehungen konstant.
+- Würden die Perlen nach jeder Ziehung nicht zurückgelegt, änderte sich F-G im Lauf der 50 Ziehungen, weil Gruppen von Perlen dauerhaft entnommen würden.
+- Finanzmärkte können durchaus nichtstationär sein. Für die Lehre ist das Perlenproblem stationär angelegt.
+- Es wäre unvernünftig, die Dynamik der Finanzmärkte als stationär anzunehmen, und deshalb unvernünftig, zu erwarten, dass die Profitabilität einer Regel ewig anhält.
+- Die unmittelbare praktische Zukunft ist ein endlicher Zeitraum, über den die Profitabilität einer nützlichen Regel vernünftigerweise anhalten kann, obwohl die Märkte nichtstationär sind.
+- Der Populationsmittelwert ist unbekannt und variiert in stationären Problemen nicht. Der Stichprobenmittelwert wird aus beobachteten Werten berechnet und variiert zufällig von Stichprobe zu Stichprobe.
+- Es ist vernünftig anzunehmen, dass Finanzmärkte nichtstationäre Systeme sind.
+- Es ist nicht vernünftig anzunehmen, dass jedes Scheitern außer Stichprobe daher kommt, dass sich die Marktdynamik geändert hat.
+- Unplausibel ist, dass der Markt sein Verhalten jedes Mal ändert, wenn eine Regel aus dem Labor in den Handel übergeht, und zwar so häufig, wie Regeln außer Stichprobe scheitern.
+- Ein Indikator, der als kumulative Summe einer Preis-Volumen-Funktion definiert ist, zeigt langfristige Trends wie Vermögenspreise und Zinsen und ist eine nichtstationäre Zeitreihe.
+- Ein gleitender Durchschnitt einer Preis-Volumen-Funktion ist stationär: er zeigt keine Trends, betrachtet nur die Beobachtungen im Look-back und bleibt wegen positiver und negativer Werte in einer relativ engen Spanne nahe null.
+- Kumulative Marktbreitenindikatoren zeigen langfristige Trends, während Breitenindikatoren als gleitende Durchschnitte eher stabile Mittelwerte und Schwankungsbreiten haben.
+- Hohe und tiefe Extreme lassen sich über feste Wertschwellen definieren, wenn die Zeitreihe einen relativ stabilen Mittelwert und eine relativ stabile Schwankungsbreite hat, also stationär ist.
+- Alle Eingabereihen der Extremwert-Regeln wurden durch den Kanalnormierungsoperator stationär gemacht.
+- Zeigt der statistische Test, dass zwei Reihen kointegriert sind, fällt aus der Analyse ein stationärer Divergenzindikator; in der Kointegrationsterminologie ist das das Error-Correction-Modell.
+- Der doppelt kanalnormierte Divergenzindikator hat eine mögliche Schwankungsbreite von 0 bis 100, ähnlich wie jede kanalnormierte Variable.
+- Finanzmärkte sind höchstwahrscheinlich nichtstationäre Systeme.
+- Statistische Inferenz ist im Allgemeinen nicht dafür gemacht, mit nichtstationären Phänomenen umzugehen.
+- Nichtstationarität ist ein Risiko, das jeder Anlage auf Basis einer Regel innewohnt, ob die Regel statistisch abgeleitet wurde oder nicht.
+- Der Grundsatz, dass größere Stichproben besser sind, gilt für stationäre Prozesse.
+- Bei Finanzmarkt-Zeitreihen, die höchstwahrscheinlich nicht stationär sind, können alte Daten irrelevant oder sogar irreführend sein, und größere Stichproben sind dann nicht besser.
 
 ## Funktionsweise
 
@@ -101,6 +128,13 @@ aktualisiert: 2026-10-30
 - Zuerst wird die kumulative Summe gebildet, damit überhaupt eine Differenzierung nötig ist. Dann wird die Fixed-Width-Reihe für mehrere d zwischen 0 und 1 berechnet, und es wird das kleinste d gewählt, bei dem der p-Wert der ADF-Statistik unter 5 Prozent fällt.
 - Mean Reversion und Stationarität sind äquivalente Sichtweisen, aber der ADF-Test prüft die Mean Reversion und Hurst-Exponent sowie Variance-Ratio-Test die Stationarität.
 - Für einen geometrischen Random Walk ist H gleich 0,5 und die Varianz linear in τ; der Variance-Ratio-Test prüft die Null, dass H wirklich 0,5 ist.
+- Feste Schwellenregeln passen zu Reihen, die in diesem lockeren Sinn stationär sind, also keinen Trend zeigen.
+- Reihen mit Trend lassen sich detrendieren und dadurch in eine stationäre Reihe überführen; häufig geschieht das durch Differenzen oder durch Verhältnisse.
+- Das Verhältnis einer Zeitreihe zu ihrem gleitenden Durchschnitt erzeugt eine stationäre Version der ursprünglichen Reihe.
+- Nach dem Detrending schwankt die Reihe in einer relativ klar begrenzten horizontalen Spanne um einen relativ stabilen Mittelwert, und dann lassen sich feste Schwellen verwenden.
+- Das Detrending für die Renditerechnung erzeugt eine neue Marktreihe, deren durchschnittliche tägliche Preisänderung null ist, indem diese durchschnittliche Änderung von jedem Tag abgezogen wird.
+- Ein Testtyp, mit dem festgestellt wird, dass eine Zeitreihe stationär ist, heißt Unit-Root-Test und wird bei Alexander, Market Models, auf den Seiten 324–328 und 353–361 beschrieben.
+- Der Operator YY normierte seine Werte mit dem Standardfehler der Regression und machte, anders als die Kointegrationsanalyse, keinen expliziten Test auf die Stationarität der Residuen.
 
 ## Voraussetzungen
 
@@ -114,6 +148,7 @@ aktualisiert: 2026-10-30
 - Stationäre Gleichgewichtsmodelle brauchen etwas Gedächtnis, um zu beurteilen, wie weit der Preis vom langfristigen Erwartungswert abgedriftet ist, bevor eine Prognose entsteht.
 - Die Fixed-Width-Reihe zum kleinsten d mit ADF-p-Wert unter 5 Prozent wird als prognostisches Feature empfohlen.
 - Die so gewählte Fixed-Width-Reihe soll als prognostisches Feature verwendet werden.
+- Walk-Forward-Tests sind besonders attraktiv für nichtstationäre Phänomene wie Finanzmärkte, weil das wandernde Datenfenster eine dynamische Anpassung hinzufügt und in jedem neuen Fenster eine neue Regel formuliert werden kann.
 
 ## Regeln und Kriterien
 
@@ -146,6 +181,8 @@ aktualisiert: 2026-10-30
 - Der Preis-Spread von USO und GLD mit täglicher Hedge Ratio sieht sehr stationär aus, obwohl GLD und USO nicht kointegriert sind.
 - Das Verhältnis USO zu GLD sieht daneben nicht stationär aus, und die lineare Strategie darauf hat eine negative APR.
 - Das Verhältnis zweier Preise ist nur im Sonderfall betragsgleicher Hedge Ratios stationär; im Beispiel 10 zu 5 gegen 100 zu 50 bleibt das Verhältnis 2, während der Spread von 5 auf 50 steigt.
+- Nimmt ein unsichtbarer Dämon zwischen den Ziehungen heimlich graue Perlen weg oder hinzu, ist der Populationsparameter F-G nicht mehr konstant, sondern nichtstationär.
+- Indikatoren, die auf dem Leerverkaufsvolumen der NYSE-Spezialisten beruhen, scheinen an Prognosekraft verloren zu haben.
 
 ## Unterschiedliche Quellenpositionen
 

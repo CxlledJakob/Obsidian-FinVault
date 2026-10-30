@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/11 - Indikatoren/11 - Indikatoren|11 - Indikatoren]]"
 weitere_hauptthemen: []
 unterthema: "Oszillatoren"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Fisher Transform
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -26,6 +24,11 @@ aktualisiert: 2026-10-26
 
 ## Funktionsweise
 
+- Ehlers diskutiert die Fisher-Transformation für Indikatoren, die Extreme messen sollen.
+- Die Häufigkeitsverteilung eines Indikators auf Basis der Kanalnormierung hat eine unerwünschte Eigenschaft: Extremwerte sind erheblich wahrscheinlicher als Werte in der Mitte der Spanne des Indikators.
+- Das ist kaum das Verhalten, das man von einem Indikator will, der seltene Extreme erkennen soll.
+- Wendet man die Fisher-Transformation auf kanalnormierte Daten an, liegt der resultierende Indikator nach Ehlers nahe an der Normalverteilung.
+- Ein normalverteilter Indikator hat die erwünschte Eigenschaft, dass seine Extremwerte selten sind, und das kann sie informativer machen.
 
 ## Voraussetzungen
 
@@ -38,6 +41,8 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Ehlers legt keine Daten vor, die die Wirksamkeit der Fisher-Transformation stützen.
+- Zum Zeitpunkt des Textes ist der Nutzen der Fisher-Transformation nur eine interessante Vermutung, die weitere Untersuchung verdient.
 
 ## Beispiele
 

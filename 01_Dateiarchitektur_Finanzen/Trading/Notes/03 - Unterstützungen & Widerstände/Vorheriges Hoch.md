@@ -58,6 +58,8 @@ aktualisiert: 2026-10-30
 - Ein Day-Timeframe-Ziel kann das Hoch des Vortags, ein Drei-Tages-Hoch oder das obere Ende einer Gap sein.
 - Das Wochenhoch ist für den Day-Trader nur relevant, wenn es leicht in Reichweite liegt.
 - Das Hoch des Vortags und das Overnight-Hoch ziehen oft überdurchschnittlichen Handel an.
+- In der Aufwärtstrend-Bedingung von Chang und Osler muss die linke Schulter des Schulter-Kopf-Schulter-Tops über dem vorherigen Hoch, dem Prior Peak, liegen.
+- Liegt die linke Schulter nicht über diesem vorherigen Hoch, erfüllt der Kandidat die Grundregeln nicht.
 
 ## Risiken und Grenzen
 

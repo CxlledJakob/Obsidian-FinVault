@@ -20,6 +20,7 @@ aktualisiert: 2026-10-30
 
 - Der durchschnittliche Slippage je Umschlag sind die Ausführungskosten eines Portfolioumschlags ohne Brokergebühren.
 - Der Slippage je Umschlag sind die Ausführungskosten ohne Brokergebühren.
+- Slippage entsteht durch den Bid-Ask-Spread und durch den Betrag, um den die Order des Anlegers den Preis schiebt, nach oben beim Kauf und nach unten beim Verkauf.
 
 ## Kernaussagen
 
@@ -39,6 +40,10 @@ aktualisiert: 2026-10-30
 
 ## Regeln und Kriterien
 
+- Zu den Handelskosten im Regeltest gehören Brokerprovisionen und Slippage.
+- Regeln mit häufigen Umkehrsignalen verursachen höhere Handelskosten als Regeln mit seltenen Signalen; das ist zu berücksichtigen, wenn sie als eigenständige Handelsregeln verglichen werden.
+- Geht es nur darum, Signale mit Prognoseinformation zu finden, können Handelskosten den Wert einer häufig umkehrenden Regel verdecken.
+- Die Regelstudien dieses Buches setzten keine Handelskosten an, weil sie Prognosekraft suchten und nicht eigenständige Handelsstrategien.
 
 ## Risiken und Grenzen
 

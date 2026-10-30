@@ -43,6 +43,11 @@ aktualisiert: 2026-10-30
 - Die Manager müssen dann entscheiden, ob die Modelle noch gültig sind.
 - Die statistischen Eigenschaften finanzieller Zeitreihen sind nicht stationär: Die Wahrscheinlichkeitsverteilung der Preise bleibt nicht über die Zeit gleich.
 - Wissenschaft kann eigentlich nur mit stationären Statistiken umgehen.
+- Im Modell von Barberis, Shleifer und Vishny glauben die Anleger, der Gewinnstrom wechsle zwischen zwei nichtzufälligen Regimes hin und her, einer Wachstumstrend-Phase und einer mittelwertumkehrenden Phase, und betrachten einen Random Walk nicht.
+- Ihre angenommene Aufgabe ist, herauszufinden, welches dieser beiden Regimes zu einem gegebenen Zeitpunkt gilt.
+- Widerspricht die Nachricht dem geglaubten Regime, unterreagieren sie aus dem Konservatismus-Bias. Hält die widersprechende Nachricht an, werden sie überzeugt, das Regime sei umgeschlagen, entweder von Mean Reversion zu Wachstum oder von Wachstum zu Mean Reversion.
+- Dann wechseln sie von dem Fehler, an der Vorannahme zu kleben und zu unterreagieren, zu dem Fehler der kleinen Zahlen und zum Überreagieren.
+- In der Illustration starten sie im Glauben an ein Mean-Reversion-Regime der Gewinne, unterreagieren auf die ersten beiden positiven Gewinnmeldungen und nehmen nach der dritten positiven Meldung ein Wachstumsregime an.
 
 ## Funktionsweise
 

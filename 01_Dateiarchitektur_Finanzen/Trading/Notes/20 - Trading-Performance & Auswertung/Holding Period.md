@@ -40,6 +40,8 @@ aktualisiert: 2026-10-30
 - Der Momentum-Händler muss die Haltedauer deshalb womöglich ständig verkürzen, und es gibt dafür keinen vorhersagbaren Zeitplan.
 - Der zeitbasierte Ausstieg legt eine Haltedauer fest und schließt die Position, wenn diese Haltedauer erreicht ist.
 - Alle bisher besprochenen Momentum-Strategien verwenden nur solche zeitbasierten Ausstiege.
+- Die Schulter-Kopf-Schulter-Signale auf den echten Aktienkursen verlieren im Schnitt etwa 0,25 Prozent über eine Haltedauer von 10 Tagen.
+- Dieselbe Haltedauer von 10 Tagen ergibt bei den Mustern in den Pseudo-Aktiendaten einen durchschnittlichen Verlust von 0,03 Prozent.
 
 ## Funktionsweise
 

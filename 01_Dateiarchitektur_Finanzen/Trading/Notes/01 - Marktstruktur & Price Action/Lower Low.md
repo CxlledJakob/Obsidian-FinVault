@@ -28,6 +28,10 @@ aktualisiert: 2026-10-30
 - Das erste Marker nach einem Bruch nach unten ist ein Pivot-Tief. Es ist das erste tiefere Tief des neuen Abwärtslaufs.
 - Ein isoliertes Pivot-Tief liegt vor, wenn die mittlere von drei Kerzen ein tieferes Tief und ein tieferes Hoch hat als die Kerzen daneben.
 - Weitere tiefere Pivot-Tiefs bauen die untere Region der dynamischen Abwärtslinie, analog zu den höheren Tiefs im Anstieg.
+- Bei einer positiven Divergenz setzt eine Reihe in einem etablierten Abwärtstrend weiter sukzessiv tiefere Täler, während die zweite Reihe Täler auf höheren Niveaus bildet.
+- Diese sukzessiv tieferen Täler der ersten Reihe sind der eine Teil der auch bullische Nonconfirmation genannten Lage.
+- Wie viel Bewegung nötig ist, um ein neues Tal als gebildet anzusehen, ist in der subjektiven Divergenzanalyse eine offene Frage.
+- Unklar bleibt außerdem, welche nicht zeitgleichen Täler der beiden Reihen verglichen werden sollen und wie lange die Divergenz bestehen muss.
 
 ## Funktionsweise
 

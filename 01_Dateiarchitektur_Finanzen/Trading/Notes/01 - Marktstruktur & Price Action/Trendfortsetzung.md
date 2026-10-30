@@ -39,6 +39,15 @@ aktualisiert: 2026-10-30
 - Ein Anstieg auf durchschnittlichem Volumen ohne Extreme läuft weiter, bis eine Selling Climax auf dieser Zeitebene erscheint.
 - Fällt das Volumen in einem Abverkauf weg, trägt die Fortsetzung nach unten nicht weit.
 - Mit dem dominanten Trend der langsameren Zeitebene zu handeln senkt das Risiko der Fortsetzung. Dagegen zu handeln erhöht es und verkürzt die Haltedauer.
+- Die Clustering-Illusion erzeugt die falsche Erwartung, der aus einer Häufung ähnlicher Ergebnisse abgelesene Trend müsse fortbestehen.
+- Steigt ein Aktienindex wie der Dow-Jones-Durchschnitt oder der S&P 500 über seinen 200-Tage-Durchschnitt, legt er über die nächsten mehreren Monate in der Regel weiter zu.
+- Daraus wird die Hypothese gebildet, dass Aufwärtsdurchbrüche des 200-Tage-Durchschnitts durch den DJIA im Durchschnitt über die nächsten drei Monate profitable Long-Positionen erzeugen.
+- Sind zwei Reihen kohärent, also in Phase miteinander, gilt ihr gemeinsamer Trend als stark und wird als fortsetzend erwartet.
+- Figur 8.25 ordnet kohärenten Aufwärtstrends und kohärenten Abwärtstrends zu, dass der Trend anhalten soll, und der Divergenz zu, dass der Trend ungewiss ist.
+- Nach der Dow-Theorie ist der gemeinsame Trend eines Industrieindex und eines Transportindex gesund und wahrscheinlich anhaltend, solange beide in dieselbe Richtung laufen.
+- Eine Divergenz ist ein mögliches Signal, dass der bisher gemeinsame Trend schwächer geworden ist und sich umkehren könnte; die Umkehr gilt nicht als abgeschlossen, solange nur eine Reihe abweicht.
+- Zwei Ausgänge sind möglich: die ungestörte Reihe dreht zur abweichenden Begleiterin, oder die abweichende Reihe kehrt zur Begleiterin zurück und der gemeinsame Lauf setzt sich fort.
+- Ein abgeschlossenes Umkehrsignal wird erst unterstellt, wenn beide Reihen überzeugend gedreht haben und wieder in dieselbe Richtung laufen.
 
 ## Funktionsweise
 

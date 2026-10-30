@@ -26,6 +26,9 @@ aktualisiert: 2026-10-30
 - Ein Hebel, dessen maximaler Drawdown minus 100 Prozent beträgt, kann nicht optimal sein, weil die zusammengesetzte Wachstumsrate dann ebenfalls minus 100 Prozent ist.
 - Optimaler Hebel setzt voraus, dass das Eigenkapital historisch nie auf null fällt.
 - Die Vorgabe ist eine zusätzliche Nebenbedingung und nicht durch einfaches Skalieren mit dem Verhältnis der Drawdowns umsetzbar.
+- In Drawdowns ist es für erfolgreiche Trendfolger nicht ungewöhnlich, bis zu 30 Prozent ihres Handelskapitals zu verlieren.
+- Diese Drawdowns treten auf, wenn die Märkte trendlos sind, und das ist die Mehrheit der Zeit.
+- Die meisten Trendfolge-Systeme erzeugen in 50 bis 65 Prozent der Fälle unprofitable Signale. Das sind die Phasen, in denen die Trendfolger den Drawdown erleben.
 
 ## Funktionsweise
 

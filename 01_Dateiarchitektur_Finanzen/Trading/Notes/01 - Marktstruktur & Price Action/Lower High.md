@@ -31,6 +31,10 @@ aktualisiert: 2026-10-30
 - Im fallenden Dreieck ist jede Rally eine Serie tieferer Hochs. Das ist ein klares Schwächesignal, weil das Hoch der Kerzen immer schwächer wird.
 - Deshalb steht die Chance auf einen Bruch nach unten.
 - Ein Pennant baut oben eine Serie tieferer Hochs auf, während der Markt zu steigen versucht, und unten höhere Tiefs.
+- Bei einer negativen Divergenz bildet die zweite Reihe Gipfel auf tieferen Niveaus, während die erste Reihe weiter Gipfel auf sukzessiv höheren Niveaus setzt.
+- Dieses tiefere Gipfeln der zweiten Reihe heißt auch bärische Nonconfirmation.
+- Wie viel Abwärtsbewegung nötig ist, um einen neuen Gipfel als gebildet anzusehen, bleibt in der subjektiven Divergenzanalyse ungelöst.
+- Weil die beiden Reihen nicht genau gleichzeitig gipfeln, ist zudem unklar, welche Gipfel miteinander verglichen werden sollen.
 
 ## Funktionsweise
 

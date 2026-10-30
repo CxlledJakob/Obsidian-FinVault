@@ -70,6 +70,14 @@ aktualisiert: 2026-10-30
 - Die Eigenvektoren sind nach absteigenden Eigenwerten geordnet; der erste, zum größten Eigenwert, ist der stärkste und hat die kürzeste Halbwertszeit.
 - Die Eigenvektoren des Johansen-Tests dienen als Hedge Ratios, und der Eigenvektor mit dem größten Eigenwert hat die kürzeste Halbwertszeit.
 - Der Nettomarktwert des Portfolios ist Stückzahl mal Kurs, über die ETFs summiert, und tritt an die Stelle der Einzelreihe in der Halbwertszeit-Regression.
+- Das Problem des kanalnormierten Divergenzindikators bei negativ korrelierten Reihen ließe sich mit einer Formulierung auf Basis der Kointegration vermeiden, die Engle und Granger 1987 vorschlugen.
+- Dieses Verfahren nutzt eine Regressionsanalyse, um festzustellen, ob zwischen zwei Zeitreihen eine lineare Beziehung besteht.
+- Es verkraftet auch Paare, die stark negativ korreliert und damit 180 Grad außer Phase sind, und löst so das Problem falscher Gleichlaufanzeigen bei einem Indikatorwert von null.
+- Zuerst wird statistisch geprüft, ob die beiden Reihen verbundene Trends haben; sind sie kointegriert, fällt ein stationärer Divergenzindikator aus der Analyse.
+- Dieser Indikator heißt Error-Correction-Modell und misst, wie weit eine Reihe von der typischen linearen Beziehung der beiden Reihen abgewichen ist.
+- In den meisten Anwendungen soll die Divergenz zum gemeinsamen Trend zurückkehren, wenn das Error-Correction-Modell extrem positiv oder extrem negativ wird; der Fehler soll auf seinen normalen Wert null zurückkorrigieren.
+- Der Indikator einer solchen Beziehung ist eine Zeitreihe der Fehler, also der Residuen, der linearen Beziehung zwischen den zwei Reihen.
+- Ein Testtyp, mit dem festgestellt wird, dass eine Zeitreihe stationär ist, ist der Unit-Root-Test, beschrieben bei Alexander, Market Models, Seiten 324–328 und 353–361.
 
 ## Voraussetzungen
 
@@ -79,6 +87,11 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Findet sich ein Instrument, etwa ein ETF oder ein anderer Future, das mit dem Spotpreis oder der Spot-Rendite eines Rohstoffs kointegriert oder korreliert, lässt sich die Rollrendite des Rohstoff-Futures extrahieren, indem dieses Instrument bei Backwardation geshortet und bei Contango gekauft wird.
+- Aus Gründen der Einfachheit wurde die Kointegration für die Divergenzindikatoren der Fallstudie nicht verwendet.
+- Es wurde angenommen, eine nicht mit dem S&P 500 verbundene Begleitreihe zeige sich an der schlechten finanziellen Leistung der Divergenzregel.
+- Der Autor hält die Kointegrationsmethodik für weiter untersuchenswert bei der Entwicklung von Indikatoren.
+- Als mögliche Verbesserung der Indikatorspezifikation nennt der Text, Divergenzen könnten besser mit Indikatoren auf Basis der Kointegration gemessen werden; das Wort steht dort als conintegration.
+- Diese Anregung steht neben dem Vorschlag, Extremindikatoren mit der von Ehlers diskutierten Fisher-Transformation zu untersuchen.
 
 ## Regeln und Kriterien
 
@@ -128,6 +141,19 @@ aktualisiert: 2026-10-30
 - Das ETF-Paar GLD gegen GDX hörte 2008 auf zu kointegrieren, verwiesen auf Kapitel 4.
 - Die Hypothese führte den Stopp auf den hohen Rohölpreis zurück.
 - Wurde der Ölpreis als Inputvariable ergänzt, funktionierte das Kointegrationsmodell wieder.
+- Ein typisches Beispiel ist Pairs Trading: Sind die Aktien von Ford und GM kointegriert und Ford relativ zu GM zu hoch, wird Ford short und GM long gestellt.
+- Der Paartrade gewinnt unabhängig davon, wie die Divergenz korrigiert wird, ob Ford fällt, GM steigt oder eine Kombination aus beidem eintritt.
+- Fosback nutzte die Kointegrationsanalyse innovativ, um eine dritte Variable, den S&P 500, vorherzusagen, statt das Verhalten des Spreads zwischen den kointegrierten Reihen.
+- Sein Fosback Index nutzt, dass Zinssätze und die Cash-Quoten von Fonds kointegrierte Reihen sind, und entstand mehr als ein Jahrzehnt vor der Veröffentlichung von Engle und Granger.
+- Der Index signalisiert, wenn die Cash-Quote der Fonds deutlich von dem Niveau abweicht, das ihre lineare Beziehung zu den kurzfristigen Zinsen vorhersagt.
+- Übermäßiger Pessimismus heißt, die Fondsmanager halten deutlich mehr Cash, als die kurzfristigen Zinsen vorhersagen, und übermäßiger Optimismus ist der umgekehrte Fall.
+- Fosback fand, dass sowohl übermäßiger Pessimismus als auch übermäßiger Optimismus, so gemessen, mit künftigen Renditen des Aktienmarkts korrelierten.
+- Der Index entfernt den Einfluss der kurzfristigen Zinsen aus den Cash-Quoten und misst die Stimmung der Fondsmanager reiner als die rohe Cash-Quote, die von den Zinsen verfälscht ist.
+- Der Autor entwickelte 1983 zusammen mit der Raden Research Group den Zeitreihenoperator YY, der im Konzept der Kointegrationsanalyse ähnlich ist, mit der Ausnahme, dass die YY-Werte durch den Standardfehler der Regression normiert wurden und kein expliziter Test auf die Stationarität der Residuen gemacht wurde.
+- Die Entwicklung von YY wurde angeregt durch Arthur Merrill, DFE: Deviation from Expected (Relative Strength Corrected for Beta), Market Technician Journal, August 1982, Seiten 21–28.
+- Die auf YY beruhenden Indikatoren dienten als Kandidateneingaben für verschiedene Prognosemodelle. Ein Beispiel war ein Sentiment-Indikator auf der Beraterstimmung zu T-Bonds.
+- Die Prognosekraft der rohen Konsensinformation wurde durch eine YY-Transformation verbessert, die vergangene Marktänderungen als Regressorvariable nutzte.
+- Der Return-Reversal-Effekt ähnelt dem Residual-Reversal-Effekt, der auf der Kointegrationsanalyse beruht.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -157,3 +183,5 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen
+
+- Engle und Granger, Co-integration and Error-Correction: Representation, Estimation and Testing, Econometrica 55 (1987), Seiten 251–276, ist die angeführte Grundlage der Kointegration.

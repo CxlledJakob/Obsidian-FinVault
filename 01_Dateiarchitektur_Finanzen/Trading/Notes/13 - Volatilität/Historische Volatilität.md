@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/13 - Volatilität/13 - Volatilität|13 - Volatilität]]"
 weitere_hauptthemen: []
 unterthema: "Volatilitätsmessung"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Historische Volatilität
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Chang und Osler definieren die Volatilität V eines Marktes als die Standardabweichung der täglichen prozentualen Preisänderungen über die jüngsten 100 Handelstage.
 
 ## Kernaussagen
 
@@ -35,6 +34,10 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Die zehn Zigzag-Schwellen entstehen, indem V mit den Koeffizienten 1,5, 2,0, 2,5, 3,0, 3,5, 4,0, 4,5, 5,0, 5,5 und 6,0 multipliziert wird.
+- Eine Schwellenmenge, die für ein Instrument gut ist, muss für ein anderes nicht gut sein, weil die Instrumente unterschiedliche Volatilität haben.
+- Die Kopplung der Schwellen an V erlaubt, den Schulter-Kopf-Schulter-Algorithmus über Märkte mit verschiedener Volatilität zu verallgemeinern.
+- Die Tauglichkeit der gewählten Koeffizienten wurde durch Sichtprüfung von Charts durch Praktiker der Technischen Analyse bestätigt, die übereinstimmten, dass die zehn Filter Schulter-Kopf-Schulter-Muster vernünftig erkennen.
 
 ## Risiken und Grenzen
 

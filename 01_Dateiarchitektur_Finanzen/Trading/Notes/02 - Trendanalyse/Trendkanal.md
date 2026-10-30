@@ -26,6 +26,7 @@ aktualisiert: 2026-10-30
 - Das klassische Bild zeigt drei Stufen und danach die obere und die untere Linie. Lehrbücher sagen, zwei Punkte seien endlos deutbar, deshalb werde auf drei Punkte gewartet.
 - Derselbe Kanal wird hier aufgebaut, während die Position schon läuft. Das Endergebnis sieht gleich aus, der Weg ist ein anderer.
 - Ein Pivot-Hoch auf oder unter dem vorherigen, mit einem folgenden ähnlichen Pivot-Tief, hebt den Kanal in eine zweite Stauzone auf, bis der nächste Bruch die Richtung klärt.
+- Roberts’ Random-Walk-Charts zeigten Trendkanäle, obwohl ein Random Walk definitionsgemäß keine echten Trends enthält.
 
 ## Funktionsweise
 

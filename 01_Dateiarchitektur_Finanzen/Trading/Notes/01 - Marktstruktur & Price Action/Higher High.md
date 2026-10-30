@@ -30,6 +30,9 @@ aktualisiert: 2026-10-30
 - Höhere Hochs und höhere Tiefs sind die Gipfel und Täler, mit denen ein steigender Markt die klassischen Trendlinien definiert.
 - Ein zweites Pivot-Hoch muss über dem vorherigen liegen, damit ein Aufwärtstrend vorliegt. Das dritte höhere Pivot-Hoch definiert die obere Region.
 - Ein Pivot-Hoch, das tiefer oder auf gleicher Höhe wie das vorherige liegt, deutet an, dass der Markt in eine zweite Stauzone übergeht.
+- Eine negative Divergenz entsteht, wenn eine Reihe weiter Gipfel auf sukzessiv höheren Niveaus registriert, während die andere Reihe Gipfel auf tieferen Niveaus bildet.
+- Das Ausbleiben sukzessiv höherer Gipfel der zweiten Reihe heißt auch bärische Nonconfirmation.
+- Im subjektiven Gipfelvergleich bleibt offen, welche nicht gleichzeitig gesetzten Gipfel zu vergleichen sind, wie lange die Divergenz bestehen muss und wie viel Abwärtsbewegung einen neuen Gipfel begründet.
 
 ## Funktionsweise
 

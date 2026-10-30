@@ -36,6 +36,14 @@ aktualisiert: 2026-10-30
 - Die Formel teilt auch die Kaufkraft optimal auf mehrere Portfolios oder Strategien auf, nicht nur den Hebel einer Strategie.
 - Die Mathematik nennt die Allokation über das Gesamtportfolio optimal, unter der Annahme unveränderter erwarteter Renditen und Volatilitäten.
 - Nach einem schweren Drawdown ist zweifelhaft, ob diese Erwartungen unverändert sind.
+- Die Kelly-Formel, ausgearbeitet von Kelly, einem Elektroingenieur bei Bell Labs in den 1950er Jahren, gibt den optimalen Kapitalanteil je Wette an, der die Wachstumsrate des Kapitals maximiert.
+- Der optimale Anteil hängt von der Gewinnwahrscheinlichkeit und vom Verhältnis des durchschnittlichen Gewinns zum durchschnittlichen Verlust ab.
+- Für Wetten mit positiver Erwartung gibt es einen optimalen Hebel. Wird dieses Niveau überschritten, steigt die Ruinwahrscheinlichkeit trotz der positiven Erwartung.
+- Im Münzwurf der Casino Night starten alle mit imaginären 100 Dollar. Vor jedem Wurf bestimmen sie den Kapitalanteil. Bei Kopf beträgt die Auszahlung das Doppelte des Einsatzes, bei Zahl ist nur der Einsatz verloren. Das Spiel läuft über 75 Würfe.
+- Das Spiel hat eine sehr günstige Erwartung. Trotzdem verlieren viele Studenten Geld, weil sie zu aggressiv setzen, also einen zu großen Teil des Kapitals auf eine Wette setzen.
+- In diesem Spiel ist der optimale Anteil je Wette 0,25. Wird er überschritten, trägt der Wettende mehr Risiko, ohne dass das Kapital schneller wächst.
+- Bei einem Einsatzanteil von 0,58 ist es wahrscheinlich, dass das gesamte Kapital verloren geht, trotz der günstigen Erwartung.
+- Dasselbe widerfährt einem Arbitrageur mit guter Information, der zu viel Hebel einsetzt.
 
 ## Funktionsweise
 

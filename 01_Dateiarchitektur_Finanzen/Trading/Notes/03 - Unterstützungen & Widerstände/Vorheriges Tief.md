@@ -61,6 +61,8 @@ aktualisiert: 2026-10-30
 - Ein Poor Low ohne Excess und ohne aggressives Kaufen wird voraussichtlich später wieder besucht oder repariert.
 - Das Wochentief ist für den Day-Trader nur relevant, wenn es leicht in Reichweite liegt.
 - Das Tief des Vortags und das Overnight-Tief ziehen oft überdurchschnittlichen Handel an.
+- Das linke Tal der Formation muss über dem vorherigen Tief, dem Prior Trough, liegen.
+- Zusammen mit der linken Schulter über dem vorherigen Hoch ist das die von Chang und Osler verlangte Bedingung, dass vor dem Schulter-Kopf-Schulter-Top ein Aufwärtstrend bestand.
 
 ## Risiken und Grenzen
 

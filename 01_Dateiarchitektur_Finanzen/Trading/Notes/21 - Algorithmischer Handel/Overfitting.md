@@ -25,6 +25,8 @@ aktualisiert: 2026-10-30
 - Backtest-Overfitting lässt sich als Selection Bias auf mehreren Backtests definieren.
 - Backtest-Overfitting liegt vor, wenn eine Strategie so entwickelt wird, dass sie auf einem Backtest gut abschneidet, indem sie zufällige historische Muster versilbert.
 - Eine Handelsregel ist überangepasst, wenn die erwartete Out-of-Sample-Sharpe-Ratio der in-sample besten Regel unter dem Median der alternativen Regeln liegt.
+- Überanpassung bezeichnet hier eine Regel, die nicht nur die gültigen Muster der Stichprobendaten ausdrückt, sondern auch deren zufällige Effekte oder das Rauschen.
+- Überangepasste Regeln generalisieren schlecht: ihre Leistung außerhalb der Stichprobe ist typischerweise schwach im Vergleich zu ihrer Leistung in der Stichprobe, und das ist ein Beispiel für Data-Mining-Bias.
 
 ## Kernaussagen
 
@@ -110,6 +112,19 @@ aktualisiert: 2026-10-30
 - Beim neuronalen Netz ist die Zahl der mit In-Sample-Trainingsdaten anzupassenden Parameter proportional zur Zahl der Knoten.
 - Mit mindestens 100 Parametern lässt sich das Modell an jede gewünschte Zeitreihe anpassen und eine fantastische Sharpe Ratio erzielen, vorwärts aber mit wenig oder keiner Vorhersagekraft wegen Data-Snooping-Bias.
 - Der Alarm des Autors geht an, sobald von einem neuronalen Handelsmodell die Rede ist, erst recht bei einem mit 100 Knoten.
+- Jedes hinreichend flexible Modell kann eine frühere Menge von Beobachtungen perfekt anpassen.
+- Ein Polynom mit so vielen Termen wie Datenpunkten erzeugt eine perfekte nachträgliche Anpassung.
+- Ein Modell mit unbegrenzter Fähigkeit, vergangene Beobachtungen anzupassen, das aber keine prüfbaren Prognosen künftiger Beobachtungen machen kann, ist weder sinnvoll noch nützlich.
+- Zwei mathematische Funktionen werden an dieselben Daten angepasst. Die lineare hat zwei Freiheitsgrade, Steigung und y-Achsenabschnitt. Das andere ist ein Polynom mit zehn Koeffizienten, und jeder Koeffizient erlaubt eine zusätzliche Biegung.
+- Mit dieser Flexibilität kann die komplexe Kurve sich so winden, dass sie jeden Datenpunkt berührt.
+- Bei der Kleinste-Quadrate-Regression ist ein perfekter Fit garantiert, wenn die Funktion so viele Freiheitsgrade enthalten darf, wie es Datenpunkte gibt.
+- Die lineare Funktion berührt nicht jeden Punkt, beschreibt aber die Tendenz, dass größere X mit größeren Y einhergehen, und ist damit eher die echte Beziehung. Die komplexe Funktion beschreibt höchstwahrscheinlich zusätzlich zur positiven Korrelation die zufälligen Schwankungen der Daten.
+- Je mehr Annahmen, Bedingungen und Nebenbedingungen eine Erklärung hat, desto eher passt sie Beobachtungen durch Zufall.
+- Komplexe Kurven sind nicht grundsätzlich unberechtigt. Gibt es genug Daten und hat ein komplexer Prozess sie erzeugt, kann ein aufwendiges Modell gerechtfertigt sein. Unter sonst gleichen Bedingungen ist die einfachere Erklärung eher richtig.
+- Höhere Komplexität durch zusätzliche Parameter erhöht die Rendite in den Trainingsdaten vorhersagbar.
+- Komplexität wird hinzugefügt, bis die Leistung im Testset zu sinken beginnt. Das zeigt, dass die Grenze zwischen Underfitting und Overfitting überschritten ist.
+- Jenseits dieser Grenze hat die zusätzliche Komplexität begonnen, das Rauschen in den Trainingsdaten anzupassen.
+- Die optimale Regel ist die Regel der höchsten Komplexität, die im Testset die beste Leistung erbracht hat.
 
 ## Funktionsweise
 
@@ -169,11 +184,28 @@ aktualisiert: 2026-10-30
 - Abbildung 11.2 zeigt für dieselbe Auswahl eine Probability of Overfit von 0,74.
 - Bei genügend vielen Pfaden kann die Wahrscheinlichkeit einer Fehlentdeckung vernachlässigbar werden.
 - Eine Varianz von genau null bleibt unerreichbar, weil die Zahl der Pfade nach oben begrenzt ist.
+- Hohe nachträgliche Anpassungskraft, verbunden mit der Unfähigkeit zu falsifizierbaren Prognosen, beseitigt widersprechende Belege, weil sich jede vergangene Marktbewegung in Übereinstimmung mit der Methode bringen lässt.
+- Ohne Theorie werden viele Regeln vorgeschlagen und getestet; das Risiko dieses Schrotschussverfahrens ist Narrengold, also Regeln, die den Daten zufällig passen.
+- Die Komplexität zu optimieren, statt nur die Parameter einer Regel mit festgelegter Komplexität zu suchen, erhöht die Chance, eine überlegene Regel zu finden, vergrößert aber die Zahl der betrachteten Regeln und damit die Chance, dass die beste Regel überangepasst ist.
+- Mit genug Komplexität lässt sich immer eine Regel formen, die an jedem Markttief kauft und an jedem Markthoch verkauft; perfektes Timing auf Vergangenheitsdaten oder etwas, das ihm nahekommt, bedeutet fast sicher, dass die Regel in störendem Maß vergangenes Zufallsverhalten beschreibt.
+- Mehr Komplexität verbessert die Leistung im Trainingssatz immer, sichtbar an der stetig steigenden Trainingsleistung.
+- Die Grenze zwischen einer zu einfachen und einer zu komplexen Regel ist der Punkt, an dem die Leistung im Testsatz einen Gipfel erreicht und zu fallen beginnt.
+- Das erste Zeichen der Überanpassung während der Komplexitätsoptimierung ist ebendieser Gipfel mit anschließendem Abfall der Testleistung.
+- Die im Testsatz erreichte Leistung der optimal komplexen Regel ist positiv verzerrt, weil der Testsatz wiederholt benutzt wurde; eine unverzerrte Schätzung liefert erst der unberührte Validierungssatz.
+- Der Fluch der Dimensionalität nach Richard Bellman besagt, dass die Beobachtungen in einem Raum exponentiell dünner werden, wenn die Zahl der Indikatoren, jeweils eine Dimension, zunimmt.
+- Eine bestimmte Datendichte ist nötig, damit Data-Mining-Software gültige Muster vom Hintergrundzufall unterscheiden kann.
+- Reichen 100 Beobachtungen für die nötige Dichte in zwei Dimensionen, werden 1.000 in drei Dimensionen und 10.000 in vier Dimensionen benötigt.
+- Trotz dieser Grenze ist moderne Data-Mining-Software im konfiguralen Schlussfolgern und in der Erkennung komplexer Muster unendlich besser als die klügsten Menschen.
 
 ## Beispiele
 
 - Im Beispiel korrelieren die Eigenwerte mit den MDI-Werten mit einem Pearson-Koeffizienten von 0,8491 bei einem p-Wert unter 1E-150, was belegt, dass PCA informative Features ohne Overfitting richtig geordnet hat.
 - Das Beispiel eines neuronalen Handelsnetzes mit etwa 100 Knoten hat eine Backtest-Sharpe-Ratio von 6.
+- Im geführten Beispiel steigt die Trainingsrendite von 30 Prozent bei der Regel mit zwei Durchschnittsparametern auf 50 Prozent bei der Vier-Parameter-Regel, die zusätzlich Wilders Relative Strength Index nutzt.
+- Die Testrendite steigt in demselben Beispiel von 15 Prozent auf 20 Prozent; bessere Testleistung der komplexeren Regel spricht dafür, dass die zusätzliche Komplexität weitere systematische Anteile des Marktverhaltens ausgenutzt hat.
+- Weitere Komplexität wird ergänzt, bis die Leistung im Testsatz nachlässt; die optimale Regel ist dann die Regel der höchsten Komplexität, die im Testsatz am besten abgeschnitten hat.
+- Eine Regel, deren Komplexitätswachstum vor diesem Testgipfel gestoppt wird, hat nicht alle gültigen Muster erfasst und heißt unterangepasst.
+- Die Vier-Parameter-Regel verdiente in den Trainingsdaten 50 Prozent, die Zwei-Parameter-Vorgängerregel 30 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 

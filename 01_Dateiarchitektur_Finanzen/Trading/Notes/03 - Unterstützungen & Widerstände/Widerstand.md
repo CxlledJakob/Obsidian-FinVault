@@ -51,6 +51,7 @@ aktualisiert: 2026-10-30
 - Die Niveaus können Bank- oder Broker-Meldungen oder runde Zahlen nahe dem aktuellen Preis sein.
 - Kauf-Stops an oder nahe dem Widerstand werden beim Bruch ausgelöst und treiben den Preis weiter nach oben.
 - Ein Intraday-Einstieg kann an verschiedenen Widerstandsniveaus erfolgen.
+- Die Boxes von Darvas sind die altbekannten Unterstützungs- und Widerstandszonen der technischen Analyse.
 
 ## Funktionsweise
 

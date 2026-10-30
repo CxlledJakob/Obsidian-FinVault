@@ -84,6 +84,31 @@ aktualisiert: 2026-10-30
 - Die Analyse wird von Hand gemacht. Der Markt ist nicht linear, technische Analyse ist eine Kunst, und Volumen-Software, die Trendwechsel vorhersagen will, kann unzuverlässig sein.
 - Volume Price Analysis gilt auf allen Zeitebenen, in allen Instrumenten und Märkten.
 - Das Auge geht zuerst zu Anomalien: extrem hohe Volumen, extrem niedrige Volumen oder Konzentrationen. Danach wird genauer hingesehen.
+- Handelsvolumenstatistiken von Aktien enthalten nützliche Prognoseinformation.
+- Sie verbessern die Profitabilität von Signalen, die auf großen Preisänderungen nach einer öffentlichen Ankündigung beruhen.
+- Wird Handelsvolumen zusammen mit Preismomentum genutzt, liegt die Rendite der Kombination 2 bis 7 Prozent höher als die Rendite aus Preismomentum allein.
+- Aktien mit hohem Volumen und positivem Preismomentum entwickeln sich künftig besser als Aktien mit nur positivem Preismomentum.
+- Aktien mit hohem Volumen und negativem Preismomentum entwickeln sich künftig schlechter als Aktien mit nur negativem Preismomentum.
+- Die Trennschärfe des Preismomentums ist bei Aktien mit hohem Volumen größer.
+- Aktien mit unerwarteten Gewinnen oder Gewinnausblicken, die am Tag nach der Meldung durch starke Preis- und Volumenaktion bestätigt werden, erzielen über den nächsten Monat eine annualisierte Long-minus-Short-Renditespanne von über 30 Prozent.
+- Weder das Fama-French-Risikomodell noch ein anderes Modell der Effizienzmarkthypothese erklärt den gemeinsamen Effekt von Preismomentum und Handelsvolumen.
+- Michael Cooper zeigt, dass Aktien mit negativem Preismomentum bei fallendem Handelsvolumen Überschussrenditen erzielen. Das Muster identifiziert Aktien mit Notverkäufern auf der Suche nach Käufern.
+- Aktien, die über die vorangegangenen zwei Wochen bei fallendem Volumen scharf gefallen sind, zeigen eine systematische Neigung, über die folgende Woche zu steigen.
+- Der Aspekt des fallenden Volumens ist plausibel, weil er so gelesen werden kann, dass nicht genügend Käufer vorhanden sind, um den akuten Bedarf der Verkäufer zu decken. Die Überschussrenditen erscheinen als Liquiditätsprämie.
+- Um der Möglichkeit von Data Mining zu begegnen, bildete Cooper die Portfolios aus Long- und Short-Positionen in einer Walk-forward-out-of-sample-Simulation über 1978 bis 1993.
+- Die aus 300 Aktien mit großer Kapitalisierung gebildeten Long-Short-Portfolios erzielten eine annualisierte Rendite von 44,95 Prozent gegen eine Buy-and-hold-Benchmark von 17,91 Prozent.
+- Die Double-9:1-Regel von Zweig geht long, wenn das tägliche Verhältnis von Aufwärts- zu Abwärtsvolumen an der NYSE innerhalb von drei Monaten zweimal die Schwelle 9 überschreitet. Die drei freien Parameter sind die Schwelle 9, zwei Überschreitungen und ein Abstand von höchstens drei Monaten.
+- Die Mehrheit der 6402 Regeln erzeugt Signale aus anderen Reihen als dem S&P 500, darunter Marktbreite wie Aufwärts- und Abwärtsvolumen, Indikatoren, die Preis und Volumen verbinden, wie On-Balance-Volumen, und der Negative Volume Index aus dem S&P-500-Schluss und dem gesamten täglichen NYSE-Volumen.
+- Eine Reihe von Studien zeigt, dass Handelsvolumen für sich und zusammen mit dem Preis nützliche Information enthält.
+- Praktiker schlagen als Preis-Volumen-Funktionen On-Balance Volume, Accumulation Distribution Volume, Money Flow, Negative Volume und Positive Volume vor.
+- Fünfzehn der 39 Regeleingaben waren Funktionen aus Preis und Volumen und wurden als kumulative Summen und als gleitende Durchschnitte gebildet.
+- Der Tageswert einer Preis-Volumen-Funktion kann positiv oder negativ sein, und die kumulative Summe ist die algebraische Summe aller bisherigen Tageswerte.
+- Kumulative Summen solcher Funktionen zeigen langfristige Trends wie Vermögenspreise und Zinsen und sind nichtstationäre Zeitreihen.
+- Ein gleitender Durchschnitt einer Preis-Volumen-Funktion ist stationär, zeigt keine Trends und bleibt in einer engen Spanne nahe null, weil er nur das Look-back betrachtet und die Werte beide Vorzeichen annehmen.
+- NYSE Total Volume, Kürzel TVOL, ist Rohzeitreihe 18 aus Ultra 8 und in Tabelle 8.2 die rohe Eingabereihe 33.
+- Für On-Balance Volume, Negative Volume und Positive Volume wurde das NYSE-Volumen mit der Richtung oder der prozentualen Änderung des S&P-500-Schlusses verknüpft.
+- Liegt der vorausschauende Horizont bei 3 bis 12 Monaten, verstärkt hohes Volumen den Effekt des Preismomentums.
+- Auf Sicht von 3 Jahren sind Aktien mit hohem Momentum und niedrigem Volumen auf der Oberseite beständiger, während Aktien mit negativem Momentum und hohem Volumen auf der Unterseite beständig bleiben.
 
 ## Funktionsweise
 
@@ -253,3 +278,4 @@ aktualisiert: 2026-10-30
 ## Verwandte Themen
 
 - Point of Control
+- Als Studien dazu, dass Handelsvolumen nützliche Information enthält, werden Blume, Easley und O'Hara 1994, Cooper 1999 zu Filterregeln aus Preis und Volumen bei der Überreaktion einzelner Titel, Lee und Swaminathan 2000 zu Preismomentum und Handelsvolumen sowie Stickel und Verecchia 1994 dazu, dass Handelsvolumen Aktienkursänderungen trägt, genannt.

@@ -27,6 +27,7 @@ aktualisiert: 2026-10-30
 - Von vier Hauptursachen des Momentums wirken alle bis auf eine auch intraday; die Ausnahme ist die Persistenz der Roll Return, deren Größe und Volatilität intraday zu klein sind.
 - Eine zusätzliche Ursache auf kurzem Horizont ist das Auslösen von Stops.
 - Wird Momentum durch die langsame Diffusion von Nachrichten getrieben, liegt der Nutzen in den ersten Tagen, Stunden oder sogar Sekunden nach dem Ereignis.
+- Die Clustering-Illusion liest eine Häufung ähnlicher Ergebnisse in einer zufälligen Zeitreihe als Momentum, das fortbestehen müsse.
 
 ## Funktionsweise
 

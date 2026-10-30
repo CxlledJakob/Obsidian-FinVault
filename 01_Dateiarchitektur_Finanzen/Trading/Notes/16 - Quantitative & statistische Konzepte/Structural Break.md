@@ -36,6 +36,10 @@ aktualisiert: 2026-10-30
 - Blasen umfassen hier nicht nur Kursanstiege, sondern auch Ausverkäufe.
 - Ein Zyklus aus Blase, Platzen und neuer Blase lässt die Reihe für Ein-Blasen-Tests stationär erscheinen, deshalb sind Mehr-Blasen-Tests robuster.
 - Strukturbrüche bieten einige der besten Chance-Risiko-Verhältnisse, weil die Verliererseite ihren Fehler typischerweise zu spät erkennt.
+- Eine Erklärung der Verschlechterung außer Stichprobe lautet, die Dynamik des Marktes habe sich geändert, als die Out-of-Sample-Periode begann.
+- Eine weitergehende Fassung nimmt an, die Änderung sei eingetreten, weil zu viele Händler die Regel übernommen und das Muster durch ihr Handeln zerstört haben.
+- Beide Fassungen setzen eine Änderung der Marktdynamik voraus; die Erklärung über den Data-Mining-Bias passt ebenfalls dazu, dass die Leistung außer Stichprobe tendenziell schlechter ist, und kommt ohne diese Annahme aus.
+- Es wäre seltsam, fast teuflisch, wenn der Markt sein Verhalten immer genau dann änderte, wenn eine Regel aus dem Labor in den Handel wechselt, und zwar so oft, wie Regeln außer Stichprobe scheitern.
 
 ## Funktionsweise
 

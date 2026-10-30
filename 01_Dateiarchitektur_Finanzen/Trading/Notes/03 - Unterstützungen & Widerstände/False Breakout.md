@@ -19,6 +19,7 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Ein False Breakout liegt vor, wenn der Markt über oder unter die Balance schaut und keine Fortsetzung zeigt.
+- Eine Bullenfalle, also ein False Breakout oder Breakout Failure, liegt vor, wenn kurz nach dem Ausbruchsdurchbruch die Preise das Ausbruchsniveau in der Gegenrichtung wieder durchstoßen.
 
 ## Kernaussagen
 
@@ -41,6 +42,7 @@ aktualisiert: 2026-10-30
 - Volumen ist der Weg, diese Bewegung zu sehen. Eine ähnliche Spanne bei deutlich niedrigerem Volumen als bei der Vergleichskerze weist die Falle aus.
 - Dieselbe Spanne auf hohem Volumen, klar über dem Vortag, ist eine echte Bewegung.
 - Ein Bruch wird erst nach einem klaren Schluss deutlich außerhalb der Stauzone als gültig behandelt.
+- Ein gescheiterter Aufwärtsausbruch wird nachträglich als erfolgreiche Bullenfalle bezeichnet und dadurch vom Prognosefehler zum Treffer eines anderen Musters gemacht.
 
 ## Funktionsweise
 
@@ -51,6 +53,7 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Dieses Muster wird Turtle-Soup-Signal genannt, weil die Turtles auf Ausbrüche handeln und bei solchen Fehlausbrüchen in Schwierigkeiten geraten.
 
 ## Regeln und Kriterien
 

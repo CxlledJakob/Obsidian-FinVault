@@ -26,6 +26,7 @@ aktualisiert: 2026-10-30
 - Folgt der Short durch, wird die gebrochene Unterstützung zu starkem Widerstand darüber.
 - Das Muster erscheint in Anleihen, Rohstoffen, Aktien und Währungen und auf allen Zeitebenen.
 - Wie die anderen Muster zeigt es eine Stauzone und einen Boden. Der folgende Ausbruch ist Umkehr oder Fortsetzung und wird mit Volume Price Analysis und Volume at Price geprüft.
+- Random-Walk-Charts von Roberts zeigten Dreifachböden, obwohl ein Random Walk definitionsgemäß keine echten Muster, Trends oder ausnutzbare Ordnung enthält.
 
 ## Funktionsweise
 

@@ -27,9 +27,13 @@ aktualisiert: 2026-10-30
 - Im Roll-Modell ist die serielle Kovarianz der beobachteten Preisänderungen negativ und gleich −c², wobei c die halbe Geld-Brief-Spanne ist.
 - Empirisch zeigen Finanzzeitreihen serielle Abhängigkeit.
 - Querschnittliche Mean Reversion setzt auf die serielle Antikorrelation relativer Renditen: auf Unterperformance einer Aktie soll Überperformance folgen und umgekehrt.
+- Random Walks haben kein Gedächtnis, und frühere Ergebnisse haben keine Wirkung auf die nachfolgenden Ereignisse.
 
 ## Funktionsweise
 
+- Die aktuelle Preisänderung wird mit der vorherigen Änderung korreliert, also mit Lag 1, dann mit der Änderung davor, Lag 2, und so fort. Für jeden dieser Lags wird ein Korrelationskoeffizient berechnet.
+- In einer zufälligen Datenreihe fallen die Korrelationen typischerweise sehr schnell als Funktion des Lag-Intervalls ab.
+- Ist die Zeitreihe der Preisänderungen in linearer Weise nichtzufällig, unterscheiden sich einige Autokorrelationskoeffizienten signifikant vom Muster der Autokorrelationen einer Zufallsfolge.
 
 ## Voraussetzungen
 

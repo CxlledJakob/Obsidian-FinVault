@@ -29,6 +29,9 @@ aktualisiert: 2026-10-30
 - Mean Reversion bedeutet, dass die Preisänderung proportional zur Differenz zwischen mittlerem Preis und aktuellem Preis ist.
 - Stationarität bedeutet, dass Preise langsamer diffundieren als ein geometrischer Random Walk.
 - Eine lineare Strategie bedeutet hier, dass die Zahl der Einheiten oder Stücke eines Einheitsportfolios proportional zum negativen Z-Score der Preisreihe dieses Portfolios ist, nicht dass der Marktwert der Anlage proportional zum Z-Score ist.
+- Mean-Reversion-Regeln beruhen auf dem Konzept, dass eine Datenreihe zu ihrem Mittelwert zurückkehren soll, wenn sie gegenüber den jüngeren Werten extrem hohe oder extrem niedrige Werte erreicht.
+- Echte Mean Reversion bedeutet, dass Strähnen kürzer dauern als in Random Walks, also dass positive und negative Ergebnisse häufiger wechseln, als es bei Random Walks der Fall ist.
+- Mean-Reversion-Regeln beruhen darauf, dass eine Datenreihe zu ihrem Mittelwert zurückkehren soll, wenn sie gegenüber den jüngeren Werten extrem hoch oder extrem tief liegt.
 
 ## Kernaussagen
 
@@ -102,6 +105,18 @@ aktualisiert: 2026-10-30
 - Momentum-Strategien haben gegenüber Mean-Reversion-Strategien diametral entgegengesetzte Ertrags- und Risikoeigenschaften, und profitable Momentum-Strategien haben tendenziell niedrigere Sharpe Ratios als Mean-Reversal-Strategien.
 - Nach dem Ende des Kauf- oder Verkaufsdrucks der Fonds kehren die aus Liquiditätsgründen verschobenen Kurse oft zum Mittel zurück.
 - Im Schlusskapitel wird die Regression zum Mittel als eine grundlegende Marktunvollkommenheit genannt, aus der sich eine einfache lineare Strategie bauen lässt.
+- Das Modell von Barberis, Shleifer und Vishny unterstellt, Anleger glaubten fälschlich, der Gewinnstrom wechsle zwischen einer Wachstumstrend-Phase und einer mittelwertumkehrenden, oszillierenden Phase, und zögen einen Random Walk nicht in Betracht.
+- Ein Random Walk zeigt weniger Mean Reversion als ein echt mittelwertumkehrender Prozess und kürzere Läufe als ein echt trendender Prozess.
+- Glaubt der Anleger, die Gewinne seien in einem Mean-Reversion-Regime, überrascht ihn ein Lauf gleichgerichteter Änderungen, und der Konservatismus-Bias lässt ihn unterreagieren.
+- Hält die dem Glauben widersprechende Nachricht an, wird er überzeugt, das Regime sei von Mean Reversion zu Wachstum oder von Wachstum zu Mean Reversion umgeschlagen, und wechselt vom Unterreagieren zum Überreagieren aus dem Fehler der kleinen Zahlen.
+- In der Illustration glauben die Anleger anfangs an Mean Reversion der Gewinne und erwarten, dass auf positive Meldungen eine negative folgt. Deshalb unterreagieren sie auf die ersten beiden positiven Gewinnmeldungen.
+- Nach der dritten positiven Meldung, drei gleiche Ausgänge in Folge, was in einem Zufallsprozess nicht ungewöhnlich ist, geben sie den früheren Glauben auf, nehmen ein Wachstumsregime und einen Aufwärtstrend an und überreagieren, sodass die Aktie über das rationale Niveau steigt.
+- In den meisten Anwendungen der Kointegration soll die Divergenz zum normalen Zustand eines gemeinsamen Trends zurückkehren, wenn das Error-Correction-Modell extrem positiv oder extrem negativ wird.
+- Der Fehler, also die Abweichung von der normalen linearen Beziehung der beiden Reihen, soll dann auf seinen normalen Wert null zurückkorrigieren.
+- Im Beispiel von Ford gegen GM entsteht der Gewinn des Paartrades unabhängig davon, ob Ford fällt, GM steigt oder eine Kombination aus beidem die Divergenz korrigiert.
+- Sowohl in echt trendenden als auch in echt mean-reverting Prozessen enthalten frühere Beobachtungen nützliche Prognoseinformation.
+- In echten Random-Walk-Prozessen enthalten frühere Beobachtungen keine Prognoseinformation.
+- Menschen haben Schwierigkeiten, Zufallsreihen von Reihen mit systematischem Verhalten wie Mean Reversion oder Trend zu unterscheiden. Dieses Scheitern erklärt die Fehlwahrnehmung der Hot Hand bei Sportfans und die Unfähigkeit von Chartisten, echte von zufälligen Charts zu unterscheiden.
 
 ## Funktionsweise
 

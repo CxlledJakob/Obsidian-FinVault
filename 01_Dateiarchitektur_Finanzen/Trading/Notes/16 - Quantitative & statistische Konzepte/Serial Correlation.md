@@ -43,12 +43,15 @@ aktualisiert: 2026-10-30
 - Das Vorzeichen der Rollrendite wechselt typischerweise selten, die Futures bleiben also lange in Contango oder Backwardation, während die Spot-Rendite Vorzeichen und Größe sehr schnell wechselt.
 - Wird ein Future lange gehalten und dominieren die durchschnittlichen Rollrenditen die durchschnittliche Gesamtrendite, entsteht serielle Korrelation der Gesamtrenditen.
 - Querschnittliches Momentum bei Währungen lässt sich der seriellen Korrelation des Weltwirtschafts- oder Zinswachstums zuschreiben.
+- Eine kritische Annahme ist, dass die Beobachtungen der Stichprobe unabhängig sind. Sind sie seriell korreliert, wie es in einer Zeitreihe der Fall sein kann, sinkt die Varianz langsamer, als die Quadratwurzelregel nahelegt.
+- Diese langsamere Varianzsenkung gilt, wenn die Teststatistik der Stichprobenmittelwert ist, aber nicht allgemein.
 
 ## Funktionsweise
 
 
 ## Voraussetzungen
 
+- Der Zentrale Grenzwertsatz gilt für eine Stichprobe, deren Beobachtungen aus derselben Elternpopulation stammen, unabhängig sind und bei der Mittelwert und Standardabweichung der Elternpopulation endlich sind.
 
 ## Anwendung im Trading
 

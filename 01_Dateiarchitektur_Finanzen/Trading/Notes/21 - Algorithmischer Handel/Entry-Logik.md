@@ -18,6 +18,9 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Eine Long-Position bedeutet, das Wertpapier zu besitzen und darauf zu hoffen, es später zu einem höheren Preis zu verkaufen.
+- Eine Short-Position bedeutet, das Wertpapier verkauft zu haben, ohne es zu besitzen, mit der Pflicht, es später zurückzukaufen. Der Inhaber gewinnt durch einen späteren Kursrückgang, weil der Rückkauf unter dem Verkaufspreis liegt.
+- Neutral bezeichnet den Fall, dass der Anleger keine Position im Markt hält.
 
 ## Kernaussagen
 
@@ -31,9 +34,11 @@ aktualisiert: 2026-10-30
 
 ## Voraussetzungen
 
+- Es wird angenommen, dass alle vom Verfahren benötigten Marktinformationen bekannt und öffentlich verfügbar sind, wenn das Verfahren die Empfehlung erzeugt.
 
 ## Anwendung im Trading
 
+- Die Alternativhypothese für MA50 behauptet Vorhersagekraft und deshalb eine erwartete Rendite größer als null auf trendbereinigten Daten. Null ist die Rendite, die von einer Regel ohne Vorhersagekraft erwartet wird. Die Nullhypothese behauptet eine erwartete Rendite von null oder weniger.
 
 ## Regeln und Kriterien
 
@@ -66,6 +71,37 @@ aktualisiert: 2026-10-30
 - Ticking kauft zum Best Bid plus einem Tick, wenn der Spread größer als zwei Ticks ist, und verkauft zum Best Ask minus einem Tick.
 - Stop Hunting legt große Sell Orders, wenn der Preis nah genug an einer Unterstützung liegt, um den nächsten Tick nach unten zu treiben.
 - Der kumulative oder durchschnittliche Orderflow über ein Look-back-Fenster dient als Signal, ob der Preis steigt oder fällt.
+- Ein Leerverkaufssignal wegen Penetration der Nackenlinie ist erst zulässig, wenn die rechte Schulter, Punkt E, durch den Zigzag-Filter erkannt wurde.
+- Der Kurs kann die Nackenlinie kreuzen, bevor diese Erkennung vorliegt.
+- Chang und Osler setzen den Einstieg deshalb erst an, nachdem die rechte Schulter objektiv erkannt ist.
+- Dieser Einstieg ist in manchen Fällen preislich ungünstiger und hält den Backtest frei von Look-ahead Bias.
+- Liegt die rechte Schulter nur 4 Prozent über der Nackenlinie, die Zigzag-Schwelle aber bei 10 Prozent, darf nicht zu einem Preis nur 4 Prozent unter der Schulter eingestiegen werden; nötig ist die Bewegung von 10 Prozent unter der Schulter, die das Muster erst vollständig erkennbar macht.
+- Die Regel MA50 hält eine Long-Position im S&P 500, wenn der Schlusskurs über einem 50-Tage-Durchschnitt liegt, und andernfalls eine Short-Position.
+- Eine traditionelle Trendregel geht long im S&P 500, sobald der Channel-Breakout-Operator einen Aufwärtstrend anzeigt, und short, sobald er einen Abwärtstrend anzeigt.
+- Inverse Trendregeln stellen dieselben Zustände mit umgekehrtem Vorzeichen: short im S&P 500, wenn die analysierte Reihe im Aufwärtstrend bestimmt wird.
+- Signale der Extremwert-Regeln entstehen, wenn die geglättete und kanalnormierte Reihe eine Schwelle kreuzt.
+- Es gibt vier Schwellenereignisse: Die untere Schwelle wird abwärts gekreuzt, die untere Schwelle wird aufwärts gekreuzt, die obere Schwelle wird aufwärts gekreuzt, und die obere Schwelle wird abwärts gekreuzt.
+- Jede E-Regel koppelt zwei dieser Ereignisse, eines für Long-Einstieg und Short-Ausstieg und eines für Short-Einstieg und Long-Ausstieg.
+- Das Schema ergibt 12 E-Regeltypen; Typ 7 ist die Umkehrung von Typ 1 und Typ 8 die Umkehrung von Typ 2, sodass eigene inverse Versionen überflüssig sind, weil alle Möglichkeiten abgedeckt sind.
+- Nach Tabelle 8.3 gilt für Typ 1 Long-Einstieg und Short-Ausstieg bei Ereignis 1 und Short-Einstieg und Long-Ausstieg bei Ereignis 2; Typ 6 koppelt Ereignis 3 mit Ereignis 4 und Typ 12 Ereignis 4 mit Ereignis 3.
+- Vor der Kanalnormierung wird jede Eingabe mit einem viertägigen linear gewichteten gleitenden Durchschnitt geglättet, damit die Reihe nicht um die Schwelle pendelt und zu viele Signale erzeugt.
+- Alle Reihen wurden aus Gründen der Einheitlichkeit mit diesem Durchschnitt behandelt, auch bereits geglättete wie der 30-Tage-Durchschnitt des Negative Volume.
+- Die Fallstudie beschränkte den Regelsatz auf einen Typ binärer Regel, die Long-Short-Umkehr, die immer eine Marktposition halten muss.
+- Die Pflicht, immer eine Position zu halten, ruht auf der unwahrscheinlichen Annahme, der Markt sei dauerhaft ineffizient und biete fortlaufend Gewinngelegenheiten.
+- Selektive Regeln, die nur dann Exposition suchen, wenn sie gerechtfertigt ist, passen zur vernünftigeren Annahme, Märkte seien nur gelegentlich ineffizient.
+- Tristate-Regeln mit long, short und neutral oder binäre Regeln, die long und neutral oder short und neutral unterscheiden, wurden nicht geprüft und könnten überlegen sein.
+- Braucht eine Regel den Schlusskurs, um das Signal zu berechnen, ist ein Ein- oder Ausstieg zu ebendiesem Schluss nicht zulässig; der erste zulässige Preis ist der nächste Preis.
+- Bei Tagesdaten, wie in der Fallstudie, liegt der erste zulässige Ausführungspreis erst auf der Eröffnung des Tages nach dem Signal; Ein- und Ausstiege wurden zum Open des Folgetags eines Umkehrsignals angenommen.
+- Im Beispiel mit Wilders Relative Strength Index wird aus einem Doppel-Durchschnitt-Crossover, der immer von long nach short oder von short nach long dreht, eine Regel, die ganz aus dem Markt bleiben kann.
+- Liegt der Relative Strength Index beim Verkaufssignal über der Schwelle rsi_max, wird neutral statt short; liegt er beim Kaufsignal unter rsi_min, wird neutral statt long.
+- Beim Voting innerhalb eines Themas wird eine Position von einer Einheit in Richtung der Mehrheit genommen; sind die meisten Regeln short, wird eine Einheit short.
+- Bei der Fractional Position ist die Größe proportional zum Nettoanteil, Zahl long minus Zahl short, geteilt durch die Zahl aller Regeln.
+- Bei 2.040 On-Balance-Volume-Regeln, von denen 1.158 short und 882 long signalisieren, wird eine Short-Position von 0,135 Einheiten genommen, weil (882 minus 1.158) geteilt durch 2.040 gleich −0,135 ist.
+- Ein Diffusionsindikator aus den 6.402 Regeln muss die inversen Regeln weglassen, sonst nimmt er immer den Wert null an.
+- Ein Diffusionsindikator der Trendregeln wird nur aus den TT-Regeln gebaut, die TI-Regeln entfallen; bei Extremen und Übergängen werden nur die Typen 1 bis 6 verwendet und die Typen 7 bis 12 ausgeschlossen, weil sie die Umkehrungen der Typen 1 bis 6 sind.
+- Die komplexere Regel nimmt eine Long-Position und hat vier optimierbare Parameter: die Spanne des kurzen gleitenden Durchschnitts, die Spanne des langen gleitenden Durchschnitts, rsi_max und rsi_min.
+- Eine große Zahl von Kombinationen dieser Parameterwerte wird gegen die Trainingsdaten laufen gelassen.
+- Die Möglichkeit, dass die Zeitreihe genau gleich dem gleitenden Durchschnitt ist, wird beseitigt, indem der Durchschnitt mit höherer Genauigkeit berechnet wird als das Preisniveau.
 
 ## Risiken und Grenzen
 

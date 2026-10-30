@@ -51,6 +51,7 @@ aktualisiert: 2026-10-30
 - Die Niveaus können täglich von Banken oder Brokern gemeldet werden oder runde Zahlen nahe dem aktuellen Preis sein.
 - An oder nahe der Unterstützung liegen viele Verkaufs-Stop-Orders; ihr Auslösen treibt den Preis weiter nach unten.
 - Ein Intraday-Breakout-Beispiel steigt an verschiedenen Unterstützungsniveaus ein.
+- Die Boxes von Darvas sind die altbekannten Unterstützungs- und Widerstandszonen der technischen Analyse.
 
 ## Funktionsweise
 

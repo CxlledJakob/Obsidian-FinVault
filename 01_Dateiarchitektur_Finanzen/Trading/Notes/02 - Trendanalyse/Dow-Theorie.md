@@ -35,6 +35,17 @@ aktualisiert: 2026-10-30
 - Eine Aktie wird von Bilanzen, Brokerempfehlungen und Analystenmeinungen bewegt. Ein Index bildet die breitere Marktstimmung ab und ist deshalb für die Trenderkennung nützlicher.
 - Systematisches Risiko trifft alle Aktien eines Index. Unsystematisches Risiko trifft nur eine Aktie oder eine Gruppe in einem Markt.
 - Trends werden in drei zeitliche Klassen geteilt: primär, sekundär und klein. Dazu kommen drei Stufen: Akkumulation, technische Trendfolge und Distribution.
+- Charles H. Dow, der Urheber der Dow-Theorie, und Ralph N. Elliott, der Urheber des Elliott-Wave-Prinzips, schlugen bei der Musterforschung informell Hypothesen vor und prüften sie daran, welche Chartmuster Prognosekraft haben.
+- Die Echtzeitprognose mit solchen Mustern veranschaulichen der Dow-Theoretiker Richard Russell, der die Dow-Theorie heute anwendet, und Robert Prechter, der als Elliott-Wave-Experte heute eine Prognose stellt.
+- Die frühen Untersuchungen von Charles H. Dow exemplifizieren die Musterforschung: informell Hypothesen darüber aufstellen und prüfen, welche Chartmuster Vorhersagekraft haben.
+- Die Anwendung der Dow-Theorie auf Prognosen in der Gegenwart wird am Dow-Theoretiker Richard Russell festgemacht.
+- Der Text hält es für wahrscheinlich, dass viele heutige Anwender weiter glauben würden, selbst wenn Dow zurückkäme und die Methode als absichtlichen Betrug bezeichnete.
+- Die Dow-Theorie beruht nach diesem Text auf der Divergenzanalyse.
+- Sie behauptet, der gemeinsame Trend sei gesund und wahrscheinlich anhaltend, wenn ein Index der Industrieaktien und ein Index der Transportaktien in dieselbe Richtung laufen.
+- Beginnt eine der beiden Reihen zu divergieren, gilt das als vorläufiger Hinweis, dass der Trend schwächer wird und umkehren kann.
+- Eine abgeschlossene Umkehr wird nicht unterstellt, bevor beide Reihen überzeugend gedreht haben und wieder in dieselbe Richtung laufen.
+- Der Grundgedanke dieser Divergenzanalyse ist Kohärenz: Sind zwei Wellen in Phase, gilt ihr gemeinsamer Trend als stark und wird als fortsetzend erwartet; werden die Trends außer Phase, ist die Zukunft des gemeinsamen Trends offen.
+- Kandidaten sind Paare, die gewöhnlich kohärent sind, bei denen aber ein Glied im Fall einer Divergenz führende Information über das andere hat, also eine ziemlich stabile Lead-Lag-Beziehung besteht.
 
 ## Funktionsweise
 

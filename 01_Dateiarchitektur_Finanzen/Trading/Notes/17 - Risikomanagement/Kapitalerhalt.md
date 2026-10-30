@@ -42,6 +42,8 @@ aktualisiert: 2026-10-30
 ## Risiken und Grenzen
 
 - Unterkapitalisierung führt zum Tick-Watching. Wer ständig einen Verlust fürchten muss, liest den Markt weniger objektiv und führt die Position schlechter.
+- Ein Fehler erster Art setzt Handelskapital einem Risiko ohne Aussicht auf Ausgleich aus.
+- Verlorenes Handelskapital wiegt schwerer als entgangene Gelegenheiten, weil man bei erschöpftem Kapital aus dem Spiel ist, während weitere Handelsgelegenheiten bleiben.
 
 ## Beispiele
 

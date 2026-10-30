@@ -19,6 +19,7 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Up Volume ist das Volumen der Aufwärtskerzen. Im Volume at Price wird der Balken stärker blau, wenn in der Preisspanne mehr Aufwärts- als Abwärtskerzen liegen.
+- Upside-Volumen ist die Gesamtzahl der Aktien, die in Papieren gehandelt wurden, die an diesem Tag höher schlossen.
 
 ## Kernaussagen
 
@@ -26,6 +27,12 @@ aktualisiert: 2026-10-30
 - Eine Aufwärtskerze auf niedrigem oder nur durchschnittlichem Volumen ist kein Zeichen von Stärke. Ein Anstieg auf flachem Volumen kommt nicht weit.
 - Ultrahohes Volumen bei einer engen Aufwärtskerze, die nicht steigt, ist Verkauf. Bei Kauf müsste der Markt schnell steigen.
 - Fällt das Volumen auf den Aufwärtskerzen eines Rücksetzers im Abwärtstrend, ist die Gegenbewegung schwach.
+- NYSE Upside Volume, Kürzel UVOL, ist Rohzeitreihe 19 der Fallstudie und stammt von Ultra 8.
+- Die getrennte Berechnung und Analyse von Upside- und Downside-Volumen wird Lyman M. Lowry im Jahr 1938 zugeschrieben.
+- Das tägliche Net Volume Ratio teilt die Differenz aus Upside- und Downside-Volumen durch die Summe aus Upside-Volumen, Downside-Volumen und unverändertem Volumen.
+- Das Cumulative Net Volume Ratio ist die kumulative Summe dieser Tagesratios.
+- Gleitende Durchschnitte des Net Volume Ratio wurden für 10 und 30 Tage gebildet; im Text heißen sie NVR10 und NVR30, in Tabelle 8.2 UDR10 und UDR30.
+- Die Fallstudie nutzte die täglich von der New York Stock Exchange veröffentlichten Volumenstatistiken.
 
 ## Funktionsweise
 

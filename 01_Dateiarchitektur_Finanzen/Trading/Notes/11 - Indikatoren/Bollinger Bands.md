@@ -38,6 +38,8 @@ aktualisiert: 2026-10-30
 - Die Long-Stückzahl wird am Einstieg auf 1 und am Ausstieg auf 0 gesetzt, die Short-Stückzahl auf minus 1 beziehungsweise 0, und an Tagen ohne Signal wird der Vortageswert fortgeschrieben; die Nettostückzahl ist die Summe beider Seiten.
 - Die lineare Strategie skaliert die Stückzahl fortlaufend mit der Abweichung und ist damit der Grenzfall ohne festes Band; sie ist fast parameterfrei und deshalb am wenigsten anfällig für Data Snooping, aber unpraktisch, weil die maximale Kapitalbindung unbekannt ist.
 - Eine Bollinger-Band-ähnliche Mean-Reversion-Strategie shortet das Portfolio aus 0,3906 VX und einem ES, sobald dessen Wert um eine Standardabweichung der im Trainingsset bestimmten Residuen abweicht.
+- Beim Bollinger Band hängt die Lage der Bänder von der jüngeren Volatilität der Zeitreihe ab; Bänder können stattdessen auch ein fester Prozentsatz über und unter dem gleitenden Durchschnitt sein.
+- In der Bandregel setzt das Aufwärtsdurchstoßen des oberen Bandes die Ausgabe auf +1, und dieser Wert bleibt, bis das untere Band nach unten durchstoßen wird und die Ausgabe auf −1 wechselt.
 
 ## Voraussetzungen
 

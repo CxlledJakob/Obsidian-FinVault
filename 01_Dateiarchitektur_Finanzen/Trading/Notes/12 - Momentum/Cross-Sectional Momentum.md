@@ -39,6 +39,12 @@ aktualisiert: 2026-10-30
 - Portfolios aus Futures oder Aktien zeigen oft querschnittliches Momentum, und ein einfacher Rang-Algorithmus auf den Renditen genügt.
 - Die Ansteckung erzwungener Verkäufe und Käufe unter Publikumsfonds trägt zum Aktienpreismomentum bei.
 - Profitable Strategien auf News-Sentiment-Momentum zeigen, dass die langsame Diffusion von Nachrichten eine Ursache des Aktienpreismomentums ist.
+- Aktien, die zuvor relative Stärke gezeigt haben, und Aktien, die zuvor relative Schwäche gezeigt haben, zeigen über Horizonte von 3 bis 12 Monaten weiterhin überdurchschnittliche beziehungsweise unterdurchschnittliche Performance.
+- US-Aktien, die nahe ihrem 52-Wochen-Hoch notieren, übertreffen andere Aktien.
+- Die Differenz aus dem aktuellen Kurs einer Aktie und ihrem 52-Wochen-Hoch ist ein nützlicher Prädiktor der künftigen relativen Performance und für australische Aktien ein noch stärkerer Prädiktor.
+- Jegadeesh und Titman (1993) zeigen, dass Preismomentum über die vergangenen sechs bis zwölf Monate anhält: Die stärksten Aktien über 6, 7, 8 bis hin zu 12 Monaten schlagen tendenziell in den folgenden 6 bis 12 Monaten.
+- Ihre simulierte Strategie ist long im obersten Dezil der Rendite der vorangegangenen sechs Monate, short im untersten Dezil und wird sechs Monate gehalten; sie erzielt 10 Prozent annualisiert.
+- Angesichts dieser Evidenz räumte Eugene Fama ein, dass vergangene Aktienrenditen künftige Aktienrenditen vorhersagen können.
 
 ## Funktionsweise
 
@@ -48,6 +54,11 @@ aktualisiert: 2026-10-30
 - Die Strategie von Daniel und Moskowitz 2011 ist fast ein Spiegelbild des linearen Long-Short-Mean-Reversion-Modells von Khandani und Lo, aber mit deutlich längerem Lookback und längerer Haltedauer.
 - Auf US-Aktien werden der oberste und der unterste Dezil der um 12 Monate verzögerten Renditen einen Monat gehalten.
 - In Beispiel 6.2 ist der Lookback 252, die Haltedauer 25 und topN 50 auf den Schlusskursen der S&P-500-Titel; fehlende Renditen werden aus der Rangfolge ausgeschlossen, die obersten 50 werden long und die untersten 50 short.
+- Vorhersagestudien nutzen ein Querschnittsdesign: An einem Stichtag wird ein großer Querschnitt gereiht, im Beispiel alle Aktien des S&P 500 zum 31. Dezember 1999, hier nach der Rendite der vergangenen sechs Monate.
+- Die Aktien werden in gleich große Portfolios gelegt; zehn Portfolios sind üblich. Portfolio 1 enthält die oberen 10 Prozent, also eine Sechsmonatsrendite über dem 90. Perzentil, Portfolio 10 die schlechtesten 10 Prozent.
+- Verglichen wird die künftige Performance des obersten Dezils mit der des untersten. Der Vorhersagehorizont ist typischerweise eine Periode, bei Monatsdaten also ein Monat.
+- Die Vorhersagekraft wird als Rendite eines Long-Portfolios gegen ein Short-Portfolio gemessen. Im Zahlenbeispiel verdient Long 7 Prozent, Short verliert 4 Prozent, weil die leerverkauften Aktien um 4 Prozent steigen, und der Text setzt die Long-gegen-Short-Strategie mit 3 Prozent an.
+- Über viele Monate, als Querschnitts-Zeitreihe, ist die Vorhersagekraft die durchschnittliche Rendite von Portfolio 1 minus der durchschnittlichen Rendite von Portfolio 10.
 
 ## Voraussetzungen
 

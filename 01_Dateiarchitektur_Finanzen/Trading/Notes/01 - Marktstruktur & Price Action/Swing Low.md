@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Preisbildung"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Swing Low
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,14 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Die fünf Pivots des Schulter-Kopf-Schulter-Tops legen zwei Tiefs fest, in der Abbildung das linke und das rechte Tal.
+- Die Abbildung bezeichnet außerdem ein vorheriges Tief.
+- Tiefs werden erkannt, nachdem der Preis von einem jüngsten Tief um mehr als die Schwellenprozentzahl gestiegen ist.
+- Bei einer Schwelle von 5 Prozent wird ein Tief erst erkannt, wenn der Preis um mindestens 5 Prozent vom jüngsten Minimum gestiegen ist.
+- Die Erkennung hinkt der tatsächlichen Entstehung des Tiefs um diese Bewegung hinterher.
+- Für die Aufwärtstrend-Bedingung des Schulter-Kopf-Schulter-Tops muss das linke Tal über dem vorherigen Tief liegen.
+- Vertikale Symmetrie verlangt, dass der Preis des linken Tiefs B unter dem Preis von Punkt Y liegt und der Preis des rechten Tiefs D unter dem Preis von Punkt X; X ist der Mittelpunkt der Strecke AB, Y der Mittelpunkt von DE.
+- Muster, deren Nackenlinie zu steil verläuft, verfehlen diese Talbedingungen und werden ausgeschlossen.
 
 ## Risiken und Grenzen
 

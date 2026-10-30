@@ -19,6 +19,10 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Die Value Area entspricht etwa einer Standardabweichung.
+- Chang und Osler definieren die Volatilität eines Marktes als die Standardabweichung der täglichen prozentualen Preisänderungen über die jüngsten 100 Handelstage.
+- Die Standardabweichung ist die Wurzel aus der durchschnittlichen quadrierten Abweichung jeder Beobachtung vom Mittelwert der Daten.
+- Streuungsmaße beschreiben, wie weit die Beobachtungen einer Stichprobe um ihre zentrale Tendenz streuen. Sie quantifizieren die Breite einer Häufigkeitsverteilung.
+- Der Standardfehler ist die Standardabweichung der Stichprobenmittel um den Populationsmittelwert, wenn viele unabhängige Stichproben aus derselben Population gezogen werden.
 
 ## Kernaussagen
 
@@ -30,6 +34,36 @@ aktualisiert: 2026-10-30
 - Die Standardabweichung der Residuen der ES-VX-Regression beträgt 2.047 Dollar.
 - Die Bollinger-Band-ähnliche Strategie shortet das Portfolio, sobald dessen Wert um eine Standardabweichung dieser im Trainingsset bestimmten Residuen abweicht.
 - Für die lineare Mean-Reversion-Strategie auf VX beträgt der Lookback der Standardabweichungen 15 Tage.
+- Varianz, mittlere absolute Abweichung und Standardabweichung sind weit verbreitete Streuungsmaße und im klassischen statistischen Ansatz wichtig.
+- Zentrale Tendenz und Streuung sind unabhängige Merkmale einer Häufigkeitsverteilung. Verteilungen können dieselbe Streuung und verschiedene Mittelwerte haben, denselben Mittelwert und verschiedene Streuung, oder sich in beidem unterscheiden.
+- Bei einer Stichprobe von 200 Perlen statt 20 ist die Zufallsvariation von f-g um den wahren Anteil F-G etwa ein Drittel so groß. Je größer die Stichprobe, desto kleiner der Einfluss des Zufalls und desto enger ballen sich die Werte von f-g um F-G.
+- Das ist eine Wirkung des Gesetzes der großen Zahlen: Große Stichproben verringern die Rolle des Zufalls.
+- Die Standardabweichung der Stichprobenverteilung des Mittelwerts ist umgekehrt proportional zur Wurzel der Stichprobengröße. Wird die Stichprobe um den Faktor 10 vergrößert, verringert sich die Breite um den Faktor 3,16, die Wurzel aus 10.
+- Die Standardabweichung der Stichprobenverteilung des Mittelwerts trägt den eigenen Namen Standardfehler des Mittelwerts.
+- Die Streuung der Stichprobenverteilung hängt auch von der Variation in der Elternpopulation ab. Je größer diese Variation, desto breiter die Stichprobenverteilung.
+- Die Elternverteilung lässt sich als Stichprobenverteilung mit der Stichprobengröße eins auffassen, also als ein Mittel, der Populationsmittelwert. Die Stichprobenverteilung bei Größe 100 ist ein Zehntel so breit wie die Elternpopulation.
+- Unter den Bedingungen der Bewertung technischer Regeln tendiert die Stichprobenverteilung des Mittelwerts zur normalen Glockenform, stärker mit wachsender Stichprobe. Andere Statistiken wie Verhältnisse können ausgeprägt nichtnormal sein.
+- Der zentrale Grenzwertsatz besagt, dass die Stichprobenverteilung des Mittelwerts mit wachsender Stichprobengröße, mit Einschränkungen, gegen eine bestimmte Form konvergiert, unabhängig von der Form der Populationsverteilung. Diese Form ist die Normalverteilung, auch Gauß-Verteilung.
+- Die Normalverteilung ist durch ihren Mittelwert und ihre Standardabweichung vollständig beschrieben. Sind diese beiden Größen bekannt, ist über die Verteilung alles bekannt.
+- Etwa 68 Prozent der Beobachtungen liegen innerhalb einer Standardabweichung um den Mittelwert, und etwa 95 Prozent liegen innerhalb von zwei Standardabweichungen um den Mittelwert.
+- Jenseits von zwei Standardabweichungen werden die Schwänze der Normalverteilung recht dünn. Werte jenseits von drei Standardabweichungen sind selten, Werte jenseits von vier äußerst selten.
+- Die Standardabweichung der Stichprobenverteilung des Mittelwerts, auch Standardfehler des Mittelwerts genannt, steht in direktem Zusammenhang mit der Standardabweichung der Population, aus der die Stichproben stammen.
+- Der Standardfehler des Mittelwerts ist umgekehrt mit der Wurzel der Stichprobengröße verbunden.
+- Der Standardfehler des Mittelwerts ist gleich der Standardabweichung der Population geteilt durch die Wurzel der Stichprobengröße. Das ist wahr, aber praktisch nicht unmittelbar nutzbar, weil die Standardabweichung der Population unbekannt ist.
+- Die Standardabweichung der Population lässt sich aus der Stichprobe schätzen. Diese Schätzung, Sigma mit Dach, verwendet unter der Wurzel den Divisor n minus 1 statt n, weil die Stichproben-Standardabweichung die Standardabweichung der Population unterschätzt.
+- Die Schätzung der Populations-Standardabweichung wird eingesetzt, um den Standardfehler des Mittelwerts zu schätzen. Mit diesem Standardfehler und der Annahme einer normalen Stichprobenverteilung lässt sich aus einer einzigen Stichprobe eine gute Schätzung der Stichprobenverteilung des Mittelwerts bilden.
+- Der traditionelle Ansatz setzt die Glockenform voraus. Trifft sie nicht zu, werden die Schlüsse ungenau. Der Autor schätzt die Stichprobenverteilung des Mittelwerts deshalb per Computersimulation.
+- An der Stichprobengröße 30 ist nichts Magisches. Wie schnell die Stichprobenverteilung des Mittelwerts normal wird, hängt von der Form der Elternverteilung ab. In drei Fällen der Abbildung ist sie schon bei fünf Beobachtungen nahezu normal, im untersten Fall erst bei 30.
+- Mittelwert, Median, Standardabweichung und Varianz sind gebräuchliche Punktschätzer und werden aus einer Stichprobe der Grundgesamtheit berechnet.
+- Der effizienteste Schätzer hat die schmalste Stichprobenverteilung und damit den kleinsten Standardfehler.
+- Für symmetrisch verteilte Grundgesamtheiten sind Stichprobenmittelwert und Stichprobenmedian unverzerrte und konsistente Schätzer des Mittelwerts der Grundgesamtheit; der Mittelwert ist effizienter.
+- Bei großen Stichproben ist der Standardfehler des Mittelwerts etwa 80 Prozent kleiner als der Standardfehler des Stichprobenmedians.
+- Je größer die Variabilität der täglichen Regelrenditen in der Grundgesamtheit, desto breiter ist die Stichprobenverteilung der Teststatistik.
+- Das Risiko des MLM-Index wird als Standardabweichung der Jahresrenditen gemessen und in Abbildung 7.13 mit Rendite und Risiko mehrerer anderer Benchmarks von Anlageklassen verglichen.
+- Die Sharpe Ratio teilt die annualisierte Überschussrendite durch die Standardabweichung der Renditen auf annualisierter Basis.
+- Die Standardabweichung berücksichtigt die Reihenfolge von Gewinn- und Verlustperioden nicht.
+- Sind die Beobachtungen seriell korreliert, sinkt die Varianz langsamer, als die Quadratwurzelregel erwarten lässt. Das gilt für den Stichprobenmittelwert als Teststatistik, aber nicht allgemein.
+- Bei normalverteilten Preisänderungen ist die Unsicherheit mit 10 Beobachtungen zehnmal so groß wie mit 1.000 und kann noch viel größer sein, wenn die Änderungen der Normalverteilung nicht folgen.
 
 ## Funktionsweise
 
@@ -50,6 +84,8 @@ aktualisiert: 2026-10-30
 
 ## Voraussetzungen
 
+- Der Zentrale Grenzwertsatz setzt eine endliche Standardabweichung der Elternpopulation voraus, neben einem endlichen Mittelwert und unabhängigen Ziehungen aus derselben Population.
+- Für die betreffende Grenzwertaussage hat die Population einen endlichen Mittelwert und eine endliche Standardabweichung.
 
 ## Anwendung im Trading
 
@@ -66,6 +102,8 @@ aktualisiert: 2026-10-30
 - Buy-on-Gap wählt Aktien, deren Rendite vom Tief des Vortags zum heutigen Open kleiner als minus eine Standardabweichung liegt; diese Standardabweichung wird aus den täglichen Close-to-Close-Renditen der letzten 90 Tage berechnet, der Entry-Z-Score im Code ist 1, und die Kaufschwelle ist das Vortagestief mal (1 minus dieser Z-Score mal der Standardabweichung).
 - Die Short-Variante verlangt ein Gap nach oben um eine Standardabweichung, bei einem Open, der noch unter dem 20-Tage-Durchschnitt liegt.
 - In der SPY-Arbitrage ist die Zahl der Einheiten der negative Abstand des Log-Marktwerts vom gleitenden Mittel, geteilt durch die gleitende Standardabweichung, mit Look-back 5.
+- Die zehn Zigzag-Schwellen sind diese Standardabweichung, multipliziert mit den Koeffizienten 1,5, 2,0, 2,5, 3,0, 3,5, 4,0, 4,5, 5,0, 5,5 und 6,0.
+- Weil diese Standardabweichung von Instrument zu Instrument verschieden ist, wäre ein fester Schwellenkatalog nicht übertragbar; die Vielfachen erlauben die Verallgemeinerung über Märkte mit unterschiedlicher Volatilität.
 
 ## Risiken und Grenzen
 
@@ -73,6 +111,9 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Auf GLD und USO werden entryZscore gleich 1 und exitZscore gleich 0 verwendet und erreichen 17,8 Prozent APR sowie eine Sharpe Ratio von 0,96.
+- Bei einer Perle ist f-g entweder 0 oder 1,0. Bei zwei Perlen kann f-g 0, 0,50 oder 1,0 sein, bei drei Perlen 0, 0,33, 0,66 oder 1,0. Mit der Stichprobengröße sinkt also das Ausmaß der Zufallsvariation von f-g.
+- In der Abbildung hat die Elternpopulation die Standardabweichung 100. Die Stichprobenverteilung des Mittelwerts hat bei Stichprobengröße 10 den Standardfehler 31,62 und bei Stichprobengröße 100 den Standardfehler 10.Wägen alle Personen der Population 150 Pfund, hat jede Stichprobe den Durchschnitt 150 Pfund. Null Variation in der Population erzeugt dann null Variation der Stichprobenmittel und eine Stichprobenverteilung ohne Streuung. Große Unterschiede zwischen den Individuen erzeugen dagegen eine breite Stichprobenverteilung.
+- Das genannte Intervall ist das Konfidenzintervall von zwei Standardabweichungen für den Kopfanteil bei 100.000 Münzwürfen.
 
 ## Unterschiedliche Quellenpositionen
 

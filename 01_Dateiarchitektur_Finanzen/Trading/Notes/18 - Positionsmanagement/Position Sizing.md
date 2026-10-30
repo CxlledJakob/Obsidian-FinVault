@@ -84,6 +84,13 @@ aktualisiert: 2026-10-30
 - Scaling-in erhöht das investierte Kapital, je weiter der Preis vom Mittel abweicht, weil der mögliche Gewinn aus der Rückkehr mitwächst.
 - Beim Verhältnis erhalten Long- und Short-Seite dasselbe Dollarkapital.
 - Beim Log-Preis-Portfolio werden die Kapitalgewichte konstant gehalten, und die Differenz zur Marktwertänderung sitzt in der Kasse.
+- Bei der Fractional-Position-Regel ist die Positionsgröße proportional zum Nettoanteil der einfachen Regeln, die long oder short sind: Zahl long minus Zahl short, geteilt durch die Gesamtzahl der Regeln.
+- Im On-Balance-Volume-Beispiel von Hsu und Kuan mit 2.040 Regeln, davon 1.158 short und 882 long, wird eine Short-Position von 0,135 Einheiten gehalten, weil (882 minus 1.158) geteilt durch 2.040 gleich −0,135 ist.
+- Beim Voting wird unabhängig davon, wie groß die Mehrheit ist, nur eine Position von einer Einheit in Richtung dieser Mehrheit genommen.
+- Ein Diffusionsindikator auf Basis der Fractional Position hält eine anteilige Long- oder Short-Position und passt sie an, wenn sich der Nettoanteil von long zu short ändert.
+- Eine gewichtete lineare Kombination weist jeder einfachen Regel einen Koeffizienten ai zu, der von ihrer Vorhersagekraft abhängt.
+- Der Satz der Gewichte, der nach einem Gütemaß wie minimalem Prognosefehler oder maximaler finanzieller Leistung am besten ist, wird durch Optimierung gesucht.
+- Die einfachste lineare Kombination gibt jedem Bestandteil dasselbe Gewicht; zwei binäre Umkehrregeln ergeben dann −2, wenn beide short sind, 0, wenn eine short und eine long ist, und +2, wenn beide long sind.
 
 ## Voraussetzungen
 

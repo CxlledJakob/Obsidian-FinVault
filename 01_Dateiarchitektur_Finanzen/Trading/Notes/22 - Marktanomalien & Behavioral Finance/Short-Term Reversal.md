@@ -25,6 +25,14 @@ aktualisiert: 2026-10-30
 - Cross-sectional Mean Reversion impliziert, dass die kurzfristigen relativen Renditen der Instrumente eines Korbs seriell antikorreliert sind.
 - Die relative Rendite eines Instruments ist seine Rendite minus der Rendite des Korbs.
 - Dieses Phänomen tritt am häufigsten bei Aktienkörben auf und wird in Kapitel 4 bei mean-reverting Strategien für Aktien und ETFs behandelt.
+- Käufer überverkaufter Aktien können überdurchschnittliche kurzfristige Renditen erzielen. Michael Cooper zeigt das an Aktien, die negatives Preismomentum bei fallendem Handelsvolumen aufweisen.
+- Aktien, die über die vorangegangenen zwei Wochen bei fallendem Volumen scharf gefallen sind, zeigen eine systematische Neigung, über die folgende Woche zu steigen.
+- Das fallende Volumen ist plausibel, weil es bedeutet, dass nicht genügend Käufer vorhanden sind, um den akuten Bedarf der Verkäufer zu decken. Die Überschussrenditen erscheinen als Liquiditätsprämie.
+- Die Long- und Short-Portfolios wurden in einer Walk-forward-out-of-sample-Simulation über 1978 bis 1993 gebildet, um Data Mining zu begegnen, aus 300 Aktien großer Kapitalisierung.
+- Diese Long-Short-Portfolios erzielten eine annualisierte Rendite von 44,95 Prozent gegen eine Buy-and-hold-Benchmark von 17,91 Prozent.
+- Gegentrend-Strategien, die Aktien kaufen, welche über die jüngere Vergangenheit sehr schwach waren, identifizieren Papiere mit einer systematischen Neigung, über die nahe Frist zu steigen. In einem effizienten Markt ist das die Bezahlung für das Stellen von Liquidität und kein kostenloses Muster.
+- Jacobs und Levy isolierten mit multipler Regression den reinen Return-Reversal-Effekt und fanden ihn als einen der stärksten und beständigsten Prädiktoren der relativen Aktienperformance.
+- Aktien, die über den vergangenen Monat schwach waren, neigen über den folgenden Monat zu positiver relativer Performance.
 
 ## Funktionsweise
 

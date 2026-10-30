@@ -40,6 +40,7 @@ aktualisiert: 2026-10-30
 - Handelspreise und Handelsgrößen sind bei Währungen im Gegensatz zu Bid- und Ask-Quotes im Allgemeinen nicht verfügbar, zumindest nicht ohne kleine Verzögerung, weil Händler oder ECNs den Handelspreis nicht allen Teilnehmern melden müssen.
 - Die Dezimalisierung der US-Aktienkurse am 9. April 2001 senkte die Bid-Ask-Spreads und zugleich die angezeigte Liquidität an den besten Bid- und Ask-Preisen, nach Arnuk und Saluzzi 2012.
 - Die meisten Spezial-Backtesting-Plattformen sind nicht dafür ausgerüstet, Daten mit sämtlichen Bid-, Ask- und Last-Tick-Preisen und -Größen zu backtesten.
+- Slippage entsteht durch den Bid-Ask-Spread und dadurch, dass die Order des Anlegers den Marktpreis beim Kauf nach oben und beim Verkauf nach unten schiebt.
 
 ## Funktionsweise
 

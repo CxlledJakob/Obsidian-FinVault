@@ -39,6 +39,9 @@ aktualisiert: 2026-10-30
 - Die dritte Stufe bei Dow ist die Distribution. Dort nimmt das Smart Money Gewinne mit und geht zum Ausgang.
 - Wer drei höhere Hochs und höhere Tiefs abwartet, kauft in der Regel am Beginn genau dieser Stufe, nachdem die Trendfolge schon gelaufen ist.
 - Distribution liegt in den Zonen von Unterstützung und Widerstand, zusammen mit dem Selling Climax.
+- Schließt der Markt unter der Mitte seiner Tagesspanne, gilt der Tag nach Chaiken als von bärischer Distribution beherrscht und soll tiefere Preise vorhersagen.
+- Nur ein Schluss am Tagestief weist das gesamte Tagesvolumen als negativen Distributionswert zu; sonst wird der Distribution nur ein Bruchteil des Volumens zugeordnet.
+- Nach der Vermutung zum negativen Volumen spiegelt die Marktrichtung an ruhigeren Tagen mit fallendem Volumen die Distribution, also den Verkauf der Informierten, oder deren Akkumulation.
 
 ## Funktionsweise
 

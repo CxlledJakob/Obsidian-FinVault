@@ -18,6 +18,7 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Die wichtigste Art eines wissenschaftlichen Gesetzes ist die funktionale Beziehung: Die zu prognostizierende abhängige Variable Y ist eine Funktion eines oder mehrerer Prädiktoren X, geschrieben Y gleich f von Xi.
 
 ## Kernaussagen
 
@@ -25,6 +26,18 @@ aktualisiert: 2026-10-30
 - Die Standardabweichung der Residuen beträgt 2.047 Dollar.
 - Aus der Regression folgt ein Portfolio long 0,3906 Kontrakte VX und long einen Kontrakt ES.
 - Die Hedge Ratio der VX-ES-Rollrendite-Strategie stammt aus der Regression der Preise von VX gegen ES in Gleichung 5.11 und nicht aus der Regression ihrer Renditen wie im Original von Simon und Campasano, deshalb weicht sie leicht von deren Angabe ab.
+- Wenn Experten mehrfaktorielle Entscheidungen subjektiv treffen, stützen sie sich vor allem auf eine lineare Kombinationsregel, aber weniger wirksam als formale lineare Regressionsmodelle.
+- Sie sind weniger wirksam, weil sie die Information nicht so konsistent kombinieren wie ein formales mathematisches Modell.
+- In einem sequenziellen Problem lässt sich jede Variable für sich deuten, und die Einzelbotschaften werden danach algebraisch addiert; die Botschaft einer Variable hängt dann nicht von den anderen ab.
+- In einem konfigurativen Problem steckt die Information im Beziehungsgeflecht der Variablen, die sich nicht isoliert bewerten lassen: ein hoher Wert von A kann bei niedrigem B und hohem C etwas anderes bedeuten als bei hohem B und niedrigem C.
+- Eine lineare Funktion ist vergleichsweise einfach, weil sie nur durch zwei Koeffizienten oder Freiheitsgrade definiert ist: ihre Steigung und den Schnitt mit der senkrechten Achse, den y-Achsenabschnitt. Verbessern lässt sich der Fit nur über diese beiden Größen.
+- Eine Funktion lässt sich als mathematische Hypothese auffassen, die eine gegebene Menge von Beobachtungen erklärt.
+- Wird eine Funktion mit der Methode der Kleinste-Quadrate-Regression an Daten angepasst, ist ein perfekter Fit garantiert, wenn sie so viele Freiheitsgrade, also Koeffizienten, enthalten darf, wie es Datenpunkte gibt.
+- Die lineare Funktion berührt nicht jeden beobachteten Punkt, beschreibt aber die allgemeine Tendenz, dass steigende X-Werte mit steigenden Y-Werten einhergehen. Damit erfasst sie das wesentliche Merkmal und ist eher die echte Beziehung zwischen X und Y.
+- Unter sonst gleichen Bedingungen ist die einfachere Erklärung eher richtig. Eine aufwendige Kurve kann gerechtfertigt sein, wenn genug Daten vorliegen und ein komplexer Prozess sie erzeugt hat.
+- Bei Camerer waren die subjektiven Urteile der Experten am ungenauesten und die mit Regressionsanalyse geschätzten multivariaten linearen Modelle am genauesten, genauer auch als ein mathematisches Modell davon, wie die Experten ihre Urteile bildeten.
+- Goldberg zeigte 1968, dass ein lineares Prognosemodell auf Persönlichkeitstestwerten neurotische von psychotischen Patienten besser trennte als erfahrene klinische Diagnostiker.
+- Das Modell von Goldberg traf zu 70 Prozent, die Treffer der Experten lagen zwischen 52 und 67 Prozent.
 
 ## Funktionsweise
 
@@ -45,12 +58,30 @@ aktualisiert: 2026-10-30
 - Im Programm werden je Tag die Logpreise der fünf nächsten Laufzeiten auf die Restlaufzeit in Monaten regressiert, sofern fünf aufeinanderfolgende Kontrakte vorliegen, und γ ist minus 12 mal dem Steigungskoeffizienten.
 - Das Modell setzt F(t, T) gleich S(t) mal exp(γ mal (t minus T)), S(t) gleich c mal e hoch αt, und damit die Gesamtrendite ∂(log F)/∂t gleich α plus γ sowie die Roll-Rendite minus ∂(log F)/∂T gleich γ.
 - Die Halbwertszeit von γ kommt aus der Regression der Änderung von γ auf den verzögerten γ-Wert und eine Konstante und ist minus log(2) geteilt durch den Steigungskoeffizienten.
+- Typischerweise sind die Werte der Prädiktoren bekannt und der Wert von Y nicht, oft weil Y ein künftiges Ergebnis ist und die X-Werte aktuell bekannt sind.
+- Ist die Beziehung einmal gewonnen, lassen sich Werte der abhängigen Variable prognostizieren, indem die bekannten Prädiktorwerte eingesetzt werden.
+- Funktionale Beziehungen werden entweder aus erklärenden Theorien abgeleitet oder aus historischen Daten durch Funktionsanpassung geschätzt, zum Beispiel durch Regressionsanalyse.
+- Kaufman diskutiert eine objektive Divergenzmethode, die die Steigungen der beiden verglichenen Zeitreihen per linearer Regression schätzt und die Divergenz als Differenz dieser Steigungen definiert.
+- Er stellt Computercode dafür bereit, bietet aber keine Leistungsstatistiken.
+- Die Kointegrationsmessung von Divergenzen nutzt eine Regressionsanalyse, um festzustellen, ob zwischen zwei Zeitreihen eine lineare Beziehung besteht.
+- Das Error-Correction-Modell misst die Abweichung von dieser typischen linearen Beziehung; wird der Fehler extrem, soll er auf seinen normalen Wert null zurückkorrigieren.
+- Der Fosback Index signalisiert, wenn die Cash-Quote der Fonds deutlich von dem Niveau abweicht, das die lineare Beziehung zu den kurzfristigen Zinsen vorhersagt.
+- Neben der einfachen linearen Kombination gibt es anspruchsvollere lineare Kombinationen, in denen den Variablen Gewichte zugewiesen werden, also eine gewichtete algebraische Summe.
+- Algebraisch meint hier, dass Zahlen mit positiven und mit negativen Werten kombiniert werden.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Die technische Analyse ist derzeit vor allem auf die Schätzung aus historischen Daten beschränkt, weil Theorien der technischen Analyse gerade erst formuliert werden.
+- Fosback entfernte mit einer Regression den störenden Einfluss der Kurzfristzinsen auf die Barreserven, als er Optimismus und Pessimismus von Fondsmanagern maß, und erhielt so den Fosback-Index als unverfälschtes Maß der Managerpsychologie.
+- Jacobs und Levy nutzten multiple Regression, um die Störeinflüsse mehrerer Variablen zu mindern, und leiteten daraus bereinigte Indikatoren für die Prognose der relativen Aktienperformance ab.
+- Alpha im Capital-Asset-Pricing-Modell ist der Achsenabschnitt aus der Regression der Strategierenditen auf die Renditen eines Marktindex.
+- Kaufman vergleicht die Steigung der linearen Regression als Trendfolge-Methode mit Channel-Breakout, exponentieller Glättung, Swing-Breakout und Point-and-Figure. An Eurodollars von 1985 bis 1994 hatte Channel-Breakout die höchste risikobereinigte Performance.
+- Das Arbitrage-Pricing-Modell sagt, ein lineares Modell verknüpfe die Rendite einer Aktie mit einer Reihe von Faktoren, und diese Beziehung entstehe, weil Arbitrageure nach risikolosen Gelegenheiten mit Investment null suchen.
+- Der Indikator der Beziehung zweier Reihen ist die Zeitreihe der Residuen der linearen Beziehung zwischen ihnen.
+- Der Operator YY normiert seine Werte mit dem Standardfehler der Regression und führte keinen expliziten Test auf die Stationarität der Residuen durch.
 
 ## Regeln und Kriterien
 
@@ -75,6 +106,8 @@ aktualisiert: 2026-10-30
 - Dieselbe Preis-Spread-Regression arbeitet im Beispiel deutlich besser als die Regression der Logpreise und als das einfache Verhältnis.
 - Die Log-Future-Preise von CL gegen die Restlaufzeit fallen zu einem festen Zeitpunkt, hier die Kontrakte Januar bis Mai 2007 und nur die fünf nächsten, recht sauber auf eine Gerade; weiter entfernte Laufzeiten können von Gleichung 5.7 abweichen.
 - Positive γ zeigen Backwardation, negative Contango; für CL sind die annualisierten γ vom 22. November 2004 bis 13. August 2012 geplottet.
+- Haben von sieben Variablen mit den Werten +1 oder −1 fünf den Wert +1 und zwei den Wert −1, ist die lineare Kombination +3, also (+5) + (−2).
+- Eine lineare Kombination dreier binärer Variablen kann nur vier verschiedene Werte annehmen, während drei binäre Variablen acht verschiedene Konfigurationen bilden.
 
 ## Unterschiedliche Quellenpositionen
 

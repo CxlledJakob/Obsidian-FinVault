@@ -91,6 +91,7 @@ aktualisiert: 2026-10-30
 - Der CL-Kalender-Spread nutzt das hoffentlich mean-reverting γ als Signal, mit Look-back gleich der gerundeten Halbwertszeit von etwa 36 Tagen.
 - Je Tag wird ein Far- und ein Near-Kontrakt gewählt: Haltedauer 3 Monate oder 61 Handelstage, Rollen 10 Tage vor Verfall des Near-Kontrakts, Verfälle ein Jahr auseinander; zunächst long Far und short Near, und bei positivem Z-Score werden die Positionen umgekehrt.
 - Die ungehebelte Tagesrendite ist der P&L geteilt durch 2, weil zwei Kontrakte im Spread sind.
+- Mean-Reversion-Regeln geben das Konzept vor, dass eine Datenreihe zu ihrem Mittelwert zurückkehrt, sobald sie gegenüber den jüngeren Werten extrem hoch oder extrem tief liegt.
 
 ## Risiken und Grenzen
 

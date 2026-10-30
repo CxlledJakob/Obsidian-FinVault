@@ -24,6 +24,9 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Der Durchschnittsgewinn gehört zu den Performance-Kennzahlen, die Dollarbeträge und Renditen ohne Risikoanpassung ausweisen.
+- Der Erwartungswert einer künstlichen Handelsregel ist die Wahrscheinlichkeit eines profitablen Monats mal dem durchschnittlichen Gewinn minus die Wahrscheinlichkeit eines Verlustmonats mal dem durchschnittlichen Verlust.
+- Durchschnittsgewinn und Durchschnittsverlust sind bekannt, weil die Regeln auf die absoluten monatlichen prozentualen Änderungen des S&P 500 von August 1928 bis April 2003 angewendet wurden; absolut heißt, das Vorzeichen der tatsächlichen Monatsänderung wurde ignoriert.
+- Über fast 900 Monatsbeobachtungen betrug die durchschnittliche absolute Monatsrendite des S&P 500 3,97 Prozent, und dieser Wert geht als durchschnittlicher Gewinn in die Formel der erwarteten Rendite ein.
 
 ## Funktionsweise
 

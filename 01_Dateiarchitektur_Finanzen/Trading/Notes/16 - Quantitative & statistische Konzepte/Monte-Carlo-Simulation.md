@@ -21,6 +21,9 @@ aktualisiert: 2026-10-30
 - Die numerische Bestimmung der Handelsregel zieht sehr viele künstliche Gewinnpfade aus den geschätzten Prozessparametern.
 - Die Monte-Carlo-Simulation vergleicht hier die Performance von Hierarchical Risk Parity, dem Minimum-Varianz-Portfolio des Critical Line Algorithm und dem Inverse-Varianz-Portfolio außer Stichprobe.
 - Snippet 16.5 setzt Monte-Carlo-Experimente für Hierarchical Risk Parity, den Critical Line Algorithm und das Inverse-Varianz-Portfolio um.
+- Die Monte-Carlo-Permutation ist nach dem bekannten europäischen Spielkasino benannt, weil sie den Computer wie ein Roulette verwendet.
+- Die Monte-Carlo-Simulation, von Stanislaw Ulam (1909 bis 1984) eingeführt, löst mathematische Probleme durch zufälliges Ziehen von Stichproben.
+- Die Monte-Carlo-Permutation zum Prüfen von Regeln stammt von Timothy Masters; er schlug sie als Erster vor, um die Stichprobenverteilung der gebacktesteten Regelleistung zu erzeugen, als Alternative zu Whites Reality Check.
 
 ## Kernaussagen
 
@@ -40,6 +43,45 @@ aktualisiert: 2026-10-30
 - Für Verteilungen mit endlich vielen Momenten folgt aus Thorps Herleitung ein anderer optimaler Hebel als die einfache Kelly-Formel; die Pareto-Levy-Verteilung hat nicht endlich viele Momente.
 - Für manche Verteilungen gibt es gar keine analytische Antwort.
 - Bei Fat Tails empfehlen die Key Points Monte Carlo statt der Kelly-Formel, um die Wachstumsrate zu optimieren.
+- Das folgende Kapitel stellt zwei computergestützte Verfahren vor, Bootstrap-Resampling und Monte-Carlo-Permutation. Jedes hat Grenzen, beide sind aber nützliche Alternativen zum klassischen Ansatz, die Stichprobenverteilung aus einer einzigen Stichprobe abzuleiten.
+- Es gibt zwei computergestützte Wege zur Stichprobenverteilung: Monte-Carlo-Permutation und Bootstrap. Beide werden in der Fallstudie von Teil 2 verwendet.
+- Der Autor verwendet die Computersimulation, weil der klassische Ansatz eine normale Stichprobenverteilung voraussetzt und die Schlüsse ungenau werden, wenn diese Form nicht zutrifft.
+- Womit die Verteilung auch erzeugt wird, sie sagt, wie weit die gebacktestete Rendite einer nicht vorhersagenden Regel zufallsbedingt über oder unter null schwanken kann, und sie ist der Maßstab, an dem Vorhersagekraft beurteilt wird.
+- Die Monte-Carlo-Methode war lange bekannt, aber zuvor nicht auf Regeltests angewandt; Masters' Einsicht war, dass sie die Stichprobenverteilung einer Regel ohne Vorhersagekraft erzeugen kann.
+- Die Null besagt, die Renditen der geprüften Regel seien eine Stichprobe aus einer Grundgesamtheit, die eine Regel ohne Vorhersagekraft erzeugt hat.
+- Umgesetzt wird das, indem die Ausgaben plus 1 und minus 1 in ihrer ursprünglichen Reihenfolge zufällig mit künftigen Preisänderungen gepaart werden; die Ausgabe ist dann uninformatives Rauschen.
+- Die Zufallspaarung zerstört jede Vorhersagekraft der Regel; der Text nennt das Ergebnis eine Rauschregel.
+- Gezogen wird ohne Zurücklegen, anders als beim Bootstrap.
+- Gebraucht werden die tägliche Reihe der Regelausgaben und die tägliche Reihe der Preisänderungen, nicht nur die Regelrenditen.
+- Die Permutationsmethode ist gemeinfrei, während der für Regeltests geeignete Bootstrap nur von Quantmetrics kommt.
+- Bootstrap und Monte-Carlo-Permutation können wegen ihrer verschiedenen Stichprobenverteilungen verschieden über die Null entscheiden; auf trendbereinigten Daten stimmen sie nach Masters' Simulationen in der Regel überein, und dieses Buch nutzt für beide solche Daten.
+- Die Monte-Carlo-Permutation kann keine Konfidenzintervalle erzeugen.
+- Die Monte-Carlo-Permutation hat mit dem Schätzen eines Populationsparameters oder mit dem Prüfen einer Behauptung über dessen Wert nichts zu tun und kann deshalb keine Konfidenzintervalle erzeugen.
+- Ihre Nullhypothese besagt, dass die von der Regel diktierten langen und kurzen Positionen keine nützliche Information über künftige Marktänderungen enthalten.
+- Weil kein Populationsparameter wie die mittlere Regelrendite vorkommt, gibt es nichts, worum ein Konfidenzintervall zu legen wäre.
+- Ein Ansatz gegen den Data-Mining-Bias beruht auf Randomisierungsmethoden wie Bootstrap und Monte Carlo und wurde außerhalb der akademischen Literatur wenig diskutiert.
+- Er erlaubt, so viele Regeln zu testen wie gewünscht, und eine größere Regelzahl erhöht die Chance, überlegene Regeln zu finden.
+- Er verlangt nicht, Daten zurückzuhalten, sodass die gesamte verfügbare Historie für das Data Mining genutzt werden kann.
+- Er erlaubt Signifikanztests und manchmal näherungsweise Konfidenzintervalle.
+- Kapitel 5 führte Bootstrap und Monte-Carlo-Permutation ein; dort galten die Tests nur für eine einzelne Regel ohne Data Mining, mit den hier beschriebenen Änderungen auch für eine durch Data Mining gefundene Regel.
+- Welche Informationen über jede getestete Regel aufbewahrt werden müssen, hängt davon ab, ob Monte Carlo oder Bootstrap benutzt wird.
+- Die Fallstudie illustriert zwei Verfahren, die den Data-Mining-Bias berücksichtigen: eine erweiterte Fassung von Whites Reality Check und Masters Monte-Carlo-Permutationsmethode.
+- Beide nutzen eine jüngere Verbesserung, die die Wahrscheinlichkeit senkt, eine gute Regel zu übersehen, den Fehler zweiter Art, und damit die Power der Tests erhöht.
+- Die Nullhypothese der Monte-Carlo-Permutation lautet, alle betrachteten Regeln hätten ihre Long- und Short-Positionen auf zufällige Weise erzeugt.
+- Long und Short werden zufällig mit der Ein-Tages-Vorwärts-Preisänderung des Marktes permutiert.
+- Die Alternativhypothese von Masters lautet, die gebacktestete Profitabilität einer Regel sei das Ergebnis einer informativen Paarung ihrer Long- und Short-Positionen mit der Ein-Tages-Vorwärts-Preisänderung des Marktes. Mit anderen Worten hat die Regel Vorhersagekraft.
+- Um die passende Stichprobenverteilung zu konstruieren, muss die Information über jede getestete Regel verfügbar sein. Fehlt sie, lässt sich die statistische Signifikanz nicht richtig beurteilen.
+- Neben White’s Reality Check wurde die Monte-Carlo-Permutation verwendet, um Regeln zu bewerten, die durch Data Mining gefunden wurden, weil herkömmliche Signifikanztests den Data-Mining-Bias nicht berücksichtigen.
+- Figur 9.2 legt die beste Regel E-12-28-10-30 auf die Stichprobenverteilung der Monte-Carlo-Permutation und weist den p-Wert 0,8194 aus.
+- Auch diese Verteilung gehört zur besten von 6.402 wertlosen Regeln und zentriert bei etwa 11 Prozent mittlerer Rendite.
+- Die annualisierte Rendite von 10,25 Prozent liegt unter diesem Zentrum und reicht nicht, die Nullhypothese bei 0,05 abzulehnen.
+- Das Zentrum bei etwa 11 Prozent ist eine Folge des konkreten Satzes von 6.402 Regeln, ihrer Renditekorrelationen, der Beobachtungszahl und des verwendeten S&P-Datensatzes und nicht der Erwartungswert einer einzelnen Regel.
+- MC ist die Monte-Carlo-Permutationsmethode, die Masters entwickelte, und sie übernimmt die Erweiterung von Wolf und Romano.
+- Figur 9.2 zeigt die Stichprobenverteilung für die beste von 6.402 wertlosen Regeln unter der Monte-Carlo-Permutation.
+- Die Spalte SR MC in Tabelle 9.1 ist der Einzelregel-p-Wert per Monte Carlo und rechnet den Data-Mining-Bias nicht ein.
+- Die Spalte MC Sig prüft die Signifikanz auf dem Niveau 0,05 mit der Monte-Carlo-Permutation, die den Data-Mining-Bias berücksichtigt; keine Regel erhielt ein Sternchen.
+- White’s Reality Check und die Monte-Carlo-Permutation zeigten beide, dass die beste der 6.402 getesteten Regeln nicht statistisch signifikant war.
+- RC bezeichnet die bei Quantmetrics verfügbare Reality-Check-Fassung ohne die Wolf-Romano-Erweiterung, während MC diese Erweiterung enthält.
 
 ## Funktionsweise
 
@@ -70,6 +112,24 @@ aktualisiert: 2026-10-30
 - Im Beispiel der Mean-Reversion-Strategie aus Beispiel 5.1 erzeugt pearsrnd 100.000 Zufallsrenditen aus den ersten vier Momenten; der Code steht in monteCarloOptimLeverage.m.
 - Der zurückgegebene Typ war 4, also keine Standardverteilung wie Students t.
 - g ist die Summe von log(1 plus f mal R) geteilt durch die Länge von R; das Maximum wird über die Minimierung von minus g mit fminbnd zwischen 0 und 24 gesucht, weil MATLAB kein fmaxbnd hat.
+- Die trendbereinigten Preisänderungen eines Tages liegen in einem Behälter, werden ohne Zurücklegen mit den Regelausgaben gepaart, und jede Rendite ist das Produkt aus Ausgabe und der Preisänderung einen Tag voraus.
+- Der Mittelwert dieser Renditen ist ein permutierter Mittelwert; das wird viele Male wiederholt, im Beispiel 5.000 Mal, und aus diesen Mittelwerten entsteht die Stichprobenverteilung der mittleren Rendite einer Rauschregel.
+- Der p-Wert ist der Anteil der Zufallsregel-Renditen, die die Rendite der geprüften Regel erreichen oder übertreffen.
+- Die Performancehistorien der künstlichen Handelsregeln wurden per Monte-Carlo-Simulation erzeugt.
+- Die absoluten monatlichen Änderungen des S&P 500 wurden mit Zurücklegen aus der rund 900 Monate langen Historie von August 1928 bis April 2003 gezogen.
+- Ein Monat ohne Vorzeichen wurde zufällig gewählt, und ein per Computer simuliertes Roulette entschied Gewinn oder Verlust; die Wahrscheinlichkeit setzte der Experimentator, 0,70 entspricht 70 Gewinn- und 30 Verlustfächern von 100.
+- Das Verfahren wurde für eine festgelegte, ebenfalls gesteuerte Zahl von Monaten wiederholt, und die Historie wurde als annualisierte mittlere Monatsrendite zusammengefasst.
+- Die Monte-Carlo-Permutation erzeugt die Stichprobenverteilung für die statistische Signifikanz von Regeln, die durch Data Mining gefunden wurden; sie nutzt andere Daten als der Bootstrap und testet eine andere Formulierung der Nullhypothese.
+- Sie verwendet die historische Zeitreihe der Regelausgaben, also +1 und −1, sowie die rohen Marktrenditen, während der Bootstrap die Intervallrenditen der Regel verwendet.
+- Um eine Regel ohne Prognosekraft zu simulieren, paart sie die Regelausgaben zufällig mit den täglichen Marktpreisänderungen, und zwar ohne Zurücklegen.
+- Die Rendite einer Paarung ist der Regelwert mal der diesem Tag zufällig zugeordneten Marktänderung: +1 an einem Aufwärtstag verdient die Marktänderung, −1 an einem Abwärtstag verdient diesen positiven Betrag, und Verluste entstehen, wenn das Vorzeichen der Ausgabe dem der Preisänderung entgegensteht.
+- Nach der Paarung der gesamten Ausgabehistorie wird für jede der N Regeln die mittlere Rendite berechnet, die maximale mittlere Rendite wird der erste Wert der Stichprobenverteilung, und der Vorgang wird viele Male mit anderen Paarungen wiederholt, mehr als 500-mal.
+- Zuerst werden die täglichen Ausgabezustände aller N Regeln beschafft, dann jede Ausgabe zufällig mit einer verwürfelten Version der tatsächlichen künftigen Marktpreisänderungen gepaart, wobei dieselben Paarungen für alle Regeln gelten müssen.
+- Ist die Ausgabe von Tag 7 mit der Marktrendite von Tag 15 gekoppelt, muss dieselbe Kopplung für alle konkurrierenden Regeln gelten, damit die Korrelationsstruktur erhalten bleibt.
+- Aus den N mittleren Renditen wird die höchste gewählt; die Schritte werden M-mal wiederholt, wobei M gleich 500 oder eine große Zahl ist, und aus den M Höchstwerten entsteht die Stichprobenverteilung der besten mittleren Rendite unter N nutzlosen Regeln.
+- Anders als bei White's Reality Check muss die Renditeverteilung nicht auf null zentriert werden, weil die Null hier nicht lautet, alle Regeln hätten die erwartete Rendite null.
+- Der Mittelwert der so erzeugten Stichprobenverteilung ist die erwartete Rendite einer nutzlosen Regel in einem Data-Mining-Vorhaben; liegt sie nach der Zufallszuordnung über null, bleibt das so.
+- Der p-Wert ist die Fläche im rechten Rand bei oder jenseits der mittleren Rendite der gebacktesteten Regel, gleich dem Anteil der M Werte, die größer oder gleich dieser mittleren Rendite sind.
 
 ## Voraussetzungen
 
@@ -89,6 +149,9 @@ aktualisiert: 2026-10-30
 - Simulierte Renditen haben deutlich bessere statistische Signifikanz und ähneln dem Value-at-Risk großer Banken und Hedgefonds.
 - Ihr Nachteil ist, dass der simulierte Maximal-Drawdown seltener sein kann als einmal in einer Million Jahren und dass serielle Korrelationen der Historie fehlen.
 - Die Drawdown-Schätzung dieses Abschnitts beruht auf der simulierten Strategiereihe, nicht auf den historischen Backtest-Renditen.
+- Das Verfahren kann keine Konfidenzintervalle erzeugen, weil es keine Hypothese über die mittlere Rendite der Regel testet.
+- Masters prüfte seine Power gemeinsam mit White's Reality Check an künstlichen Regeln beiderseits der Benchmark; bei extrem großer Varianz einer Regel mit negativer erwarteter Rendite kann die Power drastisch sinken, in wahrscheinlicheren Fällen der technischen Analyse sind beide Verfahren einigermaßen robust.
+- Die Erweiterung von Romano und Wolf scheint auch die Power dieses Verfahrens zu steigern; die erweiterte Fassung wird gemeinfrei gestellt, der Code auf www.evidencebasedta.com.
 
 ## Beispiele
 
@@ -107,6 +170,12 @@ aktualisiert: 2026-10-30
 - Bei f gleich 31 ist die Wachstumsrate minus 1, weil die negativste Periodenrendite minus 0,0331 ist und jeder Hebel über 1 geteilt durch 0,0331 gleich 30,2 in dieser Periode zum Totalverlust führt.
 - Dieselbe Reihe hat bei f gleich 19,2 den maximalen Drawdown minus 0,999, bei 9,6 noch minus 0,963, und bei etwa 2,7 einen Betrag von etwa 0,5.
 - Nach 100.000 Tagen liegt die CPPI-Wachstumsrate bei 0,002484 pro Tag gegen 0,002525 der Alternative, bei D gleich 0,5; der CPPI-Drawdown bleibt unter 0,5, der andere ohne Stop-Loss beträgt 0,9 selbst bei halbem Optimalhebel.
+- Bei TT-4-91 werden 6.800 tägliche Ausgaben von plus 1 oder minus 1 ohne Zurücklegen mit 6.800 trendbereinigten Ein-Tages-Vorwärtsänderungen des S&P 500 gepaart, multipliziert und gemittelt, und das 5.000 Mal.
+- Der Monte-Carlo-p-Wert ist fast identisch mit dem Bootstrap-p-Wert, die Regel hat also möglicherweise Vorhersagekraft.
+- Um die Auswahl der besten von 10 zu simulieren, wurden zehn Historien erzeugt, die höchste mittlere Rendite notiert und das 10.000-mal wiederholt; aus den 10.000 Werten entstand die Stichprobenverteilung dieser Statistik.
+- Für den Fall ohne Data Mining wurden 1.000 Historien von je 24 Monaten erzeugt.
+- Der Bias für die beste von 2, 10, 50 und 400 wurde jeweils über 10.000 Wiederholungen gemessen, alle Historien 24 Monate lang, Gewinnwahrscheinlichkeit 0,50 und Renditen unkorreliert.
+- Die Monatszahl wurde von einem Monat bis 1.000 in Schritten von 50 Monaten variiert, und der Bias wurde bei jedem Schritt für die beste von 10 und die beste von 100 berechnet, alle mit erwarteter Rendite null.
 
 ## Unterschiedliche Quellenpositionen
 

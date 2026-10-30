@@ -59,6 +59,8 @@ aktualisiert: 2026-10-30
 - Für die Darstellung der nötigen Trefferwahrscheinlichkeit wird ein Gewinnziel von 0,1 zusammen mit einer Ziel-Sharpe-Ratio von 1,5 verwendet.
 - Das Aufwärtspotenzial einer Mean-Reversion-Strategie ist durch die natürliche Gewinnobergrenze begrenzt, gesetzt als das Mittel, zu dem die Preise zurückkehren.
 - Das Aufwärtspotenzial einer Momentum-Strategie ist unbegrenzt, außer es wird willkürlich eine Gewinnobergrenze gesetzt, was unratsam ist.
+- Feste Ausstiegsziele beseitigen extreme Ergebnisse und verringern damit die Schwere der Ränder in der Stichprobenverteilung der Performancestatistik.
+- Nur wenn Regeln an festen Zielen aussteigen, ist der Befund praktisch nützlich, dass eine leichtschwänzige Renditeverteilung den Data-Mining-Bias deutlich mindert; in den meisten Fällen bleiben Forscher an die vom Marktverhalten erzeugten Renditeverteilungen gebunden.
 
 ## Funktionsweise
 

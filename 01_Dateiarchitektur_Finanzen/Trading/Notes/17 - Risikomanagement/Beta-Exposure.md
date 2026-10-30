@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Portfoliorisiko"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Beta-Exposure
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Alpha ist im Capital-Asset-Pricing-Modell der Achsenabschnitt, den man erhält, wenn die Renditen einer Anlagestrategie auf die Renditen eines Marktindex regressiert werden.
+- Alpha ist der Teil der Rendite, der nicht der Volatilität der Strategie, also ihrem Beta, zuzurechnen ist.
 
 ## Kernaussagen
 
+- Verdienstliche Anlagestrategien haben Alphas, die in statistisch signifikantem Grad positiv sind.
 
 ## Funktionsweise
 

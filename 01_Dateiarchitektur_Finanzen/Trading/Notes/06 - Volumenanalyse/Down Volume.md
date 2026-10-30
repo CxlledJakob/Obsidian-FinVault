@@ -19,12 +19,19 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Down Volume ist das Volumen der Abwärtskerzen. Im Volume at Price wird der Balken stärker rot, wenn in der Preisspanne mehr Abwärts- als Aufwärtskerzen liegen.
+- Downside-Volumen ist die Gesamtzahl der Aktien, die in Papieren gehandelt wurden, die an diesem Tag tiefer schlossen.
 
 ## Kernaussagen
 
 - Der rot-blaue Schwerpunkt eines Volume-at-Price-Balkens zeigt das Gleichgewicht von Verkauf und Kauf in dieser Preisspanne.
 - Fallendes Verkaufsvolumen auf Abwärtskerzen ist kein bärisches Zeichen, weil ein echter Abverkauf fallende Preise und steigendes Volumen verlangen würde.
 - Eine enge Abwärtskerze mit höherem Volumen als die vorherige Kerze kann Stopping-Volumen sein, also Kauf statt Verkauf.
+- Die getrennte Berechnung und Analyse von Upside- und Downside-Volumen wird Lyman M. Lowry im Jahr 1938 zugeschrieben.
+- NYSE Downside Volume, Kürzel DVOL, ist Rohzeitreihe 20 der Fallstudie und stammt von Ultra 8.
+- Die Fallstudie verwendete die täglich von der New York Stock Exchange veröffentlichten Statistiken zu Aufwärts-, Abwärts- und unverändertem Volumen.
+- Das tägliche Net Volume Ratio ist die Differenz aus Upside- und Downside-Volumen, geteilt durch die Summe aus Upside-, Downside- und unverändertem Volumen, und kann positiv oder negativ sein.
+- Das Cumulative Net Volume Ratio ist die kumulative Summe dieser Tagesratios; gleitende Durchschnitte wurden für 10 und 30 Tage als NVR10 und NVR30 gebildet.
+- Tabelle 8.2 nennt dieselben Größen Cum. Up Down Volume Ratio mit dem Kürzel CUDR sowie UDR10 und UDR30.
 
 ## Funktionsweise
 

@@ -20,10 +20,12 @@ aktualisiert: 2026-10-30
 
 - Ein Breakout Failure liegt vor, wenn der Markt über oder unter einen bekannten Referenzpunkt ausbricht und die Fortsetzung ausbleibt.
 - Ein Breakout Failure liegt vor, wenn der Markt über oder unter die Balance schaut und keine Fortsetzung zeigt.
+- Eine Bullenfalle oder ein Breakout Failure liegt vor, wenn kurz nach dem Durchbruch des Ausbruchs die Preise das Ausbruchsniveau in der Gegenrichtung wieder durchstoßen.
 
 ## Kernaussagen
 
 - Nach dem Scheitern jenseits eines Referenzpunkts wird der Preis oft schnell und mit Überzeugung gegen die Ausbruchsrichtung abgelehnt.
+- Materialisiert sich nach einem Aufwärtsausbruch der vorhergesagte Aufwärtstrend nicht, liegt ein Prognosefehler vor und keine nachträgliche Umbenennung des Musters.
 
 ## Funktionsweise
 
@@ -33,6 +35,7 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Das wird als Turtle-Soup-Signal bezeichnet, weil eine Gruppe von Rohstoffhändlern, die Turtles, auf Ausbrüche handelt und bei Breakout Failures in Schwierigkeiten gerät.
 
 ## Regeln und Kriterien
 

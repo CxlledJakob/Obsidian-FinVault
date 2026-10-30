@@ -38,6 +38,7 @@ aktualisiert: 2026-10-30
 - Eine Bewegung des SPX um 1 Prozent erzwingt nach Cheng und Madhavan (2009) Käufe oder Verkäufe im Umfang von etwa 17 Prozent des Market-on-Close-Volumens und hat damit signifikanten, momentum-erzeugenden Market Impact.
 - Das Rebalancing gehebelter ETFs nahe dem Schluss erzeugt Momentum im Marktwert des Portfolios und in den Basiswerten.
 - Momentum Ignition legt eine große Buy-Limit-Order auf den Best Bid, um Kaufdruck vorzutäuschen und andere zum Kauf am Ask zu bewegen.
+- Zum Slippage gehört neben dem Bid-Ask-Spread der Betrag, um den die Order des Anlegers den Marktpreis schiebt, nach oben beim Kauf und nach unten beim Verkauf.
 
 ## Funktionsweise
 

@@ -28,6 +28,27 @@ aktualisiert: 2026-10-30
 - Die Modelle gedeihen an Black Swans und an hoher Kurtosis, und die meisten Futures und Währungen erlauben damit Streuung über Assetklassen und Länder.
 - Zusammen mit Mean-Reversion-Strategien entstehen höhere Sharpe Ratios und kleinere Drawdowns als mit jedem Typ allein.
 - Profitable News-Sentiment-Strategien zeigen die langsame Nachrichtendiffusion als Ursache des Aktienmomentums, und die Ansteckung erzwungener Fondsverkäufe und -käufe trägt ebenfalls dazu bei.
+- Die Kreuzung zweier gleitender Durchschnitte ist eine Formalisierung der Trendfolge.
+- Zur breiteren Kategorie gehören auch Kanalausbrüche und Bänder um gleitende Durchschnitte.
+- Trendfolge ist eine Kategorie neben Gegentrend- oder Mean-Reversion-Regeln, Extremwertregeln, Divergenzregeln und Diffusionsregeln.
+- Teil Zwei untersucht drei Themen: Trends, Extremwerte und Übergänge sowie Divergenz; jedes Thema wird mit einer in Kapitel 8 definierten Regelform umgesetzt.
+- Bei Futures-Handelsfonds mit objektiven Trendfolgemethoden scheint die schwächere Regelleistung an Änderungen der Marktvolatilität zu liegen, die nicht mit der Nutzung technischer Systeme zusammenhängen.
+- Die Profitabilität technischer Trendfolgesysteme in Rohstoff-Futures lässt sich als Risikoprämie dafür erklären, dass sie kommerziellen Hedgern Risiko abnehmen.
+- Die ökonomische Theorie sagt voraus, dass Futures-Märkte genug profitable Trends zeigen sollten, damit Trendfolger bereit sind, die Preisrisiken zu tragen, die Hedger abgeben wollen.
+- Nach der EMH ziehen die Preise nicht allmählich von einem rationalen Niveau zum nächsten, sodass ein Trendanalyst aufspringen könnte; sie springen fast sofort und zeichnen eine Stufenfunktion.
+- Die risikoadjustierten Renditen des MLM-Index legen nahe, dass die Rohstoff-Futures-Märkte systematische Preisbewegungen enthalten, die mit relativ einfachen Methoden der technischen Analyse ausnutzbar sind.
+- Die Sharpe Ratio des Trendfolgers ist etwas besser als die der anderen Anlageklassen-Benchmarks. Der Index ist Evidenz, dass die Futures-Märkte eine Entschädigung in Form systematischer Preisbewegungen bieten.
+- Trendfolge ist am wirksamsten in Zeiten, in denen positives Feedback dominiert, weil sie von großräumigen Preisbewegungen abhängt.
+- Die Futures-Märkte brauchen Spekulanten als Trendfolger: im Aufwärtstrend, um den überschießenden Verkauf der Commercial Hedger aufzunehmen, im Abwärtstrend, um deren überschießenden Kauf durch Leerverkäufe zu bedienen. Die unsichtbare Hand erzeugt die Trends als Entschädigung.
+- Die Kompensation der Rohstoff- und Währungs-Hedge-Prämie sind profitable Trends, die mit relativ einfachen Trendfolge-Strategien erfasst werden.
+- Ist diese Risikotransfer-Prämie gültig, sollte Trendfolge in Aktien weniger lohnend sein, weil dort kein Risikotransfer geleistet wird. Kestner vergleicht dazu fünf Systeme vom 1. Januar 1990 bis zum 31. Dezember 2001, 29 Rohstoffe in 8 Sektoren gegen 31 Large Caps in 9 Branchen plus 3 Indizes.
+- Die über fünf Trendfolge-Systeme gemittelte Sharpe Ratio beträgt 0,604 in Futures gegen 0,046 in Aktien.
+- Der Vergleich von Lars Kestner umfasst den 1. Januar 1990 bis zum 31. Dezember 2001. Die Futures sind 29 Rohstoffe in 8 Sektoren, die Aktien 31 Large Caps in 9 Branchen plus 3 Aktienindizes.
+- Die Ergebnisse stützen die Vorstellung, dass Futures-Trendfolger eine Risikoprämie verdienen, die Trendfolgern in Aktien nicht zur Verfügung steht.
+- Der MLM-Index liefert einige Evidenz, dass die Futures-Märkte eine Entschädigung in Form systematischer Preisbewegungen bieten. Ein Trendfolger in Aktien erbringt keine Risikotransfer-Leistung, deshalb sollte Trendfolge in Aktien weniger lohnend sein, wenn die Risikotransfer-Prämie die gültige Erklärung ist.
+- Der n-Perioden-Kanalausbruch identifiziert Trends und hat sich trotz extremer Einfachheit als so wirksam erwiesen wie komplexere Trendfolge-Methoden.
+- Die Fallstudie testet für diesen Operator 11 Rückschauen: 3, 5, 8, 12, 18, 27, 41, 61, 91, 137 und 205 Tage. Größere Rückschauen identifizieren größere Trends und machen den Kanal breiter und unempfindlicher.
+- Echte Trends sind Strähnen, die länger dauern als die Strähnen in Random Walks. In echt trendenden Prozessen enthalten frühere Beobachtungen nützliche Prognoseinformation.
 
 ## Funktionsweise
 
@@ -44,9 +65,16 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Kointegriert oder korreliert ein ETF oder ein anderer Future mit Spotpreis oder Spot-Rendite eines Rohstoffs, wird dieses Instrument bei Backwardation geshortet und bei Contango gekauft, um die Rollrendite des Rohstoff-Futures zu extrahieren.
+- Die fünf getesteten Trendfolge-Systeme waren Channel-Breakout, das Kreuz zweier gleitender Durchschnitte, zwei Fassungen von Momentum und MACD gegen seine Signallinie.
+- Die acht getesteten Marktsektoren waren Devisen, Zinsen, Aktienindex, Metalle, Energie, Getreide, Fleisch und Softs.
+- Als Branchensektoren nennt der Text Energie, Grundstoffe, zyklischen Konsum, Basiskonsum, Gesundheit, Finanzwerte und Informationstechnologie sowie Telekom, und als drei Aktienindizes den S&P 500, den NASDAQ 100 und den Russell 2000.
 
 ## Regeln und Kriterien
 
+- Der Mt.-Lucas-Management-Index ist die historische Aufzeichnung der Renditen einer extrem einfachen Trendfolge-Formel auf 25 Rohstoffmärkten, monatlich zurückgerechnet bis in die 1960er Jahre, ohne komplexes Prognosemodell.
+- Am Monatsende wird der Nearby-Future jedes Marktes mit seinem 12-Monats-Durchschnitt verglichen. Liegt der Preis darüber, wird für den nächsten Monat long gehalten, liegt er darunter, short.
+- Die meisten Trendfolge-Systeme erzeugen in 50 bis 65 Prozent der Fälle unprofitable Signale. Das geschieht, wenn die Märkte trendlos sind, und das ist die Mehrheit der Zeit.
+- In Drawdowns verlieren erfolgreiche Trendfolger nicht ungewöhnlich bis zu 30 Prozent ihres Handelskapitals. Großräumige Trends bieten eine Gewinngelegenheit, keine Garantie, und sie verlangt ausreichende Kapitalisierung und richtiges Hebelmanagement.
 
 ## Risiken und Grenzen
 
@@ -66,6 +94,8 @@ aktualisiert: 2026-10-30
 - Ein Mean-Reversion-Filter ergänzt IBX, KT, SXF, US, CD, NG und W und verbessert die schon enthaltenen Kontrakte.
 - Der DTI hat nach Dever von Januar 1988 bis Dezember 2010 eine Sharpe Ratio von 1,3 und einen maximalen Drawdown von minus 16,6 Prozent, gegen 0,61 und minus 50,96 Prozent beim S&P 500, läuft seit 2008 schlecht und steht seit dem 5. Dezember 2008 mit minus 25,9 Prozent im Drawdown.
 - RYMFX und WDTI bilden den DTI ab.
+- Nach Kaufman zeigte eine Studie von Dunn & Hargitt 1970, dass ein Channel-Breakout über vier Wochen, Donchians Vier-Wochen-Regel, das beste von mehreren populären Systemen war, getestet auf 16 Jahren Daten von sieben Rohstoffmärkten.
+- Im Vergleich von Kaufman an Eurodollars für 1985 bis 1994 hatte Channel-Breakout die höchste risikobereinigte Performance gegenüber exponentieller Glättung, der Steigung der linearen Regression, Swing-Breakout und Point-and-Figure.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -85,3 +115,5 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen
+
+- Für alternative Methoden der Trendanalyse und die daraus abgeleiteten Regeln verweist der Text auf die Kapitel 5 bis 8 bei Kaufman.

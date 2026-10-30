@@ -21,6 +21,7 @@ aktualisiert: 2026-10-30
 - Die Sharpe Ratio einer Handelsregel ist der erwartete Gewinn dieser Regel geteilt durch die Standardabweichung des Gewinns.
 - Sind die Überschussrenditen über den risikofreien Satz unabhängig, identisch verteilt und gaußsch, ist die Sharpe Ratio ihr Mittelwert geteilt durch ihre Standardabweichung.
 - Die Sharpe Ratio einer Handelstrajektorie ist die über die Horizonte summierte erwartete Überschussrendite nach Transaktionskosten, geteilt durch die Wurzel der summierten quadratischen Formen ω′h Vh ωh.
+- Die Sharpe Ratio ist die annualisierte durchschnittliche Rendite über dem risikofreien Satz, zum Beispiel 90-Tage-Schatzwechseln, geteilt durch die Standardabweichung der Renditen auf annualisierter Basis.
 
 ## Kernaussagen
 
@@ -60,6 +61,20 @@ aktualisiert: 2026-10-30
 - Weniger unabhängige Handelssignale führen zu einer niedrigeren Sharpe Ratio, und tägliches Rebalancing macht lange Momentum-Signale nicht unabhängiger.
 - Profitable Momentum-Strategien haben tendenziell niedrigere Sharpe Ratios als Mean-Reversal-Strategien.
 - Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
+- Die Sharpe Ratio ist ein mögliches Performancemaß neben dem Profit Factor und der mittleren Rendite geteilt durch den Ulcer Index. Ihre Stichprobenverteilung unterscheidet sich von der Stichprobenverteilung des Mittelwerts.
+- Die Sharpe Ratio ist eine Verhältniszahl und kann einen lang gezogenen rechten Schwanz haben. Die Verfahren dieses Buches für die Stichprobenverteilung des Mittelwerts können dafür nur begrenzt taugen.
+- Der Logarithmus des Verhältnisses verkürzt den rechten Schwanz und mildert diese Grenze.
+- Unter den Bedingungen der Regelbewertung tendiert die Stichprobenverteilung des Mittelwerts zur Normalform. Andere Stichprobenstatistiken wie Verhältnisse können ausgeprägt nichtnormal sein.
+- Die risikoadjustierte Überschussrendite oder Sharpe Ratio des MLM-Index und der anderen Anlageklassen ist in Abbildung 7.14 gezeigt.
+- Der Trendfolger verdient eine Risikoprämie, die etwas besser ist als die der Benchmarks der anderen Anlageklassen.
+- Lars Kestner vergleicht die Performance von Trendfolge-Systemen für ein Futures-Portfolio und ein Aktienportfolio. Die Futures sind 29 Rohstoffe in 8 verschiedenen Sektoren, die Aktien 31 Large Caps in 9 Branchen plus 3 Aktienindizes.
+- Die risikoadjustierte Performance, die Sharpe Ratio, wird für 5 verschiedene Trendfolge-Systeme über den Zeitraum vom 1. Januar 1990 bis zum 31. Dezember 2001 berechnet.
+- Der Vergleich prüft die These, Futures-Trendfolger verdienten eine Risikoprämie, die Trendfolgern in Aktien nicht offensteht, weil diese keinen Risikotransfer leisten.
+- Die über die fünf Trendfolge-Systeme gemittelte Sharpe Ratio in Futures betrug 0,604 gegen 0,046 in Aktien.
+- Die Futures umfassen 29 Rohstoffe in 8 verschiedenen Sektoren. Die Aktien sind 31 Large-Cap-Aktien in 9 verschiedenen Branchen plus 3 Aktienindizes.
+- Abbildung 7.15 zeigt die risikoadjustierten Renditen der Trendfolge in Futures gegen Aktien.
+- Diese Ergebnisse stützen die Vorstellung, dass Futures-Trendfolger eine Risikoprämie verdienen, die Trendfolgern in Aktien nicht zur Verfügung steht.
+- Der MLM-Index liefert einige Evidenz, dass die Futures-Märkte eine Entschädigung in Form systematischer Preisbewegungen bieten. Wäre eine Risikotransfer-Prämie die gültige Erklärung, sollte Trendfolge in Aktien nicht so lohnend sein wie an den Rohstoff-Futures, weil ein Aktien-Trendfolger keine Risikotransfer-Leistung erbringt.
 
 ## Funktionsweise
 
@@ -119,6 +134,8 @@ aktualisiert: 2026-10-30
 - Quantenrechner können durch lineare Superposition viele Lösungen zugleich bewerten.
 - Dieses Kapitel legt die Grundlage für die Quantenlösung der optimalen Handelstrajektorie bei Rosenberg et al. (2016).
 - Rosenberg et al. (2016) haben das Problem der optimalen Handelstrajektorie mit einem Quantum Annealer gelöst.
+- Die Standardabweichung, das Risikomaß der Sharpe Ratio, berücksichtigt die Abfolge von Gewinn- und Verlustperioden nicht.
+- Der Ulcer Index ist ein alternatives und möglicherweise überlegenes Risikomaß, das die Größe der Equity-Rücksetzer betrachtet, die von der Sharpe Ratio nicht direkt berücksichtigt werden.
 
 ## Beispiele
 

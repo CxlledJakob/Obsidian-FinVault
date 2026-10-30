@@ -45,6 +45,11 @@ aktualisiert: 2026-10-30
 - Die Transaktionskosten von Forex sind stark venue-abhängig, weil die Bid-Ask-Spreads desselben Währungspaars zwischen den Plätzen erheblich variieren, und sie müssen im Backtest berücksichtigt werden.
 - Hard to borrow kann beim Leerverkauf heißen, dass der Leerverkäufer dem Aktienverleiher Zinsen zahlt, statt wie im Normalfall Zinsen zu erhalten.
 - Die Dezimalisierung der US-Aktienpreise verengte die Bid-Ask-Spreads drastisch, sodass Pair-Trader, die wie Market Maker agieren, auch geringere Market-Making-Gewinne erzielen (Serge, 2008).
+- Handelskosten im Regeltest umfassen Brokerprovisionen und Slippage.
+- Slippage kommt vom Bid-Ask-Spread und davon, dass die Order den Preis beim Kauf nach oben und beim Verkauf nach unten schiebt.
+- Sollen Regeln als eigenständige Strategien verglichen werden, sind die Kosten anzusetzen, weil häufige Umkehrsignale höhere Kosten verursachen als seltene Signale.
+- Dient der Test nur der Suche nach prognosestarken Signalen, können Kosten den Wert einer häufig umkehrenden Regel verdecken.
+- In den Studien dieses Buches wurden keine Handelskosten angesetzt, weil das Ziel Regeln mit Prognosekraft waren und nicht Regeln für den eigenständigen Handel.
 
 ## Funktionsweise
 

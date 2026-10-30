@@ -36,6 +36,11 @@ aktualisiert: 2026-10-30
 - Ein Hebel mit maximalem Drawdown von minus 100 Prozent ist nicht optimal, weil die Wachstumsrate dann ebenfalls minus 100 Prozent ist.
 - Optimaler Hebel heißt, dass das Eigenkapital historisch nie null erreicht; ein kleinerer erlaubter Maximal-Drawdown ist eine zusätzliche Nebenbedingung.
 - Der Hebel soll konstant bleiben, mit oder ohne diese Drawdown-Nebenbedingung.
+- Falscher Hebeleinsatz kann beeinträchtigen, dass Arbitrage die Märkte zur Effizienz treibt. Selbst wer über- und unterbewertete Papiere zutreffend erkennt, kann durch zu viel Hebel ausgelöscht werden.
+- Für günstige Wetten, also Spekulationen mit positiver Erwartung, gibt es einen optimalen Hebel. Wird er überschritten, steigt die Ruinwahrscheinlichkeit trotz der positiven Erwartung.
+- Im Münzbeispiel ist der optimale Einsatzanteil 0,25. Ein Arbitrageur mit guter Information und zu viel Hebel entspricht einem höheren Anteil; bei 0,58 ist der Verlust des gesamten Kapitals wahrscheinlich, trotz günstiger Erwartung.
+- Long Term Capital Management hatte die erkannten Fehlbewertungen im Herbst 1998 letztlich auf der richtigen Seite, doch der Überhebel nahm dem Fonds die Ausdauer, die Positionen durch eine kurze Phase noch größerer Fehlbewertung zu halten.
+- Der Kollaps des Fonds hätte beinahe den gesamten Finanzmarkt mitgerissen.
 
 ## Funktionsweise
 

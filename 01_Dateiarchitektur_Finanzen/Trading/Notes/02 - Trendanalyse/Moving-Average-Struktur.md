@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendmodelle"
@@ -10,19 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Moving-Average-Struktur
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Kreuzung zweier gleitender Durchschnitte wird durch zwei Parameter bestimmt, die Rückblickfenster des kurzen und des langen Durchschnitts.
+- Ein Kaufsignal entsteht, wenn der kurze Durchschnitt den längeren nach oben kreuzt, ein Verkaufssignal, wenn er ihn nach unten kreuzt.
+- Die größte Zahl solcher Regeln ist das Produkt aus der Zahl der geprüften Kurzfristwerte und der Zahl der geprüften Langfristwerte; alle Kombinationen zu prüfen heißt erschöpfende Suche oder rohe Gewalt.
+- Gleitende-Durchschnitts-Bänder sind neben Kanalausbrüchen eine weitere Form in der Kategorie der Trendfolgeregeln.
+- Wird eine Crossover-Regel aus zwei gleitenden Durchschnitten optimiert, ist jede getestete Regel dieselbe außer den Parameterwerten, also der Zahl der Tage für den kurzfristigen und den langfristigen Durchschnitt.
+- Die Regel mit 26 und 55 Tagen erzeugt Renditen, die mit der Regel mit 27 und 55 Tagen hoch korreliert sind.
 
 ## Funktionsweise
 
@@ -41,6 +45,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Ein Beispiel hält den S&P 500 long, wenn das Verhältnis aus Schlusskurs des Dow-Jones-Transportation-Average und Schlusskurs des S&P 500 über seinem 50-Tage-Durchschnitt liegt, und sonst short.
 
 ## Unterschiedliche Quellenpositionen
 

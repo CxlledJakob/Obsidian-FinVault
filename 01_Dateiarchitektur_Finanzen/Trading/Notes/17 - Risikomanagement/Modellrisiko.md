@@ -30,6 +30,10 @@ aktualisiert: 2026-10-30
 - Live-Abweichungen vom Backtest entstehen oft durch einen Regime Shift der Marktstruktur infolge von Regulierung oder Makroökonomie, nicht durch Backtest-Fallstricke.
 - Auch bei einer algorithmischen Strategie bleiben Entscheidungen nötig, ob die Modelle noch gültig sind.
 - Wissenschaft kommt eigentlich nur mit stationären Statistiken zurecht, während die Verteilung der Preise nicht über die Zeit unverändert bleibt.
+- Der traditionelle Ansatz nimmt an, die Stichprobenverteilung sei normal und damit glockenförmig. Trifft das nicht zu, werden die Schlüsse ungenau. Deshalb schätzt der Autor die Stichprobenverteilung des Mittelwerts mit einer Computersimulation.
+- Je zahlreicher die Annahmen, Bedingungen und Nebenbedingungen einer Erklärung sind, desto eher passt sie eine Menge von Beobachtungen zufällig. Einfachere Erklärungen treffen die wahren Muster eher.
+- Bei einer Kleinste-Quadrate-Regression ist ein perfekter Fit garantiert, wenn die Funktion so viele Freiheitsgrade wie Datenpunkte hat. Eine Kurve mit dieser Flexibilität beschreibt dann höchstwahrscheinlich neben der eigentlichen Beziehung die Zufallsschwankungen der Daten.
+- Unter sonst gleichen Bedingungen ist die einfachere Erklärung eher richtig. Gibt es genug Daten und stammen sie aus einem komplexen Prozess, kann ein aufwendiges Modell sehr wohl gerechtfertigt sein.
 
 ## Funktionsweise
 
@@ -60,6 +64,7 @@ aktualisiert: 2026-10-30
 - Wissenschaft kann eigentlich nur mit stationären Statistiken umgehen.
 - Unknown Unknowns lassen sich nicht dadurch vermeiden, dass die Modelle vorher abgeschaltet werden.
 - Urteil bleibt nötig, macht quantitative Regeln aber nicht nutzlos; Kahneman zufolge sind Experten Algorithmen überall dort unterlegen, wo erhebliche Unsicherheit besteht, und der Finanzmarkt ist hoffentlich keine Ausnahme.
+- Die Wissenschaft hat ein berechtigtes Interesse, den Bestand des Wissens vor Verfälschungen und abwegigen Überzeugungen zu schützen. Die Beweislast für neues Wissen liegt bei dem, der es behauptet, analog zur Unschuldsvermutung, bei der der Staat die Schuld über jeden vernünftigen Zweifel hinaus beweisen muss.
 
 ## Beispiele
 

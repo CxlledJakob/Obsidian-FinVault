@@ -54,6 +54,16 @@ aktualisiert: 2026-10-30
 - Ein Bruch über den Widerstand der Eröffnung auf dem Weg nach oben ist ein zusätzlicher Vertrauenspunkt, auch wenn es nur ein zweitrangiger Widerstand ist.
 - Ein Aufwärtstrend auf durchschnittlichem Volumen ohne Extreme läuft weiter, bis auf dieser Zeitebene eine Selling Climax erscheint.
 - Steigende Tiefs bei Tests derselben Decke zeigen einen bullischen Markt.
+- Abbildung 2.24 zeigt in einer kleinen Stichprobe eines Zufallsprozesses einen scheinbaren Aufwärtstrend, obwohl ein solcher Chart konstruktionsbedingt keine echten Trends hat.
+- Nach den Daten der CFTC übersteigt in steigenden Preistrends der Verkauf der Commercial Hedger ihren Kauf; die Hedger sind dann netto Verkäufer.
+- Im steigenden Trend braucht es zusätzliche Käufer, um den überschießenden Hedge-Verkauf aufzunehmen.
+- Preistrend-Spekulanten sind bereit, in Aufwärtstrends zu kaufen, um den ungedeckten Bedarf der kommerziellen Hedge-Verkäufer zu erfüllen.
+- Dominiert Nachahmung, springen Anleger auf eine anfängliche Preisbewegung auf und kaufen nach den ersten Zeichen der Stärke, sodass eine kleine Bewegung zu einem großräumigen Aufwärtstrend verstärkt wird.
+- Positives Feedback kann einen Teufelskreis steigender Preise auslösen, der die Kurse weit über rationale Niveaus trägt, selbst wenn die auslösende Bewegung gerechtfertigt war.
+- Steigt der Weizenpreis, steigt nach dem Gesetz von Angebot und Nachfrage das Angebot und sinkt die Nachfrage.
+- Ist die Eingangsreihe nach dem Channel-Breakout-Operator im Aufwärtstrend, ist die Ausgabe der Trendregel +1.
+- Eine traditionelle Trendregel geht long im S&P 500, wenn der Channel-Breakout-Operator einen Aufwärtstrend feststellt.
+- Eine inverse Trendregel geht short im S&P 500, wenn die analysierte Reihe als Aufwärtstrend bestimmt wird.
 
 ## Funktionsweise
 
@@ -129,6 +139,8 @@ aktualisiert: 2026-10-30
 - Auf dem frühen Anstieg wollen die Insider keinen großen Volumenkauf sehen, weil der größte Gewinn erst am Retail-Ziel der Distribution liegt.
 - Ein Shooting Star mit unterdurchschnittlichem Volumen im Aufwärtstrend signalisiert eine mögliche Pause und einen kurzfristigen Rücksetzer, keine sofortige Umkehr.
 - Ein Anstieg, der gerade erst mit erfolgreichem Test aus der Akkumulation ausgebrochen ist, dreht danach kaum sofort wieder nach unten.
+- Ein von Chang und Osler gültig gezähltes Schulter-Kopf-Schulter-Top verlangt, dass das Instrument vor der Formation in einem Aufwärtstrend ist.
+- Deshalb muss die linke Schulter über dem vorherigen Hoch liegen und das linke Tal über dem vorherigen Tief.
 
 ## Risiken und Grenzen
 

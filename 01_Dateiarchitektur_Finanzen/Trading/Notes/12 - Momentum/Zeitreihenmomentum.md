@@ -42,6 +42,13 @@ aktualisiert: 2026-10-30
 - Die Persistenz der Roll Return erzeugt intraday kein relevantes Zeitreihenmomentum, weil Größe und Volatilität zu klein sind.
 - Eine zusätzliche kurzfristige Ursache ist das Auslösen von Stops.
 - Orderflow sagt die kurzfristige Preisbewegung in derselben Richtung voraus und ist damit eine Quelle kurzfristigen Zeitreihenmomentums.
+- Momentum-Trader in der Hypothese von Hong und Stein beschränken ihre Aufmerksamkeit auf vergangene Preisänderungen und leiten daraus ihre private Prognose künftiger Trends ab.
+- Trendfolge unterstellt, dass neu entstehende Preistrends anzeigen, wichtige neue Fundamentalinformation beginne, sich im Markt zu verbreiten. Die Wette lautet, die Verbreitung sei unvollständig und der Preistrend setze sich nach dem anfänglichen Momentum-Signal fort.
+- Damit Momentum- oder Trendfolge-Strategien funktionieren, müssen sich die Preise allmählich genug ändern, dass ein auf einer anfänglichen Preisänderung beruhendes Signal weitere Preisänderung vorhersagt.
+- Die Handlungen späterer Wellen von Trendfolgern halten die Preise in Bewegung und erzeugen positives Preis-Feedback.
+- Weil Momentum-Trader nicht beurteilen können, in welchem Maß die Nachricht schon diffundiert und verstanden ist, können die Preise weiter laufen, als die Fundamentaldaten rechtfertigen. Ist die Nachricht vollständig diffundiert und haben alle gehandelt, ist keine weitere Bewegung fundamental gerechtfertigt.
+- Manche Trends entstehen, weil ein Preisanstieg weiteres Kaufen und Preisschwäche weiteres Verkaufen anregt. Diese Anleger suchen Signale in den jüngsten Preisänderungen statt in Nachrichten.
+- Andere Fälle von Preismomentum sind das Aufholen der Preise nach einer anfänglichen Unterreaktion auf Nachrichten, wenn die Preise die Fundamentaldaten erst allmählich einholen.
 
 ## Funktionsweise
 

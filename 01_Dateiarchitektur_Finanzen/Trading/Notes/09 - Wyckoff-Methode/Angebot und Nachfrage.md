@@ -43,6 +43,13 @@ aktualisiert: 2026-10-30
 - Der Angebotstest nach der Akkumulation prüft, ob der Restverkauf in den unmittelbar höheren Preisen absorbiert ist.
 - Der Nachfragetest am Ende der Distribution prüft, ob in Zonen mit kurz zuvor hohem Kaufvolumen noch Kaufdruck übrig ist.
 - Niedriges Volumen und ein Schluss nahe der Eröffnung zeigen, dass die gesuchte Seite fehlt.
+- Die technische Analyse behauptet, Muster auf echten Marktscharts entstünden aus Änderungen von Angebot und Nachfrage oder aus Schwankungen der Marktstimmung oder aus beidem und müssten deshalb anders aussehen als die zufälligen Bahnen eines Random-Walk-Charts.
+- Nach dem Gesetz von Angebot und Nachfrage steigt beim steigenden Weizenpreis das Angebot und sinkt die Nachfrage; beim fallenden Preis sinkt das Angebot und steigt die Nachfrage.
+- Die Daten der CFTC über Kauf und Verkauf der Commercial Hedger bestätigen, dass genau das an den Futures-Märkten geschieht.
+- Hedger kontrahieren auch miteinander, etwa der Weizenfarmer, der verkaufen muss, und die Bäckerei, die kaufen muss. Oft sind ihre Bedürfnisse aber unausgeglichen.
+- Manchmal haben die Farmer mehr Weizen zu verkaufen, als Bäckereien und andere kommerzielle Nutzer kaufen müssen, manchmal ist es umgekehrt. Die Lücke zwischen Angebot und Nachfrage braucht eine dritte Gruppe, die zu kaufen oder zu verkaufen bereit ist.
+- An den Futures-Märkten muss die verkaufte Menge der gekauften Menge gleichen, so wie bei Immobilientransaktionen die Zahl der verkauften Häuser der Zahl der gekauften gleichen muss.
+- In steigenden Trends übersteigt der Hedge-Verkauf den Hedge-Kauf, deshalb werden zusätzliche Käufer gebraucht. In fallenden Trends übersteigt der Hedge-Kauf den Hedge-Verkauf, deshalb werden zusätzliche Verkäufer gebraucht.
 
 ## Funktionsweise
 

@@ -24,6 +24,8 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Der Durchschnittsverlust gehört zu den Performance-Kennzahlen, die Dollarbeträge und Renditen ohne Risikoanpassung ausweisen.
+- In der Formel der erwarteten Rendite wird derselbe Betrag von 3,97 Prozent, die mittlere absolute Monatsrendite des S&P 500, als durchschnittlicher Verlust abgezogen: ER gleich ppm mal 3,97 minus (1 minus ppm) mal 3,97.
+- Bei einer Gewinnwahrscheinlichkeit von null beträgt die erwartete Rendite −3,97 Prozent pro Monat oder −47,6 Prozent pro Jahr.
 
 ## Funktionsweise
 

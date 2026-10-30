@@ -47,6 +47,15 @@ aktualisiert: 2026-10-30
 - Entwickelt sich ein bärischer Trend und fällt das Volumen dabei weg, trägt der Abverkauf nicht weit.
 - Beim Volumen in einem steigenden oder fallenden Trend ist Spielraum nötig. Eine kleine Welle tiefer wird von einer Welle höheren Volumens ausgeglichen, ohne dass jede Kerze ein neues Volumenhoch setzen muss.
 - Eine Erholung aus einem Preiswasserfall ohne erkennbares Kauf- oder Stopping-Volumen bleibt verdächtig, auch auf einem schnellen Intraday-Chart.
+- Abbildung 2.24 zeigt in einer kleinen Stichprobe eines Zufallsprozesses einen scheinbaren Abwärtstrend, obwohl der Prozess keine echten Trends enthält.
+- Nach den Daten der CFTC übersteigt in fallenden Preistrends der Kauf der Commercial Hedger ihren Verkauf; die Hedger sind dann netto Käufer.
+- In fallenden Trends schafft der überschießende kommerzielle Hedge-Kauf Bedarf an zusätzlichen Verkäufern.
+- Preistrend-Spekulanten verkaufen in fallenden Preistrends leer, um den ungedeckten Bedarf der kommerziellen Hedge-Käufer zu decken.
+- Positives Feedback kann einen Teufelskreis fallender Preise auslösen, der die Kurse weit unter rationale Niveaus treibt, selbst wenn die auslösende Bewegung gerechtfertigt war.
+- Fällt der Weizenpreis, sinkt nach dem Gesetz von Angebot und Nachfrage das Angebot und steigt die Nachfrage.
+- Wird die analysierte Reihe vom Channel-Breakout-Operator als Abwärtstrend bestimmt, ist die Ausgabe der Trendregel −1.
+- Eine traditionelle Trendregel geht im S&P 500 short, also mit Ausgabewert −1, wenn die Zeitreihe nach dem Channel-Breakout-Operator im Abwärtstrend ist.
+- Inverse Trendregeln erzeugen die entgegengesetzten Signale der traditionellen Regel, die einen Abwärtstrend mit −1 codiert.
 
 ## Funktionsweise
 

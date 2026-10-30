@@ -55,6 +55,22 @@ aktualisiert: 2026-10-30
 - Eine große Umkehr auf der Wochenzeitebene braucht eine Selling Climax. Durchschnittliches Volumen ohne Extreme ist diese Umkehr nicht.
 - Ein Wechsel erscheint zuerst auf der schnellen Zeitebene und läuft dann bis in die dominante Chart durch.
 - Auch ein neuer Abwärtstrend trägt nicht weit, wenn das Volumen im Verlauf wegfällt. Danach kann schon die nächste Stauzone beginnen.
+- Der Gambler's Fallacy ist die falsche Erwartung, eine Häufung gleicher Ergebnisse dürfe nicht vorkommen und eine Umkehr sei fällig, sobald sie auftritt.
+- Das Beispiel ist eine Person, die nach einer Serie von Kopf Zahl für wahrscheinlicher hält.
+- Hält der Beobachter den Prozess für zufällig, bestärkt ihn das Auftauchen von Zahl nach zum Beispiel vier Kopf in dem falschen Glauben, die Umkehr sei fällig gewesen, obwohl das in einem Zufallsprozess normal wäre.
+- Die Erkennung einer Trendumkehr durch den Channel-Breakout-Operator hinkt hinterher: zwischen der Umkehr der Eingangsreihe und der Entdeckung durch den Operator liegt ein Lag.
+- Alle Trendindikatoren tragen notwendig einen solchen Lag, eine Verzögerung zwischen der Umkehr der Reihe und dem Zeitpunkt, zu dem der Operator sie feststellen kann.
+- Der Lag des Channel-Breakout-Operators lässt sich durch einen kürzeren Look-back senken, um den Preis einer größeren Zahl falscher Signale.
+- Alle Trendindikatoren versuchen, einen vernünftigen Ausgleich zwischen Genauigkeit des Signals und seiner Rechtzeitigkeit zu finden.
+- Die Regelkategorie Extremwerte und Übergänge beruht darauf, dass eine Reihe Information liefert, wenn sie ein extremes Hoch oder Tief annimmt oder den Übergang zwischen den Extremen macht.
+- Vier Ereignisse beschreiben diese Übergänge auf der kanalnormierten Reihe: untere Schwelle abwärts, untere Schwelle aufwärts, obere Schwelle aufwärts und obere Schwelle abwärts.
+- Typisch für eine Divergenz ist, dass beide Reihen zuvor gemeinsam trenden und dann eine Reihe ihren bisherigen Trend umkehrt, während die Begleiterin ihn fortsetzt.
+- Nach der Divergenzanalyse ist das ein mögliches Signal, dass der bisher gemeinsame Trend schwächer geworden ist und sich umkehren könnte.
+- Eine abgeschlossene Umkehr wird erst unterstellt, wenn beide Reihen überzeugend gedreht haben und wieder in dieselbe Richtung laufen.
+- Nach der Dow-Theorie ist das Auseinanderlaufen von Industrie- und Transportindex ein vorläufiger Hinweis, dass der Trend schwächer wird und umkehren kann.
+- Werden die Trends inkohärent oder außer Phase, steht die Zukunft des einmal gemeinsamen Trends infrage.
+- Einer der beiden Ausgänge einer Divergenz ist, dass die zuvor ungestörte Reihe eine Umkehr erlebt und sich der abweichenden Begleiterin anschließt.
+- Hussman hält Divergenzsignale für am aussagekräftigsten, wenn viele Reihen untersucht werden und eine erhebliche Zahl zu divergieren beginnt.
 
 ## Funktionsweise
 
@@ -118,6 +134,9 @@ aktualisiert: 2026-10-30
 - Die Stauzone ist die Vorbereitung der Wende oder der Fortsetzung. Der Markt baut Kraft auf, um in die eine oder andere Richtung auszubrechen.
 - Niedriges Volumen auf diesem Bruch ist keine Wende, sondern eine Falle.
 - Trendlinien allein zeigen eher das Ende als den Anfang. Der Anfang liegt im Climax und im bestätigten Bruch der Stauzone.
+- Das Schulter-Kopf-Schulter-Top wird nur gewertet, wenn ihm ein Aufwärtstrend vorausgeht, mit der linken Schulter über dem vorherigen Hoch und dem linken Tal über dem vorherigen Tief.
+- Das Verkaufssignal nach dieser Formation ist die Penetration der Nackenlinie, und sie muss innerhalb des zeitlichen Abstands der beiden Schultern erfolgen.
+- Ein Short-Signal an dieser Penetration ist erst zulässig, wenn die rechte Schulter objektiv erkannt ist.
 
 ## Risiken und Grenzen
 

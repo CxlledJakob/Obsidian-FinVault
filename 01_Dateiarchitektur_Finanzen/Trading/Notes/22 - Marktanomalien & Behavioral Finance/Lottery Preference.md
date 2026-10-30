@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/22 - Marktanomalien & Behavioral Finance/22 - Marktanomalien & Behavioral Finance|22 - Marktanomalien & Behavioral Finance]]"
 weitere_hauptthemen: []
 unterthema: "Verhaltensphänomene"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Lottery Preference
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Prospect Theory von Kahneman und Tversky aus dem Jahr 1979 erklärt, warum Anleger Spekulationen mit geringer Wahrscheinlichkeit und hohem Gewinn, also Longshots, überbewerten.
 
 ## Funktionsweise
 

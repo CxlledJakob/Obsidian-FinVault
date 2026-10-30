@@ -22,6 +22,12 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Typischerweise bewegen sich Zinssätze und Aktienkursniveaus invers.
+- Der Kehrwert des Zinssatzes macht aus Zinsen preisähnliche Reihen, die im Allgemeinen positiv mit Aktienkursen korreliert sind.
+- Mit dem Skalierungsfaktor 100 entspricht ein Zinssatz von 6,05 Prozent einem Preis von 15,38, gerechnet als 1 geteilt durch 6,05 mal 100.
+- Die Fallstudie wandte diese Transformation auf Dreimonats-T-Bills, zehnjährige Treasuries sowie Moodys AAA- und Moodys BAA-Unternehmensanleihen an.
+- Der Duration Spread wurde als Zehnjahresrendite minus Dreimonatsrendite definiert, damit ein Aufwärtstrend des Spreads voraussichtlich bullisch für den Aktienmarkt, den S&P 500, ist.
+- Der Quality Spread soll in dieselbe Richtung wie die Aktien laufen: Ein steigender Trend gilt als Signal, dass Anleger für höhere Renditen mehr Ausfallrisiko übernehmen.
 
 ## Funktionsweise
 

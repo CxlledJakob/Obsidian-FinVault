@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendmodelle"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Fractal Trend Model
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Nach dem Elliott-Wellen-Prinzip sind Markttrends fraktal: eine verschachtelte Hierarchie von Wellen, die dieselbe Form teilen und sich nur in Größe und Dauer unterscheiden.
 
 ## Kernaussagen
 

@@ -42,9 +42,31 @@ aktualisiert: 2026-10-30
 - So sorgfältig Data-Snooping im Test auch verhindert wird, es schleicht sich ein. Deshalb ist ein Walk-Forward-Test der abschließende echte Out-of-Sample-Test.
 - Dieser Walk-Forward-Test kann als Paper Trading laufen. Besser wird das Modell mit echtem Geld bei minimalem Hebel gehandelt, um zu prüfen, was selbst dem Paper Trading entgeht.
 - Die meisten Trader wären zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Wertes erzeugt.
+- Walk-Forward-Testing ist ein weiteres Schema zur Aufteilung der Daten, das speziell für den Handel an Finanzmärkten beschrieben wird, bei Pardo, De La Maza, Katz und McCormick sowie Kaufman.
+- Es benutzt ein wanderndes Datenfenster, das selbst in einen In-Sample- und einen Out-of-Sample-Abschnitt geteilt ist.
+- Wegen des dynamischen Aspekts, bei dem die Regel im Zeitverlauf mit der Marktentwicklung verändert wird, heißt der In-Sample-Abschnitt Trainingsdatensatz, weil dort die besten Parameter gelernt werden, und der Out-of-Sample-Abschnitt Testdatensatz.
+- Das Fenster aus Trainings- und Testset, das vorwärts geschoben wird, wird im Regeltest manchmal Fold genannt.
+- Für jeden Fold wird eine Out-of-Sample-Performanceschätzung berechnet; bei typischerweise vielen Folds lässt sich die Varianz der Performancestatistik bestimmen und ein Konfidenzintervall berechnen.
+- Das wandernde Fenster gibt dem Regeltest eine dynamische Anpassung, weil in jeder neuen Realisierung des Fensters eine neue Regel formuliert werden kann.
+- Das macht Walk-Forward besonders attraktiv für nichtstationäre Phänomene wie Finanzmärkte.
+- Hsu und Kuan fanden adaptive Handelsregeln, von ihnen Lernstrategien genannt, in ihrem Test von über 36.000 objektiven Regeln wirksam.
+- Im Walk-Forward dient der Trainingsabschnitt dem Data Mining, die dort beste Regel wird auf dem Testabschnitt geprüft und liefert eine unverzerrte Out-of-Sample-Schätzung, danach wird das ganze Fenster nach vorn geschoben und der Vorgang wiederholt.
+- Das Fenster wird so weit vorgeschoben, dass sich die Testabschnitte getrennter Folds nicht überlappen; die Out-of-Sample-Schätzungen sind dadurch voneinander unabhängig.
+- Michael Cooper verwendete eine Walk-forward-out-of-sample-Simulation, um Portfolios aus Long- und Short-Positionen über 1978 bis 1993 zu bilden und der Möglichkeit von Data Mining zu begegnen.
+- Die aus 300 Aktien großer Kapitalisierung gebildeten Portfolios erzielten eine annualisierte Rendite von 44,95 Prozent gegen eine Buy-and-hold-Benchmark von 17,91 Prozent.
+- Das so geprüfte Muster sind Aktien, die über die vorangegangenen zwei Wochen bei fallendem Volumen scharf gefallen sind und über die folgende Woche systematisch zu steigen neigen.
 
 ## Funktionsweise
 
+- Das Schema aus drei Segmenten, Training, Test und Validierung, lässt sich auf Walk-forward-Basis führen: nachdem die beste Regel in der ersten Datenfalte gefunden wurde, rückt das dreigeteilte Datenfenster vor und der ganze Prozess wiederholt sich in der nächsten Falte.
+- Figur 9.7 zeigt aufeinanderfolgende Falten, jede mit Trainings-, Test- und Validierungssatz, die in der Zeit voranschreiten.
+- In der inneren Schleife werden bei einer gegebenen Komplexität verschiedene Parameterwerte auf dem Trainingssatz probiert, und die beste Regel dieser Stufe wird auf dem Testsatz gemessen.
+- Die äußere Schleife sucht die optimale Komplexität, indem nacheinander Regeln höherer Komplexität, also mit einer größeren Zahl von Parametern, im Training gesucht und im Test bewertet werden.
+- Der Validierungssatz bleibt aus der Suche nach Parametern und Komplexität heraus und dient erst danach der Bewertung der Leistung der besten Regel.
+- Weil der Testsatz bei der Komplexitätssuche mehrfach benutzt wird, ist die dort erreichte Bestleistung positiv verzerrt; der Validierungssatz liefert die unverzerrte Schätzung der künftigen Leistung.
+- Bei fest vorgegebener Komplexität und reiner Suche nach optimalen Parametern genügen zwei Segmente, Training und Test; das dritte Segment wird erst nötig, wenn die Komplexität selbst optimiert wird.
+- Im menschlichen Beispiel beginnt die Suche mit 100 Tests einer Regel aus zwei gleitenden Durchschnitten, wenn jeder Durchschnitt 10 Parameterwerte hat.
+- Solange der Testsatz nur einmal benutzt wird, sind 15 Prozent annualisierte Rendite dort eine unverzerrte Schätzung; sobald weitere Komplexitätsstufen denselben Testsatz erneut besuchen, entsteht der Data-Mining-Bias, den erst der Validierungssatz korrigiert.
 
 ## Voraussetzungen
 
@@ -90,3 +112,5 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 438–457 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-024-p438-p457|S. 438–457]]
 
 ## Verwandte Themen
+
+- Gleitende Durchschnitte, wandernde Max-Min-Preiskanäle und Rate-of-Change-Indikatoren benutzen ebenfalls ein Datenfenster, das entlang der Zeitachse gleitet, und die Rechenoperationen bleiben auf die Daten im Fenster beschränkt.

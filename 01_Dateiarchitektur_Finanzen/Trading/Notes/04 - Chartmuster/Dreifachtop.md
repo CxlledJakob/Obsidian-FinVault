@@ -25,6 +25,7 @@ aktualisiert: 2026-10-30
 - Zwei Lagen stehen offen: ein Short, wenn Volume Price Analysis und mehrere Zeitebenen die Sicht bestätigen, oder ein extrem starkes Unterstützungsfundament, falls die Decke später doch bricht.
 - Das Muster erscheint auf allen Zeitebenen und Charts, in Anleihen, Rohstoffen, Aktien und Währungen.
 - Es markiert eine Stauzone und eine Widerstanddecke. Der Ausbruch danach ist Umkehr oder Fortsetzung und wird mit Volume Price Analysis und Volume at Price bestätigt.
+- Dieselben Chartmuster, denen die technische Analyse Bedeutung beimisst, erscheinen nach Roberts mit großer Regelmäßigkeit in Random Walks, darunter Dreifachtops.
 
 ## Funktionsweise
 

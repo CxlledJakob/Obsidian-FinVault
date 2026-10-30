@@ -50,6 +50,30 @@ aktualisiert: 2026-10-30
 - Stationarität heißt, dass die Varianz sublinear in der Zeit wächst und nicht, dass sie zeitunabhängig ist.
 - Auch für 0 kleiner H kleiner 0,5 steigt die Varianz mit der Zeit, nur langsamer als bei einem geometrischen Random Walk.
 - Manager, deren einziges Ziel das langfristige Nettovermögen ist, achten nicht auf Drawdowns und auf die Volatilität der Renditen.
+- Varianz, mittlere absolute Abweichung und Standardabweichung sind weit verbreitete Streuungsmaße und im klassischen statistischen Ansatz wichtig.
+- Streuungsmaße beschreiben, wie weit die Beobachtungen einer Stichprobe um ihre zentrale Tendenz liegen, und quantifizieren damit die Breite einer Häufigkeitsverteilung.
+- Zentrale Tendenz und Variation sind unabhängige Merkmale einer Häufigkeitsverteilung. Dieselbe Streuung kann mit verschiedenen Mittelwerten einhergehen, derselbe Mittelwert mit verschiedener Streuung, und beides kann zugleich verschieden sein.
+- Die Streuung der Stichprobenverteilung des Mittelwerts hängt von der Variation in den Daten der Elternpopulation ab. Je größer diese Variation, desto größer die Streuung der Stichprobenverteilung.
+- Ist die Variation in der Population null, ist auch die Variation der Stichprobenmittel null, und die Stichprobenverteilung hat keinerlei Streuung.
+- Ist die Variation zwischen den Individuen der Population groß, variieren die Stichprobenmittel stärker, und die Stichprobenverteilung wird breit.
+- Varianz, mittlere absolute Abweichung und Standardabweichung sind weit verbreitete Streuungsmaße der klassischen Statistik. Sie quantifizieren die Breite einer Häufigkeitsverteilung.
+- Die Varianz ist neben Mittelwert, Median und Standardabweichung ein gebräuchlicher Punktschätzer aus einer Stichprobe.
+- Je größer die Variabilität der täglichen Regelrenditen in der Grundgesamtheit, desto breiter ist die Stichprobenverteilung der mittleren Rendite, und je mehr Beobachtungen, desto schmaler ist sie.
+- Die Reduktion einer großen Stichprobe liefert zusammenfassende Statistiken, darunter den Stichprobenmittelwert, die Stichprobenvarianz und weitere Maße, die die gesamte Menge beschreiben.
+- Ein Faktor für die Größe des Data-Mining-Bias ist die Variation der erwarteten Renditen unter den gebacktesteten Regeln.
+- Je geringer diese Variation des wahren Verdienstes, desto größer der Bias; Regeln mit ähnlicher Vorhersagekraft erzeugen einen größeren Bias.
+- Der fünfte Faktor des Data-Mining-Bias ist die Variation der erwarteten Renditen unter den getesteten Regeln: je niedriger die Variation der wahren Güte, desto größer der Bias.
+- Haben die Regeln ähnliche Grade von Prognosekraft, ist der Data-Mining-Bias größer.
+- Abbildung 6.25 stellt niedrige Varianz, alle Regeln gleiche Güte, der hohen Varianz gegenüber, bei der eine Regel deutlich überlegen ist.
+- Bei gleicher erwarteter Rendite entstehen alle Unterschiede der beobachteten Performance nur durch Glück; unterscheiden sich die erwarteten Renditen, wird der Bias tendenziell kleiner und unter bestimmten Bedingungen sehr klein.
+- Die Zahl der Beobachtungen beeinflusst sowohl die Breite als auch die Randdicke der Stichprobenverteilung der Performancestatistik, mit der die beste Regel ausgewählt wird.
+- Je mehr Beobachtungen, desto schmaler die Stichprobenverteilung und desto kleiner der Data-Mining-Bias; je mehr Beobachtungen, desto leichter die Ränder und desto kleiner der Bias.
+- Aus den vielen Out-of-Sample-Schätzungen eines Walk-Forward mit zahlreichen Folds lässt sich die Varianz der Performancestatistik bestimmen.
+- Der Schrumpfungsgrad bei Markowitz und Xu hängt unter anderem davon ab, wie stark die Tagesrenditen jeder Regel um das große Mittel aller Regeln streuen und wie stark die mittlere Rendite jeder Regel um die mittlere Rendite aller Regeln streut.
+- Je kleiner die Variabilität der wahren Qualität, also der erwarteten Rendite, unter den getesteten Regeln, desto größer der Data-Mining-Bias; die Zusammenfassung sagt, dieser Punkt sei experimentell nicht untersucht worden.
+- Sind die Beobachtungen seriell korreliert, wie es in einer Zeitreihe vorkommen kann, sinkt die Varianz langsamer, als die Quadratwurzelregel nahelegt.
+- Diese Aussage gilt, wenn die Teststatistik der Stichprobenmittelwert ist, aber sie gilt nicht allgemein.
+- Bei normalverteilten Preisänderungen ist die Unsicherheit mit 10 Beobachtungen zehnmal so groß wie mit 1.000 Beobachtungen.
 
 ## Funktionsweise
 
@@ -72,6 +96,9 @@ aktualisiert: 2026-10-30
 
 ## Voraussetzungen
 
+- Die Quadratwurzel-Senkung der Varianz des Mittelwerts setzt unabhängige Beobachtungen voraus.
+- Der Zentrale Grenzwertsatz verlangt, dass die Varianz der Elternpopulation endlich ist, neben einem endlichen Mittelwert und unabhängigen Beobachtungen aus derselben Population.
+- Der Grundsatz, dass größere Stichproben besser sind, gilt für stationäre Prozesse. Bei höchstwahrscheinlich nichtstationären Finanzzeitreihen können größere Stichproben nicht besser sein.
 
 ## Anwendung im Trading
 
@@ -98,6 +125,7 @@ aktualisiert: 2026-10-30
 - Im EWA-EWC-Beispiel wird Ve gleich 0,001 gesetzt, und bei δ gleich 0,0001 ändert sich Q nur langsam.
 - Gehandelt wird, wenn der Prognosefehler betragsmäßig größer ist als die Wurzel dieser Prognosevarianz.
 - Strategie 1 im Kapitalbeispiel hat 26 Prozent annualisierte Volatilität bei 30 Prozent mittlerem Excess Return, Strategie 2 hat 35 Prozent Volatilität bei 60 Prozent.
+- Wägen alle Personen 150 Pfund, hat jede Stichprobe den Durchschnitt 150 Pfund, und die Stichprobenverteilung des Mittelwerts hat keine Streuung.
 
 ## Unterschiedliche Quellenpositionen
 

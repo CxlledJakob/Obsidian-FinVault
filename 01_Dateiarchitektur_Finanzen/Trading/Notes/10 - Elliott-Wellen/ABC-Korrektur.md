@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen|10 - Elliott-Wellen]]"
 weitere_hauptthemen: []
 unterthema: "Korrekturstruktur"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # ABC-Korrektur
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Elliotts Ausgangsvermutung war, dass alle Marktbewegungen demselben Grundmuster folgen: einer fünfteiligen Impulswelle, gefolgt von einer dreiteiligen Korrekturwelle, dem 5–3-Muster.
+- Diese Vermutung war zunächst nur ein Verdacht und noch keine feste Überzeugung; gerade sie machte bestätigende Fälle auffällig und trieb die Suche nach weiteren Bestätigungen an.
 
 ## Funktionsweise
 

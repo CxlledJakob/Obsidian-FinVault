@@ -20,6 +20,8 @@ aktualisiert: 2026-10-30
 
 - Look-ahead Bias heißt, Information zu nutzen, die im Zeitpunkt der simulierten Entscheidung nicht öffentlich war.
 - In diesem Kapitel heißt Look-ahead Bias, dass das Backtest-Programm die Preise von morgen benutzt, um die Handelssignale von heute zu bestimmen.
+- Look-ahead Bias, auch Leakage of Future Information genannt, liegt im historischen Test vor, wenn Information als bekannt gilt, die zum unterstellten Signalzeitpunkt nicht wirklich verfügbar war.
+- In der Kritik der Fallstudie heißt Look-ahead Bias auch Leck zukünftiger Information und liegt vor, wenn eine Regelstudie Information unterstellt, die beim Ein- oder Ausstieg der Marktposition noch nicht wirklich verfügbar ist.
 
 ## Kernaussagen
 
@@ -35,6 +37,13 @@ aktualisiert: 2026-10-30
 - Dieser Zuordnungsfehler und seine Folgen werden bei den Backtesting-Fehlern in Kapitel 11 wieder behandelt.
 - Dieselben Daten für die Parameteroptimierung, etwa die beste Hedge Ratio, und für den Backtest zu verwenden, führt Look-ahead Bias ein.
 - Kapitel 1 hat vor diesem Fehler und vor dem Weglassen der Transaktionskosten gewarnt; die Prototypen lassen ihn nur der einfacheren Darstellung wegen stehen, und eigene Umsetzungen sollen ihn entfernen.
+- Look-ahead Bias, im Text auch Informationsleck aus der Zukunft genannt, kann Backtests profitabler erscheinen lassen, als es im tatsächlichen Handel möglich wäre.
+- Ein extremes Beispiel wäre die Annahme, Zugang zum Wall Street Journal einen Tag vor seinem Erscheinen zu haben.
+- Beim Backtest des Schulter-Kopf-Schulter entsteht das Leck, wenn die Zigzag-Schwelle in Prozent größer ist als der prozentuale Abstand zwischen dem Hoch der rechten Schulter und der Nackenlinie.
+- Ein Leerverkaufssignal wegen Nackenlinienpenetration ist erst zulässig, wenn die rechte Schulter, Punkt E, erkannt wurde; der Preis kann die Nackenlinie kreuzen, bevor der Zigzag diese Schulter identifiziert.
+- Liegt die rechte Schulter nur 4 Prozent über der Nackenlinie und die Schwelle bei 10 Prozent, wäre ein Einstieg nur 4 Prozent unter der Schulter günstiger als das Warten auf einen Preis 10 Prozent unter der Schulter.
+- Es wäre nicht zulässig anzunehmen, ein Händler habe von der Nackenlinienpenetration gewusst, denn erst ein Rückgang von 10 Prozent ab der rechten Schulter identifiziert diese Schulter.
+- Chang und Osler setzten den Einstieg erst an, nachdem der Zigzag die rechte Schulter objektiv erkannt hatte; der Preis war in manchen Fällen ungünstiger, der Backtest aber frei von Look-ahead Bias.
 
 ## Funktionsweise
 
@@ -44,6 +53,8 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Die Fallstudie vermied Look-ahead Bias, indem sie Ein- und Ausstiege zum Eröffnungskurs des Tages nach einem Signal zur Positionsumkehr annahm.
+- Außerdem unterlag keine der verwendeten Datenreihen einem Meldeverzug oder Revisionen.
 
 ## Regeln und Kriterien
 
@@ -53,6 +64,17 @@ aktualisiert: 2026-10-30
 - Eine Plattform, die dasselbe Programm für Backtest und Live-Ausführung nutzt, kann Look-ahead Bias beseitigen.
 - Spezialplattformen speisen historische Marktdaten Tick für Tick oder Bar für Bar in die Trade-Engine, genau wie Live-Marktdaten. Zukunftsinformation kann dadurch nicht als Eingabe verwendet werden.
 - Das ist ein Hauptvorteil einer Spezial-Handelsplattform.
+- Die früheste zulässige Ausführung ist dann der Eröffnungskurs des folgenden Tages, bei Information mit täglicher Frequenz.
+- Alle in Teil 2 getesteten Regeln verwenden Daten, die zum Schluss des Handelstags bekannt sind, und die Tests nehmen die Ausführung zum Eröffnungskurs des nächsten Tages an.
+- Die Tagesrendite der Regel für den Tag day0 ist der Ausgabewert +1 oder −1 zum Schluss von day0, multipliziert mit der Marktänderung vom Eröffnungskurs des nächsten Tages, open day+1, zum Eröffnungskurs des Tages danach, open day+2.
+- Diese Preisänderung ist der Logarithmus des Verhältnisses aus dem Eröffnungskurs von day+2 und dem Eröffnungskurs von day+1, also Log(O+2 / O+1) mal Pos0; Pos0 ist die Position zum Schluss von day0, O+1 der S&P-500-Eröffnungskurs an day+1 und O+2 der an day+2.
+- In der detrendeten Fassung wird zusätzlich die durchschnittliche Log-Rendite über den Backtest, ALR, abgezogen: Log(O+2 / O+1) × Pos0 − ALR.
+- Wird eine Eingabereihe mit Verzögerung veröffentlicht oder unterliegt sie Revisionen, sind die Signale so zu verschieben, dass nur die zum Zeitpunkt wirklich verfügbare Information eingeht.
+- Keine der in diesem Buch getesteten Regeln verwendet Information, die mit Zeitverzug berichtet wird oder die Revisionen unterliegt.
+- Wird der Schlusskurs gebraucht, um die Signale einer Regel zu berechnen, ist es nicht zulässig, einen Ein- oder Ausstieg zu ebendiesem Schluss anzunehmen; der erste zulässige Preis ist der nächste Preis.
+- Bei Daten täglicher Frequenz, wie in der Fallstudie, fällt der erste zulässige Ausführungspreis erst auf die Eröffnung des Marktes am Tag nach dem Signal.
+- Look-ahead Bias entsteht auch, wenn eine Regel Datenreihen mit Meldeverzug nutzt, etwa Cash-Statistiken von Fonds, oder Reihen, die Revisionen unterliegen, etwa staatliche Wirtschaftsstatistiken.
+- In diesen Fällen müssen verzögerte Werte verwendet werden, die Meldefristen oder Revisionen berücksichtigen.
 
 ## Risiken und Grenzen
 
@@ -61,6 +83,8 @@ aktualisiert: 2026-10-30
 - Look-ahead Bias meint hier, künftige, zum damaligen Zeitpunkt unwissbare Information fälschlich als Teil der historischen Dateneingabe in die Backtest-Engine aufzunehmen.
 - Der leichte Wechsel zwischen Backtest und Live-Ausführung beseitigt auch Abweichungen beim Übertragen einer Backtest-Strategie in eine Live-Strategie, wie sie Programme in allgemeinen Sprachen von C++ bis MATLAB oft plagen.
 - Wegen dieses Look-ahead Bias, fehlender Transaktionskosten und unbegrenzten Kapitals empfiehlt der Autor das Beispiel nicht als praktische Handelsstrategie.
+- Der Fehler kann subtil sein und, unerkannt, die gemessene Performance von Regeltests ernsthaft überzeichnen.
+- Nutzt eine Regel den Schlusskurs oder eine andere Eingabe, die erst zum Handelsschluss bekannt wird, ist die Annahme unzulässig, Ein- oder Ausstieg seien zum Schlusskurs möglich gewesen.
 
 ## Beispiele
 
@@ -70,6 +94,7 @@ aktualisiert: 2026-10-30
 - In der linearen Mean-Reversion-Strategie auf USD.CAD entsteht Look-ahead Bias, weil die Halbwertszeit und damit der Lookback an denselben Daten bestimmt werden, auf denen die Strategie ausgewertet wird.
 - Der Lookback von 20 Handelstagen für die Hedge Ratio von GLD und USO ist mit dem Wissen im Nachhinein nahe am Optimum gesetzt.
 - δ gleich 0,0001 und Ve gleich 0,001 des Kalman-Filters sind mit demselben Wissen im Nachhinein gewählt, obwohl das optimale δ aus Trainingsdaten kommen soll.
+- Cash-Statistiken von Publikumsfonds, die mit zwei Wochen Verzögerung veröffentlicht werden, verlangen, dass die Signale um diese zwei Wochen verzögert werden.
 
 ## Unterschiedliche Quellenpositionen
 

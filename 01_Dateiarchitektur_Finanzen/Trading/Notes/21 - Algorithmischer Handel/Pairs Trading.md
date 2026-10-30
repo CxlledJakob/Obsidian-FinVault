@@ -39,6 +39,11 @@ aktualisiert: 2026-10-30
 - Der nächstliegende Kandidat für Futures-Pair-Trading sind Intermarket-Spreads eng verwandter Märkte, im Energiekomplex WTI-Rohöl CL, Brent-Rohöl BZ, bleifreies Benzin RB und Heizöl HO, alle an der NYMEX.
 - CL und BZ im Verhältnis 1:1 wirken als Kandidat naheliegend, weil beide Basiswerte Rohöle sind, ein ADF-Test zeigt den Spread aber weit von stationär entfernt.
 - BZ hat CL anhaltend geschlagen; als wahrscheinliche Ursachen nennt der Text die steigende US-Ölproduktion nach Friedman 2012, den Pipeline-Engpass in Cushing nach Philips 2012 und das Iran-Embargo 2012, das Europa und damit BZ stärker traf als die USA.
+- Eine typische Anwendung der Kointegrationsanalyse ist Pairs Trading.
+- Sind die Aktien von Ford und GM als kointegrierte Zeitreihen bestimmt und ist Ford relativ zu GM zu hoch gelaufen, wird eine Short-Position in Ford gegen eine Long-Position in GM gestellt.
+- Der Paartrade erzielt einen Gewinn, egal wie die Divergenz korrigiert wird: Ford fällt, GM steigt, oder eine Kombination aus beidem tritt ein.
+- In dieser üblichen Anwendung sagt das Error-Correction-Modell das Verhalten des Spreads zwischen den kointegrierten Reihen vorher.
+- Fosback wich davon ab und nutzte das aus dem Error-Correction-Modell abgeleitete Maß als Indikator für eine dritte Variable, den S&P 500, statt für den Spread selbst.
 
 ## Funktionsweise
 

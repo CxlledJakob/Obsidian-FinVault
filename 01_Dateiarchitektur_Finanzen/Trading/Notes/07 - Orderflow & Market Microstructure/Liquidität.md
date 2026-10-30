@@ -51,6 +51,20 @@ aktualisiert: 2026-10-30
 - Die Liquidität in Währungen ist gewöhnlich höher als in den entsprechenden Aktienindex-ETFs, besonders bei den Größen am besten Bid und Ask, und das senkt die Transaktionskosten.
 - Für ein synthetisches Cross wird gewöhnlich eine sehr liquide Basiswährung wie USD oder EUR gewählt.
 - Devisenhandel läuft zumindest fünf Tage die Woche rund um die Uhr, von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET.
+- Die Liquiditätsprämie entschädigt Anleger, die Positionen in weniger liquiden Papieren übernehmen und in Papieren, die von Anlegern mit akutem kurzfristigem Bedarf an Cash aggressiv verkauft werden.
+- Die Entschädigung hat die Form höherer Renditen für das Halten illiquider Papiere oder die Form kurzfristiger Gewinne aus dem Kauf von Aktien, die jüngst sehr schwach waren, also aus Gegentrend-Strategien.
+- Der Aktienmarkt bietet risikobereiten Aktienhändlern eine andere Kompensation als die Futures: eine Prämie dafür, hoch motivierten Verkäufern Liquidität zu stellen. Es gibt systematische Preisbewegungen, die mit Gegentrend-Strategien ausnutzbar sind, welche jüngst sehr schwache Aktien kaufen.
+- Eigentümer von Aktien mit dringendem Bedarf, ihre Bestände zu liquidieren, brauchen Käufer. Das legt nahe, dass der Markt Händler entschädigt, die ungedeckten Liquiditätsbedarf decken.
+- Michael Cooper zeigt, dass Käufer überverkaufter Aktien überdurchschnittliche kurzfristige Renditen erzielen können. Aktien mit negativem Preismomentum bei fallendem Handelsvolumen erzielen Überschussrenditen und identifizieren Notverkäufer auf Käufersuche. Die Überschussrenditen erscheinen als Liquiditätsprämie.
+- Aktien, die über die vorigen zwei Wochen bei fallendem Volumen scharf gefallen sind, zeigen eine systematische Neigung, über die folgende Woche zu steigen. Fallendes Volumen lässt sich so lesen, dass nicht genügend Käufer den akuten Bedarf der Verkäufer decken.
+- Gegen Data Mining nutzte Cooper eine Walk-forward-out-of-sample-Simulation, um Long- und Short-Portfolios über 1978 bis 1993 zu bilden. Aus 300 Large-Cap-Aktien entstand eine annualisierte Rendite von 44,95 Prozent gegen 17,91 Prozent Buy-and-hold.
+- Im Kontext effizienter Aktien- und Futures-Märkte können Signale der technischen Analyse als Identifikation einer Marktlücke gelesen werden, gleichsam als Gesuch nach einem Risikoübernehmer für Hedger oder nach einem Liquiditätsspender, der bezahlt wird.
+- Händler, die an diesen Signalen verdienen, erhalten kein kostenloses Mittagessen. Sie lesen die Stellenanzeigen des Marktes.
+- Der Anleger, der einem Aktionär mit starkem Verkaufswunsch Liquidität stellt, kauft am Ende Aktien, die eine systematische Neigung haben, über die nahe Frist zu steigen. Diese Aktien lassen sich mit Gegentrend-Strategien identifizieren.
+- Die bloße Bereitschaft, ein Risiko zu tragen, garantiert nicht, dass eine Rendite verdient wird. Der Risikoträger muss geschickt dabei sein.
+- Wie ein unvorsichtiger Höhenarbeiter oder Testpilot nicht lange genug leben muss, um einen Lohn einschließlich Gefahrenzulage zu kassieren, kann ein unvorsichtiger Sucher von Risikoprämien nicht lange genug im Spiel bleiben, um sie einzusammeln.
+- Aktien- und Anleihemärkte geben den Eigentümern einen schnellen Weg, ihre Position an andere Anleger zu verkaufen.
+- Die Liquidität von Aktien und Anleihen macht sie für die ersten Anleger attraktiv und erleichtert es den Unternehmen dadurch, Fremdkapital und Eigenkapital aufzunehmen.
 
 ## Funktionsweise
 

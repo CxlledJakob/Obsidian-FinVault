@@ -18,6 +18,7 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Der Channel-Breakout-Operator CBO hat in der Indicator Scripting Language zwei Argumente: Indicator gleich CBO(Time Series, n).
 
 ## Kernaussagen
 
@@ -49,6 +50,17 @@ aktualisiert: 2026-10-30
 - Die Opening-Gap-Strategie ist eine Breakout-Strategie, die bei manchen Futures und Währungen funktioniert.
 - Breakout-Momentum kann durch das Auslösen von Stop-Orders entstehen.
 - Ein Beispiel steigt zum Market Open ein, ein anderes intraday an verschiedenen Unterstützungs- oder Widerstandsniveaus.
+- Nach der Doktrin der technischen Analyse sollen Aufwärtsausbrüche Aufwärtstrends vorhersagen; bleibt der Aufwärtstrend aus, ist das als Prognosefehler zu zählen.
+- Beobachtet wird, dass ein Aktienindex wie der Dow-Jones-Durchschnitt oder der S&P 500, sobald er über seinen 200-Tage-Durchschnitt steigt, über die nächsten mehreren Monate in der Regel weiter zulegt.
+- Die Hypothese 200-H lautet, dass Aufwärtsdurchbrüche des 200-Tage-Durchschnitts durch den DJIA im Durchschnitt über die nächsten drei Monate profitable Long-Positionen erzeugen.
+- Die Nullhypothese Null-200 lautet, dass Aufwärtsdurchbrüche eines 200-Tage-Durchschnitts über die folgenden drei Monate keine Gewinne erzeugen.
+- Trotz extremer Einfachheit hat sich der Kanalausbruch-Operator als so wirksam erwiesen wie komplexere Trendfolge-Methoden.
+- In der Praxis wird der Kanal mit jedem neuen Datenpunkt neu gezeichnet. Die Rückschau auf der Zeitachse ist konstant, die vertikale Breite passt sich dynamisch der Spanne der Reihe über die letzten n Perioden an.
+- Diese dynamische Spanne kann die Wahrscheinlichkeit falscher Signale senken, die durch einen Anstieg der Volatilität der Reihe entstehen und nicht durch eine tatsächliche Änderung ihres Trends.
+- Der Zweck aller Methoden der Trendidentifikation ist, am zugrunde liegenden Rauschen vorbeizusehen, an den erratischen Bewegungen, die bedeutungslos scheinen, und die aktuelle Richtung der Reihe zu finden. In der Fallstudie identifiziert der Kanalausbruch die Trends der Trendregeln.
+- Die Turtles, eine Gruppe von Rohstoffhändlern, handeln auf der Grundlage von Ausbrüchen.
+- Eine Bullenfalle oder ein Breakout Failure liegt vor, wenn die Preise kurz nach dem Ausbruchsdurchbruch das Ausbruchsniveau in der Gegenrichtung wieder durchstoßen.
+- Dieses Wieder-Durchstoßen wird Turtle-Soup-Signal genannt, weil die Turtles bei Breakout Failures in Schwierigkeiten geraten.
 
 ## Funktionsweise
 
@@ -56,6 +68,12 @@ aktualisiert: 2026-10-30
 - Die lange Zeit ohne Handel macht den Eröffnungspreis oft deutlich verschieden vom Schluss, sodass Stop-Orders auf verschiedenen Preisen an der Eröffnung gleichzeitig ausgelöst werden.
 - Die Ausführung kann kaskadieren und auch weiter vom Open entfernte Stops auslösen.
 - Alternativ können über Nacht wesentliche Ereignisse eingetreten sein, und viele Nachrichtenarten erzeugen Momentum.
+- Die Trendregeln der Fallstudie nutzen den CBO, der die Eingangsreihe in eine binäre Reihe aus +1 und −1 verwandelt.
+- Die Erkennung von Trendumkehren durch den CBO unterliegt einem Lag zwischen der tatsächlichen Umkehr der Reihe und dem Zeitpunkt, zu dem der Operator sie entdeckt.
+- Ein kürzerer Look-back macht den CBO empfindlicher und mindert den Lag, erhöht aber die Zahl falscher Signale; zwischen Lag und Treffsicherheit besteht ein Zielkonflikt.
+- Optimal ist, was die Leistung des Indikators maximiert, etwa die Durchschnittsrendite oder die risikobereinigte Rendite.
+- Weil sich das Verhalten der Finanzmarkt-Zeitreihen über die Zeit ändert, würde sich auch der optimale Look-back des CBO ändern; adaptive CBO-Versionen wurden in der Fallstudie nicht verwendet.
+- Zeitreihenoperatoren umfassen unter anderem den gleitenden Durchschnitt, die gleitende Kanalnormalisierung, also die Stochastik, Ausbruchskanäle und gleitende Steigungen.
 
 ## Voraussetzungen
 
@@ -77,6 +95,7 @@ aktualisiert: 2026-10-30
 - Nach dem Bruch werden die alten Zonen zu zukünftigen Plattformen und zu Zielen für das Management des Ausstiegs.
 - Ist der bestätigte Bruch da, kann mitgegangen werden. Darunter liegt dann ein tiefes natürliches Schutzpolster, und der Stop sitzt unter dem letzten Pivot-Tief.
 - Volumen kann die Nachricht bestätigen. Reagiert der Markt mit hohem Volumen, haben die Market Maker die Meldung als gute Nachricht bestätigt.
+- Die fünf getesteten Trendfolge-Systeme waren Channel-Breakout, das Kreuz zweier gleitender Durchschnitte, zwei Fassungen von Momentum und MACD gegen seine Signallinie.
 
 ## Regeln und Kriterien
 
@@ -170,6 +189,16 @@ aktualisiert: 2026-10-30
 - Long, wenn das Open über dem Vortageshoch mal (1 plus 0,1 mal der um einen Tag verschobenen 90-Tage-Standardabweichung der Close-to-Close-Rendite) liegt.
 - Short, wenn das Open unter dem Vortagestief mal (1 minus 0,1 mal derselben Standardabweichung) liegt.
 - Die Positionsrendite ist die Position mal (Open minus Close) geteilt durch Open; der Ausstieg liegt also am Schluss desselben Tages.
+- Der n-Perioden-Kanalausbruch signalisiert Long, wenn die untersuchte Reihe ihr Maximum über die vergangenen n Perioden überschreitet, und Short, wenn sie unter ihr n-Perioden-Minimum fällt.
+- Die untere Grenze ist das Minimum der Reihe über die vergangenen n Perioden ohne die aktuelle Periode, die obere Grenze das Maximum über dieselben Perioden ohne die aktuelle Periode.
+- Der einzige freie Parameter ist die Rückschau, die Zahl der Zeitperioden, die die Grenzen festlegen. Die Fallstudie testet 11 Rückschauen, deren Längen um ungefähr den Faktor 1,5 getrennt sind: 3, 5, 8, 12, 18, 27, 41, 61, 91, 137 und 205 Tage.
+- Je größer die Rückschau, desto breiter der Kanal und desto unempfindlicher der Indikator. Größere Werte von n dienen dazu, größere Trends zu identifizieren.
+- Von 40 Eingabereihen dienten 39 den Trendregeln; der Eröffnungskurs des S&P 500 wurde ausgeschlossen, weil er gegenüber dem Schluss redundant ist.
+- Jede Trendregel hat zwei Parameter, den CBO-Look-back und eine der 39 Reihen; getestet wurden 3, 5, 8, 12, 18, 27, 41, 61, 91, 137 und 205 Tage, jeweils etwa um den Faktor 1,5 getrennt.
+- Daraus entstanden 858 Trendregeln, 429 traditionelle aus 39 mal 11 und zusätzlich 429 inverse Trendregeln.
+- Die Benennung lautet TT oder TI, dann Eingabereihennummer, dann Look-back; TT-15-137 ist die traditionelle Trendregel auf Reihe 15, Cumulative Money Flow, mit 137 Tagen, und TI-40-41 die inverse Regel auf Reihe 40, den Quality Spread BAA minus AAA, mit 41 Tagen.
+- Neben dem Channel Breakout nennt der Text als weit verbreitete Trendindikatoren gleitende Durchschnitte, Moving-Average-Bänder und Alexander-Filter, auch Zickzack-Filter genannt, beschrieben bei Kaufman.
+- Eine Channel-Breakout-Regel gibt nach traditioneller Lesart der technischen Analyse ein Kaufsignal, wenn die Eingabereihe am aktuellen Tag und an allen früheren Tagen im Look-back-Fenster auf dem Maximum steht, und ein Verkaufssignal, wenn sie auf dem Minimum steht.
 
 ## Risiken und Grenzen
 
@@ -180,6 +209,7 @@ aktualisiert: 2026-10-30
 - Ein Ausbruch aus einer solchen Preiszone auf niedrigem Volumen ist eine klassische Falle, oft Fake-out genannt. Nur das sichtbare Volumen zeigt sie.
 - Sieht man den Aufwand in den nächsten Bars nicht, ist es entweder eine Falle nach oben oder mangelndes Interesse, den Markt jetzt höher zu nehmen.
 - Eine Aufwärtslücke auf niedrigem Volumen vor einem früheren Widerstand, an dem der Kurs schon gescheitert ist, ist doppelt verdächtig und kann eine Falle der Insider sein.
+- Ein profitabler Backtest eines solchen Aufwärtsdurchbruchs beweist die Hypothese nicht; ein unprofitabler Backtest falsifiziert sie.
 
 ## Beispiele
 
@@ -194,6 +224,15 @@ aktualisiert: 2026-10-30
 - Der ES eröffnete am dritten Tag mit einer Aufwärtslücke auf hohem Volumen. Das war ein echter Bruch, im Gegensatz zur Falle vom Vortag auf niedrigem bis durchschnittlichem Volumen.
 - Auf den Dow-Jones-STOXX-50-Indexfutures FSTX an der Eurex liefert die Opening-Gap-Strategie vom 16. Juli 2004 bis 17. Mai 2012 eine APR von 13 Prozent und eine Sharpe Ratio von 1,4.
 - Dieselbe Strategie auf GBPUSD, mit Close um 17:00 Uhr ET und Open um 5:00 Uhr ET als London-Open, liefert vom 23. Juli 2007 bis 20. Februar 2012 eine APR von 7,2 Prozent und eine Sharpe Ratio von 1,3.
+- Die Regel TT-4-91 ist ein 91-Tage-Kanalausbruch und nutzt den Dow-Jones-Transportation-Index als Eingangsreihe 4.
+- Sie gab von November 1980 bis Juni 2005 Long- und Short-Signale auf den S&P 500.
+- Auf trendbereinigten S&P-500-Daten betrug ihre annualisierte Rendite 4,84 Prozent; die erwartete Jahresrendite einer Regel ohne Vorhersagekraft ist auf solchen Daten null.
+- Der Bootstrap-p-Wert 0,0692 gilt als möglicherweise signifikant, sofern dies die einzige zum Backtest vorgeschlagene Regel war; das Ausmaß der Suche kann den p-Wert verändern.
+- Die Monte-Carlo-Permutation ergibt einen fast identischen p-Wert.
+- Diese Regel und alle anderen in Teil Zwei geprüften Regeln werden in Kapitel 8 im Einzelnen beschrieben.
+- Eine Studie von Dunn & Hargitt aus dem Jahr 1970 fand einen Channel-Breakout mit einer Spanne von vier Wochen, Donchians Vier-Wochen-Regel, als bestes von mehreren populären Systemen, getestet auf 16 Jahren Daten von sieben Rohstoffmärkten.
+- Kaufman vergleicht Channel-Breakout mit exponentieller Glättung, der Steigung der linearen Regression, Swing-Breakout und Point-and-Figure an Eurodollars über die zehn Jahre 1985 bis 1994.
+- In diesem Vergleich hatte die Channel-Breakout-Methode über die zehn Jahre die höchste risikobereinigte Performance.
 
 ## Unterschiedliche Quellenpositionen
 

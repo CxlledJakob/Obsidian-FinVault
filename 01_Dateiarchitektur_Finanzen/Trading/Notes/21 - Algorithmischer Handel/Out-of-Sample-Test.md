@@ -21,6 +21,7 @@ aktualisiert: 2026-10-30
 - Ein Backtest bewertet out-of-sample die Leistung einer Anlagestrategie anhand vergangener Beobachtungen.
 - In-sample sind die Gelegenheiten von 1 bis I, und out of sample sind die späteren Gelegenheiten von I plus 1 bis J.
 - Der Out-of-Sample-Test prüft, ob das Portfolio mit minimaler Varianz in der Stichprobe auch außer Stichprobe die geringste Varianz hat.
+- Out-of-Sample-Daten sind Daten, die nicht für das Backtesten der Regel verwendet wurden.
 
 ## Kernaussagen
 
@@ -67,6 +68,49 @@ aktualisiert: 2026-10-30
 - Das Gesetz der großen Zahlen hilft einem Portfolio vieler Paare nur, wenn die erwartete Rendite eines einzelnen Paars in der Out-of-Sample-Periode positiv ist; der Autor hat das bei Aktienpaaren nicht gefunden.
 - ETF-Paare, die einmal kointegrieren, fallen in Out-of-Sample-Daten seltener auseinander als Aktienpaare, weil sich die Ökonomie eines Korbs langsamer ändert als die einer einzelnen Firma.
 - Wegen weniger Trades und langer Haltedauern droht in diesen Momentum-Ergebnissen Data Snooping, und der eigentliche Test ist echtes Out-of-Sample-Testing.
+- Eine Hypothese lässt sich prüfen, weil sie Vorhersagen über Beobachtungen macht, deren Ergebnisse noch nicht bekannt sind; das müssen keine künftigen Ereignisse sein.
+- In historischen Wissenschaften beziehen sich solche Vorhersagen auf Ereignisse, die bereits stattgefunden haben, deren Ergebnisse aber noch nicht beobachtet wurden.
+- Beobachtungen mit bereits bekanntem Ergebnis können diese Prüfung nicht leisten, weil sich im Nachhinein immer eine passende Erklärung formen lässt.
+- In der Finanzwissenschaft erzeugt der Backtest der TA-Regel die Beobachtungen, mit denen die aus der Effizienzmarkthypothese abgeleitete Vorhersage verglichen wird.
+- Eine Hypothese wird geprüft, indem ihre Vorhersagen mit neuen Beobachtungen verglichen werden, deren Ergebnisse noch nicht bekannt sind.
+- Eine Hypothese, die nur vergangene Beobachtungen erklären kann und keine Vorhersagen über neue Beobachtungen macht, ist nicht wissenschaftlich.
+- Elliott-Wave-Theorie, Gann-Linien, klassische Chartmuster und andere Deutungsverfahren erklären vergangenes Marktverhalten je nach eigenem Paradigma und sind damit empirisch gleichwertig; welche besser sind, entscheidet nur die Vorhersage von Beobachtungen mit noch unbekanntem Ergebnis.
+- Verfahren ohne prüfbare Vorhersagen über neue Beobachtungen scheiden als wissenschaftlich bedeutungslos aus, Verfahren mit Vorhersagen, die künftigen Beobachtungen widersprechen, als falsifiziert.
+- Fehlerhafte objektive technische Analyse zeigt sich als Verschlechterung außer Stichprobe: Die Regel läuft in der Backtest-Stichprobe gut und auf den nicht verwendeten Daten schlechter.
+- Out-of-Sample-Daten sind die im Data Mining oder Backtest nicht verwendeten Daten; In-Sample-Daten sind die dafür verwendeten.
+- Die vollständigere Erklärung nennt zwei Ursachen: Zufall ist ein großer Teil der beobachteten Leistung, und die beste Regel wird erst gewählt, nachdem alle Backtests vorliegen; zusammen überzeichnet das ihre erwartete künftige Leistung.
+- Die künftige Leistung der besten Regel ist deshalb wahrscheinlich schlechter als das Niveau, dessentwegen sie ausgewählt wurde.
+- Der Rückgang außer Stichprobe ist am ehesten der Fall von einer unrealistisch hohen Erwartung und kein echter Rückgang der Vorhersagekraft.
+- Die In-Sample-Leistung mischt ein Niveau an Vorhersagekraft, möglicherweise null, mit einem großen Glücksanteil; das Glück wiederholt sich nicht, und die Leistung setzt sich nahe der innewohnenden Vorhersagekraft.
+- Bloße Zufallsvariation ist die am wenigsten plausible Erklärung: Die Leistung außer Stichprobe wäre dann etwa ebenso oft besser wie schlechter, erfahrene Backtests zeigen sie aber weit öfter schlechter.
+- Finanzmärkte als nichtstationär anzunehmen ist vernünftig; nicht vernünftig ist, jedes Scheitern außer Stichprobe darauf zurückzuführen, dass sich die Marktdynamik geändert hat.
+- Der Markt müsste sein Verhalten jedes Mal ändern, wenn eine Regel das Labor verlässt, und zwar so oft, wie Regeln außer Stichprobe scheitern.
+- Auch die Annahme, zu viele Händler hätten die Regel übernommen und das Muster zerstört, ist unplausibel, weil sich fast unendlich viele Regeln formulieren lassen.
+- Selbst bei Futuresfonds mit ähnlichen objektiven Trendfolgeregeln scheint die schwächere Leistung an Volatilitätsänderungen zu liegen, die nicht an der Nutzung der technischen Systeme hängen.
+- Eine nähere, aber unvollständige Erklärung trennt ein systematisches Marktmerkmal, das sich außer Stichprobe fortsetzt, von einmaligem Glück durch nicht wiederkehrendes Rauschen; der Zufall ist nur eine der beiden Ursachen.
+- Unter Erklärungen, die gleich gut passen, ist die über den Data-Mining-Bias vorzuziehen, weil sie keine geänderte Marktdynamik annimmt; das ist Occams Rasiermesser.
+- Die Leistung der besten Regel verschlechtert sich außer Stichprobe nicht wirklich; es sieht nur so aus, weil die Leistung das Niveau der wahren Vorhersagekraft ohne das Glück annimmt, das die anderen Regeln schlug.
+- Die In-Sample-Leistung verband ein Niveau an Vorhersagekraft, möglicherweise null, mit einem großen Glücksanteil; dieses Glück liegt danach woanders.
+- Die erwartete Leistung außer Stichprobe der leistungsstärksten durch Data Mining gefundenen Regel liegt unter der beobachteten In-Sample-Leistung, mit der sie die übrigen Regeln schlug.
+- Jensen und Cohen halten fest, dass die beobachtete Leistung des besten Kandidaten die erwartete künftige Leistung überschätzt, wenn Zufall einen wesentlichen Teil der beobachteten Leistung ausmacht.
+- In solchen Problemen wird die künftige Leistung des gewählten Kandidaten aller Wahrscheinlichkeit nach schlechter sein als die Leistung, mit der er den Vergleich gewann.
+- Der Data Miner sieht die vollen Folgen erst, wenn die Zukunft vergangen ist.
+- Bei zwölf Regeln mit erwarteter Rendite null würde die bei plus 60 Prozent beobachtete Regel gewählt, und ihre künftige Leistung enttäuscht mit hoher Wahrscheinlichkeit; bei dreißig Regeln gilt dasselbe für eine beobachtete Leistung von 100 Prozent.
+- Die Performance einer durch Data Mining gefundenen Regel in Out-of-Sample-Daten liefert eine unverzerrte Schätzung ihrer künftigen Performance.
+- Wegen der Stichprobenstreuung kann die Regel in der Zukunft anders abschneiden als im Out-of-Sample-Test, es gibt aber keinen Grund anzunehmen, sie werde schlechter sein.
+- Weil die Out-of-Sample-Performance unverzerrt ist, ist es sinnvoll, Daten für diesen Test zurückzuhalten.
+- Das einfachste Schema bildet zwei Teilmengen: der frühe Teil der Historie dient dem Data Mining, der spätere dem Out-of-Sample-Test.
+- Ein feineres Schema zerlegt die Historie schachbrettartig, sodass In-Sample- und Out-of-Sample-Daten aus allen Teilen der Historie stammen.
+- Um der Möglichkeit von Data Mining zu begegnen, verwendete Michael Cooper eine Walk-forward-out-of-sample-Simulation, um Portfolios aus Long- und Short-Positionen über den Zeitraum 1978 bis 1993 zu bilden.
+- Die aus 300 Aktien großer Kapitalisierung gebildeten Long-Short-Portfolios erzielten eine annualisierte Rendite von 44,95 Prozent gegen eine Buy-and-hold-Benchmarkrendite von 17,91 Prozent.
+- Das außerhalb der Stichprobe geprüfte Muster sind Aktien, die über die vorangegangenen zwei Wochen bei fallendem Volumen scharf gefallen sind und über die folgende Woche eine systematische Neigung zum Steigen zeigen.
+- Die Leistung der Regel optimaler Komplexität im Testset ist positiv verzerrt, weil das Testset wiederholt aufgesucht wurde, um diese Komplexität zu bestimmen.
+- Das Validierungsset bleibt unberührt, weil es weder bei der Suche nach optimalen Parameterwerten noch bei der Suche nach der optimalen Komplexität verwendet wurde.
+- Die unverzerrte Schätzung der künftig erwarteten Leistung der Regel optimaler Komplexität kommt aus dem Validierungsset.
+- Schneidet eine komplexere Regel im Testset besser ab, ist anzunehmen, dass die zusätzliche Komplexität weitere systematische Aspekte des Marktverhaltens ausgenutzt hat.
+- Kidd und Borsen untersuchen, warum die Renditen der technischen Analyse nachgelassen haben, und betrachten die Verschlechterung der System-Performance im Verlauf der Out-of-Sample-Daten. Diese Verschlechterung kann deshalb nicht auf den Data-Mining-Bias zurückgehen.
+- Prognose meint hier nicht notwendig das Vorhersagen der Zukunft, sondern noch nicht gemachte Beobachtungen, gleich ob sie in der Zukunft liegen.
+- Nur der Vergleich solcher Prognosen mit neuen Beobachtungen kann zeigen, welche der vielen Hypothesen, die vergangene Beobachtungen im Nachhinein erklären, stimmen könnte.
 
 ## Funktionsweise
 
@@ -78,6 +122,14 @@ aktualisiert: 2026-10-30
 - Im Monte-Carlo-Code werden die Portfolios auf dem Fenster vor dem Zeiger in der Stichprobe geschätzt.
 - Die Renditen außer Stichprobe werden auf den folgenden Rebalancing-Beobachtungen berechnet.
 - Die Zeiger laufen vom Ende des Rückblicks bis zum Stichprobenende in Schritten der Rebalancing-Länge, sodass der erste Abschnitt nur der Schätzung dient.
+- Legitime Muster eines Trainingssatzes kehren im Testsatz wieder, das Rauschen des Trainingssatzes kehrt nicht wieder.
+- Profitabilität im Training, die sich im Test nicht wiederholt, war höchstwahrscheinlich eine Folge von Überanpassung.
+- Das erste Zeichen, dass die Regel bei der Komplexitätsoptimierung überangepasst ist, ist der Punkt, an dem ihre Leistung im Testsatz einen Gipfel erreicht und danach nachlässt.
+- Steigt die Testleistung mit wachsender Komplexität, wurden zunehmend feinere, aber gültige Muster des Trainingssatzes gefunden.
+- Beginnt die Testleistung zu fallen, hat der letzte Komplexitätsschritt angefangen, die zufälligen, nicht wiederkehrenden Effekte des Trainingssatzes zu beschreiben.
+- Die Grenze zwischen Underfitting und Overfitting ist der Punkt, an dem die Leistung im Testsatz gipfelt und zu sinken beginnt.
+- Wird die Komplexität vor diesem Punkt angehalten, erfasst die Regel nicht alle gültigen Muster der Daten und gilt als unterangepasst.
+- Im Beispiel der Zwei-Durchschnitt-Regel ist die Testrendite von 15 Prozent eine unverzerrte Schätzung, solange der Testsatz nur einmal benutzt wird; sobald weitere Komplexitätsstufen denselben Testsatz erneut besuchen, ist die spätere Testleistung, etwa 20 Prozent der Vier-Parameter-Regel, nicht mehr unverzerrt.
 
 ## Voraussetzungen
 
@@ -90,6 +142,13 @@ aktualisiert: 2026-10-30
 
 - Statt eines einzelnen historischen Datensatzes folgt der Test dem Backtesting-Paradigma aus Kapitel 13, um Selection Bias aus Kapitel 11 zu vermeiden.
 - Die Regressionskoeffizienten von ES auf VX werden nur auf den ersten 500 Tagen nach August 2008 geschätzt, damit die daraus gewonnenen Statistiken anschließend das Handelsmodell bauen.
+- Fehlt ein gegen den Data-Mining-Bias robuster Signifikanztest, müssen Suchen nach komplexen nichtlinearen Regeln auf einen Out-of-Sample-Test mit drei Datensätzen setzen: Training, Test und Evaluation.
+- Ist die Komplexität der Regel fest und wird nur nach den optimalen Parameterwerten gesucht, genügen zwei Datensegmente, Training und Test.
+- Darf die Suche die Komplexität optimieren, sind oft drei Segmente nötig: Training, Test und Validierung.
+- Der Lernalgorithmus durchläuft zwei Schleifen: die innere sucht bei gegebener Komplexität die optimalen Parameter, die äußere sucht die optimale Komplexitätsstufe.
+- Sobald die beste komplexe Regel gefunden ist, wird sie auf dem dritten Segment bewertet, dem Validierungssatz, der bis zur Entdeckung von Parametern und Komplexitätsgrad zurückgehalten wurde.
+- Weil der Validierungssatz in dieser Entdeckung nicht benutzt wurde, ist die Leistung der besten Regel dort eine unverzerrte Schätzung ihrer künftigen Leistung.
+- Die Leistung, die die Regel optimaler Komplexität im Testsatz erreicht, ist positiv verzerrt, weil der Testsatz wiederholt aufgesucht wurde; das ist der Data-Mining-Bias.
 
 ## Risiken und Grenzen
 
@@ -102,6 +161,12 @@ aktualisiert: 2026-10-30
 - Dieselben Daten für diese Optimierung und für den Backtest zu verwenden, ist Look-ahead Bias.
 - Die im Text gesetzten Werte, 20 Tage für GLD und USO sowie δ gleich 0,0001 und Ve gleich 0,001, sind mit Wissen im Nachhinein gewählt.
 - Die Aufgabe des Traders ist, besondere Bedingungen oder Perioden zu finden, in denen Mean Reversion regelmäßig auftritt, und dabei Data-Snooping-Bias zu vermeiden.
+- Wird eine Regel mit schwerer Stichprobenverteilung der mittleren Rendite vom Data Miner gewählt, ist der Data-Mining-Bias groß und die Out-of-Sample-Performance wahrscheinlich enttäuschend.
+- Der jungfräuliche Status der zurückgehaltenen Daten ist kurzlebig: sobald sie einmal benutzt wurden, liefern sie keine unverzerrten Leistungsschätzungen mehr.
+- Out-of-Sample-Tests nehmen Teile der Daten aus dem Mining und verringern so die Menge, in der Muster gesucht werden können; bei hohem Rauschen und wenig Information sind zusätzliche Beobachtungen extrem wertvoll.
+- Die Aufteilung zwischen In-Sample und Out-of-Sample ist willkürlich, keine Theorie nennt den Anteil für Training und Test, die Ergebnisse können auf diese Wahl sehr empfindlich reagieren, und oft ist es ein Bauchentscheid.
+- Die Verschlechterung der künftigen Performance gegenüber dem Backtest ist im Data Mining eine Tatsache: sie liegt aller Wahrscheinlichkeit nach unter der gebacktesteten Performance.
+- Das Absinken der Leistung im Testset ist das Signal, dass die Grenze zwischen Underfitting und Overfitting überschritten wurde und zusätzliche Komplexität begonnen hat, das Rauschen der Trainingsdaten anzupassen.
 
 ## Beispiele
 
@@ -115,6 +180,7 @@ aktualisiert: 2026-10-30
 - Die Performance des linearen Long-Short seit Anfang 2008 ist ein echter Out-of-Sample-Test, weil die Strategie 2007 veröffentlicht wurde.
 - Der Look-back von 5 für Mittel und Standardabweichung der SPY-Arbitrage ist mit dem Vorteil des Hindsight festgelegt.
 - Die annualisierte Rendite von 6,9 Prozent und die Sharpe Ratio von 1 der VX-ES-Rollrendite-Strategie gelten für den 29. Juli 2010 bis zum 7. Mai 2012, und dieser Zeitraum wurde nicht zur Bestimmung der Hedge Ratio verwendet.
+- Die Vier-Parameter-Regel verdiente im Testset 20 Prozent, die einfache Regel aus zwei gleitenden Durchschnitten 15 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 

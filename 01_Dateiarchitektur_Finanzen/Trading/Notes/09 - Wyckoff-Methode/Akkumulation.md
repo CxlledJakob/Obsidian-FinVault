@@ -41,6 +41,9 @@ aktualisiert: 2026-10-30
 - Akkumulation kann vier bis fünf Monate dauern, und es gibt keinen Move, bevor sie fertig sind.
 - Nach der Aufnahme stieg der Index stetig auf durchschnittlichem Volumen ohne besondere Extreme.
 - Eine große Umkehr auf dieser Zeitebene braucht eine Selling Climax. Die war zum Zeitpunkt des Textes nicht da.
+- Nach Chaiken beherrscht bullische Akkumulation den Tag, wenn der Markt über der Mitte seiner Tagesspanne schließt, und dieser Tag soll höhere Preise vorhersagen.
+- Nur ein Schluss am Hoch des Tages weist das gesamte Tagesvolumen als positiven Akkumulationswert zu; liegt der Schluss in der Spanne, wird nur ein Bruchteil des Volumens der Akkumulation zugeordnet.
+- Die Vermutung zum negativen Volumen lautet, die Marktrichtung an Tagen mit fallendem Volumen spiegele die Akkumulation, also den Kauf, oder die Distribution der Informierten.
 
 ## Funktionsweise
 

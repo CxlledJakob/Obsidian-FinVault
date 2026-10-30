@@ -21,6 +21,22 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Die Gewinne trendfolgender Spekulanten lassen sich ökonomisch damit rechtfertigen, dass ihre Tätigkeit kommerziellen Hedgern eine Dienstleistung bietet: die Übertragung des Preisrisikos vom Hedger auf den Spekulanten.
+- Die Profitabilität technischer Trendfolgesysteme in Rohstoff-Futures lässt sich als Kompensation, also als Risikoprämie, dafür erklären, dass sie kommerziellen Hedgern den Dienst der Risikoübertragung leisten.
+- Die ökonomische Theorie sagt voraus, dass Futures-Märkte genug profitable Trends zeigen sollten, um Trendfolger zu motivieren, die Preisrisiken zu übernehmen, die Hedger abgeben wollen.
+- Die ökonomische Funktion der Futures-Märkte hat nichts mit Kapitalaufnahme zu tun und alles mit Preisrisiko. Preisänderungen, besonders große, sind Risiko für Betriebe, die Rohstoffe erzeugen oder verbrauchen.
+- Die Futures-Märkte geben diesen Betrieben, den Commercial Hedgern, ein Mittel, Preisrisiko auf Anleger, die Spekulanten, zu übertragen.
+- Die Risikotransfer-Prämie für Rohstoff- und Währungs-Hedges entschädigt Spekulanten, die Long- und Short-Positionen in Futures übernehmen, damit kommerzielle Nutzer und Produzenten das Preisänderungsrisiko abgeben können. Die Entschädigung sind profitable Trends, die mit relativ einfachen Trendfolge-Strategien erfasst werden.
+- Hedger könnten auch untereinander kontrahieren, der Weizenfarmer mit der Bäckerei. Oft ist der Hedge-Bedarf aber unausgeglichen, manchmal liegt mehr Verkaufsbedarf der Farmer vor als Kaufbedarf der Nutzer, manchmal umgekehrt.
+- Diese Lücke zwischen Angebot und Nachfrage braucht eine dritte Gruppe, die zu kaufen oder zu verkaufen bereit ist.
+- Die CFTC erfasst Kauf und Verkauf der Commercial Hedger. In steigenden Preistrends übersteigt der Hedge-Verkauf den Hedge-Kauf, die Hedger sind netto Verkäufer. In fallenden Trends übersteigt der Hedge-Kauf den Hedge-Verkauf, die Hedger sind netto Käufer.
+- Verkaufte und gekaufte Menge müssen gleich sein. Im steigenden Trend braucht der überschießende Hedge-Verkauf zusätzliche Käufer, im fallenden Trend der überschießende Hedge-Kauf zusätzliche Verkäufer.
+- Die Futures-Märkte brauchen Spekulanten, die Trendfolger sind. Die unsichtbare Hand des Marktes erzeugt die Trends, die sie dafür entschädigen, dass sie diese Lücke schließen.
+- Trendfolger sind erheblichen Risiken ausgesetzt. Die meisten Trendfolge-Systeme erzeugen in 50 bis 65 Prozent der Fälle unprofitable Signale. Das geschieht in trendlosen Märkten, und das ist die Mehrheit der Zeit.
+- In Drawdowns ist es für erfolgreiche Trendfolger nicht ungewöhnlich, bis zu 30 Prozent ihres Handelskapitals zu verlieren. Das Motiv, dieses Risiko zu tragen, ist die Gelegenheit, nicht die Garantie, an Trends zu verdienen, wenn sie auftreten.
+- Großräumige Trends bieten eine Gewinngelegenheit für Trendfolger, die ausreichend kapitalisiert sind und den Hebel richtig steuern.
+- Ist die Risikotransfer-Prämie eine gültige Erklärung der Trendfolge-Renditen, sollte Trendfolge in Aktien nicht so lohnend sein wie an den Rohstoff-Futures, weil ein Aktien-Trendfolger keine Risikotransfer-Leistung erbringt. Es gibt Daten, die nahelegen, dass Trendfolge in Aktien tatsächlich weniger lohnend ist.
+- Aktien- und Anleihemärkte beschaffen Unternehmen Eigen- und Fremdkapital. Weil Aktien und Unternehmensanleihen Risiken über den risikofreien Satz der Staatspapiere hinaus tragen, werden Anleger mit der Aktienrisikoprämie und der Unternehmensanleihe-Risikoprämie entschädigt.
 
 ## Funktionsweise
 

@@ -28,6 +28,7 @@ aktualisiert: 2026-10-30
 - Die Reichweite eines Trends wird von Ursache und Wirkung bestimmt, also von der Ausdehnung der vorangegangenen Stauzone.
 - Beim Bruch kennt man die Dauer noch nicht. Anhaltspunkte sind die Größe der Zone, ob eine Klimax vorlag, das Ausbruchsvolumen, die langsameren Zeitebenen und vorausliegender Unterstützung und Widerstand.
 - Jeder Ausbruch hat anderes Momentum und eine andere Dauer. Das perfekte Schema ist nicht die Regel.
+- Was wie eine Schwächephase oder eine Hit-Serie im Sport aussieht, ist oft nur ein Lauf ähnlicher Ergebnisse, wie er in Zufallsprozessen häufig ist.
 
 ## Funktionsweise
 
@@ -43,6 +44,7 @@ aktualisiert: 2026-10-30
 - Eine langfristige Tendenz wird sichtbar, wenn Range Extension an aufeinanderfolgenden Tagen fortläuft.
 - Die Zeitskala selbst ist unwichtig, außer im Blick auf Wyckoffs Regel von Ursache und Wirkung.
 - Weil die Zyklen ineinander liegen, bestätigt sich eine Bewegung erst, wenn sie über mehrere Zeitebenen hinweg sichtbar wird.
+- Ein gültiger Trend ist eine Serie gleicher Ergebnisse von längerer Dauer, als sie in Zufallsdaten gewöhnlich vorkommt, also eine Serie, die in einem Zufallsprozess selten wäre.
 
 ## Risiken und Grenzen
 

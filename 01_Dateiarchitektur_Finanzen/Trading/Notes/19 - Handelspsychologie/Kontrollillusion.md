@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Mentale Fehler"
@@ -10,19 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Kontrollillusion
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Kontrollillusion ist ein unberechtigter Glaube an die eigene Fähigkeit, Ergebnisse zu steuern.
 
 ## Kernaussagen
 
+- Menschen, die sich in Kontrolle fühlen, sind glücklicher und entspannter als Menschen, die das nicht tun.
+- Diese Verzerrung wird vom Self-Attribution Bias gespeist und speist ihrerseits den Overoptimism Bias.
+- Nach Nofsinger begünstigen fünf Merkmale die Kontrollillusion: hohe persönliche Beteiligung, große Auswahl, viel verfügbare Information, hohe Vertrautheit mit der Aufgabe und früher Erfolg.
+- Die ersten vier Merkmale treffen auf die subjektive technische Analyse zu.
+- Ein Ritual kann die Angst senken, indem es ein illusorisches Gefühl der Kontrolle über Ausgänge gibt, die weitgehend Zufall sind.
+- Folgt auf ein solches Ritual gelegentlich ein Erfolg, wird die abergläubische Praxis verstärkt.
 
 ## Funktionsweise
 
@@ -32,6 +37,10 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Hohe Beteiligung entsteht durch häufige Analyse der Marktdaten, das Erfinden neuer Indikatoren und Deutungen, das wiederholte Zeichnen von Trendlinien und das wiederholte Zählen von Elliott-Wellen.
+- Die Auswahl ist groß, welche Märkte verfolgt werden, welche Indikatoren gelten und wohin eine Trendlinie gelegt wird, und die Methoden werden vertraut, weil sie regelmäßig studiert und benutzt werden.
+- Früher Erfolg ist Glück; wer ihn erlebt, schreibt ihn wegen des Self-Attribution Bias eher der eigenen Expertise und der Wirksamkeit der Methoden zu als dem Zufall.
+- Zusammen können diese Faktoren ein unberechtigtes Gefühl erzeugen und erhalten, den Markt kontrollieren und marktüberlegene Renditen erzielen zu können.
 
 ## Regeln und Kriterien
 

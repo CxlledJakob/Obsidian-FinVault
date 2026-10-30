@@ -28,6 +28,10 @@ aktualisiert: 2026-10-30
 
 ## Funktionsweise
 
+- Die Verfügbarkeitsheuristik schätzt die künftige Wahrscheinlichkeit einer Ereignisklasse danach, wie leicht sie sich in den Sinn rufen lässt.
+- Das ist insofern berechtigt, als leichtere Erinnerung mit der vergangenen Häufigkeit zusammenhängt und Ereignisse, die früher häufiger waren, allgemein auch künftig wahrscheinlicher sind.
+- Recency und Lebhaftigkeit erhöhen die kognitive Verfügbarkeit, ohne etwas mit der historischen Häufigkeit zu tun zu haben, und sind deshalb für die Wahrscheinlichkeitsschätzung irrelevant.
+- Die Verfügbarkeitsheuristik führt nie zu einer Unterschätzung; der Fehler ist immer eine Überschätzung der Wahrscheinlichkeit.
 
 ## Voraussetzungen
 
@@ -48,6 +52,7 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Ein gerade geschehener und gut publik gemachter Flugzeugabsturz ist lebhaft und jüngst, und unmittelbar danach überschätzen viele die Wahrscheinlichkeit künftiger Abstürze und fürchten das Fliegen übermäßig.
 
 ## Unterschiedliche Quellenpositionen
 

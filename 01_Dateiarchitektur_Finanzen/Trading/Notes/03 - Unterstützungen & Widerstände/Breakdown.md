@@ -36,6 +36,11 @@ aktualisiert: 2026-10-30
 - Im beginnenden Abwärtstrend ziehen tiefere Preise zusätzliches Verkaufsvolumen an, statt es abzuschneiden. Daraus wird der Abwärtsausbruch.
 - Eine Bracket-Ausweitung nach unten trägt einen neuen Trend, sobald sie bei steigendem Volumen erfolgt.
 - Ein initiative Abwärtsbruch muss neues Geschäft anziehen und sich sofort fortsetzen. Ohne Follow-through hat die Sonde die Aktivität abgeschaltet.
+- Das Verkaufssignal des Schulter-Kopf-Schulter-Tops in der Abbildung ist die Kreuzung der Nackenlinie.
+- Die maximale erlaubte Zeit von der rechten Schulter, Punkt E, bis zur Penetration der Nackenlinie ist der zeitliche Abstand der beiden Schultern, Punkte A und E.
+- Die Abschlussregel ist erfüllt, wenn dieser zeitliche Abstand D4 kleiner ist als der Schulterabstand D3, und nicht erfüllt, wenn D4 größer als D3 ist.
+- Ein Leerverkaufssignal wegen Nackenlinienpenetration ist unzulässig, bis der Zigzag-Filter die rechte Schulter erkannt hat, weil der Kurs die Nackenlinie schon vorher kreuzen kann.
+- Liegt die rechte Schulter nur 4 Prozent über der Nackenlinie und beträgt die Zigzag-Schwelle 10 Prozent, wäre ein Einstieg nur 4 Prozent unter der Schulter günstiger als der erst nach einem Rückgang von 10 Prozent zulässige Punkt, und dieser günstigere Einstieg ist nicht zulässig.
 
 ## Risiken und Grenzen
 

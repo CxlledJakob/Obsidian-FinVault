@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendbestimmung"
@@ -10,22 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Trendrichtung
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der Zweck aller Methoden der Trendidentifikation ist, am zugrunde liegenden Rauschen einer Zeitreihe vorbeizusehen, an den erratischen Bewegungen, die bedeutungslos scheinen, und die aktuelle Richtung der Reihe zu finden.
 
 ## Kernaussagen
 
 
 ## Funktionsweise
 
+- Obwohl der Kanal eine konstante Rückschau auf der Zeitachse hat, passt sich seine vertikale Breite dynamisch der Spanne der Reihe über die letzten n Perioden an. Das kann Fehlsignale vermindern, die von steigender Volatilität statt von einer echten Richtungsänderung kommen.
+- Der gleitende Durchschnitt macht Trends kenntlich, indem er hochfrequente Schwankungen filtert und niederfrequente Anteile durchlässt. Seine Ausgabe ist im Wesentlichen der Trend der ursprünglichen Reihe, ohne die hochfrequenten Schwingungen um diesen Trend.
 
 ## Voraussetzungen
 
@@ -35,6 +36,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Der Kanalausbruch liest die Richtung als Long, wenn die untersuchte Reihe das Maximum der vergangenen n Perioden ohne die aktuelle Periode überschreitet, und als Short, wenn sie unter das n-Perioden-Minimum fällt.
+- Größere Rückschau macht den Kanal breiter und den Indikator unempfindlicher und identifiziert größere Trends. Getestet wurden 3, 5, 8, 12, 18, 27, 41, 61, 91, 137 und 205 Tage.
+- Trendregeln der Fallstudie erzeugen Long- und Short-Positionen anhand des aktuellen Trends der untersuchten Datenreihe.
 
 ## Risiken und Grenzen
 

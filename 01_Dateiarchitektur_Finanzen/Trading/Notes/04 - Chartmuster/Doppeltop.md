@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/04 - Chartmuster/04 - Chartmuster|04 - Chartmuster]]"
 weitere_hauptthemen: []
 unterthema: "Umkehrmuster"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Doppeltop
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die ersten Techniker sahen Doppeltops in den mäandernden Kursen von Aktien und Rohstoffen, so wie frühe Beobachter in zufälligen Sternanordnungen mythische Figuren sahen; solche Muster bilden das Lexikon der subjektiven Chartanalyse.
+- In Daten, die von einem rein zufälligen Prozess erzeugt wurden, erscheinen Formationen, die wie ein Doppeltop aussehen.
+- Das Auftreten von Doppeltops passt nicht zur intuitiven Vorstellung, Daten eines Zufallsprozesses seien völlig wahllos und formlos, und daraus wird zu Unrecht geschlossen, solche Formen stammten aus einem nichtzufälligen, für Prognosen nützlichen Prozess.
+- Roberts zeigte, dass Random Walks die Muster, an denen subjektive Techniker hängen, leicht nachzeichnen.
 
 ## Funktionsweise
 

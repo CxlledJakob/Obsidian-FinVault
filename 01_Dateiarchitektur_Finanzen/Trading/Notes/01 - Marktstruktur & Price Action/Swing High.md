@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Preisbildung"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Swing High
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,18 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Chang und Osler bauen das Schulter-Kopf-Schulter-Top aus fünf Pivots oder Preissumkehrpunkten, die drei Hochs und zwei Tiefs festlegen, bezeichnet mit A bis E.
+- Alle acht konsultierten Texte verlangen, dass das Kopfhoch C höher ist als die beiden Schulterhochs A und E.
+- Die Abbildung des Musters bezeichnet neben den drei Hochs auch ein vorheriges Hoch.
+- Hochs werden erkannt, nachdem der Preis von einem jüngsten Hoch um die festgelegte Schwellenprozentzahl gefallen ist.
+- Die Erkennung erfolgt mit Zeitverzug, nämlich der Zeit, die der Preis braucht, um den Schwellenbetrag zu durchlaufen.
+- Bei einer Schwelle von 5 Prozent wird ein Hoch erst erkannt, wenn der Preis um mindestens 5 Prozent vom jüngsten Maximum gefallen ist.
+- Der Kopf, Punkt C, muss höher sein als das linke Schulterhoch A und das rechte Schulterhoch E.
+- Für die verlangte vorherige Aufwärtsstruktur muss die linke Schulter über dem vorherigen Hoch liegen.
+- Horizontale Symmetrie verlangt, dass der Kopf ungefähr gleich weit von den beiden Schulterhochs entfernt ist: Der Abstand zu einer Schulter darf nicht größer sein als das 2,5-Fache des Abstands zur anderen.
+- An dem Wert 2,5 ist nichts Magisches; er erschien vernünftig.
+- Eine nach rechts oder links überdehnte Schulter scheidet aus.
+- Das Hoch der rechten Schulter, Punkt E, muss erkannt sein, bevor eine Nackenlinienpenetration als Signal gelten darf.
 
 ## Risiken und Grenzen
 

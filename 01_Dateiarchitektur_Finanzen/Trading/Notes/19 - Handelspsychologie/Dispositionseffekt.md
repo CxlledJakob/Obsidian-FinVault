@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Mentale Fehler"
@@ -10,19 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Dispositionseffekt
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der Dispositionseffekt soll erklären, warum Anleger Gewinner schnell verkaufen, um einen Gewinn sicher zu stellen, auch wenn er klein ist, und Verlierer halten, selbst wenn der Verlust viel größer werden kann.
 
 ## Kernaussagen
 
+- Anleger erhöhen ihre Steuerlast, indem sie gestiegene Aktien verkaufen und Verlustpositionen behalten.
+- Die Prospect Theory von Kahneman und Tversky aus dem Jahr 1979 erklärt, dass Anleger Verlustaktien halten und profitable Positionen verkaufen, um den psychischen Schmerz der Realisierung eines Verlusts zu vermeiden.
+- Werden Wahlmöglichkeiten als mögliche Gewinne gerahmt, wählen Anleger die Option, die am ehesten einen Gewinn bringt, auch wenn er unbedeutend ist.
+- Werden dieselben Wahlmöglichkeiten als mögliche Verluste gerahmt, nehmen sie das Risiko eines sehr großen Verlusts in Kauf, nur um die Sicherheit eines kleinen Verlusts zu vermeiden.
+- Die Prospect Theory von Kahneman und Tversky (1979) erklärt, dass Anleger verlierende Aktien halten und profitable Positionen verkaufen, um den psychischen Schmerz der Verlustrealisierung zu vermeiden.
+- Dieselbe Theorie erklärt, warum Anleger Spekulationen mit geringer Wahrscheinlichkeit und hohem Auszahlungsprofil überbewerten.
 
 ## Funktionsweise
 

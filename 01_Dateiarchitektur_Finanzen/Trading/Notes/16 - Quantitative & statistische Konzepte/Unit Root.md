@@ -19,6 +19,7 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Right-Tail-Unit-Root-Tests prüfen exponentielles Wachstum oder Kollaps unter einer autoregressiven Spezifikation.
+- Ein Unit-Root-Test ist ein Testtyp, mit dem festgestellt wird, dass eine Zeitreihe stationär ist.
 
 ## Kernaussagen
 
@@ -76,3 +77,6 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen
+
+- Alexander beschreibt diesen Test in Market Models auf den Seiten 324–328 und 353–361.
+- Der Operator YY machte, im Unterschied zur Kointegrationsanalyse, keinen expliziten Test darauf, ob die Residuen stationär sind.

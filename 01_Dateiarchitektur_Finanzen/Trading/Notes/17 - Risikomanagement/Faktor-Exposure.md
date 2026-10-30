@@ -24,6 +24,12 @@ aktualisiert: 2026-10-30
 
 - Die Risikoanteile summieren sich zu eins, und jeder Anteil liegt zwischen 0 und 1.
 - Wird die Kovarianz auf Preisänderungen statt auf Renditen gerechnet, kann statt der Gewichte ein Bestandsvektor verwendet werden.
+- Als Studien Überrenditen TA-basierter Strategien zeigten, erfanden Anhänger der Effizienzmarkthypothese neue Risikofaktoren und behaupteten, die Überrenditen seien nur Ausgleich für Risiken, die gerade dieser Strategie innewohnen.
+- Die Effizienzmarkthypothese behauptet nicht, Renditen über dem Markt seien unmöglich, sondern nur, dass höhere Renditen die Übernahme zusätzlichen Risikos verlangen.
+- Wären die Renditen der TA-Strategie wirklich Ausgleich für höheres Risiko, bliebe die Effizienzmarkthypothese trotz einer Rendite über dem Marktindex intakt.
+- Der Fehler lag darin, den Risikofaktor erst zu konstruieren, nachdem die TA-Studien vorlagen.
+- Wissenschaftlich korrekt wäre gewesen, den Risikofaktor vor der Studie zu definieren und vorherzusagen, dass ein Test der TA-Methode scheinbar marktschlagende Renditen erzeugt.
+- Stattdessen nahmen sich die Verteidiger die Lizenz, jederzeit einen neuen Risikofaktor zu erfinden, um widersprechende Befunde wegzuerklären, und machten die Hypothese damit unfalsifizierbar.
 
 ## Funktionsweise
 
@@ -45,6 +51,8 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Dieselbe nachträgliche Immunisierung war schon gegen Studien eingesetzt worden, in denen öffentliche Fundamentaldaten wie das Kurs-Buchwert-Verhältnis und das KGV Überrenditen erzeugten: Niedrige Werte beider Kennzahlen seien nur Signale für Aktien mit abnormal hohem Risiko.
+- Diese Risikofaktoren waren vor den Studien nicht definiert worden; nachträglich eigens erfundene Erklärungen dieser Art heißen Ad-hoc-Hypothesen.
 
 ## Unterschiedliche Quellenpositionen
 
