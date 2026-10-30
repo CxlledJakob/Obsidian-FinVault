@@ -50,5 +50,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- A Complete Guide to Volume Price Analysis.pdf, S. 20–39 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-002-p020-p039|S. 20–39]]
 
 ## Verwandte Themen

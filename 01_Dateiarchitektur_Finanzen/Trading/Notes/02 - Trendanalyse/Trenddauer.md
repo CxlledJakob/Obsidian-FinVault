@@ -51,5 +51,7 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 155–174 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-011-p155-p174|S. 155–174]]
+- A Complete Guide to Volume Price Analysis.pdf, S. 58–77 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-004-p058-p077|S. 58–77]]
+- A Complete Guide to Volume Price Analysis.pdf, S. 96–115 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-006-p096-p115|S. 96–115]]
 
 ## Verwandte Themen
