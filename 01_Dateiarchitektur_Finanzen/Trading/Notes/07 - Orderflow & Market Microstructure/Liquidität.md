@@ -62,5 +62,13 @@ aktualisiert: 2026-10-29
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 80–97 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-007-p080-p097|S. 80–97]]
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 98–117 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-008-p098-p117|S. 98–117]]
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 162–181 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-013-p162-p181|S. 162–181]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 27–46 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-003-p027-p046|S. 27–46]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 53–72 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-005-p053-p072|S. 53–72]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 72–78 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-006-p072-p078|S. 72–78]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 98–117 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-008-p098-p117|S. 98–117]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 136–155 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-010-p136-p155|S. 136–155]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 174–193 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-012-p174-p193|S. 174–193]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 288–296 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-018-p288-p296|S. 288–296]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 297–314 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-019-p297-p314|S. 297–314]]
 
 ## Verwandte Themen

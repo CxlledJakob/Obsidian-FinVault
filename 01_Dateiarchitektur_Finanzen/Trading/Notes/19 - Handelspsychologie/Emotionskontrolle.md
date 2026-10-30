@@ -67,5 +67,15 @@ aktualisiert: 2026-10-29
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 120–139 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-010-p120-p139|S. 120–139]]
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 139–158 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-011-p139-p158|S. 139–158]]
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 200–213 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-015-p200-p213|S. 200–213]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 79–98 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-007-p079-p098|S. 79–98]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 98–117 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-008-p098-p117|S. 98–117]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 212–231 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-014-p212-p231|S. 212–231]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 231–250 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-015-p231-p250|S. 231–250]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 269–288 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-017-p269-p288|S. 269–288]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 288–296 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-018-p288-p296|S. 288–296]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 297–314 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-019-p297-p314|S. 297–314]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 317–336 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-021-p317-p336|S. 317–336]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 336–355 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-022-p336-p355|S. 336–355]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 355–370 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-023-p355-p370|S. 355–370]]
 
 ## Verwandte Themen

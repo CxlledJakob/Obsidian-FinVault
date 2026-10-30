@@ -50,5 +50,7 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 250–269 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-016-p250-p269|S. 250–269]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 269–288 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-017-p269-p288|S. 269–288]]
 
 ## Verwandte Themen
