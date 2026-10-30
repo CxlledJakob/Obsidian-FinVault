@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Value Area Low
@@ -41,6 +41,23 @@ aktualisiert: 2026-10-29
 - Im balancierten Day-Timeframe ist die erwartete Abwärtsreaktion, dass tiefere Preise das Angebot bremsen. Der Kauf liegt dann unter dem wahrgenommenen Value.
 - Der Rücklauf in die Value Area ist der faire Preis des Tages.
 - Preise, die sich an den meisten Tagen ohne höheres Volumen zu weit von Value entfernen, laufen zum Mittel zurück.
+- Unter der Value Area des Vortags liegen responsive Kauf-TPOs und Initiative-Verkaufs-TPOs.
+- Kauf unter dieser Grenze ist responsiv, weil der Preis unter Value liegt. Dass die Auktion fällt und Käufer findet, genügt nicht.
+- Ist die frühe Verkaufsüberzeugung echt, muss die Auktion unter die Value Area des Vortags und am Ende unter das Tief des Vortags laufen.
+- Rotiert der Preis in die Value Area zurück, ohne dieses Tief ernsthaft anzugreifen, ist die Verkaufsüberzeugung widerlegt.
+- Echte frühe Verkaufsüberzeugung muss die Auktion unter die Value Area des Vortags führen, also unter das Value Area Low, und schließlich unter das Tief des Vortags.
+- Ein Buying Tail am Tief ist die entschiedene Ablehnung tieferer Preise und zeigt aggressives Other-Timeframe-Kaufen.
+- Klar tiefere Value ist offensichtliche Abwärts-Performance. Eine nur nach unten überlappende Value zeigt denselben Vorgang mit geringerem Ausmaß.
+- Ein Outside Day, der in der Mitte der Range schließt, ist Balance, ähnlich einem Neutral Day.
+- Bei relativ niedrigem Volumen sind Value Area und Range eng. In der Treasury-Bond-Studie vom 14. Dezember 1988 bis 22. Juni 1989 lag das Mittel bei 1 bis 5 Ticks Breite bei 127.000 Kontrakten und bei 6 bis 10 Ticks bei 188.000.
+- Bracket-Extreme können als wiederkehrende Tiefs der Value Area festgelegt werden.
+- Longs unter der Value Area des Brackets sind responsiv, weil diese Value Area in der Mitte des Brackets liegt.
+- Ist die Value Area abgelehnt, bietet das Value Area Low Widerstand gegen Aufwärtsauktionen.
+- Mit doppelten TPO-Prints innerhalb der Area entfällt dieser Widerstand, und ein vollständiger Durchlauf wird gut möglich.
+- Eine höhere Eröffnung, Handel unter die Value Area und Schluss auf dem Tief darunter zeigen Marktschwäche.
+- Je näher die Eröffnung an der Area liegt, desto eher wird das Value Area Low von unten durchstoßen.
+- Eine schmale Value Area erhöht diese Wahrscheinlichkeit gegenüber einer breiten mit hohem Volumen.
+- Für die TPO-Value-Area werden alle TPOs einschließlich der Single Prints gezählt. 70 Prozent dieser Zahl nähern 70 Prozent des Tagesvolumens an.
 
 ## Risiken und Grenzen
 
@@ -51,6 +68,7 @@ aktualisiert: 2026-10-29
 
 ## Unterschiedliche Quellenpositionen
 
+- Liegt die Value Area vollständig in der Value Area des Vortags, ist das ein Inside Day. Der Markt ist in Balance und erleichtert keiner Seite den Handel.
 
 ## Eigene Erkenntnisse
 

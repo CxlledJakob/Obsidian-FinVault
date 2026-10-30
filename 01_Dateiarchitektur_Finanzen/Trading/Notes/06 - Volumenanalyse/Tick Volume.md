@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Basisgrößen"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Tick Volume
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Tick Volume zählt die Anzahl der Geschäfte je Preis und nicht das Kontraktvolumen des einzelnen Geschäfts. Ein Tick kann zwei oder 2.000 Kontrakte sein.
 
 ## Kernaussagen
 
@@ -35,9 +34,13 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- An volumenarmen Tagen wie Feiertagen kann Tick Volume durch starke lokale Aktivität hoch ausfallen, während das echte Volumen niedrig ist.
+- Hohe Tick-Volume-Preise liegen meist nahe an den hohen TPO-Preisen und können das hohe Volumen schätzen.
+- Für Low-Volume-Bereiche ist der Volumenanteil je Preis das wichtigste Maß, danach Tails und einzelne TPO-Prints, und danach Tick Volume.
 
 ## Risiken und Grenzen
 
+- Wer Tick Volume nutzt, muss die zugrunde liegende Liquidität des Marktes stärker beachten.
 
 ## Beispiele
 

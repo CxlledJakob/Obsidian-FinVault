@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Value Area High
@@ -25,9 +25,11 @@ aktualisiert: 2026-10-29
 - Oberhalb dieser Grenze liegt der Preis von der Value entfernt, innerhalb sind Preis und Value dasselbe. Preise über der Value schrecken Käufer ab.
 - Die Grenze entsteht vom Point of Control aus: Die Summe der zwei Preise darüber wird mit den zwei darunter verglichen, die höhere Seite wird aufgenommen, bis 70 Prozent des Volumens erreicht sind.
 - Akzeptanz darüber sammelt TPOs auf dem neuen Niveau und verschiebt die Value Area. Ablehnung führt den Preis in die Area zurück, fast ohne Änderung der Volumenverteilung.
+- Die Lage der Value Area zum Vortag gehört zur Beurteilung, wer im Day-Timeframe die Kontrolle hat.
 
 ## Funktionsweise
 
+- Bei höherem Volumen wird die Value Area breiter und das Value Area High rückt weiter vom Value Area Low ab. Je weiter diese Spanne reicht, desto eher kommen neue Timeframes hinzu.
 
 ## Voraussetzungen
 
@@ -41,6 +43,20 @@ aktualisiert: 2026-10-29
 - Im balancierten Day-Timeframe sind Käufe an den oberen Preisniveaus Käufe über Value. Die Chancen stehen schlecht, dass der Preis Value anhebt.
 - Führt der Preis Value nach oben, kann ein Kauf oberhalb der Value Area trotzdem auf oder unter diesem Value liegen.
 - Käufer im oberen Viertel der Range handeln über der Value Area und sind dort wahrscheinlich eine Überreaktion auf das Momentum der Auktion.
+- Über der Value Area des Vortags liegen Initiative-Kauf-TPOs und responsive Verkaufs-TPOs.
+- Eine Eröffnung über der Value Area des Vortags, aber noch in dessen Range, kann anschließend über die Range-Extreme ausbrechen. Dann ist das Range-Potenzial in Ausbruchsrichtung unbegrenzt.
+- Preise über Value werden vom Other-Timeframe-Verkäufer per Selling Tail schnell abgelehnt. Je schneller die Ablehnung, desto stärker seine Präsenz auf diesem Niveau.
+- Klar höhere Value gegenüber dem Vortag ist offensichtliche Aufwärts-Performance. Eine nur nach oben überlappende Value ist derselbe Vorgang mit geringerem Ausmaß.
+- Ein Outside Day überlappt die Value Area des Vortags auch am oberen Extrem und zeigt größere Handelserleichterung. Ein Schluss auf den Hochs begünstigt den Käufer.
+- In Treasury Bonds vom 14. Dezember 1988 bis 22. Juni 1989 lag das durchschnittliche Volumen bei 11 bis 15 Ticks Breite um 284.000 Kontrakte, bei 21 bis 25 Ticks um 313.000 und bei 26 bis 35 Ticks um 417.000 auf kleiner Stichprobe.
+- Bracket-Extreme können als wiederkehrende Hochs der Value Area festgelegt werden, statt als Preisextreme.
+- Die Value Area des Brackets liegt in der Mitte. Shorts über dieser Value Area sind responsiv.
+- Ist die Value Area des Vortags durch eine Eröffnung außerhalb abgelehnt, bietet das Value Area High in der Regel Unterstützung gegen Tests zurück nach unten.
+- Doppelte TPO-Prints innerhalb der Area heben diese Stütze auf, und der Markt kann die Area vollständig durchlaufen.
+- Ein Schluss auf dem Hoch nach einem Lauf von unten durch die Value Area zeigt Marktstärke.
+- Je näher die Eröffnung an der Value Area liegt, desto größer ist die Chance, das Value Area High zu durchstoßen und die Area zu durchlaufen.
+- In einer schmalen Value Area ist diese Wahrscheinlichkeit höher als in einer breiten mit hohem Volumen.
+- Für die TPO-Value-Area werden alle TPOs einschließlich der Single Prints gezählt. 70 Prozent dieser Zahl nähern 70 Prozent des Tagesvolumens an.
 
 ## Risiken und Grenzen
 

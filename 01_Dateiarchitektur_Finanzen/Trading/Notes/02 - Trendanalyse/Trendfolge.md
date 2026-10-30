@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Trendfolge
@@ -38,6 +38,7 @@ aktualisiert: 2026-10-29
 - Entspricht die Balance der eigenen Zeitebene, wird der Ausbruch mitgenommen und auf Fortsetzung überwacht.
 - Bewertet wird das Risiko der Position. Überdurchschnittliches Risiko wird geschlossen, ein günstiges Chance-Risiko-Verhältnis eröffnet, danach die Fortsetzung geprüft.
 - Gängige Theorie im Aufwärtstrend: die Kanaluntergrenze kaufen und die Kanalobergrenze verkaufen. Ohne Absicherung kann aus dem Rücksetzer ein Abwärtsausbruch werden, der den Gewinn zurückgibt.
+- Trends verlangen eine weniger aktive Strategie.
 
 ## Regeln und Kriterien
 
@@ -52,6 +53,7 @@ aktualisiert: 2026-10-29
 - Trend und Bracket verlangen verschiedene Strategien, und der Markt kann Züge von beiden zugleich zeigen. Dauerhaft nur long und voll investiert zu bleiben unterscheidet sich vom Kaufen und Halten.
 - Ist das Short Covering abgeschlossen, bleibt weniger Kaufpotenzial, und der Markt kann schnell zum Mittel zurückkehren. Trendfolge-Positionen machen dann große Verluste.
 - Long Liquidation entzieht Verkaufspotenzial und legt oft eine Rally an, die deutlich über die Levels hinausgeht, die die Liquidation ausgelöst haben.
+- Trendfolgende Systeme brauchen anhaltende Preisbewegung. Im Bracket laufen sie oft gerade weit genug an, dann bleibt der Move stecken und der Markt dreht.
 
 ## Beispiele
 

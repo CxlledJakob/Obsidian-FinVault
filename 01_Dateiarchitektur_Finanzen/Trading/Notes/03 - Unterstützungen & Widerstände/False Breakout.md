@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # False Breakout
@@ -18,6 +18,7 @@ aktualisiert: 2026-10-29
 
 ## Kurzdefinition
 
+- Ein False Breakout liegt vor, wenn der Markt über oder unter die Balance schaut und keine Fortsetzung zeigt.
 
 ## Kernaussagen
 
@@ -42,6 +43,21 @@ aktualisiert: 2026-10-29
 - Der Abwärtsausbruch aus überlappendem Preis und Value scheitert, wenn das frühe Selling auf aggressive Responsive Buyer mit langem Buying Tail trifft.
 - Ein Test über einen bekannten Referenzpunkt wie ein früheres Hoch oder Tief prüft, ob dort Geschäft zu machen ist, und kehrt dann durch die Eröffnung zurück.
 - Ein gescheiterter Test in eine Richtung mit starker Umkehr sichert oft eines der Tagesextreme.
+- Ein initiative Ausbruch ohne sofortige Fortsetzung hat die Aktivität abgeschaltet und etabliert den Bruch nicht.
+- Die Extreme eines Open-Rejection-Reverse halten in der Regel weniger als die Hälfte der Zeit. Ein Retest der Opening Range ist dann wahrscheinlich.
+- Löscht Handel durch die Eröffnung den Tail eines Open-Drive, ist das Extrem nicht mehr gültig.
+- Wird der Eröffnungsausbruch jenseits der Range zurück in die Range abgelehnt, kann der Markt in die Gegenrichtung deutlich laufen. Die Range bleibt unbegrenzt, weil aus der Balance eröffnet wurde.
+- Öffnet der Markt zu weit über dem Hoch des Vortags ohne Fortsetzung, korrigieren responsive Verkäufer den Preis schnell zur zuvor akzeptierten Value.
+- Verkaufs-Range-Extension nach dem Open zeigt, dass der scheinbare Ausbruch zu weit aus der Balance lag und responsive Verkäufer den Preis zur Value zurückholen.
+- Der Test eines Extrems ohne Fortsetzung ist die subtilere Fehlform. Der Markt bricht danach in die Gegenrichtung aus.
+- Wird die Sonde abgelehnt, ist die Handelsrichtung zu drehen.
+- Scheitert die Auktion nach einer Eröffnung über der Vortagesrange und der Preis kehrt in diese Range zurück, ist der Bruch nach oben nicht bestätigt.
+- Ein Spike ist abgelehnt, wenn die nächste Session entgegen seiner Richtung eröffnet. Nach einem Buying Spike genügt die Eröffnung unter seiner Basis.
+- Lehnen responsive Teilnehmer den Bruch aus der Balance ab, kann der Preis plötzlich und kraftvoll durch die Value Area und die gesamte Range des Vortags laufen.
+- Eine Eröffnung unter einem Buying Spike lehnt die Aufwärtserkundung ab und ist bärisch, schwächer als eine Eröffnung unter einem Selling Spike.
+- Mehrere Tests eines Spike-Extrems in derselben Halbstundenperiode machen es wahrscheinlich, dass der Preis das Extrem durchhandelt. Doppelte TPOs in einer späteren Periode etablieren Value im Spike und heben die Referenz auf.
+- Testen Kurzfristhändler ein Balance-Extrem ohne neue Aktivität, folgt oft der Ausbruch in die Gegenrichtung.
+- Scheitert dieser Bruch in eine Richtung, handelt der Markt häufig zum gegenüberliegenden Extrem der Balance-Spanne.
 
 ## Risiken und Grenzen
 

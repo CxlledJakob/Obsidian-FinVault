@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Balance
@@ -48,6 +48,23 @@ aktualisiert: 2026-10-29
 - Balance gilt auf allen Zeitebenen: als einzelner Balancing Day, als kleinere Bereiche innerhalb eines Tages und als kürzere Balance, die einen langfristigen Trend unterbricht.
 - Das Alter eines Trends misst sich am Abstand aufeinanderfolgender Balance-Bereiche, nicht an der Preisbewegung: Abstand bedeutet jung, Annäherung oder Überlappung alternd.
 - Trends können in Bracketing-Märkten laufen, und langfristige Trends werden gelegentlich von kürzeren Balance-Bereichen unterbrochen.
+- Kundige schätzen, dass Märkte nur 20 bis 30 Prozent der Zeit trenden.
+- Im Bracket fehlt eine klare längerfristige Stimmung, deshalb wird ein einzelner Hinweis leicht übergewichtet.
+- Das Profil trennt kurzes Bracketing von einer potenziell tragfähigen, anhaltenden Preisbewegung.
+- Weil die Teilnehmer Value nach verschiedenen Kriterien beurteilen, kann eine Gruppe kurz dominieren und den Bracket-Prozess verstärken.
+- In der Balance ist die gerichtete Überzeugung gering. Häufig muss erst jenseits eines bekannten Referenzpunkts geprüft werden, ob neues Geschäft entsteht.
+- Two-Timeframe-Handel ohne klare Richtung entspricht der Bildung eines Day-Timeframe-Brackets.
+- Die meisten Handelstage entwickeln sich nicht zu einem reinen Two-Timeframe-Markt.
+- Ein Open-Auction in der Value lässt die möglichen Extreme der Tagesrange abschätzen.
+- Eine Ledge entsteht, wenn der Markt bei einem Richtungsversuch wiederholt den responsiven Teilnehmer anzieht und immer wieder an demselben Preis stehen bleibt. Sie ist Balance im Day-Timeframe.
+- Märkte verbringen etwa 70 Prozent der Zeit in einem Bracket, also einer Trading Range.
+- Märkte verbringen gewöhnlich 70 bis 80 Prozent der Zeit im Bracketing.
+- Fehlt die Richtungsüberzeugung, liegt der Markt die meiste Zeit in sehr kurzen Balance-Bereichen.
+- Dazwischen bricht er scharf auf ein neues Preisniveau aus und kehrt in die Balance zurück, bis anhaltende längerfristige Überzeugung kommt.
+- Ein Neutral Day zeigt Balance im Day-Timeframe und ist durch Range Extension auf beiden Seiten der Initial Balance gekennzeichnet. Käufer und Verkäufer der längeren Zeitebene führen darin ein vertikales Tauziehen.
+- Ein Bracket im Langfristprofil ist ein klar abgegrenzter Hochvolumenbereich, begrenzt durch langfristige Tails.
+- Was als Balance-Area gilt, hängt vom Timeframe ab: eine Ledge für den Daytrader, etwa fünf Tage überlappender Value für den Swingtrader, ein großes Bracket für den langfristigen Trader.
+- Kommt der Markt aus der Balance, beginnt eine neue Auktion.
 
 ## Funktionsweise
 
@@ -55,6 +72,7 @@ aktualisiert: 2026-10-29
 - Je enger die Bracket-Extreme, desto näher liegen die Value-Vorstellungen aller Timeframes. Je weiter sie auseinanderliegen, desto unterschiedlicher sind die Meinungen.
 - In der Balance gelten die Preise wieder als fair für den langfristigen Käufer und den langfristigen Verkäufer. Typisch ist ein abgegrenzter Bereich, oft mit überlappenden Value Areas.
 - Gegenbewegungen, die leicht 5 bis 10 Prozent des Trends zurücknehmen, können den Markt in Balance bringen und so die nächste wesentliche Trendstrecke vorbereiten.
+- Der Abstand vom Bracket-Hoch zum Bracket-Tief wird unabhängig von der Größe wie eine Tagesspanne behandelt, deshalb liegt die Value Area in der Mitte.
 
 ## Voraussetzungen
 
@@ -66,6 +84,8 @@ aktualisiert: 2026-10-29
 - Kauf an den oberen Preisen eines balancierten Day-Timeframes liegt über Value, mit schlechten Chancen, dass der Preis Value anhebt.
 - Gute kurzfristige Trades liegen oft innerhalb oder am Rand mittelfristiger Brackets.
 - Ein Markt in Balance bietet meist zwei Gelegenheiten: eine Auktion faden, die ein Bracket-Extrem erreicht und nicht fortgesetzt wird, oder den Breakout aus der Balance mitnehmen.
+- Ein Bracket wird enger geführt als ein Trend: die äußeren Grenzen werden bestimmt und die Gewinne dort schnell mitgenommen.
+- Wer mindestens diese drei Verläufe vorbereitet hat, bleibt beweglicher. Die Bewegung kann von Short Covering, Long Liquidation, einem externen Ereignis oder längeren Zeitebenen kommen.
 
 ## Regeln und Kriterien
 
@@ -111,15 +131,76 @@ aktualisiert: 2026-10-29
 - Innerhalb der Balance bleibt der Status quo; mit dem Verlassen ändert er sich, und in der Regel kommen weitere Zeitebenen hinzu.
 - Ziehen tiefere Preise weitere Verkäufer an, statt die Aktivität abzuschneiden, läuft die Auktion weiter, bis Käufer den Markt in die Balance zurückholen.
 - Ein enger Tag in Balance bietet nur begrenzte Gelegenheiten.
+- Ist die Initial Balance eng, ist die Chance größer, dass diese Basis kippt und Range Extension folgt. Eine breitere Basis hält die Tagesextreme eher.
+- Ein Normal Day ist eher die Ausnahme als die Regel.
+- Ein Normal Day entsteht durch frühen, schnellen Other-Timeframe-Einstieg, der eine breite Initial Balance setzt. Diese Basis wird danach nicht gebrochen, und der Preis balanciert zwischen den Extremen.
+- Ein Normal Day entsteht oft durch eine Meldung früh in der Session, die eine starke Other-Timeframe-Reaktion auslöst, bis die Gegenseite die Aktivität abschneidet.
+- Die Normal Variation hat typischerweise keine so breite Initial Balance wie der Normal Day. Die Basis kippt meist früh auf einer Seite durch Range Extension, danach wird der Handel zweiseitig und eine neue Balance entsteht.
+- Der Double-Distribution-Trend-Day hat nicht die stetige Überzeugung eines typischen Trend Day und muss nach einer starken Bewegung anhalten. Die neue Handelsspanne hält gewöhnlich bis zum Ende des Tages.
+- Ein Nontrend Day hat keine direktionale Überzeugung und liegt oft vor einer großen Wirtschaftszahl, einer Meldung oder einem Feiertag. Die Initial Range ist eng, doch das Other Timeframe bleibt aus und es gibt keine Range Extension.
+- Am Neutral Day liegen die Value-Sichten nahe, selten aber auf demselben Preis. Other-Timeframe-Käufer und -Verkäufer handeln nicht miteinander, sondern mit dem Local.
+- Die Basis eines Neutral Day liegt in der Breite zwischen Trend Day und Normal Day. Sie kippt nicht leicht, hält die Tagesextreme aber auch nicht.
+- Ist nur eine Other-Timeframe-Seite aktiv, entsteht eine Imbalance, und der Tag wird eher ein Trend Day oder eine Normal Variation.
+- Ein Neutral-Center-Day schließt mit dem Preis in der Mitte der Range und zeigt geringe Überzeugung sowie Balance zwischen beiden Other-Timeframe-Seiten.
+- Ein Neutral-Extreme-Day schließt am Hoch oder am Tief. Schluss am oberen Extrem bedeutet höhere Überzeugung des Käufers, Schluss am Tief höhere des Verkäufers.
+- Ein Bracket-Markt läuft oft gerade weit und schnell genug, um trendfolgende Systeme auszulösen, und dreht dann in die andere Richtung.
+- Die Preise an den Bracket-Extremen sind die Referenz, an der ein neuer Trend oder die Fortsetzung des Brackets abgelesen wird.
+- Wird der Preis über oder unter einem bekannten Bracket-Extrem akzeptiert, kann die Balance enden.
+- Mindestens eine Stunde Auktion innerhalb der Value Area des Vortags ist Akzeptanz und damit Balance. Das Potenzial einer dynamischen Bewegung sinkt.
+- Ein Open-Auction innerhalb der Range stellt gewöhnlich einen Nontrend-, Normal- oder Neutral-Tag in Aussicht. Ein frühes Extrem hält dann nur mit geringer Wahrscheinlichkeit den ganzen Tag.
+- Ein Open-Auction außerhalb der Range führt oft zu Double-Distribution-Trend-Days.
+- Wird innerhalb der Value akzeptiert, überschreitet die Tagesspanne die Länge der Vortagesspanne selten.
+- Bleibt die Eröffnung in Balance, fällt die Range ähnlich aus wie die vorige Bewegung.
+- Eine Eröffnung außerhalb der Value, aber innerhalb der Range, ist weniger balanciert als eine Eröffnung in der Value. Die Range ähnelt dem Vortag und überlappt zu einer Seite.
+- Eine Eröffnung außerhalb der Range ist aus der Balance. Richtung und Kraft lassen sich kaum schätzen, das Range-Potenzial ist unbegrenzt.
+- Dann rotieren aufeinanderfolgende Perioden übereinander und erzeugen keine anhaltende Preisbewegung. Kein Other-Timeframe-Teilnehmer hat die Kontrolle.
+- Zieht eine Preisprobe jenseits eines bekannten Referenzpunkts keine neue Aktivität an, kehrt der Markt in den Two-Timeframe-Handel zurück.
+- Liegt der Markt in einer Trading Range an Unterstützung oder Widerstand und bricht der Preis durch, entsteht eine Trendsituation.
+- Auktioniert der Preis mehr als ein paar Ticks von der Ledge weg, werden Trades in Ausbruchsrichtung gesetzt, außer bei fremden Bedingungen wie Nachrichten.
+- Der obere Bracket-Rand kann eine starke Rally bremsen. Bricht der Preis durch das Bracket, setzt die Rally in der Regel mit erneuerter Kraft fort.
+- Dieselbe entstehende Struktur innerhalb der Range des Vortags ist potenziell weniger wichtig als bei einem Markt, der relativ zum Vortag aus der Balance ist.
+- Auktionsrotationen innerhalb des High-Volume-Bereichs des Vortags zeigen Balance und geben Zeit für Ein- oder Ausstieg.
+- Hohe und niedrige Volumenbereiche können am selben Tag zusammen auftreten, wenn der Markt von einem balancierten Zwei-Timeframe-Markt zu One-Timeframe-Handel wechselt oder umgekehrt.
+- Ein Outside Day liegt vor, wenn die Value Area die Value Area des Vortags an beiden Extremen überlappt, und steht für größere Handelserleichterung.
+- Schließt ein Outside Day in der Mitte der Range, ist der Markt in Balance, ähnlich einem Neutral Day. Ein Schluss auf den Hochs begünstigt den Käufer.
+- Eine Eröffnung in der mittleren Hälfte der Tagesspanne zeigt geringe direktionale Überzeugung in beide Richtungen.
+- Bleibt die Value unverändert, gilt der Tag als balancierend. Niedrigeres Volumen macht daraus bei einem Aufwärtsversuch zusätzlich ein Schwächerwerden und bei einem Abwärtsversuch ein Stärkerwerden.
+- Ein Abwärtsversuch mit nur überlappend tieferer Value und unverändertem Volumen ist mäßig schwach und balancierend: Der Markt läuft weiter, wird aber langsamer und kommt in Balance, oder er steht in einem allmählichen Übergang.
+- Die Bracket-Extreme können wiederkehrende Hochs und Tiefs der Value Area sein oder die Preisextreme aus Excess. Einigkeit über die Balance-Area legt die Extreme noch nicht fest.
+- Im großen Sample testet der Markt ein Bracket-Extrem im Mittel drei- bis fünfmal, bevor er mit Überzeugung neue Niveaus aufsucht.
+- Der Preis läuft gewöhnlich nicht geradlinig von einem Bracket-Extrem zum anderen, sondern schwankt über die Mitte.
+- Der langfristige Übergang ist durch Excess markiert, das eine anhaltende Folge in die Gegenrichtung bestätigt. Er liegt vor, wenn Initiative-Teilnehmer den Preis stärker kontrollieren als die responsiven Teilnehmer.
+- In den kurzfristigen Balance-Bereichen gibt es wenig Gelegenheit, weil die Richtungsüberzeugung fehlt.
+- Die scharfen Preisstöße zwischen den Balance-Bereichen dauern nur kurz und bieten hohe Gelegenheit.
+- Bis anhaltende Überzeugung da ist, bleibt der Zeitrahmen kurz. Über Nacht wird nur gehalten, wenn substanzielle strukturelle Belege dafür sprechen.
+- Ist die vorangegangene Bewegung wirklich stark, entsteht die folgende Balance nahe an ihrem Extrem oder darüber.
+- Schließt der Neutral Day nahe der Mitte, ist die Kontrolle ausgeglichen. Schließt er an einem Extrem, gibt es einen klaren Sieger, und der Folgetag eröffnet wahrscheinlich in Richtung dieser Schlusstätigkeit.
+- In 92 Prozent der Fälle handelte der Markt in den ersten 90 Minuten innerhalb oder besser als die Value Area des Vortags, in 64 Prozent jenseits der Area in Schlussrichtung. Zum Schluss des Folgetags fielen die Anteile auf 73 und 45 Prozent.
+- Eine Eröffnung innerhalb eines Spikes zeigt, dass der Markt balanciert. Zweiseitiger, rotierender Handel entsteht dann wahrscheinlich den ganzen Tag innerhalb oder nahe der Spikespanne.
+- Wird die Balance gestört, sind die Preisbewegungen oft plötzlich und kraftvoll.
+- Gelegentlich kippt der Markt zuerst in eine Richtung und bricht dann entgegen aus. Kurzfristhändler testen das Extrem der Balance-Area auf neue Aktivität; bleibt sie aus, tritt die Gegenseite mit Überzeugung ein.
+- Vor einer geplanten Großmeldung haben die anderen Zeitebenen ihre Positionen oft schon ausgeglichen. Der Tag oder die beiden Tage davor bleiben dann häufig bei den Locals und den kürzeren Tradern.
+- In einem Balance-Markt gibt es drei wahrscheinliche Verläufe: in der Balance bleiben, über oder unter die Balance schauen und ohne Fortsetzung scheitern, oder über oder unter die Balance schauen und beschleunigen.
+- Das Scheitern ohne Fortsetzung heißt Breakout Failure. Scheitert der Ausbruch in eine Richtung, handelt der Markt häufig zum gegenüberliegenden Extrem der erkannten Balance-Spanne.
+- Beschleunigung über oder unter die Balance vollendet den Breakout. Das sind Mitgeh-Gelegenheiten.
+- Eine Eröffnung nur vier Ticks unter dem Hoch des Vortags liegt noch in der Balance.
+- Liegt die Eröffnung so knapp unter dem Hoch, ist ein Lauf nach oben aus der Balance wahrscheinlicher, sonst beginnt der Handel in Richtung des Tiefs des Vortags.
+- Je weiter die Eröffnung aus der Balance liegt, desto höher ist die Chance, dass das andere Timeframe verantwortlich ist.
+- In der Balance ist die Chance deutlich höher, dass der Day-Timeframe den Handel dominiert.
+- Je näher die Eröffnung an der Mitte der Vortagesrange liegt, desto geringer ist der Anlass, früh zu handeln.
+- Je näher die Eröffnung an den Extremen des Vortags liegt, desto eher kann ein früher Einstieg nützen.
 
 ## Risiken und Grenzen
 
+- Die Neutral-Extreme-Anteile stammen aus Treasury Bonds vom 24. Juni 1986 bis 12. August 1987. Andere Märkte verhalten sich anders, und alle Märkte ändern sich mit der Zeit.
+- Das dabei entstehende Niedrigvolumen ist gefährlich, weil Gerüchte und Prognosen den Preis wild rotieren lassen.
 
 ## Beispiele
 
 
 ## Unterschiedliche Quellenpositionen
 
+- Ein Inside Day ist hier ein Tag, dessen Value Area vollständig in der Value Area des Vortags liegt. Der Markt ist dann in Balance und erleichtert keiner Seite den Handel.
 
 ## Eigene Erkenntnisse
 
@@ -166,3 +247,4 @@ aktualisiert: 2026-10-29
 - Trendmarkt
 - Korrekturbewegung
 - Trendfortsetzung
+- Excess

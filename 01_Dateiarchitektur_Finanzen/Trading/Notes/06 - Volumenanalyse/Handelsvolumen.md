@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Handelsvolumen
@@ -34,6 +34,8 @@ aktualisiert: 2026-10-29
 - Volumen ist die Kraft, die nötig ist, um eine voll entwickelte Verteilung mit definiertem Mittel zu verlassen.
 - Eine neue Value Area entsteht nur, wenn diese Kraft vorhanden ist. Schneiden höhere Preise die Aktivität ab, kehrt der Preis in der Regel zum Mittel zurück.
 - Volumenanalyse ist zwingend, um die Inventurlage anderer Day-Timeframe-Trader und das Handeln der längeren Zeitebenen zu verstehen.
+- Steht die versuchte Richtung fest, ist Volumen das vorrangige Maß der direktionalen Performance und das beste Maß dafür, wie gut Handel erleichtert wird. Je mehr Transaktionen, desto besser ist die Erleichterung.
+- Die Kombination aus Zeit und Volumen sagt mehr als Volumen allein.
 
 ## Funktionsweise
 
@@ -41,6 +43,9 @@ aktualisiert: 2026-10-29
 - Fallender Preis bei steigendem Volumen ist bärisch. Fallender Preis bei fallendem Volumen ist neutral oder bullisch.
 - Wo der elektronische Handel Volumen sofort erfasst, sind Zeit, Preis und Volumen in Echtzeit transparent. Zuvor wurde Volumen als Preis mal Zeit geschätzt.
 - Preisbewegung und Volumen werden im Verhältnis zum Mittel gelesen, um die Auktion auf Fortsetzung zu prüfen.
+- Hohe Volumenkonzentrationen entstehen, wenn der Markt relativ lange in einer engen Preisspanne handelt und beide Seiten aktiv sind. Der Preis verlangsamt sich, weil der Bereich als fair gilt.
+- Im kürzeren Timeframe ist das die jüngste Wertwahrnehmung und zieht den Preis an. Ist die laufende Auktion ausgesprochen stark, kehrt der Preis gar nicht erst in den alten High-Volume-Bereich zurück.
+- Die Beurteilung hat drei Schritte: zuerst die versuchte Richtung, dann die Erleichterung über das Volumen, dann die Wirkung dieser Erleichterung auf die Lage der Value Area.
 
 ## Voraussetzungen
 
@@ -48,6 +53,7 @@ aktualisiert: 2026-10-29
 
 ## Anwendung im Trading
 
+- Das neue Volumen wird mit dem alten Volumen im Rahmen getrennter Richtungsbewegungen verglichen.
 
 ## Regeln und Kriterien
 
@@ -89,12 +95,35 @@ aktualisiert: 2026-10-29
 - Ohne beträchtliches Volumen weg vom Tages-Mean werden diese Preise wahrscheinlich wieder besucht.
 - Der Vergleichsrahmen für das Tagesvolumen liegt bei 1,6 Milliarden Aktien unten und 2 Milliarden oben; 1,8 Milliarden galt zusammen mit Gap, Elongation und Close nahe dem Tief als Fortsetzung.
 - Volumen der Auktion ist neben der sich entwickelnden Value-Area-Lage und einem elongierten Profil ein Faktor für das Vertrauen der Auktion.
+- Je länger der Preis von einem solchen Akzeptanzbereich wegbleibt, desto geringer wird die Wirkung des hohen Volumens. Für Day- und Swing-Trader bremst es den Preis noch lange genug für Ein- oder Ausstieg.
+- Die Preise mit dem größten Anteil am Tagesvolumen sind die Zone, in der die Auktionsrotationen der nächsten Session sich verlangsamen sollen.
+- Fehlen echte Volumenzahlen, sind die hohen TPO-Preise um den Point of Control das zweitbeste Maß. Der dicke Mittelteil des vorigen Profils liegt meist auf denselben Preisen.
+- Hohes Volumen ist kein starrer Boden und keine starre Decke. Wird der Preis unter dem Bereich akzeptiert, hat sich die Wertwahrnehmung geändert.
+- Ist die Richtung aufwärts, das Volumen mindestens durchschnittlich und die Value höher, wird auf höheren Preisen erfolgreich Handel erleichtert. Ist das Volumen dabei niedriger, schneiden die höheren Preise die Aktivität ab.
+- Solange das exakte Volumen fehlt, schätzt die Breite der Value Area das Volumen. Eng sind Value Area und Range bei niedrigem Volumen, weit bei hohem Volumen.
+- Eine begrenzte Treasury-Bond-Studie vom 14. Dezember 1988 bis 22. Juni 1989 zeigte deutlich mehr Volumen bei breiterer Value Area, von 127.000 Kontrakten bei 1 bis 5 Ticks bis 313.000 bei 21 bis 25 Ticks und 417.000 bei 26 bis 35 Ticks auf kleiner Stichprobe.
+- Solange sich nichts Wesentliches geändert hat, verlangsamt sich der Preis oft beim Wiedereintritt in einen zuvor akzeptierten Hochvolumenbereich, weil der Markt dort erneut Zeit handelt.
+- Eine schmale Value Area zeigt schwache Handelsfazilitation und geringeres Volumen. Sie wird leichter durchlaufen als eine breite Value Area mit hohem Volumen, weil Volumen den Preis bremst.
+- Im Trend zeigt das Langfristprofil relativ niedriges Volumen und eine elongierte Struktur.
+- Ein typischer Nontrend Day ist volumenarm, mit kleiner Range und dürftiger Aktivität.
+- Das Overnight-Volumen beträgt oft nicht mehr als 25 Prozent des Volumens der Pit-Session.
+- Bei einem Poor High oder Poor Low liegt das Volumen oft unter dem relativen Volumen der letzten Tage.
+- Die Value Area wird mit den tatsächlichen Preis-Volumen-Zahlen gerechnet oder, wenn kein Volumen vorliegt, durch TPOs angenähert.
+- In die TPO-Zählung gehen alle TPOs einschließlich der Single Prints ein. 70 Prozent dieser Zahl nähern 70 Prozent des Tagesvolumens an.
+- Kontrolliert der Day-Timeframe, ist das Volumen tendenziell niedriger.
+- Ein Preis, der über die Zeit nicht akzeptiert wird, ist abgelehnt.
+- Späte Liquidation oder Short Covering in der Pit-Session kann daher kommen, dass den Day-Tradern die Zeit ausgeht, und nicht nur daher, dass Volumen fehlt.
+- Volumen ist im Verhältnis zur Zeit zu lesen, weil das prominente Einzelniveaus eher glättet.
+- Die Wirkung eines Moves mit niedrigem Volumen setzt häufig verzögert ein.
+- Volumen ist an einem Handelstag nur eines von mehreren Elementen.
 
 ## Risiken und Grenzen
 
 - Treibt Angst und Emotion einen Flight-to-Safety, spielen Preis und Volumen keine Rolle.
 - Beim Abbau dieser Trades kehrt der Markt in Bereiche zurück, deren Preisbewegungen nicht von gesundem Volumen getragen waren, und kann sie durchstoßen.
 - Auch wenn eine One-Timeframing-Auktion vom Volumen nicht gestützt wird, wird sie nicht gefadet.
+- Das Niedrigvolumen am Tag oder an den beiden Tagen vor einer Großmeldung ist gefährlich, weil Gerüchte und Prognosen den Preis wild rotieren lassen.
+- Volume Profiles allein kennzeichnen oft falsche Anomalien, etwa das Hoch oder Tief des Vortags.
 
 ## Beispiele
 

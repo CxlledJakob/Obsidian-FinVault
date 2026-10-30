@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Volumendivergenz
@@ -37,6 +37,16 @@ aktualisiert: 2026-10-29
 - Auktionen in Trendrichtung haben in manchen Fällen weniger Volumen als Tage, an denen der Markt gegen den Trend läuft.
 - Neue Hochs bei Volumen am unteren Ende der üblichen Spanne widersprechen der Stärke, die Volumen über dem oberen Ende verlangen würde.
 - Ziehen höhere Preise weniger Volumen an, ist das Mittel unter dem aktuellen Preis geblieben. Die Chance ist hoch, dass der Preis auf diese Niveaus zurückkehrt.
+- Ein Aufwärtsversuch mit niedrigerem Volumen, aber höherer Value, lässt nach und ist noch nicht schwach.
+- Ein Aufwärtsversuch mit niedrigerem Volumen und tieferer Value ist schwach. Der längere Verkäufer kontrolliert dann trotz Day-Timeframe-Kaufdominanz, und der Markt muss tiefer, um wieder zu balancieren.
+- Höheres Volumen bei Value gegen die versuchte Richtung bleibt unklar, sowohl aufwärts mit tieferer Value als auch abwärts mit höherer Value.
+- Ein Abwärtsversuch mit niedrigerem Volumen und höherer Value ist stark. Dieselbe Richtung mit niedrigerem Volumen und tieferer Value lässt nur nach.
+- Der Preis kann weiter in die versuchte Richtung laufen, während die Odds der Fortsetzung sinken, weil Volumen und Struktur schlecht sind.
+- Über mehrere Sessions kann die Bewegung weiterlaufen, während Volumen und Profilstruktur nachlassen.
+- Ist das Profil zu elongiert, läuft der Preis oft weiter, das Ergebnis ist aber häufig das Gegenteil von Fortsetzung.
+- Je höher der Markt steigt, ohne dass Struktur und Volumen bestätigen, desto besser wird die Abwärtsgelegenheit.
+- Value kann höher entstehen, während das Profil strukturelle Schwäche und nachlassendes Momentum zeigt.
+- Die Wirkung eines Moves mit niedrigem Volumen auf den Markt setzt oft verzögert ein.
 
 ## Risiken und Grenzen
 

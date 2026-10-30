@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Volume Profile
@@ -31,21 +31,62 @@ aktualisiert: 2026-10-29
 - Die Value Area liegt in der Mitte und umfasst etwa 70 Prozent des Volumens, eine Standardabweichung der Glockenkurve.
 - Value ist stabiler als der Preis und zeigt das eigentliche Momentum. Der Preis kann höher sein, während Value unverändert oder sogar tiefer ist.
 - Ein symmetrisches Profil ist balanciert und bietet auf beiden Seiten symmetrische Chance und symmetrisches Risiko. Ein unsymmetrisches Profil zeigt Imbalance.
+- Das Market-Profile-Diagramm ist selten glockenförmig und häufiger schief. Das nimmt ihm nicht den Wert als Lehrmodell der Verteilung.
+- Begrenzt die Zeit einen Anstieg, wird der fairste Preis prominenter als die umliegenden Preise. Ein gesünderer Markt zeigt ein stärker elongiertes Profil.
+- Das Tagesprofil besteht aus Halbstundenauktionen, ein Wochenprofil aus fünf Tagesprofilen.
+- Tagesprofil, 10-Tage-Swing-Profil und einmonatiges Langfrist-Profil zeigen dieselben Strukturen, darunter Gaps, Brackets, Trends, Bereiche hohen und niedrigen Volumens, Excess und Tails.
+- Werden die Tage ab dem Start einer Bewegung aufeinandergelegt, entsteht ein anderes Bild als beim isolierten Lesen.
+- Ein Ausbruch nahe dem Tagesende kann nicht mehr in den folgenden Perioden geprüft werden. Folge und Überzeugung beurteilt erst der nächste Tag.
+- Das Langfristprofil ist im Trend volumenarm und elongiert, im Bracket ein Hochvolumenbereich zwischen langfristigen Tails.
+- Derselbe Open, dasselbe High, Low und Close zeigen im eindimensionalen Bar nicht, dass die Preise ungleich sind. Das Profil zeigt Zeit und Volumen auf jedem Preis.
+- Ein Volume Profile ist nicht mit dem Market Profile zu verwechseln.
+- Es zeigt das genaue Volumen je Preis, einschließlich Relative Volume, und die Kontraktzahl der Session.
+- Was das Volume Profile nicht zeigt, ist wichtiger als die Anzeige.
+- Volume Profiles allein kennzeichnen oft falsche Anomalien, etwa das Hoch oder Tief des Vortags.
 
 ## Funktionsweise
 
+- Das Market Profile glättet Verzerrungen wie hohes Volumen zur Eröffnung sowie statistische Referenzen wie Overnight-Hoch und Overnight-Tief, die im Moment irreführen können.
+- Das Market Profile ist ein passives Messgerät. Es bildet die Marktaktivität in der Gegenwart ab.
+- Je breiter die Preiszeile von rechts nach links, desto mehr Zeit lag auf diesem Preis. Preis mal Zeit schätzt das Volumen je Preis.
+- Die Schätzung über TPOs ist nicht perfekt, gibt aber mehr her als Volumen ohne Zeit.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Ein Balkenchart ist der beste Weg, visuelle Referenzen wie Hochs und Tiefs von Trading Ranges zu erkennen.
+- Sobald eine neue Richtungsauktion vermutet wird, beginnt ein neues Market Profile.
+- Es gibt keine einzelne einfache Antwort. Volume Profile und Market Profile sind nebeneinander zu vergleichen.
 
 ## Regeln und Kriterien
 
+- Volume Profile und Market Profile können einander entsprechen oder sich widersprechen. Sie werden nebeneinander gelesen, um zu sehen, was die Abweichung zeigt.
+- Die Buchstaben der Halbstundenperioden unterscheiden sich je nach Kursanbieter und Börse. Entscheidend ist nur, dass sie Abschnitte von 30 Minuten sind.
+- Die Value Area lässt sich über TPOs oder über tatsächliche Preis- und Volumenzahlen berechnen.
+- Die Schluss-Spanne ist die letzte Anzeige des Tagessentiments. Sie dient als Referenz gegen den Open des Folgetags, um eine Änderung dieses Sentiments zu erkennen.
+- Elektronischer Handel zeigt das Volumen auf jedem Preis. Die Initial Balance ist heute etwas unschärfer, meint aber weiter die frühe Handelsaktivität.
+- Short Covering ohne neues Kaufen bildet ein P, ein halbfertiges Profil. Long Liquidation bildet oft ein b.
+- Die Form P oder b allein belegt diese Muster nicht.
+- Eine Ledge sieht aus wie eine halbierte Normalverteilung, als wäre das Profil durchgeschnitten.
+- Fehlen echte Volumenzahlen, sind die hohen TPO-Preise um den Point of Control das zweitbeste Maß für hohes Volumen. Der dicke Mittelteil liegt meist auf denselben Preisen.
+- Ein Open-Drive außerhalb der Range des Vortags zeigt im Profil einen Trend Day. Ein Open-Auction in der Value zeigt einen balancierteren Handelstag.
+- Niedriges Volumen erscheint im Profil wie Excess durch Gaps, einzelne TPO-Prints und Tails.
+- Einzelne TPO-Prints zwischen den Verteilungen eines Double-Distribution-Selling-Trend-Tages zeigen die schnelle Ablehnung der ersten Verteilung auf dem Weg zu tieferer Value.
+- Hohe und niedrige Volumenbereiche können im selben Tagesprofil stehen, wenn der Markt von Zwei-Timeframe-Balance zu One-Timeframe-Handel wechselt oder zurück.
+- Die Halbstundenrotationen des Profils gleichen den täglichen Auktionsrotationen. Dieselbe Aktivität erzeugt Excess im Tag und auf längerer Ebene, nur über andere Zeitlängen.
+- Akzeptanz in der Value Area des Vortags zeigt sich an doppelten TPO-Prints. Danach kann der Markt diese Area vollständig durchlaufen.
+- Ein Spike ist der schnelle Lauf weg von etablierter Value in den letzten Zeitperioden und beginnt mit der Ausbruchsperiode.
+- Ein 3-to-I-Profil zeigt Initiative Tail, TPO-Count und Range Extension in dieselbe Richtung.
+- Ein Neutral-Day-Profil hat Range Extension auf beiden Seiten der Initial Balance. Der Schluss in der Mitte oder am Extrem zeigt, ob die Kontrolle ausgeglichen ist oder ein Sieger feststeht.
+- Ein Preis ohne Akzeptanz über die Zeit ist abgelehnt.
+- Zu lesen ist, ob das Volumen in einem rotierenden Markt oder als Teil eines Trends verteilt wird.
 
 ## Risiken und Grenzen
 
+- Langfristige Composite-Profile können Gaps sowie Hochs und Tiefs von Trading Ranges verdecken.
+- Auf absoluter Volumenbasis wirken einzelne prominente Niveaus wichtiger, als sie sind.
 
 ## Beispiele
 

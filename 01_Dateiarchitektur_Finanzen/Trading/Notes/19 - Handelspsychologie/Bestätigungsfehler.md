@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Bestätigungsfehler
@@ -31,6 +31,8 @@ aktualisiert: 2026-10-29
 - Es werden Muster gesucht, die die eigenen Überzeugungen stützen, und auch Muster gesehen, die es nicht gibt.
 - Das Gehirn filtert alles außer dem heraus, was am meisten den eigenen Interessen dient. Das schafft vorübergehend Komfort, nicht Profitabilität.
 - Ohne große Vorsicht hängt das, was man sieht, oft stärker davon ab, was man erwartet oder zu sehen hofft, als von dem, was wirklich da ist.
+- Der Markt kann im Day-Timeframe eine Täuschung über die langfristige Richtung erzeugen, wenn man zu angestrengt nach bestimmten Bedingungen sucht und nur einige ihrer Merkmale sieht.
+- Rationalisierung kann eine starke Schwerkraft sein. Wer das nicht versteht, dem hilft auch große Marktkenntnis wenig.
 
 ## Funktionsweise
 
@@ -49,6 +51,8 @@ aktualisiert: 2026-10-29
 - Eine Anomalie, die normale Erwartungen bricht, wird anfangs heftig abgewehrt. Die Mehrheit mit Interesse am bestehenden Zustand weist die frühen Erkenner zurück; die Nachzügler erkennen die Verschiebung, wenn kaum noch Gelegenheit bleibt.
 - Der Experte bleibt flexibel: A führt unter den Bedingungen X und Y zu B und unter anderen Bedingungen zu C.
 - Das Market Profile hält psychologisch und intellektuell ehrlich.
+- Eine starke bärische Voreingenommenheit kann den Abwärtslauf nach einer Eröffnung deutlich über der Vortagesrange für Verkäuferkontrolle halten. Bleibt die Value höher etabliert, kann längerfristig der Käufer führen.
+- Die Erwartung, Märkte seien geordnet und leicht verständlich, ist der falsche Start.
 
 ## Risiken und Grenzen
 

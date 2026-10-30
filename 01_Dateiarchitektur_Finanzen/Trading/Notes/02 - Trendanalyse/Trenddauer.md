@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/02 - Trendanalyse/02 - Trendanalyse|02 - Trendanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Trendbestimmung"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Trenddauer
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Dauer eines Trends hängt weitgehend vom Altern seiner ursprünglichen Teilnehmer ab sowie von Talent und Überzeugung des neuen Geschäfts, das hereinkommt.
 
 ## Funktionsweise
 
@@ -35,6 +34,7 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Eine langfristige Tendenz wird sichtbar, wenn Range Extension an aufeinanderfolgenden Tagen fortläuft.
 
 ## Risiken und Grenzen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Two-Way Auction
@@ -33,12 +33,27 @@ aktualisiert: 2026-10-29
 - Die Auktion wirbt mit dem Preis, um Volumen fair und wettbewerblich zu verteilen. Das Volumen entscheidet, ob eine Abweichung von der Value hält.
 - Unter der Value werden Verkäufer abgeschreckt und über der Value Käufer. Steht die Value Area, stoppt eine Bewegung weg vom Wert die Auktion, bis der Preis ins Gleichgewicht zurückkehrt.
 - Zieht die Abweichung mehr Volumen an, statt sie abzuschalten, müssen die Teilnehmer ihre Value neu festlegen.
+- Im Bracket kann eine Teilnehmergruppe kurz dominieren und den Zwei-Wege-Prozess verstärken, weil die Kriterien für Value auseinanderlaufen.
+- Geringe gerichtete Überzeugung beim Open-Rejection-Reverse bedeutet einen zweiseitigen Tag, der zwischen Käufer und Verkäufer des anderen Timeframes balanciert.
+- Im Two-Timeframe-Markt teilen sich Other-Timeframe-Käufer oder -Verkäufer die Kontrolle mit dem Day-Timeframe-Teilnehmer. Der Preis rotiert ohne klare Richtung auf und ab.
+- Die meisten Tage werden kein reiner Two-Timeframe-Markt. Die Entwicklung enthält Geben und Nehmen.
+- Im Day-Timeframe ist die Auktion entweder One-Timeframe oder Two-Timeframe. Ein Bracket ist die langfristige Two-Timeframe-Form, ein Trend die langfristige One-Timeframe-Form.
+- Dieselbe Übergangsbetrachtung gilt für die langfristige Auktion. Im Bracket sind Käufer und Verkäufer des längeren Timeframes beide anwesend und aktiv, und die langfristige Richtungsüberzeugung fehlt.
+- Es gibt zu jedem Verkäufer einen Käufer, doch die Seiten sind nicht gleich stark. Sie handeln in verschiedenen Zeitebenen, und ihre Handlungen haben unterschiedliches Gewicht.
+- Die Imbalance zwischen den Zeitebenen treibt die Two-Way-Auction.
 
 ## Funktionsweise
 
 - Die Struktur des Market Profile entsteht durch diesen Two-Way-Auction-Prozess. Jeder Tag ergibt dazu das Maß der Veränderung gegenüber früheren Perioden.
 - High, Low und Value Area entstehen in beliebiger Reihenfolge, vom Open bis zum Close, und stehen erst fest, wenn das Tagesprofil vollständig ist.
 - Die kleineren Balancebereiche im Bracket entstehen durch den kürzerfristigen Zwei-Wege-Prozess.
+- Die Initial Balance ist bei den meisten Rohstoffen die Spanne der ersten zwei Zeitperioden, also der ersten Stunde; im S&P ist sie etwas länger. Darin suchen die Locals eine Spanne für zweiseitigen Handel, in der Käufer und Verkäufer dem Geschäft zustimmen.
+- Two-Timeframe-Handel bedeutet, dass Other-Timeframe-Käufer, Other-Timeframe-Verkäufer und der Local den Auktionsprozess gemeinsam tragen.
+- Auch bei naher Value-Sicht handeln Other-Timeframe-Käufer und -Verkäufer selten miteinander. Sie handeln mit dem Local, dem Mittler.
+- Die Aktivität entspricht einem Day-Timeframe-Bracket. Aufeinanderfolgende Perioden rotieren übereinander, ohne eine anhaltende Bewegung zu erzeugen.
+- In einer engen Preisspanne mit beiden aktiven Seiten verlangsamt sich der Preis, um zweiseitigen Handel aufzunehmen. Der Bereich gilt als fair, und das Volumen baut sich über die Zeit auf.
+- Langfristige Auktionsrotationen bestehen aus derselben One-Timeframe- oder Two-Timeframe-Aktivität, aufgezeichnet über einen längeren Zeitraum.
+- Die längste Zeitebene handelt meist mit den schwächeren Day- und Kurzfrist-Händen. Deren Inventar gerät aus der Balance, und es folgen Short-Covering-Rallyes oder Long-Liquidation-Brüche.
 
 ## Voraussetzungen
 
@@ -46,6 +61,7 @@ aktualisiert: 2026-10-29
 ## Anwendung im Trading
 
 - Ist ein Bracket erkannt, sucht die Strategie Swing-Trades an seinen Extremen.
+- Es braucht mehr Geduld, weil die Kontrolle des Other Timeframe später sichtbar wird, wenn überhaupt.
 
 ## Regeln und Kriterien
 
@@ -55,6 +71,17 @@ aktualisiert: 2026-10-29
 - In einer Balance-Umgebung ist eine Folge solcher Auktionen zu erwarten.
 - Ein klassisches Bracket braucht eine Serie höherer und tieferer zwischenfristiger Auktionen.
 - Ob die Auktion zwischenfristig ist, entscheidet die zurückgelegte Strecke, nicht die Dauer.
+- One-Timeframe ist die einseitige Gegenform. Jede weitere Periode reicht im Verkauf gleich tief oder tiefer, ohne das Hoch der vorigen Periode zu überschreiten; im Kauf entsprechend ohne das vorige Tief zu unterschreiten.
+- Am Neutral Day zeigt Range Extension auf beiden Seiten der Initial Balance, dass alle Timeframes beteiligt sind und der Markt in Balance ist. Ist nur eine Seite aktiv, entsteht statt der zweiseitigen Auktion eine Imbalance.
+- Dieser Zustand ist typisch für Normal Days, Normal Variation Days und Neutral Days.
+- Ist nur eine Seite in Kontrolle, liegt kein Two-Timeframe-Markt vor, sondern ein One-Timeframe-Markt.
+- Zieht eine Sonde über einen bekannten Referenzpunkt keine neue Aktivität an, kehrt der Markt zum Two-Timeframe-Handel zurück.
+- Mehr Zeit auf einem Preisniveau zeigt zweiseitigen Handel, an dem Other-Timeframe-Käufer und -Verkäufer wahrscheinlich beide aktiv sind.
+- Bricht der Preis aus einer Trading Range an Unterstützung oder Widerstand, wird aus dem Two-Timeframe-Handel ein Trend.
+- Ein balancierter Zwei-Timeframe-Markt kann in One-Timeframe-Handel übergehen und umgekehrt. Dabei können hohe und niedrige Volumenbereiche am selben Tag zusammen auftreten.
+- An einem Neutral Day führen Käufer und Verkäufer der längeren Zeitebene im Day-Timeframe ein vertikales Tauziehen.
+- Eine Eröffnung innerhalb eines Spikes führt voraussichtlich den Tag über zu zweiseitigem, rotierendem Handel innerhalb oder nahe der Spikespanne.
+- Sind die Nachzügler fertig, ist der Markt in der Regel bereit, in die Gegenrichtung zu auktionieren. An einem Rally-Hoch können neue Nachzügler-Longs und endlich deckende Nachzügler-Shorts hineingezogen werden.
 
 ## Risiken und Grenzen
 
@@ -105,3 +132,5 @@ aktualisiert: 2026-10-29
 - Auction Market Theory
 - Mean Reversion
 - Volume Profile
+- Balance
+- Initiative Activity

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Trendstärke
@@ -21,6 +21,7 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Stärke und Dauer eines Trends hängen weitgehend vom Altern der ursprünglichen Teilnehmer und von Talent und Überzeugung neuen Geschäfts ab.
 
 ## Funktionsweise
 
@@ -41,6 +42,9 @@ aktualisiert: 2026-10-29
 - Gegenauktionen, die stärker sind als der Trend oder ihm mindestens gleichkommen, zeigen einen gealterten oder nicht mehr tragfähigen Aufwärtstrend.
 - Ein ermüdeter Trend erzeugt mehr Volatilität, ohne noch viel gerichteten Fortschritt zu liefern.
 - In der späten, nachlassenden Phase liegt die nächste Balance auf oder innerhalb der vorherigen, oder die Balancebereiche überlappen fortlaufend.
+- Der über Tage verglichene Rotation Factor misst die Stärke und die relative Änderung der langfristigen Überzeugung. Er allein bestimmt nicht die künftige Richtung.
+- Anhaltende Range Extension über mehrere Zeitperioden zeigt, dass der Handel in dieser Richtung besser ermöglicht wird.
+- Range Extension an aufeinanderfolgenden Tagen zeigt eine langfristige Tendenz. Initiative-Buying-Range-Extension weist dann auf starke Käufer des anderen Timeframes hin.
 
 ## Risiken und Grenzen
 

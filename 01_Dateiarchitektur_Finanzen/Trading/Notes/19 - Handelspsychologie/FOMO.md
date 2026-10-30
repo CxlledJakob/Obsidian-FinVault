@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # FOMO
@@ -35,6 +35,7 @@ aktualisiert: 2026-10-29
 
 - Ein verpasster großer Move wird zu spät nachgekauft, mit schlechter Trade-Location und überhöhtem Risiko.
 - Ein letzter Aufwärts-Spike zieht die verbliebenen Käufer hinein; gewöhnlich ist die Auktion erst danach vorbei.
+- Zur Eröffnung sind die meisten zu begierig, aus Angst eine Gelegenheit zu verpassen.
 
 ## Risiken und Grenzen
 

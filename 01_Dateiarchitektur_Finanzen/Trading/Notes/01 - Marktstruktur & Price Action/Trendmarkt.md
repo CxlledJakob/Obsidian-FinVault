@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Trendmarkt
@@ -40,6 +40,22 @@ aktualisiert: 2026-10-29
 - Große Trends gelten als langfristig, Bracket-Märkte als zwischenfristig. Das sind zwei verschiedene Zeitebenen.
 - Ein Trendmarkt umfasst den einzelnen Trend Day ebenso wie Trends innerhalb eines Brackets.
 - Der Wechsel zwischen Trending und Bracketing ändert das erwartete Ergebnis. Wer die Umordnung nicht bemerkt, erwartet ein Ergebnis, das nicht eintritt.
+- Es gibt zwei Trend-Day-Arten: den Standard-Trend-Day und den Double-Distribution-Trend-Day.
+- Am Trend Day bildet der Open in der großen Mehrheit der Fälle das Hoch oder das Tief, weil das Other Timeframe gewöhnlich ab der Eröffnung führt.
+- Ein Trend startet durch Initiative des anderen Timeframes, das den Preis langfristig weg von der Value sieht.
+- Im Aufwärtstrend werden Teilnehmer vieler Zeitebenen zu Käufern, bis niemand mehr übrig ist. Dann setzt der responsive Verkäufer ein, und das Bracket beginnt.
+- Ein One-Timeframe-Markt ist ein Trendmarkt des Day Timeframe: Der Preis läuft über längere Zeit in eine Richtung, kontrolliert fast ganz vom Other-Timeframe-Käufer oder -Verkäufer.
+- Ein Nontrend Day ist ebenfalls ein One-Timeframe-Markt, die Kontrolle liegt aber beim Local und nicht beim Other Timeframe.
+- Gelegentlich beginnt der Tag im Two-Timeframe-Modus und wird zum One-Timeframe-Markt. Das Profil kann rotierend aussehen, obwohl eine Seite die Kontrolle schon übernommen hat.
+- Ein Trend Day ist das Beispiel ohne Wechsel: One-Timeframe über den ganzen Tag. Die meisten Tage werden kein reiner Trendmarkt.
+- Stärke und Dauer eines Trends hängen weitgehend vom Altern der ursprünglichen Teilnehmer ab und von Talent und Überzeugung des neuen Geschäfts.
+- Der Day-Timeframe kann eine langfristige Richtung vortäuschen. Öffnet der Markt deutlich über der Range des Vortags und auktioniert den ganzen Tag abwärts, scheint der Verkäufer zu führen; bleibt die Value höher, kann längerfristig der Käufer führen.
+- Ein Trend ist ein langfristiger One-Timeframe-Markt, ein Bracket ein langfristiger Two-Timeframe-Markt.
+- Je stärker die Überzeugung, die den Trend trägt, desto größer ist das Excess, das seinen Anfang gewöhnlich setzt.
+- Frühe Trendaktivität ist ausgeprägter, mit mehr Range Extensions, elongierten Profilen und substanziellen Tails.
+- In der frühen Phase gibt es keine gute Trade Location, weil der Preis bei echtem Trend die Value fortlaufend führt.
+- Korrektur ist für die Gesundheit eines Trends wichtig.
+- Im Trend zeigt das Langfristprofil relativ niedriges Volumen und eine elongierte Struktur.
 
 ## Funktionsweise
 
@@ -49,6 +65,11 @@ aktualisiert: 2026-10-29
 
 ## Anwendung im Trading
 
+- Trends verlangen eine weniger aktive Strategie.
+- Der Trend-Trade wird angesetzt und liegengelassen. Die Überzeugung ist stark, die Gewinnerwartung relativ hoch, und der Markt erledigt den Rest.
+- Die Trades liegen in Richtung des Drives, möglichst nah am getesteten Extrem. Wer auf den Rücksetzer wartet, verpasst die Bewegung oft.
+- Ein laufendes Profil ab der Periode des möglichen Wechsels, etwa einem Tail oder Breakout, macht den Übergang in den One-Timeframe-Markt sichtbar.
+- Bei Auktionen, die das längere Timeframe treibt, wechseln anpassungsfähige Day-Trader vom rotationalen Handel zum Momentum-Handel.
 
 ## Regeln und Kriterien
 
@@ -81,17 +102,50 @@ aktualisiert: 2026-10-29
 - Hält die Zuversicht eines Open-Drive an, elongiert das Profil, und die Value wird allmählich mit dem Preis gezogen.
 - Am Tag nach einem Open-Drive wird eine Eröffnung außerhalb der Value in Richtung des Open-Drive erwartet, oder die Value beginnt außerhalb der Value Area des Vortags zu entstehen.
 - Ein elongiertes Profil zeigt auf einen Blick höheres Vertrauen als ein Profil, das beginnt, dicker zu werden.
+- Das Profil eines Trend Day ist dünner und länger als das einer Normal Variation und an keinem Punkt gewöhnlich mehr als vier oder fünf TPOs breit.
+- One-Timeframe-Bedingungen zeigen Other-Timeframe-Kontrolle und einen möglichen Trend Day. Im Kauf unterschreitet keine Periode das Tief der vorigen, im Verkauf überschreitet keine das Hoch der vorigen.
+- Der Double-Distribution-Trend-Day ist in den ersten Stunden wenig aktiv und hat eine sehr kleine Initial Balance. Später entsteht eine zweite Balance-Region, und dem Tag fehlt die stetige Überzeugung eines typischen Trend Day.
+- Die zweite Verteilung ist durch einzelne TPO-Prints getrennt und hält gewöhnlich den Rest des Tages. Kehrt der Preis in diese Prints zurück, ist sie nicht mehr Value.
+- Ein Trendmarkt endet, wenn der Preis zwischen zwei bekannten Referenzpunkten hin- und herauktioniert und ein Bracket bildet.
+- Ein neuer Trend beginnt, wenn der Preis das Bracket verlässt und über die Zeit akzeptiert wird.
+- Ein Open-Drive spricht für einen Trend Day oder einen Normal Variation Day.
+- Beim Open-Rejection-Reverse ist ein Trend Day unwahrscheinlich. Erwartet wird ein zweiseitiger Normal Day oder Normal Variation Day.
+- Ein Open-Auction innerhalb der Range führt eher zu einem Nontrend-, Normal- oder Neutral-Tag als zu einem großen Trend Day.
+- Ein Open-Auction außerhalb der Range kann ein Trend Day werden, häufig ein Double-Distribution-Trend-Day.
+- Ein Trend Day zeigt hohe Überzeugung des Other Timeframe und Range Extension in eine Richtung über mehrere Perioden.
+- Verkaufskontrolle zeigt sich, wenn der Käufer den Preis in zwei oder mehr Folgeperioden nicht über das Auktionshoch der Vorperiode dreht.
+- Eröffnet der Markt jenseits der Range des Vortags und läuft in Ausbruchsrichtung weiter, entsteht gewöhnlich ein Trend Day.
+- Normal Day, Normal Variation und Neutral Day sind Two-Timeframe-Märkte und keine Trendmärkte.
+- Ein Kontrollwechsel entsteht oft, wenn der Preis nahe den Tagesextremen oder darüber hinaus auktioniert und die Fortsetzung fehlt. Danach läuft die Auktion aggressiv in die Gegenrichtung.
+- Ein Neutral Day ist das Beispiel für den Wechsel von One-Timeframe in eine Richtung zu One-Timeframe in die Gegenrichtung.
+- Ein Open-Drive außerhalb der Range des Vortags lässt sofort einen Trend Day mit anhaltender Bewegung erkennen. Ein Open-Auction in der Value weist auf einen balancierteren Handelstag hin.
+- Begrenzt die Zeit den Anstieg, wird der fairste Preis prominenter als die umliegenden Preise. Ein gesünderer Markt zeigt ein stärker elongiertes Profil.
+- Ein Profil in Form eines P oder b belegt für sich weder Short Covering noch Long Liquidation.
+- Fortlaufende Range Extension über aufeinanderfolgende Tage zeigt eine langfristige Tendenz des Marktes.
+- Eine perfekte Übergangsregel gibt es nicht. Eine Woche aufeinanderfolgend höherer Value Areas kann für einen Swing-Trader ein Trend sein, ein jahrelanger Trend für ein sehr langes Timeframe nur Teil eines größeren Brackets.
+- Der Übergang liegt vor, wenn Initiative-Teilnehmer den Preis stärker kontrollieren als responsive Teilnehmer. Langfristig ist er durch Excess markiert, das eine anhaltende Folge in die Gegenrichtung bestätigt.
+- Ein Aufwärtstrend beginnt gewöhnlich mit dem aggressiven längeren Käufer und mit Excess als langfristigem Buying Tail oder als Buying Gap.
+- Eine Break-away Gap entsteht in der frühen Phase eines langfristigen Trends und wird von neuen Initiative-Teilnehmern mit starker Richtungsüberzeugung getragen.
+- One-Timeframing im steigenden Markt heißt, dass das Tief der nächsten Woche das Tief der Vorwoche nicht unterschreitet.
+- Im fallenden Markt nimmt das Hoch der nächsten Woche das Hoch der Vorwoche nicht heraus.
+- One-Timeframing kommt in allen Timeframes vor, und in den meisten Fällen wird mit seiner Richtung gehandelt.
+- Ein solider Aufwärtsversuch ist elongiert, und die meisten Preise ziehen nicht mehr als fünf oder sechs TPOs an.
+- An einem soliden Tag schließt der Markt eher nahe dem oberen Ende der Range.
+- Zu unterscheiden ist, ob das Volumen in einem rotierenden Markt oder als Teil eines Trends verteilt wird.
+- Welches Timeframe kontrolliert, ist vorrangig.
 
 ## Risiken und Grenzen
 
 - Der Markt verbringt typischerweise mehr Zeit in überlappenden Brackets als im Trend.
 - Trends enden, weil die Teilnehmer auf erkannte Muster handeln und sie damit aus dem Markt entfernen. Ein Markt ist kein unveränderliches physikalisches System.
+- In einem starken Trend ist die Richtung auch ohne Profil erkennbar.
 
 ## Beispiele
 
 
 ## Unterschiedliche Quellenpositionen
 
+- Märkte verbringen etwa 70 Prozent der Zeit in einer Trading Range oder einem Bracket.
 
 ## Eigene Erkenntnisse
 

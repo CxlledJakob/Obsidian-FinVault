@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Auction Market Theory
@@ -54,6 +54,25 @@ aktualisiert: 2026-10-29
 - Odds sind hier Schlüsse aus dem beobachteten Verhalten, keine nach festen mathematischen Regeln berechneten Wahrscheinlichkeiten.
 - Märkte sind nicht effizient. Was bereits geschehen ist, verändert die Chancen späteren Verhaltens.
 - Die Auktion sucht fortlaufend nach neuer Aktivität. Das ist Teil der Informationsfindung.
+- Der Auktionsprozess des Futures-Marktes ist kein Random Walk.
+- Die fortlaufende Auktion sucht die Balance zwischen den beiden Hauptkräften der Bewegung, dem Other-Timeframe-Käufer und dem Other-Timeframe-Verkäufer.
+- Das Other Timeframe ist subjektiv und reicht von mehreren Tagen, manchmal ein Swing Trade, bis zu mehreren Monaten. Es trennt diese Teilnehmer vom Local, der nur im kürzesten Timeframe handelt.
+- Eine langfristige Auktion ist eine Folge von Tagesauktionen. Die Kontrolle im Day-Timeframe gilt nur für diesen einen Tag und ist nicht abschließend.
+- Wohin der Markt zu laufen versucht und ob ihm das gelingt, sind die zwei Fragen, an denen sich die Vermittlung von Handel entscheidet.
+- Hat nur ein Teilnehmer die Kontrolle, meist der Other-Timeframe-Käufer oder -Verkäufer, ist der Markt ein One-Timeframe-Markt. Das kennzeichnet einen Trend Day.
+- Ein Nontrend Day ist ebenfalls ein One-Timeframe-Markt. Die Kontrolle liegt dann allein beim Local.
+- Teilen sich Other Timeframe und Day Timeframe die Kontrolle, läuft der Markt im Two-Timeframe-Modus. Das ist typisch an Normal Days, Normal Variation Days und Neutral Days.
+- Die meisten Tage werden weder ein reiner One-Timeframe- noch ein reiner Two-Timeframe-Markt. Die Entwicklung enthält in der Regel Geben und Nehmen.
+- Follow-through misst, wie gut der Markt eine Richtung auktioniert. Fehlende Fortsetzung wiegt ebenso schwer wie gelungene.
+- Pausen und ein Test in die Gegenrichtung gehören zu jedem Trend. Sie prüfen, ob der Markt zu weit gelaufen ist oder weiter sondieren muss.
+- Jede Tagesauktion ist ein Beitrag zur langfristigen Auktion. Dieselben Konzepte gelten für die langfristige Analyse.
+- Die versuchte Richtung ist erst zusammen mit der Frage belastbar, ob die Auktion in diese Richtung gut gelingt.
+- Ein Bracket ist ein langfristiger Two-Timeframe-Markt, ein Trend ein langfristiger One-Timeframe-Markt. Die langfristigen Auktionsrotationen haben dieselbe Form wie im Day-Timeframe, nur über einen längeren Zeitraum.
+- Durch scheinbar zufällige Auktionen organisiert sich der Markt selbst und erfüllt damit seinen Zweck, Handel zu ermöglichen.
+- Der Auktionsprozess ist in allen Zeitebenen derselbe. Das Langfristprofil zeigt die Aktivität der längeren Zeitebene über Bereiche hohen und niedrigen Volumens.
+- Lange vor der Bekanntgabe ist die Konsensmeinung bereits in die Aktivität eingebaut. Die Reaktion auf die tatsächlichen Zahlen zeigt dann die wahre Stärke oder Schwäche.
+- Dass es zu jedem Verkäufer einen Käufer gibt, stimmt, blockiert aber das Verstehen der Auktion. Käufer und Verkäufer sind nicht gleich stark, weil verschiedene Zeitebenen ihren Handlungen unterschiedliches Gewicht geben.
+- Die Imbalance zwischen den Zeitebenen treibt den Auktionsprozess. Die längste Zeitebene handelt meist mit den schwächeren Day- und Kurzfrist-Händen und bringt deren Inventar aus der Balance.
 
 ## Funktionsweise
 
@@ -61,6 +80,12 @@ aktualisiert: 2026-10-29
 - Die Struktur entsteht durch eine Two-Way Auction. Jeder Tag ergibt Range, Value Area, High, Low und das Maß der Veränderung gegenüber früheren Tagen, Wochen oder Monaten.
 - Liegt der Preis für die Verkäufer eines Timeframes unter Value, steigt die Auktion schnell, weil wenige Gebote ausgeführt werden. Über Value und bei nachlassender Nachfrage übersteigen die Angebote die Gebote, und die Auktion dreht.
 - Sichtbar wird der Prozess in einer Grafik aus Preis, Zeit und Volumen.
+- Im Day-Timeframe bestätigt die Zeit den Preis. Value liegt an der größten Tiefe der Glockenkurve, dort wo am längsten gehandelt wurde: Preis mal Zeit gleich Value.
+- Käufer und Verkäufer des anderen Timeframes handeln nicht direkt miteinander. Der Local vermittelt zwischen den externen Orders.
+- Vor der Eröffnung läuft die Auktion bereits, fast nur mit Teilnehmern des anderen Timeframes, und sie wiegt für die Richtung oft so schwer wie der Handel des Tages.
+- Im One-Timeframe-Markt auktioniert der Preis über längere Zeit in eine Richtung und wird fast ganz von einer Seite kontrolliert.
+- Zeit ist der Regler des Marktes und erzeugt die Strukturen, die später gelesen werden. Zeit gibt das Signal, die Struktur die Bestätigung.
+- Steht die versuchte Richtung fest, wird die direktionale Performance an drei Vergleichsgrößen gemessen: Volumen, Lage der Value Area und Breite der Value Area.
 
 ## Voraussetzungen
 
@@ -82,9 +107,25 @@ aktualisiert: 2026-10-29
 - Sie können den Markt in Balance bringen und damit die nächste wesentliche Strecke des Trends vorbereiten.
 - Märkte gehen selten direkt vom Bullenmarkt in den Bärenmarkt oder umgekehrt, sondern zuerst in einen Seitwärtsmarkt über.
 - Ist dieser Seitwärtsmarkt abgeschlossen, kehrt der Markt zum bisherigen Trend zurück oder beginnt eine neue Auktion in die Gegenrichtung.
+- Ist die Auktion einmal im Gang, kann Wettbewerb den Preis über Niveaus treiben, die anfangs als zu hoch abgelehnt wurden.
+- Das Other Timeframe tritt auch ein, wenn externe Information es überzeugt. Warum es eintritt, ist nicht immer erkennbar.
+- Oft muss der Markt erst brechen, um zu steigen, oder steigen, um zu brechen. Die Teilnehmer brauchen die Kenntnis dessen, was unter den Tiefs oder über den Hochs liegt, bevor sie mit Überzeugung auktionieren.
+- In der großen Mehrheit der Fälle setzt die erste halbe Stunde eines der Tagesextreme.
+- Über oder unter einem bekannten Referenzpunkt trägt entweder neue Initiative-Aktivität die Fortsetzung, oder die Auktion scheitert an der Fortsetzung.
+- Dieselbe entstehende Marktstruktur innerhalb der Range des Vortags ist potenziell weniger wichtig, als wenn sie entsteht, während der Markt relativ zum Vortag aus der Balance ist.
+- Läuft der Preis höher und begrenzt die Zeit den Anstieg, wird der fairste Preis gegenüber den umliegenden Preisen prominenter. Ein gesünderer Markt zeigt ein stärker elongiertes Profil.
+- Die versuchte Richtung wird an Auktionsrotationen, Range Extension, langfristigem Excess und Buying- oder Selling-Composite-Days abgelesen. Das sind nur Indikatoren des Versuchs; das volle Bild braucht die langfristige direktionale Leistung.
+- Kauf-Composite, positiver Rotation Factor, Initiative Buying Tails, Range Extension und höhere Value sind zusammen ein einstimmiger Hinweis auf einen Aufwärtsversuch.
+- Widersprechen sich die direktionalen Maße, heben sie sich auf. Der Markt ist dann weniger sicher über seinen direktionalen Kurs.
+- Ist die größere Auktion aufwärts und die Meldung bärisch, gilt ein aufwärts laufender Tag als sehr stark und ein abwärts laufender Tag als neutral und erwartet.
+- Information wirkt nicht, bevor jemand danach handelt. Haben die Nachzügler gehandelt, ist der Markt in der Regel bereit, in die Gegenrichtung zu auktionieren.
+- Im erwarteten Verlauf sinkt das Volumen bei steigenden Preisen, weil höhere Preise die Käufer abschneiden. Die Auktion endet beim letzten Gebot.
+- Im unerwarteten Verlauf steigt das Volumen, weil fortlaufend neue Bieter hinzukommen. Solche Auktionen enden oft in einem Aufwärtsstoß, wenn die Nachzügler eintreffen.
+- Kommen am Start keine höheren Gebote, wird das Gebot gesenkt, damit die Auktion überhaupt in Gang kommt.
 
 ## Risiken und Grenzen
 
+- Sich allein auf die versuchte Richtung zu stützen, ohne die Wirksamkeit der Auktion zu messen, kann zu schweren Verlusten führen.
 
 ## Beispiele
 

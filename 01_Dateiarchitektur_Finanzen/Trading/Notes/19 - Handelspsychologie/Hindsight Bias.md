@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Mentale Fehler"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Hindsight Bias
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Hindsight Bias zeigt sich daran, dass der passende Trade im Rückblick leicht zu sehen ist, während das Ausführen in der Lage selbst extrem schwer war.
 
 ## Kernaussagen
 
+- Das Vertrauen, einen solchen Trade auch zu nehmen, entsteht durch wiederholtes eigenes Erleben dieser Lagen.
+- Im Nachhinein wirkt ein Balance-Area-Bruch leicht. In den seitlichen Tagen davor ist der Einstieg mit der Initiative schwer und fühlt sich spät an, obwohl er meist früh ist.
+- Die Range eines Nonconviction Day wirkt im Nachhinein, als hätte es mehrere gute Gelegenheiten gegeben. In der Situation fehlen Referenzpunkte, und die Preisrotation ist zufällig.
 
 ## Funktionsweise
 
@@ -38,6 +40,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Schwer wird es, wenn der Trade der jüngsten Marktaktivität widerspricht. Die Angst davor stört rationales Handeln, auch bei verstandenem Muster.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Rotation
@@ -22,25 +22,57 @@ aktualisiert: 2026-10-29
 ## Kernaussagen
 
 - Im Intraday-Handel, von Minuten bis Stunden, können an einem Tag mehrere rotierende Auktionen auftreten.
+- In einem Trend pausiert der Markt und testet in die Gegenrichtung, um zu prüfen, ob er zu weit gelaufen ist oder weiter sondieren muss.
+- Auktionsrotationen sind die strukturellen Spuren des Rotationskampfs zwischen den längeren Teilnehmern.
+- Ein Bracket ist ein langfristiger Two-Timeframe-Markt, ein Trend ein langfristiger One-Timeframe-Markt.
+- Im Bracket wirken die Sonden zur Akzeptanz von Value oft bis hin zur zufälligen Rotation ungeordnet. In manchen Fällen ist diese Zufälligkeit real.
 
 ## Funktionsweise
 
 - Liegt der Preis für das eigene Timeframe über Value und lässt die Nachfrage nach, übersteigen die Angebote die Gebote, und die Auktion läuft in die Gegenrichtung.
+- Im Bracket dreht der responsive Käufer den Preis nach oben zurück, nachdem der Verkäufer ihn durch die Equilibrium-Spanne abwärts auktioniert hat.
+- Die Halbstunden-Auktionsrotationen zeigen, welcher Teilnehmer den Preis gerade kontrolliert.
+- Der Rotation Factor misst objektiv die versuchte Tagesrichtung anhand der Halbstunden-Auktionsrotationen.
+- Der Rotation Factor ist die Summe der Halbstunden-Auktionsrotationen des Tages und misst damit die versuchte Richtung.
+- Im Day-Timeframe haben die Auktionen entweder One-Timeframe- oder Two-Timeframe-Form. Langfristige Auktionsrotationen sind dieselbe Aktivität über einen längeren Zeitraum.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Im Two-Timeframe-Markt braucht es mehr Geduld, weil die Kontrolle des Other Timeframe erst später sichtbar wird, falls überhaupt.
+- Wer die Bracket-Extreme einzeichnet, kann künftige Auktionsrotationen und die passende Trade Location sichtbar machen.
 
 ## Regeln und Kriterien
 
 - Ist keine versuchte Richtung erkennbar, war der Markt wahrscheinlich balanciert, und die Auktionen haben relativ gleich zwischen Hoch und Tief rotiert.
 - In einem solchen Tagesbild rotiert der Preis mehrfach über und unter den Mittelpunkt, ohne eine klare Richtung.
 - Auf 5- und 10-Minuten-Bars kann die Richtung noch klar sein. Im längeren Timeframe desselben Tages wird sie unproduktiv.
+- Nimmt eine Preisrotation einen Tail zurück und bauen sich dort TPOs auf, hat sich etwas geändert: das andere Timeframe ist nicht mehr präsent oder antwortet weniger.
+- Auktionsrotationen hin und zurück durch die Eröffnung zeigen Akzeptanz innerhalb der Value und der Range des Vortags.
+- Innerhalb einer einzigen Zeitperiode kann der Markt mehrfach rotieren.
+- Im Two-Timeframe-Markt rotieren aufeinanderfolgende Perioden übereinander und erzeugen keine anhaltende Bewegung. Dann hat kein Other-Timeframe-Teilnehmer die Kontrolle.
+- One-Timeframe-Verkaufskontrolle liegt vor, wenn der Käufer den Preis in zwei oder mehr Folgeperioden nicht über das Auktionshoch der Vorperiode drehen kann.
+- Liegt das Hoch über dem Hoch der Vorperiode, zählt die Rotation in Käuferrichtung, liegt es darunter, in Verkäuferrichtung. Für das Tief gilt dasselbe, gleiche Extreme zählen 0.
+- Dieselbe Zählung läuft über jede folgende Periode. Die Summe zeigt die Stimmung im Day Timeframe.
+- Doppelte Prints, also TPOs aus zwei Perioden, gegen eine One-Timeframe-Auktion bestätigen oft, dass diese Aktivität beendet ist.
+- Auktionieren mehr Zeitperioden höher als tiefer, hat der Käufer im Day-Timeframe die größere Kontrolle. Der Markt versucht dann, höher zu laufen.
+- Der Rotation Factor ist kein hinreichender Hinweis auf die künftige Richtung. Er zeigt, wohin der Markt im Day-Timeframe zu laufen versucht.
+- Aufgezeichnete und verglichene tägliche Rotation Factors zeigen Stärke und relative Änderung der langfristigen Überzeugung, weil die langfristige Auktion aus Tagesauktionen besteht.
+- Halbstunden-Auktionsrotationen und tägliche Auktionsrotationen gleichen sich. Derselbe Auktionsprozess gilt über unterschiedliche Zeitlängen.
+- Eine Eröffnung innerhalb eines Spikes führt wahrscheinlich den ganzen Tag zu rotierendem Handel innerhalb oder nahe der Spikespanne.
+- Nach einer höheren Eröffnung stützt das obere Spike-Ende die Auktionsrotationen oft. Nach einer tieferen Eröffnung bietet das untere Ende Widerstand.
+- Ein Nonconviction Day gleicht strukturell oft einem Normal Day, Normal Variation Day oder Neutral Day, rotiert aber ohne Richtungsüberzeugung und ohne Referenzpunkte zufällig hin und her.
+- Der Stop eines Gap-Trades liegt dort, wo eine Preisrotation die Gap vollständig löschen würde.
+- Bei Auktionen, die das längere Timeframe treibt, wechseln anpassungsfähige Day-Trader vom rotationalen Handel zum Momentum-Handel.
+- Kontrolliert der Day-Timeframe, korrigieren fortlaufende Gegenauktionen ein zu langes oder zu kurzes Tagesinventar.
+- Am Profil ist zu unterscheiden, ob das Volumen in einem rotierenden Markt verteilt wird oder als Teil eines Trends.
 
 ## Risiken und Grenzen
 
+- Der Rotation Factor beantwortet nur, wohin der Markt zu gehen versucht. Ob die Auktion in diese Richtung gut gelingt, ist damit nicht entschieden.
+- Im Niedrigvolumen ein bis zwei Tage vor einer Großmeldung können Gerüchte und Prognosen den Preis wild rotieren lassen.
 
 ## Beispiele
 

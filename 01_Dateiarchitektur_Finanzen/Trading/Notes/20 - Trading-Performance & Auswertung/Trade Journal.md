@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Trade-Auswertung"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Trade Journal
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein Trade Journal dient dazu, das eigene Handeln zu beobachten und zu reflektieren. Es nützt nur, wenn es ehrlich und beständig geführt wird.
 
 ## Kernaussagen
 
+- Mit der Zeit werden Verhaltensmuster und die Ereignisse erkennbar, die das Handelsergebnis direkt beeinflussen.
 
 ## Funktionsweise
 
@@ -35,6 +35,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Gedanken, Gefühle und Umstände werden vor, während und nach jedem Trade aufgeschrieben.
+- Aufzeichnungen zeigen mehr als den Gewinn: woher die Einnahmen kommen, welche Bedingungen und Techniken am profitabelsten sind und ob die täglichen Kosten gedeckt werden.
+- Je besser die Aufzeichnungen, desto leichter lassen sich Probleme eingrenzen und das herausarbeiten, was man am besten kann.
 
 ## Risiken und Grenzen
 

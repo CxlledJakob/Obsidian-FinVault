@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Ablehnung
@@ -26,15 +26,20 @@ aktualisiert: 2026-10-29
 - Das gilt auf jedem Timeframe, sobald der Preis die Value Area verlässt. Die Gegenform ist die Akzeptanz: TPOs sammeln sich auf dem neuen Niveau, die Form des Profils ändert sich und die Value Area verschiebt sich.
 - Ein frühes Tief aus Überreaktion wird nach Auktionsstart nicht wieder getestet; die Figur kennzeichnet diese tieferen Preise als abgelehnt.
 - Am oberen Ende des Profils ist der Preis zu hoch gelaufen und das Kaufen trocknet aus. Am unteren Ende ist der Preis zu niedrig gelaufen und das Verkaufen wird abgeschnitten.
+- Beim Open-Rejection-Reverse ist die gerichtete Überzeugung geringer als bei Open-Drive und Open-Test-Drive, weil das andere Timeframe später eintritt.
+- Niedriges Volumen steht für Ablehnung. Künftige Auktionsrotationen werden dort wahrscheinlich abgelehnt statt verlangsamt.
 
 ## Funktionsweise
 
+- Responsive Activity an den Bracket-Extremen entwickelt sich gewöhnlich viel langsamer und allmählicher. Dadurch bleibt meist Zeit, die Extreme auf Ablehnung oder Folgeaktivität zu prüfen.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Nach dem Reverse läuft der Preis oft schnell weiter. Gehandelt wird erst, wenn der Markt zur eigenen Location zurückrotiert.
+- Wegen der schnellen Ablehnung werden Trades vor dem Low-Volume-Bereich platziert oder beendet, nicht darin.
 
 ## Regeln und Kriterien
 
@@ -53,10 +58,55 @@ aktualisiert: 2026-10-29
 - Zwei aufeinanderfolgende Zeitperioden an den tieferen Preisen statt nur einer hätten geringeres Vertrauen bedeutet. Die schnelle Ablehnung zeigt frühes Käufervertrauen.
 - Das Vertrauen am unteren Extrem gilt als niedriger, weil die Richtung nicht ab der Eröffnung feststand; eine spätere Umkehr am Tag ist ernst zu prüfen.
 - Nach der Ablehnung unterschreitet keine folgende Halbstundenperiode das Tief der vorigen Periode. Das ist eine One-Way-Auktion oder One-Timeframing.
+- Ein Single-Print-Selling-Tail am oberen Extrem hat dieselbe Bedeutung wie der Buying Tail: der Other-Timeframe-Verkäufer lehnt höhere Preise ab und führt den Preis schnell nach unten.
+- Ein Tail in der letzten Periode des Tages ist technisch keiner, weil folgende Zeitperioden die Ablehnung nicht mehr bestätigen können.
+- Ein Tail braucht mindestens zwei TPOs Länge, sonst hat er keine echte Bedeutung.
+- Je länger der Tail, desto stärker ist die Other-Timeframe-Aktivität. Wettbewerb um Kontrakte bewegt den Preis dabei schnell.
+- Ein Tail gilt erst, wenn die Ablehnung des Preises in mindestens einer weiteren Zeitperiode bestätigt ist. Range Extension nur in der letzten Periode ist kein Tail.
+- Wird ein Tail durch eine Preisrotation zurückgenommen und bauen sich dort TPOs auf, ist die vorherige schnelle Ablehnung aufgehoben.
+- Überlappen die Value Areas oder laufen sie gegen den Trend, wird die Preisdivergenz abgelehnt. Der Trend verlangsamt sich und beginnt zu balancieren.
+- Wegen der geringeren Überzeugung halten die anfänglichen Extreme in der Regel weniger als die Hälfte der Zeit.
+- Die geringere Überzeugung bedeutet einen zweiseitigen Tag, und ein Trend Day ist unwahrscheinlich.
+- Erwartet wird ein Normal Day oder ein Normal Variation Day.
+- Das frühe Extrem hat eine relativ geringe Chance zu halten. Ein Retest der Opening Range ist gut möglich.
+- Öffnet der Markt in der Value Area des Vortags und läuft in der ersten halben Stunde heraus, ohne doppelte TPOs aufzubauen, kann er aus der Balance ausbrechen.
+- Treibt dieser frühe Ausbruch den Preis vollständig über die Range des Vortags, sind Risiko und Chance hoch und die Range-Schätzung in Richtung des Initiative-Drives unbegrenzt.
+- Öffnet der Markt außerhalb der Value, aber noch in der Range, und bricht danach über die Extreme des Vortags, kommt er aus der Balance. Das Range-Potenzial in Ausbruchsrichtung ist unbegrenzt.
+- Wird eine Eröffnung jenseits der Range des Vortags in diese Range zurück abgelehnt, bleibt das Range-Potenzial unbegrenzt. Der Markt kann in die Gegenrichtung deutlich laufen, weil er aus der Balance eröffnet hat.
+- Öffnet der Markt zu weit über dem Hoch des Vortags und setzt nicht nach, korrigieren responsive Verkäufer den Preis schnell zur zuvor akzeptierten Value.
+- Ein Selling Tail ist die schnelle Ablehnung des Other-Timeframe-Verkäufers bei Preisen, die als über Value gelten.
+- Je schneller die Ablehnung, desto stärker ist die Other-Timeframe-Präsenz auf diesem Preisniveau.
+- Verbringt der Markt zu viel Zeit auf einem Niveau, wird der Preis schließlich abgelehnt.
+- Nach einer gescheiterten Auktion wird der Preis oft schnell und mit Überzeugung in die Gegenrichtung abgelehnt.
+- Das Ausmaß dieser Gegenbewegung hängt von der Bedeutung des getesteten Referenzpunkts ab.
+- Diese Ablehnung hat zwei Formen: eine dramatische Umkehr, wenn der Bereich hält, sichtbar als Tail, oder eine schnelle Fortsetzung durch den Bereich, gewöhnlich als einzelne TPO-Prints.
+- Auktioniert der Markt über den Low-Volume-Bereich hinaus und baut dort Value auf, hat sich die direktionale Überzeugung geändert. Der Bereich ist dann kein gültiger Referenzpunkt mehr.
+- Der Low-Volume-Bereich gibt nach, bevor er bricht. Oft muss der Preis deutlich hindurchhandeln, bevor er keine Unterstützung oder keinen Widerstand mehr bietet.
+- Eine Gap ist über Nacht erfolgende Preisablehnung jenseits der Extreme des Vortags und bildet keinen typischen Tail. Die Gap selbst ist diese schnelle Ablehnung, ein unsichtbarer Tail.
+- Eine Abwärts-Gap mit Schluss am oberen Extrem zeigt eine zumindest vorübergehende Überdehnung nach unten. Der responsive längere Käufer auktioniert den Preis dann schnell höher.
+- Ist die versuchte Richtung aufwärts und das Volumen niedriger als die eigene Norm, nimmt der Markt die Kaufversuche nicht an.
+- Ein neues Tief mit Schluss nahe diesem Tief zeigt fortgesetzte Verkäuferpräsenz und noch keine abgeschlossene Ablehnung.
+- Ein Short am Bracket-Tief vor nachweisbarer Akzeptanz und Folgeaktivität unter dem Bracket ist zu unterlassen.
+- Bietet das obere Extrem Widerstand und kehrt der Preis ins Bracket zurück, ist der Ausbruch abgelehnt.
+- Die Bracket-Extreme werden auf Ablehnung oder Fortsetzung beobachtet. Responsive Aktivität entsteht langsamer und allmählicher, deshalb bleibt dafür gewöhnlich Zeit.
+- Wird eine Sonde jenseits der kurzfristigen Balance abgelehnt, ist die Handelsrichtung umzukehren.
+- Handelt der Preis durch eine Ablehnungszone aus Selling Tail oder Selling Gap zurück, sind die Verkäufer, die den Preis ursprünglich getrieben haben, nicht mehr da.
+- Die Größe der Ablehnung folgt der Größe des getesteten Referenzpunkts. Nach einer langfristigen Failed Auction fällt sie deshalb größer aus als im Day-Timeframe.
+- Stoppt eine Verkaufssonde am langfristigen Excess-Tief, ohne neue Aktivität zu wecken, kaufen dieselben responsiven Käufer schnell unter der langfristigen Value.
+- Ein Spike ist abgelehnt, wenn die folgende Session entgegen der Spike-Richtung eröffnet. Nach einem Buying Spike ist die Eröffnung unter der Basis des Spikes die Ablehnung der Aufwärtserkundung.
+- Öffnet der Markt am Folgetag außerhalb der Value Area, haben Teilnehmer der längeren Zeitebene die Value Area des Vortags abgelehnt.
+- Aggressive Ablehnung am unteren Extrem kennzeichnet ein Low mit hohem Vertrauen.
+- Eine Eröffnung über einem Selling Spike lehnt den Spike ab. Die Stimmung im Day-Timeframe bleibt dabei bullisch.
+- Eine Eröffnung unter einem Buying Spike lehnt den Spike ab und ist für den Day-Timeframe bärisch, aber schwächer als eine Eröffnung unter einem Selling Spike.
+- Die meisten Gaps werden schließlich gefüllt, manche noch am selben Tag. Holt sie der responsive Teilnehmer zurück, geschieht die Ablehnung gewöhnlich in der ersten Stunde.
+- Führen responsive Teilnehmer den Preis vollständig durch die Gap, haben sich die Bedingungen geändert, und die Gap ist kein signifikanter Leitfaden mehr.
+- Eine Rückkehr des Preises in die Balance-Area nach dem Bruch ist die Ablehnung durch responsive Käufer.
+- Ein Preis, der über die Zeit nicht akzeptiert wird, ist abgelehnt.
 
 ## Risiken und Grenzen
 
 - Eine One-Timeframing-Auktion zu faden ist ein kostspieliger Fehler, auch wenn Volumen oder andere Gründe sie nicht stützen.
+- Fehlt diese Akzeptanz, ist die Trade Location die schlechteste, weil der Preis höchstwahrscheinlich zum oberen Bracket-Extrem zurückläuft.
 
 ## Beispiele
 

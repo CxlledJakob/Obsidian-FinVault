@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Emotionen"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Gier
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Viele sehen im Future-Handel die Chance, mit sehr wenig Aufwand viel Geld zu machen. Anzeigen, die schnellen, leichten Erfolg und eine Black Box versprechen, sind irreführend.
+- Die meisten werden vom finanziellen Lohn angezogen und prüfen die emotionalen und intellektuellen Anforderungen nicht.
 
 ## Funktionsweise
 
@@ -38,6 +38,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Wer fortlaufend die großen Deals sucht und auf den großen Wurf hofft, geht in der Regel pleite.
 
 ## Beispiele
 

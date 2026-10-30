@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Hedging
@@ -30,12 +30,16 @@ aktualisiert: 2026-10-29
 
 ## Anwendung im Trading
 
+- Ein langfristiger Hedge bleibt im Ziel langfristig, doch ein Teil davon wird gehandelt, wenn der Day-Timeframe eine Gelegenheit gibt.
 
 ## Regeln und Kriterien
 
 - Hedges werden gesetzt, wenn ein Titel zu hoch steht.
 - Bei Übernahmen, Fusionen und Abspaltungen, nachdem der Preis zu tief getrieben wurde, werden diese Hedges abgebaut.
 - Genannte Formen sind mehr Cash, defensive Titel, der Verkauf von Optionen auf Indizes oder Einzeltitel und der Kauf von Index-Puts auf den Gesamtmarkt, auf Branchen oder Sektoren.
+- Steigt der Preis, wird der Hedge gegen das Inventar schrittweise durch den Verkauf von Futures aufgebaut.
+- Öffnet der Markt weit über der Value des Vortags und zeigt die frühe Struktur Schwäche, wird der Hedge an diesem höheren Open vergrößert.
+- Auktioniert der Preis im Tagesverlauf tiefer, kann ein Teil der Shorts geschlossen und später zu höheren Preisen wieder aufgesetzt werden.
 
 ## Risiken und Grenzen
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Emotionen"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Verlustangst
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,9 +33,12 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Maximum-Trades gehen oft mit Angst einher. Bei geringerem Kapital kann ein Option-Spread diese Angst senken.
 
 ## Risiken und Grenzen
 
+- Unterkapitalisierung führt zum Tick-Watching. Wer ständig einen Verlust fürchten muss, liest den Markt weniger objektiv und führt die Position schlechter.
+- Wer in dieses Geschäft geht, muss damit rechnen, den Großteil oder das gesamte Kapital zu verlieren und die Erfahrung danach zu rationalisieren, um das Selbstwertgefühl zu halten.
 
 ## Beispiele
 

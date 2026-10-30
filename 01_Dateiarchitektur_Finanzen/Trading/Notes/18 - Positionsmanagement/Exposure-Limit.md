@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Exposure-Limit
@@ -34,12 +34,17 @@ aktualisiert: 2026-10-29
 ## Regeln und Kriterien
 
 - Die Short-Seite wird bei 25 Prozent und bei 35 Prozent auf etwa 70 Prozent long und 30 Prozent short zurückgeführt.
+- Ein großer Deal wird nur mit einem Teil des Kapitals oder der Mittel verfolgt.
+- Mit jedem neuen Trade wird das zugehörige Risiko neu bewertet, getrennt nach Übernacht, zwischenfristig und langfristig.
+- Zu viel Inventar bindet Kapital, sodass neue Gelegenheiten ausfallen. Kein Inventar senkt die Einnahmechance.
+- Bei niedrigerem Kapital oder um die Angst bei Maximum-Trades zu senken, kann ein Maximum-Trade über Option-Spreads laufen.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Als Beispiel, nicht als feste Empfehlung: Wer bis zu drei Futures gleichzeitig handelt, beschränkt sich auf einen Maximum-Trade zur selben Zeit, also auf eine große langfristige Position.
 
 ## Unterschiedliche Quellenpositionen
 

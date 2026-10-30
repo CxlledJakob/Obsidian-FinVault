@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Breakdown
@@ -35,6 +35,7 @@ aktualisiert: 2026-10-29
 
 - Im beginnenden Abwärtstrend ziehen tiefere Preise zusätzliches Verkaufsvolumen an, statt es abzuschneiden. Daraus wird der Abwärtsausbruch.
 - Eine Bracket-Ausweitung nach unten trägt einen neuen Trend, sobald sie bei steigendem Volumen erfolgt.
+- Ein initiative Abwärtsbruch muss neues Geschäft anziehen und sich sofort fortsetzen. Ohne Follow-through hat die Sonde die Aktivität abgeschaltet.
 
 ## Risiken und Grenzen
 

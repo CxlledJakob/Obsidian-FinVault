@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Range Contraction
@@ -39,6 +39,15 @@ aktualisiert: 2026-10-29
 - Folgt auf einen Tag mit weiter Range und Akzeptanz ein Tag, der nicht über dieses Hoch auktioniert, ist ein enger, rangegebundener Tag zu erwarten.
 - Innerhalb der Balance bleiben Volatilität und Range kleiner als außerhalb der Balance.
 - Bleibt der Preis in der Range der Eröffnungsperiode, sind die Chancen auf eine wirkliche Veränderung gering.
+- Wird die Eröffnung innerhalb der Value akzeptiert, bleibt die Tagesspanne gewöhnlich in der Vortagesspanne oder überlappt ein Extrem nur leicht und überschreitet deren Länge selten.
+- Zur Schätzung wird die Länge der Vortagesspanne von dem Extrem angetragen, das voraussichtlich hält. Etwa 10 Prozent Spielraum gelten in beide Richtungen, und die Schätzung wird angepasst, wenn das Extrem fällt oder bestätigt wird.
+- Ein Open-Auction innerhalb der Value und der Range des Vortags hat gewöhnlich keine Überzeugung. Ein großer Tag ist dann unwahrscheinlich.
+- An Tagen mit relativ niedrigem Volumen werden die Value Area und die Länge der Range tendenziell eng.
+- In Treasury Bonds vom 14. Dezember 1988 bis 22. Juni 1989 lag das durchschnittliche Volumen bei einer Value-Area-Breite von 1 bis 5 Ticks bei 127.000 Kontrakten und bei 6 bis 10 Ticks bei 188.000.
+- Eine enge Initial Balance zeigt die Möglichkeit eines Double-Distribution-Trend-Days.
+- Eröffnet der Markt innerhalb eines Spikes vom Vortag und akzeptiert dort Value, wird die Tagesspanne mit der Länge des Spikes geschätzt, nicht mit der gesamten Range des Vortags. Der Spike wird wie ein neuer Tag behandelt.
+- An einem Nontrend Day ist die Range klein und die Aktivität dürftig. Der Markt erleichtert keinem Teilnehmer den Handel, und die Gelegenheit ist gering.
+- Kontrolliert der Day-Timeframe die Session, bleibt der Handel eher gebremst, mit niedrigerem Volumen und weniger Range Extension.
 
 ## Risiken und Grenzen
 

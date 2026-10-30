@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Trendwende
@@ -29,12 +29,14 @@ aktualisiert: 2026-10-29
 ## Funktionsweise
 
 - Mit dem Ende des Trends beginnt das Bracketing. Langfristige Käufer und Verkäufer justieren ihr Wertempfinden, der Markt auktioniert auf und ab, bis ein Bracket entsteht.
+- Mit dem Ende verengt sich die Value-Sicht von Käufer und Verkäufer des anderen Timeframes. Daraus entsteht ein relativ breites Gleichgewicht innerhalb der Bracket-Grenzen.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Fehlt in einem steigenden Markt der Tail am Tagestief, ist eine Umkehr möglich. Gewinne sind früher mitzunehmen als bei vorhandenem Tail.
 
 ## Regeln und Kriterien
 
@@ -50,6 +52,22 @@ aktualisiert: 2026-10-29
 - Große Übergänge treten ein, wenn neue Umstände das verletzen, was die im bisherigen Status quo Investierten für normal gehalten haben.
 - Der Übergang vom Bullenmarkt zum Bärenmarkt oder umgekehrt läuft selten direkt, sondern über einen Seitwärtsmarkt.
 - Erst nach Abschluss des Seitwärtsmarkts steht fest, ob der bisherige Trend zurückkehrt oder eine neue Auktion in die Gegenrichtung beginnt.
+- Überlappen die Value Areas oder laufen sie gegen den Trend, wird die Preisdivergenz abgelehnt. Der Trend verlangsamt sich und beginnt zu balancieren.
+- Oft muss der Markt erst unter die Tiefs brechen oder über die Hochs steigen, bevor die Gegenrichtung mit Überzeugung läuft.
+- Genug Zeit von zu viel Zeit zu unterscheiden ist der Schlüssel, um einen Kontrollwechsel vorwegzunehmen. Zu viel Zeit auf einem Niveau führt zur Ablehnung des Preises.
+- Gelingt die Auktion in eine Richtung über die Zeit nicht, kann die Kontrolle drehen, weil der Markt die Gegenseite sucht.
+- Nahe oder jenseits der Tagesextreme ohne Fortsetzung dreht die Auktion oft und läuft aggressiv in die Gegenrichtung.
+- Doppelte TPO-Prints gegen eine One-Timeframe-Auktion bestätigen oft, dass diese Aktivität beendet ist.
+- Ein Hoch, das durch Zeit und nicht durch aggressive Gegenaktivität entsteht, zeigt mangelnde Überzeugung der Gegenseite.
+- Short Covering ohne neues Kaufen ist kein Richtungswechsel. Sobald die Verkaufs-Imbalance neutralisiert ist, nimmt der Markt oft den vorherigen Kurs wieder auf.
+- Ein Liquidationsbruch ohne neues Geschäft korrigiert sich wieder. Nur wenn er neues Geschäft mit Follow-through anzieht, trägt er über das alte Long-Inventar hinaus.
+- Hält eine Ledge, kann der Markt deutlich in die Gegenrichtung laufen.
+- Der Übergang vom Bracket zum Trend ist langfristig durch Excess markiert und braucht die Bestätigung einer anhaltenden Folge in die Gegenrichtung.
+- Der Übergang liegt vor, wenn die Initiative-Teilnehmer den Preis stärker kontrollieren als die responsiven Teilnehmer.
+- Ein Aufwärtstrend beginnt gewöhnlich mit einem langfristigen Buying Tail oder einer Buying Gap durch den aggressiven längeren Käufer.
+- Die Aussetzung kommt daher, dass das Inventar zu long oder zu short ist, und führt zu kurzfristigen Gegenauktionen.
+- Steigt der Markt, ohne dass Struktur und Volumen bestätigen, wird die Abwärtsgelegenheit umso besser, je höher er läuft.
+- Führt ein negativer Monthly Jobs Report nicht zu einem fallenden Markt, ist eine Rally wahrscheinlich.
 
 ## Risiken und Grenzen
 
@@ -57,6 +75,7 @@ aktualisiert: 2026-10-29
 - Am Auktionsende sind Chance und Risiko zugleich am größten und asymmetrisch. Wer ein Tief im Abwärtstrend erkennt und kauft, hat niedriges Risiko und hohen Ertrag; wer short bleibt, hat hohes Risiko und niedrigen Ertrag, weil die folgende Rally oft scharf und schnell ist.
 - Hat ein großer Verwalter die schwächer werdende Auktion verpasst, ist die Liquidität nach Beginn der Umkehr in der Regel begrenzt.
 - Märkte können abrupt drehen.
+- Excess ist eine Art, wie eine Auktion endet. Es ist aber nicht ungewöhnlich, dass eine Auktion nur vorübergehend ausgesetzt wird.
 
 ## Beispiele
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Basisgrößen"
@@ -10,16 +10,17 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Relative Volume
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Relative Volume beurteilt Volumen als Marktanteil gegenüber dem bisherigen Handel und der eigenen Norm, nicht als absolute Transaktionszahl. Nur unter dem Niveau eines liquiden Marktes zählt wieder die absolute Zahl.
+- Relatives Volumen im Langfrist-Profil ist das Volumen eines Preises im Verhältnis zum Volumen aller anderen Preise der gewählten Spanne.
+- Relatives Volumen heißt, das Volumen stets im Vergleich zu beurteilen und nicht als absolute Zahl.
 
 ## Kernaussagen
 
@@ -35,6 +36,13 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ob Volumen steigt, zeigt der Vergleich mit den vorherigen Volumenwerten, nicht eine feste Standardzahl.
+- Gesundes oder gegenüber der eigenen Norm gestiegenes Volumen bedeutet, dass eine Aufwärtsauktion den Handel mit dem Käufer erleichtert. Niedrigeres Volumen bei einem Aufwärtsversuch bedeutet, dass die Kaufversuche nicht angenommen werden.
+- In den Beispielen der direktionalen Performance ist die Vergleichsbasis der Vortag und nicht ein vorher festgelegter Durchschnitt.
+- Nimmt das relative Volumen über dem Hoch der Startbewegung ab und entsteht eine p-Formation, fehlt die weitere Käuferfortsetzung.
+- Bei einem nicht abgeschlossenen Hoch oder Tief liegt das Volumen oft unter dem relativen Volumen der vergangenen Tage.
+- Volumen ist im Verhältnis zur Zeit zu lesen, weil das prominente Einzelniveaus eher glättet.
+- Das Volumen einer neuen Richtungsauktion wird mit dem Volumen der vorherigen Richtungsbewegung verglichen.
 
 ## Risiken und Grenzen
 

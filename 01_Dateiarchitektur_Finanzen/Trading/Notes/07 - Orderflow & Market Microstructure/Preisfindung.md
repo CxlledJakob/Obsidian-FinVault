@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Preisfindung
@@ -43,12 +43,21 @@ aktualisiert: 2026-10-29
 - Entweder wird die Value zum neuen Preis gezogen, oder der Preis kehrt zur Value zurück.
 - Die zweiseitige Auktion verteilt Bids und Offers effizient und fair und sucht fortlaufend nach Information.
 - In dieser Suche erkundet der Markt Bereiche jenseits der Hochs und Tiefs von Vortag, Woche und Monat sowie jenseits früherer Balance Areas und langfristiger Brackets.
+- Im Aufwärtstrend gilt der Preis dem Käufer des anderen Timeframes als unter Value und dem Verkäufer des anderen Timeframes als unfair.
+- Sind praktisch alle Teilnehmer Käufer, findet sich niemand mehr für den höheren Preis. Der responsive Verkäufer setzt den Preis herab, und die Value-Vorstellungen verengen sich zum Gleichgewicht im Bracket.
+- Der fairste Preis der Session ist der am längsten akzeptierte Preis. Wenig Einfluss längerer Timeframes hält ihn nahe der Mitte, aggressivere andere Timeframes schieben ihn nach oben oder unten.
+- Ein Ausbruch in den letzten Perioden wird erst am nächsten Tag auf Folge und Überzeugung geprüft.
+- Wo der Markt relativ zu einem Spike des Vortags eröffnet und wo er danach Value aufbaut, zeigt die zugrunde liegende Richtungsüberzeugung.
 
 ## Funktionsweise
 
 - Preis wirbt für die Gelegenheit, Zeit reguliert sie, Volumen misst Erfolg oder Scheitern. Daraus entsteht die marktgenerierte Information.
 - Hat die Aufwärtsauktion den letzten Bieter gefunden, beginnt im fortlaufenden Finanzmarkt die Auktion in der Gegenrichtung.
 - Value entsteht dort, wo mehrere Teilnehmer zu Preisen handeln, die sie für fair halten.
+- Im Day-Timeframe bestätigt die Zeit den Preis. Value ist Preis mal Zeit und liegt dort, wo am längsten gehandelt wurde.
+- Ob Value höher oder tiefer platziert wurde, zeigt der Vergleich zum Vortag: unverändert, einseitig überlappend oder klar versetzt.
+- Im erwarteten Verlauf fällt das Volumen bei steigenden Preisen, weil höhere Preise die Käufer abschneiden.
+- Im unerwarteten Verlauf steigt das Volumen mit immer neuen Bietern und endet oft in einem Aufwärtsstoß, wenn die Nachzügler eintreffen.
 
 ## Voraussetzungen
 
@@ -60,11 +69,29 @@ aktualisiert: 2026-10-29
 
 - Der Preis kann zu Value zurückkehren oder Value nach oben führen. Was von beidem vorliegt, zeigt das sich entwickelnde Profil.
 - High, Low und Value Area des Tages stehen erst fest, wenn der Handel abgeschlossen ist, unabhängig von der Reihenfolge ihres Entstehens.
+- Gilt der Open als unter Value, auktioniert der Preis höher auf der Suche nach Verkäufern. Gilt er als zu hoch, auktioniert der Preis tiefer auf der Suche nach Käufern.
+- Ist die Auktion im Gang, kann der Preis Niveaus überschreiten, die anfangs als zu hoch abgelehnt wurden.
+- Die Schluss-Spanne ist die letzte Anzeige des Tagessentiments. Gegen den Open des Folgetags zeigt sie, ob sich das zugrunde liegende Sentiment geändert hat.
+- Kauf unter Value und Verkauf über Value halten als Gelegenheit nicht lange. Bleibt der Preis lange unter Value, wird dieser tiefere Preis akzeptiert, und die Gelegenheit ist vorbei.
+- Ob die Abweichung des Preises von der Value hält, zeigen die Value Areas. Eine klare Richtung durch die Zeit ist Akzeptanz der neuen Preise, Überlappung oder Gegenrichtung ist der Übergang in die Balance.
+- Follow-through beantwortet, wie gut der Markt seine Auktion in eine Richtung ausführt. Fehlende Fortsetzung bedeutet, dass die Auktion in diese Richtung scheitert.
+- Wird der Preis unter einem High-Volume-Bereich akzeptiert, hat sich die Wertwahrnehmung geändert.
+- Der Markt verlässt High-Volume-Bereiche auf der Suche nach neuer Value.
+- Käufe über dem fairsten Preis haben überdurchschnittliches Risiko. Verkäufe unter diesem Preis sind Verkäufe unter Value.
+- Läuft der Preis höher, kann die Zeit den Anstieg begrenzen. Der Handel sammelt sich dann am prominenteren fairsten Preis statt in einem elongierten Profil.
+- Liegt die Value Area komplett in der des Vortags, hat keine Seite eine neue Value durchgesetzt. Überlappt sie den Vortag an beiden Extremen, ist die Handelserleichterung größer.
+- Eine Gap entsteht, wenn die längere Zeitebene den Preis als von der Value entfernt wahrnimmt und aggressiv eintritt.
+- Doppelte TPOs durch einen späteren Test etablieren Value innerhalb des Spikes und heben das Extrem als Referenz auf.
+- Kommen am Anfang keine höheren Gebote, wird das Gebot gesenkt, damit die Auktion in Gang kommt.
 
 ## Risiken und Grenzen
 
 - Die meisten lesen allein den Preis und übergehen seine Qualifikation.
 - Preis ist der meistgenutzte und am wenigsten verlässliche Indikator für das Vertrauen der Auktion.
+- Ohne die Zeit lässt sich Value nicht beurteilen, und der Handel wird zum 50/50-Glücksspiel auf die Preisbewegung.
+- Wo der Markt den Tag überwiegend relativ zur Eröffnung verbringt, zeigt nur den Versuch, nicht ob Value mitgezogen wurde. Ein höherer Gap kann den ganzen Tag abwärts laufen und trotzdem höhere Value bilden.
+- Wer den Markt vor allem über den Preis liest, überschätzt sein Verständnis und wird überkonfident.
+- Nichtlineare Auktionen setzen ein, wenn die Illusion von Sicherheit zerbricht.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Emotionskontrolle
@@ -21,6 +21,15 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Erfahrung gibt das Vertrauen, Angst, Zögern und Starrheit zu überwinden.
+- Einige der größten Gelegenheiten entstehen, wenn das Marktvertrauen am niedrigsten ist.
+- Korrektur ohne offensichtlichen Preisbruch wird nur erkannt, wenn dieselbe Information aus mehr als einem Winkel gelesen wird.
+- Wer nur die einzelnen Tagesauktionen sieht, verliert das langfristige Bild. Ein Langfrist-Profil hält diese Auktionen so fest, dass sie objektiv beobachtbar sind.
+- Über den Durchschnitt hinaus trägt Selbstverständnis. Erst wenn die Marktmechanik ein geschlossenes Muster ist, wird sichtbar, wie die eigenen Stärken und Schwächen das Ergebnis prägen.
+- Bei den Erfolgreichsten ist die größte Belohnung oft emotional. Die finanzielle Belohnung folgt daraus und steht nicht an erster Stelle.
+- Das schwache Abschneiden der meisten professionellen Anleger kommt aus dem fehlenden Gleichgewicht der beiden Denkseiten.
+- Die meisten Menschen werden von Gefühlswellen gesteuert, nicht von durchgehend logischem Denken.
+- Kognitive Dissonanz, das Unbehagen bei zwei gegensätzlichen Gedanken, kann nützlich sein, wenn ihre Ursache durchdacht wird.
 
 ## Funktionsweise
 
@@ -49,9 +58,34 @@ aktualisiert: 2026-10-29
 - Die emotionale Beteiligung an den finanziellen Folgen des Handelns ist zu beherrschen.
 - Tragfähig ist ein klarer, offener Geist, den widerstreitende Reize oder Emotionen nicht überwältigen.
 - Der Handel bleibt am größeren Ganzen und verliert sich nicht in sachfremden Einzelheiten oder subjektivem Wunsch.
+- Ein oder zwei Fakten zu übergewichten erzeugt Tunnelblick und verdeckt das größere, sich entwickelnde Bild.
+- Nach langer Balance ist der Wechsel von der responsiven Haltung zur mitlaufenden Initiative-Haltung sehr schwer. Über der zuletzt wahrgenommenen Value zu kaufen bleibt auch für einen ruhigen Händler belastend.
+- Ein volatiles Bracket ist emotional schwer. Es verlangt, aus mehreren Geisteszuständen zu handeln und die Haltung schnell zu wechseln.
+- Nach mehreren seitlichen Tagen ist der Einstieg mit der Initiative in den Bruch schwer, weil er sich spät anfühlt.
+- Dieselbe spätere Trade Location kann mit sehr unterschiedlicher Angst verbunden sein. Schlechte Location zu Beginn kann so belasten, dass ein Trade geschlossen wird, der sich gut entwickelt hätte.
+- An einem Nonconviction Day geht ohne Marktstimmung leicht die Objektivität verloren, und es werden Trades erzwungen, die nicht vorhanden sind.
+- Ohne klare Gelegenheit wird der Trade nicht erzwungen.
+- Bei wenigen Hinweisen auf eine direkte Überzeugung geht die Objektivität leicht verloren. Die subjektive Stimme drängt dann zum Trade, obwohl der Markt kein Vertrauen zeigt.
+- Ein Trade aus reiner Emotion hat eine noch geringere Erfolgschance als ein Trade aus ruhig berechneten Fakten.
+- Wünsche und Erwartungen werden beiseitegelegt, sonst zieht die Rationalisierung so stark, dass die Marktkenntnis nicht mehr hilft.
+- Trader tun, was funktioniert, bis es nicht mehr funktioniert. In einem schnellen emotionalen Bruch wird wenig nachgedacht.
+- Die meisten sind zur Eröffnung zu begierig, aus Angst eine Gelegenheit zu verpassen.
+- Die Versuchung ist, höher zu verkaufen, als es zuvor möglich war, oder tiefer zu kaufen, als es zuvor möglich war.
+- Was sich nicht klar fassen lässt, wird oft verworfen, zugunsten gegenteiliger Indikatoren, die zur vorgefassten Meinung passen.
+- Gerade in Momenten der Unsicherheit erkennt der erfahrene Händler die Gelegenheit.
 
 ## Risiken und Grenzen
 
+- Die Angst, gegen starke gegenläufige Aktivität zu handeln, beeinträchtigt oft das rationale Entscheiden, auch wenn das Muster erkannt ist.
+- Die emotionale Reaktion auf einen Preisbruch kann dazu verleiten, einen vermeintlich starken Markt unter Value zu kaufen und die entstehende Imbalance zu übergehen.
+- Bei einer Großmeldung wird nicht emotional und finanziell mit dem Markt hin- und hergerissen. Die Meldung und ihre Wirkung vorwegzunehmen ist ein hochriskantes Glücksspiel.
+- Die beste Location sieht im Moment des Erreichens oft wie die schlechteste aus. Die Angst lähmt dann den Einstieg, und die subjektive Stimme überdeckt die rationale Entscheidung.
+- Wer vom Preis gebannt den laufenden Trend weiterdrückt, hängt am Preis statt an der Struktur.
+- Wer den Markt nur über den Preis zu verstehen meint, überschätzt sein Wissen und wird überkonfident.
+- Nichtlineare Auktionen entstehen, wenn die Illusion von Sicherheit bricht.
+- Kleine Gewinne werden mitgenommen und die größeren Gelegenheiten gefadet, was zu Nettoverlusten führt.
+- Beginnt ein Trade zu stocken, entsteht starker psychologischer Zweifel.
+- Je länger der Trade nicht in die eigene Richtung vorankommt, desto länger sitzt man da und malt sich aus, was schieflaufen könnte.
 
 ## Beispiele
 

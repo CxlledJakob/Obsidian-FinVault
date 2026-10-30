@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Aufwärtstrend
@@ -27,6 +27,10 @@ aktualisiert: 2026-10-29
 - Für den Intermediate-Term-Trader ist dieselbe Bewegung kein Trend, solange sie in den mittleren Quadranten des Intermediate-Brackets oder der Trading-Range bleibt.
 - Im Trendmarkt laufen Preis und Value Area beständig nach oben oder unten, und die Ranges überlappen deutlich weniger als im Bracket.
 - Ein starker Aufwärtstrend wechselt zwischen Aufwärtsstrecke und Balance. Größerer Abstand der Balancebereiche bedeutet mehr Stärke; im Alter schrumpft der Abstand, und die nächste Balance liegt oft auf oder in der vorherigen.
+- Der Aufwärtstrend zieht immer mehr Zeitebenen an, bis praktisch alle Käufer sind. Dann fehlt der nächste Käufer, der responsive Verkäufer startet das Bracket.
+- Danach verengt sich die Value-Sicht, und innerhalb der Bracket-Grenzen entsteht ein relativ breites Gleichgewicht.
+- Ein Aufwärtstrend beginnt gewöhnlich mit dem aggressiven Einstieg des längerfristigen Käufers, der Excess als langfristigen Buying Tail oder als Buying Gap erzeugt.
+- Aus dem responsiven Kauf wird Initiative, sobald zuvor etablierte Value durchlaufen wird.
 
 ## Funktionsweise
 
@@ -38,6 +42,10 @@ aktualisiert: 2026-10-29
 
 - Kauf in der frühen Abwärtserkundung liegt unter Value. Ein Kauf oberhalb der Value Area liegt an einem Tag, der Value nach oben führt, trotzdem auf oder unter Value.
 - Wer an diesem Tag verkauft, erreicht bestenfalls Value und häufiger Preise unter Value.
+- Der frühe Einstieg verlangt Kauf deutlich über der zuletzt wahrgenommenen Value.
+- Später im Aufwärtstrend wird der temporäre Break gekauft.
+- Eine Eröffnung über einem Buying Spike ist extrem aufwärts aus der Balance. Longs werden nahe der Unterstützung am oberen Spike-Ende gesucht.
+- Größere Verkäufe an diesem Hoch werden erst gelegt, nachdem das Hoch bestätigt ist.
 
 ## Regeln und Kriterien
 
@@ -63,9 +71,36 @@ aktualisiert: 2026-10-29
 - Werden Käufer bei höheren Preisen aggressiver, setzt die Aufwärtsauktion fort und kann beschleunigen.
 - Werden Käufer bei höheren Preisen weniger aggressiv, stottert die Aufwärtsauktion voraussichtlich und dreht.
 - Eine Auktion ist gewöhnlich erst vorbei, wenn ein letzter Aufwärts-Spike die verbliebenen Käufer hineinzieht.
+- An einem One-Timeframe-Kauf-Trend-Day auktioniert jede Zeitperiode auf ein höheres oder gleiches Niveau, ohne das Tief der vorigen Periode zu unterschreiten.
+- Ein Aufwärtstrend auktioniert höher, geht in Balance und läuft danach entweder weiter aufwärts oder beginnt abwärts zu auktionieren.
+- Bevor eine Aufwärtsauktion mit Überzeugung startet, wird oft unter ein bekanntes Tief getestet, ob tiefere Preise neues Geschäft anziehen. Bremst der Test die Aktivität, kann der Drive nach oben einsetzen.
+- Läuft der Open-Drive aufwärts, ist ein Trend Day oder Normal Variation Day zu erwarten, und das zurückgelassene Extrem hält in der Mehrheit der Fälle.
+- Ein fortlaufend steigender fairster Preis zeigt beständiges Kaufen von Timeframes jenseits des Tages.
+- Bricht eine Rally durch den oberen Bracket-Rand, der sie nur gebremst hat, setzt sie in der Regel mit erneuerter Kraft fort.
+- Bietet eine Ledge Unterstützung, treten Käufer ein und nehmen den Aufwärtstrend wieder auf.
+- Ein Composite Buying Day liegt vor, wenn die Eröffnung im unteren Viertel der Tagesspanne steht. Verbringt der Markt den größten Teil des Tages über der Eröffnung, versucht er höher zu auktionieren.
+- Bei einem Aufwärtsversuch mit höherer Value ist die Käuferstärke bei höherem Volumen sehr stark, bei unverändertem Volumen stark und fortsetzend und bei niedrigerem Volumen nur nachlassend.
+- Nur überlappend höhere Value ist ein geringerer Schritt als klar höhere Value. Höheres Volumen ist dabei mäßig stark, unverändertes Volumen mäßig stark und balancierend, niedrigeres Volumen nachlassend und balancierend.
+- Ein Aufwärtsversuch mit höherem Volumen und tieferer Value bleibt unklar.
+- Ein Aufwärtsversuch mit niedrigerem Volumen und tieferer Value ist schwach. Der längere Verkäufer behält dann die Kontrolle, obwohl der Day-Timeframe-Käufer dominiert.
+- Entsteht während einer Korrektur in der Aufwärtsauktion trotzdem höhere Value, sind die Bedingungen sehr stark.
+- Mehr Einfluss des responsiven Verkäufers gegenüber dem Initiative-Käufer kann das Ende der Aufwärtsauktion sein.
+- In einem Kauftrend sind die Fortsetzungschancen deutlich besser, wenn der Preis nach oben in die Value auktioniert.
+- Ein Lauf von unten durch die Value Area des Vortags mit Schluss auf dem Hoch zeigt Marktstärke.
+- In der Schlussphase eines Kauftrends kann eine Exhaustion Gap das Ende markieren, sobald praktisch alle long sind und kein Käufer mehr übrig ist.
+- Ist die größere Auktion aufwärts und die Meldung bärisch, gilt ein trotzdem aufwärts laufender Tag als sehr stark und ein abwärts laufender Tag als neutral und erwartet.
+- Ein langfristiges Hoch entsteht in der Regel, wenn der gesamte Markt kauft und Verkaufen am wenigsten populär ist.
+- Bricht eine anhaltende Aufwärtsauktion im Day-Timeframe und stockt in einer b-Formation, waren die Teilnehmer wahrscheinlich zu long. Der Bruch ist meist Long Liquidation, und die Kaufauktion setzt sich fort.
+- One-Timeframing aufwärts liegt vor, wenn das Tief der nächsten Woche das Tief der Vorwoche nicht herausnimmt. Das Ende dieses Modus ist Veränderung.
+- Wird das Profil zu elongiert, oft schon innerhalb einer Session, ist das Ergebnis häufig das Gegenteil von Fortsetzung.
+- Im steigenden Markt liegt One-Timeframing vor, wenn das Tief der nächsten Woche das Tief der Vorwoche nicht unterschreitet.
+- Ein solider Aufwärtsversuch zeigt ein elongiertes Profil, dessen Preise meist nicht mehr als fünf oder sechs TPOs anziehen.
+- An einem soliden Aufwärtstag liegt der Schluss eher nahe dem oberen Ende der Range.
+- Gegen höher entstehende Value wird nicht gefadet, auch wenn die längerfristige Meinung dagegensteht.
 
 ## Risiken und Grenzen
 
+- Die Composite-Analyse sagt nicht, wie gut der Versuch gelingt. Ein Markt kann höher gappen, den ganzen Tag abwärts auktionieren und trotzdem höhere Value bilden.
 
 ## Beispiele
 

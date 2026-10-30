@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Korrekturbewegung
@@ -22,6 +22,9 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Korrektur ist Gegenaktion. Nach einer Aufwärtsauktion muss der Preis dafür nicht fallen.
+- Alte Käufer nehmen Gewinne mit, während neue Initiative-Käufer Positionen eröffnen. Ist dieses Kaufen stark genug, bleiben Preis, Value und Schluss höher.
+- Ein höherer Open mit Abverkauf über den Tag kann höheren Preis, höhere Value und einen höheren Schluss hinterlassen und trotzdem Korrektur sein.
 
 ## Funktionsweise
 
@@ -43,6 +46,9 @@ aktualisiert: 2026-10-29
 - Ringt die Auktion und bauen geduldige, längerfristige Käufer über mehrere Tage Inventar auf, folgen Umkehrungen oder zumindest bedeutsame Korrekturen.
 - Sie kann leicht 5 bis 10 Prozent des Trends zurücknehmen.
 - Sie kann eine gesunde Entwicklung sein, weil sie den Markt in Balance bringt und die nächste wesentliche Trendstrecke vorbereitet.
+- Entsteht während der Korrektur einer Aufwärtsauktion höhere Value, sind die zugrunde liegenden Bedingungen sehr stark.
+- Die naheliegenden Zeichen wie tiefere Preise fehlen oft. Für eine Korrektur muss der Preis nicht nach unten brechen.
+- Überwiegt der Einfluss des responsiven Verkäufers den des Initiative-Käufers, kann die Aufwärtsauktion vorbei sein.
 
 ## Risiken und Grenzen
 

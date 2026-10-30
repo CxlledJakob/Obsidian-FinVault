@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Verlustrisiko"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Kapitalerhalt
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Kapitalerhalt folgt zwei Regeln: von Anfang an ausreichend kapitalisiert sein und das Kapital bewahren.
 
 ## Kernaussagen
 
+- Unterkapitalisierung behindert von Beginn an. Das Kapital muss unerwartete Anlaufkosten tragen und Vorhaben finanzieren, die für das langfristige Überleben wichtig sind.
 
 ## Funktionsweise
 
@@ -35,9 +35,13 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Daytrader brauchen in der Regel weniger Kapital als langfristige Trader mit Overnight-Positionen. Auch ein Daytrader braucht genug, um eine Gelegenheit mit minimalem Risiko über Nacht mitzunehmen, wie sie oft ein 3-to-I-Tag bietet.
+- Der Großteil von Zeit und Kapital gilt den kurzen Odds, nicht den langen. Das Hauptziel ist, im Geschäft zu bleiben.
+- Wer fortlaufend nur die großen Deals sucht, geht in der Regel pleite. Wer besteht, bearbeitet fünf oder sechs große Deals und verbringt den Großteil der Zeit mit den 70 oder 80 kleinen Konten, die stetige Einnahmen bringen.
 
 ## Risiken und Grenzen
 
+- Unterkapitalisierung führt zum Tick-Watching. Wer ständig einen Verlust fürchten muss, liest den Markt weniger objektiv und führt die Position schlechter.
 
 ## Beispiele
 

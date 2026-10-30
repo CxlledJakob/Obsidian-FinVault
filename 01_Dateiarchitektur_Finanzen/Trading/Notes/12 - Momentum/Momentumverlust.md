@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Momentumverlust
@@ -36,6 +36,9 @@ aktualisiert: 2026-10-29
 - Ein müder Trend zeigt erhöhte Volatilität, ohne noch viel weiteren Fortschritt in Trendrichtung zu erzeugen.
 - Das Volumen beginnt zu sinken.
 - Auktionen in Trendrichtung können weniger Volumen haben als Tage, an denen der Markt gegen den Trend auktioniert.
+- Strukturelle Schwäche zeigt nachlassendes Momentum. Die Chancen der Aufwärtsfortsetzung sinken, und die einer Umkehr steigen.
+- Je höher der Preis ohne Bestätigung durch Struktur und Volumen läuft, desto besser wird die Abwärtsgelegenheit.
+- An den Excess-Extremen ist das Momentum oft am höchsten, und gerade dort werden Momentum-Trader gefangen.
 
 ## Risiken und Grenzen
 

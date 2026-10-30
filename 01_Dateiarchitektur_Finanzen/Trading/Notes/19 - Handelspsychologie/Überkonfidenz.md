@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Überkonfidenz
@@ -23,6 +23,8 @@ aktualisiert: 2026-10-29
 ## Kernaussagen
 
 - Diese Überkonfidenz steht hinter der Annahme, dass Märkte auf eine vorhersehbar irrationale Weise verzerrt sind.
+- Trader überschätzen, wie viel sie vom Markt verstehen, wenn sie den Preis ansehen, und werden durch die Illusion von Gewissheit überkonfident.
+- Gelernt wird eher das Präzise als das Allgemeine.
 
 ## Funktionsweise
 
@@ -38,6 +40,7 @@ aktualisiert: 2026-10-29
 
 ## Risiken und Grenzen
 
+- Nichtlineare Auktionen entstehen, wenn diese Illusion zerbricht. Das Verhalten wird dann extrem sprunghaft und ruiniert die Mehrheit, die nicht annimmt, was tatsächlich geschieht.
 
 ## Beispiele
 

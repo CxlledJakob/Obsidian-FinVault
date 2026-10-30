@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Imbalance
@@ -34,15 +34,26 @@ aktualisiert: 2026-10-29
 - Solche Imbalances treten in allen Zeitebenen auf, unter Trend und unter Bracket.
 - Mehrere Tiefs auf etwa demselben Preis ohne Excess zeigen gewöhnlich, dass der Markt zu short ist. Shorts sind stets potenzielles Kaufpotenzial.
 - Ist der Markt zu long, um höher zu gehen, muss er oft erst brechen, bevor er rallien kann.
+- Die TPO-Zählung misst die Imbalance zwischen dem anderen Timeframe und dem Day-Timeframe, vor allem den Locals, innerhalb der entstehenden Value Area.
+- Eine Eröffnung außerhalb der Range des Vortags ist ein Markt aus der Balance. Chance und Risiko einer dynamischen Bewegung sind dann am größten.
+- Diese Bewegung weg von der Value ist Initiative. Das Other Timeframe bewegt den Preis oft schnell und mit hoher Überzeugung, und gewöhnlich entsteht ein Trend Day.
+- Short Covering folgt oft auf einen oder mehrere Tage starken Verkaufs. Je weiter der Markt aus der Balance läuft, desto eher sind die Teilnehmer zu short, und die scharfe Rally kommt in der Regel zur oder kurz nach der Eröffnung.
+- Gedeckt wird aus drei Quellen: Locals mit zu kurzem Inventar, Gewinnmitnahmen nach einer längeren Abwärtsbewegung, oder andere Timeframes, die aus Shorts aussteigen müssen.
+- Short Covering ohne neues Kaufen bildet ein P, ein halbfertiges Profil. Lässt das Decken nach, läuft der Preis meist zurück und füllt die untere Hälfte der Range.
+- Bereiche niedrigen Volumens liegen eher in unbalancierten, trendenden Märkten, weil niedriges Volumen die direktionale Überzeugung des anderen Timeframes anzeigt.
+- Eine Lage, in der der Markt zu long ist, baut sich oft über mehrere Sessions auf, mit nachlassendem Volumen und einem weniger elongierten Profil.
+- Eine Auktion kann vorübergehend ausgesetzt sein, wenn das Inventar zu long oder zu short ist. Daraus entstehen kurzfristige Gegenauktionen.
 
 ## Funktionsweise
 
+- Imbalance entsteht, wenn Käufer oder Verkäufer des anderen Timeframes überwiegen. Der Local, der zwischen beiden steht, behält das Ungleichgewicht im Bestand.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Größere Positionen werden nahe diesen langfristigen Hochs oder Tiefs gesucht, aber erst nachdem das Hoch oder Tief bestätigt ist.
 
 ## Regeln und Kriterien
 
@@ -55,10 +66,43 @@ aktualisiert: 2026-10-29
 - Sind lang- oder kurzfristige Inventare aus der Balance, wird beiseitegetreten oder die Imbalance gefadet.
 - Ein Markt muss oft erst rallien, bevor er weiter brechen kann, weil schwache Verkäufer jeden kleinen Break decken und den weiteren Rückgang damit stoppen.
 - Der Aufwand, den Preis gerichtet zu verschieben, zeigt die Inventory-Lage der anderen an: zu long, zu short, über Wasser oder unter Wasser.
+- Ist nur eine Other-Timeframe-Seite aktiv, liegt eine Imbalance vor. Der Tag wird dann eher ein Trend Day oder eine Normal Variation.
+- Gezählt wird ab dem Point of Control, der längsten Linie nahe der Range-Mitte: TPOs darüber gegen TPOs darunter. Single-Print-Tails bleiben außen vor.
+- TPOs über dem Point of Control stehen für Verkäufer des anderen Timeframes, die über Value short bleiben. TPOs darunter stehen für Käufer, die unter Value long bleiben.
+- Wächst die Zählung unter dem Point of Control, ohne dass eine Verkaufs-Range-Extension ihn senkt, verkaufen wahrscheinlich die Locals an die Käufer des anderen Timeframes, und der Preis kommt nicht voran.
+- Ist der Local zu long, senkt er zuerst das Gebot, um den externen Verkauf zu stoppen. Schneiden tiefere Preise den Verkauf nicht ab, liquidiert er die Longs und verstärkt den Verkauf.
+- Nur selten, wenn der Markt extrem aus der Balance läuft, fehlt der Zusammenhang zwischen zwei aufeinanderfolgenden Tagen.
+- Die größte Imbalance entsteht, wenn jenseits der Range des Vortags eröffnet wird und der Markt in Ausbruchsrichtung weiterläuft.
+- Eine Eröffnung außerhalb der Value ist aus der Balance und trägt größere Chance und größeres Risiko. Liegt sie noch innerhalb der Range, ist der Markt nur leicht aus der Balance.
+- Nicht jede schnelle Rally, die stockt, ist Short Covering. Der obere Bracket-Rand kann den Preis nur bremsen; nach einem Bruch setzt die Rally in der Regel mit neuer Kraft fort.
+- Long Liquidation löst alte Longs auf und setzt keine neuen Shorts. Sie dauert, solange Longs zu decken sind, außer der Bruch zieht neues Geschäft mit Follow-through an.
+- Ein P oder ein b allein belegt das Muster nicht. Zu prüfen sind die jüngste Richtung gegen die Formation, die Eröffnung nahe dem Tief beim Short Covering und nahe dem Hoch bei der Long Liquidation, das fehlende Follow-through nach dem Weg von der Eröffnung und allmählich zurücklaufende Auktionen.
+- Wechselt der Markt von einem balancierten Zwei-Timeframe-Markt zu One-Timeframe-Handel oder zurück, können hoher und niedriger Volumenbereich am selben Tag zusammen auftreten.
+- Eine Eröffnung weit weg von akzeptierter Value bringt den Markt aus der Balance, weil die Kräfte der Imbalance die zugrunde liegende Lage verändert haben. Die Rückkehr in die Value Area des Vortags ist dann weniger wahrscheinlich.
+- Auch eine Eröffnung jenseits der Spikespanne bringt den Markt aus der Balance. Das Ausmaß der Imbalance hängt davon ab, wo relativ zur Spike-Richtung eröffnet wird.
+- Eine Eröffnung über einem Buying Spike ist extrem aus der Balance. Initiative-Käufer haben offensichtlich die Kontrolle.
+- Eine Eröffnung unter einem Selling Spike macht die Stimmung im Day-Timeframe extrem bärisch.
+- Eine Eröffnung unter einem Buying Spike ist ebenfalls bärisch, aber nicht in diesem Ausmaß.
+- Eine Eröffnung über einem Selling Spike bleibt bullisch, weil der Preis dem Markt vorausgelaufen ist.
+- Je weiter die Eröffnung von der Range des Vortags entfernt ist, desto wahrscheinlicher hat sich der Markt vorübergehend überdehnt.
+- Bricht ein Markt aus einer anhaltenden Aufwärtsauktion im Day-Timeframe und stockt in einer b-Formation, waren die Teilnehmer wahrscheinlich zu long. Das ist meist ein Long-Liquidation-Break, und die Kaufauktion läuft weiter.
+- Ein langfristiges Hoch entsteht in der Regel, wenn der ganze Markt kauft und Verkaufen am wenigsten populär ist. Ein langfristiges Tief entsteht, wenn der ganze Markt verkauft und Kaufen am wenigsten populär ist.
+- Overnight-Inventar ist long, wenn der Großteil des Overnight-Handels über dem Schluss oder Settle der vorigen Pit-Session liegt, short, wenn er darunter liegt, und neutral, wenn er etwa gleich auf beiden Seiten liegt.
+- Ist das Overnight-Inventar deutlich zu long oder zu short, ist eine Anpassung kurz nach der Pit-Eröffnung wahrscheinlich. Sie kann später kommen, abhängig vom Vertrauen in die laufende Pit-Session.
+- Bleibt die Anpassung bei langem Overnight-Inventar aus, ist der Markt zumindest kurzfristig stark.
+- Verkaufen unter dem fairsten Tagespreis heißt Short-in-the-Hole. Die Odds, vom verbleibenden Short zu profitieren, sinken, und die Odds einer Rally zur Anpassung des kurzfristigen Inventars steigen; eine Short-Covering-Rally folgt nicht immer.
+- Kontrolliert der Day-Timeframe, wird das Tagesinventar häufiger zu short oder zu long, und fortlaufende Gegenauktionen korrigieren diese Imbalance.
+- Unabhängig davon, ob der langfristige Trend aufwärts oder abwärts läuft, müssen diese kurzfristigen Inventar-Imbalances zuerst bereinigt werden.
+- Je größer die Gap, desto wahrscheinlicher liegen längere Timeframes falsch.
+- Längerfristige Händler liegen falsch und müssen in Richtung der Gap handeln, um ihr bestehendes Inventar anzupassen.
+- Späte Liquidation oder eine Short-Covering-Rally in der Pit-Session kann daher kommen, dass den Day-Tradern die Zeit ausgeht, und nicht allein daher, dass Volumen fehlt.
 
 ## Risiken und Grenzen
 
 - In Wertpapiermärkten bauen sich Inventare extrem schnell auf und werden extrem schnell abgebaut. Die Lage ist dadurch laufend schwer zu beurteilen.
+- Gegen diese treibende Initiative-Auktion zu handeln, ist das größte Risiko. Falsch positioniert ist das Risiko extrem hoch, weil sich die Range aus der Balance nicht schätzen lässt.
+- Viele verlieren viel Geld beim Versuch, Tops und Bottoms im Voraus zu treffen.
+- Die Anpassung nicht zu kennen oder sie für größer zu halten, als sie ist, kann die ganze Session fehlleiten.
 
 ## Beispiele
 

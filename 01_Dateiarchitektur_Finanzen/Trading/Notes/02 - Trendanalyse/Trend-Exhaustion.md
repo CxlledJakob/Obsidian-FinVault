@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Trend-Exhaustion
@@ -46,6 +46,14 @@ aktualisiert: 2026-10-29
 - Der Preis kann stetig tiefer wandern, während der Markt sich ohne die Überzeugung einer haltbaren Richtungsbewegung abmüht.
 - Die b-Form senkt die Chancen auf tiefere Kurse, hebt sie aber nicht auf.
 - Die p-Form warnt früh, dass der Markt Mühe hat, höher zu auktionieren.
+- Ein Trend ist offiziell zu Ende, wenn der responsive Teilnehmer ebenso viel Einfluss auf den Preis hat wie der Initiator.
+- Ein Aufwärtstrend endet, wenn der responsive längerfristige Verkäufer am Top signifikantes Excess erzeugen kann.
+- Kann der Käufer nicht fortlaufend höhere Value etablieren, ist der responsive Verkäufer präsent.
+- Eine Exhaustion Gap kann das Ende eines Trends markieren. In der Schlussphase eines Kauftrends gapt der Markt höher, wenn die letzten Zweifelnden einsteigen; sind praktisch alle long, ist der Trend effektiv vorbei.
+- Ob die Gap eine Exhaustion Gap ist und nicht eine Break-away oder Acceleration Gap, beeinflusst stark, ob sie hält.
+- An Excess-Hochs und Excess-Tiefs ist das Momentum oft am höchsten, und Momentum-Trader werden dort häufig gefangen.
+- Je höher der Markt ohne bestätigende Struktur und ohne bestätigendes Volumen steigt, desto besser wird die folgende Abwärtsgelegenheit.
+- Mehrere Poor Lows, nicht ein einzelnes, bedeuten ein exponentiell höheres Risiko für Long-Positionen.
 
 ## Risiken und Grenzen
 

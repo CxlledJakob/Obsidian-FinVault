@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Liquidität
@@ -28,9 +28,14 @@ aktualisiert: 2026-10-29
 - Market Profile ist vollständig liquiditätsgetrieben. Fließen Mittel hinein, auktioniert der Markt schließlich höher, und fließen sie hinaus, schließlich tiefer.
 - Das Profil erfasst diesen Fluss und damit die sich ändernden Haltungen der Teilnehmer in der Gegenwart.
 - Day-Trader stellen wie Scalper Liquidität bereit, sehr oft zu hohen eigenen Kosten.
+- Locals handeln vor allem im Day Timeframe und stellen Liquidität, nicht die Richtung. Sie nehmen als Mittler wenige Ticks auf großem Volumen mit.
+- Der Local ist typischerweise für über 50 Prozent des Tagesvolumens verantwortlich, doch mit dem elektronischen Handel hat die Bedeutung der Floors stetig abgenommen. Off-Floor-Händler stellen weiter Märkte und erhöhen damit die Liquidität.
+- Ein elongiertes Profil zeigt, dass der Handel gut vermittelt wird.
+- Wie gut der Markt den Handel vermittelt, entscheidet sich daran, wohin er zu laufen versucht und ob ihm dieser Versuch gelingt.
 
 ## Funktionsweise
 
+- Der Local steht zwischen externen Kauf- und Verkaufsorders und erhält für die Vermittlung eine kleine Spanne.
 
 ## Voraussetzungen
 
@@ -40,12 +45,15 @@ aktualisiert: 2026-10-29
 
 ## Regeln und Kriterien
 
+- Wird der Local zu long, senkt er zuerst das Gebot, um den Verkaufsfluss zu stoppen. Schneiden tiefere Preise den Verkauf nicht ab, liquidiert er die Longs und verstärkt den Verkauf.
+- Fällt die Zahl der Transaktionen unter das Niveau eines liquiden Marktes, wird Volumen nicht mehr als Marktanteil gelesen, sondern als absolute Zahl.
 
 ## Risiken und Grenzen
 
 - Verlässt der Markt eine Balance-Area, bewegt sich der Preis anfangs oft schnell und nichtlinear, die Liquidität schrumpft, und die Gelegenheit ist verloren.
 - Hat ein großer Verwalter die schwächer werdende Auktion verpasst, ist die Liquidität nach Beginn der Umkehr in der Regel begrenzt und kann das Ergebnis stark verschlechtern.
 - Sobald die Veränderung breit erkannt ist, trocknet die Liquidität aus. Für große Verwalter ist es dann meist zu spät, weil die Veränderung bereits der Normalfall ist.
+- Als die Floors noch dominierten und Nachrichten die Händler außerhalb langsamer erreichten, hatten die Locals einen zusätzlichen Vorteil.
 
 ## Beispiele
 

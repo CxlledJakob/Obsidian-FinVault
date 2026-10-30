@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/12 - Momentum/12 - Momentum|12 - Momentum]]"
 weitere_hauptthemen: []
 unterthema: "Momentumstruktur"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Beschleunigung
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Eine Acceleration Gap entsteht innerhalb eines Trends und bestätigt Überzeugung und Stärke der Trendrichtung.
 
 ## Kernaussagen
 
@@ -35,6 +34,7 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Ob eine Gap eine Acceleration Gap ist und nicht eine Break-away oder Exhaustion Gap, beeinflusst stark, ob sie hält.
 
 ## Risiken und Grenzen
 

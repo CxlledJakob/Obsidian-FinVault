@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Responsive Activity
@@ -24,15 +24,23 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Der Aufwärtstrend endet, wenn keine Käufer mehr übrig sind. Der responsive Verkäufer auktioniert den Preis abwärts und beginnt damit das Bracket.
+- Im Bracket sind Käufer und Verkäufer des längeren Timeframes beide responsive. Diese Aktivität entwickelt sich gewöhnlich viel langsamer und allmählicher.
 
 ## Funktionsweise
 
+- Eine Ledge entsteht, wenn der Markt bei einem Auktionsversuch wiederholt den responsiven Teilnehmer anzieht und deshalb immer wieder an einem Preis stehen bleibt.
+- Responsive Activity entwickelt sich im Bracket gewöhnlich viel langsamer und allmählicher. Meist bleibt Zeit, die Extreme auf Ablehnung oder Folgeaktivität zu beobachten.
+- Der Abstand der Bracket-Extreme wird unabhängig von der Größe wie eine Tagesspanne behandelt, deshalb liegt die Value Area in der Mitte.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Bremst ein früherer High-Volume-Bereich eine Abwärtssonde, entsteht Zeit für einen responsiven Long, der danach auf die Rückkehr des Käufers zu prüfen ist.
+- Ein Short am oberen Extrem rechnet mit dem responsiven längeren Verkäufer über der Value. Läuft der Preis weiter hinauf, bremst der Widerstand am Bracket-Hoch und lässt einen Ausstieg mit kleinem Verlust zu.
+- Später im Trend wird responsiv gehandelt: im Aufwärtstrend am temporären Break, im Abwärtstrend an der Rally.
 
 ## Regeln und Kriterien
 
@@ -50,9 +58,40 @@ aktualisiert: 2026-10-29
 - Aggressive responsive Käufer, sichtbar am langen Buying Tail, können einen Abwärtsausbruch scheitern lassen und die Shorts vom Morgen zum Decken zwingen.
 - Nur eine Zeitperiode am Tief zeigt höheres Käufervertrauen als zwei aufeinanderfolgende Perioden.
 - Single-Print-Buying-Tails an den Tiefs zeigen, dass diese Preise für den Day-Timeframe zu tief waren.
+- Ein Tail in der letzten Periode ist technisch keine bestätigte responsive Antwort, weil spätere Zeitperioden die Reaktion nicht prüfen können.
+- Ein responsiver Tail braucht mindestens zwei TPOs Länge, sonst hat er keine echte Bedeutung.
+- Je länger der Tail, desto stärker ist die Other-Timeframe-Antwort.
+- Responsiver Kauf liegt vor, weil der Preis unter Value steht. Dass die Auktion fällt und Käufer findet, genügt dafür nicht.
+- Maßstab ist die Value Area des Vortags. Responsive Kauf-TPOs liegen darunter, responsive Verkaufs-TPOs darüber.
+- Aktivität innerhalb der Value Area des Vortags ist nicht responsive. Sie antwortet nicht auf einen Excess-Preis und gilt als initiative.
+- Ein Responsive-Buying-Tail und eine Initiative-Selling-Range-Extension sind dieselbe Aktivität.
+- Range Extension in der letzten Tagesperiode ist kein Tail. Ein Tail braucht die Ablehnung in mindestens einer weiteren Periode.
+- Die nicht gehandelte Differenz zwischen Opening Call und Eröffnung ist responsive oder initiative, je nach Lage zur Value Area des Vortags, genau wie ein sichtbarer Tail.
+- Öffnet der Markt zu weit über dem Hoch des Vortags und fehlt die Fortsetzung, korrigieren responsive Verkäufer den Preis schnell zur zuvor akzeptierten Value.
+- Verkaufs-Range-Extension zeigt, dass responsive Verkäufer nach einem zu weiten Open aus der Balance den Preis zur Value zurückführen.
+- Tails entstehen, wenn das Other Timeframe aggressiv einsteigt, weil der Preis von der Value entfernt ist. Je länger der Tail, desto größer die Überzeugung.
+- Je schneller die Ablehnung, desto stärker ist die Other-Timeframe-Präsenz auf diesem Preis.
+- Ein ungewöhnlich starker responsiver Selling Tail weist auf mögliches Buying Excess am Hoch hin.
+- Ein Buying Tail aus responsivem Kauf unter der Value steht oft als Drehpunkt einer längerfristigen Richtungsbewegung.
+- Ein Schluss auf den Hochs nach aggressivem Einstieg des responsiven Käufers unter Value zeigt entschiedene Ablehnung und mögliches mittel- bis langfristiges Excess.
+- Neue Tiefs mit Schluss nahe dem unteren Extrem zeigen anhaltende Verkäuferpräsenz. Ein Gap nach unten mit Schluss am oberen Extrem zeigt, dass der responsive andere Timeframe den Preis unter Value gesehen hat.
+- Ist der Markt per Abwärts-Gap überdehnt und schließt am oberen Extrem, tritt der responsive längere Käufer ein und auktioniert den Preis schnell höher. Daraus kann mittelfristiges bis langfristiges Excess entstehen.
+- Im Bracket soll jeder Trade responsiv platziert werden. Ein Trade in der Mitte der Balance ist Initiative und nicht responsiv.
+- An langfristigen Referenzpunkten tritt responsives Kaufen häufig auf, wenn der Verkauf den Preis nicht darunter verlängern kann.
+- Responsive Verkäufe zur Gewinnmitnahme treffen auf Initiative-Käufer, die neue Positionen eröffnen.
+- Ein 2I-to-1R-Tag hat einen Responsive-Buying-Tail statt eines Initiative-Buying-Tails. In den Treasury Bonds vom 24. Juni 1986 bis 29. Mai 1987 lagen die Preise in den ersten 90 Minuten in 71 Prozent besser als die Value Area des Vortags; 82 Prozent schlossen innerhalb oder besser, 18 Prozent schlechter.
+- Lehnen responsive Teilnehmer einen Bruch aus der Balance ab, kann die Rückkehr zur Value plötzlich und kraftvoll durch die Value Area und die gesamte Range des Vortags laufen.
+- Ist der Preis dem Markt vorausgelaufen, auktionieren responsive Teilnehmer ihn in die zuvor wahrgenommene Value zurück.
+- Eine Rückkehr in die Balance-Area nach dem Bruch zeigt die Ablehnung durch responsive Käufer.
+- Wird eine Gap von responsiven Teilnehmern gefüllt, geschieht das gewöhnlich innerhalb der ersten Stunde.
+- Je weiter die Eröffnung von der Range des Vortags entfernt ist, desto eher verengen responsive Teilnehmer die Gap in Richtung der Value des Vortags.
+- Bei einer deutlichen Gap wird die frühe Aktivität beobachtet, bevor mit der Gap gehandelt wird.
+- Tritt dabei der responsive Käufer auf, wird gewartet, bis der Initiative-Verkäufer zurückkehrt.
 
 ## Risiken und Grenzen
 
+- Responsiv gegen eine treibende Initiative-Auktion zu handeln, ist das größte Risiko. Das gilt, wenn außerhalb der Range eröffnet wird und die Auktion in Ausbruchsrichtung weiterläuft.
+- Fehlt am Extrem die aggressive Other-Timeframe-Aktivität, fehlt die Überzeugung. In einem steigenden Markt ohne Tail am Tagestief sind frühere Gewinnmitnahmen angebracht, weil eine Umkehr möglich ist.
 
 ## Beispiele
 
@@ -89,3 +128,4 @@ aktualisiert: 2026-10-29
 ## Verwandte Themen
 
 - Ablehnung
+- Initiative Activity

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|03 - Unterstützungen & Widerstände]]"
 weitere_hauptthemen: []
 unterthema: "Reaktionen"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # False Breakdown
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein False Breakdown ist ein initiative Abwärtsbruch unter ein bekanntes Tief oder aus der Balance, der kein neues Geschäft und keine sofortige Fortsetzung anzieht.
+- Ein False Breakdown ist der Versuch, unter das untere Extrem der Trading Range zu brechen, und die darauf folgende Ablehnung.
 
 ## Kernaussagen
 
+- Die Preisprobe schaltet dann die Aktivität ab. Oft muss der Markt erst brechen, bevor eine Aufwärtsauktion mit Überzeugung läuft.
 
 ## Funktionsweise
 
@@ -32,9 +33,12 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Der Long-Einstieg liegt, wenn der Preis in die Region der Value Area des Vortags zurückkehrt, oder früher.
 
 ## Regeln und Kriterien
 
+- Das ist oft ein starkes Signal, dass eine Veränderung eingetreten ist, und bietet eine günstige Trade Location.
+- Excess markiert den Moment der Veränderung.
 
 ## Risiken und Grenzen
 

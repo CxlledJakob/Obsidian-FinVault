@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/12 - Momentum/12 - Momentum|12 - Momentum]]"
 weitere_hauptthemen: []
 unterthema: "Momentumstruktur"
@@ -10,31 +10,33 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Preismomentum
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Momentum-Trader werden an Excess-Hochs und Excess-Tiefs häufig gefangen, weil das Momentum dort oft am höchsten ist.
 
 ## Funktionsweise
 
+- Excess entsteht überwiegend, weil Momentum-Trader die Auktion an diese Extreme treiben.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Bei Auktionen, die das längere Timeframe treibt, wechseln anpassungsfähige Day-Trader vom rotationalen Handel zum Momentum-Handel.
 
 ## Regeln und Kriterien
 
+- Erkannt wird dieses Excess erst danach, wenn der Innovator die nachlaufenden Momentum-Trader fadet.
 
 ## Risiken und Grenzen
 

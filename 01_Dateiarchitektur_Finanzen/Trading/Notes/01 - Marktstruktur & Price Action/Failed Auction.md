@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Failed Auction
@@ -18,9 +18,16 @@ aktualisiert: 2026-10-29
 
 ## Kurzdefinition
 
+- Eine Failed Auction liegt vor, wenn die Fortsetzung ausbleibt. In einem Aufwärtstrend scheitert der Markt dann daran, höher zu auktionieren.
+- Eine Failed Auction liegt auf jedem Timeframe vor, wenn der Markt über oder unter einen bekannten Referenzpunkt auktioniert und die Fortsetzung ausbleibt.
 
 ## Kernaussagen
 
+- Nach dem Scheitern wird der Preis oft schnell und mit Überzeugung in die Gegenrichtung abgelehnt. Das Ausmaß hängt von der Bedeutung des Referenzpunkts ab.
+- Der Unterschied zwischen Day-Timeframe und langfristig liegt in der Größe des getesteten Referenzpunkts und damit in der Größe der folgenden Ablehnung.
+- Scheitert der Bruch unter ein Tief, das mehrere Monate gehalten hat, weil kein neues Geschäft kommt, erfasst die Gegenreaktion oft alle Timeframes und läuft Tage, Wochen oder länger dagegen.
+- Eine Failed Auction an einem langfristigen Referenzpunkt kann den Beginn eines großen langfristigen Aufwärtstrends setzen.
+- Eine verkaufende Failed Auction kann langfristiges Short Covering auslösen.
 
 ## Funktionsweise
 
@@ -47,6 +54,27 @@ aktualisiert: 2026-10-29
 - Das Scheitern zeigt sich daran, dass höhere Preise die Aktivität abschneiden.
 - Nach einer weiten Range mit Akzeptanz spricht das Scheitern, über das Hoch dieses Tages zu auktionieren, für einen engen, rangegebundenen Folgetag.
 - Ziehen tiefere Preise weitere Verkäufer an, statt die Aktivität abzuschneiden, läuft die Auktion weiter und ist nicht beendet.
+- Kehrt der Preis in die Single Prints zurück, die zwei Verteilungen trennen, ist entweder ein starker Other-Timeframe-Käufer eingetreten, oder die Verkäuferüberzeugung hinter der Range Extension besteht nicht mehr.
+- Initiative-Aktivität muss neues Geschäft anziehen und sich sofort fortsetzen. Bleibt das Follow-through aus, hat die Preisprobe die Aktivität abgeschaltet.
+- Das Extrem nach einem gescheiterten ersten Test hält mit etwas geringerer Wahrscheinlichkeit als das Extrem eines Open-Drive.
+- Ist die frühe Verkaufsüberzeugung echt, muss die Auktion unter die Value Area des Vortags und schließlich unter dessen Tief laufen.
+- Wird eine Eröffnung jenseits der Range zurück in die Range abgelehnt, kann der Markt in die Gegenrichtung deutlich laufen. Die Range-Erwartung bleibt unbegrenzt.
+- Verkaufs-Range-Extension nach einer Eröffnung aus der Balance zeigt, dass zu weit außerhalb eröffnet wurde und responsive Verkäufer den Preis zur Value zurückführen.
+- Ohne das Wissen, was jenseits des Hochs des Vortags liegt, ist von den Verkäufern keine deutliche Auktion nach unten zu erwarten.
+- Je mehr verschiedene Other-Timeframe-Teilnehmer am getesteten Referenzpunkt vertreten sind, desto größer ist das mögliche Ausmaß.
+- Scheitert der Verkauf unter einem Bracket-Tief, das mehrere Monate gehalten hat, kommen Day-, Swing- und Other-Timeframe-Käufer zugleich in den Markt und die Volatilität steigt stark.
+- Je länger das Timeframe des Scheiterns, desto größer sind oft Gewinnpotenzial und Risiko. An kürzeren Referenzpunkten bleibt die Bewegung meist kleiner und subtiler.
+- Nach einem bedeutsamen Scheitern decken die Teilnehmer, die den Preis hinunter auktioniert haben, meist kurzes Timeframe oder Local, ihre Shorts und drehen die Position. Andere steigen ein, weil unter dem Referenzpunkt kein Verkauf liegt.
+- Eine Kaufsonde jenseits der Initial Balance, die unmittelbar über einem High-Volume-Bereich abgelehnt wird, ist eine Failed Auction. Hält die Verkäuferstärke, werden Shorts eröffnet oder Longs geschlossen.
+- Läuft der Preis stattdessen höher in die Low-Volume-Niveaus, haben sich die Bedingungen geändert, und die Ablehnung gilt nicht mehr.
+- Auktioniert der Preis durch die Single Prints eines früheren Low-Volume-Bereichs zurück, hat sich die Stimmung geändert. Gegenpositionen sind zu schließen.
+- Führen Kaufversuche bei niedrigerem Volumen zu tieferer Value, bleibt der längere Verkäufer trotz Dominanz des Day-Timeframe-Käufers in Kontrolle. Der Markt muss dann tiefer laufen, um wieder balanciert zu handeln.
+- Ein Aufwärtsversuch mit höherem Volumen, aber tieferer Value, bleibt unklar und ist damit kein schon feststehendes Scheitern.
+- In der großen Mehrheit beginnt ein Breakout mit einer Gap oder einer Failed Auction.
+- Die subtilere Form testet nach überlappender Value ein Extrem, bleibt ohne Fortsetzung und bricht in die Gegenrichtung als Outside Day aus.
+- Die Failed Auction ist das erste Anzeichen für einen möglichen Bruch aus der Balance, weil sie Excess und einen Referenzpunkt setzt.
+- Die Kauf- oder Verkaufsauktion, die eine Gap erzeugt hat, kann scheitern. Responsive Teilnehmer führen den Preis dann zur vorherigen Value zurück, und gewöhnlich gibt es klare Zeichen, dass die Gap gelöscht wird.
+- Kehrt der Preis nach einem Balance-Area-Bruch in die Area zurück, ist die Ausbruchsauktion gescheitert.
 
 ## Risiken und Grenzen
 

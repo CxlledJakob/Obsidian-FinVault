@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Recency Bias
@@ -24,6 +24,7 @@ aktualisiert: 2026-10-29
 
 - Läuft etwas in der eigenen Zeitebene schon eine Weile, wird die Fortsetzung für wahrscheinlich gehalten.
 - Das Gedächtnis ist kurz, und je länger sich das wiederholt, desto geringer erscheint das Risiko.
+- Ein oder zwei Fakten zu übergewichten erzeugt Tunnelblick und verdeckt das sich entwickelnde Gesamtbild.
 
 ## Funktionsweise
 
@@ -33,12 +34,17 @@ aktualisiert: 2026-10-29
 
 ## Anwendung im Trading
 
+- Nahe dem Bracket-Tief lässt die jüngste Abwärtsbewegung die Objektivität kippen, und ein Lauf durch das Bracket wird erwartet.
 
 ## Regeln und Kriterien
 
+- Jüngere höhere Hochs können so fest sitzen, dass ein Bruch unter Value als Kaufchance in einem starken Markt gelesen wird.
+- Die besten Trades laufen gewöhnlich der jüngsten Aktivität entgegen.
+- Die beste Trade Location sieht in dem Moment, in dem sie erreicht wird, oft aus wie die schlechteste.
 
 ## Risiken und Grenzen
 
+- Nahe einem Bracket-Tief legt die jüngste Abwärtsbewegung nahe, der Markt werde das Bracket durchhandeln. Ein Short vor Akzeptanz und Folgeaktivität unter dem Bracket ist deshalb besonders gefährlich.
 
 ## Beispiele
 

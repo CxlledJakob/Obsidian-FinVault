@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Akzeptanz
@@ -33,6 +33,8 @@ aktualisiert: 2026-10-29
 - Ein breiter Mittelwert wirkt als Anker, weil viele Teilnehmer den Preis dort für beide Seiten als fair angesehen haben.
 - Ein prominenter Point of Control ist ein jüngerer Bereich eines weithin akzeptierten fairen Preises.
 - Teilnehmer werden fortlaufend zu jüngeren Bereichen der Akzeptanz (Value) gezogen. Sind diese genommen, testet der Markt den nächsten Balance-Bereich.
+- Die Value Area des Vortags ist der verlässlichste jüngste Bereich, in dem der Preis über die Zeit akzeptiert wurde.
+- Wird eine Eröffnung innerhalb der Value so akzeptiert, ist der Markt in Balance, die Stimmung hat sich nicht deutlich geändert, und Chance wie Risiko sind relativ niedrig.
 
 ## Funktionsweise
 
@@ -61,6 +63,48 @@ aktualisiert: 2026-10-29
 - Wird ein tieferer Preis akzeptiert, steigen die Chancen, dass die Value ebenfalls nach unten wandert.
 - Fehlt über dem Hoch des Vortags die Akzeptanz über die Zeit, baut der Tag dort keine Value außerhalb der Balance auf.
 - In diesem Fall schneiden höhere Preise die Aktivität ab, statt sie fortzusetzen.
+- Unter der ursprünglichen Value Area kann eine zweite Verteilung entstehen, getrennt durch einzelne TPO-Preisprints. Die tieferen Preise gelten dann als akzeptierte Value.
+- Auktioniert der Preis in späteren Zeitperioden in diese Single Prints zurück und macht sie zu Double Prints, ist die zweite Verteilung nicht mehr als Value akzeptiert.
+- Ein Rücklauf in die Single Prints zwischen zwei Verteilungen zeigt entweder einen starken Other-Timeframe-Käufer oder dass die Verkäuferüberzeugung hinter der ursprünglichen Range Extension nicht mehr besteht.
+- Other-Timeframe-Käufer und -Verkäufer liegen in ihrer Value-Sicht oft nahe beieinander, handeln aber selten zum selben Preis. Sie handeln nicht miteinander, sondern mit dem Local.
+- Kauf unter Value und Verkauf über Value bleiben nur kurze Gelegenheiten, weil mehr Wettbewerb den Preis schnell verschiebt. Hält der Preis lange unter Value, ist die Gelegenheit vorbei und Value wird tiefer akzeptiert.
+- Läuft eine Serie von Value Areas klar gerichtet durch die Zeit, werden die neuen Preisniveaus akzeptiert und der Trend findet Akzeptanz.
+- Wird der Preis über oder unter einem bekannten Bracket-Extrem akzeptiert, kann der Markt die Balance verlassen.
+- Akzeptanz innerhalb der Value Area des Vortags liegt vor, wenn der Markt dort mindestens eine Stunde auktioniert.
+- Die Tagesspanne bleibt dann gewöhnlich in der Range des Vortags oder überlappt ein Extrem nur leicht und überschreitet die Länge der Vortagesspanne selten.
+- Das größte Risiko und die größte Chance entstehen bei einer Eröffnung außerhalb der Range des Vortags, weil der Markt dann aus der Balance ist.
+- Doppelte TPOs zeigen die Akzeptanz innerhalb der Value an. Fehlen sie beim Herauslaufen in der ersten halben Stunde, liegt diese Akzeptanz nicht vor.
+- Wird innerhalb der Value des Vortags eröffnet und dort akzeptiert, ist der Markt in der Regel in Balance und wartet auf neue Information.
+- Eine Eröffnung innerhalb der Range, aber außerhalb der Value, erzeugt gewöhnlich eine Range ähnlich dem Vortag, überlappend zu einer Seite.
+- Solche Eröffnungen zeigen einen nur leicht aus der Balance geratenen Markt, und die Value überlappt gewöhnlich zu einer Seite.
+- Solange der Preis nicht in die Range des Vortags zurückkehrt, ist eine Eröffnung außerhalb dieser Range akzeptiert. Die Bedingungen haben sich geändert, und der Markt ist aus der Balance.
+- Nach dieser Akzeptanz läuft der Markt entweder in Ausbruchsrichtung weiter oder auktioniert auf den neuen Preisniveaus hin und her.
+- Mehr Zeit auf einem Preis zeigt zweiseitigen Handel. Other-Timeframe-Käufer und Other-Timeframe-Verkäufer sind dann wahrscheinlich beide aktiv.
+- Gelingt die Auktion in eine Richtung über die Zeit nicht, kann die Kontrolle drehen, weil der Markt Handel in der Gegenrichtung sucht.
+- Zu viel Zeit auf einem Niveau führt zur Ablehnung des Preises. Genug Zeit von zu viel Zeit zu unterscheiden nimmt einen Kontrollwechsel vorweg.
+- Zieht der Markt sehr schnell durch eine Preisregion, ist die Other-Timeframe-Präsenz dort stark. Diese Preise dienen später in der Regel als Unterstützung oder Widerstand.
+- Wird der Bruch durch ein Bracket-Tief akzeptiert, steigen dieselben Teilnehmer auf der Verkaufsseite ein und verstärken eine starke Initiative-Verkaufsauktion.
+- Doppelte TPO-Prints gegen eine One-Timeframe-Auktion zeigen genug Zeit in der Gegenrichtung, um einen möglichen Timeframe-Wechsel zu rechtfertigen.
+- Je länger der Preis von einem Bereich der Akzeptanz fernbleibt, desto weniger Bedeutung hat das hohe Volumen, wenn der Markt diese Region wieder betritt.
+- Wird der Preis unter einem High-Volume-Bereich akzeptiert, haben sich die Wertvorstellungen geändert. Bestehende Longs sind sofort zu schließen.
+- Baut der Preis jenseits eines früheren Low-Volume-Bereichs Akzeptanz auf, haben sich die Bedingungen geändert. Strategien, die auf diesem Bereich beruhen, sind aufzugeben.
+- Ein Island Day verbringt die Session auf dem gegapten Niveau und versucht, den Preis zu bestätigen, kehrt am Folgetag aber zur zuvor etablierten Value zurück.
+- Öffnet der Markt deutlich über der Range des Vortags und auktioniert den ganzen Tag nach unten, kann Verkäuferkontrolle vortäuschen. Bleibt die Value höher etabliert, kann längerfristig der Käufer führen.
+- Ist die versuchte Richtung aufwärts, das Volumen mindestens durchschnittlich und die Value höher, wird der Handel auf höheren Preisen erfolgreich erleichtert.
+- Klar höhere Value zeigt, dass die Käufer Value höher platzieren konnten. Nur nach oben überlappende Value ist derselbe Vorgang mit geringerem Ausmaß.
+- Wird der Preis über dem Bracket akzeptiert, werden Shorts geschlossen und Longs mit der Ausbruchsaktivität eröffnet.
+- Ein Short unter dem Bracket setzt Akzeptanz und Folgeaktivität unter dem Bracket voraus. Vorher gilt der tiefere Preis nicht als akzeptiert.
+- Ein Short unter dem Bracket-Tief setzt voraus, dass der Markt dort Akzeptanz und Fortsetzung gezeigt hat.
+- Werden Sonden jenseits überlappender Value akzeptiert, läuft die Auktion in dieser Richtung wahrscheinlich mindestens einige Tage weiter.
+- Eröffnet der Markt innerhalb eines Spikes vom Vortag, ist dieser Bereich bestätigt.
+- Der Spike ist auch akzeptiert, wenn der Folgetag jenseits des Spikes eröffnet, über einem Buying Spike oder unter einem Selling Spike. Die Erkundung ist dann nicht vorbei, und der Markt sucht wahrscheinlich neue Value in Spike-Richtung.
+- Doppelte TPO-Prints innerhalb der Value Area des Vortags zeigen Akzeptanz. Dann besteht eine gute Möglichkeit, dass der Markt diese Value Area vollständig durchläuft.
+- Je näher die Eröffnung an der Value Area des Vortags liegt, desto größer ist die Chance, sie zu durchstoßen und zu durchlaufen.
+- Eine schmale Value Area, Zeichen schwacher Handelsfazilitation und geringeren Volumens, wird leichter durchlaufen als eine breite mit hohem Volumen. Die Value-Area-Regel hat dort die höhere Wahrscheinlichkeit.
+- Läuft der Preis in einem Kauftrend nach oben in die Value, sind die Fortsetzungschancen deutlich besser als in einem Abwärtstrend.
+- Eine Eröffnung unter einem Selling Spike ist für den Day-Timeframe extrem bärisch und zeigt, dass dieser Spike die Value anführt.
+- Ein weiterer Test in den Spike in einer späteren Zeitperiode erzeugt doppelte TPOs und etabliert dort Value. Damit entfällt die Verlässlichkeit des Spike-Extrems als Referenz.
+- Wird der Preis außerhalb der Balance-Area akzeptiert, werden die Trades in Richtung der neuen Aktivität gelegt.
 
 ## Risiken und Grenzen
 

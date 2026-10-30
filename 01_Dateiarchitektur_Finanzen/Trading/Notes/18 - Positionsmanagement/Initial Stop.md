@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/18 - Positionsmanagement/18 - Positionsmanagement|18 - Positionsmanagement]]"
 weitere_hauptthemen: []
 unterthema: "Trade Management"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Initial Stop
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,8 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Der Schutzstop beim Balance-Area-Bruch liegt ein paar Ticks jenseits des Bruchpunkts.
+- Beim Gap-Trade liegt er an dem Preis, an dem eine Rotation die Gap vollständig auslöscht.
 
 ## Risiken und Grenzen
 

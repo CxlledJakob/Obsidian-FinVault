@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/18 - Positionsmanagement/18 - Positionsmanagement|18 - Positionsmanagement]]"
 weitere_hauptthemen: []
 unterthema: "Trade Management"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Teilgewinnmitnahme
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Gewinnmitnahme schreibt den Gewinn fest: verkaufen, wenn der Preis gestiegen ist, und kaufen, wenn er gefallen ist.
 
 ## Kernaussagen
 
+- Gewinnmitnahme ist für einen gesunden Markt nötig und senkt das Angstniveau.
 
 ## Funktionsweise
 
@@ -32,6 +32,7 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- In der Korrektur können alte Käufer zu einem günstigen Preis liquidieren, und neue Käufer können Longs mit guter Tages-Location aufbauen.
 
 ## Regeln und Kriterien
 

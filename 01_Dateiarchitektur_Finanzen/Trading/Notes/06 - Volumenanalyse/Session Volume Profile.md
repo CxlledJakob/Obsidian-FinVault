@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Session Volume Profile
@@ -25,6 +25,10 @@ aktualisiert: 2026-10-29
 - Diese Marken entstehen in beliebiger Reihenfolge und stehen erst fest, wenn der Handel abgeschlossen ist und das Tagesprofil vollständig ist.
 - Die Value Area am Tagesende ist die Spanne, in der die meisten Teilnehmer mit Day-Timeframe-Geschäft dieses Geschäft ausführen wollten.
 - Am Tagesprofil lässt sich unterscheiden, ob der Preis zu Value zurückläuft oder Value nach oben führt.
+- Ein Open-Drive außerhalb der Range des Vortags lässt einen Trend Day mit anhaltender Bewegung über den Tag erkennen. Ein Open-Auction in der Value weist auf einen balancierteren Handelstag hin, dessen Range-Extreme sich abschätzen lassen.
+- Begrenzt die Zeit den Anstieg, wird der fairste Preis im Tagesprofil prominenter. Ein gesünderer Markt zeigt ein stärker elongiertes Profil.
+- Das Volume Profile der Session zeigt je Preis das genaue Volumen einschließlich Relative Volume und die Kontraktzahl der gesamten Session.
+- Was dieses Profil nicht zeigt, wiegt schwerer als die Anzeige.
 
 ## Funktionsweise
 
@@ -34,12 +38,19 @@ aktualisiert: 2026-10-29
 
 ## Anwendung im Trading
 
+- Sobald eine neue Richtungsauktion vermutet wird, beginnt ein neues Market Profile.
 
 ## Regeln und Kriterien
 
+- Short Covering ohne neues Kaufen erscheint als P, Long Liquidation oft als b. Diese Form allein belegt das Muster nicht.
+- Ein Preis ohne Akzeptanz über die Zeit ist abgelehnt.
+- Die Richtung eines Tages muss vom Volumen nicht bestätigt sein, auch wenn die Auktion bis zum Close weiterläuft.
+- In vielen Fällen wird die Bewegung am Folgetag korrigiert, weil das Volumen gefehlt hat.
 
 ## Risiken und Grenzen
 
+- Der Schluss ist das letzte Zeichen der Day-Timeframe-Stimmung. Er wird oft überbetont als Vorzeichen des Folgetags, beeinflusst aber Overnight-Händler, die häufig in Richtung des Schlusses weiterhandeln.
+- Volume Profiles allein kennzeichnen oft falsche Anomalien, etwa das Hoch oder Tief des Vortags.
 
 ## Beispiele
 

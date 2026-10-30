@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Volatilitätsexpansion
@@ -41,6 +41,7 @@ aktualisiert: 2026-10-29
 - Konzentrieren sich viele Teilnehmer auf ein Niveau oder einen Indikator, steigt die Chance erhöhter Volatilität.
 - Mit der höheren Volatilität kommt die Gelegenheit.
 - Kommt der Markt aus der Balance, zieht das wahrscheinlich mehrere Zeitebenen an und erhöht die Volatilität. Ein Inside Day ist eine Form dieser Balance.
+- Scheitert der Verkauf unter einem Bracket-Tief, das mehrere Monate gehalten hat, treten Day-, Swing- und Other-Timeframe-Käufer gemeinsam auf und die Volatilität wird hoch.
 
 ## Risiken und Grenzen
 

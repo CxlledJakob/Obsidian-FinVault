@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Stop-Loss
@@ -36,6 +36,11 @@ aktualisiert: 2026-10-29
 - Ein Rücklauf über das Bracket-Extrem hinaus soll den Ausstieg auslösen.
 - Den Trade aus eigenem Entschluss beenden, statt zu warten, bis Stops einen herausnehmen.
 - Beginnt die anfängliche Zuversicht eines Open-Drive nachzulassen, ist das der Anlass zum Ausstieg.
+- Beim Balance-Area-Bruch liegt der Ausstiegsstop ein paar Ticks jenseits des Bruchpunkts, weil die Rückkehr in die Area die Ablehnung anzeigt.
+- Beim Gap-Trade liegt der Stop dort, wo eine Preisrotation die Gap vollständig durchhandelt und damit löscht.
+- Fehlt die Folge, wird mit kleinem Verlust ausgestiegen, sobald der Preis zurück in die Balance-Area handelt.
+- Stops werden an zuvor bekannte Referenzpunkte gelegt.
+- Ausgestiegen wird, sobald Bedingungen entstehen, die der angenommenen Marktstimmung widersprechen.
 
 ## Risiken und Grenzen
 

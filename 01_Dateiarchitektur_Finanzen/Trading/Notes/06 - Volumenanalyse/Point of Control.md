@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Point of Control
@@ -28,9 +28,15 @@ aktualisiert: 2026-10-29
 - Wäre eine Rally wirklich unmittelbar bevorstehend, müsste der Point of Control steigen und nicht fallen.
 - Ein prominenter Point of Control ist ungewöhnlich breit, bildet ein Gravitationszentrum und verhindert die Elongation des Tages.
 - Prominente Points of Control werden oft wieder besucht und können Platzierung oder Exit des Folgetages leiten, weil sie einen jüngeren Bereich eines weithin akzeptierten fairen Preises sind.
+- Der Point of Control ist der Preis mit der meisten Aktivität und der meisten Handelszeit und deshalb der fairste Preis im Day Timeframe. Er ist die längste TPO-Linie nahe der Mitte der Range und steht für den größten Value.
+- Der Point of Control ist der Preis mit der meisten Aktivität und damit der fairste Preis im Day-Timeframe, weil Preis mal Zeit Value ergibt.
+- Der Point of Control ist die längste Linie von links nach rechts, am nächsten zur Mitte der Range. Das ist der Preis mit der größten Zeit.
+- Weil dieser Preis über die meiste Zeit akzeptiert wurde, ist er der fairste Preis der Session. Preis wirbt Gelegenheiten, Zeit reguliert sie.
+- Der Point of Control ist der fairste Preis, zu dem im Day-Timeframe gerade Geschäft gemacht wird.
 
 ## Funktionsweise
 
+- Den fairen Preis zu beobachten zeigt am besten, welches Timeframe den Markt kontrolliert.
 
 ## Voraussetzungen
 
@@ -41,6 +47,17 @@ aktualisiert: 2026-10-29
 ## Regeln und Kriterien
 
 - Prominente Points of Control aus früheren Sessions haben in der Tagesvorbereitung hohe Priorität.
+- Für die TPO-Zählung wird er als längste Linie nahe der Range-Mitte isoliert. Die TPOs darüber werden mit denen darunter verglichen, Single-Print-Tails zählen nicht.
+- Verkaufs-Range-Extension senkt den Point of Control und die Wahrnehmung von Value und kann die TPO-Zählung zu den Verkäufern verschieben.
+- Bei wenig Einfluss der anderen oder langen Timeframes bleibt er nahe der Mitte. Wird das Other Timeframe aggressiver, wandert er nach oben oder unten.
+- Sind zwei Preise gleich lang, liegt der Point of Control dazwischen, und das Zentrum der Range liegt zwischen diesen Preisen.
+- Range Extension zu einer Seite verschiebt den Point of Control. Danach wird die Tagesrange durch zwei geteilt, um das Zentrum zu bestimmen.
+- Hat der Markt auf einem Niveau zu viel Zeit verbracht, ändert Range Extension den fairsten Preis nicht. Zeit und Range Extension zusammen können ihn ändern.
+- Käufe über dem fairsten Preis, der mit dem Point of Control identisch ist, haben überdurchschnittliches Risiko. Verkäufe darunter gelten als Verkäufe unter Value.
+- Ein fortlaufend steigender fairster Preis zeigt beständiges Kaufen des anderen Timeframes.
+- Bestand kann in minimaler Zeit auf- oder abgebaut werden, sodass der Point of Control innerhalb einer Zeitperiode die Kontrolle wechselt.
+- Verkaufen unter diesem fairsten Preis heißt Short-in-the-Hole, also Short zu schlechten Preisen.
+- Danach sinken die Odds, vom verbleibenden Short zu profitieren, und es steigen die Odds einer Rally, die das kurzfristige Inventar anpasst. Eine Short-Covering-Rally folgt nicht in jedem Fall.
 
 ## Risiken und Grenzen
 
