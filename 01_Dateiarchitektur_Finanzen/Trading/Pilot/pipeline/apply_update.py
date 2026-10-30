@@ -11,6 +11,8 @@ Aufrufe:
   python3 apply_update.py link zuordnungen.json
   python3 apply_update.py add ergaenzungen.json
   python3 apply_update.py pending
+  python3 apply_update.py link-shards
+  python3 apply_update.py fill-shards
   python3 apply_update.py publish "Commit-Nachricht"
   python3 apply_update.py self-test
 """
@@ -44,6 +46,10 @@ LOCKED_STATUS = frozenset({"geprüft", "archiviert"})
 MAX_BULLET_CHARS = 800
 PAGE_DASH = "–"
 BRANCH = "jakob/features"
+LINK_SHARD_SIZE = 4
+FILL_SHARD_SIZE = 3
+BULLET_CAP = 12
+BULLET_CHARS = 220
 NOTES_PREFIX = "01_Dateiarchitektur_Finanzen/Trading/Notes/"
 LEDGER_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/data/ledger.jsonl"
 APPLY_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py"
@@ -603,7 +609,7 @@ def cmd_next(roots: Roots) -> int:
     return 0
 
 
-def cmd_pending(roots: Roots) -> int:
+def pending_pairs(roots: Roots) -> list[tuple[str, str, str]]:
     register = load_register(roots.register)
     by_note = note_index(register)
     applied = load_applied(roots)
@@ -623,12 +629,179 @@ def cmd_pending(roots: Roots) -> int:
             if (begriff, fragment_rel) in applied:
                 continue
             rows.append((begriff, fragment_rel, rel))
+    return rows
+
+
+def cmd_pending(roots: Roots) -> int:
+    rows = pending_pairs(roots)
     if not rows:
         print("keine offenen Fragmente")
         return 0
     for begriff, fragment_rel, note_rel in rows:
         print(f"{begriff}\t{fragment_rel}\t{note_rel}")
     return 0
+
+
+def split_groups(items: list, size: int) -> list[list]:
+    if size < 1:
+        raise ValueError("Shard-Größe fehlt")
+    return [items[index : index + size] for index in range(0, len(items), size)]
+
+
+def display_path(roots: Roots, path: Path) -> str:
+    try:
+        return path.resolve().relative_to(roots.vault.parent.resolve()).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def content_bullets(body: list[str]) -> list[str]:
+    found: list[str] = []
+    for title in SECTIONS:
+        if title == "Quellen und Fundstellen":
+            continue
+        bounds = section_bounds(body, title)
+        if bounds is None:
+            continue
+        start, end = bounds
+        for line in body[start + 1 : end]:
+            if not line.strip().startswith("- "):
+                continue
+            text = bullet_text(line)
+            if text:
+                found.append(text)
+    return found
+
+
+def work_dir(roots: Roots) -> Path:
+    return roots.trading / "Pilot" / "data" / "work"
+
+
+def clear_shard_files(directory: Path, prefix: str) -> None:
+    directory.mkdir(parents=True, exist_ok=True)
+    ignore = directory / ".gitignore"
+    if not ignore.exists():
+        ignore.write_text("*\n!.gitignore\n", encoding="utf-8")
+    for path in directory.glob(f"{prefix}-*"):
+        if path.is_file():
+            path.unlink()
+
+
+def print_shards(roots: Roots, paths: list[Path], empty: str) -> int:
+    if not paths:
+        print(empty)
+        return 0
+    print(f"shards {len(paths)}")
+    for path in paths:
+        print(display_path(roots, path))
+    return 0
+
+
+def write_link_shards(roots: Roots) -> list[Path]:
+    books = open_books(roots)
+    directory = work_dir(roots)
+    clear_shard_files(directory, "link")
+    if not books:
+        return []
+    folder, files = books[0]
+    taxonomy = roots.trading / "Research" / "Taxonomie" / "Themenstruktur.txt"
+    paths: list[Path] = []
+    for index, group in enumerate(split_groups(files, LINK_SHARD_SIZE), start=1):
+        path = directory / f"link-{index:02d}.md"
+        json_path = directory / f"link-{index:02d}.json"
+        lines = [
+            f"# Link {index}",
+            "",
+            f"Buch: {vault_rel(roots, folder)}",
+            f"JSON: {display_path(roots, json_path)}",
+            f"Themenliste: {display_path(roots, taxonomy)}",
+            "",
+            "Lies die Themenliste einmal. Lies jede Fragmentdatei unten genau einmal, vollständig.",
+            "Keine andere Datei. Keine Subagents. Kein Git. Keine Begriffsnotiz anfassen.",
+            "Schreibe ein JSON-Array. Pro Fragment genau ein Objekt, in dieser Reihenfolge:",
+            '{"fragment": "exakter Pfad", "begriffe": ["Exakter Begriff"]}',
+            "Der Fragmentpfad ist der Pfad aus dieser Datei, unverändert.",
+            "begriffe bleibt leer, wenn nichts passt. Namen müssen exakt aus der Themenliste stammen.",
+            "Ein Begriff passt nur, wenn das Fragment ihn definiert, eine Regel gibt oder ein Kriterium nennt.",
+            "Ein einzelnes Wort reicht nicht. Keine neuen Begriffe.",
+            "",
+            "## Fragmente",
+            "",
+        ]
+        for fragment in group:
+            lines.append(f"- {vault_rel(roots, fragment)}")
+        path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+        paths.append(path)
+    return paths
+
+
+def write_fill_shards(roots: Roots) -> list[Path]:
+    pairs = pending_pairs(roots)
+    directory = work_dir(roots)
+    clear_shard_files(directory, "fill")
+    if not pairs:
+        return []
+    by_fragment: dict[str, list[tuple[str, str]]] = {}
+    for begriff, fragment_rel, note_rel in pairs:
+        by_fragment.setdefault(fragment_rel, []).append((begriff, note_rel))
+    sections = ", ".join(title for title in SECTIONS if title != "Quellen und Fundstellen")
+    paths: list[Path] = []
+    fragments = sorted(by_fragment)
+    for index, group in enumerate(split_groups(fragments, FILL_SHARD_SIZE), start=1):
+        path = directory / f"fill-{index:02d}.md"
+        json_path = directory / f"fill-{index:02d}.json"
+        lines = [
+            f"# Fill {index}",
+            "",
+            f"JSON: {display_path(roots, json_path)}",
+            "",
+            "Lies jede Fragmentdatei unten genau einmal, vollständig. Keine andere Datei.",
+            "Keine Subagents. Kein Git. Die Notizdateien nicht öffnen.",
+            "Schreibe ein JSON-Array. Pro genanntem Begriff genau ein Objekt:",
+            '{"begriff": "Exakter Begriff", "fragment": "exakter Pfad", "sections": {"Kernaussagen": ["Ein Fakt."]}, "korrekturen": [], "fertig": true}',
+            "fragment ist der Pfad aus der Überschrift, unverändert. begriff ist die Überschrift, unverändert.",
+            "Setze fertig immer auf true, auch wenn du Stichpunkte ergänzt.",
+            "Steht in dem Fragment nichts Neues, lass sections leer.",
+            f"Erlaubte Abschnitte: {sections}.",
+            "Eigene Erkenntnisse nicht füllen. Deutsch, ein Fakt pro Stichpunkt, höchstens zwei Sätze.",
+            "Nur Aussagen aus dem gerade gelesenen Fragment. Vorhandene Stichpunkte nicht wiederholen.",
+            "Eine Korrektur nur, wenn das Fragment eine vorhandene Aussage ausdrücklich anders sagt.",
+            "",
+        ]
+        for fragment_rel in group:
+            lines.append(f"## {fragment_rel}")
+            lines.append("")
+            for begriff, note_rel in sorted(by_fragment[fragment_rel]):
+                lines.append(f"### {begriff}")
+                lines.append(f"Notiz: {note_rel}")
+                lines.append("Vorhanden:")
+                bullets: list[str] = []
+                try:
+                    _front, body = split_document((roots.vault / note_rel).read_text(encoding="utf-8"))
+                    bullets = content_bullets(body)
+                except (OSError, ValueError):
+                    bullets = []
+                if not bullets:
+                    lines.append("(keine)")
+                else:
+                    for item in bullets[:BULLET_CAP]:
+                        short = item if len(item) <= BULLET_CHARS else item[:BULLET_CHARS].rstrip() + "…"
+                        lines.append(f"- {short}")
+                    extra = len(bullets) - BULLET_CAP
+                    if extra > 0:
+                        lines.append(f"- … {extra} weitere")
+                lines.append("")
+        path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
+        paths.append(path)
+    return paths
+
+
+def cmd_link_shards(roots: Roots) -> int:
+    return print_shards(roots, write_link_shards(roots), "keine offenen Bücher")
+
+
+def cmd_fill_shards(roots: Roots) -> int:
+    return print_shards(roots, write_fill_shards(roots), "keine offenen Fragmente")
 
 
 def allowed_work_path(path: str) -> bool:
@@ -825,6 +998,8 @@ def self_test() -> int:
     ]
     if chosen != expected:
         raise SystemExit(f"Publish-Auswahl falsch: {chosen}")
+    if split_groups(["a", "b", "c", "d", "e"], 3) != [["a", "b", "c"], ["d", "e"]]:
+        raise SystemExit("Shard-Schnitt falsch")
     import tempfile
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -927,6 +1102,15 @@ def self_test() -> int:
         pending = cmd_pending(roots)
         if pending != 0:
             raise SystemExit("pending fehlgeschlagen")
+        fill_paths = write_fill_shards(roots)
+        if len(fill_paths) != 1:
+            raise SystemExit(f"fill-shards: {fill_paths}")
+        fill_text = fill_paths[0].read_text(encoding="utf-8")
+        if "Marktstruktur" not in fill_text or "fertig" not in fill_text:
+            raise SystemExit(fill_text)
+        link_paths = write_link_shards(roots)
+        if link_paths:
+            raise SystemExit("abgehaktes Buch darf keine Link-Shards haben")
         add_file.write_text(
             json.dumps(
                 {
@@ -1035,6 +1219,10 @@ def main(argv: list[str]) -> int:
         return cmd_pending(roots)
     if command == "next":
         return cmd_next(roots)
+    if command == "link-shards":
+        return cmd_link_shards(roots)
+    if command == "fill-shards":
+        return cmd_fill_shards(roots)
     if command in {"link", "add"}:
         if len(args) != 1:
             print(f"Aufruf: apply_update.py {command} datei.json", file=sys.stderr)

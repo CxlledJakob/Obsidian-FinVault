@@ -20,3 +20,5 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish
 ```
 
 Ein Lauf ohne solche Änderungen bekommt keinen Commit. Das Skript lässt fremde lokale Dateien liegen und pusht nur nach `jakob/features`.
+
+Die zwei Buch-Chats schneiden die Arbeit mit `link-shards` oder `fill-shards` und starten diese Teile parallel in einem Schritt. Shard-Dateien unter `Trading/Pilot/data/work/` werden nicht committet. Keine weiteren Wellen und keine verschachtelten Subagents.
