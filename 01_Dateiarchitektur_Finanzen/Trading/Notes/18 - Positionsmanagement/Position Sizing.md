@@ -29,6 +29,11 @@ aktualisiert: 2026-10-30
 - Je stärker das Signal, desto kleiner die Wahrscheinlichkeit, dass es noch stärker wird, und desto größer die Bet Size.
 - Sagt eine ML-Strategie einen Kauf mit hoher Wahrscheinlichkeit voraus, wird eine große Long-Position eingegangen, als Funktion der Konfidenz der Strategie.
 - Im sample-gewichteten Cross-Entropy-Loss steht die vorhergesagte Wahrscheinlichkeit für die Positionsgröße.
+- Die Kelly-Formel bestimmt die optimale Kapitalallokation und den optimalen Hebel und wägt Renditen gegen Risiken ab.
+- Unterhebeln ist immer besser als Überhebeln, besonders wenn fremdes Geld verwaltet wird.
+- Der optimale Hebel wird für Fälle gesucht, in denen die Renditen nicht mehr als gaußverteilt gelten können.
+- Schwarze Schwäne, Constant Proportion Portfolio Insurance und Stop-Losses mildern die praktische Anwendung dieser Allokation.
+- Risikoindikatoren werden daraufhin geprüft, ob sie ein nützlicher Teil eines umfassenden Risikomanagements sind.
 
 ## Funktionsweise
 
@@ -68,6 +73,17 @@ aktualisiert: 2026-10-30
 - Die Herleitung der Gleichungen für die Potenzfunktion bleibt eine Übung.
 - Um Overtrading zu vermeiden, wird die Bet Size als round(m/d) · d diskretisiert, wobei d in (0, 1] den Grad der Diskretisierung bestimmt.
 - Nach der Rundung werden Werte über 1 auf 1 und Werte unter −1 auf −1 gesetzt.
+- Die lineare Strategie hält eine Stückzahl, die negativ proportional zum Z-Score ist, also zu Preis minus gleitendem Durchschnitt, geteilt durch die gleitende Standardabweichung.
+- Bei USD.X ist der Marktwert einer Einheit der Kurs selbst, deshalb ist der Portfoliomarktwert gleich dem negativen Z-Score.
+- Beim Portfolio werden Vielfache des Einheitsportfolios proportional zum negativen Z-Score seines Preises gehalten; die Stücke des Einheitsportfolios setzt der Johansen-Eigenvektor.
+- Die Zahl der Einheiten des Einheitsportfolios ist der negative Z-Score seines Preises; linear bezieht sich auf diese Stückzahl, nicht auf eine Proportionalität des Anlage-Marktwerts.
+- Die Dollarposition jedes ETF ist das Produkt aus diesem Vielfachen, den Eigenvektor-Stücken und dem Kurs.
+- Die ausgewiesene Rendite teilt die P&L durch den Bruttomarktwert, die Summe der absoluten Positionsmarktwerte.
+- Die lineare Strategie setzt die Stückzahl proportional zur Abweichung vom Mittel und hat deshalb keine bekannte Obergrenze der Kapitalbindung.
+- Die Bollinger-Strategie hält zu jedem Zeitpunkt null oder eine Einheit und macht die Kapitalzuteilung dadurch einfach.
+- Scaling-in erhöht das investierte Kapital, je weiter der Preis vom Mittel abweicht, weil der mögliche Gewinn aus der Rückkehr mitwächst.
+- Beim Verhältnis erhalten Long- und Short-Seite dasselbe Dollarkapital.
+- Beim Log-Preis-Portfolio werden die Kapitalgewichte konstant gehalten, und die Differenz zur Marktwertänderung sitzt in der Kasse.
 
 ## Voraussetzungen
 
@@ -78,9 +94,25 @@ aktualisiert: 2026-10-30
 
 ## Regeln und Kriterien
 
+- In der Modellrechnung reicht die Kaufkraft für genau zwei Kontrakte, egal ob sie bei L1, bei L2 oder erst bei F eingesetzt werden.
+- All-in setzt beide Kontrakte auf einem einzigen Niveau, average-in einen Kontrakt bei L1 und den zweiten nur, wenn L2 erreicht wird.
+- Buy-on-Gap kauft höchstens 10 Aktien, im Code topN gleich 10; ist die gefilterte Liste kürzer, wird sie ganz gekauft, und die Rendite des Backtests wird durch topN geteilt.
+- Im SPY-Beispiel erhält jede kointegrierende Aktie gleiches Kapital; der Johansen-Eigenvektor auf Logpreisen setzt die Dollar-Allokation zwischen diesem Portfolio und SPY, nicht die Stückzahl.
+- Die lineare Mean-Reversion-Strategie setzt die Zahl der Einheiten auf den negativen Abstand des Log-Marktwerts von seinem gleitenden Mittel, geteilt durch die gleitende Standardabweichung, bei Look-back 5.
+- Im querschnittlichen Modell ist wi gleich minus (ri minus der Durchschnittsrendite) geteilt durch die Summe der absoluten Abweichungen, sodass jeden Tag dasselbe Bruttokapital von 1 Dollar investiert wird.
 
 ## Risiken und Grenzen
 
+- Weil kein Maximum des Portfoliomarktwerts gesetzt wird, kann für die ausgewiesene P&L unbegrenzt Kapital nötig sein.
+- Der Autor empfiehlt die unbegrenzte lineare Positionsgröße nicht als praktische Handelsstrategie.
+- Das Höchstkapital ist im Voraus unbekannt, und infinitesimale Stückzahlen bei infinitesimalen Preisbewegungen sind nicht handelbar.
+- Nach einer ungebrochenen Erfolgsserie wird die Strategie oft mit maximalem Leverage gehandelt, und der dann seltene Verlust kann katastrophal sein.
+- Unter konstantem p ist keine Staffelung die erwartungsgemäß profitabelste Größe; entweder beide Kontrakte bei L1 oder beide bei L2 sind besser.
+- Bei großen Größen senken Scaling-in und Scaling-out die Marktauswirkung von Ein- und Ausstieg.
+- Ist die Volatilität nicht konstant, kann die Staffelung außer Stichprobe eine bessere realisierte Sharpe Ratio liefern.
+- Buy-on-Gap handelt je Tag recht wenige Aktien und hat deshalb keine große Kapazität.
+- Ein Backtest auf Trade- oder Quote-Preisen ist nur realistisch, wenn nur 100 Stück gehandelt werden oder erhebliche Transaktionskosten angesetzt sind; die NBBO-Größe von AAPL ist oft nur 100 Stück, die von EWC an einem typischen Tag etwa 5.000.
+- Werden nach dem Signal nicht beide Seiten als Market Order geschickt, bleiben bei Teilausführung kleiner Orderbruchteile zeitweise kleine ungehedgte Positionen.
 
 ## Beispiele
 

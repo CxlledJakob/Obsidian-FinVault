@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/22 - Marktanomalien & Behavioral Finance/22 - Marktanomalien & Behavioral Finance|22 - Marktanomalien & Behavioral Finance]]"
 weitere_hauptthemen: []
 unterthema: "Kalendereffekte"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Index-Rebalancing-Effekt
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Indexfonds, ob Publikumsfonds oder ETFs, müssen bei einer Änderung der Indexzusammensetzung zwangsweise kaufen oder verkaufen.
+- Kommt eine Aktie in einen Index, ist Kaufdruck zu erwarten, bei Löschung Verkaufsdruck.
+- Diese Trades erzeugen unmittelbar nach den angekündigten Änderungen Momentum.
+- Aufnahme oder Löschung erzeugt Momentum in den betroffenen Aktien.
 
 ## Funktionsweise
 
@@ -44,6 +46,7 @@ aktualisiert: 2026-10-26
 
 ## Unterschiedliche Quellenpositionen
 
+- Manche Forscher berichten, dass dieses Momentum früher viele Tage anhielt; eigene Tests mit jüngeren Daten legen nahe, dass der Drift-Horizont auf Intraday geschrumpft ist (Shankar und Miller, 2006).
 
 ## Eigene Erkenntnisse
 

@@ -21,6 +21,11 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Der Broker oder der Risikomanager kann einen Höchsthebel Fmax setzen, der kleiner ist als die Summe der Beträge der Kelly-Hebel.
+- Bruttohebel ist die Summe der Beträge von Long- und Short-Marktwerten geteilt durch das Eigenkapital.
+- Nettohebel ist der Saldo aus Long- und Short-Marktwerten geteilt durch das Eigenkapital.
+- Ein erlaubter maximaler Drawdown kleiner als 1 ist eine zusätzliche Nebenbedingung der Hebeloptimierung.
+- Bei CPPI ist nur der Anteil D des Kapitals dem Handel ausgesetzt, 1 minus D bleibt Cash.
 
 ## Funktionsweise
 
@@ -38,6 +43,9 @@ aktualisiert: 2026-10-30
 - Mit jedem neuen Trade wird das zugehörige Risiko neu bewertet, getrennt nach Übernacht, zwischenfristig und langfristig.
 - Zu viel Inventar bindet Kapital, sodass neue Gelegenheiten ausfallen. Kein Inventar senkt die Einnahmechance.
 - Bei niedrigerem Kapital oder um die Angst bei Maximum-Trades zu senken, kann ein Maximum-Trade über Option-Spreads laufen.
+- Die übliche Empfehlung, alle Kelly-Hebel mit Fmax geteilt durch die Summe ihrer Beträge zu multiplizieren, ist unter der Nebenbedingung nicht mehr wachstumsoptimal.
+- Ist Fmax viel kleiner als die Kelly-Summe, ist es oft optimal, die gesamte Kaufkraft in die Strategie mit dem höchsten mittleren Excess Return zu legen.
+- Risikomanager, beim unabhängigen Händler vielleicht der Ehepartner, können einen viel kleineren Drawdown als 1 vorschreiben.
 
 ## Risiken und Grenzen
 
@@ -45,6 +53,7 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Als Beispiel, nicht als feste Empfehlung: Wer bis zu drei Futures gleichzeitig handelt, beschränkt sich auf einen Maximum-Trade zur selben Zeit, also auf eine große langfristige Position.
+- Zwei gaußische, unkorrelierte Strategien haben Kelly-Hebel 4,4 und 4,9, zusammen 9,3; bei Fmax gleich 2 ist das Wachstumsoptimum, die gesamte Kaufkraft auf die zweite Strategie zu legen.
 
 ## Unterschiedliche Quellenpositionen
 

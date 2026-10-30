@@ -47,6 +47,10 @@ aktualisiert: 2026-10-30
 - Ein Dreifachboden testet die Unterstützung und prallt ab. Hält ein Bruch darunter, wird das Niveau starker Widerstand.
 - Ein gebrochener Dreifachtop baut ein extrem starkes Unterstützungsfundament.
 - Am Boden eines deutlichen Falls werden auch auf einem schnellen Intraday-Chart hohe Volumen erwartet. Fehlen sie scheinbar, kann ein vorheriges Extrem die Skala verzerrt haben.
+- Einmal gebrochene Unterstützung lässt die Preise nach Osler (2000, 2001) noch eine Weile weiter fallen.
+- Die Niveaus können täglich von Banken oder Brokern gemeldet werden oder runde Zahlen nahe dem aktuellen Preis sein.
+- An oder nahe der Unterstützung liegen viele Verkaufs-Stop-Orders; ihr Auslösen treibt den Preis weiter nach unten.
+- Ein Intraday-Breakout-Beispiel steigt an verschiedenen Unterstützungsniveaus ein.
 
 ## Funktionsweise
 
@@ -57,6 +61,8 @@ aktualisiert: 2026-10-30
 - Auch eine kurze Stauzone auf der 5-Minuten-Chart stützt den Intraday-Trader, wirkt auf den längeren Trend aber wenig.
 - Eine tiefe Zone auf dem Tageschart macht den Bruch von Decke oder Boden bedeutend.
 - Die Unterstützung bleibt auf der Chart liegen, auch wenn der Preis weiterzieht, und wird bei späteren Besuchen wieder wirksam.
+- High-Frequency-Händler legen nahe genug an der Unterstützung große Sell Orders, um den nächsten Tick nach unten zu treiben und die Stops auszulösen.
+- Die Opening-Gap-Short-Bedingung nutzt das Vortagestief: Short, wenn das Open unter dem Tief mal (1 minus 0,1 mal der verschobenen 90-Tage-Standardabweichung) liegt.
 
 ## Voraussetzungen
 

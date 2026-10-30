@@ -44,6 +44,14 @@ aktualisiert: 2026-10-30
 - Empirisch haben Finanzzeitreihen einen Drift, sind heteroskedastisch, zeigen serielle Abhängigkeit, und ihre Renditeverteilung ist nicht normal.
 - Mit einem geeigneten Sampling, wie in Kapitel 2 beschrieben, müssen die Random-Walk-Annahmen nicht allzu unrealistisch sein.
 - Das Rauschen des unbeobachteten Preises ohne Mikrostrukturrauschen ist σ²u = σ²[Δpt] + 2 σ[Δpt, Δpt−1].
+- Die meisten Preisreihen sind geometrische Random Walks; die Renditen verteilen sich gewöhnlich zufällig um einen Mittelwert von null.
+- Beim geometrischen Random Walk wächst die Varianz der Logpreisänderung linear mit der Zeitspanne τ, und der Hurst-Exponent ist 0,5.
+- Kann die ADF-Null λ gleich 0 nicht verworfen werden, hängt der nächste Schritt nicht vom aktuellen Niveau ab, und ein Random Walk bleibt möglich.
+- Stationarität bedeutet, dass Preise langsamer diffundieren als ein geometrischer Random Walk.
+- Hurst-Exponent und Variance-Ratio-Test sind dafür gebaut, diese Stationarität gegen den geometrischen Random Walk zu prüfen.
+- Aktienkurse folgen langfristig geometrischen Random Walks, auch wenn sie kurzfristig unter normalen Umständen mean-reverting sind.
+- Der geometrische Random Walk beschreibt tägliche Einzelaktien gut: einmal weggegangen, kehren sie selten zu ihrem Startpunkt zurück; Intraday- und saisonale Mean Reversion sind Sonderfälle.
+- Dass Aktienkurse geometrischen Random Walks folgen, wie es viele Forscher und Malkiel 2008 betonen, gilt nur, wenn die Reihe streng in regelmäßigen Abständen auf Mean Reversion getestet wird, etwa an den täglichen Schlüssen.
 
 ## Funktionsweise
 
@@ -56,6 +64,7 @@ aktualisiert: 2026-10-30
 
 ## Regeln und Kriterien
 
+- Der Variance-Ratio-Test prüft die Null, dass der Hurst-Exponent wirklich 0,5 ist; h gleich 1 verwirft den Random Walk auf 90 Prozent, h gleich 0 lässt ihn zu.
 
 ## Risiken und Grenzen
 
@@ -64,6 +73,9 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- USD.CAD sieht in der Abbildung nicht stationär aus; die ADF-Statistik von etwa minus 1,84 verwirft die Null auf 90 Prozent nicht, der kritische Wert ist minus 2,594, und die AR(1)-Schätzung liegt bei 0,994120.
+- Der Variance-Ratio-Test auf den Logpreisen von USD.CAD ergibt h gleich 0 und pValue gleich 0,367281, also rund 37 Prozent Wahrscheinlichkeit, dass die Reihe ein Random Walk ist.
+- λ ist bei USD.CAD dennoch negativ, die Reihe trendet also zumindest nicht, und der Hurst-Exponent von 0,49 deutet auf schwache Mean Reversion.
 
 ## Unterschiedliche Quellenpositionen
 

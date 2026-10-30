@@ -44,6 +44,14 @@ aktualisiert: 2026-10-30
 - Weil die meisten Strategien ein Gewinnziel und einen Stop-Loss haben, werden die Ergebnisse als binomialer Prozess modelliert.
 - Der Portfoliomanager setzt Verlustschwelle, Gewinnschwelle und jährliche Wettfrequenz und gibt die Ausstiege mit den Aufträgen an die Händler.
 - Die Trefferwahrscheinlichkeit bestimmt der Markt, und die Ziel-Sharpe-Ratio bestimmt der Investor.
+- Man braucht keine echte Stationarität: kurzfristige oder saisonale Mean Reversion lässt sich mitnehmen, wenn die Position geschlossen wird, bevor der Preis das nächste Gleichgewicht erreicht.
+- Saisonale Mean Reversion heißt, dass die Reihe nur in bestimmten Tagesabschnitten oder unter bestimmten Bedingungen zum Mittel zurückkehrt.
+- Für Momentum-Strategien gibt es zwei übliche Ausstiegsarten, den zeitbasierten Ausstieg und den Stop-Loss.
+- Alle bisher besprochenen Momentum-Strategien verwenden nur zeitbasierte Ausstiege: eine Haltedauer wird festgelegt, und bei ihrem Erreichen wird die Position geschlossen.
+- Ein Stop-Loss kann die Ausstiegsbedingung oder eine zusätzliche Ausstiegsbedingung sein.
+- Stop-Losses sind mit Momentum-Strategien verträglich und mit Mean-Reversion-Strategien nicht, weil sie deren Einstiegssignalen widersprechen; das wird in Kapitel 8 wieder aufgenommen.
+- Durch zeitbasierten Ausstieg oder Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt.
+- Eine willkürlich gesetzte Gewinnobergrenze bei Momentum ist unratsam, weil das Aufwärtspotenzial sonst unbegrenzt ist.
 
 ## Funktionsweise
 
@@ -55,6 +63,9 @@ aktualisiert: 2026-10-30
 - Weil die Stop-Schwelle unter der Gewinnschwelle liegt, kann nur eine der beiden Bedingungen den Ausstieg auslösen.
 - Der endgültige Gewinn der Gelegenheit ist ihr Mark-to-Market-Ergebnis zum Ausstiegszeitpunkt.
 - Der Mark-to-Market-Gewinn nach t Transaktionen ist die Positionsgröße mal der Differenz aus dem dann beobachteten Preis und dem Einstiegspreis.
+- Scaling-in skaliert auch schrittweise aus: der Gewinn muss nicht bis zur vollen Rückkehr zum Mittel warten.
+- Schon kleine Rückläufe lassen sich realisieren, sodass die Strategie auch profitabel bleiben kann, wenn die Reihe nicht wirklich stationär ist und nie zum Mittel zurückkehrt.
+- In der Modellrechnung von Schoenberg und Corwin werden alle Kontrakte erst bei F geschlossen, also ohne average-out, selbst wenn mit average-in eingestiegen wurde.
 
 ## Voraussetzungen
 
@@ -75,12 +86,26 @@ aktualisiert: 2026-10-30
 - Bei [1,0,0] wird gehalten, bis ein Gewinn entsteht, und die Position kann jahrelang im Verlust gebunden bleiben.
 - Die Konfiguration [0,1,0] hält nur bis zum Stop und gilt als ziellos.
 - Bei [0,0,0] gibt es keine Barrieren, die Position bleibt auf Dauer gesperrt, und es entsteht kein Label.
+- Der Bollinger-Ausstieg liegt bei exitZscore Standardabweichungen vom Mittel, mit exitZscore kleiner als entryZscore.
+- exitZscore gleich 0 bedeutet den Ausstieg am aktuellen Mittel.
+- exitZscore gleich minus entryZscore bedeutet den Ausstieg erst jenseits des gegenüberliegenden Bands, sodass dort ein Signal mit umgekehrtem Vorzeichen entsteht.
+- Im GLD-USO-Beispiel mit exitZscore gleich 0 wird die Long-Position geschlossen, sobald der Z-Score mindestens minus exitZscore ist, und die Short-Position, sobald er höchstens exitZscore ist.
+- Mehrere Ausstiege zum Scaling-in liegen bei exitZscore gleich 0, 1, 2 bis N minus 1, passend zu den Einstiegen 1, 2, 3 bis N.
+- Beim Kalman-Beispiel wird die Long-Position geschlossen, sobald der Prognosefehler e größer als minus der Wurzel aus Q ist, und die Short-Position, sobald e kleiner als die Wurzel aus Q ist.
+- Im Buy-on-Gap werden alle Positionen zum Marktschluss liquidiert.
+- In der Intraday-Variante des linearen Long-Short werden alle Positionen zum Marktschluss liquidiert.
+- Eine genannte Variante setzt Intraday-Gewinnobergrenzen.
+- Für GLD gegen GDX soll zumindest eine Regel den Handel beenden, sobald der Ölpreis eine bestimmte Schwelle überschreitet.
+- Bei einem einzelnen Aktienpaar setzt konsistente Profitabilität voraus, dass man jedes Unternehmen fundamental versteht und die Position verlässt, bevor schlechte Nachrichten eines der beiden öffentlich werden.
+- Wer bei Aktienpaaren auf Overnight-Positionen verzichtet, kann die Änderungen der fundamentalen Unternehmensbewertung vermeiden, die längere Positionen treffen.
 
 ## Risiken und Grenzen
 
 - Jede Anlagestrategie hat Stop-Loss-Grenzen, ob selbst gesetzt, von der Risikoabteilung erzwungen oder durch einen Margin Call ausgelöst.
 - Eine Strategie auf Positionen aufzubauen, die an der Börse ausgestoppt worden wären, ist unrealistisch.
 - Die übliche Kalibrierung von Ein- und Ausstiegsparametern über historische Simulationen führt zu Backtest-Overfitting.
+- Schoenberg und Corwin zeigen, dass auch der Ausstieg an zwei oder mehr Bollinger-Bändern im Backtest nie optimal ist.
+- Nicht jede stationäre Reihe trägt, wenn die Halbwertszeit beispielsweise zehn Jahre lang ist.
 
 ## Beispiele
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/22 - Marktanomalien & Behavioral Finance/22 - Marktanomalien & Behavioral Finance|22 - Marktanomalien & Behavioral Finance]]"
 weitere_hauptthemen: []
 unterthema: "Verhaltensphänomene"
@@ -10,19 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Herdenverhalten
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Mittelzuflüsse und Mittelabflüsse von Publikumsfonds lassen sich aus ihrer vergangenen Leistung und ihren vergangenen Strömen mit guter Genauigkeit vorhersagen, was das herdenartige Verhalten der Privatanleger spiegelt.
+- Aus dieser Vorhersage lässt sich der künftige PRESSURE-Faktor vorhersagen und die Fonds lassen sich front-runnen, was vor Kosten weitere 17 Prozent annualisiert erzeugt.
+- Der Notverkauf schlecht laufender Fonds mit Rückgaben ist ansteckend, weil die gedrückten Kurse die Leistung anderer Fonds mit denselben Titeln drücken und dort weitere Rückgaben auslösen.
+- Dieselbe Ansteckung läuft umgekehrt für Titel, die überproportional von sehr gut laufenden Fonds mit großen Zuflüssen gehalten werden.
+- Publikumsfonds sind typischerweise fast voll investiert und halten sehr wenig Barreserve; bei großen Rückgaben reduzieren oder schließen sie bestehende Aktienpositionen.
+- Bei großen Zuflüssen stocken sie bestehende Aktienpositionen auf, statt das zusätzliche Kapital in andere Aktien zu investieren, vielleicht weil neue Anlageideen nicht leicht kommen.
+- Aktien, die überproportional von schlecht laufenden Fonds mit Rückgaben gehalten werden, erfahren negative Renditen.
 
 ## Funktionsweise
 

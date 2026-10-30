@@ -33,6 +33,9 @@ aktualisiert: 2026-10-30
 - Eine Anomalie ist ein einzelner Preis oder ein Preisniveau ohne Symmetrie, eine ungewöhnliche Anordnung im Market Profile, und steht für strukturelle Schwäche.
 - Langfristige Composite-Profile können zu viel Information enthalten und Struktur verdecken, etwa Gaps sowie Hochs und Tiefs von Trading Ranges.
 - Anomalien entstehen aus der Kombination von Zeit und Preis und erscheinen deshalb auf Volume Profiles oft nicht.
+- Weicht der Live-Handel vom Backtest ab, ist die Ursache oft ein grundlegender Wandel der Marktstruktur und nicht ein Fehler beim Backtesten.
+- Dieser Wandel ist ein Regime Shift durch staatliche Regulierung oder makroökonomische Änderungen.
+- Fondsmanager bleiben auch bei einer angeblich algorithmischen, automatisierten Strategie in der Rolle, auf dieser Ebene zu urteilen, ob die Modelle noch gültig sind.
 
 ## Funktionsweise
 

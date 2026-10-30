@@ -35,11 +35,17 @@ aktualisiert: 2026-10-30
 - Das so geschätzte λi nähert die effektiven Handelskosten an.
 - Tägliche Amihud-Lambdas weisen eine hohe Rangkorrelation zu Intraday-Schätzungen des effektiven Spreads auf.
 - Der Autor hält die t-Werte dieser mikrostrukturellen Schätzungen für informativer als die Mittelwerte, weil sie mit der Standardabweichung des Schätzfehlers skalieren.
+- Eine Bewegung des SPX um 1 Prozent erzwingt nach Cheng und Madhavan (2009) Käufe oder Verkäufe im Umfang von etwa 17 Prozent des Market-on-Close-Volumens und hat damit signifikanten, momentum-erzeugenden Market Impact.
+- Das Rebalancing gehebelter ETFs nahe dem Schluss erzeugt Momentum im Marktwert des Portfolios und in den Basiswerten.
+- Momentum Ignition legt eine große Buy-Limit-Order auf den Best Bid, um Kaufdruck vorzutäuschen und andere zum Kauf am Ask zu bewegen.
 
 ## Funktionsweise
 
 - Deshalb erledigen die Insider Kauf und Verkauf nicht in einer Session, sondern über zwei, drei oder vier Sessions.
 - Dieselbe Gegenbewegung zwingt auch Distribution, Selling Climax und Buying Climax, sich über einen Zeitraum zu erstrecken.
+- High-Frequency-Händler können nahe einer Unterstützung große Sell Orders legen, um den nächsten Tick nach unten zu treiben.
+- Große institutionelle Orders, die früher als Block Trades liefen, werden in winzige Child Orders zerlegt, über Handelsplätze verteilt und über den Tag ausgeführt.
+- Wer ein großes Bid für Flipping hält, kann an die Flipper verkaufen und den Bid-Preis nach unten drücken.
 
 ## Voraussetzungen
 
@@ -52,6 +58,8 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Wird die große Buy-Limit-Order beim Flipping gefüllt, kann der anschließende Verkauf mit Verlust erfolgen.
+- Eine aktuellere Impact-Analyse zum Rebalancing gehebelter ETFs stammt von Rodier, Haryanto, Shum und Hejazi (2012).
 
 ## Beispiele
 

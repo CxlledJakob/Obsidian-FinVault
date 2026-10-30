@@ -23,6 +23,9 @@ aktualisiert: 2026-10-30
 
 - Die Ergebnisgleichung setzt das Ergebnis aus dem Marktverständnis an, multipliziert mit der Summe aus Selbstverständnis und Strategie. Ohne Selbstverständnis bleibt das Ergebnis beim Durchschnitt, und der durchschnittliche Teilnehmer verdient kein Geld.
 - Ist Marktverständnis erreicht, beruhen mindestens 75 Prozent der Ergebnisse auf Selbstverständnis. Ohne die richtigen Marktgrundlagen lässt sich dieses Selbstverständnis kaum aufbauen.
+- Aus Fehlern und Beinahe-Katastrophen lernt man viel mehr als aus Erfolgen.
+- Diese Lehren folgen auf das Überstehen der Quant-Fonds-Schmelze im Sommer 2007, der Finanzkrise 2008, des Flash Crash 2010, der Herabstufung der US-Bonität 2011 und der europäischen Schuldenkrise 2011 bis 2012.
+- Der Autor ist dadurch zuversichtlicher, dass sein anfänglicher Ansatz des algorithmischen Handels tragfähig ist, hat in der Zwischenzeit aber erheblich dazugelernt.
 
 ## Funktionsweise
 
@@ -59,6 +62,9 @@ aktualisiert: 2026-10-30
 - Wirksam ist nur richtige Übung. Dieselbe falsche Übung den ganzen Tag erzeugt nicht das richtige Ergebnis.
 - Sechs Hinweise auf eine positive Preisrichtung können von einer einzigen Beobachtung mit negativer Richtung überwogen werden. Diese entscheidende Begründung trägt die Entscheidung.
 - Der letzte Vorbereitungsschritt vor der Pit-Eröffnung ist die Beurteilung von Overnight-Handel und Overnight-Inventar. Es zu missverstehen oder zu übergehen ist ein Fall von Preisblindheit.
+- Es ist selten eine gute Idee, ein Modell manuell zu übersteuern, ganz gleich wie tückisch der Markt aussieht.
+- Überkonfidenz in eine Strategie ist die größte Gefahr.
+- Unterhebeln ist immer besser als Überhebeln, besonders bei der Verwaltung fremden Geldes.
 
 ## Risiken und Grenzen
 

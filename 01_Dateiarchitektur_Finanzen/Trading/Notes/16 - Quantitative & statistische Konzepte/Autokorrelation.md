@@ -26,6 +26,7 @@ aktualisiert: 2026-10-30
 - Auf Zeitskalen von weniger als einigen Stunden führen sie die Persistenz des Orderflows überwiegend auf Order Splitting zurück.
 - Im Roll-Modell ist die serielle Kovarianz der beobachteten Preisänderungen negativ und gleich −c², wobei c die halbe Geld-Brief-Spanne ist.
 - Empirisch zeigen Finanzzeitreihen serielle Abhängigkeit.
+- Querschnittliche Mean Reversion setzt auf die serielle Antikorrelation relativer Renditen: auf Unterperformance einer Aktie soll Überperformance folgen und umgekehrt.
 
 ## Funktionsweise
 

@@ -30,6 +30,13 @@ aktualisiert: 2026-10-30
 - Die Trade-Location bestimmt das im Trade liegende Änderungsrisiko.
 - Odds-Denken zeigt asymmetrische Gelegenheiten und hält davon ab, allein am Preis auf der falschen Seite zu landen.
 - Trade Location ist die beste verfügbare Risikokontrolle.
+- Momentum-Strategien beginnen in der Liste ihrer Vorteile mit der Leichtigkeit des Risikomanagements.
+- Durch einen zeitbasierten Ausstieg oder einen Stop-Loss ist der Verlust einer einzelnen Momentum-Position immer begrenzt.
+- Bei Mean-Reversion-Strategien ist das Aufwärtspotenzial durch die natürliche Gewinnobergrenze am Mittel begrenzt, das Abwärtspotenzial kann unbegrenzt sein.
+- Bei Momentum-Strategien ist das Aufwärtspotenzial unbegrenzt, solange nicht willkürlich eine Gewinnobergrenze gesetzt wird, was unratsam ist, und das Abwärtspotenzial ist begrenzt.
+- Je häufiger Black-Swan-Ereignisse auftreten, desto wahrscheinlicher profitiert eine Momentum-Strategie davon.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist dieser Markt für Momentum-Strategien.
+- Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
 
 ## Funktionsweise
 
@@ -118,6 +125,10 @@ aktualisiert: 2026-10-30
 - Schlechte Trade Location am Anfang kann dazu zwingen, einen Trade zu verlassen, der sich danach gut entwickelt hätte.
 - Special Situations sind nicht ausfallsicher. Dieselbe Einordnung der Richtungsüberzeugung kann weitere Lagen mit hohem Hebel und niedrigem Risiko sichtbar machen.
 - Der Markt wird über die Zeit reguliert. Verstreicht die Gelegenheit zur Anpassung, können die finanziellen Folgen schwer sein.
+- Mit einer einzigen Mean-Reversion-Position kann ein enormer Drawdown entstehen.
+- Der aufsummierte Verlust aufeinanderfolgender verlierender Momentum-Positionen kann trotzdem in die Insolvenz führen.
+- Momentum-Strategien überstehen Risiken und können in ihnen gedeihen, liefen nach riskanten Ereignissen aber schlecht.
+- Stop-Losses passen zu Momentum, weil ein Richtungswechsel in die Gegenposition führt und dieser neue Einstieg den Stop der verlierenden Position ersetzt; sie passen nicht zu Mean Reversion, weil sie deren Einstiegssignalen widersprechen.
 
 ## Beispiele
 

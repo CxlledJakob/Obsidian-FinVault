@@ -24,6 +24,8 @@ aktualisiert: 2026-10-30
 
 - Positive Schiefe erhöht die Probabilistic Sharpe Ratio.
 - Die abgebildete Fläche zeigt die Probabilistic Sharpe Ratio in Abhängigkeit von Schiefe und Stichprobenlänge bei Kurtosis 3, beobachteter Sharpe Ratio 1,5 und Benchmark 1,0.
+- Wer die Gauß-Verteilung verlässt, weil sie Extremereignisse nicht erfasst, kann mit der Student-t-Verteilung Schiefe und Kurtosis der Renditen abbilden.
+- Im zweiten Hypothesentest haben die simulierten Tagesrenditen dieselbe Schiefe wie die beobachteten Futures-Renditen, neben Mittelwert, Standardabweichung und Kurtosis, aber nicht dieselben eingebetteten Korrelationen.
 
 ## Funktionsweise
 

@@ -25,6 +25,7 @@ aktualisiert: 2026-10-30
 - Eine einzelne Order für einen ganzen Block am Hoch würde den Preis zu weit drücken und den Verkaufsgewinn schmälern.
 - Die Alternative ist, die Order in kleinere Blöcke zu teilen oder sie vollständig im Dark Pool zu verstecken.
 - Es gibt dabei keine Transparenz, und die wenigsten Trader oder Investoren wissen davon.
+- Der Aufstieg von Dark Pools und Hochfrequenzhandel macht den Handel mancher Mean-Reversion-Strategien in den letzten Jahren recht herausfordernd, darunter Interday- und Intraday-Aktienmodelle, ETF-Paare und -Triplets, ETFs gegen ihre Komponentenaktien, Währungspaare sowie Futures-Kalender- und Intermarket-Spreads.
 
 ## Funktionsweise
 

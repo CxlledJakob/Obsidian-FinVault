@@ -98,6 +98,18 @@ aktualisiert: 2026-10-30
 - Die Wahrscheinlichkeit, dass die Vermutung falsch ist, ist klein gegenüber der Wahrscheinlichkeit, die Handelsregel durch ihr Ignorieren überanzupassen.
 - Die rationale Handlungsweise ist, die Vermutung als zutreffend zu behandeln und die Regel auf synthetischen Daten zu bestimmen.
 - Im ungünstigsten Fall bleibt die auf synthetischen Daten bestimmte Regel suboptimal und übertrifft dennoch fast sicher eine überangepasste Regel.
+- Einfache und lineare Strategien sind das durchgehende Gegenmittel gegen Overfitting und Data-Snooping-Verzerrungen, die komplexe Strategien oft plagen.
+- Viele technische Indikatoren oder Regeln auf eine Preisreihe zu werfen, bis eine davon profitabel aussieht, lädt diese Verzerrung ein. Stattdessen wird die grundlegende Eigenschaft der Reihe in einem einfachen mathematischen Modell gefasst.
+- Ein Modell mit wenigen Parametern, aber vielen komplizierten Handelsregeln, ist für die Anpassung an zufällige historische Muster ebenso anfällig wie eines mit vielen Parametern.
+- Nichtlineare Modelle sind anfälliger als lineare, weil sie komplizierter sind und gewöhnlich mehr freie Parameter haben.
+- Bei einfacher Extrapolation der historischen Preise passt ein nichtlineares Modell die Historie besser an. Das garantiert keine bessere Prognose eines künftigen Wertes.
+- Selbst bei gleicher Parameterzahl lässt sich ein nichtlineares Modell gewöhnlich durch eine Taylor-Entwicklung approximieren. Zu jedem nichtlinearen Modell gibt es daher meist eine einfachere lineare Näherung, und es braucht einen guten Grund, warum das lineare Modell nicht genügt.
+- Die Ausnahmen sind die singulären Fälle, in denen die Terme niedriger Ordnung verschwinden. Solche Fälle beschreiben realistische Finanzzeitreihen selten.
+- Lineare Modelle meinen hier nicht nur eine lineare Preisprognose, sondern auch eine lineare Kapitalallokation.
+- Wer ein Modell so lange nachjustiert, bis es auf dem vermeintlichen Out-of-Sample-Satz ebenfalls gut aussieht, hat diese Daten in Trainingsdaten verwandelt.
+- Beim neuronalen Netz ist die Zahl der mit In-Sample-Trainingsdaten anzupassenden Parameter proportional zur Zahl der Knoten.
+- Mit mindestens 100 Parametern lässt sich das Modell an jede gewünschte Zeitreihe anpassen und eine fantastische Sharpe Ratio erzielen, vorwärts aber mit wenig oder keiner Vorhersagekraft wegen Data-Snooping-Bias.
+- Der Alarm des Autors geht an, sobald von einem neuronalen Handelsmodell die Rede ist, erst recht bei einem mit 100 Knoten.
 
 ## Funktionsweise
 
@@ -129,6 +141,8 @@ aktualisiert: 2026-10-30
 - Jeder Backtest auf einem Datensatz ist festzuhalten, damit die Probability of Backtest Overfitting des gewählten Ergebnisses geschätzt und die Sharpe Ratio um die Zahl der Versuche deflationiert werden kann.
 - Szenarien sollen statt der Geschichte simuliert werden, weil ein historischer Pfad leicht zu überfitten ist und Tausende Was-wäre-wenn-Szenarien schwerer zu überfitten sind.
 - Findet der Backtest keine profitable Strategie, wird von vorn begonnen und das Wiederverwenden der Ergebnisse unterlassen.
+- Den Lookback auf ein kleines Vielfaches der Halbwertszeit zu setzen, vermeidet die Brute-Force-Optimierung eines freien Parameters anhand der Performance der Handelsstrategie.
+- Die lineare Mean-Reversion-Strategie wird als wirklich parameterfrei beschrieben.
 
 ## Risiken und Grenzen
 
@@ -159,6 +173,7 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Im Beispiel korrelieren die Eigenwerte mit den MDI-Werten mit einem Pearson-Koeffizienten von 0,8491 bei einem p-Wert unter 1E-150, was belegt, dass PCA informative Features ohne Overfitting richtig geordnet hat.
+- Das Beispiel eines neuronalen Handelsnetzes mit etwa 100 Knoten hat eine Backtest-Sharpe-Ratio von 6.
 
 ## Unterschiedliche Quellenpositionen
 

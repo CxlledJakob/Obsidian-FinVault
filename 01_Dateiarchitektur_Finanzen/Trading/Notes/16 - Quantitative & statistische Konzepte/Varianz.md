@@ -22,6 +22,7 @@ aktualisiert: 2026-10-30
 - Noise ist die Varianz der beobachteten Werte, etwa durch unvorhersehbare Änderungen oder Messfehler, und lässt sich durch kein Modell erklären.
 - Die Inverse-Varianz-Allokation ist optimal, wenn die Kovarianzmatrix diagonal ist: Das Gewicht ist dann proportional zum Kehrwert der eigenen Varianz.
 - Für den charakteristischen Vektor aus Einsen ist die Lösung des quadratischen Programms das Minimum-Varianz-Portfolio.
+- Die Varianz der Logpreisänderung über die Spanne τ ist das Mittel von |z(t+τ) minus z(t)| zum Quadrat, mit z gleich log(y).
 
 ## Kernaussagen
 
@@ -45,6 +46,10 @@ aktualisiert: 2026-10-30
 - Wird die ADF-Null auf Rohpreisen verworfen, haben die Preise eine endliche Varianz, und die Renditevolatilität muss mit steigenden Preisen fallen und mit fallenden steigen.
 - Bei Logpreisen bedingen die Preisniveaus den Renditemittelwert, nicht die Renditevolatilität.
 - Ist die Renditevarianz invariant zum Preisniveau, wird ein ADF auf Rohpreisen strukturell heteroskedastisch.
+- Beim geometrischen Random Walk ist diese Varianz proportional zu τ, bei Mean Reversion oder Trend proportional zu τ hoch 2H.
+- Stationarität heißt, dass die Varianz sublinear in der Zeit wächst und nicht, dass sie zeitunabhängig ist.
+- Auch für 0 kleiner H kleiner 0,5 steigt die Varianz mit der Zeit, nur langsamer als bei einem geometrischen Random Walk.
+- Manager, deren einziges Ziel das langfristige Nettovermögen ist, achten nicht auf Drawdowns und auf die Volatilität der Renditen.
 
 ## Funktionsweise
 
@@ -56,6 +61,14 @@ aktualisiert: 2026-10-30
 - Bei zwei Anlagen ist das Gewicht der ersten Anlage eins minus der Bruch aus ihrer Varianz und der Summe beider Varianzen.
 - Stufe 3 von Hierarchical Risk Parity setzt den Anteil der ersten Hälfte auf eins minus den Bruch aus ihrer Varianz und der Summe beider Varianzen.
 - Die Cluster-Varianz im Code ist die quadratische Form der Kovarianzscheibe mit Inverse-Varianz-Gewichten.
+- Der Variance-Ratio-Test prüft, ob das Verhältnis der Varianz über die Spanne τ zur τ-fachen Ein-Schritt-Varianz gleich 1 ist (Lo, 2001).
+- Die Proportionalität zur Zeitspanne wird für großes τ zur Gleichheit und kann für kleines τ von der Geraden abweichen.
+- Der Kalman-Filter minimiert den mittleren quadratischen Fehler der geschätzten Variablen und ist unter gaußschem Rauschen der beste Schätzer.
+- Q(t) ist die Varianz des Prognosefehlers e(t) und wird als x transponiert mal R mal x plus Ve prognostiziert.
+- R ist die Kovarianz des Fehlers der verborgenen Variable; die Varianz des Prognosefehlers ist davon zu unterscheiden.
+- Im Market-Making-Modell ist die Prognosevarianz die Varianz des Mittelpreisschätzers plus Ve, und das Zustandsvarianz-Update multipliziert die alte Varianz mit 1 minus dem Kalman-Gain.
+- In der Kelly-Formel ist s hoch 2 die Varianz der Excess Returns, und der optimale Hebel ist der mittlere Excess Return geteilt durch diese Varianz.
+- Das Pearson-System nimmt neben dem Mittelwert die Standardabweichung sowie Schiefe und Kurtosis als Input der Monte-Carlo-Verteilung.
 
 ## Voraussetzungen
 
@@ -73,11 +86,18 @@ aktualisiert: 2026-10-30
 
 - Liegt die mittlere Korrelation der Ensemble-Prognosen nahe 1, verändert Bagging die Varianz praktisch nicht, auch wenn sehr viele Schätzer verwendet werden.
 - Bei Labels mit geringer Eindeutigkeit bleibt die Varianzreduktion aus, solange mit Zurücklegen nahezu dieselben Informationen gezogen werden.
+- Eine unterschätzte Varianz führt zu einem überschätzten optimalen Hebel und kann zum Ruin führen.
+- Schätzfehler der Varianz sind unvermeidlich, und die künftige Varianz muss nicht der historischen entsprechen.
+- Kelly über mehrere Strategien ist nur optimal, wenn auch die Volatilitäten unverändert bleiben.
 
 ## Beispiele
 
 - Abbildung 6.1 zeigt die Standardabweichung der gebaggten Prognose für N zwischen 5 und 30, mittlere Korrelation zwischen 0 und 1 und mittlere Einzelstandardabweichung 1.
 - Die simulierten Gauß-Renditen haben Mittelwert 0 und eine willkürlich gesetzte Standardabweichung von 10 Prozent.
+- Für die Logpreise von USD.CAD ist h gleich 0 und pValue gleich 0,367281, das Varianzverhältnis ist also mit dem Random Walk vereinbar.
+- Im EWA-EWC-Beispiel wird Ve gleich 0,001 gesetzt, und bei δ gleich 0,0001 ändert sich Q nur langsam.
+- Gehandelt wird, wenn der Prognosefehler betragsmäßig größer ist als die Wurzel dieser Prognosevarianz.
+- Strategie 1 im Kapitalbeispiel hat 26 Prozent annualisierte Volatilität bei 30 Prozent mittlerem Excess Return, Strategie 2 hat 35 Prozent Volatilität bei 60 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -38,12 +38,18 @@ aktualisiert: 2026-10-30
 ## Regeln und Kriterien
 
 - Als Kennzahl wird das 95-Prozent-Perzentil der Time-under-Water-Reihe berichtet.
+- Modelle mit hoher Sharpe Ratio und kurzer maximaler Drawdown-Dauer werden bevorzugt, weil das fast automatisch sicherstellt, dass sie die Cross-Validation bestehen. Durchfallen tun sie nur auf den seltenen Drawdown-Perioden.
+- Sehr wenige Trader, im Unterschied zu Investoren, ertragen eine Strategie, die zwei Jahre unter Wasser bleibt.
+- Eine niedrige Sharpe Ratio zusammen mit einer langen Drawdown-Dauer zeigt, dass die Strategie nicht konsistent ist.
+- Die lange Drawdown-Dauer macht es unwahrscheinlich, dass die Strategie eine Cross-Validation besteht.
+- Strategien, deren maximale Drawdown-Dauer länger ist, als man selbst oder die Investoren aushalten können, lohnen den Backtest nicht.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Das Beispiel nennt 30 Prozent annualisierte Backtest-Rendite, eine Sharpe Ratio von 0,3 und eine maximale Drawdown-Dauer von zwei Jahren. Die hohe Durchschnittsrendite kann ein Zufall sein und wiederholt sich live wahrscheinlich nicht.
 
 ## Unterschiedliche Quellenpositionen
 

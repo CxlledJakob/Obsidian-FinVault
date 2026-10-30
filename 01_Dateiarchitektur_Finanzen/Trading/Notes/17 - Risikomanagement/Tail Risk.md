@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Risikomessung"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Tail Risk
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Monte-Carlo-Simulationen auf simulierten statt historischen Daten schätzen das Tail Risk einer Strategie.
+- Dieselben Simulationen prüfen die statistische Signifikanz eines Backtests.
+- Das Risikomanagement bezieht schwarze Schwäne ein und mildert damit die Kelly-Formel, zusammen mit Constant Proportion Portfolio Insurance und Stop-Losses.
 
 ## Funktionsweise
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Orderbuch"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Level-II-Daten
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -29,6 +27,8 @@ aktualisiert: 2026-10-26
 
 ## Voraussetzungen
 
+- Für das Backtesting einer Hochfrequenzstrategie müssen manchmal Level-2-Quotes eingegeben werden, zusätzlich zu vielen Monaten Tick-Daten aus Trades und Quotes, möglicherweise auf vielen Symbolen.
+- Die Datenmenge überfordert den Speicher der meisten Rechner, wenn sie nicht besonders behandelt wird, etwa durch parallele Rechenverfahren.
 
 ## Anwendung im Trading
 
@@ -38,6 +38,9 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Die meisten Spezial-Backtesting-Plattformen sind überhaupt nicht dafür ausgerüstet, Level-2-Quotes oder sämtliche Bid-, Ask- und Last-Tick-Preise samt Größen zu backtesten.
+- Deshalb verlangt das Backtesting einer Hochfrequenzstrategie gewöhnlich ein eigenes Programm mit besonderer Anpassung.
+- Selbst mit historischen Daten des gesamten Orderbuchs hängt der Gewinn einer Hochfrequenzstrategie noch von den Reaktionen der anderen Marktteilnehmer ab.
 
 ## Beispiele
 

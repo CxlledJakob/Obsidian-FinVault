@@ -33,6 +33,10 @@ aktualisiert: 2026-10-30
 
 ## Funktionsweise
 
+- Der ADF-Test ist ein Unit-Root-Test: die Null ist λ gleich 0, und nur ein hinreichend negativer Wert von λ/SE(λ) verwirft sie.
+- Die kritischen Werte hängen vom Stichprobenumfang ab und davon, ob ein von null verschiedener Mittelwert oder ein stetiger Drift angenommen wird.
+- Im praktischen Handel wird der Driftterm β gleich 0 gesetzt, weil ein konstanter Drift meist klein gegen die täglichen Schwankungen ist.
+- Der zweite adf-Parameter 0 bedeutet einen von null verschiedenen Offset und einen Drift von null, der dritte Parameter ist die Lag-Zahl.
 
 ## Voraussetzungen
 
@@ -49,6 +53,12 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Für USD.CAD mit einem Lag ist die ADF-t-Statistik minus 1,840744, die AR(1)-Schätzung 0,994120, und die kritischen Werte sind minus 3,458, minus 2,871 und minus 2,594; die Unit-Root-Null wird nicht verworfen.
+- λ ist trotzdem negativ, die Reihe trendet also zumindest nicht.
+- Im CADF-Test von EWC auf EWA ist die t-Statistik minus 3,64346635 und die AR(1)-Schätzung minus 0,020411; die Null λ gleich 0 wird auf 95 Prozent verworfen, der kritische Wert ist minus 3,359.
+- Der augmentierte Dickey-Fuller-Test weist den VIX mit 99 Prozent Sicherheit als stationär aus.
+- Der ADF-Test weist die back-adjustierten Front-Month-Kurse von VX als definitiv nicht mean-reverting aus.
+- Der ADF-Test des 12-Monats-Log-Kalender-Spreads von CL findet Stationarität mit 99 Prozent Wahrscheinlichkeit und eine Halbwertszeit von 36 Tagen.
 
 ## Unterschiedliche Quellenpositionen
 

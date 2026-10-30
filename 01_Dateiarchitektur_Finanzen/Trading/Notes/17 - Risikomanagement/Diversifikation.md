@@ -39,6 +39,10 @@ aktualisiert: 2026-10-30
 - Dieser Kompromiss aus beiden Streuungen schützt besser gegen gemeinsame und gegen idiosynkratische Schocks als CLA oder das Inverse-Varianz-Portfolio.
 - Exakte analytische Lösungen können deutlich schlechter abschneiden als näherungsweise Machine-Learning-Lösungen.
 - De Miguel und Koautoren (2009) zeigen, dass naive gleichgewichtete Portfolios Mean-Variance- und risikobasierte Optimierung außer Stichprobe schlagen.
+- Die große Zahl möglicher Aktienpaare macht Diversifikation leicht, doch das Gesetz der großen Zahlen hilft nur, wenn die erwartete Out-of-Sample-Rendite eines einzelnen Paars positiv ist; der Autor hat das bei Aktienpaaren nicht gefunden.
+- Die kleinen Gewinne der guten Paare wurden vollständig von den großen Verlusten der schlecht gelaufenen Paare überwogen.
+- Weil die meisten Futures und Währungen Momentum zeigen, erlauben Momentum-Strategien eine echte Risikostreuung über verschiedene Assetklassen und Länder.
+- Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
 
 ## Funktionsweise
 
@@ -70,6 +74,8 @@ aktualisiert: 2026-10-30
 - Eine angegebene Mischung ist etwa 70 Prozent long und 30 Prozent short und wird auf dieses Verhältnis zurückgeführt, sobald die Shorts 25 oder 35 Prozent erreichen.
 - Aktien lassen sich nach Liquidität, Größe, Branche und Region gruppieren, und innerhalb einer Gruppe konkurrieren sie um die Allokation.
 - Die Outperformance von Hierarchical Risk Parity außer Stichprobe wird bei größerem Universum, mehr Schocks, stärkerer Korrelation oder Rebalancing-Kosten noch deutlicher.
+- Das mit SPY gehandelte Aktienportfolio umfasst etwa 98 Titel; müssen wenige wegen der Short-Sale-Beschränkung entfernt werden, bleibt die Wirkung begrenzt.
+- Eine Variante des Buy-on-Gap kauft mehr Aktien, begrenzt aber die Zahl der Titel innerhalb desselben Sektors.
 
 ## Unterschiedliche Quellenpositionen
 

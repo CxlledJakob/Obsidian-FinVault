@@ -36,6 +36,9 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Ein Walk-Forward-Test kann in Form von Paper Trading durchgeführt werden.
+- Besser wird das Modell mit echtem Geld bei minimalem Hebel gehandelt, damit auch die Aspekte geprüft werden, die selbst dem Paper Trading entgehen.
+- Die meisten Trader wären zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Wertes erzeugt.
 
 ## Regeln und Kriterien
 

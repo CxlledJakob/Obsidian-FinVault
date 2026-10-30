@@ -29,6 +29,8 @@ aktualisiert: 2026-10-30
 - Die mittlere Dow-Stufe ist die technische Trendfolge, zwischen Akkumulation und Distribution.
 - Der Einstieg liegt auf dem volumenbestätigten Bruch aus der Stauzone, also am Beginn dieser Stufe, nicht nach drei fertigen Schwingungen.
 - Gehalten wird, solange das Volumen den Preis bestätigt und die Pivots höhere Hochs und höhere Tiefs bauen.
+- Die herrschende Meinung, dass Währungen und Futures die Domäne von Momentum-Tradern sind, trifft zu; die meisten CTAs sind momentum-basiert.
+- Wegen des anhaltenden Contango funktioniert eine Momentum-Strategie auf dem VX-Future ziemlich gut, wie Kapitel 6 zeigt.
 
 ## Funktionsweise
 

@@ -29,6 +29,11 @@ aktualisiert: 2026-10-30
 - Die Handelsregel ist das Paar aus Stop-Schwelle und Gewinnschwelle.
 - Die rohe Kalibrierung definiert alternative Paare, testet jedes historisch und wählt das Paar mit der höchsten Sharpe Ratio.
 - Die bei der Auswahl maximierte Sharpe Ratio ist der mittlere Gewinn der Regel geteilt durch die Standardabweichung des Gewinns.
+- Trotz des Bemühens, den Handelsprozess wissenschaftlich und regelbasiert zu machen, bleiben Bereiche, in denen subjektives Urteil wichtig ist.
+- Dass manchmal Urteil nötig ist, macht quantitative Regeln nicht nutzlos und algorithmische Händler nicht weniger fähig als diskretionäre.
+- Kahneman schreibt, Experten seien Algorithmen in jedem Bereich mit erheblicher Unsicherheit einheitlich unterlegen, vom Sieger von Fußballspielen bis zur Lebenserwartung von Krebspatienten.
+- Man kann hoffen, dass der Finanzmarkt keine Ausnahme dieser Regel ist.
+- Fondsmanager behalten eine aktive Rolle: Sie urteilen, ob die Modelle nach einem Strukturwandel noch gültig sind.
 
 ## Funktionsweise
 
@@ -36,6 +41,9 @@ aktualisiert: 2026-10-30
 - Danach wird ein Gitter aus Stop- und Gewinnschwellen gebildet, im Beispiel 20 mal 20 Knoten vom halben Sigma bis zum zehnfachen Sigma.
 - Auf jedem Knoten werden die künstlichen Pfade ausgewertet und eine Sharpe Ratio berechnet.
 - Gewählt wird das beste Paar, oder der beste Stop zu einem vorgegebenen Gewinnziel, oder das beste Gewinnziel zu einem vorgegebenen maximalen Stop.
+- Die lineare Regel setzt die gehaltenen Einheiten proportional zum negativen Z-Score des Einheitsportfolios, mit Lookback gleich der Halbwertszeit.
+- Es gibt dabei keine Strategieparameter, die anhand der Performance optimiert werden.
+- Ein- und Ausstieg laufen fortlaufend mit dem Z-Score, nicht über selektive Schwellen.
 
 ## Voraussetzungen
 
@@ -45,6 +53,9 @@ aktualisiert: 2026-10-30
 
 - Manche Strategien nutzen makroökonomische Größen wie BIP oder Inflation, andere Fundamental- und Bilanzdaten, wieder andere suchen arbitrageähnliche Fehlpreise von Derivaten.
 - Die Positionsgröße skaliert den Gewinn und lässt die Sharpe Ratio unverändert, deshalb werden die Ergebnisse je gehaltener Einheit angegeben.
+- Ein Urteilspunkt ist ein bevorstehendes Großereignis, bei dem zu entscheiden ist, ob dem Modell getraut, der Hebel gesenkt oder das Modell vorübergehend abgeschaltet wird.
+- Ein zweiter ist, ob Kelly auf das Eigenkapital des Gesamtportfolios oder auf jede Strategie einzeln angewendet wird.
+- Die Mathematik bevorzugt die erste Lösung nur bei unveränderten erwarteten Renditen und Volatilitäten; der Autor bevorzugt praktisch die zweite, damit schwache Strategien schnell auslaufen.
 
 ## Regeln und Kriterien
 
@@ -52,6 +63,8 @@ aktualisiert: 2026-10-30
 ## Risiken und Grenzen
 
 - Transaktionskosten können in das Verfahren aufgenommen werden, und die Abbildungen zeigen den Fall ohne sie, damit die Symmetrie der Funktionen sichtbar bleibt.
+- Die üblichen Stop-Losses lassen sich bei Mean-Reversion-Strategien logisch nicht einsetzen.
+- Unbekanntes Höchstkapital und nicht handelbare infinitesimale Stückzahlen machen die einfachste Regel unpraktisch.
 
 ## Beispiele
 

@@ -61,6 +61,15 @@ aktualisiert: 2026-10-30
 - Wird die Verlustauszahlung bei gleichem Gewinnziel negativer, steigt die Trefferwahrscheinlichkeit, die für eine Ziel-Sharpe-Ratio nötig ist.
 - Wird die Verlustauszahlung negativer, steigt auch die Wettfrequenz, die bei gleicher Trefferwahrscheinlichkeit für die Ziel-Sharpe-Ratio nötig ist.
 - Verlustschwelle, Gewinnschwelle und Wettfrequenz setzt der Portfoliomanager, während die Trefferwahrscheinlichkeit vom Markt kommt.
+- Stop-Losses gehören mit schwarzen Schwänen und Constant Proportion Portfolio Insurance zu der praktischen Erfahrung, mit der die Kelly-Formel im Risikomanagement gemildert wird.
+- Der Stop-Loss ist neben dem zeitbasierten Ausstieg eine der zwei üblichen Ausstiegsarten für Momentum-Strategien.
+- Er kann die Ausstiegsbedingung selbst oder eine zusätzliche Ausstiegsbedingung sein.
+- Stop-Losses sind mit Momentum-Strategien voll verträglich: wechselt das Momentum die Richtung, wird die Gegenposition eröffnet, die ursprüngliche Position hat verloren, und der neue Einstieg hat als Stop-Loss gewirkt.
+- Stop-Losses sind mit Mean-Reversion-Strategien nicht verträglich, weil sie deren Einstiegssignalen widersprechen; das wird in Kapitel 8 wieder aufgenommen.
+- Durch einen zeitbasierten Ausstieg oder einen Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt, und das Abwärtspotenzial einer Momentum-Strategie ist begrenzt.
+- Das Auslösen von Stops ist eine zusätzliche Momentum-Ursache vor allem auf kurzen Horizonten und führt oft zu Breakout-Strategien.
+- Viele Stop-Orders liegen auf oder nahe Unterstützung und Widerstand, einschließlich runder Zahlen nahe dem aktuellen Preis.
+- Stop Hunting stützt sich auf genau diese Orders.
 
 ## Funktionsweise
 
@@ -71,6 +80,14 @@ aktualisiert: 2026-10-30
 - Gemessen wird das an der Pfadrendite, die mit der Positionsseite multipliziert wurde.
 - Der Stop-Zeitpunkt ist der früheste Index, an dem diese Pfadrendite unter der Stop-Schwelle liegt.
 - Die Vorgabewerte für die Grenzen stammen aus der Tagesvolatilität von getDailyVol.
+- Über Nacht oder am Wochenende können Stops auf verschiedenen Preisen an der Eröffnung gleichzeitig ausgelöst werden.
+- Die Ausführung kann kaskadieren und weiter vom Open entfernte Stops ebenfalls auslösen.
+- Nach einem Bruch der Unterstützung werden Verkaufs-Stops ausgelöst und treiben den Preis weiter nach unten.
+- High-Frequency-Händler legen nahe der Unterstützung große Sell Orders, um diese Stops auszulösen, und decken danach die Shorts.
+- Die übliche Verwendung schließt eine einzelne Position, wenn ihr unrealisiertes Ergebnis unter eine Schwelle fällt, und erlaubt später einen neuen Einstieg, auch in dieselbe Richtung; die kumulierte Strategie-P&L ist dabei nicht der Gegenstand.
+- Die seltenere Verwendung schließt die ganze Strategie, wenn der Drawdown unter eine Schwelle fällt; das kann nur einmal im Leben der Strategie vorkommen und soll idealerweise nie eintreten.
+- Für denselben Schutz des Maximal-Drawdowns wird deshalb CPPI vorgezogen.
+- Er hält das Verlustlimit nur ein, wenn der Markt während der Position offen ist, etwa ohne Overnight-Positionen oder in Währungen und manchen Futures, die außer an Wochenenden und Feiertagen elektronisch offen sind.
 
 ## Voraussetzungen
 
@@ -80,6 +97,7 @@ aktualisiert: 2026-10-30
 - Eine starke sichtbare Plattform hilft, das Risiko zu beurteilen. Ist sie schwach, kann der Einstieg warten.
 - Eine schon bestehende Position, deren erwartetes Ergebnis ein Verlust ist, braucht einen Ausstieg, der diesen Verlust begrenzt.
 - Ein rationaler Marktteilnehmer eröffnet keine Position, deren erwartetes Ergebnis ein Verlust ist.
+- Weil Devisen von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET nahezu durchgehend gehandelt werden, lassen sich Stop-Losses dort sinnvoll einsetzen.
 
 ## Regeln und Kriterien
 
@@ -95,10 +113,26 @@ aktualisiert: 2026-10-30
 - In der Konfiguration [0,1,1] endet die Position nach einer Anzahl Bars, sofern sie nicht vorher ausgestoppt wird.
 - Die Konfiguration [0,1,0] hält ausschließlich bis zum Stop und gilt als ziellos.
 - Die Konfigurationen [1,0,1] und [1,0,0] führen die Position ohne Rücksicht auf zwischenzeitliche nicht realisierte Verluste.
+- Für Mean Reversion wird er größer gesetzt als der maximale Intraday-Drawdown des Backtests, sodass die Backtest-Performance unverändert bleibt und ein Black Swan künftig nicht in den Ruin führt.
+- Bei Momentum ist er logisch, weil Verluste gedrehtes Momentum anzeigen und Ausstieg oder Umkehr nahelegen.
+- Ein fortlaufend aktualisiertes Momentum-Signal ist ein De-facto-Stop-Loss; Momentum-Modelle haben deshalb nicht dasselbe Tail-Risiko.
+- Nur CPPI oder ein Stop-Loss können garantieren, dass der künftige Drawdown ein vorgegebenes Maximum nicht überschreitet.
+- Die Key Points nennen ihn als Schutz vor Black Swans trotz meist schlechterer Mean-Reversion-Backtests, fordern, dass er im Backtest nie auslöst, und sehen ihn bei Momentum als natürlichen Bestandteil.
 
 ## Risiken und Grenzen
 
 - Eine solche Strategie trägt eigenes Risiko, auch wenn die gehaltenen Instrumente eine niedrige Volatilität haben.
+- Bei Mean-Reversion-Strategien ist Risikomanagement besonders wichtig und besonders schwierig, weil sich die üblichen Stop-Losses logisch nicht einsetzen lassen.
+- Warum das so ist und welche Verfahren dann passen, wird in Kapitel 8 behandelt.
+- Der seltene Verlust nach einer Erfolgsserie beim maximalen Leverage ist oft sehr schmerzhaft und manchmal katastrophal.
+- Ist ein Markt lange geschlossen, sind Stop-Losses nutzlos, weil der Markt bei der Wiedereröffnung nach oben oder unten gappen kann.
+- Der aufsummierte Verlust aufeinanderfolgender verlierender Momentum-Positionen kann trotzdem in die Insolvenz führen.
+- Bei einem Gap zur Wiedereröffnung kann die Ausführung viel schlechter sein als der erlaubte Maximalverlust.
+- Optionskäufe können dieses Gap-Risiko beseitigen, sind aber teuer und nur für erwartete Marktschließungen wertvoll.
+- Selbst bei offenem Markt ist der Stop-Loss nutzlos, wenn alle Liquiditätsanbieter gleichzeitig die Liquidität abziehen, wie beim Flash Crash am 6. Mai 2010.
+- Moderne Market Maker mussten im Stress nur ein Bid von 0,01 Dollar halten, das Stub Quote; eine Verkaufs-Stop-Order auf Accenture wurde an diesem Tag zu 0,01 Dollar je Aktie ausgeführt (Arnuk und Saluzzi, 2012).
+- CPPI und Stop-Loss verhindern einen Drawdown im Overnight-Gap oder bei ausgesetztem Handel nicht.
+- Bei Mean Reversion scheint der Stop-Loss der Annahme zu widersprechen, und der Autor hat keine solche Strategie gebacktestet, deren APR oder Sharpe Ratio dadurch stieg.
 
 ## Beispiele
 
@@ -113,6 +147,8 @@ aktualisiert: 2026-10-30
 ## Unterschiedliche Quellenpositionen
 
 - Praktisch keine Veröffentlichung berücksichtigt den Stop-Loss, wenn sie Beobachtungen labelt, und das kennzeichnet für den Autor den Zustand der Anlage-Literatur.
+- Die pauschale Aussage, der Stop-Loss senke immer die Performance von Mean-Reversion-Strategien, ist durch Survivorship Bias verzerrt.
+- Er senkt sie, solange Mean Reversion bleibt, und verbessert sie, wenn ein Regimewechsel zum Trend einsetzt.
 
 ## Eigene Erkenntnisse
 

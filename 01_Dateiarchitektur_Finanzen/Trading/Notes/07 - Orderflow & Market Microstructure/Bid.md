@@ -29,6 +29,13 @@ aktualisiert: 2026-10-30
 
 ## Funktionsweise
 
+- Auf Pro-rata-Märkten wie den Eurodollar-Futures an der CME wird dem Bid sofort beigetreten, damit bei einer Ausführung auf der Bid-Seite ein Teil zugeteilt wird.
+- Beigetreten wird nur, wenn die ursprüngliche Bid-Size viel größer ist als die Ask-Size; das heißt Ratio Trade.
+- Der erwartete Füllungsanteil entspricht dem Verhältnis der eigenen Ordergröße zur gesamten Ordergröße auf dem Bid-Preis.
+- Steigt der Bid danach um einen oder mehrere Ticks, wird mit Gewinn verkauft.
+- Bewegt sich der Bid nicht oder bleibt die Verkaufs-Limit-Order ungefüllt, lässt sich wegen der großen Bid-Size voraussichtlich noch zum ursprünglichen Best Bid verkaufen, mit Verlust nur in Höhe der Kommission.
+- Beim Ticking liegt die Kauforder auf dem Best Bid plus einem Tick.
+- Beim Flipping auf Märkten mit Zeitpriorität wird eine große Buy-Limit-Order auf den Best Bid gelegt, um Kaufdruck vorzutäuschen, und nach Füllung der kleinen Gegenseite sofort storniert.
 
 ## Voraussetzungen
 
@@ -41,9 +48,15 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Ein fehlerhaft angezeigter Bid von 110 Dollar um 11:02 kann eine Short-Market-Sell-Order auslösen, die bei 100 Dollar gefüllt wird, weil tatsächlich kein Bid bei 110 Dollar stand.
+- Der ursprüngliche Best Bid kann storniert werden, sobald der liegende Händler erkennt, dass er frontgerannt wurde; dann bleibt zum Glattstellen nur ein niedrigerer Bid.
+- Eine Falle besteht darin, dass der ursprüngliche Bid eigentlich verkaufen wollte und den Bid storniert, sobald zum Bid plus einem Tick gekauft wurde.
+- Wird die große Buy-Limit-Order beim Flipping wirklich gefüllt, kann der Verkauf mit Verlust nötig werden.
+- Eine Transaktion am Bid ist negativer Orderflow.
 
 ## Beispiele
 
+- Im Paarbeispiel hat X einen wahren Bid von 100 Dollar, während Y einen wahren Ask von 105 Dollar hat.
 
 ## Unterschiedliche Quellenpositionen
 

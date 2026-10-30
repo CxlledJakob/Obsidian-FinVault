@@ -19,12 +19,17 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Überkonfidenz ist das wiederkehrende Gefühl von Sicherheit, das aus wenigen passenden Teilen des Gesamtbildes entsteht.
+- Überkonfidenz in eine Strategie ist die größte Gefahr.
 
 ## Kernaussagen
 
 - Diese Überkonfidenz steht hinter der Annahme, dass Märkte auf eine vorhersehbar irrationale Weise verzerrt sind.
 - Trader überschätzen, wie viel sie vom Markt verstehen, wenn sie den Preis ansehen, und werden durch die Illusion von Gewissheit überkonfident.
 - Gelernt wird eher das Präzise als das Allgemeine.
+- Es ist selten eine gute Idee, ein Modell manuell zu übersteuern, ganz gleich wie tückisch der Markt aussieht.
+- Aus Fehlern und Beinahe-Katastrophen lernt man viel mehr als aus Erfolgen.
+- Gerade die scheinbar hohe Stetigkeit einer Mean-Reversion-Strategie kann ihren späteren Zusammenbruch einleiten.
+- Diese Stetigkeit wiegt Trader oft in Überkonfidenz und in der Folge in zu viel Leverage ein (Dever, 2011).
 
 ## Funktionsweise
 
@@ -41,9 +46,11 @@ aktualisiert: 2026-10-30
 ## Risiken und Grenzen
 
 - Nichtlineare Auktionen entstehen, wenn diese Illusion zerbricht. Das Verhalten wird dann extrem sprunghaft und ruiniert die Mehrheit, die nicht annimmt, was tatsächlich geschieht.
+- Der Bruch, vielleicht aus einem erst im Nachhinein erkennbaren fundamentalen Grund, trifft oft nach einer ungebrochenen Erfolgsserie beim maximalen Leverage, und der seltene Verlust kann katastrophal sein.
 
 ## Beispiele
 
+- Als Beispiel für diesen Weg von Überkonfidenz zu zu viel Leverage wird Long Term Capital Management genannt.
 
 ## Unterschiedliche Quellenpositionen
 

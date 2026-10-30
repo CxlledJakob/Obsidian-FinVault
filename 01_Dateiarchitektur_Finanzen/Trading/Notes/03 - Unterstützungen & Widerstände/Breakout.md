@@ -44,9 +44,18 @@ aktualisiert: 2026-10-30
 - Je länger die Ursache in der Stauung aufgebaut wurde, desto länger soll der folgende Trend dauern.
 - Beim Pennant gibt es vor dem Bruch meist keinen Hinweis auf die Richtung. Für einen Trendtrade wird auf den Ausbruch gewartet.
 - Je länger die Spannung im Pennant anhält, desto stärker ist die Entladung.
+- Das Auslösen von Stops ist eine zusätzliche Momentum-Ursache vor allem auf kurzen Horizonten und führt oft zu Breakout-Strategien.
+- Breakout-Momentum bedeutet, dass ein Preis eine Trading Range überschreitet.
+- Die Opening-Gap-Strategie ist eine Breakout-Strategie, die bei manchen Futures und Währungen funktioniert.
+- Breakout-Momentum kann durch das Auslösen von Stop-Orders entstehen.
+- Ein Beispiel steigt zum Market Open ein, ein anderes intraday an verschiedenen Unterstützungs- oder Widerstandsniveaus.
 
 ## Funktionsweise
 
+- Die meisten Währungsmärkte sind von Freitag 17:00 Uhr bis Sonntag 17:00 Uhr geschlossen; das ist eine natürliche Lücke für diese Strategien.
+- Die lange Zeit ohne Handel macht den Eröffnungspreis oft deutlich verschieden vom Schluss, sodass Stop-Orders auf verschiedenen Preisen an der Eröffnung gleichzeitig ausgelöst werden.
+- Die Ausführung kann kaskadieren und auch weiter vom Open entfernte Stops auslösen.
+- Alternativ können über Nacht wesentliche Ereignisse eingetreten sein, und viele Nachrichtenarten erzeugen Momentum.
 
 ## Voraussetzungen
 
@@ -157,6 +166,10 @@ aktualisiert: 2026-10-30
 - Ein Bruch mit Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt, bei einer dramatischen Bewegung ultrahohes Volumen.
 - Ein normaler Bruch durch Widerstand braucht gutes steigendes Volumen, stetig und überdurchschnittlich, nicht explosiv. Eine Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt, bei dramatischer Bewegung ultrahohes Volumen.
 - Im Equivolume-Chart ist die erwartete Ausbruchsform eine Power-Box, also hohes Volumen und weiter Preis.
+- Die zum Buy-on-Gap gegenläufige Momentum-Strategie kauft Futures und Währungen bei einem Gap-up und leerverkauft sie bei einem Gap-down.
+- Long, wenn das Open über dem Vortageshoch mal (1 plus 0,1 mal der um einen Tag verschobenen 90-Tage-Standardabweichung der Close-to-Close-Rendite) liegt.
+- Short, wenn das Open unter dem Vortagestief mal (1 minus 0,1 mal derselben Standardabweichung) liegt.
+- Die Positionsrendite ist die Position mal (Open minus Close) geteilt durch Open; der Ausstieg liegt also am Schluss desselben Tages.
 
 ## Risiken und Grenzen
 
@@ -179,6 +192,8 @@ aktualisiert: 2026-10-30
 - Auf dem Stundenchart brach der GBP/USD später mit überdurchschnittlichem Volumen aus der nächsten Stauzone.
 - Ein Hanging Man mit deutlich überdurchschnittlichem Volumen brach den Boden mit einer weiten Abwärtskerze. Diese Stauung wurde zur Umkehr, nicht zur Fortsetzung.
 - Der ES eröffnete am dritten Tag mit einer Aufwärtslücke auf hohem Volumen. Das war ein echter Bruch, im Gegensatz zur Falle vom Vortag auf niedrigem bis durchschnittlichem Volumen.
+- Auf den Dow-Jones-STOXX-50-Indexfutures FSTX an der Eurex liefert die Opening-Gap-Strategie vom 16. Juli 2004 bis 17. Mai 2012 eine APR von 13 Prozent und eine Sharpe Ratio von 1,4.
+- Dieselbe Strategie auf GBPUSD, mit Close um 17:00 Uhr ET und Open um 5:00 Uhr ET als London-Open, liefert vom 23. Juli 2007 bis 20. Februar 2012 eine APR von 7,2 Prozent und eine Sharpe Ratio von 1,3.
 
 ## Unterschiedliche Quellenpositionen
 

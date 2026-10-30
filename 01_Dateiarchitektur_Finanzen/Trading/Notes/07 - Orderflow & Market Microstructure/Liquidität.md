@@ -45,6 +45,12 @@ aktualisiert: 2026-10-30
 - Aus Rolls Spreadschätzungen lassen sich Features über die Liquiditätsbedingungen des Marktes ableiten.
 - Bei relativ illiquiden Produkten, einschließlich Aktienoptionen, können Quotes lange irrational bleiben, während spärliche Preise informativ sind.
 - Die Vorhersagbarkeit, die Cremers und Weinbaum (2010) aus relativ teuren Calls gegenüber relativ teuren Puts ableiten, ist größer, wenn die Optionsliquidität hoch und die Aktienliquidität niedrig ist.
+- Die Dezimalisierung am 9. April 2001 senkte die angezeigte Liquidität an den besten Bid- und Ask-Preisen, obwohl die Bid-Ask-Spreads ebenfalls sanken, nach Arnuk und Saluzzi 2012.
+- Dadurch sank die Profitabilität vieler Statistical-Arbitrage-Strategien, während die vieler Hochfrequenzstrategien stieg.
+- Die Finanzkrise 2008 löste einen Einbruch der durchschnittlichen Tageshandelsvolumina um 50 Prozent aus. Retail-Handel und der Besitz von Stammaktien gingen besonders zurück, nach Durden 2012.
+- Die Liquidität in Währungen ist gewöhnlich höher als in den entsprechenden Aktienindex-ETFs, besonders bei den Größen am besten Bid und Ask, und das senkt die Transaktionskosten.
+- Für ein synthetisches Cross wird gewöhnlich eine sehr liquide Basiswährung wie USD oder EUR gewählt.
+- Devisenhandel läuft zumindest fünf Tage die Woche rund um die Uhr, von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET.
 
 ## Funktionsweise
 

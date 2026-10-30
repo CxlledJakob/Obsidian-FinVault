@@ -27,6 +27,22 @@ aktualisiert: 2026-10-30
 - SADF setzt keine bekannte Zahl von Regimewechseln oder Bruchdaten voraus, weil es alle Kombinationen von Start- und Endpunkt prüft.
 - Mögliche Bruchpunkte am Anfang und am Ende der Stichprobe müssen ausgespart werden, damit jedes Regime mit genug Beobachtungen geschätzt wird.
 - Blasen erzeugen zwischen Regimes deutlich verschiedene Preisniveaus.
+- Historisch gibt es Regimewechsel, nach denen selbst der korrekteste Backtest die künftigen Erträge einer Strategie nicht vorhersagt.
+- Momentum- und Mean-Reversion-Strategien zeigen unter verschiedenen Marktregimes der jüngeren Finanzgeschichte diametral verschiedene Risiko-Rendite-Eigenschaften.
+- Um die Finanzkrise 2008 wechselt das Verhalten von VIX und seinen Futures das Regime, und der abrupte Leistungseinbruch der VX-Kalenderspread-Strategie vor Oktober 2008 kann damit zusammenhängen.
+- Im Streudiagramm von ES gegen VX gibt es zwei Hauptregime, 2004 bis Mai 2008 und August 2008 bis 2012.
+- Im zweiten Regime ist die Volatilität bei gegebenem Aktienindexstand deutlich niedriger, die Spannweite der Volatilitäten aber größer, sodass extremere Volatilitätstage vorkommen als zuvor.
+- Kürzere Zwischenphasen können Übergangsregime sein und werden in der Analyse ignoriert.
+- Das zweite Regime reicht bis zum Zeitpunkt des Schreibens.
+- Lineare Regression oder Johansen-Test auf der Mischung beider Regime wären ein Fehler; verwendet wird nur das zweite Regime, und die Koeffizienten werden auf dessen ersten 500 Tagen geschätzt.
+- Eine mean-reverting Preisreihe kann für längere Zeit, vielleicht dauerhaft, zu einer Trendreihe werden.
+- In der Finanzwelt sind Zusammenhänge anders als in der Physik nicht unveränderlich; was früher für eine Preisreihe galt, muss künftig nicht gelten.
+- Gute Strategien bleiben Opfer von Regimewechseln, selbst wenn die Fallstricke aus Kapitel 1 entfernt wurden.
+- Weicht der Live-Handel vom Backtest ab, ist die Ursache oft ein Regime Shift und nicht ein Fehler beim Backtesten.
+- Der Regime Shift ist ein grundlegender Wandel der Marktstruktur durch staatliche Regulierung oder makroökonomische Änderungen.
+- Die Manager müssen dann entscheiden, ob die Modelle noch gültig sind.
+- Die statistischen Eigenschaften finanzieller Zeitreihen sind nicht stationär: Die Wahrscheinlichkeitsverteilung der Preise bleibt nicht über die Zeit gleich.
+- Wissenschaft kann eigentlich nur mit stationären Statistiken umgehen.
 
 ## Funktionsweise
 
@@ -43,9 +59,19 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Backtests auf Daten vor solchen Regimewechseln können ziemlich wertlos sein. Backtests auf jüngeren Daten sind nicht aussagekräftiger für künftige Gewinne, sobald ein weiterer Regimewechsel eintritt.
+- Nur weil eine Momentum-Strategie vor 2008 gut abschnitt, folgt nicht, dass sie danach gut abschneidet, selbst wenn der Backtest keine der üblichen Fallstricke zeigt.
+- Reihen, die von Mean Reversion zu Momentum wechseln, fehlen im Katalog profitabler Mean-Reversion-Strategien, weil deren Backtests gescheitert wären.
+- Ein Stop-Loss ist nach einem solchen Wechsel wirksam gegen katastrophale Verluste und gibt Zeit, die Strategie vor einem Verlust von 100 Prozent abzuschalten.
+- Er verbessert die Performance, wenn die Preise nach dem Wechsel trendfolgen, und senkt sie, solange Mean Reversion bestehen bleibt.
 
 ## Beispiele
 
+- Am 9. April 2001 wurden die US-Aktiennotierungen dezimalisiert. Zuvor lauteten sie auf Achtel oder Sechzehntel eines Penny. Die Bid-Ask-Spreads sanken, und die angezeigte Liquidität am besten Bid und Ask sank ebenfalls, nach Arnuk und Saluzzi 2012. Viele Statistical-Arbitrage-Strategien wurden weniger profitabel, viele Hochfrequenzstrategien profitabler.
+- Die Finanzkrise 2008 löste einen Einbruch der durchschnittlichen Tagesumsätze um 50 Prozent aus, nach Durden 2012, mit besonders starkem Rückgang von Retail-Handel und Aktienbesitz. Die durchschnittliche Volatilität sank, plötzliche Ausbrüche wie der Flash Crash im Mai 2010 und die Herabstufung der US-Bonität im August 2011 wurden häufiger. Mean-Reversion-Strategien, die ein hohes und konstantes Volatilitätsniveau brauchen, verdienten allgemein weniger.
+- Dieselbe Krise leitete einen mehrjährigen Bärenmarkt der Momentum-Strategien ein, behandelt in Kapitel 6.
+- Die Regulation NMS der SEC, umgesetzt im Juli 2007, trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei, nach Arnuk und Saluzzi 2012.
+- Die alte Uptick-Regel für Leerverkäufe wurde im Juni 2007 aufgehoben, die Alternative Uptick Rule 2010 wieder eingeführt.
 
 ## Unterschiedliche Quellenpositionen
 

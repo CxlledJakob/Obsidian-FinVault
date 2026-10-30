@@ -52,6 +52,14 @@ aktualisiert: 2026-10-30
 - Die Nebenbedingung verlangt, dass die absoluten Gewichte in jedem Horizont auf 1 summieren.
 - Diese Nebenbedingung beschreibt eine volle Investition ohne Leverage.
 - Die Aufgabe sucht ein globales dynamisches Optimum und unterscheidet sich damit vom statischen Optimum der Mean-Variance-Optimierung.
+- Die Halbwertszeit der Mean Reversion ist ein guter Prädiktor für die Profitabilität oder die Sharpe Ratio einer Mean-Reversion-Strategie auf dieser Preisreihe.
+- Eine kurze Zeitskala erhöht die Zahl der Trades pro Jahr und damit die statistische Sicherheit und die Sharpe Ratio in Backtest und Live-Handel.
+- Ist die Wahrscheinlichkeit eines tieferen Einbruchs nicht konstant, liefert Scaling-in voraussichtlich eine bessere realisierte Sharpe Ratio, auch wenn es den erwarteten Gewinn nicht erhöht.
+- Die lineare Strategie dient dazu zu prüfen, ob erwartete Rendite oder Sharpe Ratio der Mean-Reversion-Strategie gut genug sind, und ist dafür fast frei von Data-Snooping-Bias.
+- Aus Handelssicht sind möglichst kurze Haltedauern vorzuziehen, weil sie die besten Sharpe Ratios erzeugen.
+- Weniger unabhängige Handelssignale führen zu einer niedrigeren Sharpe Ratio, und tägliches Rebalancing macht lange Momentum-Signale nicht unabhängiger.
+- Profitable Momentum-Strategien haben tendenziell niedrigere Sharpe Ratios als Mean-Reversal-Strategien.
+- Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
 
 ## Funktionsweise
 
@@ -64,6 +72,12 @@ aktualisiert: 2026-10-30
 - Behalten wird die Trajektorie mit der höchsten Sharpe Ratio.
 - Das Verfahren bestimmt die global optimale Trajektorie, ohne konvexe Optimierung zu verwenden.
 - Eine Lösung wird auch gefunden, wenn die Kovarianzmatrizen schlecht konditioniert sind.
+- Für jede Strategie wird die Überschussrendite gebraucht, weil die Sharpe Ratio der Durchschnitt der Überschussrenditen geteilt durch deren Standardabweichung ist, geeignet annualisiert.
+- Die Überschussrendite ist die Rendite der gehaltenen Positionen minus die Finanzierungskosten dieser Positionen.
+- Bei reinen Intraday-Positionen sind die Finanzierungskosten null.
+- Bei einem long-short-dollarneutralen Aktienportfolio können die Finanzierungskosten nahe null gesetzt werden, auch wenn der Habenzins gewöhnlich etwas kleiner ist als der Betrag des Sollzinses.
+- Bei Futures sind die Finanzierungskosten null, weil Futures Kontrakte sind und keine Assets, die Cash zur Finanzierung brauchen; die Margin-Kasse wird nicht gezählt, weil dieses Cash auf dem Konto Zinsen erwirtschaftet.
+- Bei Währungs-Crosses können die Finanzierungskosten ebenfalls null gesetzt werden, wenn der Rollover-Zins zur prozentualen Änderung des Cross addiert wird.
 
 ## Voraussetzungen
 
@@ -81,6 +95,15 @@ aktualisiert: 2026-10-30
 - Zu einer Ziel-Sharpe-Ratio lässt sich die nötige Trefferwahrscheinlichkeit aus Frequenz und Schwellen bestimmen.
 - Umgekehrt lässt sich die nötige Wettfrequenz aus Trefferwahrscheinlichkeit und Schwellen bestimmen.
 - Für ein Gewinnziel von 0,1 und eine Ziel-Sharpe-Ratio von 1,5 steigt die nötige Wettfrequenz, wenn die Verlustauszahlung negativer wird oder die Trefferwahrscheinlichkeit sinkt.
+- Modelle mit hoher Sharpe Ratio und kurzer maximaler Drawdown-Dauer bestehen die Cross-Validation fast automatisch, weil sie nur in den seltenen Drawdown-Perioden durchfallen.
+- Strategien mit hoher Sharpe Ratio sind nach diesem Hypothesentest statistisch signifikanter.
+- Die Teststatistik der Gauß-Null ist der Mittelwert geteilt durch die Standardabweichung, multipliziert mit der Wurzel der Zahl der Datenpunkte. Für die tägliche Sharpe Ratio mal der Wurzel der Tage n gelten die kritischen Werte 1,282 bei p 0,10, 1,645 bei 0,05, 2,326 bei 0,01 und 3,091 bei 0,001.
+- Liegt dieses Produkt mindestens bei 2,326, ist der p-Wert höchstens 0,01.
+- Im TU-Beispiel beträgt die Teststatistik 2,93. Die Null wird mit besser als 99 Prozent Wahrscheinlichkeit verworfen.
+- Die meisten Trader wären zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Wertes erzeugt.
+- Strategien mit hoher Rendite und niedriger Sharpe Ratio lohnen den Backtest nicht.
+- Hohe Sharpe Ratios gehören mit Out-of-Sample-Tests und Cross-Validation zu den guten Praktiken gegen Data-Snooping-Bias. Maßgeblicher bleibt der Walk-Forward-Test.
+- Der Vergleichsmaßstab einer Long-only-Strategie ist die Information Ratio, nicht die Sharpe Ratio.
 
 ## Risiken und Grenzen
 
@@ -119,6 +142,37 @@ aktualisiert: 2026-10-30
 - Die statische Vergleichslösung bildet je Horizont ein lokales Optimum und skaliert die absoluten Gewichte auf die Summe 1.
 - Im Zahlenbeispiel bewertet ein Digitalrechner die Sharpe Ratio der statischen und der dynamischen Lösung nacheinander.
 - Ein Quantenrechner würde alle Trajektorien auf einmal bewerten.
+- Eine annualisierte Rendite von 30 Prozent bei einer Sharpe Ratio von 0,3 und zwei Jahren maximaler Drawdown-Dauer zeigt eine nicht konsistente Strategie. Die hohe Rendite kann ein Zufall sein.
+- Die Long-only-Rohöl-Strategie von 2007 hatte eine Sharpe Ratio von 1,5 bei 20 Prozent Rendite. Buy-and-hold des Front Month hatte 1,7 bei 47 Prozent.
+- Ein neuronales Netz mit etwa 100 Knoten kann eine Backtest-Sharpe-Ratio von 6 erzeugen und dennoch vorwärts kaum Vorhersagekraft haben.
+- Die Hochfrequenzstrategie auf den E-mini S&P 500 hat im Backtest eine Sharpe Ratio von 6 bei 200 Prozent jährlicher Durchschnittsrendite und 50 Sekunden durchschnittlicher Haltedauer.
+- Die lineare Strategie auf EWA, EWC und IGE hat eine Sharpe Ratio von 1,4 bei 12,6 Prozent APR.
+- Der Preis-Spread von GLD und USO mit dynamischer Hedge Ratio hat eine Sharpe Ratio von etwa 0,59 bei etwa 10,9 Prozent APR.
+- Der Log-Preis-Spread hat eine Sharpe Ratio von 0,5 bei 9 Prozent APR, vor den zusätzlichen Rebalancing-Kosten.
+- Die Bollinger-Strategie auf demselben Spread hat eine Sharpe Ratio von 0,96 bei 17,8 Prozent APR.
+- Die Kalman-Strategie auf EWA und EWC hat eine Sharpe Ratio von 2,4 bei 26,2 Prozent APR.
+- Die lineare Strategie auf dem Verhältnis USO zu GLD hat eine negative APR; eine Sharpe Ratio wird dafür nicht genannt.
+- Buy-on-Gap hat vom 11. Mai 2006 bis 24. April 2012 eine Sharpe Ratio von 1,5 bei einer APR von 8,7 Prozent.
+- Short-on-Gap hat über denselben Zeitraum eine Sharpe Ratio von 1,27 bei einer APR von 46 Prozent und einen steileren Drawdown.
+- Die Arbitrage zwischen SPY und den ausgewählten Komponenten hat eine Sharpe Ratio von 1,3 bei einer APR von 4,5 Prozent.
+- Das lineare Long-Short auf dem SPX hat eine Sharpe Ratio von 1,3 bei einer APR von 13,7 Prozent; die Open-to-Close-Variante hat eine Sharpe Ratio von 4,7 bei einer APR von 73 Prozent.
+- AUD.USD gegen CAD.USD hat eine Sharpe Ratio von 1,6 bei einer APR von 11 Prozent.
+- AUD.CAD mit Rollover hat eine Sharpe Ratio von 0,54 bei einer APR von 6,2 Prozent; ohne Rollover wären es 0,58 und 6,7 Prozent.
+- Der CL-Kalender-Spread hat eine Sharpe Ratio von 1,3 bei einer ungehebelten APR von 8,3 Prozent.
+- Die lineare Mean-Reversion-Strategie auf dem CL-12-Monats-Kalenderspread hat vom 2. Januar 2008 bis zum 13. August 2012 eine Sharpe Ratio von 1,3 bei einer ungehebelten annualisierten Rendite von 8,3 Prozent.
+- Die lineare Mean-Reversion-Strategie auf dem VX-Kalenderspread hat vom 27. Oktober 2008 bis zum 23. April 2012 eine Sharpe Ratio von 1,5 bei einer annualisierten Rendite von 17,7 Prozent.
+- Die Bollinger-Band-ähnliche ES-VX-Mean-Reversion-Strategie hat auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 eine Sharpe Ratio von 1,4 bei einer annualisierten Rendite von 12,3 Prozent.
+- Die TU-Strategie mit Lookback 250 und Haltedauer 25 hat vom 1. Juni 2004 bis zum 11. Mai 2012 eine Sharpe Ratio von 1 bei 1,7 Prozent annualisierter Rendite.
+- Tabelle 6.2 nennt Sharpe Ratios von 1,09 für BR, 1,05 für HG und 1,04 für TU.
+- Das TU-Rollrendite-Signal mit Schwelle 3 Prozent hat vom 2. Januar 2009 bis zum 13. August 2012 eine Sharpe Ratio von 2,1 bei 2,5 Prozent annualisierter Rendite.
+- Die kombinierte CL-Regel hat eine Sharpe Ratio von 1,1 bei 12 Prozent annualisierter Rendite.
+- Der S&P DTI hat nach Dever von Januar 1988 bis Dezember 2010 eine Sharpe Ratio von 1,3, der S&P 500 im selben Zeitraum 0,61.
+- XLE gegen USO hat eine Sharpe Ratio von etwa 1 bei 16 Prozent annualisierter Rendite vom 26. April 2006 bis zum 9. April 2012.
+- Die VX-ES-Rollrendite-Strategie hat eine Sharpe Ratio von 1 bei 6,9 Prozent annualisierter Rendite vom 29. Juli 2010 bis zum 7. Mai 2012.
+- Die querschnittliche Rohstoffstrategie hat vom 1. Juni 2005 bis zum 31. Dezember 2007 eine Sharpe Ratio von 1,37.
+- Beispiel 6.2 hat vom 15. Mai 2007 bis zum 31. Dezember 2007 eine Sharpe Ratio von 4,1; Daniel und Moskowitz finden von 1947 bis 2007 eine Sharpe Ratio von 0,83.
+- Hafez und Xie erreichen vor Kosten Sharpe Ratios von 3,9 bis 5,3.
+- Das lineare Mean-Reversion-Modell für S&P-500-Aktien hat eine Sharpe Ratio von 4,7 bei einer Haltedauer von weniger als einem Tag.
 
 ## Unterschiedliche Quellenpositionen
 

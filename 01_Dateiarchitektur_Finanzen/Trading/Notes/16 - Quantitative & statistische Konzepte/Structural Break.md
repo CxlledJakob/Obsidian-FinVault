@@ -86,6 +86,9 @@ aktualisiert: 2026-10-30
 - Geht Phi gegen 0, zeigt die Statistik längere Trends, weil langfristige Blasen kurzfristige überdecken.
 - Geht Phi gegen 1, wird die Statistik rauschiger, weil mehr kurzfristige Blasen ausgewählt werden.
 - Phi ist damit ein Filter auf Gelegenheiten mit einer bestimmten Haltedauer, und als Merkmale können Schätzungen über viele Phi-Werte dienen.
+- Wenn eine Strategie aufhört zu funktionieren, wird eine Hypothese über den Grund gebildet und empirisch geprüft, ob die Daten sie stützen; das Ergebnis ist oft eine geänderte Strategie, die wieder profitabel wird.
+- Selbst wenn ein Triplet zu umständlich ist, soll eine Regel den Handel von GLD gegen GDX beenden, sobald der Ölpreis eine bestimmte Schwelle überschreitet.
+- Regression und Johansen-Test dürfen nicht auf der Mischung beider ES-VX-Regime laufen.
 
 ## Risiken und Grenzen
 
@@ -107,6 +110,12 @@ aktualisiert: 2026-10-30
 - Ein einzelnes SADF-Update braucht dafür rund 2,035 TFLOPs und die volle Reihe rund 242 PFLOPs, ohne Alignment, Vorverarbeitung und Ein- und Ausgabe.
 - Dafür kann ein parallelisierter HPC-Cluster nötig sein, Parallelisierungsstrategien stehen in Kapitel 20.
 - Der Kehrwert jedes Preises verwandelt Blasen in Einbrüche und Einbrüche in Blasen.
+- GLD gegen GDX kointegriert vom 23. Mai 2006 bis 14. Juli 2008 mit 99 Prozent Wahrscheinlichkeit und verliert die Kointegration vom 15. Juli 2008 bis 9. April 2012.
+- Am 14. Juli 2008 erreichte WTI etwa 145 Dollar je Barrel, ein Allzeithoch; teures Öl verteuert die Goldförderung, senkt die Minengewinne und lässt die Minenaktien gegenüber dem Gold-Spot underperformen.
+- Nimmt man den Öl-Fonds USO in das Portfolio, kointegrieren GLD, GDX und USO über 2006 bis 2012 laut Johansen mit 99 Prozent Wahrscheinlichkeit in einer Beziehung.
+- Um die Finanzkrise 2008 liegt ein Regimewechsel im Verhalten von VIX und seinen Futures, und die VX-Kalenderspread-Strategie läuft vor Oktober 2008 deutlich schlechter.
+- Die Beziehung von ES und VX zerfällt in die Regime 2004 bis Mai 2008 und August 2008 bis 2012, mit kürzeren Phasen, die Übergänge sein können.
+- Der Crack Spread steigt um den 9. März 2007 bis zum 3. Juli 2008 dramatisch und fällt danach scharf.
 
 ## Unterschiedliche Quellenpositionen
 

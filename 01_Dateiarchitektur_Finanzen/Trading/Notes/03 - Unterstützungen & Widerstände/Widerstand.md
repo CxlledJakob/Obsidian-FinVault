@@ -46,6 +46,11 @@ aktualisiert: 2026-10-30
 - Ein normaler Bruch durch Widerstand braucht überdurchschnittliches, stetig steigendes Volumen und muss nicht explosiv sein. Eine Aufwärtslücke verlangt deutlich überdurchschnittliches oder ultrahohes Volumen.
 - Ein zweitrangiger Widerstand an der Eröffnung gibt zusätzliches Vertrauen, wenn er auf dem Weg nach oben bricht.
 - Hält die neue Decke, kann ein scharfer Abverkauf folgen. Fällt das Volumen dabei weg, trägt er nicht weit.
+- Nach einem Bruch des Widerstands steigen die Preise nach Osler (2000, 2001) noch eine Weile weiter.
+- Die Lage ist symmetrisch zur Unterstützung.
+- Die Niveaus können Bank- oder Broker-Meldungen oder runde Zahlen nahe dem aktuellen Preis sein.
+- Kauf-Stops an oder nahe dem Widerstand werden beim Bruch ausgelöst und treiben den Preis weiter nach oben.
+- Ein Intraday-Einstieg kann an verschiedenen Widerstandsniveaus erfolgen.
 
 ## Funktionsweise
 
@@ -104,6 +109,7 @@ aktualisiert: 2026-10-30
 - Je länger die enge Zone, desto dramatischer die Wirkung, wenn der Widerstand schließlich verlassen wird.
 - Ein paar Ticks über der Linie überwinden den Widerstand nicht. Die Linie ist elastisch, und es braucht eine sichtbare Lücke im Schluss.
 - Ohne deutlich überdurchschnittliches Volumen ist der scheinbar gebrochene Widerstand eine Falle.
+- Die Opening-Gap-Long-Bedingung ist erfüllt, wenn das Open über dem Vortageshoch mal (1 plus 0,1 mal der verschobenen 90-Tage-Standardabweichung der Close-to-Close-Rendite) liegt.
 
 ## Risiken und Grenzen
 

@@ -51,6 +51,22 @@ aktualisiert: 2026-10-30
 - Naive gleichgewichtete Portfolios haben nach De Miguel und Koautoren (2009) Mean-Variance- und risikobasierte Optimierung außer Stichprobe geschlagen.
 - Gespeichert wird je Iteration die kumulierte Rendite außer Stichprobe am Pfadende minus eins.
 - Berichtet werden Standardabweichung, Varianz und die Varianz im Verhältnis zu Hierarchical Risk Parity.
+- Der Backtest einer veröffentlichten Strategie erlaubt einen echten Out-of-Sample-Test in der Zeit nach der Veröffentlichung. Fällt er schwach aus, besteht die Sorge, dass die Strategie nur auf einem begrenzten Datensatz funktioniert hat. Dieser Punkt ist wichtiger, als viele annehmen.
+- Viele Autoren schreiben, die Backtest-Ergebnisse seien mit Out-of-Sample-Daten verifiziert. Waren diese Ergebnisse schwach, konnten sie Parameter ändern oder das Modell so nachziehen, dass es auf den sogenannten Out-of-Sample-Daten gut aussieht. Echter Out-of-Sample-Test beginnt erst, wenn die Strategie veröffentlicht und festgeschrieben ist.
+- Data-Snooping wird erkannt, indem das Modell auf Out-of-Sample-Daten getestet und bei Misserfolg verworfen wird. Nachjustieren, bis beide Teile gut aussehen, verwandelt die Out-of-Sample-Daten in In-Sample-Daten.
+- Wer ein Modell wegen eines festen Out-of-Sample-Satzes nicht verwerfen will, weil die schwache Leistung Pech sein kann, oder wer einen kleinen Datensatz fast vollständig zum Justieren braucht, soll Cross-Validation erwägen.
+- Der abschließende echte Out-of-Sample-Test ist ein Walk-Forward-Test. Er kann als Paper Trading laufen, besser aber mit echtem Geld bei minimalem Hebel.
+- Die meisten Trader wären zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Wertes erzeugt.
+- Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios sind gute Praktiken, um Data-Snooping-Bias zu mindern. Maßgeblicher ist der Walk-Forward-Test.
+- Dass eine Momentum-Strategie vor 2008 gut abschnitt, bedeutet nicht, dass sie danach gut abschneidet, selbst wenn der Backtest ohne erkennbare Fallstricke ist.
+- Weil das Backtest-Ergebnis vom konkreten Parametersatz abhängt, ist eine Reihe, die den Stationaritätstest besteht oder eine kurze Halbwertszeit hat, die sicherere Grundlage dafür, dass sich überhaupt eine profitable Strategie finden lässt.
+- Schoenberg und Corwin zeigen, dass Scaling-in in der Stichprobe nie optimal ist, außer Stichprobe aber besser abschneiden kann als die All-in-Methode.
+- entryZscore, der Lookback und die Zahl N der Bänder sind freie Parameter, die auf einem Trainingsset optimiert werden; der Lookback kann stattdessen gleich der Halbwertszeit gesetzt werden.
+- Das optimale δ des Kalman-Filters wird aus Trainingsdaten bestimmt, analog zum optimalen Lookback einer gleitenden Regression.
+- Aktienpaare kointegrieren selten out of sample: in einem gewählten Zeitraum ist Kointegration leicht zu finden und in der folgenden Out-of-Sample-Periode leicht wieder zu verlieren.
+- Das Gesetz der großen Zahlen hilft einem Portfolio vieler Paare nur, wenn die erwartete Rendite eines einzelnen Paars in der Out-of-Sample-Periode positiv ist; der Autor hat das bei Aktienpaaren nicht gefunden.
+- ETF-Paare, die einmal kointegrieren, fallen in Out-of-Sample-Daten seltener auseinander als Aktienpaare, weil sich die Ökonomie eines Korbs langsamer ändert als die einer einzelnen Firma.
+- Wegen weniger Trades und langer Haltedauern droht in diesen Momentum-Ergebnissen Data Snooping, und der eigentliche Test ist echtes Out-of-Sample-Testing.
 
 ## Funktionsweise
 
@@ -68,16 +84,24 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 beträgt die annualisierte Rendite der Bollinger-Band-ähnlichen Mean-Reversion-Strategie 12,3 Prozent bei einer Sharpe Ratio von 1,4.
 
 ## Regeln und Kriterien
 
 - Statt eines einzelnen historischen Datensatzes folgt der Test dem Backtesting-Paradigma aus Kapitel 13, um Selection Bias aus Kapitel 11 zu vermeiden.
+- Die Regressionskoeffizienten von ES auf VX werden nur auf den ersten 500 Tagen nach August 2008 geschätzt, damit die daraus gewonnenen Statistiken anschließend das Handelsmodell bauen.
 
 ## Risiken und Grenzen
 
 - Die Varianzreduktion außer Stichprobe ist für Risk-Parity-Investoren wegen erheblichen Hebels kritisch.
 - Jedes CLA-Rebalancing verursacht Transaktionskosten, die sich zu prohibitiven Verlusten summieren können.
 - Bailey und Koautoren (2014) diskutieren den Unterschied zwischen Performance in und außer Stichprobe breiter.
+- Werden In-Sample-Daten zugleich zur Optimierung der Parameter und zur Messung der Performance verwendet, blähen sich die Ergebnisse auf.
+- Dieser Fallstrick steht in den Beispielen, weil die vereinfachte Fassung anschaulicher und lesbarer ist. Solche Prototyp-Strategien sind nicht zum Handel unverändert gedacht.
+- Die Halbwertszeit und damit der Lookback der linearen USD.CAD-Strategie werden an denselben In-Sample-Daten bestimmt, auf denen die Strategie ausgewertet wird.
+- Dieselben Daten für diese Optimierung und für den Backtest zu verwenden, ist Look-ahead Bias.
+- Die im Text gesetzten Werte, 20 Tage für GLD und USO sowie δ gleich 0,0001 und Ve gleich 0,001, sind mit Wissen im Nachhinein gewählt.
+- Die Aufgabe des Traders ist, besondere Bedingungen oder Perioden zu finden, in denen Mean Reversion regelmäßig auftritt, und dabei Data-Snooping-Bias zu vermeiden.
 
 ## Beispiele
 
@@ -86,6 +110,11 @@ aktualisiert: 2026-10-30
 - Die Anpassung in der Abbildung lautet: die Out-of-Sample-Sharpe-Ratio ist 0,87 minus 0,75 mal die In-Sample-Sharpe-Ratio plus einen Fehler, bei einem adjustierten R² von 0,17.
 - Abbildung 11.2 weist für diese Strategieauswahl eine Probability of Overfit von 0,74 aus.
 - Trainiert man auf 2009 bis 2017 und testet auf 2008, ist die Leistung für 2008 kein historisch genauer Out-of-Sample-Pfad, weil der Klassifikator Daten verwendet, die erst nach 2008 verfügbar waren.
+- GLD gegen GDX kointegriert vom 23. Mai 2006 bis 14. Juli 2008 mit 99 Prozent und hat die Kointegration vom 15. Juli 2008 bis 9. April 2012 verloren.
+- Die SPY-Komponenten-Arbitrage trainiert vom 1. Januar 2007 bis 31. Dezember 2007 und testet vom 2. Januar 2008 bis 9. April 2012.
+- Die Performance des linearen Long-Short seit Anfang 2008 ist ein echter Out-of-Sample-Test, weil die Strategie 2007 veröffentlicht wurde.
+- Der Look-back von 5 für Mittel und Standardabweichung der SPY-Arbitrage ist mit dem Vorteil des Hindsight festgelegt.
+- Die annualisierte Rendite von 6,9 Prozent und die Sharpe Ratio von 1 der VX-ES-Rollrendite-Strategie gelten für den 29. Juli 2010 bis zum 7. Mai 2012, und dieser Zeitraum wurde nicht zur Bestimmung der Hedge Ratio verwendet.
 
 ## Unterschiedliche Quellenpositionen
 

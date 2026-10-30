@@ -18,6 +18,7 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Stop Hunting ist eine High-Frequency-Momentum-Strategie, die darauf setzt, liegende Stop-Orders auszulösen.
 
 ## Kernaussagen
 
@@ -28,12 +29,21 @@ aktualisiert: 2026-10-30
 - Der häufigste Grund für niedriges Volumen auf einem Long-Legged Doji ist Stop Hunting. Market Maker und Insider schleudern den Preis hin und her, um Händler herauszuschütteln und Stops sowie Limit-Orders mitzunehmen.
 - Sie kaufen und verkaufen dabei selbst nicht, sondern racken den Preis nur, in der Regel mit einer Nachricht als Auslöser.
 - Die Kerze ist in diesem Fall kein Umkehrsignal, sondern Manipulation auf diesem Niveau.
+- Forschung an Devisenmärkten zeigt, dass Preise nach einem Bruch der Unterstützung noch eine Weile weiter fallen und nach einem Bruch des Widerstands weiter steigen (Osler, 2000, 2001).
+- Diese Niveaus können die täglich von Banken oder Brokern gemeldeten sein oder runde Zahlen nahe dem aktuellen Preis.
+- Das kurzfristige Momentum entsteht, weil viele Stop-Orders auf oder nahe Unterstützung und Widerstand liegen.
+- Die Key Points fassen Stop Hunting als Strategie, die Stop-Orders an typischerweise runden Zahlen nahe dem aktuellen Marktpreis auslöst.
+- Auch die ungleichmäßige Verteilung von Stop-Orders kann auf der kürzesten Skala Momentum erzeugen.
 
 ## Funktionsweise
 
 - Man erkennt den Vorgang am fehlenden Volumen. Echte Volatilität dieser Art bräuchte Aufwand, und der bleibt aus.
 - Beim Nonfarm Payroll am ersten Freitag im Monat entsteht die Kerze wiederholt. Das ist die Gelegenheit, Trader schnell in Positionen hinein- und herauszuwerfen und dabei Stops zu nehmen.
 - Der Markt kann später drehen. Auf dieser Kerze bleibt man draußen und wartet auf die folgenden Kerzen.
+- Fällt der Preis durch eine Unterstützung, werden die Verkaufs-Stops ausgelöst und treiben den Preis weiter nach unten; der Widerstand verhält sich symmetrisch.
+- High-Frequency-Händler können nahe genug an der Unterstützung große Sell Orders legen, um den nächsten Tick nach unten zu treiben.
+- Sind die Stops ausgelöst und läuft das Abwärtsmomentum, decken sie die Shorts für einen schnellen Gewinn.
+- An der Eröffnung können über Nacht oder über das Wochenende gesetzte Stops auf verschiedenen Preisen gleichzeitig ausgelöst werden und kaskadierend weiter entfernte Stops treffen.
 
 ## Voraussetzungen
 

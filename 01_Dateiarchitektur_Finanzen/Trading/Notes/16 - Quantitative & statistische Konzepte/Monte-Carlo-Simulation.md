@@ -33,6 +33,13 @@ aktualisiert: 2026-10-30
 - Der mathematische Beweis dieser Überlegenheit liegt außerhalb des Kapitels.
 - Andere Parameterkonfigurationen führen zu ähnlichen Schlüssen, und die Überlegenheit wird bei größerem Universum, mehr Schocks, stärkerer Korrelation oder Rebalancing-Kosten noch deutlicher.
 - Chu, Stinchcombe und White leiten per Monte Carlo die Konstante b bei Alpha 0,05 gleich 4,6 ab, die in den kritischen Wert ihres einseitigen CUSUM-Tests auf Niveaus eingeht.
+- Monte-Carlo-Simulationen waren zuvor übergangen worden und werden hier als allgemeine Technik eingesetzt.
+- Mit simulierten statt historischen Daten wird die statistische Signifikanz eines Backtests geprüft.
+- Dieselben Simulationen dienen dazu, das Tail Risk einer Strategie einzuschätzen.
+- Lässt sich keine analytische Lösung für den optimalen Hebel ableiten, helfen Monte-Carlo-Simulationen.
+- Für Verteilungen mit endlich vielen Momenten folgt aus Thorps Herleitung ein anderer optimaler Hebel als die einfache Kelly-Formel; die Pareto-Levy-Verteilung hat nicht endlich viele Momente.
+- Für manche Verteilungen gibt es gar keine analytische Antwort.
+- Bei Fat Tails empfehlen die Key Points Monte Carlo statt der Kelly-Formel, um die Wachstumsrate zu optimieren.
 
 ## Funktionsweise
 
@@ -53,6 +60,16 @@ aktualisiert: 2026-10-30
 - Die Argumente von hrpMC sind willkürlich gewählt: 10.000 Iterationen, 520 Beobachtungen, je fünf unkorrelierte und fünf korrelierte Reihen, Mittelwert 0, Sigma 0,01, sigma1F 0,25, Rückblick 260 und Rebalancing alle 22 Beobachtungen.
 - Je Iterationsschritt werden die Portfolios auf dem Rückblickfenster geschätzt und die folgende Rebalancing-Strecke bewertet.
 - Gespeichert wird die kumulierte Rendite am Pfadende minus eins, berichtet werden Standardabweichung, Varianz und die Varianz im Verhältnis zu Hierarchical Risk Parity.
+- Monte Carlo erzeugt simulierte historische Preisdaten und speist sie in die Strategie, um die empirische Verteilung der Gewinne zu bestimmen.
+- Die Annahme ist, dass die Profitabilität subtile Muster oder Korrelationen der Preisreihe erfasst und nicht nur die ersten Momente der Preisverteilungen.
+- Erzeugt werden viele simulierte Preisreihen mit denselben ersten Momenten und derselben Länge wie die echten Daten. Der Anteil p, in dem die durchschnittlichen Renditen mindestens die Backtest-Rendite erreichen, soll klein sein, damit die Null verworfen werden kann. Sonst kann die durchschnittliche Rendite allein an den Marktrenditen liegen.
+- Die simulierten Tagesrenditen werden so gezogen, dass Mittelwert, Standardabweichung, Schiefe und Kurtosis den beobachteten Futures-Renditen entsprechen, die eingebetteten Korrelationen aber nicht. In MATLAB dient dafür pearsrnd aus der Statistics Toolbox.
+- Aus den simulierten Renditen wird eine Preisreihe als kumuliertes Produkt aus eins plus Rendite, minus eins, gebaut. Long ist der simulierte Kurs über seinem um die Lookback-Spanne verschobenen Wert, Short darunter. Das wird 10.000-mal wiederholt.
+- g(f) ist der Durchschnitt von log(1 plus f mal R) über Zufallsziehungen der ungehebelten Bar-Rendite R.
+- Die unbekannte Verteilung von R wird mit dem Pearson-System aus Mittelwert, Standardabweichung, Schiefe und Kurtosis als eine von sieben analytischen Verteilungen modelliert, darunter Gauß, Beta, Gamma und Students t.
+- Im Beispiel der Mean-Reversion-Strategie aus Beispiel 5.1 erzeugt pearsrnd 100.000 Zufallsrenditen aus den ersten vier Momenten; der Code steht in monteCarloOptimLeverage.m.
+- Der zurückgegebene Typ war 4, also keine Standardverteilung wie Students t.
+- g ist die Summe von log(1 plus f mal R) geteilt durch die Länge von R; das Maximum wird über die Minimierung von minus g mit fminbnd zwischen 0 und 24 gesucht, weil MATLAB kein fmaxbnd hat.
 
 ## Voraussetzungen
 
@@ -69,6 +86,9 @@ aktualisiert: 2026-10-30
 - Fehlt in der simulierten Performance ein stabiles Muster, existiert keine optimale Handelsregel.
 - Die Varianzreduktion außer Stichprobe ist für Risk-Parity-Investoren wegen ihres erheblichen Hebels entscheidend.
 - Ein einzelner historischer Datensatz, in dem Hierarchical Risk Parity gewinnt, wäre wegen Selection Bias zu leicht gewählt.
+- Simulierte Renditen haben deutlich bessere statistische Signifikanz und ähneln dem Value-at-Risk großer Banken und Hedgefonds.
+- Ihr Nachteil ist, dass der simulierte Maximal-Drawdown seltener sein kann als einmal in einer Million Jahren und dass serielle Korrelationen der Historie fehlen.
+- Die Drawdown-Schätzung dieses Abschnitts beruht auf der simulierten Strategiereihe, nicht auf den historischen Backtest-Renditen.
 
 ## Beispiele
 
@@ -77,6 +97,16 @@ aktualisiert: 2026-10-30
 - Ein idiosynkratischer Schock bestraft die Konzentration von CLA, ein Schock auf mehrere korrelierte Anlagen bestraft die ignorierte Korrelationsstruktur des Inverse-Varianz-Portfolios.
 - Kolanovic und Koautoren (2017) bestätigen die Robustheit zusätzlich mit eigenen Simulationsstudien.
 - Der gemeinsame Schock setzt an zwei Zeitpunkten die Werte minus 0,5 und 2 auf zwei Reihen, der spezifische Schock dieselben Werte auf eine Reihe.
+- Von 10.000 Zufallsreihen haben 1.166 eine durchschnittliche Strategierendite mindestens so hoch wie die beobachtete. Die Nullhypothese wird nur mit 88 Prozent Wahrscheinlichkeit verworfen.
+- Die Form der Renditeverteilung hat etwas mit dem Erfolg der Strategie zu tun. Der Mittelwert ist die weniger wahrscheinliche Ursache, weil die Position zu verschiedenen Zeiten long oder short sein kann.
+- Eine erwartete APR von 10 Prozent, auf 1 Prozent statistisch signifikant, bedeutet: Von 10.000 simulierten Preisreihen mit derselben Länge und denselben ersten drei Momenten wie die historische Preisreihe haben nur 100 eine APR von mindestens 10 Prozent.
+- Im zweiten Test des TU-Beispiels haben 1.166 von 10.000 Zufallsreihen eine mindestens ebenso hohe durchschnittliche Strategierendite. Die Null wird nur mit 88 Prozent Wahrscheinlichkeit verworfen.
+- Die Form der Renditeverteilung hat etwas mit dem Erfolg zu tun. Jede zufällige Renditeverteilung mit hoher Kurtosis kann Momentum-Strategien begünstigen.
+- Der Plot von f gleich 0 bis 23 zeigt ein Maximum nahe 19; fminbnd liefert 19, nahe dem Kelly-Wert 18,4.
+- Ein anderer Zufallsstart liefert einen etwas anderen optimalen f, idealerweise nicht weit davon entfernt.
+- Bei f gleich 31 ist die Wachstumsrate minus 1, weil die negativste Periodenrendite minus 0,0331 ist und jeder Hebel über 1 geteilt durch 0,0331 gleich 30,2 in dieser Periode zum Totalverlust führt.
+- Dieselbe Reihe hat bei f gleich 19,2 den maximalen Drawdown minus 0,999, bei 9,6 noch minus 0,963, und bei etwa 2,7 einen Betrag von etwa 0,5.
+- Nach 100.000 Tagen liegt die CPPI-Wachstumsrate bei 0,002484 pro Tag gegen 0,002525 der Alternative, bei D gleich 0,5; der CPPI-Drawdown bleibt unter 0,5, der andere ohne Stop-Loss beträgt 0,9 selbst bei halbem Optimalhebel.
 
 ## Unterschiedliche Quellenpositionen
 

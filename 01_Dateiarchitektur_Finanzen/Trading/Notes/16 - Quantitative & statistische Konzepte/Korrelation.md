@@ -20,6 +20,9 @@ aktualisiert: 2026-10-30
 
 - Die Korrelation zum Underlying ist die Korrelation der Strategierenditen mit den Renditen des zugrunde liegenden Anlageuniversums.
 - Die Konditionszahl einer Korrelationsmatrix ist der Betrag des Verhältnisses aus betragsmäßig größtem und kleinstem Eigenwert.
+- Zeitreihenmomentum bedeutet, dass vergangene Renditen einer Preisreihe positiv mit künftigen Renditen korreliert sind.
+- Zeitreihenmomentum bezeichnet die positive Korrelation der vergangenen und der künftigen Renditen einer Preisreihe.
+- Cross-Sectional Momentum bezeichnet die positive Korrelation der vergangenen und der künftigen relativen Renditen einer Preisreihe gegenüber den anderen Preisreihen eines Portfolios.
 
 ## Kernaussagen
 
@@ -33,6 +36,9 @@ aktualisiert: 2026-10-30
 - Die Distanz als Quadratwurzel aus der Hälfte der Differenz von eins und der Korrelation ist eine echte Metrik, weil sie ein Vielfaches des euklidischen Abstands nach Z-Standardisierung ist.
 - Die Quadratwurzel aus der Differenz von eins und dem Betrag der Korrelation ist eine echte Metrik auf dem Quotienten der ganzen Zahlen modulo 2.
 - Korrelationsstrukturen bleiben über lange Zeiträume nicht invariant.
+- Volatilität ist mit dem Aktienindex antikorreliert: fällt der Markt, schießt die Volatilität nach oben, und in geringerem Maß gilt auch das Umgekehrte.
+- Das Streudiagramm der Frontmonatskurse von ES gegen die Frontmonatskurse von VX zeigt diese inverse Beziehung.
+- Im Regime von August 2008 bis 2012 ist die Volatilität bei gegebenem Indexstand deutlich niedriger als im Regime von 2004 bis Mai 2008, die Spannweite der Volatilitäten aber größer, mit extremeren Volatilitätstagen als zuvor.
 
 ## Funktionsweise
 
@@ -40,6 +46,10 @@ aktualisiert: 2026-10-30
 - Das illustrierte Linkage-Kriterium ist der nearest-point-Algorithmus, also die kleinste Distanz zwischen einem Punkt und dem neuen Cluster.
 - Auf einen idiosynkratischen Schock senkt Hierarchical Risk Parity die betroffene Anlage und erhöht eine korrelierte, nicht betroffene Anlage.
 - Auf einen gemeinsamen Schock senkt es die betroffenen Anlagen und erhöht unkorrelierte Anlagen mit geringerer Varianz.
+- Gemessen wird der Korrelationskoeffizient samt p-Wert für eine gewählte Verzögerung; die stärkste positive Korrelation kann zwischen Renditen verschiedener Lags liegen.
+- Eintagesrenditen können negativ korrelieren, während die vergangene 20-Tage-Rendite mit der künftigen 40-Tage-Rendite stark positiv korreliert.
+- Statt der Beträge kann die Korrelation der Vorzeichen getestet werden, wenn nur interessiert, dass eine Aufwärtsbewegung einer weiteren folgt.
+- Überlappende Fenster werden ausgeschlossen: der Text rückt bei längerem Lookback um die Haltedauer und bei längerer Haltedauer um den Lookback vor.
 
 ## Voraussetzungen
 
@@ -56,12 +66,18 @@ aktualisiert: 2026-10-30
 - Das Inverse-Varianz-Portfolio ignoriert die Korrelationsstruktur und ist dadurch anfällig für systemische Schocks.
 - Schocks auf mehrere korrelierte Anlagen bestrafen genau diese Unkenntnis der Korrelationsstruktur.
 - Eine Hauptkomponentenanalyse auf einem großen Rentenuniversum leidet unter denselben Nachteilen wie CLA, weil Verfahren für kleine Datenmengen die Hierarchie nicht erkennen.
+- Dieselbe Reihe kann auf verschiedenen Zeitebenen Momentum und Mean Reversion zeigen; bei TU ist der Hurst-Exponent 0,44 und der Variance-Ratio-Test verwirft den Random Walk nicht, obwohl einzelne Lag-Paare positiv korrelieren.
+- Korrelationsstrukturen der Rollrendite erklären das querschnittliche Momentum von Währungen und Aktien nicht; dort kommen serielle Korrelation des Weltwirtschafts- oder Zinswachstums beziehungsweise langsame Informationsdiffusion infrage.
 
 ## Beispiele
 
 - Aus den Korrelationen 0,7, 0,2 und minus 0,2 werden die Distanzen 0,3873, 0,6325 und 0,7746.
 - Eine dargestellte Korrelationsmatrix von Rentenpapieren umfasst nach dem Clustering über 2,1 Millionen Einträge.
 - Zwischen dem ersten und zweiten Rebalancing trifft eine Anlage ein idiosynkratischer Schock, zwischen dem fünften und sechsten zwei Anlagen ein gemeinsamer Schock.
+- Für TU hat das Paar 250 zu 25 einen Korrelationskoeffizienten von 0,27 bei einem p-Wert von 0,02.
+- Die besten Kompromisse aus Koeffizient und p-Wert sind (60, 10), (60, 25), (250, 10), (250, 25), (250, 60) und (250, 120).
+- Die Korrelation der Tagesrenditen von VX und ES erreicht minus 75 Prozent.
+- Die Hoffnung der querschnittlichen Rollrendite-Strategie ist, dass die Spotpreise der Rohstoffe positiv mit Wirtschaftswachstum oder anderen Makroindizes korrelieren und sich deshalb gegenseitig aufheben.
 
 ## Unterschiedliche Quellenpositionen
 

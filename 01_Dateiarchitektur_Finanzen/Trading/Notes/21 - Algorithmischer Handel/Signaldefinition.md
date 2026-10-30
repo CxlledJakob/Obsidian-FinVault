@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/21 - Algorithmischer Handel/21 - Algorithmischer Handel|21 - Algorithmischer Handel]]"
 weitere_hauptthemen: []
 unterthema: "Systementwicklung"
@@ -10,22 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Signaldefinition
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Das Signal ist der negative Z-Score des Preises des Einheitsportfolios: Nettomarktwert minus gleitender Durchschnitt, geteilt durch die gleitende Standardabweichung, mit negativem Vorzeichen.
 
 ## Kernaussagen
 
 
 ## Funktionsweise
 
+- Bei Paar- und anderen Arbitragestrategien hängen die Handelssignale oft von den Differenzen der Preisquotes verschiedener Instrumente ab.
+- Bei Währungspaaren ist oft das Ratio statt des Spreads ein guter Indikator.
+- Eine praktische Umsetzung einer linearen Handelsstrategie sind Bollinger-Bänder mit Scaling-in.
 
 ## Voraussetzungen
 
@@ -35,9 +37,13 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Der Lookback von Durchschnitt und Standardabweichung wird auf die gerundete Halbwertszeit gesetzt und nicht frei optimiert.
+- Der Preis des Einheitsportfolios ist sein Marktwert, analog zum Preis eines Fonds oder ETF.
+- Linear bedeutet, dass die Stückzahl proportional zum Z-Score ist, nicht der Marktwert der Anlage.
 
 ## Risiken und Grenzen
 
+- Ein Datenfehler, der einen Spread von 5 auf 6 Dollar erhöht, also um 20 Prozent, kann ein Signal auslösen, das der wahre Spread nicht ausgelöst hätte.
 
 ## Beispiele
 

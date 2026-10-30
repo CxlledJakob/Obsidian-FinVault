@@ -33,6 +33,16 @@ aktualisiert: 2026-10-30
 - Das Roll-Modell nimmt serielle Unabhängigkeit der Aggressorzeichen an, E[bt bt−1] = 0.
 - Die halbe Geld-Brief-Spanne ergibt sich dort aus der seriellen Kovarianz der Preisänderungen, c = √max{0, −σ[Δpt, Δpt−1]}.
 - Empirisch weisen Finanzzeitreihen serielle Abhängigkeit auf.
+- Den simulierten Renditen des zweiten Hypothesentests fehlen die Korrelationen, die in den beobachteten Reihen stecken.
+- Lässt sich auf solchen Zufallsreihen mit guter Wahrscheinlichkeit eine mindestens ebenso gute Strategierendite erzeugen, erfasst die Momentum-Strategie kein Momentum und keine seriellen Korrelationen der Renditen und ist nur deshalb profitabel, weil die beobachtete Verteilung einen bestimmten Mittelwert und eine bestimmte Form hat.
+- Von 10.000 solchen Reihen lagen 1.166 mindestens auf der beobachteten durchschnittlichen Rendite. Die Null ließ sich nur mit 88 Prozent Wahrscheinlichkeit verwerfen, und die Form der Verteilung hat etwas mit dem Erfolg zu tun.
+- Die anti-serielle Korrelation der Renditen ist handelbar und ist dasselbe wie die Mean Reversion der Preise; die Mean Reversion der Renditen selbst ist nicht handelbar.
+- Cross-sectional Mean Reversion impliziert, dass die kurzfristigen relativen Renditen der Instrumente seriell antikorreliert sind.
+- Eine trendende Reihe hat positive Korrelationen aufeinanderfolgender Preisbewegungen und einen Hurst-Exponenten über 0,5.
+- Viele Futures-Renditen weisen serielle Korrelation auf, und diese Korrelation tritt nur auf einer ziemlich langen Zeitskala auf.
+- Das Vorzeichen der Rollrendite wechselt typischerweise selten, die Futures bleiben also lange in Contango oder Backwardation, während die Spot-Rendite Vorzeichen und Größe sehr schnell wechselt.
+- Wird ein Future lange gehalten und dominieren die durchschnittlichen Rollrenditen die durchschnittliche Gesamtrendite, entsteht serielle Korrelation der Gesamtrenditen.
+- Querschnittliches Momentum bei Währungen lässt sich der seriellen Korrelation des Weltwirtschafts- oder Zinswachstums zuschreiben.
 
 ## Funktionsweise
 
@@ -45,12 +55,17 @@ aktualisiert: 2026-10-30
 
 ## Regeln und Kriterien
 
+- Oft lässt sich die ADF-Null erst mit Lag k gleich 1 verwerfen und nicht mit k gleich 0, weil die Preisänderungen häufig serielle Korrelation haben.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Die Erklärung passt zu BR, HG und TU, weil ihre Rollrenditen nach Tabelle 5.1 betragsmäßig größer sind als ihre Spot-Renditen.
+- Für C findet der Text den Grund nicht, obwohl C den größten Betrag der Rollrendite im Vergleich zur durchschnittlichen Spot-Rendite hat.
+- Für TU ist die Korrelation der 250-Tage-Rendite mit der folgenden 25-Tage-Rendite 0,27 bei einem p-Wert von 0,02, während der Hurst-Exponent 0,44 beträgt und der Variance-Ratio-Test den Random Walk nicht verwirft.
+- Beispiel 1.1 simuliert eine Renditereihe mit derselben Kurtosis wie die TU-Futures-Reihe, aber ohne serielle Autokorrelationen, und erzeugt in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie.
 
 ## Unterschiedliche Quellenpositionen
 

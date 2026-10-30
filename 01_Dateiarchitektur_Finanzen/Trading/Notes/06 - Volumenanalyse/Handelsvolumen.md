@@ -101,6 +101,10 @@ aktualisiert: 2026-10-30
 - Die Zeit bleibt auf einer eigenen Achse unter dem Chart, sonst wäre die Lage in der Session unbekannt.
 - Das Volumen wird normalisiert, indem das Periodenvolumen durch die Summe des auf dem Chart gezeigten Volumens geteilt wird.
 - Candle-Volume-Charts legen die Equivolume-Box über eine Kerze mit Eröffnung, Hoch, Tief und Schluss und ergänzen die Dochte. Breite und Höhe folgen dem Volumen.
+- Im Market-Making-Kalman-Filter wird die Unsicherheit des beobachteten Transaktionspreises so gedeutet, dass eine große Trade-Größe gegenüber einer Benchmark eine kleine Unsicherheit bedeutet und umgekehrt.
+- Die Benchmark-Trade-Größe Tmax kann ein Bruchteil des gesamten Handelsvolumens des Vortags sein; der genaue Bruchteil wird mit Trainingsdaten optimiert.
+- Ist die Trade-Größe T gleich Tmax, gibt es keine Unsicherheit im beobachteten Preis, der Kalman-Gain ist 1, und die neue Schätzung des mittleren Preises ist genau der beobachtete Preis.
+- Der Kalman-Filter gibt nicht nur Trades mit größerer Stückzahl mehr Gewicht, sondern auch jüngeren Trade-Preisen mehr Gewicht und ist damit mit einem volumen- und zeitgewichteten Durchschnittspreis vergleichbar.
 
 ## Voraussetzungen
 

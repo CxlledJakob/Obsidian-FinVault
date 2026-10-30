@@ -67,6 +67,8 @@ aktualisiert: 2026-10-30
 - Die Sharpe Ratio einer Strategie wird weiterhin aus einem einzigen Pfad geschätzt und kann stark schwanken.
 - Für k gleich 1 entsteht genau ein Pfad, und die kombinatorische purged Cross-Validation fällt dann mit der gewöhnlichen Cross-Validation zusammen.
 - Für k größer als 1 verallgemeinert die kombinatorische purged Cross-Validation die gewöhnliche Cross-Validation.
+- Eine maximale Drawdown-Dauer von zwei Jahren macht es unwahrscheinlich, dass die Strategie eine Cross-Validation besteht. Das gilt für das Beispiel mit 30 Prozent annualisierter Rendite und einer Sharpe Ratio von 0,3.
+- Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios sind gute Praktiken gegen Data-Snooping-Bias. Maßgeblicher als alle drei ist der Walk-Forward-Test.
 
 ## Funktionsweise
 
@@ -126,6 +128,9 @@ aktualisiert: 2026-10-30
 - Strategien verdienen daran, das richtige Label mit hoher Konfidenz zu treffen; Gewinne aus guten Prognosen mit niedriger Konfidenz gleichen Verluste aus schlechten Prognosen mit hoher Konfidenz nicht aus.
 - Die Cross-Validation bewertet den Klassifikator mit Sample-Gewichten, und diese Gewichte wurden als Funktion des absoluten Returns der Beobachtung bestimmt.
 - Sample-gewichteter Cross-Entropy-Loss schätzt die Leistung mit dem richtigen Label für die Seite, der Wahrscheinlichkeit für die Positionsgröße und dem Gewicht für Return beziehungsweise Ausgang und ist damit die passende Metrik für Finanzanwendungen, nicht Accuracy.
+- Cross-Validation kommt infrage, wenn ein Modell wegen schwacher Leistung auf einem festen Out-of-Sample-Satz nicht verworfen werden soll, weil das Pech sein kann, oder wenn der Datensatz klein ist und zum Justieren fast alle Daten gebraucht werden.
+- Dabei werden mehrere verschiedene Teilmengen zum Trainieren und Justieren gewählt, und vor allem muss das Modell auf diesen verschiedenen Teilmengen gut abschneiden.
+- Modelle mit hoher Sharpe Ratio und kurzer maximaler Drawdown-Dauer bestehen diesen Test fast automatisch. Die einzigen Teilmengen, auf denen sie durchfallen, sind die seltenen Drawdown-Perioden.
 
 ## Regeln und Kriterien
 

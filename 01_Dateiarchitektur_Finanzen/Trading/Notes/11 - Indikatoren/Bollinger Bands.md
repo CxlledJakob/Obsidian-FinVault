@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Bollinger Bands
@@ -19,6 +19,8 @@ aktualisiert: 2026-10-29
 ## Kurzdefinition
 
 - Die Bänder liegen eine Standardabweichung über und unter dem Moving Average, der als wahrer Wert oder Mean gilt.
+- Für den praktischen Handel wird eine Position erst eröffnet, wenn der Preis um mehr als entryZscore Standardabweichungen vom Mittel abweicht.
+- Geschlossen wird, wenn der Preis auf exitZscore Standardabweichungen vom Mittel zurückgekehrt ist, mit exitZscore kleiner als entryZscore.
 
 ## Kernaussagen
 
@@ -29,23 +31,44 @@ aktualisiert: 2026-10-29
 
 ## Funktionsweise
 
+- Ein Bollinger-Band-Modell schöpft Gewinne aus einer mean-revertierenden Preisreihe, indem verkauft wird, sobald der Preis eine Schwelle überschreitet, und gekauft wird, sobald er unter eine Schwelle fällt.
+- Das lineare Gegenstück kauft oder verkauft bei jedem Preisschritt, sodass der gesamte Marktwert ungefähr proportional zur negativen Abweichung vom Mittel ist. Trader nennen das Averaging-in oder Scaling-in.
+- Die Preisdynamik, die das Band abschöpfen soll, ist die Ornstein-Uhlenbeck-Formel dy(t) = (λy(t−1) + μ)dt + dε. Die Preisänderung im nächsten Zeitabschnitt ist proportional zur Differenz aus Mittelpreis und aktuellem Preis.
+- Long-Einstieg, wenn der Z-Score unter minus entryZscore liegt, Long-Ausstieg, wenn er mindestens minus exitZscore erreicht; Short-Einstieg oberhalb von entryZscore, Short-Ausstieg bei höchstens exitZscore.
+- Die Long-Stückzahl wird am Einstieg auf 1 und am Ausstieg auf 0 gesetzt, die Short-Stückzahl auf minus 1 beziehungsweise 0, und an Tagen ohne Signal wird der Vortageswert fortgeschrieben; die Nettostückzahl ist die Summe beider Seiten.
+- Die lineare Strategie skaliert die Stückzahl fortlaufend mit der Abweichung und ist damit der Grenzfall ohne festes Band; sie ist fast parameterfrei und deshalb am wenigsten anfällig für Data Snooping, aber unpraktisch, weil die maximale Kapitalbindung unbekannt ist.
+- Eine Bollinger-Band-ähnliche Mean-Reversion-Strategie shortet das Portfolio aus 0,3906 VX und einem ES, sobald dessen Wert um eine Standardabweichung der im Trainingsset bestimmten Residuen abweicht.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 beträgt die annualisierte Rendite dieser Strategie 12,3 Prozent bei einer Sharpe Ratio von 1,4.
+- Besonders profitabel war sie um die Herabstufung der US-Bonität durch Standard & Poor's.
+- Die Standardabweichung der Residuen aus dem Trainingsset beträgt 2.047 Dollar; das Trainingsset sind die ersten 500 Tage nach August 2008.
 
 ## Regeln und Kriterien
 
+- entryZscore ist ein freier Parameter und wird auf einem Trainingsset optimiert; Mittel und Standardabweichung werden über einen Lookback gerechnet, der ebenfalls optimiert oder gleich der Halbwertszeit gesetzt werden kann.
+- Ist exitZscore gleich 0, wird am aktuellen Mittel geschlossen.
+- Ist exitZscore gleich minus entryZscore, wird geschlossen, wenn der Preis das gegenüberliegende Band so weit durchstößt, dass ein Signal mit umgekehrtem Vorzeichen entsteht.
+- Zu jedem Zeitpunkt ist entweder null oder eine Einheit long oder short investiert, deshalb sind Kapitalzuteilung und Risikosteuerung einfach.
+- Ein kurzer Lookback und kleine Beträge von entryZscore und exitZscore geben eine kürzere Haltedauer, mehr Round-Trips und in der Regel höhere Gewinne.
+- Scaling-in mit mehreren Bändern benutzt entryZscore gleich 1, 2, 3 bis N und exitZscore gleich 0, 1, 2 bis N minus 1; N wird auf Trainingsdaten optimiert.
 
 ## Risiken und Grenzen
 
 - Der gleitende Durchschnitt beruht nur auf dem Preis und zeichnet die Wanderung des Means unvollständig.
 - Zeit, Preis und Volumen im Marktprofil zeigen die Wanderung des Means vollständiger.
+- Schoenberg und Corwin (2010) zeigen, dass Ein- oder Ausstieg an zwei oder mehr Bollinger-Bändern nie optimal ist: es gibt immer ein einzelnes Niveau, von ihnen all-in genannt, mit höherer durchschnittlicher Rendite im Backtest.
+- Der Beweis nimmt an, dass die Wahrscheinlichkeit p, vor der Rückkehr zum Endpreis noch weiter abzuweichen, über die Zeit konstant ist.
+- Ist die Volatilität nicht konstant, ist auch p nicht konstant, und Scaling-in liefert dann voraussichtlich eine bessere realisierte Sharpe Ratio, wenn schon nicht mehr Gewinn.
+- Scaling-in ist in der Stichprobe nie optimal, kann die All-in-Methode außer Stichprobe aber übertreffen.
 
 ## Beispiele
 
+- Auf dem Preis-Spread von GLD und USO mit entryZscore gleich 1 und exitZscore gleich 0 erreicht die Bollinger-Strategie 17,8 Prozent APR und eine Sharpe Ratio von 0,96 und verbessert damit die lineare Variante.
 
 ## Unterschiedliche Quellenpositionen
 

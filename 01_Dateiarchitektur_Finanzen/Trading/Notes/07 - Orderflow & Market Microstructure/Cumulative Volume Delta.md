@@ -26,10 +26,14 @@ aktualisiert: 2026-10-30
 - Sie soll die Stärke des Kaufens oder Verkaufens zeigen, das zur Preisaktion gehört.
 - Delta und Cumulative Delta sind in der Volume Price Analysis relativ neu und in der Regel nicht kostenlos als Standardindikator verfügbar. Das kann sich ändern.
 - Die Autorin rechnet damit, dass Delta und seine Ableitungen in bestimmten Märkten häufiger genutzt werden, besonders bei E-Mini-Indexhändlern.
+- Orderflow ist bei Lyons (2001) vorzeichenbehaftetes Transaktionsvolumen: Kauf von 100 Einheiten ergibt plus 100, Verkauf von 100 Einheiten minus 100.
+- Orderflow sagt die kurzfristige Preisbewegung in derselben Richtung voraus.
 
 ## Funktionsweise
 
 - Es werden alle Delta-Daten gesammelt und jeder folgende Balken zum vorherigen addiert. Die Summen erscheinen als Balkenserie.
+- Ist der Orderflow je Transaktion bestimmt, lässt sich der kumulative oder der durchschnittliche Orderflow über ein Look-back-Fenster berechnen.
+- Dieser Wert wird benutzt, um vorherzusagen, ob der Preis steigt oder fällt.
 
 ## Voraussetzungen
 

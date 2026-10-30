@@ -41,6 +41,10 @@ aktualisiert: 2026-10-30
 - Die erwarteten Investmentrenditen sind r = diag[μ′ω] − τ[ω].
 - Die Kosten sind unstetig, ändern sich mit h und sind in r eingebettet.
 - Eine Lösung wird auch bei unstetigen Kostenfunktionen gefunden, ohne analytische Eigenschaften der Zielfunktion zu verwenden.
+- In den Beispiel-Backtest-Codes sind keine Transaktionskosten enthalten, obwohl sie für einen aussagekräftigen Backtest entscheidend sind.
+- Die Transaktionskosten von Forex sind stark venue-abhängig, weil die Bid-Ask-Spreads desselben Währungspaars zwischen den Plätzen erheblich variieren, und sie müssen im Backtest berücksichtigt werden.
+- Hard to borrow kann beim Leerverkauf heißen, dass der Leerverkäufer dem Aktienverleiher Zinsen zahlt, statt wie im Normalfall Zinsen zu erhalten.
+- Die Dezimalisierung der US-Aktienpreise verengte die Bid-Ask-Spreads drastisch, sodass Pair-Trader, die wie Market Maker agieren, auch geringere Market-Making-Gewinne erzielen (Serge, 2008).
 
 ## Funktionsweise
 
@@ -69,6 +73,10 @@ aktualisiert: 2026-10-30
 - Die Handelszeiten der Bestandteile stimmen nicht exakt überein, deshalb ist der Spread nicht immer zum letzten veröffentlichten Kurs und ohne Latenzrisiko handelbar.
 - Zusammen mit den unstetigen, horizonspezifischen Kosten ist die Aufgabe kein konvexes quadratisches Programm.
 - Der Preis dieser allgemeinen Kostenfunktionen ist ein extrem hoher Rechenaufwand, vergleichbar mit der Bewertung aller Wege im Problem des Handlungsreisenden.
+- Die Backtests dieses Buchs enthalten keine Transaktionskosten, weil diese empfindlich von der genauen Ausführungsmethode und vom genauen Aktienuniversum abhängen.
+- Ein Backtest einer Aktienpaar-Strategie auf Trade- oder Quote-Preisen ist unrealistisch, wenn nicht nur 100 Stück gehandelt werden oder erhebliche Transaktionskosten angesetzt werden.
+- Market Orders auf beiden Seiten, nachdem das Signal von den NBBO-Preisen kam, können erheblichen Slippage erzeugen.
+- In der Open-to-Close-Variante des linearen Long-Short verdoppeln sich die Transaktionskosten gegenüber einmal täglichem Handel, weil zweimal am Tag gehandelt wird; auch diese Kosten fehlen im Backtest.
 
 ## Beispiele
 

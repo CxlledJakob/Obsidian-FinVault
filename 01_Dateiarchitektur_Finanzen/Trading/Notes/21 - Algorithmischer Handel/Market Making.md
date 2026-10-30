@@ -55,6 +55,12 @@ aktualisiert: 2026-10-30
 - Veröffentlichte Quotes geben nicht immer die Niveaus wieder, zu denen Market Maker Liquidität stellen wollen, etwa bei Corporate-, Municipal- und Agency-Bonds.
 - Unter normalen Bedingungen erzeugen ihre Prognosen einen niedrigen Cross-Entropy-Verlust.
 - Predatory Algorithms versuchen, Market Maker über Quotestornierungen und Ordertypen advers zu selektieren.
+- Am kurzen Ende der Zeitskala stützen sich Market-Making-Strategien auf Preise, die in Sekunden zum Mittel zurückkehren.
+- Eine kurze Zeitskala bedeutet mehr Trades pro Jahr, daraus höhere statistische Sicherheit und eine höhere Sharpe Ratio in Backtest und Live-Handel und schließlich eine höhere zusammengesetzte Rendite.
+- Gesucht werden auch hier Mittelpreis und Standardabweichung für den Mean-Reversion-Handel, nicht die Hedge Ratio zwischen zwei kointegrierenden Reihen.
+- Viele traditionelle Market Maker quoten keine großen Sizes mehr, weil High-Frequency-Strategien große Bids oder Asks frontrunnen; die NBBO-Sizes sind deshalb über viele Märkte gesunken.
+- Selbst bei AAPL betragen die NBBO-Sizes oft nur ein paar hundert Aktien, bei SPY auf ARCA oft weniger als 10.000.
+- High-Frequency-Händler verdienen nur an langsameren Händlern; bleiben nur sie übrig, ist der durchschnittliche Nettogewinn aller null.
 
 ## Funktionsweise
 
@@ -64,6 +70,19 @@ aktualisiert: 2026-10-30
 - Eine Neubeurteilung kann zum Beispiel nach jeweils 10.000 gehandelten Kontrakten oder bei einer deutlichen Preisänderung erfolgen.
 - Beobachtungen werden mit 1 gelabelt, wenn das Market Making einen Gewinn brachte, und mit 0 bei einem Verlust.
 - Das Informationsmaß φτ ist der Wert der Verteilungsfunktion der negativen Cross-Entropy-Verluste an der aktuellen Prognose und liegt in (0, 1).
+- Als Market-Making-Modell schätzt der Kalman-Filter nur eine mean-reverting Preisreihe: der verborgene Zustand ist der Mittelpreis m(t), die beobachtbare Größe ist der Preis y(t).
+- Die Messgleichung ist y(t) gleich m(t) plus Rauschen, und der Zustandsübergang ist m(t) gleich m(t−1) plus Rauschen.
+- Das Update lautet m plus Kalman-Gain mal (y minus m), der Gain ist R geteilt durch (R plus Ve), die Prognosevarianz ist die Varianz von m plus Ve, und die neue Zustandsvarianz ist (1 minus Gain) mal R.
+- Ein favorisiertes Modell, mit dem Market Maker ihre Schätzung des mittleren Preises eines Assets aktualisieren, ist der Kalman-Filter; darauf hat Euan Sinclair 2010 hingewiesen.
+- Dabei werden der mittlere Preis und die Standardabweichung einer einzelnen mean-reverting Preisreihe geschätzt, nicht die Hedge Ratio zwischen zwei kointegrierenden Reihen.
+- Die Unsicherheit des beobachteten Transaktionspreises wird so angesetzt, dass eine große Trade-Größe gegenüber einer Benchmark eine kleine Unsicherheit bedeutet und umgekehrt.
+- Ist die Trade-Größe gleich der Benchmark, ist der Kalman-Gain 1 und die neue Mittelpreis-Schätzung genau der beobachtete Preis.
+- Die Benchmark kann ein Bruchteil des Vortagesvolumens sein und wird mit Trainingsdaten optimiert.
+- Größere Trades und jüngere Preise erhalten mehr Gewicht, vergleichbar mit einem volumen- und zeitgewichteten Durchschnittspreis.
+- Market Maker ziehen aus dem Orderflow wichtige fundamentale Information und setzen Bid und Ask danach.
+- Große gleichgerichtete Market Orders in Sekundenbruchteilen deuten auf informierte Händler hin; der Market Maker passt Bid und Ask sofort zum eigenen Schutz an.
+- Die Dringlichkeit von Market Orders zeigt, dass die Information neu und nicht weit bekannt ist.
+- Nach der Füllung kleiner Quotes stellt der Market Maker dieselben Preise nach, um nicht von High-Frequency-Händlern ausgenutzt zu werden.
 
 ## Voraussetzungen
 
@@ -88,6 +107,7 @@ aktualisiert: 2026-10-30
 - Der Crash entstand durch die Anhäufung tausender Prognosefehler.
 - Sie stellten weiter Liquidität zu übermäßig großzügigen Kursen, bis der Stop-out eine Liquiditätskrise auslöste.
 - Ein weiterer Bid-Ask-Spread hätte den verkaufsseitigen Orderflow stoppen können, weil die Verkäufer diese Abschläge nicht mehr akzeptiert hätten.
+- Ein weiterer Grund, große Quotes zu vermeiden, ist, dass aus ihrer Füllung große Inventare entstehen, die Market Maker nicht halten wollen.
 
 ## Beispiele
 

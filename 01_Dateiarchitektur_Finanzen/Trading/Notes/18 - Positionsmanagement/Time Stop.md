@@ -20,6 +20,7 @@ aktualisiert: 2026-10-30
 
 - Der Time Stop ist die vertikale Barriere, also eine Ablaufgrenze nach einer Zahl von Bars oder Tagen seit der Positionsaufnahme.
 - Der Time Stop ist eine maximale Haltedauer, nach der die Position unabhängig von Stop und Gewinnziel geschlossen wird.
+- Der zeitbasierte Ausstieg legt eine Haltedauer fest und schließt die Position, wenn diese Haltedauer erreicht ist.
 
 ## Kernaussagen
 
@@ -30,6 +31,9 @@ aktualisiert: 2026-10-30
 - Ein fehlender Zeitstempel für die vertikale Barriere schaltet sie ab.
 - Wird für die vertikalen Barrieren False übergeben, sind sie abgeschaltet.
 - Die Konfiguration nur mit vertikaler Barriere, [0,0,1], entspricht der Fixed-Time-Horizon-Methode.
+- Alle bisher besprochenen Momentum-Strategien verwenden nur zeitbasierte Ausstiege.
+- Ein Stop-Loss kann zusätzlich oder stattdessen die Ausstiegsbedingung sein.
+- Durch den zeitbasierten Ausstieg oder einen Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt.
 
 ## Funktionsweise
 

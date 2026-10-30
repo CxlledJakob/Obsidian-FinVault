@@ -34,6 +34,12 @@ aktualisiert: 2026-10-30
 - In den Endgleichungen von Corwin und Schultz erscheint die Volatilität nicht mehr, weil sie durch den Hoch-Tief-Schätzer ersetzt ist.
 - Eisler et al. (2012) finden, dass kleine Aktien auf Market Orders, Limit Orders und Stornierungen anders reagieren als große Aktien, und dass diese Größen für die Dynamik des Spreads relevant sind.
 - Hasbrouck (2009) findet eine hohe Rangkorrelation zwischen täglichen Schätzungen von Amihuds Lambda und Intraday-Schätzungen des effektiven Spreads.
+- Ob der Bid, der Ask oder der letzte Preis einen Trade auslöst, ist ein Umsetzungsdetail, das veröffentlichte Artikel oft übergehen und das die Profitabilität einer live gehandelten Strategie erheblich beeinflussen kann.
+- Für Forex-Strategien wird der Backtest mit Bid-Ask-Quotes empfohlen, weil die Bid-Ask-Spreads desselben Währungspaars zwischen Venues erheblich variieren können.
+- Die Transaktionskosten sind dadurch stark venue-abhängig und im Backtest zu berücksichtigen.
+- Handelspreise und Handelsgrößen sind bei Währungen im Gegensatz zu Bid- und Ask-Quotes im Allgemeinen nicht verfügbar, zumindest nicht ohne kleine Verzögerung, weil Händler oder ECNs den Handelspreis nicht allen Teilnehmern melden müssen.
+- Die Dezimalisierung der US-Aktienkurse am 9. April 2001 senkte die Bid-Ask-Spreads und zugleich die angezeigte Liquidität an den besten Bid- und Ask-Preisen, nach Arnuk und Saluzzi 2012.
+- Die meisten Spezial-Backtesting-Plattformen sind nicht dafür ausgerüstet, Daten mit sämtlichen Bid-, Ask- und Last-Tick-Preisen und -Größen zu backtesten.
 
 ## Funktionsweise
 
@@ -43,6 +49,7 @@ aktualisiert: 2026-10-30
 - Die halbe Spanne ergibt sich als c = √max{0, −σ[Δpt, Δpt−1]}.
 - Der Corwin-Schultz-Spread ist St = 2(e^{αt} − 1) / (1 + e^{αt}).
 - Das Spread-Feature S lässt sich über ein rollierendes Fenster fortlaufend schätzen und mit einem Kalman-Filter glätten.
+- Market Maker setzen die Bid-Ask-Preise nach dem Orderflow, weil sie daraus fundamentale Information ziehen.
 
 ## Voraussetzungen
 
@@ -51,10 +58,17 @@ aktualisiert: 2026-10-30
 
 - Roll bleibt nützlich bei selten gehandelten Titeln und dort, wo veröffentlichte Quotes nicht die Niveaus zeigen, zu denen Market Maker Liquidität stellen wollen, etwa bei Corporate-, Municipal- und Agency-Bonds.
 - Der Hoch-Tief-Schätzer hilft besonders im Corporate-Bond-Markt, wo kein zentrales Orderbuch besteht und über Bids Wanted in Competition gehandelt wird.
+- Für eine Intraday-Spread-Strategie werden historische Bid- und Ask-Preise beider Kontrakte gebraucht oder die Intraday-Daten des Spreads selbst, wenn er an der Börse nativ ist.
+- Bei Intermarket-Spreads mit unterschiedlichen Schlusszeiten sind Intraday-Bid-Ask-Daten das naheliegende Mittel, damit die Gleichzeitigkeit der Preise gesichert ist.
 
 ## Regeln und Kriterien
 
 - Corwin und Schultz empfehlen, negative Alphas auf 0 zu setzen, weil ein negatives Alpha einen negativen Spread ergäbe.
+- Ticking setzt einen ursprünglichen Spread von mehr als zwei Ticks voraus.
+- Ticking ist nur profitabel, wenn die Round-Trip-Kommission pro Aktie kleiner ist als der Bid-Ask-Spread minus zwei Ticks.
+- Nach dem Kauf zum Best Bid plus einem Tick wird zum Best Ask minus einem Tick verkauft; der angestrebte Gewinn beträgt mindestens einen Tick.
+- Bleibt dieser Verkauf ungefüllt, beträgt der Verlust die Kommission plus einen Tick, bei Verkauf zum ursprünglichen Best Bid.
+- Am Best Ask kann nach einem Uptick verkauft werden, wenn der Spread größer ist als die Round-Trip-Kommission pro Aktie.
 
 ## Risiken und Grenzen
 

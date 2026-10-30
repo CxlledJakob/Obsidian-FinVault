@@ -57,6 +57,8 @@ aktualisiert: 2026-10-30
 - Für einen Preis aus einem diskreten Ornstein-Uhlenbeck-Prozess gibt es nach der Vermutung genau eine Kombination aus Gewinnziel und Stop, die die Sharpe Ratio maximiert.
 - Die für eine Ziel-Sharpe-Ratio nötige Trefferwahrscheinlichkeit hängt vom Gewinnziel, von der Verlustschwelle und von der Wettfrequenz ab.
 - Für die Darstellung der nötigen Trefferwahrscheinlichkeit wird ein Gewinnziel von 0,1 zusammen mit einer Ziel-Sharpe-Ratio von 1,5 verwendet.
+- Das Aufwärtspotenzial einer Mean-Reversion-Strategie ist durch die natürliche Gewinnobergrenze begrenzt, gesetzt als das Mittel, zu dem die Preise zurückkehren.
+- Das Aufwärtspotenzial einer Momentum-Strategie ist unbegrenzt, außer es wird willkürlich eine Gewinnobergrenze gesetzt, was unratsam ist.
 
 ## Funktionsweise
 

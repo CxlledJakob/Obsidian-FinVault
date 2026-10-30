@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/12 - Momentum/12 - Momentum|12 - Momentum]]"
 weitere_hauptthemen: []
 unterthema: "Momentumstruktur"
@@ -10,22 +10,28 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Momentumfortsetzung
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die meisten Aktien und Futures zeigen Querschnittsmomentum und oft auch Zeitreihenmomentum, typischerweise über einen Monat oder länger.
+- Lange Haltedauern senken die Sharpe Ratio und die statistische Signifikanz des Backtests, weil unabhängige Signale selten sind, und sie underperformen nach Finanzkrisen.
+- Kurzfristige Intraday-Momentum-Strategien haben diese Nachteile nicht und behalten nach den Key Points einige zentrale Vorteile der Interday-Strategien.
+- Von vier Hauptursachen des Momentums wirken alle bis auf eine auch intraday; die Ausnahme ist die Persistenz der Roll Return, deren Größe und Volatilität intraday zu klein sind.
+- Eine zusätzliche Ursache auf kurzem Horizont ist das Auslösen von Stops.
+- Wird Momentum durch die langsame Diffusion von Nachrichten getrieben, liegt der Nutzen in den ersten Tagen, Stunden oder sogar Sekunden nach dem Ereignis.
 
 ## Funktionsweise
 
+- Auslöser sind Unternehmensnachrichten, Makronachrichten, das tägliche Rebalancing gehebelter ETFs sowie auf kürzester Skala Bid-Ask-Ungleichgewicht, Orderflow-Änderungen und ungleich verteilte Stops.
+- Die Bewegung nach einer Gewinnmeldung hält einige Zeit in derselben Richtung an, über Nacht im untersuchten Setup aber nicht: Die Overnight-Renditen sind im Mittel negativ.
 
 ## Voraussetzungen
 
@@ -44,6 +50,8 @@ aktualisiert: 2026-10-26
 
 ## Unterschiedliche Quellenpositionen
 
+- Viele vor zehn oder zwanzig Jahren veröffentlichte Ergebnisse zeigten, dass der Drift nach Gewinnmeldungen länger als einen Tag dauerte; größere Bekanntheit kann die Dauer verkürzt haben.
+- Ob eine noch kürzere Haltedauer als ein Tag bessere Renditen bringt, bleibt nach dem Text zu testen.
 
 ## Eigene Erkenntnisse
 

@@ -39,6 +39,9 @@ aktualisiert: 2026-10-30
 - Ohne die Zahl der Versuche lassen sich Family-Wise Error Rate, False Discovery Rate und Probability of Backtest Overfitting nicht bestimmen.
 - Cross-Validation erzeugt weniger Fehlentdeckungen als Walk-Forward und schätzt die Sharpe Ratio ebenfalls aus einem einzigen Pfad.
 - Die kombinatorische purged Cross-Validation erzeugt weniger Fehlentdeckungen als Walk-Forward und als Cross-Validation.
+- So sorgfältig Data-Snooping im Test auch verhindert wird, es schleicht sich ein. Deshalb ist ein Walk-Forward-Test der abschließende echte Out-of-Sample-Test.
+- Dieser Walk-Forward-Test kann als Paper Trading laufen. Besser wird das Modell mit echtem Geld bei minimalem Hebel gehandelt, um zu prüfen, was selbst dem Paper Trading entgeht.
+- Die meisten Trader wären zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Wertes erzeugt.
 
 ## Funktionsweise
 

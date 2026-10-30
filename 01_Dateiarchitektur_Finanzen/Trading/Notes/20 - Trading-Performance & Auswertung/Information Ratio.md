@@ -35,6 +35,8 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - In der Attribution kann je Risikoklasse eine Sharpe Ratio oder eine Information Ratio berechnet werden.
+- Der passende Vergleichsmaßstab einer Long-only-Strategie ist die Rendite einer Buy-and-hold-Position, also die Information Ratio und nicht die Sharpe Ratio.
+- Die Long-only-Rohöl-Futures-Strategie von 2007 mit 20 Prozent Rendite und einer Sharpe Ratio von 1,5 war dem Halten des Front-Month-Kontrakts mit 47 Prozent und einer Sharpe Ratio von 1,7 nicht überlegen.
 
 ## Regeln und Kriterien
 

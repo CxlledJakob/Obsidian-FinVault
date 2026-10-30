@@ -25,6 +25,14 @@ aktualisiert: 2026-10-30
 - Für gaußsche Renditen beträgt die Kurtosis 3.
 - Die Probabilistic Sharpe Ratio sinkt, wenn die Kurtosis steigt und die Ränder dicker werden.
 - In der abgebildeten Fläche ist die Kurtosis auf 3 gesetzt, die beobachtete Sharpe Ratio auf 1,5 und die Benchmark auf 1,0, während Schiefe und Stichprobenlänge variieren.
+- Die Gauß-Verteilung erfasst Extremereignisse im Finanzmarkt nicht. Die Student-t-Verteilung erlaubt, Schiefe und Kurtosis der Renditen zu erfassen. Die Pareto-Verteilung verzichtet vollständig auf ein endliches zweites Moment.
+- Jede Wahl jenseits der Gauß-Form hat ein Element von Willkür und beruht auf endlich vielen Beobachtungen. Occams Rasiermesser gebietet eine Gauß-Form, sofern nicht starke theoretische und empirische Gründe für eine andere Verteilung sprechen.
+- Im zweiten Hypothesentest haben die simulierten Tagesrenditen dieselbe Kurtosis wie die beobachteten Futures-Renditen, zusammen mit Mittelwert, Standardabweichung und Schiefe, aber nicht dieselben Korrelationen.
+- Beispiel 1.1 zeigt, dass jede zufällige Renditeverteilung mit hoher Kurtosis für Momentum-Strategien günstig sein kann.
+- Das Scheitern, die Nullhypothese zu verwerfen, kann diese Einsicht anregen, auch wenn die Verwerfung selbst kein sehr befriedigender Schätzer statistischer Signifikanz ist.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist dieser Markt für Momentum-Strategien.
+- Je häufiger Black-Swan-Ereignisse auftreten, desto wahrscheinlicher profitiert eine Momentum-Strategie; Momentum-Modelle gedeihen an Black Swans und an der positiven Kurtosis der Renditeverteilung.
+- In Beispiel 1.1 erzeugt eine Renditereihe mit derselben Kurtosis wie die TU-Futures-Reihe, aber ohne serielle Autokorrelationen, in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie.
 
 ## Funktionsweise
 
