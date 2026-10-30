@@ -49,20 +49,7 @@ MAX_BULLET_CHARS = 2000
 PAGE_DASH = "–"
 BRANCH = "alex/wissensgeruest"
 BULLET_CHARS = 220
-ALLOWED_MODELS = frozenset(
-    {
-        "claude-sonnet-5-5-low",
-        "claude-sonnet-5-5-medium",
-        "claude-sonnet-5-5-high",
-        "claude-sonnet-5-5-xhigh",
-        "claude-sonnet-5-5-max",
-        "claude-opus-5-5-low",
-        "claude-opus-5-5-medium",
-        "claude-opus-5-5-high",
-        "claude-opus-5-5-xhigh",
-        "claude-opus-5-5-max",
-    }
-)
+ALLOWED_MODELS = frozenset({"sonnet", "opus"})
 STRENGE_TEXT = {
     "streng": (
         "Nur zuordnen, wenn das Fragment den Begriff definiert, eine Regel gibt oder ein Kriterium nennt. "
@@ -107,11 +94,11 @@ def default_roots() -> Roots:
 
 @dataclass(frozen=True)
 class Lauf:
-    zuordnung_modell: str = "claude-sonnet-5-5-medium"
+    zuordnung_modell: str = "sonnet"
     strenge: str = "locker"
     max_begriffe: int = 25
     link_shard_size: int = 4
-    ergaenzung_modell: str = "claude-sonnet-5-5-high"
+    ergaenzung_modell: str = "opus"
     max_neue_punkte: int = 20
     max_zeichen: int = 1500
     wiederholung_schwelle: float = 0.72
@@ -1294,12 +1281,12 @@ def self_test() -> int:
         raise SystemExit("parameter.json wird nicht veröffentlicht")
     if split_groups(["a", "b", "c", "d", "e"], 3) != [["a", "b", "c"], ["d", "e"]]:
         raise SystemExit("Shard-Schnitt falsch")
-    if clamp_modell("claude-sonnet-5-5-high-fast", "claude-sonnet-5-5-high") != "claude-sonnet-5-5-high":
-        raise SystemExit("fast-modell wurde akzeptiert")
-    if clamp_modell("grok-4.7-medium", "claude-sonnet-5-5-high") != "claude-sonnet-5-5-high":
+    if clamp_modell("claude-sonnet-5-5-medium", "sonnet") != "sonnet":
+        raise SystemExit("cursor-modell wurde akzeptiert")
+    if clamp_modell("grok-4.7-medium", "opus") != "opus":
         raise SystemExit("grok wurde akzeptiert")
-    if clamp_modell("claude-sonnet-5-5-medium", "claude-sonnet-5-5-high") != "claude-sonnet-5-5-medium":
-        raise SystemExit("medium abgelehnt")
+    if clamp_modell("sonnet", "opus") != "sonnet":
+        raise SystemExit("sonnet abgelehnt")
     kept, extra = limit_names(["A", " A", "B", "", "C"], 2)
     if kept != ["A", "B"] or extra != 1:
         raise SystemExit(f"Begriffsgrenze falsch: {kept} {extra}")
