@@ -1,13 +1,15 @@
 # Lokales n8n für FinVault (macOS / Apple Silicon, läuft aber auch unter Windows/Linux)
-# Start:   docker compose -f compose.mac.yml up -d
-# Stopp:   docker compose -f compose.mac.yml down
+# Start (in diesem Ordner):  docker compose up -d
+# Stopp:                      docker compose down
 #
 # Alle Pfade sind relativ zum Repo – keine rechnerspezifischen Pfade nötig.
 # Im Container gilt immer derselbe Pfad wie im Architekturkonzept: /vault/Finanzen/Trading
 
+name: n8n-finvault
+
 services:
   n8n:
-    image: docker.n8n.io/n8nio/n8n:2.37.10   # gepinnt, gleiche Version wie bei Kuba
+    image: docker.n8n.io/n8nio/n8n:2.37.10   # gepinnt, gleiche Version wie bei Jakob
     container_name: n8n-finvault
     restart: unless-stopped
     ports:
@@ -21,7 +23,7 @@ services:
       N8N_PERSONALIZATION_ENABLED: "false"
     volumes:
       - n8n_data:/home/node/.n8n                         # n8n-interne Daten inkl. Credentials (nicht im Git)
-      - ../01_Dateiarchitektur_Finanzen:/vault/Finanzen  # Vault aus dem Repo
+      - ../../01_Dateiarchitektur_Finanzen:/vault/Finanzen  # Vault aus dem Repo
       - ./workflows:/home/node/workflows                 # Workflow-Exporte fürs Git
       - ./scripts:/home/node/scripts:ro
     extra_hosts:
