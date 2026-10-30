@@ -4,24 +4,25 @@ Jeder von uns betreibt n8n lokal. **Die Flows selbst liegen als JSON in `workflo
 
 ```text
 02_n8n Flows/
-├── compose.mac.yml          lokales n8n (Mac, läuft auch unter Windows)
-├── workflows/               exportierte Flows – das ist der geteilte Stand
-├── scripts/
-│   ├── export-workflows.sh  n8n → workflows/   (vor jedem Commit)
-│   ├── import-workflows.sh  workflows/ → n8n   (nach jedem Pull)
-│   ├── *.ps1                dasselbe für Windows
-│   └── normalize-workflows.js
-├── compose.yml, Dockerfile, media-helper.js, transcribe.py   (Kubas Media-Setup, unverändert)
-└── README.md
+├── compose.yml, Dockerfile, media-helper.js, transcribe.py   (Jakobs Media-Setup – getrennt, nicht anfassen)
+└── n8n-finvault/                FinVault-n8n (dieser Ordner)
+    ├── compose.yml              lokales n8n (Mac, läuft auch unter Windows)
+    ├── workflows/               exportierte Flows – das ist der geteilte Stand
+    ├── scripts/
+    │   ├── export-workflows.sh  n8n → workflows/   (vor jedem Commit)
+    │   ├── import-workflows.sh  workflows/ → n8n   (nach jedem Pull)
+    │   ├── *.ps1                dasselbe für Windows
+    │   └── normalize-workflows.js
+    └── README.md
 ```
 
 ## Einmalig einrichten
 
 1. **Docker Desktop** installieren (Mac: Apple-Silicon-Version).
 2. KI läuft über die **Claude API** (Haiku). API-Key in n8n als Credential anlegen, nie in Dateien.
-3. n8n starten – im Ordner `02_n8n Flows`:
+3. n8n starten – im Ordner `02_n8n Flows/n8n-finvault`:
    ```bash
-   docker compose -f compose.mac.yml up -d
+   docker compose up -d
    ```
 4. http://localhost:5678 öffnen und Owner-Account anlegen.
 5. In n8n Credentials anlegen (z. B. Gmail OAuth2). **Credentials werden nie exportiert** – jeder legt sie bei sich selbst an. Gleiche Namen verwenden, dann ist das Zuordnen nach einem Import schnell erledigt.
@@ -37,7 +38,7 @@ Pfade im Container (identisch zum Architekturkonzept, auf jedem Rechner gleich):
 **Nach dem Bauen/Ändern eines Flows:**
 ```bash
 ./scripts/export-workflows.sh
-git add "02_n8n Flows/workflows" && git commit -m "Flow 1: …" && git push
+git add "02_n8n Flows/n8n-finvault/workflows" && git commit -m "Flow 1: …" && git push
 ```
 
 **Nach einem Pull (Änderungen vom anderen holen):**
