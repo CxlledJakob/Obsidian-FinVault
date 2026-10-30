@@ -78,5 +78,6 @@ aktualisiert: 2026-10-30
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 288–296 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-018-p288-p296|S. 288–296]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 297–314 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-019-p297-p314|S. 297–314]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 317–336 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-021-p317-p336|S. 317–336]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 1–18 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-001-p001-p018|S. 1–18]]
 
 ## Verwandte Themen

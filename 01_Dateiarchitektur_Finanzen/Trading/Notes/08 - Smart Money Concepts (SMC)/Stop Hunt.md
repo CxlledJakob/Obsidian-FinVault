@@ -70,6 +70,7 @@ aktualisiert: 2026-10-30
 - A Complete Guide to Volume Price Analysis.pdf, S. 20–39 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-002-p020-p039|S. 20–39]]
 - A Complete Guide to Volume Price Analysis.pdf, S. 39–58 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-003-p039-p058|S. 39–58]]
 - A Complete Guide to Volume Price Analysis.pdf, S. 77–96 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-005-p077-p096|S. 77–96]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
 
 ## Verwandte Themen
 

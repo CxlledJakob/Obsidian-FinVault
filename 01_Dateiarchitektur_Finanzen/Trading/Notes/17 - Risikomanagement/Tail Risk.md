@@ -50,5 +50,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 1–18 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-001-p001-p018|S. 1–18]]
 
 ## Verwandte Themen

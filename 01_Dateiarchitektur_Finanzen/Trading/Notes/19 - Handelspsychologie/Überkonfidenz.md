@@ -56,6 +56,8 @@ aktualisiert: 2026-10-30
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 1–20 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-001-p001-p020|S. 1–20]]
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 120–139 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-010-p120-p139|S. 120–139]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 317–336 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-021-p317-p336|S. 317–336]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 1–18 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-001-p001-p018|S. 1–18]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 76–80 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-005-p076-p080|S. 76–80]]
 
 ## Verwandte Themen
 
