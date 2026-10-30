@@ -20,7 +20,7 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" link-sh
 
 Lautet die Antwort `keine offenen Bücher`, ruf `publish` auf und warte. Merk dir den Buchordner aus der ersten Shard-Datei. Die Fragmente selbst liest du nicht.
 
-2. Lies `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json`. Starte für jede ausgegebene Shard-Datei genau einen Subagenten, alle in demselben Schritt, parallel. Nicht nacheinander, nicht in mehreren Nachrichten und nicht in mehreren Wellen. Das Modell ist `zuordnung.modell`. Übergib es am Subagenten im Feld `model`. Nicht `inherit`. Kein Modell mit `fast`. Fehlt die Datei oder ist der Wert ungültig, nimm `grok-4.7-medium`. Auftrag an jeden, wörtlich und sonst nichts:
+2. Lies `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json`, Abschnitt `cursor`. Starte für jede ausgegebene Shard-Datei genau einen Subagenten, alle in demselben Schritt, parallel. Nicht nacheinander, nicht in mehreren Nachrichten und nicht in mehreren Wellen. Das Modell ist `cursor.zuordnung_modell`. Übergib es am Subagenten im Feld `model`. Nicht `inherit`. Kein Modell mit `fast`. Fehlt die Datei oder ist der Wert ungültig, nimm `grok-4.7-medium`. Auftrag an jeden, wörtlich und sonst nichts:
 
 `Lies nur diese Shard-Datei und die dort genannten Dateien. Schreibe nur das JSON an den Pfad in der Datei. Keine Subagents, kein Git.`
 
@@ -44,12 +44,12 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish
 
 ## Parameter
 
-Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `zuordnung`. Nur diese Datei ändern. Der nächste `go` liest sie.
+Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json`. Dieser Chat liest `cursor` und `grenzen`. Der Abschnitt `claude` und der Ordner `.claude/` bleiben unangetastet. Nur diese Datei ändern. Der nächste `go` liest sie.
 
-- `modell` ist `grok-4.7-medium`: Grok 4.7, mittlerer Aufwand, nicht Fast. Erlaubt sind nur `grok-4.7-low`, `grok-4.7-medium`, `grok-4.7-high`, `grok-4.7-xhigh`.
-- `strenge` ist `streng`, `mittel` oder `locker`. Sie steht in jeder Shard-Datei und sagt, wann ein Begriff passt.
-- `max_begriffe_pro_fragment` ist die harte Obergrenze. Das Skript behält die ersten Namen und streicht den Rest. Die wichtigsten Begriffe stehen zuerst.
-- `fragmente_pro_shard` ist, wie viele Fragmente ein Subagent auf einmal liest.
+- `cursor.zuordnung_modell` ist `grok-4.7-medium`: Grok 4.7, mittlerer Aufwand, nicht Fast. Erlaubt sind nur `grok-4.7-low`, `grok-4.7-medium`, `grok-4.7-high`, `grok-4.7-xhigh`.
+- `grenzen.strenge` ist `streng`, `mittel` oder `locker`. Sie steht in jeder Shard-Datei und sagt, wann ein Begriff passt.
+- `grenzen.max_begriffe_pro_fragment` ist die harte Obergrenze. Das Skript behält die ersten Namen und streicht den Rest. Die wichtigsten Begriffe stehen zuerst.
+- `grenzen.fragmente_pro_shard_zuordnung` ist, wie viele Fragmente ein Subagent auf einmal liest.
 
 ## Grenzen
 
