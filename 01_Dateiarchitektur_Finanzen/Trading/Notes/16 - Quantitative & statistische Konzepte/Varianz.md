@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Statistik"
@@ -10,37 +10,122 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Varianz
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Varianz ist der Fehler aus der Empfindlichkeit gegen kleine Änderungen der Trainingsmenge. Ist sie hoch, hat der Algorithmus überangepasst und Rauschen mit Signal verwechselt.
+- Noise ist die Varianz der beobachteten Werte, etwa durch unvorhersehbare Änderungen oder Messfehler, und lässt sich durch kein Modell erklären.
+- Die Inverse-Varianz-Allokation ist optimal, wenn die Kovarianzmatrix diagonal ist: Das Gewicht ist dann proportional zum Kehrwert der eigenen Varianz.
+- Für den charakteristischen Vektor aus Einsen ist die Lösung des quadratischen Programms das Minimum-Varianz-Portfolio.
+- Die Varianz der Logpreisänderung über die Spanne τ ist das Mittel von |z(t+τ) minus z(t)| zum Quadrat, mit z gleich log(y).
 
 ## Kernaussagen
 
+- Der mittlere quadratische Fehler zerlegt sich in den quadrierten Bias, die Varianz des Schätzers und die Rauschvarianz. Wegen des Rauschens kann er nicht null werden.
+- Der Hauptvorteil von Bagging ist, die Varianz der Prognosen zu senken und damit Overfitting zu begegnen.
+- Die Varianz des Mittelwerts von N Einzelprognosen ist die mittlere Einzelvarianz mal (mittlere Korrelation plus (1 minus diese Korrelation) geteilt durch N).
+- Diese Varianz sinkt nur, solange die mittlere Korrelation unter 1 liegt, und geht gegen die Einzelvarianz, wenn die Korrelation gegen 1 geht.
+- Sequenzielles Bootstrap soll möglichst unabhängige Stichproben liefern, die Korrelation senken und damit die Varianz von Bagging-Klassifikatoren verringern.
+- Werden richtige Prognosen als 1 gezählt, ist ihre Zahl im Mittel N mal p und ihre Varianz N mal p mal (1 minus p).
+- Bei schlechten Einzellernern, deren Trefferquote weit unter 1/k liegt, bleibt das Mehrheitsvotum schlecht, die Varianz ist aber geringer.
+- Bagging senkt eher die Varianz als den Bias, weil eine sehr kleine Korrelation leichter zu erreichen ist als eine Trefferquote über 1/k.
+- Redundante Beobachtungen machen die Bootstrap-Ziehungen nahezu gleich und treiben die Korrelation gegen 1. Dann sinkt die Varianz nicht, unabhängig von N.
+- Entscheidungsbäume erhöhen die Prognosevarianz durch Overfitting. Der Random Forest ist darauf angelegt, sie zu senken, und tut das ohne Overfitting, solange die Korrelation unter 1 bleibt.
+- Frühes Stoppen schlecht skalierender Basisschätzer erhöht die Varianz der Einzelergebnisse. Zusätzliche unabhängige Schätzer im Bagging können diesen Anstieg mehr als ausgleichen.
+- CLA minimiert die Varianz in der Stichprobe und hat dort die geringere Standardabweichung, 0,4486 gegen 0,4640.
+- Außer Stichprobe hat CLA trotzdem die höchste Varianz der drei Verfahren.
+- Die Varianzen der Portfoliorenditen außer Stichprobe betragen 0,1157 für CLA, 0,0928 für das Inverse-Varianz-Portfolio und 0,0671 für Hierarchical Risk Parity.
+- CLA liegt damit 72,47 Prozent und das Inverse-Varianz-Portfolio 38,24 Prozent über der Varianz von Hierarchical Risk Parity.
+- Bei mittleren Renditen nahe 0 verbessert diese Varianzreduktion die Sharpe-Ratio einer CLA-Strategie um etwa 31,3 Prozent.
+- Die Annahme einer diagonalen Kovarianzmatrix stabilisiert das Inverse-Varianz-Portfolio, seine Varianz bleibt aber deutlich höher.
+- Wird die ADF-Null auf Rohpreisen verworfen, haben die Preise eine endliche Varianz, und die Renditevolatilität muss mit steigenden Preisen fallen und mit fallenden steigen.
+- Bei Logpreisen bedingen die Preisniveaus den Renditemittelwert, nicht die Renditevolatilität.
+- Ist die Renditevarianz invariant zum Preisniveau, wird ein ADF auf Rohpreisen strukturell heteroskedastisch.
+- Beim geometrischen Random Walk ist diese Varianz proportional zu τ, bei Mean Reversion oder Trend proportional zu τ hoch 2H.
+- Stationarität heißt, dass die Varianz sublinear in der Zeit wächst und nicht, dass sie zeitunabhängig ist.
+- Auch für 0 kleiner H kleiner 0,5 steigt die Varianz mit der Zeit, nur langsamer als bei einem geometrischen Random Walk.
+- Manager, deren einziges Ziel das langfristige Nettovermögen ist, achten nicht auf Drawdowns und auf die Volatilität der Renditen.
+- Varianz, mittlere absolute Abweichung und Standardabweichung sind weit verbreitete Streuungsmaße und im klassischen statistischen Ansatz wichtig.
+- Streuungsmaße beschreiben, wie weit die Beobachtungen einer Stichprobe um ihre zentrale Tendenz liegen, und quantifizieren damit die Breite einer Häufigkeitsverteilung.
+- Zentrale Tendenz und Variation sind unabhängige Merkmale einer Häufigkeitsverteilung. Dieselbe Streuung kann mit verschiedenen Mittelwerten einhergehen, derselbe Mittelwert mit verschiedener Streuung, und beides kann zugleich verschieden sein.
+- Die Streuung der Stichprobenverteilung des Mittelwerts hängt von der Variation in den Daten der Elternpopulation ab. Je größer diese Variation, desto größer die Streuung der Stichprobenverteilung.
+- Ist die Variation in der Population null, ist auch die Variation der Stichprobenmittel null, und die Stichprobenverteilung hat keinerlei Streuung.
+- Ist die Variation zwischen den Individuen der Population groß, variieren die Stichprobenmittel stärker, und die Stichprobenverteilung wird breit.
+- Varianz, mittlere absolute Abweichung und Standardabweichung sind weit verbreitete Streuungsmaße der klassischen Statistik. Sie quantifizieren die Breite einer Häufigkeitsverteilung.
+- Die Varianz ist neben Mittelwert, Median und Standardabweichung ein gebräuchlicher Punktschätzer aus einer Stichprobe.
+- Je größer die Variabilität der täglichen Regelrenditen in der Grundgesamtheit, desto breiter ist die Stichprobenverteilung der mittleren Rendite, und je mehr Beobachtungen, desto schmaler ist sie.
+- Die Reduktion einer großen Stichprobe liefert zusammenfassende Statistiken, darunter den Stichprobenmittelwert, die Stichprobenvarianz und weitere Maße, die die gesamte Menge beschreiben.
+- Ein Faktor für die Größe des Data-Mining-Bias ist die Variation der erwarteten Renditen unter den gebacktesteten Regeln.
+- Je geringer diese Variation des wahren Verdienstes, desto größer der Bias; Regeln mit ähnlicher Vorhersagekraft erzeugen einen größeren Bias.
+- Der fünfte Faktor des Data-Mining-Bias ist die Variation der erwarteten Renditen unter den getesteten Regeln: je niedriger die Variation der wahren Güte, desto größer der Bias.
+- Haben die Regeln ähnliche Grade von Prognosekraft, ist der Data-Mining-Bias größer.
+- Abbildung 6.25 stellt niedrige Varianz, alle Regeln gleiche Güte, der hohen Varianz gegenüber, bei der eine Regel deutlich überlegen ist.
+- Bei gleicher erwarteter Rendite entstehen alle Unterschiede der beobachteten Performance nur durch Glück; unterscheiden sich die erwarteten Renditen, wird der Bias tendenziell kleiner und unter bestimmten Bedingungen sehr klein.
+- Die Zahl der Beobachtungen beeinflusst sowohl die Breite als auch die Randdicke der Stichprobenverteilung der Performancestatistik, mit der die beste Regel ausgewählt wird.
+- Je mehr Beobachtungen, desto schmaler die Stichprobenverteilung und desto kleiner der Data-Mining-Bias; je mehr Beobachtungen, desto leichter die Ränder und desto kleiner der Bias.
+- Aus den vielen Out-of-Sample-Schätzungen eines Walk-Forward mit zahlreichen Folds lässt sich die Varianz der Performancestatistik bestimmen.
+- Der Schrumpfungsgrad bei Markowitz und Xu hängt unter anderem davon ab, wie stark die Tagesrenditen jeder Regel um das große Mittel aller Regeln streuen und wie stark die mittlere Rendite jeder Regel um die mittlere Rendite aller Regeln streut.
+- Je kleiner die Variabilität der wahren Qualität, also der erwarteten Rendite, unter den getesteten Regeln, desto größer der Data-Mining-Bias; die Zusammenfassung sagt, dieser Punkt sei experimentell nicht untersucht worden.
+- Sind die Beobachtungen seriell korreliert, wie es in einer Zeitreihe vorkommen kann, sinkt die Varianz langsamer, als die Quadratwurzelregel nahelegt.
+- Diese Aussage gilt, wenn die Teststatistik der Stichprobenmittelwert ist, aber sie gilt nicht allgemein.
+- Bei normalverteilten Preisänderungen ist die Unsicherheit mit 10 Beobachtungen zehnmal so groß wie mit 1.000 Beobachtungen.
 
 ## Funktionsweise
 
+- Hierarchical Risk Parity definiert die Varianz einer zusammenhängenden Teilmenge als Varianz einer Inverse-Varianz-Allokation.
+- Von oben nach unten werden die Gewichte umgekehrt proportional zu den aggregierten Varianzen der benachbarten Teilmengen geteilt.
+- Der Splitfaktor ist eins minus der Bruch aus der Varianz der ersten Hälfte und der Summe beider Teilvarianzen und liegt zwischen 0 und 1.
+- Für zwei Anlagen ist das Minimum-Varianz-Gewicht der ersten Anlage eins minus der Bruch aus ihrer Varianz und der Summe beider Varianzen, und Stufe 3 von Hierarchical Risk Parity teilt genauso.
+- Ist die Kovarianzmatrix diagonal, ist das Gewicht einer Anlage ihr inverser Varianzterm geteilt durch die Summe aller inversen Varianzen.
+- Bei zwei Anlagen ist das Gewicht der ersten Anlage eins minus der Bruch aus ihrer Varianz und der Summe beider Varianzen.
+- Stufe 3 von Hierarchical Risk Parity setzt den Anteil der ersten Hälfte auf eins minus den Bruch aus ihrer Varianz und der Summe beider Varianzen.
+- Die Cluster-Varianz im Code ist die quadratische Form der Kovarianzscheibe mit Inverse-Varianz-Gewichten.
+- Der Variance-Ratio-Test prüft, ob das Verhältnis der Varianz über die Spanne τ zur τ-fachen Ein-Schritt-Varianz gleich 1 ist (Lo, 2001).
+- Die Proportionalität zur Zeitspanne wird für großes τ zur Gleichheit und kann für kleines τ von der Geraden abweichen.
+- Der Kalman-Filter minimiert den mittleren quadratischen Fehler der geschätzten Variablen und ist unter gaußschem Rauschen der beste Schätzer.
+- Q(t) ist die Varianz des Prognosefehlers e(t) und wird als x transponiert mal R mal x plus Ve prognostiziert.
+- R ist die Kovarianz des Fehlers der verborgenen Variable; die Varianz des Prognosefehlers ist davon zu unterscheiden.
+- Im Market-Making-Modell ist die Prognosevarianz die Varianz des Mittelpreisschätzers plus Ve, und das Zustandsvarianz-Update multipliziert die alte Varianz mit 1 minus dem Kalman-Gain.
+- In der Kelly-Formel ist s hoch 2 die Varianz der Excess Returns, und der optimale Hebel ist der mittlere Excess Return geteilt durch diese Varianz.
+- Das Pearson-System nimmt neben dem Mittelwert die Standardabweichung sowie Schiefe und Kurtosis als Input der Monte-Carlo-Verteilung.
 
 ## Voraussetzungen
 
+- Die Quadratwurzel-Senkung der Varianz des Mittelwerts setzt unabhängige Beobachtungen voraus.
+- Der Zentrale Grenzwertsatz verlangt, dass die Varianz der Elternpopulation endlich ist, neben einem endlichen Mittelwert und unabhängigen Beobachtungen aus derselben Population.
+- Der Grundsatz, dass größere Stichproben besser sind, gilt für stationäre Prozesse. Bei höchstwahrscheinlich nichtstationären Finanzzeitreihen können größere Stichproben nicht besser sein.
 
 ## Anwendung im Trading
 
+- Bei Finanzbeobachtungen, die nicht unabhängig sind, nennt der Text den sequenziellen Bootstrap als Mittel, die Korrelation und damit die Varianz der gebaggten Prognose zu senken.
+- Werden Labels aus der Rendite über 100 Bars gebildet, soll je Schätzer nur 1 Prozent der Beobachtungen gezogen werden, damit die Ziehungen nicht redundant werden und die Varianz nicht stehen bleibt.
+- Die Varianzreduktion außer Stichprobe ist für Risk-Parity-Investoren wegen ihres hohen Hebels entscheidend.
 
 ## Regeln und Kriterien
 
 
 ## Risiken und Grenzen
 
+- Liegt die mittlere Korrelation der Ensemble-Prognosen nahe 1, verändert Bagging die Varianz praktisch nicht, auch wenn sehr viele Schätzer verwendet werden.
+- Bei Labels mit geringer Eindeutigkeit bleibt die Varianzreduktion aus, solange mit Zurücklegen nahezu dieselben Informationen gezogen werden.
+- Eine unterschätzte Varianz führt zu einem überschätzten optimalen Hebel und kann zum Ruin führen.
+- Schätzfehler der Varianz sind unvermeidlich, und die künftige Varianz muss nicht der historischen entsprechen.
+- Kelly über mehrere Strategien ist nur optimal, wenn auch die Volatilitäten unverändert bleiben.
 
 ## Beispiele
 
+- Abbildung 6.1 zeigt die Standardabweichung der gebaggten Prognose für N zwischen 5 und 30, mittlere Korrelation zwischen 0 und 1 und mittlere Einzelstandardabweichung 1.
+- Die simulierten Gauß-Renditen haben Mittelwert 0 und eine willkürlich gesetzte Standardabweichung von 10 Prozent.
+- Für die Logpreise von USD.CAD ist h gleich 0 und pValue gleich 0,367281, das Varianzverhältnis ist also mit dem Random Walk vereinbar.
+- Im EWA-EWC-Beispiel wird Ve gleich 0,001 gesetzt, und bei δ gleich 0,0001 ändert sich Q nur langsam.
+- Gehandelt wird, wenn der Prognosefehler betragsmäßig größer ist als die Wurzel dieser Prognosevarianz.
+- Strategie 1 im Kapitalbeispiel hat 26 Prozent annualisierte Volatilität bei 30 Prozent mittlerem Excess Return, Strategie 2 hat 35 Prozent Volatilität bei 60 Prozent.
+- Wägen alle Personen 150 Pfund, hat jede Stichprobe den Durchschnitt 150 Pfund, und die Stichprobenverteilung des Mittelwerts hat keine Streuung.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +135,18 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Advances in Financial Machine Learning.pdf, S. 115–134 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-007-p115-p134|S. 115–134]]
+- Advances in Financial Machine Learning.pdf, S. 248–267 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-014-p248-p267|S. 248–267]]
+- Advances in Financial Machine Learning.pdf, S. 267–286 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-015-p267-p286|S. 267–286]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 57–76 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-004-p057-p076|S. 57–76]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 81–100 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-006-p081-p100|S. 81–100]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 187–206 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-014-p187-p206|S. 187–206]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 172–191 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-010-p172-p191|S. 172–191]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 191–210 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-011-p191-p210|S. 191–210]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 229–248 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-013-p229-p248|S. 229–248]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 267–286 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-015-p267-p286|S. 267–286]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 286–305 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-016-p286-p305|S. 286–305]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 305–324 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-017-p305-p324|S. 305–324]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 476–495 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-026-p476-p495|S. 476–495]]
 
 ## Verwandte Themen

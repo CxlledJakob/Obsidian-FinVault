@@ -1,0 +1,194 @@
+{
+  "name": "Flow1_Fragmente_Begriffen_zuordnen",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Flow manuell starten",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [240, 400],
+      "notesInFlow": true,
+      "notes": "Startet einen Lauf über alle Fragment-Dateien. Später können davor die Python-Schritte PDF nach Markdown und Kapitel-Schnitt gehängt werden."
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"vault\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading\",\n  \"fragments\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Pilot/blocks\",\n  \"notes\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Notes\",\n  \"taxonomy\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Research/Taxonomie/Themenstruktur.txt\",\n  \"ollama\": \"http://host.docker.internal:11434/api/generate\",\n  \"model\": \"qwen2.5:3b-instruct-q4_K_M\",\n  \"append\": \"/finvault/01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/append_source_link.sh\"\n}",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000002",
+      "name": "Laufkonfiguration",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [480, 400],
+      "notesInFlow": true,
+      "notes": "Pfade zeigen auf /finvault, das ist Obsidian-FinVault im Container. /vault bleibt der alte Jakob-Vault. Ollama: host.docker.internal, kein API-Key."
+    },
+    {
+      "parameters": {
+        "command": "=find '{{ $json.fragments }}' -type f -name '*.md' | sort"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000003",
+      "name": "Fragmentdateien auflisten",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [720, 400],
+      "notesInFlow": true,
+      "notes": "Liest den Ordner mit den schon geschnittenen Fragmenten. Eine Zeile pro Datei."
+    },
+    {
+      "parameters": {
+        "jsCode": "const cfg = $node['Laufkonfiguration'].json;\nconst lines = String($json.stdout || '').split(/\\r?\\n/).map(s => s.trim()).filter(Boolean);\nreturn lines.map(fragment_path => ({ json: { ...cfg, fragment_path } }));"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000004",
+      "name": "Ein Fragment pro Datensatz",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [960, 400]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000005",
+      "name": "Nächstes Fragment",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [1200, 400],
+      "notesInFlow": true,
+      "notes": "Ein Fragment nach dem anderen, damit Ollama nicht parallel läuft."
+    },
+    {
+      "parameters": {
+        "command": "=printf '%s\\n---TAXONOMY---\\n' \"$(cat '{{ $json.fragment_path.replace(/'/g, \"'\\\\''\") }}')\" && cat '{{ $json.taxonomy.replace(/'/g, \"'\\\\''\") }}'"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000006",
+      "name": "Fragment und Themenliste lesen",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1440, 320]
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $node['Nächstes Fragment'].json;\nconst raw = String($json.stdout || '');\nconst cut = raw.indexOf('\\n---TAXONOMY---\\n');\nconst fragment = cut === -1 ? raw : raw.slice(0, cut);\nconst taxonomy = cut === -1 ? '' : raw.slice(cut + '\\n---TAXONOMY---\\n'.length);\nconst pageLine = (fragment.match(/\\*\\*Pages:\\*\\*\\s*([^\\n]+)/) || [])[1] || '';\nconst heading = (fragment.match(/^#\\s+(.+)$/m) || [])[1] || '';\nconst book = heading.split(' — ')[0].trim();\nconst rel = item.fragment_path.split('/Trading/')[1] || item.fragment_path;\nconst link = `Trading/${rel.replace(/\\.md$/, '')}`;\nconst prompt = [\n  'Du prüfst ein Fragment aus einem Fachbuch gegen eine geschlossene Themenliste.',\n  'Ein Begriff passt nur, wenn er das Thema eines großen Teils des Fragments ist.',\n  'Ein einzelnes vorkommendes Wort reicht nicht.',\n  'Passt nichts, gib matches als leeres Array zurück.',\n  'Erfinde keine Begriffe. Nur exakte Namen aus der Themenliste.',\n  'Antworte nur mit JSON: {\"matches\":[{\"begriff\":\"exakter Name\"}]}',\n  '',\n  'THEMENLISTE:',\n  taxonomy,\n  '',\n  'FRAGMENT:',\n  fragment.slice(0, 12000)\n].join('\\n');\nreturn [{ json: {\n  ...item,\n  book,\n  pages: pageLine.trim(),\n  link,\n  ollama_body: {\n    model: item.model,\n    stream: false,\n    format: 'json',\n    options: { temperature: 0.1, num_ctx: 8192 },\n    prompt\n  }\n} }];"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000007",
+      "name": "Bewertungsauftrag bauen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [1680, 320]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $json.ollama }}",
+        "sendBody": true,
+        "contentType": "raw",
+        "rawContentType": "application/json",
+        "body": "={{ JSON.stringify($json.ollama_body) }}",
+        "options": {
+          "response": { "response": { "neverError": true } },
+          "timeout": 180000
+        }
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000008",
+      "name": "Fragment mit Ollama bewerten",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [1920, 320],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 2000,
+      "notesInFlow": true,
+      "notes": "Lokales Ollama, ohne API-Key. Modellname steht in Laufkonfiguration."
+    },
+    {
+      "parameters": {
+        "jsCode": "const base = $node['Bewertungsauftrag bauen'].json;\nlet parsed = {};\ntry {\n  const body = $json.response ? JSON.parse($json.response) : $json;\n  parsed = typeof body === 'string' ? JSON.parse(body) : body;\n} catch (e) {\n  parsed = { matches: [] };\n}\nconst allowed = new Set();\nfor (const line of String(base.ollama_body.prompt).split('\\n')) {\n  const m = line.match(/^\\[([ABC])\\]\\s+(.+)$/);\n  if (m) allowed.add(m[2].trim());\n}\nconst matches = [];\nconst seen = new Set();\nfor (const row of parsed.matches || []) {\n  const name = String(row.begriff || '').trim();\n  if (!name || !allowed.has(name) || seen.has(name)) continue;\n  seen.add(name);\n  matches.push(name);\n}\nreturn [{ json: { ...base, matches, ollama_body: undefined } }];"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000009",
+      "name": "Nur echte Begriffe behalten",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2160, 320],
+      "notesInFlow": true,
+      "notes": "Verwirft erfundene Namen. Leer heißt: dieses Fragment passt zu keinem Begriff."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": { "caseSensitive": true, "typeValidation": "strict", "version": 2 },
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "c0ffee00-0001-4000-8000-000000000010",
+              "leftValue": "={{ $json.matches.length }}",
+              "rightValue": 0,
+              "operator": { "type": "number", "operation": "gt" }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000010",
+      "name": "Passt das Fragment zu mindestens einem Begriff",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [2400, 320]
+    },
+    {
+      "parameters": {
+        "jsCode": "const row = $json;\nreturn row.matches.map(begriff => ({\n  json: {\n    notes: row.notes,\n    append: row.append,\n    begriff,\n    line: `${row.book}, S. ${row.pages}, [[${row.link}|Fragment]]`\n  }\n}));"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000011",
+      "name": "Eine Zeile pro Begriff",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [2640, 220]
+    },
+    {
+      "parameters": {
+        "command": "=sh '{{ $json.append }}' '{{ $json.notes }}' '{{ $json.begriff.replace(/'/g, \"'\\\\''\") }}' '{{ $json.line.replace(/'/g, \"'\\\\''\") }}'"
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000012",
+      "name": "Quellenzeile in die Begriffsdatei schreiben",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [2880, 220],
+      "notesInFlow": true,
+      "notes": "Schreibt nur unter Quellen und Fundstellen. Dieselbe Zeile wird nicht doppelt angehängt."
+    },
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0001-4000-8000-000000000013",
+      "name": "Fragment ohne Treffer überspringen",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [2640, 460]
+    }
+  ],
+  "connections": {
+    "Flow manuell starten": { "main": [[{ "node": "Laufkonfiguration", "type": "main", "index": 0 }]] },
+    "Laufkonfiguration": { "main": [[{ "node": "Fragmentdateien auflisten", "type": "main", "index": 0 }]] },
+    "Fragmentdateien auflisten": { "main": [[{ "node": "Ein Fragment pro Datensatz", "type": "main", "index": 0 }]] },
+    "Ein Fragment pro Datensatz": { "main": [[{ "node": "Nächstes Fragment", "type": "main", "index": 0 }]] },
+    "Nächstes Fragment": { "main": [[], [{ "node": "Fragment und Themenliste lesen", "type": "main", "index": 0 }]] },
+    "Fragment und Themenliste lesen": { "main": [[{ "node": "Bewertungsauftrag bauen", "type": "main", "index": 0 }]] },
+    "Bewertungsauftrag bauen": { "main": [[{ "node": "Fragment mit Ollama bewerten", "type": "main", "index": 0 }]] },
+    "Fragment mit Ollama bewerten": { "main": [[{ "node": "Nur echte Begriffe behalten", "type": "main", "index": 0 }]] },
+    "Nur echte Begriffe behalten": { "main": [[{ "node": "Passt das Fragment zu mindestens einem Begriff", "type": "main", "index": 0 }]] },
+    "Passt das Fragment zu mindestens einem Begriff": {
+      "main": [
+        [{ "node": "Eine Zeile pro Begriff", "type": "main", "index": 0 }],
+        [{ "node": "Fragment ohne Treffer überspringen", "type": "main", "index": 0 }]
+      ]
+    },
+    "Eine Zeile pro Begriff": { "main": [[{ "node": "Quellenzeile in die Begriffsdatei schreiben", "type": "main", "index": 0 }]] },
+    "Quellenzeile in die Begriffsdatei schreiben": { "main": [[{ "node": "Nächstes Fragment", "type": "main", "index": 0 }]] },
+    "Fragment ohne Treffer überspringen": { "main": [[{ "node": "Nächstes Fragment", "type": "main", "index": 0 }]] }
+  },
+  "settings": { "executionOrder": "v1" },
+  "pinData": {}
+}

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Zeitreihen"
@@ -10,22 +10,30 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Autokorrelation
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Toth et al. (2011) finden bei Aktien der London Stock Exchange, dass Orderzeichen über viele Tage positiv autokorreliert sind.
+- Als Erklärungen prüfen sie Herding und Order Splitting.
+- Auf Zeitskalen von weniger als einigen Stunden führen sie die Persistenz des Orderflows überwiegend auf Order Splitting zurück.
+- Im Roll-Modell ist die serielle Kovarianz der beobachteten Preisänderungen negativ und gleich −c², wobei c die halbe Geld-Brief-Spanne ist.
+- Empirisch zeigen Finanzzeitreihen serielle Abhängigkeit.
+- Querschnittliche Mean Reversion setzt auf die serielle Antikorrelation relativer Renditen: auf Unterperformance einer Aktie soll Überperformance folgen und umgekehrt.
+- Random Walks haben kein Gedächtnis, und frühere Ergebnisse haben keine Wirkung auf die nachfolgenden Ereignisse.
 
 ## Funktionsweise
 
+- Die aktuelle Preisänderung wird mit der vorherigen Änderung korreliert, also mit Lag 1, dann mit der Änderung davor, Lag 2, und so fort. Für jeden dieser Lags wird ein Korrelationskoeffizient berechnet.
+- In einer zufälligen Datenreihe fallen die Korrelationen typischerweise sehr schnell als Funktion des Lag-Intervalls ab.
+- Ist die Zeitreihe der Preisänderungen in linearer Weise nichtzufällig, unterscheiden sich einige Autokorrelationskoeffizienten signifikant vom Muster der Autokorrelationen einer Zufallsfolge.
 
 ## Voraussetzungen
 
@@ -50,5 +58,10 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Advances in Financial Machine Learning.pdf, S. 305–324 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-017-p305-p324|S. 305–324]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 105–124 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-008-p105-p124|S. 105–124]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 77–96 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-005-p077-p096|S. 77–96]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 96–115 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-006-p096-p115|S. 96–115]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen

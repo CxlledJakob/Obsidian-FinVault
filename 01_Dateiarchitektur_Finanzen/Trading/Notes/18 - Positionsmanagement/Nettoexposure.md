@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/18 - Positionsmanagement/18 - Positionsmanagement|18 - Positionsmanagement]]"
 weitere_hauptthemen: []
 unterthema: "Portfolioführung"
@@ -10,22 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Nettoexposure
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der Nettomarktwert yport des Portfolios ist die Summe aus Stückzahl mal Kurs über alle ETFs und dient als Preis des Einheitsportfolios.
 
 ## Kernaussagen
 
 
 ## Funktionsweise
 
+- Hat das Einheitsportfolio nur eine Long- und eine Short-Position, heißt dieser Nettomarktwert gewöhnlich Spread.
+- Die Strategie handelt Vielfache dieses Nettomarktwerts proportional zu dessen negativem Z-Score.
 
 ## Voraussetzungen
 
@@ -41,6 +42,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Für EWA, EWC und IGE wird der Nettomarktwert mit dem ersten Johansen-Eigenvektor gebildet und hat eine Halbwertszeit von 23 Tagen.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +52,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 76–80 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-005-p076-p080|S. 76–80]]
 
 ## Verwandte Themen

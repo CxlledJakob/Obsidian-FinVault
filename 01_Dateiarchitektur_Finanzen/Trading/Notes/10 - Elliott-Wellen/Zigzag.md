@@ -50,5 +50,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 63–82 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-006-p063-p082|S. 63–82]]
 
 ## Verwandte Themen

@@ -10,13 +10,15 @@
       - "5678:5678"
     environment:
       NODES_EXCLUDE: "[]"
-      N8N_RESTRICT_FILE_ACCESS_TO: "/vault"
+      N8N_RESTRICT_FILE_ACCESS_TO: "/vault:/finvault"
       TZ: "Europe/Berlin"
       GENERIC_TIMEZONE: "Europe/Berlin"
       SHELL: "/bin/sh"
     volumes:
       - n8n_data:/home/node/.n8n
       - "C:/Users/Kuba/Desktop/Obsidian_Desktop/Jakob_Obsidian_Finanzen:/vault"
+      - "C:/Users/Kuba/Desktop/Obsidian_Desktop/Obsidian-FinVault:/finvault"
+      - "C:/Users/Kuba/Desktop/Obsidian_Desktop/Obsidian-FinVault/01_Dateiarchitektur_Finanzen:/vault/01_Dateiarchitektur_Finanzen"
       - "C:/Users/Kuba/n8n-media:/opt/media-pipeline"
     extra_hosts:
       - "host.docker.internal:host-gateway"

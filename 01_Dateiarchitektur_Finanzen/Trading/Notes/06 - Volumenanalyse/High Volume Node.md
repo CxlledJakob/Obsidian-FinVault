@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Volumenprofile"
@@ -10,19 +10,28 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # High Volume Node
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein High Volume Node entsteht, wenn der Markt relativ lange in einer engen Preisspanne handelt, Käufer und Verkäufer aktiv sind und der Preis sich für zweiseitigen Handel verlangsamt. Der Markt hält den Bereich für fair.
+- Hohes Volumen bedeutet Akzeptanz und zieht den Preis an.
+- Ein dichter Volumenbereich im Volume at Price ist eine Preiszone, in der sich über die Zeit besonders viel Volumen gesammelt hat.
 
 ## Kernaussagen
 
+- Im kürzeren Timeframe ist er die jüngste Wertwahrnehmung und zieht den Preis an. Bei einer Rückkehr soll er den Preis bremsen, außer die Auktion ist so stark, dass der Preis gar nicht zurückkommt.
+- Je länger der Preis von diesem Akzeptanzbereich wegbleibt, desto weniger Bedeutung hat er. Für Day- und Swing-Trader bremst früher hohes Volumen den Preis noch lange genug zum Ein- oder Ausstieg.
+- An einem einzelnen Preis liegt oft deutlich höheres Volumen als im übrigen Profil.
+- Die dichteste Volumenkonzentration markiert die bedeutendste Stauzone und damit die wahrscheinlich stärkste spätere Barriere.
+- Liegt die Konzentration unten in der Kerze, ist es eher Kaufvolumen. Liegt sie oben, eher Verkaufsvolumen.
+- Extremes Volumen in einer engen Range, ohne dass der Kurs steigt, zeigt Schwäche und wahrscheinlich Verkauf.
+- Eine Zone mit extremem Volumen ist ein starkes Fundament und braucht extremes Volumen, um durchstoßen zu werden.
+- Je länger der Markt in einer engen Spanne pausiert, desto höher wird die Konzentration im Histogramm.
 
 ## Funktionsweise
 
@@ -35,12 +44,32 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Er ist kein starrer Boden und keine starre Decke. Unterstützung oder Widerstand kann davor oder dahinter liegen; zuerst wird ausgeführt, danach zählt das Vertrauen in die Verlangsamung.
+- Wird der Preis unter dem High-Volume-Bereich akzeptiert, haben sich die Wertvorstellungen geändert. Bestehende Longs sind sofort zu schließen.
+- Fehlen echte Volumenwerte, sind die hohen TPO-Preise um den Point of Control das zweitbeste Maß. Der Preis soll im dicken Mittelteil des Profils der vorigen Session langsamer werden.
+- Auktionsrotationen im High-Volume-Bereich des Vortags zeigen Balance und geben Zeit für Ein- oder Ausstieg. Ein Ausbruch aus dieser Balance kann der Handel sein.
+- Eine Kaufsonde über die Initial Balance, die knapp über dem High-Volume-Bereich abgelehnt wird, ist eine Failed Auction.
+- Hohe und niedrige Volumenbereiche können am selben Tag vorkommen, wenn der Markt zwischen Zwei-Timeframe-Balance und One-Timeframe-Handel wechselt.
+- Der Wiedereintritt in einen zuvor akzeptierten Hochvolumenbereich verlangsamt den Preis oft, sofern sich nichts Wesentliches geändert hat.
+- Breite Value Areas mit hohem Volumen werden schwerer durchlaufen als schmale.
+- Im Langfristprofil ist ein Bracket ein klar abgegrenzter Hochvolumenbereich, begrenzt durch langfristige Tails.
+- Liegt die Mehrheit der eigenen Käufe und Verkäufe im dicksten Teil des Profils, handelt man mit der Mehrheit, ohne Vorteil, und bleibt wahrscheinlich unprofitabel.
+- Liegen die Käufe nahe dem oberen Ende des Profils und die Verkäufe nahe dem unteren, ist das Nachzügler-Handel und endet leicht im Whipsaw.
+- Das Hoch oder Tief des Vortags und das Overnight-Hoch oder -Tief ziehen oft überdurchschnittlichen Handel an.
+- Weitere Beispiele für solche Einzelniveaus sind die Eröffnung und Halfback.
 
 ## Risiken und Grenzen
 
+- Der Bereich ist kein mechanischer Trade. Er dient als Referenzpunkt, um zu prüfen, ob sich die direktionale Überzeugung seit seiner Bildung geändert hat.
+- Auf absoluter Volumenbasis wirken diese Niveaus wichtiger, als sie sind. Volumen im Verhältnis zur Zeit glättet sie.
+- Hohes Volumen am Eröffnungspreis ist eine Verzerrung, die geglättet wird.
 
 ## Beispiele
 
+- Bei Microsoft war die dreitägige untere Stauung am dichtesten, mit einem überdurchschnittlichen und einem extremen Balken. Die nur einen Tag lange obere Zone erreichte fast dieselbe Konzentration.
+- Die dritte Microsoft-Zone war kurz, trug aber überdurchschnittliche Balken über eine tiefe Preisspanne und war damit ein Alarmsignal.
+- Bei Alcoa stand ein sehr großer Balken in der Mitte des Histogramms genau auf der laufenden Stauung.
+- Procter & Gamble zeigte in drei Monaten unterer Stauung einen extremen und einen durchschnittlichen Balken, ein erhebliches Fundament.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +79,13 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Markets in Profile_ Profiting from the Auction Process.pdf, S. 80–97 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-007-p080-p097|S. 80–97]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 136–155 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-010-p136-p155|S. 136–155]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 155–174 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-011-p155-p174|S. 155–174]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 231–250 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-015-p231-p250|S. 231–250]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 250–269 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-016-p250-p269|S. 250–269]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 336–355 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-022-p336-p355|S. 336–355]]
+- Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 355–370 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-023-p355-p370|S. 355–370]]
+- A Complete Guide to Volume Price Analysis.pdf, S. 115–134 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-007-p115-p134|S. 115–134]]
 
 ## Verwandte Themen

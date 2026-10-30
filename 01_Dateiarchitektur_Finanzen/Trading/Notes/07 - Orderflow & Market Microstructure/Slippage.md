@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Slippage
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der durchschnittliche Slippage je Umschlag sind die Ausführungskosten eines Portfolioumschlags ohne Brokergebühren.
+- Der Slippage je Umschlag sind die Ausführungskosten ohne Brokergebühren.
+- Slippage entsteht durch den Bid-Ask-Spread und durch den Betrag, um den die Order des Anlegers den Preis schiebt, nach oben beim Kauf und nach unten beim Verkauf.
 
 ## Kernaussagen
 
+- Slippage geht zusammen mit den Brokergebühren in die Dollar-Performance je Umschlag ein.
+- Strategien scheitern oft an falschen Annahmen über Ausführungskosten.
+- Slippage geht zusammen mit den Brokergebühren in die Dollar-Performance und in die Rendite auf die Ausführungskosten ein.
+- Die Rendite auf die Ausführungskosten soll ein großes Vielfaches sein, sodass die Strategie eine schlechtere Ausführung übersteht.
 
 ## Funktionsweise
 
@@ -35,12 +40,18 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Zu den Handelskosten im Regeltest gehören Brokerprovisionen und Slippage.
+- Regeln mit häufigen Umkehrsignalen verursachen höhere Handelskosten als Regeln mit seltenen Signalen; das ist zu berücksichtigen, wenn sie als eigenständige Handelsregeln verglichen werden.
+- Geht es nur darum, Signale mit Prognoseinformation zu finden, können Handelskosten den Wert einer häufig umkehrenden Regel verdecken.
+- Die Regelstudien dieses Buches setzten keine Handelskosten an, weil sie Prognosekraft suchten und nicht eigenständige Handelsstrategien.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Dazu gehört der Verlust, der entsteht, wenn ein Wertpapier zu einem Fill-Preis über dem Mittelpreis im Zeitpunkt der Weitergabe an den ausführenden Broker gekauft wird.
+- Ein Beispiel ist der Verlust aus einem Kauf zu einem Fill-Preis, der über dem Mittelpreis im Zeitpunkt der Order an den Broker liegt.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +61,9 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Advances in Financial Machine Learning.pdf, S. 210–229 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-012-p210-p229|S. 210–229]]
+- Advances in Financial Machine Learning.pdf, S. 229–248 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-013-p229-p248|S. 229–248]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 100–104 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-007-p100-p104|S. 100–104]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
 
 ## Verwandte Themen

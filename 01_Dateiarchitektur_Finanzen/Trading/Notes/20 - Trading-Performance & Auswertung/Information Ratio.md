@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Risikoadjustierte Kennzahlen"
@@ -10,28 +10,33 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Information Ratio
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Information Ratio ist das Gegenstück zur Sharpe Ratio für eine Performance gegenüber einer Benchmark.
 
 ## Kernaussagen
 
 
 ## Funktionsweise
 
+- Die Information Ratio ist das annualisierte Verhältnis der mittleren Überschussrendite zum Tracking Error.
+- Die Überschussrendite ist die Portfoliorendite abzüglich der Benchmarkrendite.
+- Der Tracking Error ist die Standardabweichung der Überschussrenditen.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- In der Attribution kann je Risikoklasse eine Sharpe Ratio oder eine Information Ratio berechnet werden.
+- Der passende Vergleichsmaßstab einer Long-only-Strategie ist die Rendite einer Buy-and-hold-Position, also die Information Ratio und nicht die Sharpe Ratio.
+- Die Long-only-Rohöl-Futures-Strategie von 2007 mit 20 Prozent Rendite und einer Sharpe Ratio von 1,5 war dem Halten des Front-Month-Kontrakts mit 47 Prozent und einer Sharpe Ratio von 1,7 nicht überlegen.
 
 ## Regeln und Kriterien
 
@@ -50,5 +55,7 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Advances in Financial Machine Learning.pdf, S. 229–248 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-013-p229-p248|S. 229–248]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 38–56 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-003-p038-p056|S. 38–56]]
 
 ## Verwandte Themen

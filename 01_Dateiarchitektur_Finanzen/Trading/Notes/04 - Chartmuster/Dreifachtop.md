@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/04 - Chartmuster/04 - Chartmuster|04 - Chartmuster]]"
 weitere_hauptthemen: []
 unterthema: "Umkehrmuster"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Dreifachtop
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein Dreifachtop ist ein Umkehrmuster, bei dem ein Widerstand mehrfach anläuft und der Markt nicht höher kommt.
 
 ## Kernaussagen
 
+- Zwei Lagen stehen offen: ein Short, wenn Volume Price Analysis und mehrere Zeitebenen die Sicht bestätigen, oder ein extrem starkes Unterstützungsfundament, falls die Decke später doch bricht.
+- Das Muster erscheint auf allen Zeitebenen und Charts, in Anleihen, Rohstoffen, Aktien und Währungen.
+- Es markiert eine Stauzone und eine Widerstanddecke. Der Ausbruch danach ist Umkehr oder Fortsetzung und wird mit Volume Price Analysis und Volume at Price bestätigt.
+- Dieselben Chartmuster, denen die technische Analyse Bedeutung beimisst, erscheinen nach Roberts mit großer Regelmäßigkeit in Random Walks, darunter Dreifachtops.
 
 ## Funktionsweise
 
@@ -41,6 +44,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- AUD/USD testete auf dem Tageschart die Marke 1,0600 im letzten Jahr dreimal und scheiterte jedes Mal. Über die letzten Jahre war die Region mehrfach angetestet worden.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +54,7 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- A Complete Guide to Volume Price Analysis.pdf, S. 134–153 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-008-p134-p153|S. 134–153]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 77–96 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-005-p077-p096|S. 77–96]]
 
 ## Verwandte Themen
