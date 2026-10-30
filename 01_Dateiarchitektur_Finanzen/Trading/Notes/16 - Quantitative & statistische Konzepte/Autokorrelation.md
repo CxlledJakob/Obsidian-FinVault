@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Zeitreihen"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Autokorrelation
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Toth et al. (2011) finden bei Aktien der London Stock Exchange, dass Orderzeichen über viele Tage positiv autokorreliert sind.
+- Als Erklärungen prüfen sie Herding und Order Splitting.
+- Auf Zeitskalen von weniger als einigen Stunden führen sie die Persistenz des Orderflows überwiegend auf Order Splitting zurück.
+- Im Roll-Modell ist die serielle Kovarianz der beobachteten Preisänderungen negativ und gleich −c², wobei c die halbe Geld-Brief-Spanne ist.
+- Empirisch zeigen Finanzzeitreihen serielle Abhängigkeit.
 
 ## Funktionsweise
 

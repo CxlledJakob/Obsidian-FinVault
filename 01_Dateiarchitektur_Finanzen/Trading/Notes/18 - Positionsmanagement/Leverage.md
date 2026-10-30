@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/18 - Positionsmanagement/18 - Positionsmanagement|18 - Positionsmanagement]]"
 weitere_hauptthemen: []
 unterthema: "Positionsgröße"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Leverage
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Leverage misst die Verschuldung, die nötig ist, um die berichtete Performance zu erreichen.
 
 ## Kernaussagen
 
@@ -35,6 +34,8 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Kommt Leverage vor, sind ihm Kosten zuzuordnen.
+- Eine Messgröße ist das Verhältnis der durchschnittlichen Dollarpositionsgröße zum durchschnittlichen verwalteten Vermögen.
 
 ## Risiken und Grenzen
 

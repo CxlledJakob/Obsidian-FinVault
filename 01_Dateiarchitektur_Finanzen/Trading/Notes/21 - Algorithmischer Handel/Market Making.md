@@ -19,6 +19,8 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Market Maker, bei Ney die Specialists oder Insider, sind lizenzierte Großhändler, die beide Seiten des Marktes sehen und in den Aktien einen Markt machen.
+- Ein langfristiges Gleichgewicht von null entspricht dem Geschäft von Market Makern, die Liquidität bereitstellen und erwarten, dass Abweichungen vom aktuellen Preisniveau sich im Zeitverlauf korrigieren.
+- Market Maker sind in diesen Modellen die Liquiditätsanbieter, die den informierten Position Takern gegenüberstehen.
 
 ## Kernaussagen
 
@@ -36,11 +38,32 @@ aktualisiert: 2026-10-30
 - Im Aktien- und Indexhandel sind es die Market Maker, in Futures die großen Operatoren, im Forex wieder die Market Maker und in Anleihen die großen Operatoren.
 - Hochfrequentes Market Making versucht, wie traditionelles Market Making, auf beiden Seiten des Buchs Liquidität zu stellen und den Spread zu verdienen.
 - Specialists unterstehen nach dem zitierten SEC-Gespräch von 1975 der Börse, nicht direkt der Kommission, und arbeiten unter Selbstregulierung.
+- Je kleiner die Halbwertszeit, desto kleiner ist der autoregressive Koeffizient.
+- Ein kleiner autoregressiver Koeffizient zusammen mit einem erwarteten Gewinn von null lässt die meisten Paare aus Stop und Gewinnziel bei einer Performance von null.
+- Die optimale Regel hält das Inventar, bis ein kleiner Gewinn entsteht, auch auf Kosten nicht realisierter Verluste vom Fünf- oder Siebenfachen.
+- Viele Market Maker handeln so, im Einklang mit dem asymmetrischen Auszahlungsdilemma bei Easley, López de Prado und O’Hara 2011.
+- Die schlechteste Regel, ein enger Stop mit hohem Gewinnziel, wird in diesem Geschäft gemieden.
+- Symmetrische Gewinn- und Stop-Schwellen auf der Diagonalen lassen die Performance am nächsten bei null.
+- In der PIN-Theorie verkaufen Market Maker die Option, advers selektiert zu werden, und der Bid-Ask-Spread ist die dafür verlangte Prämie.
+- Im Kyle-Modell können Market Maker informierte Orders nicht von Noise-Orders unterscheiden.
+- Im Gleichgewicht dieses Modells ist ihre Preisanpassung linear im gesamten Orderflow.
+- Kyle verlangt von ihnen ein Gleichgewicht zwischen Gewinnmaximierung und Markteffizienz.
+- Sequenzielle Handelsmodelle sind unter Market Makern verbreitet, weil sie die Unsicherheitsquellen der Liquiditätsanbieter enthalten.
+- Diese Quellen sind die Wahrscheinlichkeit eines Informationsereignisses, die Wahrscheinlichkeit dass die Nachricht negativ ist, sowie die Ankunftsraten von Noise Tradern und informierten Händlern.
+- Mit diesen Größen müssen Market Maker ihre Quotes dynamisch nachführen und ihre Bestände steuern.
+- Die Wahrscheinlichkeiten α und δ werden nach jedem eintreffenden Trade bayesianisch aktualisiert.
+- Veröffentlichte Quotes geben nicht immer die Niveaus wieder, zu denen Market Maker Liquidität stellen wollen, etwa bei Corporate-, Municipal- und Agency-Bonds.
+- Unter normalen Bedingungen erzeugen ihre Prognosen einen niedrigen Cross-Entropy-Verlust.
+- Predatory Algorithms versuchen, Market Maker über Quotestornierungen und Ordertypen advers zu selektieren.
 
 ## Funktionsweise
 
 - Albert Labos beschrieb die Market Maker und ihre Tricks als die Seite, deren Inventarzyklen von Akkumulation und Distribution zu lesen sind.
 - Der kurzfristige Trend ist nach Richard Ney der Rahmen, in dem der Specialist seine täglichen Inventarprobleme löst, während die mittleren und langen Ziele im Blick bleiben.
+- Die Feature-Matrix für die Entscheidung, Liquidität zu stellen oder passive Quotes zurückzuziehen, kann unter anderem VPIN, Kyle’s Lambda und Stornierungsraten enthalten.
+- Eine Neubeurteilung kann zum Beispiel nach jeweils 10.000 gehandelten Kontrakten oder bei einer deutlichen Preisänderung erfolgen.
+- Beobachtungen werden mit 1 gelabelt, wenn das Market Making einen Gewinn brachte, und mit 0 bei einem Verlust.
+- Das Informationsmaß φτ ist der Wert der Verteilungsfunktion der negativen Cross-Entropy-Verluste an der aktuellen Prognose und liegt in (0, 1).
 
 ## Voraussetzungen
 
@@ -61,11 +84,16 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Am Flash Crash vom 6. Mai 2010 erwarteten Market Maker, passive Bids ausführen und teurer zurückverkaufen zu können.
+- Der Crash entstand durch die Anhäufung tausender Prognosefehler.
+- Sie stellten weiter Liquidität zu übermäßig großzügigen Kursen, bis der Stop-out eine Liquiditätskrise auslöste.
+- Ein weiterer Bid-Ask-Spread hätte den verkaufsseitigen Orderflow stoppen können, weil die Verkäufer diese Abschläge nicht mehr akzeptiert hätten.
 
 ## Beispiele
 
 - In der Parabel von Onkel Joe streut der einzige Widget-Händler Knappheit, hebt die Preise, leert das Lager und kauft in der Panik über das Gerücht eines größeren Konkurrenten zu fallenden Preisen zurück.
 - Die SEC-Konzeptveröffentlichung von Ende 2012 nennt neben Market Making noch Arbitrage aus Fehlbewertungen, strukturelle Strategien wie Latency Arbitrage und Quote Stuffing sowie direktionale Strategien wie Order Anticipation und Momentum Ignition.
+- Für Prognose 0, Halbwertszeit 5 und Sigma 1 erreichen die Sharpe Ratios etwa 3,2.
 
 ## Unterschiedliche Quellenpositionen
 

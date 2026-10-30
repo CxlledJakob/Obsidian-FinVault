@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Mean Reversion
@@ -22,6 +22,7 @@ aktualisiert: 2026-10-29
 - Regression zum Mittel bedeutet, dass der Preis nach einem versuchten Bruch mit fallendem Volumen wahrscheinlich zum Mittel zurückkehrt.
 - Mean Reversion ist die Annahme, dass der Preis zum Mittel zurückkehrt.
 - Der Mean, zu dem der Preis zurückkehrt, ist die Value Area des Tages, an dem der Spike entstand.
+- Der Preis folgt einem diskreten Ornstein-Uhlenbeck-Prozess, der ihn mit dem Gewicht 1 minus phi zur Prognose und mit dem Gewicht phi zum vorherigen Preis zieht.
 
 ## Kernaussagen
 
@@ -36,9 +37,20 @@ aktualisiert: 2026-10-29
 - Im Aufwärtstrend wird die Rotation zum unteren Band als überverkaufte Kaufgelegenheit gelesen.
 - Ist das Short Covering abgeschlossen, kann der Markt schnell zum Mittel zurückkehren.
 - Ein Flight-to-Safety läuft meist weit über Value. Beim Abbau kehrt der Markt schnell in die Bereiche zurück, deren Bewegungen nicht von gesundem Volumen getragen waren, und kann sie durchstoßen.
+- Ein Strukturbruch kann ein Mean-Reversion-Muster in ein Momentum-Muster übergehen lassen.
+- Im ADF auf Logpreisen ist der Zustand steady, wenn Beta kleiner als 0 ist, und der erwartete Logpreis konvergiert dann gegen minus Alpha geteilt durch Beta.
+- Im steady-Zustand ist die Halbwertszeit der Abweichung der Quotient aus minus dem Logarithmus von 2 und dem Logarithmus der Summe aus eins und Beta.
 
 ## Funktionsweise
 
+- Phi bestimmt, wie schnell der Einstiegspreis zur Prognose konvergiert.
+- Die zufälligen Schocks sind unabhängig und standardnormal verteilt.
+- Die Verteilung des Prozesses ist gaußsch.
+- Mittelwert und Varianz hängen von phi, der Prognose, dem Einstieg und der Zahl der seit dem Einstieg verstrichenen Schritte ab.
+- Der Preisprozess überträgt sich auf den Gewinn der Gelegenheit, weil der Gewinn die Positionsgröße mal der Preisänderung ist.
+- Phi und Sigma werden geschätzt, indem der Prozess linear geschrieben und mit der Methode der kleinsten Quadrate angepasst wird.
+- Phi ist dann die Kovarianz des nächsten Preises mit der verzögerten Abweichung von der Prognose, geteilt durch die Varianz dieser Abweichung.
+- Sigma ist die Standardabweichung der Residuen der Kleinste-Quadrate-Schätzung.
 
 ## Voraussetzungen
 
@@ -46,6 +58,7 @@ aktualisiert: 2026-10-29
 ## Anwendung im Trading
 
 - Im ausbalancierten Markt mit Glockenkurve und Konsens über die Value ist eine Reversion-to-the-Mean-Strategie angemessen.
+- Während des Übergangs von Mean Reversion zu Momentum werden die meisten Teilnehmer überrascht und machen kostspielige Fehler, und daraus entstehen Strategien mit günstigem Chance-Risiko-Verhältnis.
 
 ## Regeln und Kriterien
 
@@ -69,6 +82,11 @@ aktualisiert: 2026-10-29
 - Kurzfristige Verhaltenskräfte können den Preis weit vom fundamentalen Wert entfernen, besonders am Ende extremer Bewegungen, wo das Risiko der Preisbewegung am größten ist.
 - Je weiter diese Kräfte den Preis treiben, desto interessierter werden Fundamentalisten, die nach dem wahrgenommenen Wert entscheiden.
 - Sind die Preise zu tief getrieben, erscheinen aggressive Value-Käufer.
+- Die Halbwertszeit ist der negative natürliche Logarithmus von 2, geteilt durch den natürlichen Logarithmus von phi.
+- Die Halbwertszeitformel gilt für phi zwischen 0 und 1.
+- Zu einer Halbwertszeit tau gehört phi gleich zwei potenziert mit minus eins durch tau.
+- Eine kleinere Halbwertszeit bedeutet einen kleineren autoregressiven Koeffizienten.
+- Eine größere Halbwertszeit schiebt phi gegen 1 und den Prozess näher an einen Random Walk.
 
 ## Risiken und Grenzen
 

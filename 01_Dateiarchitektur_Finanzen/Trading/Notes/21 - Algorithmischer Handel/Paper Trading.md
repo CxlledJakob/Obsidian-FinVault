@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/21 - Algorithmischer Handel/21 - Algorithmischer Handel|21 - Algorithmischer Handel]]"
 weitere_hauptthemen: []
 unterthema: "Validierung"
@@ -10,25 +10,29 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Paper Trading
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Paper Trading ist die Lebenszyklus-Stufe, in der die Strategie auf einem Live-Feed in Echtzeit läuft.
 
 ## Kernaussagen
 
+- Die Performance erfasst Latenzen beim Einlesen der Daten, bei der Berechnung und bei der Ausführung sowie weitere Zeitabstände zwischen Beobachtung und Positionierung.
+- Paper Trading dauert so lange, bis genug Evidenz vorliegt, dass die Strategie wie erwartet arbeitet.
+- Die Stufe folgt auf das Embargo.
+- Erst die anschließende Graduation lässt die Strategie eine echte Position führen, allein oder als Teil eines Ensembles.
 
 ## Funktionsweise
 
 
 ## Voraussetzungen
 
+- Die Beförderung aus dem Embargo setzt voraus, dass die Performance auf Daten nach dem Backtest-Ende mit den Backtest-Ergebnissen konsistent ist.
 
 ## Anwendung im Trading
 

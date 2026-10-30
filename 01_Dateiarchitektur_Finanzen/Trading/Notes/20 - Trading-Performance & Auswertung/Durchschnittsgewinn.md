@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Renditekennzahlen"
@@ -10,22 +10,25 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Durchschnittsgewinn
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der Durchschnittsgewinn ist die mittlere Rendite der Wetten, die einen Gewinn erzielt haben.
+- Der mittlere Gewinn je Wette ist der Erwartungswert der positiven Wettenergebnisse.
 
 ## Kernaussagen
 
+- Der Durchschnittsgewinn gehört zu den Performance-Kennzahlen, die Dollarbeträge und Renditen ohne Risikoanpassung ausweisen.
 
 ## Funktionsweise
 
+- Im Algorithmus zur Ausfallwahrscheinlichkeit wird er als Mittel der historischen Ergebnisse größer als null geschätzt.
+- Der Erwartungswert einer asymmetrischen Wette ist die Trefferwahrscheinlichkeit mal diesem Gewinn plus die Gegenwahrscheinlichkeit mal der Verlustauszahlung.
 
 ## Voraussetzungen
 
@@ -41,6 +44,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Im Rechenbeispiel beträgt die Gewinnauszahlung 0,005.
 
 ## Unterschiedliche Quellenpositionen
 

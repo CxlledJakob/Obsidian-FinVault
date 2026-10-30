@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Quote Stuffing
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Quote Stuffers überfluten eine Börse mit Nachrichten, allein um konkurrierende Algorithmen zu verlangsamen, und betreiben damit Latency Arbitrage.
 
 ## Kernaussagen
 
+- Die Konkurrenten müssen Nachrichten parsen, von denen nur die Urheber wissen, dass sie ignoriert werden können.
+- Easley et al. (2012) nennen daneben Quote Danglers, Liquidity Squeezers und Pack Hunters als weitere predatäre Algorithmen.
+- Diese Algorithmen nutzen Quotestornierungen und verschiedene Ordertypen, um Market Maker advers zu selektieren.
+- Sie hinterlassen unterschiedliche Signaturen im Handelsprotokoll.
+- Hohe Quotestornierungsraten können auf geringe Liquidität hindeuten, weil Quotes veröffentlicht werden, die nicht ausgeführt werden sollen.
 
 ## Funktionsweise
 
@@ -32,6 +36,7 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Die Raten von Quotestornierung, Limit Orders und Market Orders können die Grundlage für Features sein, die auf die Absichten dieser Algorithmen hinweisen.
 
 ## Regeln und Kriterien
 

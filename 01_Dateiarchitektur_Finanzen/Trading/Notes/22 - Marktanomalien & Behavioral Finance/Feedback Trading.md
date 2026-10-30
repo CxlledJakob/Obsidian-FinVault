@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/22 - Marktanomalien & Behavioral Finance/22 - Marktanomalien & Behavioral Finance|22 - Marktanomalien & Behavioral Finance]]"
 weitere_hauptthemen: []
 unterthema: "Verhaltensphänomene"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Feedback Trading
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Feedback Trading entsteht hier, wenn ein schwer vorhersagbares Ereignis Stop-Losses auslöst und die Bewegung dadurch verstärkt.
 
 ## Kernaussagen
 
+- Fiedor argumentiert, dass von den möglichen künftigen Ausgängen der entropiemaximierende am profitabelsten sein kann, weil frequentistische Modelle ihn am wenigsten vorhersagen.
+- Dieses am wenigsten vorhersagbare Szenario löst nach Fiedor am ehesten Stop-Losses aus und erzeugt einen Feedback-Mechanismus, der die Bewegung verstärkt.
+- Der Feedback-Mechanismus zeigt sich als Runs in den Vorzeichen der Renditezeitreihe.
 
 ## Funktionsweise
 

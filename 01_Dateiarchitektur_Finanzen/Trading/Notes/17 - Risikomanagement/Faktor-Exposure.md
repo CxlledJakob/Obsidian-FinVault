@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Portfoliorisiko"
@@ -10,22 +10,26 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Faktor-Exposure
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Das Faktor-Exposure ist der Vektor der Faktorladungen aus der Eigenwertzerlegung der Kovarianzmatrix, multipliziert mit dem Allokationsvektor.
 
 ## Kernaussagen
 
+- Die Risikoanteile summieren sich zu eins, und jeder Anteil liegt zwischen 0 und 1.
+- Wird die Kovarianz auf Preisänderungen statt auf Renditen gerechnet, kann statt der Gewichte ein Bestandsvektor verwendet werden.
 
 ## Funktionsweise
 
+- Die Kovarianzmatrix der Renditen wird als V mal W gleich W mal Lambda zerlegt, und die Ladungen sind W transponiert mal die Gewichte.
+- Die Gewichte summieren sich zu eins.
+- Der Risikoanteil einer Hauptkomponente ist ihr quadriertes Loading mal ihrem Eigenwert, geteilt durch die Summe dieser Terme über alle Komponenten.
 
 ## Voraussetzungen
 

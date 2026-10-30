@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Renditekennzahlen"
@@ -10,22 +10,26 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Durchschnittsverlust
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der Durchschnittsverlust ist die mittlere Rendite der Wetten, die einen Verlust erzielt haben.
+- Der mittlere Verlust je Wette ist der Erwartungswert der Wettenergebnisse, die kleiner oder gleich null sind.
 
 ## Kernaussagen
 
+- Der Durchschnittsverlust gehört zu den Performance-Kennzahlen, die Dollarbeträge und Renditen ohne Risikoanpassung ausweisen.
 
 ## Funktionsweise
 
+- Im Algorithmus zur Ausfallwahrscheinlichkeit wird er als Mittel der historischen Ergebnisse kleiner oder gleich null geschätzt.
+- Wird diese Verlustauszahlung bei gleichem Gewinnziel und gleicher Wettfrequenz negativer, steigt die Trefferwahrscheinlichkeit, die für eine Ziel-Sharpe-Ratio nötig ist.
+- Wird die Wettfrequenz bei gleicher Verlustauszahlung kleiner, steigt ebenfalls die nötige Trefferwahrscheinlichkeit.
 
 ## Voraussetzungen
 
@@ -41,6 +45,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Im Rechenbeispiel beträgt die Verlustauszahlung minus 0,01 bei 260 Wetten pro Jahr.
 
 ## Unterschiedliche Quellenpositionen
 

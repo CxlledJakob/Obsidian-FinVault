@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Renditekennzahlen"
@@ -10,19 +10,27 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Trefferquote
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Trefferquote ist der Anteil der Wetten mit positivem PnL.
+- Die Trefferwahrscheinlichkeit p ist die Wahrscheinlichkeit, mit der die Gewinnauszahlung einer Wette eintritt.
 
 ## Kernaussagen
 
+- Die Trefferquote gehört zu den Performance-Kennzahlen ohne Risikoanpassung.
+- Bei der Beurteilung von Runs ist eine hohe Trefferquote erwünscht, verbunden mit relativ wenigen Verlustwetten.
+- Im Bild eines binären Klassifikators entspricht p der Precision: richtige Positive werden belohnt, falsche Positive werden bestraft, und Negative haben keine Auszahlung.
+- Die Sharpe Ratio hängt in diesem Modell von der Precision ab.
+- Viele Negative verkleinern die Zahl der Wetten und ziehen die Sharpe Ratio gegen null.
+- Die beobachtete Trefferquote ist der Anteil der positiven Ergebnisse an allen Wetten.
+- Die kritische Trefferwahrscheinlichkeit ist der Wert, unter dem die Strategie eine vorgegebene Ziel-Sharpe-Ratio verfehlt.
+- Die Ausfallwahrscheinlichkeit der Strategie ist die Wahrscheinlichkeit, dass die Trefferquote unter diesem kritischen Wert liegt.
 
 ## Funktionsweise
 
@@ -32,15 +40,25 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Bei einem Gewinnziel von 0,1 und einer Ziel-Sharpe-Ratio von 1,5 steigt die nötige Trefferwahrscheinlichkeit, wenn die Verlustauszahlung negativer wird oder die jährliche Wettzahl sinkt.
 
 ## Regeln und Kriterien
 
+- Liegt die Wahrscheinlichkeit, die kritische Trefferquote zu unterschreiten, über 0,05, wird die Strategie typischerweise als zu riskant verworfen.
+- Die Verwerfungsgrenze von 0,05 gilt auch für Anlagen in Instrumenten mit niedriger Volatilität.
+- Soll die Strategie eingesetzt werden, muss die kritische Trefferwahrscheinlichkeit gesenkt werden.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Bei symmetrischer Auszahlung und einer Trefferwahrscheinlichkeit von 0,55 erfordert eine annualisierte Sharpe Ratio von 2 insgesamt 396 Wetten pro Jahr.
+- Bei 52 Wetten pro Jahr ist für eine annualisierte Sharpe Ratio von 2 eine Trefferwahrscheinlichkeit von 0,6336 nötig.
+- Bei 260 Wetten, Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 liefert eine Trefferwahrscheinlichkeit von 0,7 eine annualisierte Sharpe Ratio von 1,173.
+- Bei 260 Wetten, Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 liefert eine Trefferwahrscheinlichkeit von 0,72 eine annualisierte Sharpe Ratio von 2.
+- Bei Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 liegt die kritische Trefferwahrscheinlichkeit für eine Sharpe Ratio von null bei zwei Dritteln.
+- Bei Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 zehrt ein Rückgang der Trefferwahrscheinlichkeit von 0,7 auf 0,67 den erwarteten Gewinn auf.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Orderbuch"
@@ -10,19 +10,25 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Orderbuch
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Das Orderbuch ist hier das Double-Auction-Buch, in dem Kaufquotes auf Bid-Niveaus und Verkaufsquotes auf Offer-Niveaus stehen.
 
 ## Kernaussagen
 
+- Offer-Preise übersteigen die Bid-Preise, weil es sonst sofort zu einem Match käme.
+- Ein Trade entsteht, wenn ein Käufer ein Offer oder ein Verkäufer ein Bid matcht, und nur eine Seite initiiert ihn.
+- Mikrostrukturdaten umfassen Stornierungen, das Double-Auction-Buch, Warteschlangen, Teilausführungen, die Aggressorseite sowie Korrekturen und Ersetzungen.
+- Die Hauptquelle sind FIX-Nachrichten, die von den Börsen gekauft werden können.
+- Der Detaillierungsgrad der FIX-Nachrichten zeigt, wie Marktteilnehmer ihre Absichten verbergen und offenlegen.
+- Datensätze enthalten Bid-Ask-Preise auf mehreren Buchebenen.
+- Im Markt für Corporate Bonds gibt es kein zentrales Orderbuch, und die Trades laufen über Bids Wanted in Competition.
 
 ## Funktionsweise
 

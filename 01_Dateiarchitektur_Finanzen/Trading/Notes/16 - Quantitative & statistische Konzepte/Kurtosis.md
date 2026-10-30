@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Statistik"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Kurtosis
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Kurtosis der Renditen ist ein Eingang der Probabilistic Sharpe Ratio.
 
 ## Kernaussagen
 
+- Für gaußsche Renditen beträgt die Kurtosis 3.
+- Die Probabilistic Sharpe Ratio sinkt, wenn die Kurtosis steigt und die Ränder dicker werden.
+- In der abgebildeten Fläche ist die Kurtosis auf 3 gesetzt, die beobachtete Sharpe Ratio auf 1,5 und die Benchmark auf 1,0, während Schiefe und Stichprobenlänge variieren.
 
 ## Funktionsweise
 

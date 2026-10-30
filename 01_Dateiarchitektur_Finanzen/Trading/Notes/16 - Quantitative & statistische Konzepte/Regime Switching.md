@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Zeitreihen"
@@ -10,19 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Regime Switching
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein Regimewechsel ist der Übergang von einem Marktregime in ein anderes, etwa von einem Mean-Reversion-Muster zu einem Momentum-Muster.
 
 ## Kernaussagen
 
+- Der Chow-Typ-Test prüft einen Wechsel vom Random Walk in einen explosiven Prozess und unterstellt danach nur noch dieses eine Regime bis zum Stichprobenende.
+- Für drei oder mehr Regimes, Random Walk zu Blase zu Random Walk, reicht ein einzelner Bruch nicht.
+- SADF setzt keine bekannte Zahl von Regimewechseln oder Bruchdaten voraus, weil es alle Kombinationen von Start- und Endpunkt prüft.
+- Mögliche Bruchpunkte am Anfang und am Ende der Stichprobe müssen ausgespart werden, damit jedes Regime mit genug Beobachtungen geschätzt wird.
+- Blasen erzeugen zwischen Regimes deutlich verschiedene Preisniveaus.
 
 ## Funktionsweise
 
@@ -32,6 +36,7 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Beim Regimewechsel werden die meisten Teilnehmer zu spät auf ihren Fehler aufmerksam, halten die Position, hoffen auf eine Rückkehr und vergrößern sie manchmal, bis sie zum Stop gezwungen werden.
 
 ## Regeln und Kriterien
 

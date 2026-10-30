@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Slippage
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der durchschnittliche Slippage je Umschlag sind die Ausführungskosten eines Portfolioumschlags ohne Brokergebühren.
+- Der Slippage je Umschlag sind die Ausführungskosten ohne Brokergebühren.
 
 ## Kernaussagen
 
+- Slippage geht zusammen mit den Brokergebühren in die Dollar-Performance je Umschlag ein.
+- Strategien scheitern oft an falschen Annahmen über Ausführungskosten.
+- Slippage geht zusammen mit den Brokergebühren in die Dollar-Performance und in die Rendite auf die Ausführungskosten ein.
+- Die Rendite auf die Ausführungskosten soll ein großes Vielfaches sein, sodass die Strategie eine schlechtere Ausführung übersteht.
 
 ## Funktionsweise
 
@@ -41,6 +45,8 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Dazu gehört der Verlust, der entsteht, wenn ein Wertpapier zu einem Fill-Preis über dem Mittelpreis im Zeitpunkt der Weitergabe an den ausführenden Broker gekauft wird.
+- Ein Beispiel ist der Verlust aus einem Kauf zu einem Fill-Preis, der über dem Mittelpreis im Zeitpunkt der Order an den Broker liegt.
 
 ## Unterschiedliche Quellenpositionen
 

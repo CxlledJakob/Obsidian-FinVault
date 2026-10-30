@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Statistik"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Schiefe
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Schiefe der Renditen ist ein Eingang der Probabilistic Sharpe Ratio.
 
 ## Kernaussagen
 
+- Positive Schiefe erhöht die Probabilistic Sharpe Ratio.
+- Die abgebildete Fläche zeigt die Probabilistic Sharpe Ratio in Abhängigkeit von Schiefe und Stichprobenlänge bei Kurtosis 3, beobachteter Sharpe Ratio 1,5 und Benchmark 1,0.
 
 ## Funktionsweise
 

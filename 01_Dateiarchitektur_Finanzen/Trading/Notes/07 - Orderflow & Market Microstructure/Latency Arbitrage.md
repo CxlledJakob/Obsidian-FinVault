@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Latency Arbitrage
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Latency Arbitrage bezeichnet hier die Strategie der Quote Stuffers, eine Börse mit Nachrichten zu überfluten, allein um konkurrierende Algorithmen zu verlangsamen.
 
 ## Kernaussagen
 
+- Easley et al. (2012) schreiben dieses Vorgehen den Quote Stuffers zu.
+- Die konkurrierenden Algorithmen müssen Nachrichten parsen, von denen nur die Urheber wissen, dass sie ignoriert werden können.
 
 ## Funktionsweise
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/21 - Algorithmischer Handel/21 - Algorithmischer Handel|21 - Algorithmischer Handel]]"
 weitere_hauptthemen: []
 unterthema: "Validierung"
@@ -10,19 +10,28 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Look-Ahead Bias
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Look-ahead Bias heißt, Information zu nutzen, die im Zeitpunkt der simulierten Entscheidung nicht öffentlich war.
 
 ## Kernaussagen
 
+- Fundamentaldaten werden mit Zeitverzug berichtet.
+- Die Analyse darf einen Datenpunkt erst verwenden, nachdem er öffentlich verfügbar war.
+- Die Annahme, diese Daten seien am Ende der Berichtsperiode veröffentlicht worden, ist ein Anfängerfehler und trifft nie zu.
+- Bloomberg indiziert Fundamentaldaten mit dem letzten Datum im Bericht und weist die Werte damit einem Zeitpunkt zu, an dem sie noch nicht bekannt waren.
+- Backfilling weist fehlenden Daten einen Wert zu, auch wenn dieser damals unbekannt war.
+- Ein nachträglich berichtigter Wert war am Tag der ersten Veröffentlichung nicht bekannt.
+- Häufig wird der endgültige Wert auf den Zeitpunkt der ersten Veröffentlichung oder sogar auf den letzten Tag der Berichtsperiode gelegt.
+- Nach korrekter zeitlicher Zuordnung lässt sich ein erheblicher Teil der Befunde in der Faktorliteratur nicht mehr reproduzieren.
+- Informationsleckage in der Kreuzvalidierung ist eine Falle, und die genannte Lösung sind Purging und Embargoing in den Kapiteln 7 und 9.
+- Dieser Zuordnungsfehler und seine Folgen werden bei den Backtesting-Fehlern in Kapitel 11 wieder behandelt.
 
 ## Funktionsweise
 
@@ -35,12 +44,16 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Für jeden Datenpunkt ist der Zeitstempel sicher zu bestimmen, und Veröffentlichungsdaten, Verteilungsverzögerungen sowie Backfill-Korrekturen sind zu berücksichtigen.
 
 ## Risiken und Grenzen
 
+- Look-ahead Bias ist die zweite der sieben Sünden des quantitativen Investierens bei Luo et al. 2014, und die meisten in Zeitschriften veröffentlichten Arbeiten begehen solche Grundfehler routinemäßig.
 
 ## Beispiele
 
+- Bei Bloomberg liegt das letzte im Bericht enthaltene Datum oft etwa 1,5 Monate vor dem Veröffentlichungstag.
+- Für eine vierteljährliche BIP-Meldung liegen typischerweise drei Werte vor: der ursprünglich veröffentlichte Wert und zwei monatliche Revisionen.
 
 ## Unterschiedliche Quellenpositionen
 

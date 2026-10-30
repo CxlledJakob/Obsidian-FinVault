@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Risikomessung"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Liquiditätsrisiko
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Illiquidität ist in diesem Text ein Risiko, zu dem eine Prämie gehört.
 
 ## Kernaussagen
 
+- Weil Illiquidität ein bepreistes Risiko ist, wird sie als informatives Feature in finanziellen Machine-Learning-Modellen verwendet.
+- Sequenzielle Handelsmodelle bilden die Unsicherheiten der Liquiditätsanbieter ab, darunter die Wahrscheinlichkeit eines Informationsereignisses, die Wahrscheinlichkeit dass es negativ ist, und die Ankunftsraten informierter und uninformierter Händler.
+- Liquidity Squeezers entziehen bei der erzwungenen Abwicklung eines großen Investors möglichst viel Liquidität, worauf die Preise überschießen.
+- Der Flash Crash vom 6. Mai 2010 endete in einer Liquiditätskrise, nachdem Market Maker zum Stop-out gezwungen wurden.
 
 ## Funktionsweise
 

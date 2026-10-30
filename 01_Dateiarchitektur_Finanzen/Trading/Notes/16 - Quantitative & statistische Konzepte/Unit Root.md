@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Zeitreihen"
@@ -10,19 +10,26 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Unit Root
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Right-Tail-Unit-Root-Tests prüfen exponentielles Wachstum oder Kollaps unter einer autoregressiven Spezifikation.
 
 ## Kernaussagen
 
+- Enthält die Reihe eine Unit Root, dann ist der kleinste Fixed-Width-Fracdiff-Koeffizient d*, der sie stationär macht, kleiner als 1.
+- Ist die Reihe bereits stationär, gilt d* gleich 0. Zeigt sie explosives Verhalten wie in einer Blase, gilt d* größer als 1.
+- Der besonders interessierende Fall ist d* wenig über 0 und weit unter 1. Die Originalreihe ist dann nur mild nichtstationär: Differenzierung ist nötig, eine volle ganzzahlige Differenzierung entfernt aber zu viel Gedächtnis und Prognosekraft.
+- Die Null des Chow-Typ-Dickey-Fuller-Tests ist ein Unit Root mit Rho gleich 1, die Alternative ein explosiver Prozess mit Rho größer als 1 nach dem Bruch.
+- Standard-Unit-Root- und Kointegrationstests erkennen Blasen schlecht, weil periodisch zusammenbrechende Blasen eher wie ein Unit-Root- oder stationärer autoregressiver Prozess aussehen.
+- Im Null-Lag-Modell auf Logpreisen ist Beta gleich 0 der Unit-Root-Zustand: das System ist nichtstationär und verhält sich als Martingal.
+- Der gewöhnliche ADF-Test ist der Spezialfall von SADF, bei dem die minimale Fensterlänge gleich Endpunkt minus 1 ist.
+- SADF testet auf der ADF-Regression mit Konstante und Lag-Differenzen die Null Beta kleiner oder gleich 0 gegen die Alternative Beta größer als 0.
 
 ## Funktionsweise
 
@@ -38,6 +45,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Phillips, Wu und Yu (2011) sagen, Standard-Unit-Root-Tests können einen stationären Prozess und ein periodisch zusammenbrechendes Blasenmodell nicht wirksam unterscheiden.
 
 ## Beispiele
 

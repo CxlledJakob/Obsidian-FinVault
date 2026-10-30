@@ -34,6 +34,17 @@ aktualisiert: 2026-10-30
 - Wie gut der Markt den Handel vermittelt, entscheidet sich daran, wohin er zu laufen versucht und ob ihm dieser Versuch gelingt.
 - Market Making im Hochfrequenzhandel stellt, wie traditionelles Market Making, Liquidität auf beiden Seiten des Buchs und verdient den Spread.
 - Die Insider sehen alle Kauf- und alle Verkaufsorders und damit die tatsächliche Marktstimmung, bevor diese in der öffentlichen Preisaktion sichtbar wird.
+- Der Bid-Ask-Spread ist eine Funktion der Liquidität, und Rolls Modell ist ein früher Versuch, die Liquidität eines Titels zu messen.
+- Modelle der ersten Generation nutzen Bid-Ask-Spread und Volatilität als Proxies für Illiquidität.
+- Illiquidität ist ein Risiko mit einer zugehörigen Prämie und deshalb ein informatives Feature in finanziellen Machine-Learning-Modellen.
+- In Kyles Modell ist λ ein inverses Liquiditätsmaß: Die Illiquidität steigt mit der Unsicherheit über den Terminalwert v und sinkt mit dem Noise.
+- Geringere Liquidität bedeutet ein höheres λ und eine geringere Nachfrage des informierten Händlers.
+- Die Probability of Informed Trading ist der kritische Faktor für die Preisspanne, zu der Market Maker Liquidität bereitstellen.
+- Hohe Quotestornierungsraten können geringe Liquidität anzeigen, weil Teilnehmer Quotes veröffentlichen, die nicht ausgeführt werden sollen.
+- Liquiditätsanbieter tragen Unsicherheit darüber, ob ein Informationsereignis eingetreten ist, ob es negativ ist, und über die Ankunftsraten von Noise Tradern und informierten Händlern.
+- Aus Rolls Spreadschätzungen lassen sich Features über die Liquiditätsbedingungen des Marktes ableiten.
+- Bei relativ illiquiden Produkten, einschließlich Aktienoptionen, können Quotes lange irrational bleiben, während spärliche Preise informativ sind.
+- Die Vorhersagbarkeit, die Cremers und Weinbaum (2010) aus relativ teuren Calls gegenüber relativ teuren Puts ableiten, ist größer, wenn die Optionsliquidität hoch und die Aktienliquidität niedrig ist.
 
 ## Funktionsweise
 
@@ -44,6 +55,7 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Unter normalen Marktbedingungen erzeugen Market Maker informierte Prognosen mit niedrigem Cross-Entropy-Verlust, während sie Position Takern Liquidität bereitstellen.
 
 ## Regeln und Kriterien
 
@@ -56,6 +68,9 @@ aktualisiert: 2026-10-30
 - Hat ein großer Verwalter die schwächer werdende Auktion verpasst, ist die Liquidität nach Beginn der Umkehr in der Regel begrenzt und kann das Ergebnis stark verschlechtern.
 - Sobald die Veränderung breit erkannt ist, trocknet die Liquidität aus. Für große Verwalter ist es dann meist zu spät, weil die Veränderung bereits der Normalfall ist.
 - Als die Floors noch dominierten und Nachrichten die Händler außerhalb langsamer erreichten, hatten die Locals einen zusätzlichen Vorteil.
+- Liquidity Squeezers handeln in dieselbe Richtung wie ein notleidender Großanleger, der eine Position abwickeln muss, und entziehen dabei möglichst viel Liquidität.
+- Dadurch überschießen die Preise, und die predatären Algorithmen erzielen einen Gewinn.
+- Beim Flash Crash vom 6. Mai 2010 stellten Market Maker Verkäufern weiter Liquidität zu übermäßig großzügigen Kursen, bis sie zum Stop-out gezwungen wurden und eine Liquiditätskrise auslösten.
 
 ## Beispiele
 

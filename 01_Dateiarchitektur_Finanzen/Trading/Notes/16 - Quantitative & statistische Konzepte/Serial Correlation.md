@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Zeitreihen"
@@ -10,19 +10,29 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Serial Correlation
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Serielle Bedingtheit der Labels macht die gewöhnliche k-Fold-Cross-Validation unbrauchbar, weil die Zufallsziehung redundante Beobachtungen sowohl ins Trainings- als auch ins Testset streut.
+- Deshalb braucht es ein Validierungsverfahren, das das Modell an den Beobachtungen bewertet, die am wenigsten mit den Trainingsbeobachtungen korreliert oder redundant sind.
+- Bei langreichweitiger serieller Abhängigkeit genügt es nicht, eine Beobachtung hinter dem Ende des Trainingssets zu testen, um Informationsleakage zu vermeiden.
+- Toth et al. (2011) untersuchen den signierten Orderflow von Aktien der London Stock Exchange und finden über viele Tage positiv autokorrelierte Orderzeichen.
+- Die zwei von ihnen geprüften Erklärungen sind Herding und Order Splitting.
+- Auf Zeitskalen von weniger als einigen Stunden geht die Persistenz überwiegend auf Order Splitting zurück.
+- Die Mikrostrukturtheorie führt die Persistenz des Orderflow-Ungleichgewichts auf die Anwesenheit informierter Händler zurück.
+- Die Stärke dieser Persistenz lässt sich über die serielle Korrelation der signierten Volumina messen.
+- Ein solches Feature ergänzt die Features der sequenziellen Handelsmodelle in Abschnitt 19.5.
+- Das Roll-Modell nimmt serielle Unabhängigkeit der Aggressorzeichen an, E[bt bt−1] = 0.
+- Die halbe Geld-Brief-Spanne ergibt sich dort aus der seriellen Kovarianz der Preisänderungen, c = √max{0, −σ[Δpt, Δpt−1]}.
+- Empirisch weisen Finanzzeitreihen serielle Abhängigkeit auf.
 
 ## Funktionsweise
 

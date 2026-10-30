@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/21 - Algorithmischer Handel/21 - Algorithmischer Handel|21 - Algorithmischer Handel]]"
 weitere_hauptthemen: []
 unterthema: "Systementwicklung"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Survivorship Bias
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Survivorship Bias heißt, das heutige Anlageuniversum zu verwenden und damit zu ignorieren, dass Unternehmen auf dem Weg pleitegingen und Titel delisted wurden.
 
 ## Kernaussagen
 
@@ -38,6 +37,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Survivorship Bias ist die erste der sieben Sünden des quantitativen Investierens bei Luo et al. 2014, und die meisten in Zeitschriften veröffentlichten Arbeiten begehen solche Grundfehler routinemäßig.
 
 ## Beispiele
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Orderbuch"
@@ -10,19 +10,23 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Ask
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Das Ask, im Text auch Offer, ist ein Quote, zu dem ein Wertpapier auf einem Preisniveau zum Verkauf gestellt wird.
 
 ## Kernaussagen
 
+- Offer-Preise liegen stets über den Bid-Preisen, weil es sonst sofort zu einem Match käme.
+- Ein Trade entsteht, wenn ein Käufer ein Offer matcht.
+- Hohe Preise werden fast immer gegen das Offer gematcht.
+- Das gegen das Ask gehandelte Volumen, also die kaufinitiierten Trades, wird VB genannt.
+- Das Break-even-Ask der Market Maker liegt über dem erwarteten Preis, mit dem Aufschlag (μ αt (1 − δt)) / (ε + μ αt (1 − δt)) mal (SG − E[St]).
 
 ## Funktionsweise
 
