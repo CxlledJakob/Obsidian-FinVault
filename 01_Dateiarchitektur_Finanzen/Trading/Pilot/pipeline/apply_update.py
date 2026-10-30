@@ -15,6 +15,8 @@ Aufrufe:
   python3 apply_update.py fill-shards
   python3 apply_update.py publish "Commit-Nachricht"
   python3 apply_update.py self-test
+
+Modell und Grenzen liegen in parameter.json neben diesem Skript.
 """
 
 from __future__ import annotations
@@ -46,13 +48,33 @@ LOCKED_STATUS = frozenset({"geprüft", "archiviert"})
 MAX_BULLET_CHARS = 800
 PAGE_DASH = "–"
 BRANCH = "jakob/features"
-LINK_SHARD_SIZE = 4
-FILL_SHARD_SIZE = 3
-BULLET_CAP = 12
 BULLET_CHARS = 220
+ALLOWED_MODELS = frozenset(
+    {
+        "grok-4.7-low",
+        "grok-4.7-medium",
+        "grok-4.7-high",
+        "grok-4.7-xhigh",
+    }
+)
+STRENGE_TEXT = {
+    "streng": (
+        "Nur zuordnen, wenn das Fragment den Begriff definiert, eine Regel gibt oder ein Kriterium nennt. "
+        "Eine Erwähnung, ein Beispiel oder ein Wort im Inhaltsverzeichnis reicht nicht. Lieber zu wenige als zu viele."
+    ),
+    "mittel": (
+        "Nur zuordnen, wenn das Fragment den Begriff erklärt oder eine konkrete Regel daran hängt. "
+        "Eine bloße Namensnennung reicht nicht."
+    ),
+    "locker": (
+        "Zuordnen, wenn der Begriff im Fragment eine Rolle spielt. "
+        "Ein Inhaltsverzeichnis oder eine Namensliste ohne Ausführung reicht nicht."
+    ),
+}
 NOTES_PREFIX = "01_Dateiarchitektur_Finanzen/Trading/Notes/"
 LEDGER_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/data/ledger.jsonl"
 APPLY_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py"
+PARAMETER_REL = "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json"
 
 
 @dataclass(frozen=True)
@@ -75,6 +97,158 @@ def default_roots() -> Roots:
         register=trading / "System" / "Automation" / "concept-links.json",
         ledger=trading / "Pilot" / "data" / "ledger.jsonl",
     )
+
+
+@dataclass(frozen=True)
+class Lauf:
+    zuordnung_modell: str = "grok-4.7-medium"
+    strenge: str = "mittel"
+    max_begriffe: int = 18
+    link_shard_size: int = 4
+    ergaenzung_modell: str = "grok-4.7-high"
+    max_neue_punkte: int = 12
+    max_zeichen: int = 360
+    wiederholung_schwelle: float = 0.72
+    fill_shard_size: int = 3
+    vorhandene_punkte: int = 12
+
+
+def clamp_modell(value: object, default: str) -> str:
+    if value is None or value == "":
+        return default
+    text = str(value).strip()
+    if text in ALLOWED_MODELS:
+        return text
+    print(f"parameter modell {text} ungültig, {default}", file=sys.stderr)
+    return default
+
+
+def clamp_strenge(value: object) -> str:
+    if value is None or value == "":
+        return "mittel"
+    text = str(value).strip().lower()
+    if text in STRENGE_TEXT:
+        return text
+    print(f"parameter strenge {text} ungültig, mittel", file=sys.stderr)
+    return "mittel"
+
+
+def clamp_int(value: object, default: int, low: int, high: int, label: str) -> int:
+    if value is None or value == "":
+        return default
+    try:
+        number = int(value)
+    except (TypeError, ValueError):
+        print(f"parameter {label} ungültig, {default}", file=sys.stderr)
+        return default
+    if number < low or number > high:
+        bounded = min(max(number, low), high)
+        print(f"parameter {label} auf {bounded} begrenzt", file=sys.stderr)
+        return bounded
+    return number
+
+
+def clamp_schwelle(value: object, default: float) -> float:
+    if value is None or value == "":
+        return default
+    try:
+        number = float(value)
+    except (TypeError, ValueError):
+        print(f"parameter wiederholung_schwelle ungültig, {default}", file=sys.stderr)
+        return default
+    if number < 0 or number > 0.95:
+        bounded = min(max(number, 0.0), 0.95)
+        print(f"parameter wiederholung_schwelle auf {bounded} begrenzt", file=sys.stderr)
+        return bounded
+    return number
+
+
+def load_lauf() -> Lauf:
+    defaults = Lauf()
+    path = Path(__file__).resolve().parent / "parameter.json"
+    if not path.is_file():
+        print("parameter fehlt, Voreinstellung", file=sys.stderr)
+        return defaults
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        print(f"parameter ungültig: {exc}", file=sys.stderr)
+        return defaults
+    if not isinstance(data, dict):
+        print("parameter ungültig, Voreinstellung", file=sys.stderr)
+        return defaults
+    zuordnung = data.get("zuordnung") or {}
+    ergaenzung = data.get("ergaenzung") or {}
+    if not isinstance(zuordnung, dict) or not isinstance(ergaenzung, dict):
+        print("parameter abschnitte ungültig, Voreinstellung", file=sys.stderr)
+        return defaults
+    return Lauf(
+        zuordnung_modell=clamp_modell(zuordnung.get("modell"), defaults.zuordnung_modell),
+        strenge=clamp_strenge(zuordnung.get("strenge")),
+        max_begriffe=clamp_int(
+            zuordnung.get("max_begriffe_pro_fragment"),
+            defaults.max_begriffe,
+            1,
+            40,
+            "max_begriffe_pro_fragment",
+        ),
+        link_shard_size=clamp_int(
+            zuordnung.get("fragmente_pro_shard"),
+            defaults.link_shard_size,
+            1,
+            8,
+            "fragmente_pro_shard",
+        ),
+        ergaenzung_modell=clamp_modell(ergaenzung.get("modell"), defaults.ergaenzung_modell),
+        max_neue_punkte=clamp_int(
+            ergaenzung.get("max_neue_punkte_pro_fragment"),
+            defaults.max_neue_punkte,
+            1,
+            30,
+            "max_neue_punkte_pro_fragment",
+        ),
+        max_zeichen=clamp_int(
+            ergaenzung.get("max_zeichen_pro_punkt"),
+            defaults.max_zeichen,
+            80,
+            MAX_BULLET_CHARS,
+            "max_zeichen_pro_punkt",
+        ),
+        wiederholung_schwelle=clamp_schwelle(
+            ergaenzung.get("wiederholung_schwelle"),
+            defaults.wiederholung_schwelle,
+        ),
+        fill_shard_size=clamp_int(
+            ergaenzung.get("fragmente_pro_shard"),
+            defaults.fill_shard_size,
+            1,
+            8,
+            "fragmente_pro_shard",
+        ),
+        vorhandene_punkte=clamp_int(
+            ergaenzung.get("vorhandene_punkte_zeigen"),
+            defaults.vorhandene_punkte,
+            0,
+            40,
+            "vorhandene_punkte_zeigen",
+        ),
+    )
+
+
+def limit_names(names: list, cap: int) -> tuple[list[str], int]:
+    kept: list[str] = []
+    seen: set[str] = set()
+    extra = 0
+    for name in names:
+        begriff = str(name).strip()
+        if not begriff or begriff in seen:
+            continue
+        seen.add(begriff)
+        if len(kept) >= cap:
+            extra += 1
+            continue
+        kept.append(begriff)
+    return kept, extra
 
 
 def today() -> str:
@@ -249,7 +423,53 @@ def normalize_bullet(text: str) -> str:
     return bullet_text(text)
 
 
-def append_bullets(body: list[str], title: str, bullets: list[str]) -> tuple[list[str], int]:
+STOPWORDS = frozenset(
+    """
+    aber alle allem allen aller alles als also auch auf aus bei bin bis bist da
+    damit dann das dass der den des dem die dies diese diesem diesen dieser
+    dieses doch dort du durch ein eine einem einen einer eines er es euer für
+    hatte hatten hier hin ich ihm ihn ihnen ihr ihre ihrem ihren ihres im in ist
+    jede jedem jeden jeder jedes jetzt kann kein keine keinem keinen keiner
+    keines können man mit muss müssen nach nicht nichts noch nur ob oder ohne
+    sehr sein seine seinem seinen seiner seines selbst sich sie sind so solche
+    sondern sonst über um und uns unser unsere unserem unseren unserer unseres
+    unter vom von vor während war waren was weg weil weiter welche welchem
+    welchen welcher welches wenn wer werde werden wie wir wird wirst wo wollen
+    wollte wurde wurden würde würden zu zum zur zwar the and with that this from
+    into over when your their they are was were been have has had not but for
+    you its his her
+    """.split()
+)
+
+
+def content_tokens(text: str) -> set[str]:
+    return {
+        word
+        for word in re.findall(r"[a-z0-9äöüß]+", text.lower())
+        if len(word) > 3 and word not in STOPWORDS
+    }
+
+
+def too_similar(candidate: str, existing: str, threshold: float) -> bool:
+    if threshold <= 0:
+        return False
+    left = content_tokens(candidate)
+    right = content_tokens(existing)
+    if len(left) < 4 or len(right) < 4:
+        return False
+    union = left | right
+    if not union:
+        return False
+    return len(left & right) / len(union) >= threshold
+
+
+def append_bullets(
+    body: list[str],
+    title: str,
+    bullets: list[str],
+    *,
+    similar: float = 0.0,
+) -> tuple[list[str], int]:
     bounds = section_bounds(body, title)
     if bounds is None:
         raise ValueError(f"Abschnitt fehlt: {title}")
@@ -265,7 +485,9 @@ def append_bullets(body: list[str], title: str, bullets: list[str]) -> tuple[lis
             continue
         if len(cleaned) > MAX_BULLET_CHARS:
             raise ValueError(f"Stichpunkt zu lang ({len(cleaned)} Zeichen) in {title}")
-        if cleaned in existing:
+        if cleaned in existing or any(too_similar(cleaned, item, similar) for item in existing):
+            if cleaned not in existing:
+                print(f"wiederholt {title}: {cleaned[:60]}")
             continue
         content.append(f"- {cleaned}")
         existing.add(cleaned)
@@ -399,6 +621,7 @@ def link_records(body: list[str]) -> list[str]:
 def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
     register = load_register(roots.register)
     assigned = load_assigned(roots)
+    lauf = load_lauf()
     errors = 0
     for record in records:
         raw_fragment = str(record.get("fragment") or "").strip()
@@ -424,6 +647,9 @@ def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
         if fragment_rel in assigned:
             print(f"erledigt {fragment.name}")
             continue
+        names, extra = limit_names(names, lauf.max_begriffe)
+        if extra:
+            print(f"gekürzt {fragment.name} {len(names)}/{len(names) + extra}")
         fragment_errors = 0
         linked: list[str] = []
         for name in names:
@@ -498,8 +724,41 @@ def cmd_link(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
     return 1 if errors else 0
 
 
+def cap_sections(begriff: str, sections: dict, lauf: Lauf) -> dict:
+    remaining = lauf.max_neue_punkte
+    kept: dict = {}
+    dropped = 0
+    long_ones = 0
+    for title, bullets in sections.items():
+        if isinstance(bullets, str):
+            bullets = [bullets]
+        if not isinstance(bullets, list):
+            raise TypeError(f"Abschnitt {title} ist keine Liste")
+        chosen: list[str] = []
+        for bullet in bullets:
+            cleaned = normalize_bullet(str(bullet))
+            if not cleaned:
+                continue
+            if len(cleaned) > lauf.max_zeichen:
+                long_ones += 1
+                continue
+            if remaining <= 0:
+                dropped += 1
+                continue
+            chosen.append(cleaned)
+            remaining -= 1
+        if chosen:
+            kept[str(title)] = chosen
+    if long_ones:
+        print(f"zu-lang {begriff} {long_ones}")
+    if dropped:
+        print(f"punkte-gekürzt {begriff} {dropped}")
+    return kept
+
+
 def cmd_add(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
     register = load_register(roots.register)
+    lauf = load_lauf()
     errors = 0
     for record in records:
         begriff = str(record.get("begriff") or "").strip()
@@ -543,8 +802,18 @@ def cmd_add(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
             errors += 1
             continue
         try:
-            corrected = 0
+            usable_corrections = []
             for item in corrections:
+                if not isinstance(item, dict):
+                    raise TypeError("Korrektur ist kein Objekt")
+                neu = normalize_bullet(str(item.get("neu") or ""))
+                if neu and len(neu) > lauf.max_zeichen:
+                    print(f"zu-lang {begriff} / {item.get('abschnitt')}")
+                    continue
+                usable_corrections.append(item)
+            sections = cap_sections(begriff, sections, lauf)
+            corrected = 0
+            for item in usable_corrections:
                 body, count = apply_correction(
                     body,
                     str(item.get("abschnitt") or ""),
@@ -556,9 +825,12 @@ def cmd_add(roots: Roots, records: list[dict], *, dry_run: bool) -> int:
                     print(f"korrektur-offen {begriff} / {item.get('abschnitt')}")
             added = 0
             for title, bullets in sections.items():
-                if isinstance(bullets, str):
-                    bullets = [bullets]
-                body, count = append_bullets(body, str(title), list(bullets))
+                body, count = append_bullets(
+                    body,
+                    str(title),
+                    list(bullets),
+                    similar=lauf.wiederholung_schwelle,
+                )
                 added += count
         except (ValueError, TypeError, AttributeError) as exc:
             print(f"fehler: {begriff}: {exc}", file=sys.stderr)
@@ -697,16 +969,18 @@ def print_shards(roots: Roots, paths: list[Path], empty: str) -> int:
     return 0
 
 
-def write_link_shards(roots: Roots) -> list[Path]:
+def write_link_shards(roots: Roots, lauf: Lauf | None = None) -> list[Path]:
     books = open_books(roots)
     directory = work_dir(roots)
     clear_shard_files(directory, "link")
     if not books:
         return []
+    if lauf is None:
+        lauf = load_lauf()
     folder, files = books[0]
     taxonomy = roots.trading / "Research" / "Taxonomie" / "Themenstruktur.txt"
     paths: list[Path] = []
-    for index, group in enumerate(split_groups(files, LINK_SHARD_SIZE), start=1):
+    for index, group in enumerate(split_groups(files, lauf.link_shard_size), start=1):
         path = directory / f"link-{index:02d}.md"
         json_path = directory / f"link-{index:02d}.json"
         lines = [
@@ -722,8 +996,9 @@ def write_link_shards(roots: Roots) -> list[Path]:
             '{"fragment": "exakter Pfad", "begriffe": ["Exakter Begriff"]}',
             "Der Fragmentpfad ist der Pfad aus dieser Datei, unverändert.",
             "begriffe bleibt leer, wenn nichts passt. Namen müssen exakt aus der Themenliste stammen.",
-            "Ein Begriff passt nur, wenn das Fragment ihn definiert, eine Regel gibt oder ein Kriterium nennt.",
-            "Ein einzelnes Wort reicht nicht. Keine neuen Begriffe.",
+            f"Strenge: {lauf.strenge}. {STRENGE_TEXT[lauf.strenge]}",
+            f"Höchstens {lauf.max_begriffe} Begriffe. Die wichtigsten zuerst. Das Skript behält nur diese und streicht den Rest.",
+            "Keine neuen Begriffe.",
             "",
             "## Fragmente",
             "",
@@ -735,19 +1010,21 @@ def write_link_shards(roots: Roots) -> list[Path]:
     return paths
 
 
-def write_fill_shards(roots: Roots) -> list[Path]:
+def write_fill_shards(roots: Roots, lauf: Lauf | None = None) -> list[Path]:
     pairs = pending_pairs(roots)
     directory = work_dir(roots)
     clear_shard_files(directory, "fill")
     if not pairs:
         return []
+    if lauf is None:
+        lauf = load_lauf()
     by_fragment: dict[str, list[tuple[str, str]]] = {}
     for begriff, fragment_rel, note_rel in pairs:
         by_fragment.setdefault(fragment_rel, []).append((begriff, note_rel))
     sections = ", ".join(title for title in SECTIONS if title != "Quellen und Fundstellen")
     paths: list[Path] = []
     fragments = sorted(by_fragment)
-    for index, group in enumerate(split_groups(fragments, FILL_SHARD_SIZE), start=1):
+    for index, group in enumerate(split_groups(fragments, lauf.fill_shard_size), start=1):
         path = directory / f"fill-{index:02d}.md"
         json_path = directory / f"fill-{index:02d}.json"
         lines = [
@@ -764,7 +1041,9 @@ def write_fill_shards(roots: Roots) -> list[Path]:
             "Steht in dem Fragment nichts Neues, lass sections leer.",
             f"Erlaubte Abschnitte: {sections}.",
             "Eigene Erkenntnisse nicht füllen. Deutsch, ein Fakt pro Stichpunkt, höchstens zwei Sätze.",
-            "Nur Aussagen aus dem gerade gelesenen Fragment. Vorhandene Stichpunkte nicht wiederholen.",
+            f"Höchstens {lauf.max_neue_punkte} neue Stichpunkte für diesen Begriff aus diesem Fragment, über alle Abschnitte. Die wichtigsten zuerst.",
+            f"Ein Stichpunkt hat höchstens {lauf.max_zeichen} Zeichen. Das Skript streicht darüber hinaus.",
+            "Nur Aussagen aus dem gerade gelesenen Fragment. Vorhandene Stichpunkte nicht wiederholen und nicht umformulieren.",
             "Eine Korrektur nur, wenn das Fragment eine vorhandene Aussage ausdrücklich anders sagt.",
             "",
         ]
@@ -784,10 +1063,10 @@ def write_fill_shards(roots: Roots) -> list[Path]:
                 if not bullets:
                     lines.append("(keine)")
                 else:
-                    for item in bullets[:BULLET_CAP]:
+                    for item in bullets[: lauf.vorhandene_punkte]:
                         short = item if len(item) <= BULLET_CHARS else item[:BULLET_CHARS].rstrip() + "…"
                         lines.append(f"- {short}")
-                    extra = len(bullets) - BULLET_CAP
+                    extra = len(bullets) - lauf.vorhandene_punkte
                     if extra > 0:
                         lines.append(f"- … {extra} weitere")
                 lines.append("")
@@ -797,16 +1076,23 @@ def write_fill_shards(roots: Roots) -> list[Path]:
 
 
 def cmd_link_shards(roots: Roots) -> int:
-    return print_shards(roots, write_link_shards(roots), "keine offenen Bücher")
+    lauf = load_lauf()
+    print(f"modell {lauf.zuordnung_modell}")
+    print(f"strenge {lauf.strenge}")
+    print(f"max_begriffe {lauf.max_begriffe}")
+    return print_shards(roots, write_link_shards(roots, lauf), "keine offenen Bücher")
 
 
 def cmd_fill_shards(roots: Roots) -> int:
-    return print_shards(roots, write_fill_shards(roots), "keine offenen Fragmente")
+    lauf = load_lauf()
+    print(f"modell {lauf.ergaenzung_modell}")
+    print(f"max_neue_punkte {lauf.max_neue_punkte}")
+    return print_shards(roots, write_fill_shards(roots, lauf), "keine offenen Fragmente")
 
 
 def allowed_work_path(path: str) -> bool:
     path = path.replace("\\", "/").lstrip("./")
-    if path in {LEDGER_REL, APPLY_REL}:
+    if path in {LEDGER_REL, APPLY_REL, PARAMETER_REL}:
         return True
     return path.startswith(NOTES_PREFIX)
 
@@ -998,8 +1284,46 @@ def self_test() -> int:
     ]
     if chosen != expected:
         raise SystemExit(f"Publish-Auswahl falsch: {chosen}")
+    if not allowed_work_path(PARAMETER_REL):
+        raise SystemExit("parameter.json wird nicht veröffentlicht")
     if split_groups(["a", "b", "c", "d", "e"], 3) != [["a", "b", "c"], ["d", "e"]]:
         raise SystemExit("Shard-Schnitt falsch")
+    if clamp_modell("grok-4.7-high-fast", "grok-4.7-high") != "grok-4.7-high":
+        raise SystemExit("fast-modell wurde akzeptiert")
+    if clamp_modell("grok-4.7-medium", "grok-4.7-high") != "grok-4.7-medium":
+        raise SystemExit("medium abgelehnt")
+    kept, extra = limit_names(["A", " A", "B", "", "C"], 2)
+    if kept != ["A", "B"] or extra != 1:
+        raise SystemExit(f"Begriffsgrenze falsch: {kept} {extra}")
+    sample_body = [
+        "## Kernaussagen",
+        "",
+        "- Aufwand ist das Volumen und Ergebnis ist die Preisspanne.",
+        "",
+    ]
+    _, similar_added = append_bullets(
+        sample_body,
+        "Kernaussagen",
+        ["Aufwand ist das Volumen, Ergebnis ist die Preisspanne."],
+        similar=0.72,
+    )
+    if similar_added != 0:
+        raise SystemExit("ähnlicher Stichpunkt wurde behalten")
+    _, different_added = append_bullets(
+        sample_body,
+        "Kernaussagen",
+        ["Eine enge Kerze mit hohem Volumen ist eine Anomalie."],
+        similar=0.72,
+    )
+    if different_added != 1:
+        raise SystemExit("anderer Stichpunkt wurde verworfen")
+    capped = cap_sections(
+        "X",
+        {"Kernaussagen": ["eins", "zwei", "drei"]},
+        Lauf(max_neue_punkte=2, max_zeichen=360),
+    )
+    if capped != {"Kernaussagen": ["eins", "zwei"]}:
+        raise SystemExit(f"Punktegrenze falsch: {capped}")
     import tempfile
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -1077,6 +1401,15 @@ def self_test() -> int:
             register=register,
             ledger=trading / "Pilot" / "data" / "ledger.jsonl",
         )
+        lauf = load_lauf()
+        if lauf.zuordnung_modell not in ALLOWED_MODELS or lauf.ergaenzung_modell not in ALLOWED_MODELS:
+            raise SystemExit("modell nicht erlaubt")
+        early = write_link_shards(roots, lauf)
+        if len(early) != 1:
+            raise SystemExit(f"link-shards: {early}")
+        early_text = early[0].read_text(encoding="utf-8")
+        if f"Strenge: {lauf.strenge}" not in early_text or f"Höchstens {lauf.max_begriffe}" not in early_text:
+            raise SystemExit(early_text)
         link_file = root / "link.json"
         add_file = root / "add.json"
         link_file.write_text(
@@ -1106,7 +1439,7 @@ def self_test() -> int:
         if len(fill_paths) != 1:
             raise SystemExit(f"fill-shards: {fill_paths}")
         fill_text = fill_paths[0].read_text(encoding="utf-8")
-        if "Marktstruktur" not in fill_text or "fertig" not in fill_text:
+        if "Marktstruktur" not in fill_text or "fertig" not in fill_text or "Höchstens" not in fill_text:
             raise SystemExit(fill_text)
         link_paths = write_link_shards(roots)
         if link_paths:

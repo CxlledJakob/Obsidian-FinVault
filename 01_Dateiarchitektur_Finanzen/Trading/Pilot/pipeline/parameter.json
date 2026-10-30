@@ -1,0 +1,19 @@
+{
+  "hinweis": "Nur diese Datei ändern. Der nächste go liest sie. Fast-Modelle sind ungültig und werden verworfen. Erlaubt sind grok-4.7-low, grok-4.7-medium, grok-4.7-high und grok-4.7-xhigh.",
+  "zuordnung": {
+    "modell": "grok-4.7-medium",
+    "strenge": "mittel",
+    "max_begriffe_pro_fragment": 18,
+    "fragmente_pro_shard": 4,
+    "strenge_werte": "streng = nur Definition, Regel oder Kriterium, lieber zu wenige. mittel = erklärt den Begriff oder gibt eine konkrete Regel, eine Namensnennung reicht nicht. locker = eine tragende Erwähnung reicht, ein Inhaltsverzeichnis nicht."
+  },
+  "ergaenzung": {
+    "modell": "grok-4.7-high",
+    "max_neue_punkte_pro_fragment": 12,
+    "max_zeichen_pro_punkt": 360,
+    "wiederholung_schwelle": 0.72,
+    "fragmente_pro_shard": 3,
+    "vorhandene_punkte_zeigen": 12,
+    "felder": "max_neue_punkte_pro_fragment ist die harte Obergrenze pro Begriff und Fragment. wiederholung_schwelle von 0 bis 0.95 wirft Umformulierungen weg, 0 schaltet das ab. vorhandene_punkte_zeigen ist, wie viele alte Stichpunkte der Subagent sieht. fragmente_pro_shard ist die Paketgröße."
+  }
+}
