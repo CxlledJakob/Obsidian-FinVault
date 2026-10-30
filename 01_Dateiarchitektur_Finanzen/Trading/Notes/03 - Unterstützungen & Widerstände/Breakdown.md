@@ -55,5 +55,7 @@ aktualisiert: 2026-10-30
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 98–117 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-008-p098-p117|S. 98–117]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 79–98 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-007-p079-p098|S. 79–98]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 336–355 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-022-p336-p355|S. 336–355]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 39–58 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-003-p039-p058|S. 39–58]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 153–172 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-009-p153-p172|S. 153–172]]
 
 ## Verwandte Themen

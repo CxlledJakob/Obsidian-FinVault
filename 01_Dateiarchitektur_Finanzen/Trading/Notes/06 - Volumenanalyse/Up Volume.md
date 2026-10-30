@@ -57,5 +57,6 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - A Complete Guide to Volume Price Analysis.pdf, S. 115–134 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-007-p115-p134|S. 115–134]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 400–419 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-022-p400-p419|S. 400–419]]
 
 ## Verwandte Themen

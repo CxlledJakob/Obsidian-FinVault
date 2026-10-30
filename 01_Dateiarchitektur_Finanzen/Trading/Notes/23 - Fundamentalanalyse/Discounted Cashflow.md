@@ -50,5 +50,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 324–343 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-018-p324-p343|S. 324–343]]
 
 ## Verwandte Themen

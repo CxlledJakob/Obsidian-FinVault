@@ -86,5 +86,6 @@ aktualisiert: 2026-10-30
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 297–314 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-019-p297-p314|S. 297–314]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 336–355 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-022-p336-p355|S. 336–355]]
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 355–370 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-023-p355-p370|S. 355–370]]
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 153–172 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-009-p153-p172|S. 153–172]]
 
 ## Verwandte Themen
