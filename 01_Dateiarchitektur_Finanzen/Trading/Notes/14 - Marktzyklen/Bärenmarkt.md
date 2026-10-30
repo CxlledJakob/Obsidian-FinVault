@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Bärenmarkt
@@ -23,6 +23,12 @@ aktualisiert: 2026-10-29
 
 - Im frühen Abwärtstrend gilt der aktuelle Preis als unfair für den Käufer.
 - Der Verlauf ist eine absteigende Treppe aus Balancebereichen. Überlappt die tiefere Balance die höhere, ist die Phase spät, das Ende bleibt offen.
+- Die typische Low-Low- oder High-High-Zykluslänge unterscheidet sich im Allgemeinen zwischen Bullen- und Bärenmärkten und schwankt mit Volatilität und Preiszyklen.
+- Die Zeitspanne eines Korrekturabschnitts überschreitet gewöhnlich nicht die Zeitspanne eines Trendabschnitts. Das 100-Prozent-Zeitretracement ist deshalb typischerweise das Maximum einer komplexen Korrektur.
+- Überlappende Abschnitte nach einem Fünf-Wellen-Rückgang warnen vor einem komplexen korrektiven Anstieg statt einem neuen Bullentrend. Die Zeitfaktoren deuten dann auf die Fortsetzung des Bärentrends zu einem neuen Tief.
+- Die Zeitrhythmen in Bullen- und Bärenmärkten sind oft verschieden. Das Time-Band-Menü führt deshalb eigene Spalten für Bear High und Bear Low.
+- Ein Hoch oder Tief im Time Band ist den Extrempunkten der Rohdatenperiode vergleichbar und nicht automatisch ein Extrempunkt größeren Grades.
+- Deutet Muster, Preis oder das Momentum der größeren Zeitebene auf eine größere Umkehr, hilft das Time Band, das enge Zeitfenster für dieses Hoch oder Tief zu bestimmen.
 
 ## Funktionsweise
 
@@ -47,6 +53,7 @@ aktualisiert: 2026-10-29
 
 ## Beispiele
 
+- Seit Beginn des gezeigten Bärentrends im ES betrug die längste High-High-Zählung 18 Fünfzehn-Minuten-Bars, abgeschlossen um 8:45 Uhr am 8. Januar.
 
 ## Unterschiedliche Quellenpositionen
 

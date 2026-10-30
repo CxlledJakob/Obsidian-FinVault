@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen|10 - Elliott-Wellen]]"
 weitere_hauptthemen: []
 unterthema: "Impulsstruktur"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Wellenextension
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -35,6 +33,7 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Das 100%-APP der Wellen 1 bis 3 und das 262%-Ex-Ret der Welle 4 werden selten erreicht, außer bei Fifth-Wave-Extensions an Rohstoffmärkten.
 
 ## Risiken und Grenzen
 

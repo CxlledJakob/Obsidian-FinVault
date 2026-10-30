@@ -35,6 +35,9 @@ aktualisiert: 2026-10-30
 - Eine positive Divergenz entsteht, wenn eine Reihe in einem etablierten Abwärtstrend weiter sukzessiv tiefere Täler setzt, während die zweite Reihe Täler auf höheren Niveaus bildet.
 - Das Bilden höherer Täler durch die zweite Reihe heißt auch bullische Nonconfirmation.
 - Für den subjektiven Talvergleich bleibt ungelöst, welche nicht gleichzeitigen Täler zusammengehören, wie lange die Divergenz dauern muss und wie viel Aufwärtsbewegung ein neues Tal begründet.
+- Der SPX bildete über mehr als zwei Jahre höhere Tiefs und höhere Hochs, obwohl die aufeinanderfolgenden bullischen Abschnitte einander überlappten.
+- Der EUR/USD war seit November 2005 in einem beständigen Bullentrend und machte höhere Hochs und höhere Tiefs.
+- Es gab keinen Musterfaktor, der nahelegte, dass dieser Bullentrend aus höheren Hochs und höheren Tiefs vorbei war. Die Woche zum 17. August 2007 wurde als weiteres Korrekturtief in diesem Trend gelesen, nicht als Trendende.
 
 ## Funktionsweise
 

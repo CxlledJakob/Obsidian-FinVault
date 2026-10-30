@@ -61,6 +61,8 @@ aktualisiert: 2026-10-30
 - Beide Hypothesen, Daniel, Hirshleifer und Subrahmanyam wie Barberis, Shleifer und Vishny, sagen voraus, dass Anleger manchmal übertrieben optimistisch und manchmal übertrieben pessimistisch sind und dass diese Überzeugungen umschlagen, wenn eine Serie widersprechender Information eintrifft.
 - Die Feedback-Theorie der Preisblasen beruft sich auf geschärften Anlegerfokus, nachahmendes Verhalten und übertriebenes Anlegervertrauen, ist aber schwer als wirklich wirksam zu beweisen.
 - Shiller sieht echte Ponzi-Systeme als Bestätigung. Anfangs sind die Anleger skeptisch und setzen nur kleine Beträge. Sobald frühe Anleger Gewinne erzielen und ihre Erfolgsgeschichte erzählen, fassen spätere Vertrauen, und der Kapitalzufluss gewinnt Momentum.
+- Es kommt die Zeit, in der man glaubt, den Markt durchschaut zu haben, und jede technische Position von der kurzen bis zur langen Frist auf einen einzigen großen Trend zeigt.
+- Dann wird jede vernünftige Risikoregel gebrochen, das Konto mit einem weiten Stop in die Position gelegt, um ihr Raum zu geben, und bei Gegenlauf wird zum vermeintlich besseren Preis noch weiter aufgestockt.
 
 ## Funktionsweise
 
@@ -79,6 +81,7 @@ aktualisiert: 2026-10-30
 - Nichtlineare Auktionen entstehen, wenn diese Illusion zerbricht. Das Verhalten wird dann extrem sprunghaft und ruiniert die Mehrheit, die nicht annimmt, was tatsächlich geschieht.
 - Der Bruch, vielleicht aus einem erst im Nachhinein erkennbaren fundamentalen Grund, trifft oft nach einer ungebrochenen Erfolgsserie beim maximalen Leverage, und der seltene Verlust kann katastrophal sein.
 - Die erste Stichprobe, 13 graue und 7 weiße Perlen von 20, schließt mit Sicherheit aus, dass der Grauanteil der ganzen Schachtel 0 oder 1,0 ist, und lässt jeden genaueren Wert unsicher.
+- Der Markt hört nicht auf, gegen die Position zu laufen. Das Ende ist ein großer Verlust oder das Schließen durch den Broker, wenn das Kapital für die Margin aufgebraucht ist.
 
 ## Beispiele
 

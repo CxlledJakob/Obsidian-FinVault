@@ -52,6 +52,30 @@ aktualisiert: 2026-10-30
 - Kauf-Stops an oder nahe dem Widerstand werden beim Bruch ausgelöst und treiben den Preis weiter nach oben.
 - Ein Intraday-Einstieg kann an verschiedenen Widerstandsniveaus erfolgen.
 - Die Boxes von Darvas sind die altbekannten Unterstützungs- und Widerstandszonen der technischen Analyse.
+- Die dynamischen Zeit- und Preisstrategien identifizieren im Voraus wahrscheinliche Preis- und Zeitzielzonen nicht nur für Unterstützung und Widerstand, sondern vor allem für die Trendumkehr.
+- Diese Strategien heißen führende Indikatoren, weil sie Bedingungen mit einem Ergebnis hoher Wahrscheinlichkeit im Voraus benennen; erfüllt der Markt die Bedingungen, ist ein Trade-Setup gemacht.
+- Nach den Dynamic Price Strategies in Kapitel 4 ist man nicht nur auf vorübergehende Unterstützungs- und Widerstandsniveaus vorbereitet, sondern auf die konkreten Preisniveaus für Umkehrungen von Trend und Gegentrend.
+- Fib-Retracements allein sagen nicht im Voraus, welches von drei, vier oder fünf Niveaus Widerstand oder Trendumkehr wird.
+- Interne Retracements liegen unter 100 %; verwendet werden 0,382, 0,50, 0,618 und 0,786.
+- 0,50 ist kein Fib-Verhältnis; 0,786 ist die Quadratwurzel aus 0,618, ebenfalls kein Fib-Verhältnis, und soll immer dabei sein.
+- Das 38,2%-Retracement ist gewöhnlich nur vorübergehender Widerstand.
+- Die meisten Korrekturen enden nahe 50 % oder 61,8 %.
+- 78,6 % ist typischerweise das Maximum; ein Schluss darüber bedeutet gewöhnlich, dass der Trend weiterläuft.
+- Ein APP nahe einem internen Retracement zeigt, welches Niveau die Korrektur wahrscheinlich beendet und nicht nur vorübergehender Widerstand ist.
+- Eine enge Zone aus mehreren Projektionen ist das Ziel, nicht der exakte Retracement-Preis.
+- Die ideale Zone eines ABC-Hochs enthält je eine Projektion aus internem Retracement, APP und externem Retracement; interne Retracements sind am wichtigsten.
+- Externe Retracements über 100 %, mit Fokus auf 127 % und 162 %, helfen, das Ende des letzten Abschnitts zu finden, und bestätigen die anderen Projektionen.
+- Die wahrscheinlichen Kursziele für ein Hoch der Welle 5 werden im Voraus als enge Zone bestimmt, wenn vier Abschnitte komplett sind.
+- Nicht jedes Hoch entsteht genau auf dem Schlüsselziel.
+- Preis allein trifft nicht jede Widerstandsstelle; Momentum und Muster gehören zur Entscheidung.
+- Automatische Ziele für Widerstand und Trendumkehr führen in Schwierigkeiten, weil nicht alle Variablen programmierbar sind.
+- Enge Zeitziele werden im Voraus für Unterstützung, Widerstand und Trendumkehr projiziert.
+- Preisretracements und Alternate Price Projections kennzeichnen im Voraus das wahrscheinliche Preisziel für Widerstand und für die Umkehr.
+- Alternate Price Projections qualifizieren, welches Preisretracement wahrscheinlich Widerstand oder die Trendumkehr bringt.
+- Eine Fibonacci-Preiszone aus mehreren Extensionen und Retracements kann Widerstand bilden.
+- Mehrere 100-Prozent-APPs in einer sehr engen Zone heißen Symmetrie-Setup und markieren diesen Widerstand.
+- Ein mögliches ABC-Hoch an einer solchen größeren Widerstandszone wird als Two-Step-Pattern bezeichnet.
+- Die Decke eines Regressionskanals bei zwei Standardabweichungen ist ein konkretes oberes Ziel, an dem eine Long-Position geschlossen werden kann.
 
 ## Funktionsweise
 
@@ -111,6 +135,7 @@ aktualisiert: 2026-10-30
 - Ein paar Ticks über der Linie überwinden den Widerstand nicht. Die Linie ist elastisch, und es braucht eine sichtbare Lücke im Schluss.
 - Ohne deutlich überdurchschnittliches Volumen ist der scheinbar gebrochene Widerstand eine Falle.
 - Die Opening-Gap-Long-Bedingung ist erfüllt, wenn das Open über dem Vortageshoch mal (1 plus 0,1 mal der verschobenen 90-Tage-Standardabweichung der Close-to-Close-Rendite) liegt.
+- Vor dem 38-Prozent-Zeitretracement ist an einem Preisziel mit Momentumumkehr eher nur vorübergehender Widerstand zu erwarten, kein Abschluss der Korrektur.
 
 ## Risiken und Grenzen
 
@@ -126,6 +151,13 @@ aktualisiert: 2026-10-30
 - Im GBP/USD auf der Stunde hielt die neue Decke, und es folgte ein Preiswasserfall.
 - Im YM gab der Bruch über den Widerstand der Eröffnung Vertrauen, obwohl das Niveau nur zweitrangig war.
 - Im Pennant von Microsoft kämpfte die Aktie nach oben und war zugleich nicht bereit zu fallen, bis die Spannung sich löste.
+- Ohne nahes APP war 61,8 % im Yen-Beispiel wahrscheinlich kein bedeutender Widerstand; das korrektive Hoch lag eher in der Zone 117,66 bis 118,14 oder nahe 78,6 %.
+- Über der Zone aus 50 % und 100%-APP sollte der Markt bis nahe 78,6 % laufen und 61,8 % überspringen.
+- Bei Costco lag die Zone bei 71,66–72,56, nur ein paar Punkte über dem letzten Bar nach drei Monaten starkem Anstieg und einem neuen Hoch; das Aufwärtspotenzial konnte sehr begrenzt sein, und ein bedeutender Rückgang konnte bevorstehen.
+- EUR/GBP berührte das 62-Prozent-Preisretracement, bevor der Rückgang auf ein neues Tief einsetzte.
+- Das korrektive Hoch im ES lag am 50-Prozent-Retracement. IBM berührte ebenfalls das 50-Prozent-Preisretracement am 100-Prozent-Zeitretracement.
+- Der ES hatte am Morgen des 10. März 2008 eine größere Widerstandszone erreicht, mit drei kleineren 100-Prozent-APPs, dem 127-Prozent-Ext-Ret von Welle B, dem 50-Prozent-Retracement vom Hoch des 7. März und dem 78,6-Prozent-Retracement vom frühen Hoch desselben Morgens.
+- Die Sojabohnen wurden am 13. Juli geschlossen, als die Zwei-Standardabweichungs-Decke des Regressionskanals berührt wurde.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -52,6 +52,28 @@ aktualisiert: 2026-10-30
 - An oder nahe der Unterstützung liegen viele Verkaufs-Stop-Orders; ihr Auslösen treibt den Preis weiter nach unten.
 - Ein Intraday-Breakout-Beispiel steigt an verschiedenen Unterstützungsniveaus ein.
 - Die Boxes von Darvas sind die altbekannten Unterstützungs- und Widerstandszonen der technischen Analyse.
+- Die dynamischen Zeit- und Preisstrategien, entwickelt über 20 Jahre, identifizieren im Voraus wahrscheinliche Preis- und Zeitzielzonen nicht nur für Unterstützung und Widerstand, sondern vor allem für die Trendumkehr.
+- Diese Preis- und Zeitstrategien heißen führende Indikatoren, weil sie Bedingungen mit einem Ergebnis hoher Wahrscheinlichkeit im Voraus benennen; erfüllt der Markt sie, entsteht ein Trade-Setup.
+- Die Dynamic Price Strategies in Kapitel 4 bereiten nicht nur auf vorübergehende Unterstützungs- und Widerstandsniveaus vor, sondern auf die konkreten Preisniveaus für Umkehrungen von Trend und Gegentrend.
+- Fibonacci-Preis-Retracements allein sind, wie eine Momentum-Studie auf einem Zeitrahmen, von geringem praktischem Nutzen für eine Handelsentscheidung; Kapitel 4 zeigt, welches Retracement-Niveau eine Korrektur wahrscheinlich abschließt.
+- Interne Retracements unter 100 % mit den Verhältnissen 0,382, 0,50, 0,618 und 0,786 helfen, das Kursziel einer Korrektur zu identifizieren.
+- Die meisten Korrekturen enden an oder sehr nahe bei einem dieser vier Niveaus, besonders bei 50 % oder 61,8 %.
+- Das 38,2%-Retracement ist gewöhnlich nur vorübergehende Unterstützung.
+- Das 78,6%-Retracement ist typischerweise das Maximum; ein Schluss darüber spricht dafür, dass keine Korrektur vorliegt, sondern der Trend zu einem neuen Hoch oder Tief weiterläuft.
+- Welches Retracement die Korrektur beendet und welches nur vorübergehende Unterstützung ist, zeigen Alternate Price Projections und externe Retracements.
+- Eine enge Zone aus Retracement und APP ist das wahrscheinlichere Ende der Korrektur.
+- Fällt ein APP nicht nah an ein Retracement, taugt es nur als kleinere Unterstützung, und der Fokus liegt auf den Retracements.
+- Korrekturen im Trend haben oft ähnliche Preisspannen; die 100%-APPs früherer Korrekturen markieren dann die Zone des nächsten Korrekturtiefs.
+- Externe Retracements über 100 %, üblich 127 %, 162 % und 262 %, helfen, den letzten Abschnitt zu finden, und bestätigen andere Projektionen, statt allein als Ziel zu dienen.
+- Die ideale Zielzone einer Korrektur enthält mindestens ein internes Retracement und ein APP; interne Retracements sind am wichtigsten, weil die meisten Korrekturen nahe einem der vier enden.
+- Interne Retracements bleiben der Fokus der Projektionen für eine ABC-Korrektur.
+- Eine enge Zone mit je einer Projektion aus den drei Sätzen ist die vorbereitete Stelle, an der ein Korrektur- oder Trendtief wahrscheinlich ist.
+- Erreicht der Markt die Zone, sind die Preisbedingungen einer wahrscheinlichen Umkehr erfüllt.
+- Nicht jedes Tief liegt auf dem Schlüsselziel.
+- Der anfängliche Kapitaleinsatz lässt sich gegen das bisherige Tief bemessen; im XAU-Beispiel waren es 2 bis 3 Punkte zwischen dem letzten Schluss und dem tiefsten Tagesschluss.
+- Im Voraus werden enge Zeitziele für Unterstützung, Widerstand und Trendumkehr projiziert.
+- Preisretracements und Alternate Price Projections kennzeichnen im Voraus das wahrscheinliche Preisziel für Unterstützung, Widerstand und die Umkehr von Trends und Korrekturen.
+- Alternate Price Projections qualifizieren, welches Preisretracement wahrscheinlich die Stelle von Unterstützung, Widerstand oder Trendumkehr ist.
 
 ## Funktionsweise
 
@@ -110,6 +132,8 @@ aktualisiert: 2026-10-30
 - Gut ausgebaute Stauzonen und kleine frühere Pausen werden unterschieden. Als Kampagnenziel dienen die ausgebauten Zonen, nicht jede kurze frühere Pause.
 - Die Linie ist elastisch und kann kurz durchhandelt werden, bevor der Markt in die Zone zurückkehrt.
 - Wyckoffs Ursache und Wirkung verbindet die Dauer dieser Unterstützung mit der Wucht der späteren Bewegung.
+- Liegt eine Korrektur an einem Preisziel mit Momentumumkehr, aber noch vor dem 38-Prozent-Zeitretracement, ist am ehesten nur vorübergehende Unterstützung zu erwarten, kein Abschluss der Korrektur.
+- Erreicht die Korrektur Preis- oder Momentum-Unterstützung und liegt sie in der typischen Zeitretracement-Zone, ist das Setup für ein korrektives Hoch oder Tief vollständig.
 
 ## Risiken und Grenzen
 
@@ -125,6 +149,12 @@ aktualisiert: 2026-10-30
 - Auf der Stunde definierten drei Kerzen den Boden. Fallender Kurs bei fallendem Volumen sprach dagegen, dass der Fall weit läuft.
 - EUR/CHF testete auf der Stunde die Unterstützung des Dreifachbodens und prallte ab.
 - Im Kaffee-Future lag das Volumen am Boden des Wasserfalls über dem Durchschnitt und wirkte neben dem extremen Anstieg klein.
+- Ein Tief der Welle 5 kann am 162%-Ex-Ret der Welle 4 liegen, wie im DJIA-Beispiel der letzte Abschnitt eines Fünf-Wellen-Trends.
+- Über etwa zwei Jahre lagen die vier primären SPX-Korrekturtiefs innerhalb weniger Punkte von 50 % oder 61,8 %.
+- Der XAU erreichte die im Voraus bestimmte Zielzone der Welle C, und zwei Tage später kam die bullische Momentumumkehr aus dem überverkauften Bereich.
+- Die ES-Zone 1404,50–1405,50 vereinte je ein Ziel aus den drei Sätzen für ein mögliches Tief der Welle 5.
+- Beim XAU auf Tagesschlussdaten war die eingekreiste Zone die wahrscheinliche Stelle eines Tiefs der Welle C, falls eine ABC-Korrektur vorlag.
+- Das XAU-Tief entstand dort, wo das 50-Prozent-Preisretracement und die 62-Prozent-Alternate-Price-Projection zusammenfielen, bei oversoldem Tagesmomentum.
 
 ## Unterschiedliche Quellenpositionen
 

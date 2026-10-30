@@ -42,6 +42,10 @@ aktualisiert: 2026-10-30
 - Nachträglich heißt, die Daten werden gemustert, nachdem die Ergebnisse bekannt sind.
 - Dieselben Suchverfahren finden nachträgliche Vorhersagen historischer Ereignisse auch in Texten ähnlicher Länge, die keine Bibel sind, etwa im Sears-Katalog, in Moby Dick, in Tolstois Krieg und Frieden oder im Telefonbuch von Chicago; die Codes sind ein Produkt der Suche und nicht des durchsuchten Textes.
 - Barry Simon hält fest, dass allein im Chumasch, einem der 14 Bücher der Tora, bei gleichen Buchstabenabständen von 1 bis 5.000 ungefähr 3 Milliarden Wörter erzeugbar sind; das ungebremste Suchen verbrennt übermäßig Freiheitsgrade.
+- In fast jedem Handelsbuch und Kurs der letzten 20 oder mehr Jahre zeigen die Lehrer viele nachträgliche Beispiele, wie ihr Trendindikator die Richtung lange nach Etablierung des Trends erkannte; einen Trend zu zeigen, nachdem er steht, ist leicht.
+- Es ist leicht, ein Buch mit nachträglichen Trendbeispielen zu füllen; Trendlinien, gleitende Durchschnitte, Kanäle und Momentum-Indikatoren können den Trend auf historischen Daten zeigen.
+- Diese Techniken werden wiederholt als Trendindikatoren mit Wert für praktische Entscheidungen beworben, weil sich leicht viele Chartbeispiele finden lassen, die ihren Wert zu belegen scheinen.
+- Auf jedes nachträglich gut gewählte Beispiel findet der Autor schnell mindestens zwei Fälle, in denen der Trendindikator eine Trendumkehr nicht rechtzeitig erkannte.
 
 ## Funktionsweise
 
@@ -78,6 +82,7 @@ aktualisiert: 2026-10-30
 - Gezielte Strategien zur Verringerung des Hindsight Bias sind unwirksam.
 - Selbst wer vor dem Hindsight Bias gewarnt wird und ihn vermeiden soll, unterliegt ihm weiter.
 - Der Hindsight Bias scheint sich rationaler Kontrolle zu entziehen.
+- Man weiß nie, was auf der rechten Seite des Charts geschieht, der Seite ohne Balken; Entscheidungen gelten nur mit der Information bis zum letzten Preisbalken.
 
 ## Beispiele
 
@@ -92,6 +97,12 @@ aktualisiert: 2026-10-30
 - Die Wahrscheinlichkeit vor dem Ereignis, dass Evelyn Adams oder eine bestimmte andere Person die Lotterie zweimal gewinnt, ist 1 zu 17 Billionen; die Wahrscheinlichkeit nach dem Ereignis, unter allen Spielern jemanden mit zwei Gewinnen zu finden, schätzten Diaconis und Mosteller auf etwa 1 zu 30.
 - Ein 1992 gefundener Zusammenhang der Wörter 1990, Saddam Hussein und Krieg schien den Irakkrieg von 1990 vorherzusagen; Bush, Irak, Invasion und Desert Storm hätten ebenso getaugt, und sobald die Einzelheiten bekannt sind, passen sehr viele Wortkombinationen.
 - Drosnin zeigte in einem späteren Buch Codes, die den 11. September 2001 vorhergesagt hätten, fand sie aber erst nach den Anschlägen und konnte vorher nicht warnen.
+- Das SPX-Tagesbeispiel der Momentum-Umkehren hat er etwas ausgewählt, damit die Umkehren klar zu sehen sind; nicht jede Umkehr liegt so nah am Preisextrem, obwohl es die meiste Zeit so ist.
+- Strategien für Trading Ranges haben alle nur nachträglich funktioniert; man kann nie im Voraus wissen, wann eine Trading Range beginnt.
+- Er hätte eine Serie gut gewählter Beispiele nehmen können, die jedes Mal fehlerlos funktionierten, und zeigt stattdessen Perioden, in denen Setups Verlust oder keinen Trade brachten.
+- In einem Artikel über eine Momentum-Divergenz-Strategie gab es auf denselben Daten weitere identische Setups, die Verluste gebracht hätten und die der Autor einfach ignorierte.
+- Ganze Pläne auf Preis-Momentum-Divergenz mit gut gewählten Beispielen hat er nie Geld verdienen sehen; sie werden an naive Trader verkauft, die nicht selbst prüfen, wie nützlich oder nutzlos die Setups sind.
+- Systeme, die Einstellungen an historischen Daten optimieren und erstaunliche Ergebnisse behaupten, hält er für Unsinn in Handelspublikationen.
 
 ## Unterschiedliche Quellenpositionen
 

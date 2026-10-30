@@ -30,6 +30,12 @@ aktualisiert: 2026-10-30
 - Das schwache Abschneiden der meisten professionellen Anleger kommt aus dem fehlenden Gleichgewicht der beiden Denkseiten.
 - Die meisten Menschen werden von Gefühlswellen gesteuert, nicht von durchgehend logischem Denken.
 - Kognitive Dissonanz, das Unbehagen bei zwei gegensätzlichen Gedanken, kann nützlich sein, wenn ihre Ursache durchdacht wird.
+- Entscheidungen im laufenden Trade gehören zur Marktlage, nicht zu Angst oder Gier, die mit dem ursprünglichen Grund des Trades nichts zu tun haben.
+- Wer den Bildschirm den ganzen Tag Tick für Tick sieht, verändert Disziplin, Überzeugungen, Ordnung und die Fähigkeit, Entscheidungen zu treffen.
+- Bei sehr kurzen Tagestrades ist es extrem schwer, diszipliniert am Plan zu bleiben und logische Entscheidungen zu treffen.
+- Angst und Gier verdrängen zeitweise den gesunden Menschenverstand gegenüber unrealistischen Versprechen.
+- Einen fremden Plan genau zu befolgen fällt schwer, weil objektive Regeln infrage gestellt und unberechtigte Annahmen getroffen werden.
+- Wer Daytrading lernen will, soll zuerst einen Plan und Erfahrung mit Swing- und Positionstrades aufbauen, vorzugsweise ohne Hebel.
 
 ## Funktionsweise
 

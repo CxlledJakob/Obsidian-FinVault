@@ -43,6 +43,17 @@ aktualisiert: 2026-10-30
 - Hält der Markt unter der ehemaligen Unterstützung, ist diese zur Widerstanddecke geworden und kann den Rücklauf stoppen.
 - Ein normales Widerstandsgebiet braucht zum Bruch gutes, stetig steigendes Volumen. Eine Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt.
 - Ein Widerstand der Eröffnung kann nur zweitrangig sein und trotzdem Vertrauen geben, wenn er auf dem Weg nach oben bricht.
+- Die Dynamic Price Strategy sucht nicht nur Widerstand, sondern eine relativ enge Kurszone, in der eine Korrektur oder ein Trend gewöhnlich endet.
+- Retracement-Niveaus allein sind wenig nütze; das Ziel ist das Niveau, das die Korrektur abschließt, nicht nur vorübergehender Widerstand.
+- Um das Retracement herum wird eine relativ enge Preiszone gesucht, damit die Umkehr nicht genau auf dem Retracement-Preis erwartet wird.
+- Eine relativ enge Zone aus internem Retracement und APP ist die wahrscheinliche Zone der Korrekturumkehr.
+- Das 38,2%-Retracement ist gewöhnlich nur vorübergehender Widerstand.
+- Ein Schluss über 78,6 % bedeutet typischerweise, dass der Trend zu einem neuen Hoch oder Tief weiterläuft statt die Korrektur zu beenden.
+- Die ideale Zone eines korrektiven Hochs enthält nach Möglichkeit je eine Projektion aus internem Retracement, APP und externem Retracement.
+- Enge Zielzonen für Widerstand und Trendumkehr werden im Voraus bestimmt, sobald vier Abschnitte eines möglichen Fünf-Wellen-Trends komplett sind.
+- Die ideale Zone enthält je eine Projektion aus den drei Sätzen der Welle 5.
+- Nicht jedes Hoch liegt genau auf dem im Voraus bestimmten Schlüsselziel.
+- Automatische Widerstandsziele sind zu meiden, weil die Programme Annahmen treffen müssen und nicht alle Variablen programmierbar sind.
 
 ## Funktionsweise
 
@@ -85,6 +96,10 @@ aktualisiert: 2026-10-30
 - Auf der Stunde hielt die neue Decke, und der Markt fiel in einem Preiswasserfall.
 - AUD/USD scheiterte auf dem Tageschart dreimal an 1,0600.
 - Im aufsteigenden Dreieck des EUR/USD wurde immer wieder dieselbe Decke getestet, bis der Bruch mit Volumen kam.
+- Ohne APP nahe 61,8 % war dieses Retracement im USD/JY wahrscheinlich kein bedeutender Widerstand.
+- Die Zone 117,66 bis 118,14 aus 50%-Retracement und 100%-APP hatte die höheren Chancen für das korrektive Hoch.
+- Die einzige Zone mit je einer Projektion aus allen drei Sätzen war das wahrscheinlichste ABC-Hoch; das Hoch der Welle C entstand dort.
+- Bei Costco lag die Zone bei 71,66–72,56 und damit nur ein paar Punkte über dem letzten Bar, nach drei Monaten starkem Anstieg und einem neuen Hoch.
 
 ## Unterschiedliche Quellenpositionen
 

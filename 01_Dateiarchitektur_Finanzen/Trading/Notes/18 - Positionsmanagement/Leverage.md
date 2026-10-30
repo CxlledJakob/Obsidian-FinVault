@@ -41,6 +41,21 @@ aktualisiert: 2026-10-30
 - Im Münzbeispiel ist der optimale Einsatzanteil 0,25. Ein Arbitrageur mit guter Information und zu viel Hebel entspricht einem höheren Anteil; bei 0,58 ist der Verlust des gesamten Kapitals wahrscheinlich, trotz günstiger Erwartung.
 - Long Term Capital Management hatte die erkannten Fehlbewertungen im Herbst 1998 letztlich auf der richtigen Seite, doch der Überhebel nahm dem Fonds die Ausdauer, die Positionen durch eine kurze Phase noch größerer Fehlbewertung zu halten.
 - Der Kollaps des Fonds hätte beinahe den gesamten Finanzmarkt mitgerissen.
+- Ein Kapitaleinsatz von 24,75 Punkten je Kontrakt, vom Einstieg bei 1431,25 bis zum Stop bei 1406,50, ist größer, als ein stark gehebelter Future-Trader wahrscheinlich akzeptiert.
+- Ist der Einsatz zu groß, kann der Trade mit weniger oder ohne Hebel in einem ETF wie dem SPY genommen werden, der den S&P abbildet, statt im gehebelten Future.
+- Währungs-ETFs können mit minimalem bis keinem Hebel für mögliche langfristige Positionen genutzt werden.
+- Dieselbe Alternative ist ein Fonds statt eines Future-Kontrakts oder einer stark gehebelten Forex-Position. Der Trade kann auch ganz ausgelassen werden.
+- Ein 60-Minuten-Setup mit signifikantem Anfangseinsatz kann für ein gehebeltes Future-Konto mit relativ kleinem Kapital ungeeignet und für eine ungehebelte oder marginierte SPY- oder Indexfondsposition geeignet sein.
+- Hebel vervielfacht Gewinne auf der richtigen Seite und kann auf der falschen Seite sehr schnell das Konto leeren.
+- Wer mit ungehebelten Trades kein Geld verdient, wird mit gehebelten Trades keines verdienen.
+- Wer mit ungehebelten mittelfristigen Trades auf Wochen- und Tagesdaten kein Geld verdient, wird bei kurzfristigen Trades in hoch gehebelten Märkten schnell ausgeräumt.
+- Manche Forex-Konten erlauben einen Hebel bis 100:1; dieser Hebel ist zu lassen, bis der Handel gekonnt ist.
+- Die meisten großen Währungspaare haben einen ETF, der bis zum profitablen Plan anstelle des gehebelten Forex-Kontos gehandelt werden kann.
+- Wer den ES-Mini handeln will, handelt zuerst den SPY-ETF, bis er durchgehend profitabel ist, und wechselt erst dann auf den gehebelten Future.
+- Der Trend der letzten etwa zehn Jahre ging zu kürzeren Zeithorizonten, besonders zum Daytrading mit hohem Hebel; früher liefen auch gehebelte Future-Trades über Tage bis Wochen oder Monate.
+- Tagestrader handeln Ticks statt Punkte; um die Kosten zu decken, brauchen sie Größe, und zwei oder drei Future-Kontrakte lohnen die Zeit selbst bei hoher Trefferquote kaum.
+- Früher kostete ein Future-Kontrakt bis zu 100 Dollar Kommission, und der Fill lag wegen der Verzögerung oft einige Ticks vom Entscheidungsmarkt weg; heute kosten Future-Trades etwa 3 Dollar und Aktien einen Penny je Aktie, mit Ein-Minuten-Charts und sofortiger Ausführung.
+- Die neue Technik hat den Anteil erfolgreicher Trader wahrscheinlich nicht erhöht, eher gesenkt.
 
 ## Funktionsweise
 
@@ -87,6 +102,7 @@ aktualisiert: 2026-10-30
 - Half-Kelly und die Lesart von Kelly als Obergrenze begrenzen die Ruin-Folge eines überschätzten Hebels.
 - Die 3-fach-ETFs BGU und TNA liegen über dem Kelly-Hebel von etwa 1,8 der Russell-Indizes; ihr Nettoinventarwert kann auf null gehen.
 - Unknown Unknowns schaden, nicht die Known Unknowns; die Modelle lassen sich nicht abschalten, bevor die Unknown Unknowns eintreten.
+- Große gehebelte Positionen mit weitem Stop können in Verlusten enden, die der Broker schließt, wenn die Margin aufgebraucht ist.
 
 ## Beispiele
 

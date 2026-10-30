@@ -30,6 +30,14 @@ aktualisiert: 2026-10-30
 - Kürzere Abschnitte können Übergangsregime sein und werden ignoriert.
 - Das zweite Regime reicht bis zum Zeitpunkt des Schreibens.
 - Um die Finanzkrise 2008 ändern VIX und seine Futures das Regime, was den Leistungssprung der VX-Kalenderspread-Strategie um Oktober 2008 erklären kann.
+- Momentumtrends wechseln von niedriger Volatilität mit relativ seltenen Momentumumkehren zu hoher Volatilität mit relativ häufigen Momentumumkehren.
+- Ein System, das die Art der künftigen Momentumzyklen vorwarnt, gibt es nicht, ebenso wenig eines, das im Voraus eine Handelsspanne oder einen beständigen Trend anzeigt.
+- Gelegentlich werden die Indikatoreinstellungen an die jüngste Momentumvolatilität angepasst.
+- Ändern Trendgeschwindigkeit und Volatilität und sind die früher besten Einstellungen nach einigen Momentumzyklen nicht mehr optimal, kann die Lookback-Periode verkürzt oder vergrößert werden.
+- Für volatile und für ruhige Märkte werden keine getrennten Momentumregeln verwendet, weil unbekannt ist, welche Marktart bevorsteht.
+- Es wird Perioden geben, in denen sich Marktvolatilität und Momentumzyklen ändern und die bisher genutzten Indikatoreinstellungen deutlich weniger nützlich sind.
+- Ob sich Volatilität und Momentumzyklen künftig ändern, lässt sich nie wissen; anzunehmen ist, dass sie fortbestehen.
+- Dieselben Einstellungen blieben über die Monate nach dem Beispiel nützlich, bis ein stärkerer Aufwärtstrend mit kleineren Korrekturen die bisherige Zonenreaktion veränderte.
 
 ## Funktionsweise
 

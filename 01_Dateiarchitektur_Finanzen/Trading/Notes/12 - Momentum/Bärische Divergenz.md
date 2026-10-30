@@ -21,9 +21,19 @@ aktualisiert: 2026-10-30
 - Eine negative oder bärische Divergenz liegt vor, wenn eine Reihe weiter Gipfel auf sukzessiv höheren Niveaus setzt, während die andere Reihe Gipfel auf tieferen Niveaus bildet.
 - Das Ausbleiben sukzessiv höherer Gipfel der zweiten Reihe heißt auch bärische Nonconfirmation.
 - Objektiv liegt eine negative Divergenz vor, wenn der Divergenzindikator unter seiner unteren Schwelle steht.
+- Preis und Momentum trenden nicht immer zusammen: Ein Momentum-Indikator kann bärisch umkehren und fallen, während der Preistrend weiter steigt, weil die Änderungsrate abnimmt und der bullische Trend sich nur verlangsamt.
+- Preistrend und Momentumtrend laufen dann einander entgegen.
+- Verlangsamt sich ein Preistrend, ohne umzukehren, macht der Momentumtrend oft eine Umkehr und trendet entgegen dem Preis.
+- Eine Preis-Momentum-Divergenz nach unten liegt vor, wenn der Preis ein neues Hoch macht, der Momentum-Indikator aber ein tieferes Hoch.
 
 ## Kernaussagen
 
+- Nie erwarten, dass der Preis umkehrt, wenn der Indikator umkehrt; oft kehren beide zusammen um, manchmal divergieren sie, weil der Preistrend sich nur verlangsamt und den Indikator zur Umkehr zwingt.
+- Jeder Indikator divergiert ab und zu mit dem Preis.
+- Divergieren ein bullischer Preistrend und ein bärischer Momentumtrend, hält das bärische Momentum des größeren Zeitrahmens aus Trades heraus, während der Preistrend sich verlangsamt, und begrenzt zumindest die Verluste der Verlusttrades.
+- Ein bullischer Preistrend bei bärischem Momentum entsteht, wenn die Vorwärtsrate gegenüber zuvor sinkt und der Markt mit kurzen Schwüngen choppig wird; diese geringere Änderungsrate zwingt jeden Preis-Momentum-Indikator, bärisch zu werden.
+- Sie warnt, dass der Anstieg langsamer wird und bald ein Preishoch entstehen kann, dem ein Rückgang folgt.
+- Eine bärische Preis-Momentum-Divergenz warnt, dass der Anstieg sich verlangsamt und bald ein Kurshoch entstehen kann, dem ein Rückgang folgt.
 
 ## Funktionsweise
 
@@ -55,9 +65,16 @@ aktualisiert: 2026-10-30
 - Der subjektive Vergleich der Gipfel ist nicht wiederholbar und nicht testbar, weil Zeitpunkt, nötige Dauer und nötige Abwärtsbewegung der Gipfel dem Urteil überlassen bleiben.
 - Eine Divergenz führt zu einem von zwei Ausgängen: die Reihe, deren Trend ungestört blieb, dreht zur abweichenden Begleiterin, oder die abweichende Reihe kehrt zur Begleiterin zurück.
 - Ein abgeschlossenes Umkehrsignal wird erst unterstellt, wenn beide Reihen überzeugend gedreht haben und wieder in dieselbe Richtung laufen.
+- Auf jedes Preis-Momentum-Divergenzbeispiel, das eine Trendumkehr brachte, kamen nach der Aussage des Autors auf denselben Daten ein oder zwei und wahrscheinlich deutlich mehr, die keine Trendumkehr brachten.
+- Ganze Tradingpläne auf Preis-Momentum-Divergenz mit gut gewählten Beispielen hat er nie Geld verdienen sehen; sie werden an naive Trader verkauft, die nicht selbst prüfen, wie nützlich oder nutzlos die Setups sind.
+- In Artikeln wurden auf denselben Chartdaten identische Divergenz-Setups ignoriert, die Verluste gebracht hätten.
+- Er hält veröffentlichte Momentumsysteme, die Einstellungen an historischen Daten optimieren und erstaunliche Ergebnisse behaupten, für Unsinn und fordert jeden Indikator-Anhänger heraus, ein auf einem einzelnen Indikator dauerhaft profitables System für einen beliebigen Markt zu belegen.
 
 ## Beispiele
 
+- In den 60-Minuten-Daten ES-0607 lief der Preis nahe dem Hoch zu einem neuen Hoch, während das Momentum bärisch umkehrte und fiel, weil die Rate des Preisanstiegs sich verlangsamte.
+- Im 60-Minuten-EUR/USD stieg der Preis weiter, während das Momentum fiel, weil die Rate des Anstiegs sich verlangsamte.
+- Die gewählte Anleiheperiode von 18 Monaten enthält einen längeren Zyklus der Preis-Momentum-Divergenz: Das Wochenmomentum war bärisch, während die Anleihepreise seitwärts bis aufwärts liefen und die Periode mit wenig Nettogewinn endete.
 
 ## Unterschiedliche Quellenpositionen
 

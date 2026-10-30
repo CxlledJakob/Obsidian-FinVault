@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Bullenmarkt
@@ -28,6 +28,10 @@ aktualisiert: 2026-10-29
 - Im frühen Aufwärtstrend gilt der Preis als unfair für den Verkäufer. Meldungen dagegen bleiben meist kurze Rücksetzer, Meldungen dafür beschleunigen den Trend.
 - Ein starker Verlauf wechselt zwischen Aufwärtsstrecke und Balance. Mehr Abstand zwischen den Balancebereichen bedeutet mehr Stärke; im Alter schrumpft dieser Abstand.
 - Eine mehrjährige Rally kann ein Bullenmarkt bleiben, auch wenn sie in einem längerfristigen Bracket liegt, und wird als Aufwärtstrend behandelt.
+- Die typische Low-Low- oder High-High-Zykluslänge unterscheidet sich im Allgemeinen zwischen Bullen- und Bärenmärkten und schwankt im Zeitverlauf, wenn Volatilität und Preiszyklen schwanken.
+- Was früher ein ziemlich regelmäßiger Zyklus war, muss in der jüngsten Marktaktivität nicht mehr sichtbar sein. Zyklen sind dynamisch, nicht statisch.
+- Die Zeitrhythmen von Bullen- und Bärenmärkten sind oft verschieden. Deshalb gibt es eigene Time-Band-Spalten für Bull High und Bull Low.
+- Ein Hoch im Time Band soll den Hochs vergleichbar sein, die in der Rohdatenperiode gemacht wurden. Es sagt nicht, dass das Hoch bedeutender wird als die jüngsten Hochs.
 
 ## Funktionsweise
 
@@ -51,6 +55,8 @@ aktualisiert: 2026-10-29
 
 ## Beispiele
 
+- Der XAU machte von Mitte August bis Anfang November einen starken Bullentrend über 58 Handelstage, mit dem Hoch am 7. November 2007.
+- Im DJIA-Bullentrend dauerten die Rückgänge von den jüngsten Hochs von wenigen Tagen bis zu zwei Wochen. Das Hoch am 11. Oktober lag im Time Band vom 10. bis 12. Oktober.
 
 ## Unterschiedliche Quellenpositionen
 

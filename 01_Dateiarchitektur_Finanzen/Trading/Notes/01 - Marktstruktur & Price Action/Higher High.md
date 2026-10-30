@@ -33,6 +33,9 @@ aktualisiert: 2026-10-30
 - Eine negative Divergenz entsteht, wenn eine Reihe weiter Gipfel auf sukzessiv höheren Niveaus registriert, während die andere Reihe Gipfel auf tieferen Niveaus bildet.
 - Das Ausbleiben sukzessiv höherer Gipfel der zweiten Reihe heißt auch bärische Nonconfirmation.
 - Im subjektiven Gipfelvergleich bleibt offen, welche nicht gleichzeitig gesetzten Gipfel zu vergleichen sind, wie lange die Divergenz bestehen muss und wie viel Abwärtsbewegung einen neuen Gipfel begründet.
+- Über einen Zeitraum von mehr als zwei Jahren bildete der SPX höhere Hochs und höhere Tiefs, während jeder bullische Abschnitt den vorherigen Abschnitt überlappte.
+- Ein beständiger Aufwärtstrend macht höhere Hochs und höhere Tiefs. Fehlt ein Musterfaktor, der das Ende anzeigt, gilt der Trend als intakt.
+- Ein neues Hoch, dem eine scharfe Umkehr durch das vorige Swing-Tief folgt, hebt die bullische Musterlage auf.
 
 ## Funktionsweise
 
@@ -52,12 +55,17 @@ aktualisiert: 2026-10-30
 - Die mittlere Kerze muss sowohl das höhere Hoch als auch das höhere Tief zeigen, sonst ist das Muster kein Pivot-Hoch.
 - Erst wenn auch das isolierte Pivot-Tief da ist, werden Decke und Boden der Seitwärtszone gezeichnet.
 - Das Pivot-Hoch selbst ist eine Drei-Kerzen-Kombination. Es ist der erste Marker nach dem Aufwärtsbruch und kann die obere Region des neuen Trends andeuten.
+- Ein neues Hoch über dem als Welle 1 beschrifteten Hoch, gefolgt von einer Korrektur, die in Zeit und Preis viel größer ist als jede Korrektur seit dem Tief der Welle 2, weist auf ein Tief der Welle 4 hin.
+- Ein neues Hoch über dem wahrscheinlichen Hoch der Welle 3 zeigt wahrscheinlich die Schlussphase des Aufwärtstrends an.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Der EUR/USD machte seit November 2005 höhere Hochs und höhere Tiefs. Kein Musterfaktor legte nahe, dass der Bullentrend vorbei war. Das Ziel lag über dem Juli-Hoch bei 1,3852.
+- OIH machte nach dem 20. Februar ein neues Hoch und nahm dann am 5. März das Swing-Tief. Das Muster ist damit nicht bullisch. Etwa zwei Wochen später brach der Kurs dennoch zu neuen Hochs aus und lief bis 200 Dollar.
+- Nach dem Ausstieg der langfristigen EUR/USD-Unit rallyierte der Markt weitere sechs Wochen in ein Hoch im November.
 
 ## Unterschiedliche Quellenpositionen
 

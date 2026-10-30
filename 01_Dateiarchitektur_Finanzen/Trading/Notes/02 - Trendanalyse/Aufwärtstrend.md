@@ -64,12 +64,57 @@ aktualisiert: 2026-10-30
 - Ist die Eingangsreihe nach dem Channel-Breakout-Operator im Aufwärtstrend, ist die Ausgabe der Trendregel +1.
 - Eine traditionelle Trendregel geht long im S&P 500, wenn der Channel-Breakout-Operator einen Aufwärtstrend feststellt.
 - Eine inverse Trendregel geht short im S&P 500, wenn die analysierte Reihe als Aufwärtstrend bestimmt wird.
+- Das Nehmen eines Schwunghochs ist ein traditionelles Signal für die Long-Strategie eines Swingtraders.
+- Ein weiter Aufwärtstag, der ein Schwunghoch nimmt und nahe dem Tageshoch schließt, sieht sehr bullisch aus, kann aber nur eine Korrektur eines Bärentrends sein; dann ist das Aufwärtspotenzial vor der Rückkehr zu neuen Tiefs sehr begrenzt.
+- Macht ein Markt eine Korrektur, soll er das Extrem des vorherigen Trends nicht nehmen, sondern diese Trendrichtung fortsetzen und ein neues Extrem machen.
+- Trends machen gewöhnlich fünf Abschnitte, und diese Abschnitte überlappen nicht.
+- In Elliott-Wellen-Begriffen heißt ein Trend Impulswelle; hier bleibt der Ausdruck Trend, weil nur die zwei Lagen Trend und Korrektur gebraucht werden.
+- Die Abschnitte eines Trends werden mit Zahlen bezeichnet, etwa Wave-1 als W.1 und Wave-2 als W.2.
+- Ein Rückgang kann als Welle 2 gelten, wenn er in Zeit und Preis größer ist als jede Korrektur während des als Welle 1 bezeichneten Anstiegs; im QQQQ-Beispiel dauerte er vier Tage.
+- Eine anschließende Korrektur, die in Zeit und Preis viel größer ist als jede Korrektur seit dem Tief der Welle 2, sollte ein Tief der Welle 4 sein.
+- Ein neues Hoch, das vier Abschnitte abschließt, lässt das Aufwärtspotenzial wahrscheinlich begrenzt, bevor Welle 5 endet und entweder ein Korrekturrückgang größer als jede Korrektur innerhalb des Fünf-Wellen-Trends oder ein neuer Bärentrend beginnt.
+- Sobald ein neues Hoch über dem wahrscheinlichen Hoch der Welle 3 entsteht, liegt der Aufwärtstrend vom August-Tief wahrscheinlich in der Schlussphase, und ein bedeutender Rückgang beginnt bald.
+- Der Rückgang unter das Tief der Welle 4 signalisierte das Ende des Fünf-Wellen-Trends.
+- Nach einem neuen Hoch im Anschluss an ein wahrscheinliches Tief der Welle 4 bleibt das Aufwärtspotenzial relativ begrenzt, bevor der gesamte Anstieg vom Tief der Welle C abgeschlossen ist; wenige Bars später entstand ein Hoch, gefolgt von einem scharfen Rückgang.
+- Bei neuen Hochs ist die natürliche Neigung der meisten Trader, sehr bullisch zu sein; das ist in frühen Trendphasen sinnvoll und in späten Phasen sehr kostspielig.
+- Sind die Richtlinien für die Wellen 1 bis 4 erfüllt, kann der Swing auf ein neues Hoch eine Welle 5 und der wahrscheinliche letzte Aufwärtsschwung im größeren Zeitrahmen sein.
+- Ein Aufwärtstrend kann über mehr als zwei Jahre höhere Hochs und höhere Tiefs bilden und trotzdem mit jedem bullischen Abschnitt den vorherigen überlappen; die Trendstruktur soll das nicht tun, tut es aber manchmal.
+- Innerhalb solcher überlappenden Abschnitte des größeren Zeitrahmens entstanden viele handelbare kleinere Trends und Korrekturen.
+- Sind Muster, Preis und Momentum für ein korrektives Tief der Welle C erfüllt, sollte ein Anstieg zu einem neuen Hoch folgen.
+- Nach einem drei Monate langen starken Bullenlauf und einem neuen Hoch kann das Aufwärtspotenzial sehr begrenzt sein, wenn der Kurs nur ein paar Punkte unter der projizierten Zone 71,66–72,56 liegt.
+- Die typische Low-Low- oder High-High-Zykluslänge unterscheidet sich im Allgemeinen zwischen Bullen- und Bärenmärkten und schwankt mit Volatilität und Preiszyklen.
+- Hochs und Tiefs entstehen im Allgemeinen an dynamischen Proportionen vergangener Trends und Gegentrends.
+- Fallen an einem korrektiven Tief Zeit, Preis, Muster und Momentum zusammen, ist das ein Setup für die Fortsetzung des Bullentrends zu einem neuen Hoch.
+- Die Zeitrhythmen in Bullen- und Bärenmärkten sind oft verschieden. Das Menü trennt Bull High und Bull Low von Bear High und Bear Low.
+- Ein Hoch im Time Band soll den Hochs der Rohdatenperiode vergleichbar sein, nicht notwendig bedeutender als diese jüngsten Hochs.
+- Wie weit und wie lange ein Markt trendet, bestimmt allein der Markt. Steuerbar ist nur, wie lange man in der Position bleibt. Das Beste ist, den Großteil des Trends mitzunehmen.
+- Keine Analyse und kein Management halten einen von den frühen bis zu den späten Stadien jedes Trends in der Position, weil der Markt oft Information gibt, die zu spät hinein oder zu früh hinaus führt. Oft ist der Ausstieg weit vor dem Ende, und die Bedingungen für einen Wiedereinstieg sind nicht ideal.
+- Erkennen lässt sich die Information, die gewöhnlich nahe dem Trendende vorliegt, um offene Positionen zu schützen oder eine Umkehr vorzubereiten.
+- Die meisten Trends machen mindestens fünf Wellen oder Abschnitte. Solange das Momentum der höheren Zeitebene nicht die für eine Umkehr typische Lage erreicht hat und diese fünf Abschnitte nicht vollendet sind, gilt der Trend als nicht beendet.
+- Trends können enden, bevor die höhere Zeitebene ein Extrem erreicht oder ein bestimmtes Muster da ist. Alles kann geschehen. Die Entscheidung folgt der Information bis zum letzten Bar.
+- W. D. Gann lehrte in allen Veröffentlichungen, einschließlich der teuren Rohstoff- und Aktienkurse der 1930er- und 1940er-Jahre: Das große Geld wird mit den großen Trends gemacht. Der Text nennt das die wahrsten Worte dazu.
+- Auf Ticks zu handeln, deckt, wenn man gut ist, die Kosten und lässt etwas übrig. Auf Punkte zu handeln, kann wirklich Geld bringen. Auch kurzfristige Trader sollen die höhere Zeitebene kennen.
+- Das Ziel ist, Bedingungen mit hoher Wahrscheinlichkeit zu identifizieren, nicht jeden Trend zu erfassen.
+- Eine bärische Wochen-Momentum-Umkehr aus der überkauften Zone wird typischerweise von einem seitwärts bis abwärts gerichteten Verlauf über mehrere Wochen gefolgt. Das ist keine Zeit, eine Long-Position zu halten.
+- Longs werden danach nicht erwogen, solange das Wochenmomentum nicht die überverkaufte Zone erreicht oder bullisch umkehrt, wenn der Plan befolgt wird.
+- Das Muster nach dem Hoch vom 8. November wurde als wahrscheinliche Korrektur gelesen, nach der Gold den Aufwärtstrend fortsetzen sollte.
+- War das Wochenmomentum überverkauft und das Tagesmomentum überkauft, war vor der Fortsetzung des Aufwärtstrends eine kleinere Korrektur wahrscheinlich.
+- Der Ausbruch am 26. Dezember bestätigte, dass Gold in Welle 3 des Aufwärtstrends war.
+- Die Analyse sah die Schlussphase des Gold-Aufwärtstrends und eine Gewinnmitnahme um das Niveau von 1000 Dollar.
 
 ## Funktionsweise
 
 - Der Einstieg liegt auf dem bestätigten Bruch, nicht erst nach drei höheren Hochs und höheren Tiefs. Die Pivots bauen den Trend, während die Position läuft.
 - Ein zweites Pivot-Hoch über dem vorherigen und ein zweites Pivot-Tief über dem vorherigen halten die Position. Das dritte Paar definiert die obere und die untere Region.
 - Fällt das Volumen auf dem ersten Rücksetzer, ist das ein gutes Zeichen und kein Widerspruch zum Anstieg.
+- Divergiert ein bullischer Preistrend mit bärischem Momentum des größeren Zeitrahmens, hält dieses Momentum aus Trades heraus, während der Preistrend sich verlangsamt; die späteren Strategien halten meist aus dem Trade und begrenzen zumindest die Verluste.
+- Der größere Zeitrahmen signalisiert nur die Richtung eines möglichen Trades, long oder short, nicht die Ausführung; die Umkehr des kleineren Rahmens erfüllt die Anfangsbedingung und gibt die beste Chance auf die größten Bewegungen bei minimaler Kapitalbindung.
+- Positionstrader für Trades von mehreren Wochen bis Monaten nutzen Wochen- und Tagesmomentum, Swingtrader für wenige Tage Tages- und Stundendaten, Daytrader wahrscheinlich 60- und 15-Minuten-Daten oder noch kleinere Zeitrahmen.
+- In einem starken Trend ist ein über den größten Teil der Periode overboughtes Tagesmomentum eine typische Momentumlage.
+- Ein Stochastic hängt in der Overbought-Zone, wenn der Trend bullisch ist, und macht dann relativ flache Momentumkorrekturen, die auf Preiskorrekturen die Oversold-Zone oft nicht erreichen.
+- Die Trendneigung größeren Grades beeinflusst, wie der Stochastic zykliert.
+- In einem viermonatigen starken Aufwärtstrend des S&P mit nur kleinen Korrekturen hing der Stochastic einen Großteil des Trends in der Overbought-Zone und fiel nur bei den größeren, mehrere Bars dauernden Korrekturen unter die Overbought-Linie.
+- In dieser Lage entstanden häufige Momentumoszillationen innerhalb der Overbought-Zone, ohne unter die Overbought-Linie zu fallen, und das Muster war wegen des stärkeren Aufwärtstrends ausgeprägter als in einer Phase mit größeren Korrekturen.
 
 ## Voraussetzungen
 
@@ -141,6 +186,24 @@ aktualisiert: 2026-10-30
 - Ein Anstieg, der gerade erst mit erfolgreichem Test aus der Akkumulation ausgebrochen ist, dreht danach kaum sofort wieder nach unten.
 - Ein von Chang und Osler gültig gezähltes Schulter-Kopf-Schulter-Top verlangt, dass das Instrument vor der Formation in einem Aufwärtstrend ist.
 - Deshalb muss die linke Schulter über dem vorherigen Hoch liegen und das linke Tal über dem vorherigen Tief.
+- Gehandelt wird in Richtung des Momentums des größeren Zeitrahmens; ausgeführt werden darf nach einer Momentum-Umkehr des kleineren Zeitrahmens in dieser Richtung.
+- Eine bullische Umkehr des kleineren Zeitrahmens muss unter der Overbought-Zone entstehen, sonst ist das Aufwärtspotenzial sehr begrenzt und ein Long-Trade zu meiden.
+- Im Anleihebeispiel ist die Overbought-Linie die horizontale 75-Prozent-Linie nahe dem oberen Rand des Indikatorfensters.
+- Mindestens zwei Zeitrahmen des Momentums sollen in dieselbe Richtung laufen, bevor ein Trade erwogen wird.
+- Ein guter Indikator mit passender Lookback-Periode trendet gewöhnlich in Preisrichtung und kehrt innerhalb sehr weniger Balken der Preisumkehr um.
+- Ist die höhere Zeitebene bullisch und nicht overbought, werden nur Long-Positionen nach einer bullischen Momentumumkehr der kleineren Zeitebene erwogen, und diese Umkehr muss unterhalb der Overbought-Zone entstehen.
+- Das ist das ideale Long-Setup, weil beide Momentum-Zeitebenen in dieselbe Richtung laufen und das Setup unmittelbar auf die bullische Umkehr der kleineren Zeitebene in Richtung des bullischen Momentums der größeren Zeitebene folgt.
+- Ist die höhere Zeitebene bullisch, aber overbought, soll das Aufwärtspotenzial begrenzt sein, und es wird keine neue Long-Position genommen.
+- Short-Positionen dürfen dann nach einer bärischen Momentumumkehr der kleineren Zeitebene erwogen werden.
+- Ein overboughtes Momentum der höheren Zeitebene ist kein Grund, eine bestehende Long-Position zu verlassen, sondern nur ein Grund, keine neuen Long-Trades zu eröffnen.
+- Ist die höhere Zeitebene overbought, ist das Aufwärtspotenzial gewöhnlich begrenzt, bevor ein Momentumhoch entsteht, und gewöhnlich reicht das Gewinnpotenzial für einen neuen Long-Trade nicht.
+- Ist der Trend der größeren Zeitebene bullisch, ist jede bullische Momentumumkehr der kleineren Zeitebene unterhalb der Overbought-Zone ein Setup für einen Long-Trade.
+- Wave-2 darf nicht über den Beginn von Wave-1 hinaus handeln.
+- Wave-3 darf im Preis nicht die kürzeste der Wellen 1, 3 und 5 sein.
+- Wave-4 darf keinen Tagesschluss in die Schlusskurs-Spanne von Wave-1 machen.
+- Ein Retracement der Welle 4 beträgt typischerweise 38,2 bis 50 Prozent der Welle 3. Der Stop bleibt von jedem solchen typischen Retracement fern.
+- Eine Trading-Range über ein Jahr ist gewöhnlich eine Konsolidierung oder eine komplexe Korrektur. Bei einer komplexen Korrektur gibt es kein Hochwahrscheinlichkeitsmuster für den letzten Rückgang. Jedes Tief kann das letzte Tief sein.
+- Vom längerfristigen Blick bricht das XAU aus einer solchen Range wahrscheinlich nach oben aus, nicht nach unten, in einen neuen Bullentrend zu einem neuen Hoch.
 
 ## Risiken und Grenzen
 
@@ -156,6 +219,44 @@ aktualisiert: 2026-10-30
 - Am dritten Tag eröffnete der ES mit Aufwärtslücke auf hohem Volumen, deutlich über dem Vortag. Das war eine echte Bewegung, und die großen Akteure kauften den bullischen Trend.
 - Der Dow stieg nach der Akkumulation stetig auf durchschnittlichem Volumen.
 - Im GBP/USD auf der Stunde löste sich eine vermeintliche Stauung sofort auf gutem Volumen nach oben und war nur eine kleine Pause im Anstieg.
+- Im SPX war das Tagesmomentum vom 10. bis 23. Februar bullisch; jede bullische 60-Minuten-Umkehr, bei der die schnelle Linie über die langsame kreuzt, konnte ein Long-Setup sein, alle wurden sofort von einem Anstieg gefolgt, teils scharf, teils nur mäßig, und davor sowie danach war das Tagesmomentum bärisch, sodass bullische Umkehren des kleineren Rahmens keine Setups waren.
+- Zwei Zeitrahmen in derselben Richtung sind dort ein Setup hoher Wahrscheinlichkeit für einen weiteren Anstieg; besonders naheliegend sind die ersten kleineren bullischen Umkehren bald nach der bullischen Umkehr des höheren Zeitrahmens.
+- Im EUR/USD auf 15 Minuten über etwa 24 Stunden, bei bullischem 60-Minuten-Momentum, folgten die zweite und dritte bullische Umkehr starken Anstiegen; der vierten folgten mehrere seitwärts bis abwärts laufende Balken, bis das 60-Minuten-Momentum bärisch wurde, also zwei klare Gewinner und zwei Nicht-Trades oder kleine Verluste, allein nach den Dual-Time-Frame-Setups.
+- In der bullischen Anleihe-Wochenperiode von Mai bis August gab es zwei tägliche bullische Umkehren unter der Overbought-Zone, beide von einem starken Anstieg gefolgt; eine weitere bullische Umkehr zwischen den Punkten 1 und 2 lag in der OB-Zone, wurde nicht nummeriert und gilt nicht als Setup.
+- Das Wochenmomentum wurde in der Woche endend 21. Mai bullisch; die erste tägliche bullische Umkehr am 10. Juni kam fast drei Wochen später, und wer nur den Wochenrahmen sah, hatte ein bullisches Setup, während der Markt weiter fiel.
+- Der dritte Wochenmomentumtrend war bullisch von der Woche endend 23. Dezember bis zur Woche endend 18. Februar; das Tagesmomentum machte zwei bullische Umkehren, jede von einem starken Anstieg gefolgt.
+- In den Perioden 3, 4 und 5 trendeten Wochenmomentum und Preis zusammen; in Periode 1 begann der bullische Momentumtrend im Mai und endete im August.
+- Im Beispiel von etwa drei Monaten SPX-Tagesdaten mit dem DTosc lagen die meisten Momentum-Umkehren innerhalb von ein paar Balken des tatsächlichen Preishochs oder -tiefs; das Beispiel ist etwas ausgewählt, und nicht jede Umkehr liegt so nah, obwohl es die meiste Zeit so ist.
+- Im bullischen Momentumzeitraum von der Woche zum 8. April bis zur Woche zum 17. Juni zeigte der Tageschart drei bullische Momentumumkehren.
+- Die erste tägliche bullische Momentumumkehr entstand erst etwa drei Wochen nach der wöchentlichen bullischen Momentumumkehr.
+- Diese erste Umkehr lag kurz vor einem Preishoch mit anschließendem korrigierendem Rückgang über mehrere Tage und wäre ein Nicht-Trade oder ein kleiner Verlust gewesen.
+- Die zweite tägliche bullische Momentumumkehr wurde von einer anhaltenden Rally über mehrere Punkte gefolgt.
+- Die dritte und letzte tägliche bullische Momentumumkehr entstand kurz bevor Bonds ein bedeutendes Hoch machten, und auch sie wäre ein Nicht-Trade oder ein kleiner Verlust gewesen.
+- Beim S&P über etwa vier Monate mit bullischer Neigung erreichten beide Stochastic-Linien vor einer bärischen Momentumumkehr weit die Overbought-Zone, vor den bullischen Umkehren aber typischerweise nicht die Oversold-Zone.
+- Der MACD erzeugte in einem starken Aufwärtstrend mit nur wenige Tage dauernden kleinen Korrekturen bullische und bärische Momentumumkehren innerhalb von ein oder zwei Bars zu jedem kleinen Preishoch und -tief.
+- In diesem starken Aufwärtstrend wäre der MACD sehr wirksam gewesen, um Einstiege während des Aufwärtstrends der größeren Zeitebene zu identifizieren.
+- Nach der ersten Überlappung beim Philadelphia Gold and Silver Index war früh erkennbar, dass wahrscheinlich eine Korrektur lief und der Aufwärtstrend zu einem neuen Hoch weitergehen würde, ohne unter das Tief des vorherigen Trends zu handeln; das Abwärtspotenzial war begrenzt, das Aufwärtspotenzial nach der Korrektur erheblich.
+- Die überlappenden Abschnitte der Mini-Dow-Futures signalisierten, dass der scharfe Fall eine Korrektur war und schließlich ein neues Hoch entstehen würde, gerade wenn viele Trader wegen des Falls bärisch geworden wären.
+- Die zusätzlichen Bars bestätigten diese Korrektur, und der Markt machte wie erwartet ein neues Hoch.
+- Beim S&P 500 signalisierten überlappende Abschnitte typischerweise eine korrektive Rally, doch der Index stieg zu einem neuen Hoch weiter; das Überlappungssignal einer Korrektur scheiterte.
+- Beim Tageschart von American Airlines folgte auf die ABC-Korrektur ein Aufwärtstrend zu einem neuen Hoch, und der Anstieg über das Wave-B-Hoch signalisierte, dass das korrektive Tief wahrscheinlich abgeschlossen war.
+- Beim wöchentlichen britischen Pfund handelte der erste Wochenbar nach dem möglichen Wave-C-Tief über das Wave-B-Hoch und bestätigte, dass die ABC-Korrektur wahrscheinlich abgeschlossen war und der Aufwärtstrend zu einem neuen Hoch weiterläuft, ohne unter das Wave-C-Tief zu handeln.
+- Costco hatte über drei Monate einen starken Bullenlauf und zum letzten Bar ein neues Hoch gemacht, lag aber nur ein paar Punkte unter der Zone 71,66–72,56; das Aufwärtspotenzial konnte sehr begrenzt sein, und ein bedeutender Rückgang konnte bevorstehen.
+- Im Tages-XAU dauerte der starke Bullentrend von Mitte August bis Anfang November 58 Handelstage. Das Hoch entstand am 7. November 2007, 58 Bars vom Tief am 16. August.
+- Der DJIA war in der Rohdatenperiode in einem Bullentrend. Die Rückgänge von den jüngsten Hochs dauerten wenige Tage bis zwei Wochen, und ein Hoch im Time Band sollte dieser Größenordnung vergleichbar sein.
+- Dieselbe Long-Strategie galt etwa ein Jahr lang, während das XAU mehrere Wochentiefs machte und danach wochenlange Anstiege, die nie zu einem neuen Hoch ausbrachen. Zum Wochenende 17. August 2007 wird ein Ausbruch und ein neues Hoch deutlich über dem Hoch vom Juli 2007 erwartet.
+- Der 11. Oktober begann beim XAU nur eine kleinere Korrektur von einer Woche, dann folgte Anfang November ein neues Hoch, bevor eine wesentlichere Korrektur des gesamten Bullentrends einsetzte, der am 16. August begonnen hatte.
+- Ein wahrscheinliches ABC-Tief im OIH impliziert die Fortsetzung des Bullentrends über das Dezember-Hoch. Das Wochenmomentum ist bullisch, das Tagesmomentum machte am 21. Februar eine bullische Umkehr.
+- Nach dem Ausstoppen am 5. März galt das OIH-Muster nicht als bullisch. Etwa zwei Wochen später brach der Kurs zu neuen Hochs aus und setzte den Bullentrend über mehrere Monate bis 200 Dollar fort.
+- Das Wochenmomentum des OIH erreichte bald die überkaufte Zone und hing dort mehrere Monate, ohne eine weitere bullische Umkehr unter dieser Zone bis August. Ein weiterer Long war nicht geboten, weil die Hochwahrscheinlichkeitsbedingungen fehlten.
+- Der EUR/USD war seit November 2005 in einem beständigen Bullentrend mit höheren Hochs und höheren Tiefs, ohne Musterfaktor für ein Ende. Das Ziel war ein neuer Abschnitt über das Juli-Hoch bei 1,3852. Sind die jüngsten Bullenabschnitte ein Maßstab, geht es viel höher.
+- Am 28. September waren vier Abschnitte vollendet. Ein möglicher Fünf-Wellen-Bullentrend könnte nahe dem Abschluss sein, die Aufwärtsseite damit relativ begrenzt.
+- Die langfristige EUR/USD-Unit lief fast sechs Wochen, weil der Stop in der frühen Phase relativ weit vom Markt blieb. Nach dem Ausstieg rallyierte der Markt weitere sechs Wochen in ein Hoch im November. Der Ausstieg lag nahe dem Tief einer Korrektur, unmittelbar vor der Fortsetzung. Nach dem Plan war das richtig.
+- Der S&P stieg nach dem Ausstieg weiter bis 1527,00 am 11. Dezember und fiel danach unter das November-Tief.
+- Ein Bruch über 825,50 im Februar-2008-Future war ein erster möglicher Long-Einstieg; vorher konnte Gold auf 808 bis 800 zurücklaufen, entsprechend 807 bis 797 in den kontinuierlichen Tagesdaten.
+- Anfang März 2008 hatte Gold 995 erreicht, den Beginn der maximalen Preisziele, und sollte nach den Zeitprojektionen bis Mitte März ein finales Hoch abschließen.
+- Gold machte am 17. März 2008 ein Hoch bei 1038,6 im kontinuierlichen Kontrakt; das tägliche Schlusshoch lag am 14. März, das letzte Zeitziel für ein größeres Hoch war der 15. März, das maximale Preisziel 1038.
+- Die zweite Einheit im EUR/USD wurde für einen möglichen längeren Trend gehalten, der aus einem ABC-Korrekturtief erwartet wurde; der Kurs stieg noch einige Tage, nachdem der Stop gegriffen hatte.
 
 ## Unterschiedliche Quellenpositionen
 

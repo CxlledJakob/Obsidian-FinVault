@@ -36,6 +36,8 @@ aktualisiert: 2026-10-30
 - Zu diesem Zeitpunkt werden die Preise ohne Volumen höher geschoben, und die Nachzügler steigen ein, während die Market Maker durch die Seitentür gehen.
 - Zur Eröffnung nutzen Insider die Angst, eine Bewegung nach oben oder unten zu verpassen. Händler springen emotional hinein, und danach setzt der Verkauf ein.
 - Dieser Moment, in dem auf die Eröffnung gewartet wird, ist der leichteste Zeitpunkt für eine solche Falle.
+- Wer Google bei 200 Dollar, erneut bei 300 und erneut bei 400 Dollar verpasst hat, sah danach Anstiege von 100, 200 und mehr Dollar innerhalb von Wochen oder Monaten.
+- Die geschilderte Reaktion ist, nach der nächsten Korrektur den Kauf nicht wieder zu verpassen, sich für einen großen Gewinn voll einzudecken, die früheren verpassten Gelegenheiten auszugleichen und sich früh zur Ruhe zu setzen.
 
 ## Funktionsweise
 
@@ -56,6 +58,7 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Dieser volle Einstieg bricht die Kapitalgrenze: Schon 73 statt höchstens 72 Aktien riskieren mehr, als ein logischer Tradingplan erlaubt, und führen nach dem Text schließlich zum Verlust des größten Teils oder des ganzen Kontos, auch wenn Google zunächst Glück bringt.
 
 ## Beispiele
 

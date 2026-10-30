@@ -19,6 +19,8 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Ein Simple Moving Average ist der Durchschnittspreis eines handelbaren Instruments über einen festgelegten Zeitraum.
+- In den Simple Moving Average geht gewöhnlich der Schlusskurs der vergangenen x Bars ein.
+- Die Lookback-Periode ist die Zahl der Bars, aus denen dieser gleitende Durchschnitt berechnet wird.
 
 ## Kernaussagen
 
@@ -26,6 +28,12 @@ aktualisiert: 2026-10-30
 - Beobachtet wird, dass ein Aktienindex wie der Dow-Jones-Durchschnitt oder der S&P 500 nach einem Anstieg über seinen 200-Tage-Durchschnitt über die nächsten mehreren Monate in der Regel weiter zulegt; das wird als probabilistische Verallgemeinerung eingeordnet.
 - Die Hypothese 200-H lautet, dass Aufwärtsdurchbrüche des 200-Tage-Durchschnitts durch den DJIA im Durchschnitt über die nächsten drei Monate profitable Long-Positionen erzeugen.
 - Die Nullhypothese Null-200 lautet, dass Aufwärtsdurchbrüche eines 200-Tage-Durchschnitts über die folgenden drei Monate keine Gewinne erzeugen.
+- Jeder gleitende Durchschnitt, jeder Kanal und jeder Indikator beruht auf historischen Preisdaten, kann nur darstellen, was geschehen ist oder wie die aktuelle Position zur Lookback-Periode steht, hat für sich wenig Vorhersagewert und ist immer ein nachlaufender Indikator der Trendposition, nie ein führender für die wahrscheinliche Zukunft.
+- Kreuzungen gleitender Durchschnitte sind berüchtigt für falsche Trendumkehrsignale.
+- Gleitende Durchschnitte können den Trend auf historischen Daten zeigen, alarmieren aber nicht zuverlässig auf die Anfangsstadien eines neuen Trends oder darauf, ob ein Trend in der Endphase ist; sie erkennen einen etablierten Trend gewöhnlich lange nach dem optimalen Einstieg.
+- Eine Kreuzung gleitender Durchschnitte allein taugt wenig, die wahrscheinliche Trendrichtung einer künftigen Periode zu erkennen; Preisumkehren fallen immer wieder nicht mit diesen Signalen zusammen.
+- Die langsame Linie der meisten Zwei-Linien-Momentum-Indikatoren ist gewöhnlich ein gleitender Durchschnitt der schnellen Linie, die gewöhnlich die Rohdaten ist.
+- Eine Momentum-Kreuzung ähnelt einer Kreuzung gleitender Durchschnitte, betrifft aber die Indikatorwerte und nicht die Preisdaten selbst.
 
 ## Funktionsweise
 
@@ -55,6 +63,9 @@ aktualisiert: 2026-10-30
 - Ein gleitender Durchschnitt einer Preis-Volumen-Funktion ist stationär und ohne Trend und bleibt nahe null, weil nur das Look-back zählt und die Tageswerte beide Vorzeichen haben.
 - Gleitende Durchschnitte gehören mit Moving-Average-Bändern, Channel Breakout und Alexander-Filtern, auch Zickzack-Filter genannt, zu den am weitesten verbreiteten objektiven Indikatoren der Trendrichtung.
 - Es gibt intelligentere und sparsamere Suchverfahren, als jede mögliche Kombination zu testen, darunter die Suche mit genetischen Algorithmen, Simulated Annealing und gradientenbasierte geführte Suche.
+- Die langsame Linie eines Indikators ist gewöhnlich nur ein gleitender Durchschnitt der schnellen Linie und reagiert langsamer auf Momentumänderungen.
+- Der MACD misst die Differenz zwischen zwei gleitenden Durchschnitten.
+- Ein Balken auf der anderen Seite der MACD-Mittellinie bedeutet, dass der schnellere gleitende Durchschnitt den langsameren nach oben oder unten gekreuzt hat.
 
 ## Voraussetzungen
 
@@ -107,6 +118,8 @@ aktualisiert: 2026-10-30
 
 - Alle Preise zählen gleich, ohne Unterschied zwischen Preisen auf niedrigem oder hohem Volumen.
 - Auch die Auktionsrichtung des Tages bleibt unberücksichtigt, wodurch die Information stark in die Irre führen kann.
+- Auf jedes Beispiel, wie ein solcher Trendindikator den Trend definiert, zeigt der Autor zwei, in denen er schnell versagte, und auf jedes nachträgliche Beispiel mindestens zwei, in denen die Trendumkehr nicht rechtzeitig erkannt wurde.
+- Für sich kann ein gleitender Durchschnitt Teil eines umfassenden Tradingplans sein, identifiziert aber allein nicht die wahrscheinliche künftige Trendrichtung.
 
 ## Beispiele
 

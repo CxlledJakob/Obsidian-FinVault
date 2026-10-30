@@ -43,6 +43,12 @@ aktualisiert: 2026-10-30
 - Für die Tests mit unterschiedlicher Güte wurde die Wahrscheinlichkeit eines profitablen Monats jeder Regel zufällig aus einer Verteilung gezogen, die der Vermögensverteilung ähnelt und einen langen rechten Rand hat.
 - Regeln mit hoher erwarteter Rendite gelten als selten: eine erwartete Jahresrendite von 19 Prozent oder mehr trat etwa einmal unter 10.000 auf.
 - Werden nur zwei Monate benutzt, ist die Wahl der Regel mit der besten beobachteten Performance nicht besser, als eine Regel zufällig aus dem Universum zu ziehen, und es ist gleichgültig, wie viele Regeln getestet werden.
+- Die besten professionellen Trader haben selten eine Gewinnquote über 50 Prozent. Langfristig erfolgreiche Trader haben gewöhnlich mehr Verlierer als Gewinner.
+- Die meisten Amateure akzeptieren diese Realität nicht und begrenzen deshalb den möglichen Verlust eines Trades nicht rücksichtslos.
+- Eine Gewinnquote über 50 Prozent über die Zeit gehört zur Elite der Trader.
+- Wer gut im Handel wird, hat etwa 30 bis 40 Prozent Gewinntrades.
+- Deshalb müssen die Verluste relativ klein und die Gewinne relativ groß sein. Einen anderen Weg nennt der Text nicht.
+- Wer gut im Trading wird, hat etwa 30 bis 40 Prozent Gewinntrades.
 
 ## Funktionsweise
 
@@ -61,10 +67,13 @@ aktualisiert: 2026-10-30
 - Soll die Strategie eingesetzt werden, muss die kritische Trefferwahrscheinlichkeit gesenkt werden.
 - Gesetze unterscheiden sich in ihrer Vorhersagekraft, und die mit den konsistentesten Beziehungen sind die wertvollsten.
 - Bei sonst gleichen Bedingungen ist eine Regel der technischen Analyse, die in 52 Prozent der Fälle erfolgreich ist, weniger wertvoll als eine, die in 70 Prozent der Fälle funktioniert.
+- Der Swing Entry sollte eine höhere Trefferquote haben als der Trailing-One-Bar-Entry, bei gewöhnlich größerem Kapitaleinsatz.
+- Ein Einstieg sehr bald nach der Momentumumkehr der kleineren Zeitebene kann eine niedrigere Trefferquote haben, dafür einen kleineren Einsatz.
 
 ## Risiken und Grenzen
 
 - Der häufigste Induktionsfehlschluss ist die voreilige Verallgemeinerung aus zu wenigen oder qualitativ schlechten Belegen; Regelstudien mit nur wenigen erfolgreichen Signalen gehören vermutlich dazu.
+- Es wird viele Setups geben, die gar nicht ausgeführt werden, und viele Verluste, bei denen der Markt sofort dreht und den Trade ausstoppt. Die Verluste sollen dann relativ klein bleiben.
 
 ## Beispiele
 

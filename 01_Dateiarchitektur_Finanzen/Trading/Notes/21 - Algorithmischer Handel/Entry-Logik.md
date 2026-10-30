@@ -21,6 +21,7 @@ aktualisiert: 2026-10-30
 - Eine Long-Position bedeutet, das Wertpapier zu besitzen und darauf zu hoffen, es später zu einem höheren Preis zu verkaufen.
 - Eine Short-Position bedeutet, das Wertpapier verkauft zu haben, ohne es zu besitzen, mit der Pflicht, es später zurückzukaufen. Der Inhaber gewinnt durch einen späteren Kursrückgang, weil der Rückkauf unter dem Verkaufspreis liegt.
 - Neutral bezeichnet den Fall, dass der Anleger keine Position im Markt hält.
+- Es gibt genau zwei Einstiegsstrategien, den Trailing-One-Bar-Entry und den Swing Entry. Beide verlangen, dass der Markt sich vor dem Einstieg in die erwartete Richtung bewegt.
 
 ## Kernaussagen
 
@@ -31,6 +32,8 @@ aktualisiert: 2026-10-30
 - Im Vergleich von Schoenberg und Corwin bedeutet all-in bei L1, das gesamte Kapital zu investieren, sobald der Preis L1 erreicht, ohne darauf zu warten, ob er noch nach L2 fällt.
 - All-in bei L2 wartet, bis der Preis L2 erreicht, und verdient null, wenn L2 nie kommt; average-in kauft einen Kontrakt bei L1 und einen weiteren bei L2.
 - Für nicht wirklich kointegrierte Paare kann das Preisverhältnis als Einstiegssignal die dynamische Hedge Ratio ersetzen.
+- Beim MACD ohne Overbought- und Oversold-Zonen gilt ein kürzerer Bar von unterhalb der Signallinie als bullische Umkehr der höheren Zeitebene. Ein längerer Bar von oberhalb der Signallinie ist die bullische Umkehr der kleineren Zeitebene.
+- Die Buy-Stop-Order des Swing Entry kann nach den regulären Handelszeiten gelegt werden. Wird sie ausgeführt, setzt eine Kontingenz sofort den Sell-Stop. Wird sie nicht ausgeführt, wird am Abend geprüft, ob die Bedingungen für den nächsten Tag noch stehen.
 
 ## Voraussetzungen
 
@@ -102,6 +105,20 @@ aktualisiert: 2026-10-30
 - Die komplexere Regel nimmt eine Long-Position und hat vier optimierbare Parameter: die Spanne des kurzen gleitenden Durchschnitts, die Spanne des langen gleitenden Durchschnitts, rsi_max und rsi_min.
 - Eine große Zahl von Kombinationen dieser Parameterwerte wird gegen die Trainingsdaten laufen gelassen.
 - Die Möglichkeit, dass die Zeitreihe genau gleich dem gleitenden Durchschnitt ist, wird beseitigt, indem der Durchschnitt mit höherer Genauigkeit berechnet wird als das Preisniveau.
+- An einem Preisziel wird nicht gekauft oder verkauft. Eine Einstiegsstrategie braucht einen konkreten Kauf- oder Verkaufspreis und einen konkreten ersten Schutzstop, weil Broker keine ungefähren Orders annehmen.
+- Sobald die Bedingungen für eine wahrscheinliche Korrektur- oder Trendumkehr stehen, ist der Einstieg vollständig objektiv. Bis dahin steckt Urteil in der Auswahl der Bedingungen, danach nicht mehr.
+- Der Trailing-One-Bar-High- oder -Low-Einstieg legt nach der Umkehrbedingung und der Momentumumkehr der kleineren Zeitebene einen Buy-Stop oder Sell-Stop einen Tick über das Hoch oder unter das Tief des letzten abgeschlossenen Bars.
+- Der erste Schutzstop liegt einen Tick jenseits des Swing-Hochs oder Swing-Tiefs, das vor dem Einstieg entstanden ist.
+- Der Einstieg muss nicht am nächsten Bar erfolgen. Es kann mehrere Bars dauern, bis das nachgezogene Ein-Bar-Hoch oder Ein-Bar-Tief genommen wird.
+- Nach einer bärischen Momentumumkehr läuft der Trailing-One-Bar-Low weiter, solange das Momentum bärisch bleibt und die Oversold-Zone nicht erreicht. Eine bullische Umkehr oder Oversold vor der Ausführung streicht den Einstieg, bis die nächste bärische Umkehr kommt und die höhere Zeitebene weiter bärisch und nicht oversold ist.
+- Läuft der Markt nicht sofort in die erwartete Richtung, liegt der Einstieg oft zu einem besseren Preis oder mit geringerem Kapitaleinsatz als direkt nach der Umkehr.
+- Wird ein Trade ausgestoppt, läuft dieselbe Strategie weiter, solange die Bedingungen gelten.
+- Der Swing Entry verlangt, dass ein Swing-Hoch oder Swing-Tief in Richtung des erwarteten Trends genommen wird. Das höhere Momentum ist für einen Long bullisch oder bärisch oversold, für einen Short bärisch oder bullisch overbought, und die kleinere Zeitebene dreht in diese Richtung.
+- Reines Swing-Trading kauft jedes neue Swing-Hoch oder verkauft jedes neue Swing-Tief in Trendrichtung. Das funktioniert in einem starken Trend und scheitert, wenn der Swing der letzte Abschnitt ist oder der Markt in eine seitwärts hackende Trading-Range läuft.
+- Hier wird der Swing Entry nur gesetzt, wenn die Umkehrbedingungen stehen, und er erfolgt auf einem kleinen Swing der niedrigeren Zeitebene, um den Anfangseinsatz zu begrenzen.
+- Ein Handel über das Swing-Hoch, der ein Wave-5-Tief bestätigen soll, hebt jedes logische Bärenmuster auf und ist ein Grund, long zu sein. Das wird Pattern-Reversal-Signal genannt.
+- Für Daytrades sollen zwei höhere Zeitebenen das Momentum in Richtung der kleineren Zeitebene haben. Dieselben zwei Strategien gelten für jeden Markt, jede Zeitebene und jede Bedingung.
+- Nie an einem Zielpreis kaufen oder verkaufen. Immer verlangen, dass der Markt in Richtung des erwarteten Trends läuft, bevor der Trade ausgeführt wird.
 
 ## Risiken und Grenzen
 
@@ -110,6 +127,9 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Im Short-Beispiel nahm Bar 4 das nachgezogene Ein-Bar-Tief. Weder Bar 2 noch Bar 3 hatten das Tief des vorigen Bars genommen. Der Schutz-Buy-Stop lag einen Tick über dem Hoch von Bar 3, dem höchsten Bar seit der bärischen Momentumumkehr.
+- Beim EUR/USD entstand die bullische Wochen-MACD-Umkehr in der Woche zum 20. Oktober. Drei Tagesbars später drehte der Tages-MACD bullisch. Am Folgetag wurde einen Tick über dem Hoch des Vortags gekauft, mit Stop einen Tick unter dem Swing-Tief vor der bullischen Umkehr.
+- Im 5-Minuten-Daytrade lag der Swing-Entry-Short unter 1356,25 und wurde am nächsten Bar ausgeführt, mit Buy-Stop einen Tick über dem Swing-Hoch bei 1362,75.
 
 ## Unterschiedliche Quellenpositionen
 

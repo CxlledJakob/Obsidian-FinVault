@@ -35,6 +35,9 @@ aktualisiert: 2026-10-30
 - Dieses tiefere Gipfeln der zweiten Reihe heißt auch bärische Nonconfirmation.
 - Wie viel Abwärtsbewegung nötig ist, um einen neuen Gipfel als gebildet anzusehen, bleibt in der subjektiven Divergenzanalyse ungelöst.
 - Weil die beiden Reihen nicht genau gleichzeitig gipfeln, ist zudem unklar, welche Gipfel miteinander verglichen werden sollen.
+- Abbildung 3.1 zeigt einen starken Bärentrend, der tiefere Tiefs und tiefere Hochs macht.
+- Die letzte Kerze dieses Bärentrends mit tieferen Hochs ist ein Outside-Down-Tag mit weiter Spanne und oft ein Fortsetzungssignal; deutet die Musterposition auf die Endphase, wird der Short wahrscheinlich vermieden oder nur mit minimalen Erwartungen genommen.
+- Am Folgetag nach diesem Outside-Down-Tag mit weiter Spanne drehte der Markt zu einem wesentlichen Anstieg.
 
 ## Funktionsweise
 

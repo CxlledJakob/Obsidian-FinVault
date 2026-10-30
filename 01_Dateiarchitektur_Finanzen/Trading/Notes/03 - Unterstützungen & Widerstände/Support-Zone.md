@@ -44,6 +44,18 @@ aktualisiert: 2026-10-30
 - Ein Dreifachboden testet die Unterstützung und prallt ab. Ein Bruch, der darunter hält, macht aus ihr starken Widerstand.
 - Ein gebrochener Dreifachtop baut ein extrem starkes Unterstützungsfundament.
 - Selbst auf einem schnellen Intraday-Chart werden am Boden eines deutlichen Falls hohe Volumen erwartet.
+- Die meisten Korrekturtiefs entstehen an oder sehr nahe bei einem der vier internen Retracements, besonders nahe 50 % oder 61,8 %.
+- Das 38,2%-Retracement ist gewöhnlich nur vorübergehende Unterstützung und beendet die Korrektur nicht.
+- Das 78,6%-Retracement ist typischerweise das maximale Retracement einer Korrektur.
+- Eine enge Zone aus Retracement und APP ist das wahrscheinlichere Ende der Korrektur, nicht ein Retracement allein.
+- Korrekturen im Trend haben oft ähnliche Preisspannen; ihre 100%-APPs bilden dann eine enge Zone für das nächste Korrekturtief.
+- Externe Retracements helfen, das Ende des letzten Abschnitts zu finden, und werden zusammen mit anderen Projektionen gelesen, nicht allein.
+- Die Zielzone ist eine relativ enge Preisspanne um das Niveau, nicht ein exakter Retracement-Preis.
+- Eine brauchbare Zone ist relativ eng und enthält mindestens zwei, ideal je eine Projektion aus jedem Satz.
+- Nicht jedes Tief liegt genau auf dem Schlüsselziel, das im Voraus bestimmt wurde.
+- Erreicht der Markt die Zone, sind die Preisbedingungen einer wahrscheinlichen Umkehr erfüllt; die Umkehr selbst ist damit nicht sicher.
+- Mehrere Preisprojektionen können eine enge Zone bilden, die als Unterstützung für ein Welle-C-Tief dient.
+- Ein vorher benannter Rücklaufbereich kann die Unterstützung sein, an der ein Aufwärtstrend vor der Fortsetzung korrigiert.
 
 ## Funktionsweise
 
@@ -85,6 +97,16 @@ aktualisiert: 2026-10-30
 - Auf der Stunde stoppten drei Kerzen auf demselben Preis und definierten den Boden ohne Pivot-Tief. Fallender Kurs bei fallendem Volumen sprach dagegen, dass der Markt weit fällt.
 - Der Dreifachboden im EUR/CHF auf der Stunde testete die Unterstützung und prallte ab.
 - Im Kaffee-Future wirkten die Bodenvolumen des Wasserfalls zuerst klein, lagen vorgespult aber über dem Durchschnitt.
+- Die vier primären SPX-Korrekturtiefs über etwa zwei Jahre lagen innerhalb weniger Punkte vom 50%- oder 61,8%-Retracement.
+- Ein ABC-Tief lag genau in der engen Zone aus 61,8%-Retracement und 100%-APP.
+- Das nächste kleine EUR/USD-Korrekturtief lag in der Zone der 100%-APPs der beiden vorherigen Korrekturen.
+- Ein 60-Minuten-Tief des EUR/USD lag am 162%-Ex-Ret, und der letzte Abschnitt eines Fünf-Wellen-Trends im DJIA lag genau am 162%-Ex-Ret der Welle 4.
+- Die ES-Zone 1404,50–1405,50 aus zwei nur einen Punkt auseinanderliegenden APPs war eine Zone hoher Wahrscheinlichkeit für das nächste Pivot-Tief.
+- Die ES-Zone 1404,50–1405,50 vereinte das 100%-APP der Welle 1, das 61,8%-APP der Wellen 1 bis 3 und das 162%-Ex-Ret der Welle 4 als enge Zone für ein mögliches Tief der Welle 5.
+- Die drei Schlüsselziele fielen innerhalb von weniger als zwei Punkten zusammen.
+- Der XAU erreichte die im Voraus bestimmte, relativ enge Zielzone der Welle C, die je eine Projektion aus den drei Sätzen enthielt.
+- Die EUR/USD-Unterstützung lag bei 1,4299 bis 1,4308 und wurde am 20. Dezember um 13 Uhr MEZ erreicht; darin lagen 1,4303, 1,4305 und 1,4299 aus Retracement und APP, zusätzlich wurde 1,4208 für Welle 5 von 5 von C aufgeführt.
+- Gold konnte vor dem Long-Ausbruch zuerst auf 808 bis 800 zurücklaufen, entsprechend 807 bis 797 in den kontinuierlichen Tagesdaten.
 
 ## Unterschiedliche Quellenpositionen
 

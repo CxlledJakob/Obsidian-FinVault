@@ -28,6 +28,15 @@ aktualisiert: 2026-10-30
 - Eine zusätzliche Ursache auf kurzem Horizont ist das Auslösen von Stops.
 - Wird Momentum durch die langsame Diffusion von Nachrichten getrieben, liegt der Nutzen in den ersten Tagen, Stunden oder sogar Sekunden nach dem Ereignis.
 - Die Clustering-Illusion liest eine Häufung ähnlicher Ergebnisse in einer zufälligen Zeitreihe als Momentum, das fortbestehen müsse.
+- Die Multiple-Time-Frame-Momentum-Strategie sucht nicht das exakte Swing-Hoch oder Swing-Tief eines Trends, sondern Trades in Trendrichtung, einschließlich nahe den frühen Stadien, und meidet die späteren Stadien.
+- Gehandelt wird in Richtung des Momentums des größeren Zeitrahmens; ausgeführt wird nach Umkehren des kleineren Zeitrahmens in dieser Richtung.
+- Zwei Zeitrahmen des Momentums in derselben Richtung sind ein Setup hoher Wahrscheinlichkeit für einen weiteren Anstieg.
+- Die Anfangsbedingungen geben die beste Chance, dass der Preistrend die größten Bewegungen bei minimaler Kapitalbindung macht.
+- Ein guter Indikator mit richtiger Lookback-Periode trendet gewöhnlich mit dem Preis und kehrt innerhalb sehr weniger Balken der Preisumkehr um.
+- Wer immer mit dem Trend handelt, sollte sehr eindrucksvolle Gewinne ansammeln; die übliche Trendanalyse ist aber über die Zeit meist zu früh oder zu spät, wenn sie nicht zeigt, wo im Trend der Markt steht.
+- Die Momentumumkehren der niedrigeren Zeitebene in Richtung des Momentums der höheren Zeitebene sind wichtige Filter für ein Setup mit hoher Wahrscheinlichkeit.
+- Die höhere Zeitebene bestimmt die Handelsrichtung, in der diese Umkehren liegen müssen.
+- Abbildung 2.24 zeigt bärische Stochastic-Umkehren der kleineren Zeitebene während eines Bärentrends der größeren Zeitebene, also Umkehren in Richtung des größeren Bärentrends.
 
 ## Funktionsweise
 
@@ -45,9 +54,15 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Nicht jedes Dual-Time-Frame-Setup wird profitabel; ein vollständiger Plan braucht zusätzlich Einstieg, Stop-Loss, Ausstieg, mehrere Einheiten und akzeptable Kapitalbindung pro Trade.
 
 ## Beispiele
 
+- Im SPX-60-Minuten-Abschnitt mit bullischem Tagesmomentum vom 10. bis 23. Februar folgte auf jede bullische Umkehr des kleineren Zeitrahmens sofort ein gewisser Anstieg, teils scharf, teils nur mäßig.
+- Im EUR/USD folgten die zweite und dritte bullische 15-Minuten-Umkehr starken Anstiegen, solange das 60-Minuten-Momentum bullisch war; von vier Setups waren zwei klare Gewinner und zwei Nicht-Trades oder kleine Verluste.
+- In der bullischen Anleihe-Wochenperiode von Mai bis August folgte auf beide täglichen bullischen Umkehren unter der Overbought-Zone ein starker Anstieg.
+- In der bullischen Wochenperiode von der Woche endend 23. Dezember bis 18. Februar folgte auf jede der zwei täglichen bullischen Umkehren ein starker Anstieg.
+- Die täglichen bärischen Umkehren 2, 3, 4 und 5 der bärischen Wochenperiode lagen innerhalb von ein oder zwei Balken eines Swing-Hochs und wurden von handelbaren mehrtägigen Rückgängen gefolgt.
 
 ## Unterschiedliche Quellenpositionen
 

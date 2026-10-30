@@ -18,6 +18,18 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Es gibt Hunderte von Momentum-Indikatoren, auch Oszillatoren genannt; die meisten nutzen dieselbe Information, das Open-High-Low-Close eines Preisbalkens, und stellen die Änderungsrate des Preises dar.
+- Alle Preisindikatoren blicken über eine Lookback-Periode zurück, verarbeiten die Preisdaten und vergleichen die jüngste Preisposition mit der Position dieser Periode; verschiedene Indikatoren zeigen das unterschiedlich, stellen aber alle ungefähr die Änderungsrate dar, also wie schnell der Preistrend sich bewegt.
+- Momentum-Indikatoren stellen Momentumtrends dar, nicht Preistrends.
+- Kapitalbindung ist der Geldbetrag, der verloren gehen kann, wenn der Markt gegen einen läuft; Risiko ist die Wahrscheinlichkeit, dass ein Ereignis eintritt, und viele Handelsexperten nennen die Kapitalbindung Risiko.
+- Die meisten Preisindikatoren stellen für diesen Zweck ungefähr dasselbe dar, die Rate-of-Change, und liefern ungefähr dieselben Ergebnisse.
+- Eine Momentumänderung ist eine Änderung der Preis-Rate-of-Change und fällt gewöhnlich mit einer Änderung des Preistrends zusammen, manchmal aber nicht.
+- Der aktuelle Wert jedes Indikators ist die Beziehung des letzten abgeschlossenen Bars zur Lookback-Periode.
+- Die meisten preisbasierten Indikatoren heißen auch Momentum-Indikatoren und stellen in der Regel die Änderungsrate über die Lookback-Periode dar.
+- Oszillatoren werden gewöhnlich gleichbedeutend mit Momentum-Indikatoren verwendet.
+- Bullisches Momentum heißt, der Indikator ist positiv; bei zwei Linien liegt die schnelle über der langsamen.
+- Bärisches Momentum heißt, der Indikator ist negativ; bei zwei Linien liegt die schnelle unter der langsamen.
+- Bullisch überkauft heißt, der Indikator ist bullisch und beide Linien haben die überkaufte Zone erreicht; bärisch überverkauft heißt, er ist bärisch und beide Linien haben die überverkaufte Zone erreicht.
 
 ## Kernaussagen
 
@@ -91,6 +103,62 @@ aktualisiert: 2026-10-30
 - Auf einem Horizont von 3 Jahren sind Aktien mit hohem Momentum und niedrigem Volumen auf der Oberseite beständiger, Aktien mit negativem Momentum und hohem Volumen auf der Unterseite.
 - Bernard zeigt, dass auf Gewinnmeldungen Preistrends folgen, wenn die Meldung stark von den vorherigen Erwartungen abweicht. Famas frühere Studien hatten das Ausmaß dieser Überraschung nicht berücksichtigt.
 - Echte Trends sind Strähnen, die länger dauern als die in Random Walks vorkommenden Strähnen. In solchen Prozessen enthalten frühere Beobachtungen nützliche Prognoseinformation.
+- Ein Momentum-Indikator allein ist für den Trader von geringem praktischem Nutzen.
+- Alle Momentum-Studien sind nachlaufende Indikatoren: Sie zeigen die aktuelle Marktposition relativ zur Vergangenheit, helfen aber wenig, die wahrscheinliche Trendposition in der Zukunft zu zeigen, außer in der besonderen Anwendung aus Kapitel 2.
+- Jeder Indikator oder Oszillator auf jeder Handelsplattform und in jedem Chartprogramm ist ein nachlaufender Indikator.
+- Ein nachlaufender Indikator zeigt, wie die aktuelle Marktposition zu den Vergangenheitsdaten der Lookback-Periode steht, hat aber wenig Vorhersagekraft.
+- Ein Momentum-Indikator kann helfen, Trendrichtung und Trade-Ausführung zu erkennen, wenn er mit der Multiple-Time-Frame-Momentum-Strategie genutzt wird; die Momentum-Strategie ist nur nützlich als Teil eines Tradingplans, der führende Indikatoren einschließt.
+- Nie erwarten, dass der Preis umkehrt, wenn der Indikator umkehrt; oft kehren Preis und Momentum zusammen um, manchmal divergieren sie, weil sich nur die Geschwindigkeit ändert.
+- Geld lässt sich nur an Preistrends verdienen, wenigstens bis es einen Momentum-Kontrakt zu handeln gibt.
+- Die Multiple-Time-Frame-Momentum-Strategie ist der stärkste Ansatz, den der Autor in über 20 Jahren gefunden hat, um jeden Markt und jeden Zeitrahmen nach Handelsrichtung und Ausführung zu filtern, und ein Schlüsselfaktor des Plans für Setups hoher Wahrscheinlichkeit bei minimaler Kapitalbindung.
+- Er hält sie für die beste Nutzung eines Indikators und für die einzige praktische Indikatorstrategie für den realen Handel; sie ist kein eigenständiges System, obwohl sie wahrscheinlich besser ist als die meisten Systeme, die für Tausende Dollar verkauft werden.
+- Im Plan mit Zeit, Preis und Muster warnt sie, wenn ein Trend dem Ende nahe ist und eine große Trendumkehr wahrscheinlich wird.
+- Zwei Zeitrahmen genügen: gehandelt wird in Richtung des größeren, außer die Momentum-Position ist overbought oder oversold, und ausgeführt wird nach der Umkehr des kleineren; mindestens zwei Zeitrahmen sollen dieselbe Richtung haben.
+- Die Momentumumkehren der niedrigeren Zeitebene in Richtung des Momentums der höheren Zeitebene sind wichtige Filter für ein Setup mit hoher Wahrscheinlichkeit.
+- Die höhere Zeitebene bestimmt die Handelsrichtung.
+- Die Multiple-Time-Frame-Momentum-Strategie ist ein objektiver Filter zur Identifikation von Trade-Setups mit hoher Wahrscheinlichkeit.
+- Wer einen Trade nur bei einem vorliegenden Dual-Time-Frame-Momentum-Setup erwägt, dessen Ergebnisse sollten sich dramatisch verbessern.
+- Momentumtrends stimmen nicht immer mit Preistrends überein.
+- Eine Momentumumkehr kann nur anzeigen, dass der Preistrend langsamer wird, und nicht, dass der Preistrend umgekehrt ist.
+- Eine Momentumumkehr zeigt weder die Lage innerhalb des Preistrends noch, ob dieser Trend an oder nahe einer Umkehr steht.
+- Die vier objektiven Momentumlagen auf zwei Zeitebenen sind bullisch, bullisch overbought, bärisch und bärisch oversold.
+- Die größere Zeitebene bestimmt die Marktseite, die kleinere Momentumumkehr das Ausführungs-Setup.
+- Momentum ist neben Zeit, Preis und Muster einer der vier Faktoren einer Umkehr. Viele, aber nicht alle korrektiven Hochs und Tiefs entstehen, wenn alle vier zusammenpassen.
+- Vor dem 38-Prozent-Zeitretracement ist eine Momentumumkehr an einem Preisziel eher nur vorübergehende Unterstützung oder vorübergehender Widerstand, kein Abschluss der Korrektur.
+- In der typischen Zeitretracement-Zone macht Preis- oder Momentum-Unterstützung das Setup für ein korrektives Hoch oder Tief vollständig.
+- Das Time Band liegt im Indikatorfenster und zusätzlich in der Overbought-Zone, als gemeinsame Sicht auf Zeitfenster und Momentum.
+- Die Momentumposition der größeren Zeitebene kann anzeigen, dass eine Umkehr größeren Grades ansteht. Das Time Band liefert dann das enge Zeitfenster.
+- Die Richtung des Trades bestimmt die Momentum-Lage der nächsthöheren Zeitebene. Für höhere Wahrscheinlichkeit sollen zwei höhere Zeitebenen übereinstimmen.
+- Überverkauftes Wochenmomentum begrenzt die unmittelbare Abwärtsseite. Überkauftes Wochenmomentum zeigt die Endphase eines Anstiegs an, und der Stop wird näher herangezogen.
+- Der verwendete Oszillator ist der DTosc mit einem Lookback von acht Wochen, so gewählt, dass er an den Wochenhochs und Wochentiefs von etwa 18 Monaten die überkauften und überverkauften Zonen erreichte.
+- Überkauftes Momentum der höheren Zeitebene begrenzt die unmittelbare weitere Bewegung. Eine Wochenumkehr aus der überkauften Zone wird typischerweise von seitwärts bis abwärts über mehrere Wochen gefolgt.
+- Hat die höhere Zeitebene die überkaufte Zone erreicht, bleiben der niedrigeren gewöhnlich nur noch eine oder zwei Umkehren, bevor die höhere umkehrt.
+- Momentum-Umkehren entstehen nicht immer in den überkauften oder überverkauften Zonen. Das Wochenmomentum kann monatelang in der überkauften Zone hängen, ohne eine bullische Umkehr unter dieser Zone zu liefern.
+- Nur die schnelle Linie des Wochenmomentums kann die überkaufte Zone erreichen, während die bärische Umkehr erst in der folgenden Woche kommt.
+- Weite Umkehrbars können eine deutliche Preisbewegung erzeugen, bevor ein Momentum-Umkehrsignal entsteht.
+- Die Momentum-Lage auf zwei Zeitebenen ist der erste Filter für ein Setup und für die Frage, ob eine Long-Position gehalten werden darf.
+- Der DT-Oszillator beschreibt die Momentumlage und wird für den Einstieg genutzt.
+- Ein täglicher 8er-DTosc tief in der überverkauften Zone macht ein Welle-C-Tief zu einem sehr starken Kandidaten.
+- Bärisch gedrehtes Wochenmomentum bei überkauftem Tagesmomentum ist eine Lage für ein mögliches ABC-Hoch.
+- Überkauftes Wochenmomentum zusammen mit einer bärischen Tagesumkehr ist ein Short-Setup über zwei Zeitebenen.
+- Überverkauftes Wochenmomentum bei überkauftem Tagesmomentum macht eine kleinere Korrektur wahrscheinlich, bevor der Aufwärtstrend weiterläuft.
+- Ein mögliches Welle-3-Tief bei überverkauftem Tagesmomentum ist ein starkes Long-Setup.
+- Am kleineren 50-Prozent-Retracement kann die erste Short-Einheit geschlossen werden, wenn das 60-Minuten-Momentum überverkauft ist.
+- Am 61,8-Prozent-Retracement bei überverkauftem Momentum wird der Stop erst dann an ein kleineres Swing-Hoch herangezogen.
+- Der DT-Oszillator ist eines von fünf Prüffeldern, neben Wellenanalyse, Regressionskanälen mit zwei Standardabweichungen, Fibonacci-Preiszonen und Kerzencharts.
+- Überverkauftes Wochen- und Tagesmomentum nahe einer Kanalunterstützung stützt die Suche nach einem Korrekturtief.
+- Ist das Tagesmomentum nach einem 162-Prozent-Ziel weiter bärisch und nicht überverkauft, läuft der Abwärtstrend wahrscheinlich weiter.
+- Bärisch überverkauftes höheres Momentum an einem Welle-5-von-5-Tief warnt, dass der Fünf-Wellen-Rückgang fertig werden kann.
+- Der 3-Minuten-CCI mit Periode 14 dient als Auslöser: Kreuzen unter null für den Short-Einstieg, Kreuzen über null für den Ausstieg.
+- Die Änderungsrate kann zeigen, ob der Markttrend gegenüber früheren Trends schneller oder langsamer wird; Momentum läuft nicht immer in dieselbe Richtung wie der Preis.
+- Gehandelt wird in Richtung des Momentums: bei bullischem Momentum nur Longs, außer es ist bullisch überkauft, bei bärischem Momentum nur Shorts, außer es ist bärisch überverkauft.
+- Bullisch überkauftes Momentum warnt in den meisten Fällen, dass das Aufwärtspotenzial begrenzt sein sollte, bevor ein Momentumhoch und ein wahrscheinliches Preishoch entstehen.
+- Bärisch überverkauftes Momentum warnt in den meisten Fällen, dass das Abwärtspotenzial begrenzt sein sollte, bevor ein Momentumtief und ein wahrscheinliches Preistief entstehen.
+- Überkauft ist ein relativ hohes Indikatorniveau, gewöhnlich um 70 bis 80 Prozent der möglichen Spanne; wird es erreicht, sollte der weitere Preisanstieg begrenzt sein, bevor ein Hoch entsteht.
+- Überverkauft ist ein relativ niedriges Niveau, gewöhnlich um 20 bis 30 Prozent; wird es erreicht, sollte der weitere Preisrückgang begrenzt sein, bevor ein Tief entsteht.
+- Eine kurze Lookback-Periode macht den Indikator relativ empfindlich für die jüngste Preisvolatilität und den jüngsten Trend, eine lange Lookback-Periode macht ihn relativ langsam.
+- Ein überverkauftes Niveau ist ein relativ niedriges Niveau, gewöhnlich etwa 20 bis 30 Prozent.
+- Erreichen viele Indikatoren ein überverkauftes Niveau, soll das Abwärtspotenzial des Kurses begrenzt sein, bevor ein Kurstief entsteht.
 
 ## Funktionsweise
 
@@ -106,6 +174,23 @@ aktualisiert: 2026-10-30
 - Änderungen der Indexzusammensetzung erzeugen Momentum in aufgenommenen oder gelöschten Aktien.
 - Liegt die Ursache in langsamer Nachrichtendiffusion, liegt der Nutzen in den ersten Tagen, Stunden oder Sekunden nach dem Ereignis.
 - Die Kursbewegung einer Gewinnmeldung hält danach einige Zeit in derselben Richtung an.
+- Kapitel 2 stellt eine von wenigen Tradern genutzte Momentum-Strategie vor, die nachlaufende Momentum-Indikatoren als Filter für Handelsrichtung und Ausführungs-Setups einsetzt.
+- Diese Multiple-Time-Frame-Momentum-Strategie soll die nützlichste und praktischste Momentum-Anwendung werden, die sich dem Tradingplan hinzufügen lässt.
+- Die vier Dimensionen der Marktposition sind Multiple-Time-Frame-Momentum, Muster, Preis und Zeit; jeder Faktor liefert ein Stück Information für die Handelsentscheidung.
+- Die vier Marktperspektiven des High-Probability-Ansatzes sind Momentum über mehrere Zeitrahmen, einfache Mustererkennung, Preisumkehrziele und Zeitumkehrziele.
+- Fast jeder preisbasierte Indikator eignet sich, weil alle dieselben Momentum-Zyklen und die Änderungsrate darstellen und die meisten Umkehren etwa zur selben Zeit machen; die Einstellungen einschließlich der Lookback-Periode lassen sich je Markt und Zeitrahmen justieren.
+- Es gibt nur begrenzt viele Arten, Open-High-Low-Close zu verarbeiten; Black-Box-Anbieter behaupten einen geheimen narrensicheren Indikator, der wahrscheinlich schon im Chartprogramm liegt.
+- Positionstrader nutzen Woche und Tag für Trades von mehreren Wochen bis Monaten, Swingtrader Tag und Stunde für wenige Tage, Daytrader 60- und 15-Minuten oder kleiner.
+- In den ersten mindestens zehn Jahren ab Mitte der 1980er nutzte er keinen Indikator und handelte als Chartist mit Zeit, Preis und Muster nach Gann, Elliott und Fibonacci; 1989 erschien sein W.D.-Gann-Home-Study-Trading-Course, der nicht mehr erhältlich ist.
+- Ende der 1980er hatte er erstmals einen Computer mit Chartprogramm, fand immer einen Indikator oder eine Lookback-Änderung, die seine vorhandene Meinung bestätigte, und ließ Indikatoren von den Charts; ab Mitte der 1990er prüfte er auf Drängen eines Schülers Momentum zur Bestätigung von Muster und Preis, und mehrere Jahre vor diesem Kapitel kamen mehrere Zeitrahmen hinzu.
+- Overbought und Oversold sind keine wirklich treffenden Beschreibungen dafür, dass ein Indikator extreme Werte erreicht.
+- Erreicht ein Indikator die Overbought-Zone am oberen Extrem seiner Spanne, heißt das nicht zwangsläufig, dass der Markt selbst zur Abwärtswende bereit ist, sondern nur, dass der Indikator nahe dem Extrem steht.
+- Erst die Historie vieler Momentumzyklen zeigt, ob der Preis gewöhnlich an oder nahe einer Umkehr steht, wenn der Indikator Overbought oder Oversold erreicht.
+- Die Lookback-Periode ist die Zahl der Bars zurück vom jüngsten Bar, die der Indikator für die Momentumberechnung betrachtet.
+- Dieselbe Lookback-Periode wird auch als die Zahl der Bars vor und einschließlich des jüngsten Bars beschrieben, die der Indikator für seine Berechnung nutzt.
+- Eine längere Lookback-Periode ist weniger empfindlich für Preisänderungen und braucht eine längere Phase jüngster Momentumänderung, bis sie beeinflusst wird.
+- Der Vorteil der längeren Lookback-Periode sind weniger falsche Umkehren durch kurzfristige Momentumänderungen; der Nachteil ist ein möglicher Nachlauf, sodass der Preis mehrere Bars vor dem Indikator umgekehrt haben kann.
+- Momentumtrends wechseln von niedriger Volatilität mit relativ seltenen Umkehren zu hoher Volatilität mit relativ häufigen Umkehren, und kein System warnt vor der Art der künftigen Zyklen.
 
 ## Voraussetzungen
 
@@ -116,10 +201,37 @@ aktualisiert: 2026-10-30
 - Regel 2 des Buy-on-Gap ist ein Momentum-Filter auf einer Mean-Reversion-Strategie: der Open muss über dem 20-Tage-Durchschnitt der Schlusskurse liegen, und dieses Muster wird im Text oft wiederholt.
 - Ein Momentum-Filter auf Mean-Reversal-Strategien verbessert typischerweise deren Konsistenz.
 - Unter den fünf bei Kestner getesteten Trendfolge-Systemen sind zwei Fassungen von Momentum, neben Channel-Breakout, dem Kreuz zweier gleitender Durchschnitte und MACD gegen seine Signallinie.
+- Steht ein Markt aus vier verschiedenen Perspektiven auf Veränderung, hat der Trader einen enormen Vorteil, deutlich mehr, als wenn nur ein oder zwei der Faktoren in derselben Position sind.
+- Ein Tradingplan ohne diese vier Marktdimensionen fehlt ein großes Stück des Markträtsels und ist deutlich weniger wirksam als einer mit allen vier.
+- Die Dual-Time-Frame-Momentum-Strategie ist ein vollständig objektiver Ansatz, um Trade-Setups als einen Teil eines umfassenden Tradingplans zu identifizieren.
+- Sie gilt für jeden aktiv gehandelten Markt und jede Zeitebene, vom Positionshandel mit Monats-, Wochen- und Tagesdaten bis zum Daytrading mit Intraday-Daten, und Prinzip wie Anwendung bleiben dieselben.
+- Sie identifiziert, wann ein Markt in einer Lage ist, einen Trade zu erwägen, und ist der erste Filter eines möglichen Trades, aber keine Ausführungsstrategie.
+- Der Zweck aller Handelsstrategien ist, Bedingungen mit einem Ergebnis hoher Wahrscheinlichkeit und akzeptablem Kapitaleinsatz zu identifizieren.
+- Wer die Disziplin hat, einen Trade nur zu erwägen, wenn ein Dual-Time-Frame-Momentum-Setup vorliegt, dessen Handelsergebnisse sollten sich dramatisch verbessern.
+- In einem bewusst gewählten 18-Monats-Abschnitt von Bonds auf Wochen- und Tagesdaten gab es starke Gewinner, Preis-Momentum-Divergenzen mit immerhin einigen Gewinnen, magere Gewinne wegen des Nachlaufs der kleineren Zeitebene und mindestens eine Phase mit wahrscheinlich kleinem Nettoverlust.
+- Die Momentumposition auf zwei Zeitebenen ist der Filter für wahrscheinliche Trade-Setups.
+- Momentum und Muster zusammen erhöhen die Chancen eines Trades und senken den anfänglichen Kapitaleinsatz.
+- Eine bärische Momentumumkehr bei einem wahrscheinlichen Hoch der Welle 5, während der Preis noch deutlich über dem Tief der Welle 4 liegt, ist ein Short-Setup mit sehr geringem Kapitaleinsatz.
+- Das spätere Mustersignal, das Ausnehmen des Extrems der Welle 4, kann weit vom Hoch der Welle 5 entfernt liegen.
+- Eine bullische Momentumumkehr bei einem dreiteiligen Rückgang warnt vor einem ABC-Tief, bevor der Markt in die Spanne des möglichen Tiefs der Welle A läuft.
+- Momentum, Preis und Zeitposition helfen, das nächste Swing-Tief und ein mögliches Tief der Welle 5 zu erkennen.
+- Musterposition und Momentumumkehr werden deutlich stärker, wenn Preis- und Zeitposition hinzukommen.
+- Die besten Setups mit der höchsten Wahrscheinlichkeit und dem kleinsten Kapitaleinsatz entstehen, wenn mehrere vollständig unabhängige Faktoren dieselbe Lage anzeigen.
+- Das Tagesmomentum machte zwei Tage nach dem Berühren der End-of-Wave-C-Zone eine bullische Umkehr aus dem überverkauften Bereich.
+- Eine bullische Momentum-Preis-Divergenz begleitete die bullische Momentumumkehr am Kursziel des Welle-5-Tiefs beim S&P.
+- Momentum, Muster und Preis werden gemeinsam benutzt; die Preisposition allein trägt die Entscheidung nicht.
+- Die Dynamic Price Strategies gelten als die schnellsten, leichtesten und verlässlichsten Preisstrategien aus mehr als 20 Jahren, aber nicht jedes Hoch und Tief liegt genau auf dem vorher bestimmten Schlüsselziel.
+- Am Ziel einer möglichen Welle 5 wird jede Momentumumkehr zusammen mit einer Musterumkehr als Signal beachtet.
 
 ## Regeln und Kriterien
 
 - Erkannt wird dieses Excess erst danach, wenn der Innovator die nachlaufenden Momentum-Trader fadet.
+- Ein höherer Zeitrahmen im Oversold ist die Lage, einen Long vorzubereiten, weil das unmittelbare Abwärtspotenzial begrenzt sein soll.
+- Overbought auf der höheren Zeitebene zusammen mit bärischem Momentum der noch höheren Zeitebene ist die Lage für einen Short auf der kleineren Zeitebene.
+- Für einen Long ist das höhere Momentum bullisch oder bärisch oversold, für einen Short bärisch oder bullisch overbought.
+- Momentum, das bärisch bleibt und Oversold nicht erreicht, hält das Trailing-One-Bar-Low-Short-Setup am Leben. Oversold oder eine bullische Umkehr beendet es.
+- Für Daytrades liegen zwei höhere Zeitebenen im passenden Momentum, bevor die kleinste Zeitebene den Einstieg auslöst.
+- Der MACD hat keine Overbought- und Oversold-Zonen. Die Umkehr ist ein kürzerer Bar von unterhalb oder ein längerer Bar von oberhalb der Signallinie.
 
 ## Risiken und Grenzen
 
@@ -131,6 +243,10 @@ aktualisiert: 2026-10-30
 - Stop-Losses passen zu Momentum, weil der Richtungswechsel die Gegenposition eröffnet und damit die verlierende Position schließt.
 - Der aufsummierte Verlust aufeinanderfolgender verlierender Momentum-Positionen kann in die Insolvenz führen.
 - Nach riskanten Ereignissen liefen Momentum-Strategien schlecht, obwohl sie in Risiken gedeihen können.
+- Er fordert jeden Handelsexperten heraus, Belege zu liefern, dass dessen Trendindikator Trendposition und Trendumkehr zuverlässig und rechtzeitig so signalisiert, dass ein Trader sie nutzen kann; gleitender Durchschnitt, Kanal und Indikator auf historischen Daten sind nachlaufend und haben für sich wenig Vorhersagewert.
+- Nennt man einen Trendindikator und ein Beispiel, zeigt er zwei schnelle Fehlschläge, und auf jedes nachträgliche Beispiel mindestens zwei, in denen die Umkehr nicht rechtzeitig kam.
+- Verluste wird es geben; eine Strategie, die Verluste auf Verlusttrades minimiert, ist wesentlich, und Divergenz von Momentum und Preis soll wenigstens diese Verluste begrenzen.
+- Nicht jedes Dual-Time-Frame-Setup ist profitabel; ohne Einhalten des Tradingplans ist man zum Scheitern verurteilt.
 
 ## Beispiele
 
@@ -138,6 +254,24 @@ aktualisiert: 2026-10-30
 - Weitere Sentiment-Anbieter sind Recorded Future, thestocksonar.com und Thomson Reuters News Analytics; sie unterscheiden sich in der Nachrichtenabdeckung und im Algorithmus des Sentiment-Scores.
 - Elementarisierte Feeds liefert günstig Newsware; geringere Latenz und bessere Abdeckung bieten Bloomberg Event-Driven Trading, Dow Jones Elementized News Feeds und Thomson Reuters Machine Readable News.
 - Bollen, Mao und Zeng 2010 halten die in Twitter-Feeds sichtbare gesellschaftliche Stimmung für prädiktiv für den Marktindex; dazu wurde ein Hedgefonds über mehrere Millionen Dollar aufgelegt, nach Bryant 2010, die Geltung der Forschung wurde aber angegriffen, nach Buy the Hype 2012.
+- Im XAU war das Tagesmomentum oversold und drehte zwei Tage nach dem Extrem in Preis und Zeit bullisch, zusammen mit dem Preisziel aus 50-Prozent-Retracement und 62-Prozent-Alternate-Price-Projection.
+- Im ES war das Momentum am 50-Prozent-Retracement overbought, als das Wave-C-Hoch in der engen Zeitspanne entstand.
+- Eine bärische Momentumumkehr am 50-Prozent-Preisretracement setzte im IBM das Korrekturhoch nicht an den Zeitfaktoren. Das Hoch kam am 26. Dezember.
+- Ein Outside-Reversal-Day mit bärischer Momentumumkehr im Time Band vom 10. bis 12. Oktober war im DJIA das Short-Setup. Das Hoch entstand am 11. Oktober.
+- Overboughtes 60-Minuten-Momentum an einer Stelle, an der Hochs von mindestens mehreren Stunden entstanden waren, traf im EUR/USD auf den ersten Bar des Time Bands, den 20:00-Bar am 24. Januar.
+- Der tägliche Stochastic machte die bärische Umkehr am 50-Prozent-Retracement. Der wöchentliche Stochastic machte die bärische Umkehr in der Woche zum 19. Oktober, der tägliche erst am 31. Oktober.
+- Zwei 15-Minuten-Umkehren knapp über oder in Oversold waren keine Short-Setups. Erst die Overbought-Lage um 11:15 Uhr auf 15 Minuten, bei bärischem 60-Minuten-Momentum, öffnete den 5-Minuten-Short.
+- In diesen etwa 18 Monaten entstand eine bullische Wochenumkehr innerhalb weniger Wochen, jedes Mal wenn das Wochenmomentum die überkaufte Zone erreichte.
+- Beim XAU hing das Tagesmomentum vom frühen September bis zum 21. September in der überkauften Zone, ohne einen Zyklus bis zu einer bullischen Umkehr.
+- Beim S&P erreichte nur die schnelle Linie des Wochenmomentums die überkaufte Zone in der Woche zum 21. Dezember, die bärische Umkehr folgte erst in der nächsten Woche. Das Tagesmomentum kehrte am 11. Dezember bärisch.
+- Das 60-Minuten-Momentum war überkauft, als der S&P den Beginn der idealen Welle-C-Zone handelte, in derselben Lage wie beim Hoch der Welle A. Das Tagesmomentum war bullisch, aber knapp unter der überkauften Zone.
+- Beim OIH erreichte das Wochenmomentum die überkaufte Zone und blieb mehrere Monate dort, ohne bis August eine weitere bullische Umkehr unter der Zone zu geben.
+- Beim EUR/USD wurde das Wochenmomentum am 28. September überkauft. Ein Wochenhoch ist dann innerhalb von ein paar Wochenbars wahrscheinlich, die Aufwärtsseite relativ begrenzt. In derselben Woche machte das Tagesmomentum eine bärische Umkehr.
+- Das Tagesmomentum des EUR/USD erreichte die überkaufte Zone nicht und machte keine bärische Umkehr, bevor die langfristige Unit am 9. Oktober ausgestoppt wurde.
+- Am 23. August war das Tagesmomentum des EUR/USD überkauft. Die unmittelbare Aufwärtsseite sollte nur noch einen oder zwei Tage haben.
+- Zum 17. April 2007 waren Wochen- und Tagesmomentum der November-Sojabohnen überverkauft, der Preis lag nicht weit über der Unterstützung des Regressionskanals.
+- Nach der 162-Prozent-APP im USD/CAD war das Tagesmomentum noch bärisch und nicht überverkauft, deshalb wurde die Fortsetzung für wahrscheinlich gehalten.
+- Am 30. Januar war der 13er Tages-DTosc bärisch überverkauft, passend zu einem möglichen Welle-5-von-5-Tief.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -182,3 +316,5 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
 
 ## Verwandte Themen
+
+- Im Index dieses Abschnitts sind DT-Oszillator, MACD, Relative Strength Index, Stochastic und Rate-of-Change bei Momentum und Preisänderung aufgeführt.

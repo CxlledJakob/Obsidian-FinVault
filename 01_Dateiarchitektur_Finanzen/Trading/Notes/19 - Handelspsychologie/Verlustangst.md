@@ -30,6 +30,12 @@ aktualisiert: 2026-10-30
 - Käufer am Hoch einer Stauwelle sehen nie einen Gewinn, nur einen wachsenden Verlust, der bis nahe null zurückgeht. Sie steigen erleichtert mit kleinem Verlust aus.
 - Ihre Angst wäre auf dem Weg nach unten stetig gestiegen und auf dem Weg nach oben gefallen, ohne dass die Position je im möglichen Gewinn war.
 - Am Boden eines Abwärtstrends steigen schwache emotionale Trader erst ein, wenn andere schon verdient haben. Der Markt dreht sofort gegen sie, die Verluste wachsen, und die Angst steigt.
+- Stop- und Ausstiegsentscheidungen dürfen nicht aus einer beliebigen Angst kommen, die mit dem ursprünglichen Grund des Trades nichts zu tun hat.
+- Angst und Gier verdrängen den gesunden Menschenverstand, wenn unrealistische Gewinnversprechen locken.
+- Das Lernen mit gehebelten Trades kann teuer werden; ohne Hebel bleibt der Verlust beim Erfahrungssammeln klein.
+- Es gibt keinen Grund, große Risiken zu nehmen, bevor der Handel erfolgreich gelernt ist.
+- Wer mit ungehebelten Trades kein Geld verdient, wird mit gehebelten keines verdienen und dort schnell ausgeräumt.
+- Daytrading wirkt anziehend, weil Gewinn oder Verlust schnell kommt und nichts über Nacht gehalten wird; die Erfolgschance ist trotzdem deutlich schlechter als bei Swing- oder Positionstrades, solange der Handel nicht gelernt ist.
 
 ## Funktionsweise
 

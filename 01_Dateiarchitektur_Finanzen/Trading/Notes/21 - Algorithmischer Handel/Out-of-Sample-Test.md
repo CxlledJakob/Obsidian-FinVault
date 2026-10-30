@@ -111,6 +111,12 @@ aktualisiert: 2026-10-30
 - Kidd und Borsen untersuchen, warum die Renditen der technischen Analyse nachgelassen haben, und betrachten die Verschlechterung der System-Performance im Verlauf der Out-of-Sample-Daten. Diese Verschlechterung kann deshalb nicht auf den Data-Mining-Bias zurückgehen.
 - Prognose meint hier nicht notwendig das Vorhersagen der Zukunft, sondern noch nicht gemachte Beobachtungen, gleich ob sie in der Zukunft liegen.
 - Nur der Vergleich solcher Prognosen mit neuen Beobachtungen kann zeigen, welche der vielen Hypothesen, die vergangene Beobachtungen im Nachhinein erklären, stimmen könnte.
+- Ob die besten Einstellungen für einen begrenzten Zeitraum von nur wenigen Monaten täglicher SPX-Daten auch künftig nützlich bleiben, wird mit gewöhnlich beantwortet und nicht mit immer.
+- Dieselben Einstellungen, die für die früheren Monate nützlich waren, blieben in den daran anschließenden Monaten nützlich.
+- Man prüft einige Lookback-Perioden des bevorzugten Indikators über zwei oder drei verschiedene Zeitabschnitte derselben Daten und wählt die nützlichsten Einstellungen.
+- Danach wird angenommen, dass diese Einstellungen nützlich bleiben; mehr ist nicht möglich, weil sich die Zukunft nicht sehen lässt.
+- Ob Volatilität und Momentumzyklen sich künftig ändern, lässt sich nie wissen, und es muss angenommen werden, dass sie fortbestehen.
+- Ändern ein Markt später Trendgeschwindigkeit und Volatilität und sind die früher besten Einstellungen nach einigen Momentumzyklen nicht mehr optimal, kann die Lookback-Periode verkürzt oder verlängert werden.
 
 ## Funktionsweise
 

@@ -20,6 +20,7 @@ aktualisiert: 2026-10-30
 
 - Ein Trendkanal ist der Preisabstand von der Ober- zur Unterseite der Trendlinie.
 - Der Trendkanal ist hier das Band aus oberer und unterer Region, das durch die laufenden Pivot-Hochs und Pivot-Tiefs entsteht, nicht durch eine nachträglich gezogene Linie.
+- Der hier verwendete Kanal ist ein Regressionskanal mit zwei Standardabweichungen.
 
 ## Kernaussagen
 
@@ -33,6 +34,12 @@ aktualisiert: 2026-10-30
 - Die Stauzone setzt die Szene, das Volumen trägt die Bewegung, und die Pivots sind die Lichter am Straßenrand, die den Kanal sichtbar machen.
 - Im Fall wird der Kanal spiegelbildlich aus dem ersten Pivot-Tief und dem folgenden Pivot-Hoch aufgebaut.
 - Fehlen Pivots, kann der Preis in eine Stauzone auf etwas höherem Niveau zurückfallen, statt den Kanal fortzusetzen.
+- Eine ABC-Korrektur wird besonders dann bevorzugt, wenn Welle C auf dem Boden des aufwärts gerichteten Regressionskanals ankommt.
+- Der erste Stop kann etwas unter der Unterstützungslinie dieses Kanals liegen.
+- Im starken Trend ist der Median das Ziel für die halbe Position und die Oberseite, die Decke bei zwei Standardabweichungen, das Ziel für den Rest.
+- Um den Median wird der Verlauf oft holprig; der Stop der Restposition bleibt deshalb am letzten Strukturpunkt und nicht eng am Median.
+- Die Position wird geschlossen, sobald die Decke bei zwei Standardabweichungen berührt wird.
+- Regressionskanäle sind ein eigenes Entscheidungskriterium und lassen sich mit Welle, Fibonacci, Kerzen und Momentum verbinden.
 
 ## Voraussetzungen
 
@@ -54,6 +61,9 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Am gezeigten längerfristigen Verlauf misst dieser Abstand etwa 5 Prozent.
+- Am 17. April lag der Sojabohnenpreis nicht weit über der Kanalunterstützung; die Fibonacci-Zone von 7,60 bis 7,30 Dollar lag auf diesem Boden.
+- Vom 18. bis 22. Juni gab es einen Abverkauf von 68 Cent um den Median, ohne dass der Stop bei 823 griff.
+- Am 13. Juli wurde an der Zwei-Standardabweichungs-Decke vollständig geschlossen.
 
 ## Unterschiedliche Quellenpositionen
 

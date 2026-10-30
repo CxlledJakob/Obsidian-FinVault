@@ -38,6 +38,12 @@ aktualisiert: 2026-10-30
 - Kerzen sind beschreibender als Bars und seit den frühen 1990ern der übliche Standard westlicher Trader. Volumen-Preis-Analyse mit Kerzen ist die hier verwendete Methode.
 - Die Länge jedes Dochts ist der erste Fokus, weil sie Stärke, Schwäche, Unentschlossenheit und das Ausmaß der Stimmung sofort zeigt.
 - Kein Docht bedeutet starke Stimmung in Richtung des Schlusses. Ein enger Körper bedeutet schwache Stimmung, ein weiter Körper starke Stimmung.
+- Der Markt muss sich vor dem Einstieg in die erwartete Richtung bewegen und ein Bar-Hoch, ein Bar-Tief, ein Swing-Hoch oder ein Swing-Tief nehmen. Das ist der Beleg, dass er tut, was erwartet wird.
+- An einem Zielpreis wird nie gekauft oder verkauft.
+- Positive Preisaktion in der erwarteten Richtung heißt beim Trailing-Entry, dass ein Bar-Hoch oder Bar-Tief genommen wird, bevor der Trade entsteht.
+- Ein Handel über das Swing-Hoch kann jedes logische Bärenmuster aufheben und ist dann ein Pattern-Reversal-Signal für einen Long.
+- Überlappende Abschnitte kennzeichnen ein korrektives Muster.
+- Daten außerhalb der Pit-Stunden werden nicht berücksichtigt, weil das Volumen so niedrig ist.
 
 ## Funktionsweise
 
@@ -69,9 +75,12 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Früher waren Gaps die Regel und oft gute Ausbruchssignale, besonders mit Volumen; heute sind sie selten und meist auf Aktien beschränkt, die zum elektronischen Handel aufschließen.
+- Beim IBM wirkte das Muster vom Tief am 22. Oktober korrektiv, weil die Abschnitte überlappten.
+- Im ES wurde der letzte 60-Minuten-Bar der Pit-Stunden am 27. November verwendet. Die Sitzung außerhalb der Pit-Stunden zählte nicht.
 
 ## Unterschiedliche Quellenpositionen
 
+- Klassische Chartisten und Swing-Trader warten auf den Ausbruch über das Hoch der Trading-Range. Das verlangt einen sehr weiten Stop. Momentum zweier Zeitebenen plus Trailing-One-Bar-High steigt mit kleinerem Einsatz ein.
 
 ## Eigene Erkenntnisse
 

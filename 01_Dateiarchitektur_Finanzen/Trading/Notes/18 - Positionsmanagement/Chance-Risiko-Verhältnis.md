@@ -19,6 +19,9 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Asymmetrisch heißt: die Erfolgschance liegt über 50 Prozent, und der mögliche Gewinn ist größer als der mögliche Verlust.
+- Das Chance-Risiko-Verhältnis soll das anfängliche Kapitalrisiko zur möglichen Belohnung ins Verhältnis setzen. Der Dollarbetrag des Risikos ist vor dem Trade bekannt, die Belohnung nie.
+- Chance-Risiko setzt den möglichen Verlust ins Verhältnis zur möglichen Belohnung und wird gewöhnlich als Verhältnis wie 3:1 angegeben, gemeint als Belohnung zu Risiko, also 3 Dollar möglicher Gewinn je 1 Dollar Risiko.
+- Chance-Risiko ist der riskierte Geldbetrag gegenüber der möglichen Belohnung.
 
 ## Kernaussagen
 
@@ -37,9 +40,40 @@ aktualisiert: 2026-10-30
 - Je häufiger Black-Swan-Ereignisse auftreten, desto wahrscheinlicher profitiert eine Momentum-Strategie davon.
 - Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist dieser Markt für Momentum-Strategien.
 - Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
+- Das Ziel ist ein Ergebnis hoher Wahrscheinlichkeit bei akzeptablem Kapitaleinsatz, nicht einen bestimmten Markt die ganze Zeit zu handeln.
+- Retracement-Niveaus allein taugen wenig für praktische Strategien; wer bei jedem der vier Niveaus eine Umkehr handelt, kann pleitegehen.
+- Wenn ein APP und ein Retracement eine enge Zone bilden, steigen die Chancen deutlich, dass diese Konfluenz die Korrektur abschließt und ein Trade-Setup mit geringem Risiko entsteht.
+- Oft liegen APP und Retracement nicht nah genug für eine solche Zone.
+- Der Fokus liegt auf dem erfolgreichen Handel und nicht auf der Handelsaktivität, und darauf, nur bei optimalen Bedingungen einen Trade zu erwägen.
+- Das Ziel aller Trade-Pläne sind Bedingungen mit einem Ergebnis hoher Wahrscheinlichkeit und akzeptablem Kapitaleinsatz.
+- Gehandelt wird, was man weiß, nicht was man über den weiteren Verlauf noch nicht wissen kann.
+- Nicht jedes Hoch und Tief liegt genau auf einem im Voraus bestimmten Schlüsselkursziel; die Entscheidung beruht nicht allein auf der Preisposition.
+- Ein Ergebnis hoher Wahrscheinlichkeit ist das Beste, das erwartbar ist. Es reicht als Grundlage für Handelsstrategien mit geringem Risiko und hoher Wahrscheinlichkeit.
+- Time Bands sollen regelmäßig dazu dienen, Bedingungen mit wahrscheinlich hohem Ergebnis und akzeptablem Kapitaleinsatz zu erkennen.
+- Jede Handelsstrategie oder technische Methode hat nur eine Wahrscheinlichkeit, zu erkennen, was die Zukunft bringt. Ein Hoch oder Tief kann früher oder später als das Time Band entstehen.
+- An einem Preisziel zu kaufen oder zu verkaufen wird nicht empfohlen, weil das Risiko zu groß ist, dass der Markt durch das Ziel weiterläuft. Der Markt muss zuerst in die erwartete Richtung laufen.
+- Der Stop steht immer genau an dem Preis, der das Setup ungültig macht. Wird diese Bedingung aufgehoben, gibt es keinen Grund zu bleiben. Der Ausstieg soll schnell mit akzeptablem Verlust erfolgen, statt in einen möglicherweise ruinösen Verlust zu laufen.
+- Einstiegspreis, Stop-Preis und der anfängliche Kapitaleinsatz werden nicht vom Trader festgesetzt, sondern vom Markt über die Spanne der Bars. Steuerbar ist, ob das Risiko akzeptiert wird, und die Positionsgröße.
+- Der Stop darf nicht willkürlich zwischen Einstieg und Swing-Extrem liegen. Nur ein Handel jenseits des Swing-Tiefs oder Swing-Hochs hebt das Setup auf.
+- Beim Swing Entry ist der Kapitaleinsatz gewöhnlich größer als beim Trailing-One-Bar-Entry, weil der Einstieg weiter vom ersten Schutzstop entfernt ist. Dafür sollte die Trefferquote höher sein.
+- Ein Einstieg sehr bald nach der Momentumumkehr der kleinen Zeitebene kann eine niedrigere Trefferquote bei kleinerem Einsatz haben. Eine höhere Trefferquote geht oft mit größerem Einsatz einher.
+- Ein Drawdown von 20 Prozent braucht 25 Prozent Gewinn, nur um wieder auf Breakeven zu kommen. Ein Drawdown von 50 Prozent braucht 100 Prozent Gewinn.
+- Die besten professionellen Trader haben selten eine Trefferquote über 50 Prozent. Langfristig erfolgreiche Trader haben gewöhnlich mehr Verlierer als Gewinner.
+- Eine Trefferquote über 50 Prozent über die Zeit gehört zur Spitze. Wer gut handelt, liegt etwa bei 30 bis 40 Prozent Gewinnern. Deshalb müssen Verluste relativ klein und Gewinne relativ groß sein.
+- Das Kapitalrisiko je Einheit ist für sich nicht maßgeblich, nur über die Positionsgröße im Verhältnis zur Kontogröße. Kein Trade, wenn das Kapitalrisiko der Gesamtposition größer als 3 Prozent ist.
+- Ob die Position klein oder groß ist: Das Risiko ist nie größer als 3 Prozent, solange die Regel des maximalen Risikos je Trade befolgt wird.
+- Eine kleinere Zeitebene für die Ausführung senkt das anfängliche Kapitalrisiko nicht immer, aber oft, wenn man den Bildschirm während des Handelstags beachten kann.
+- Ein Trailing-One-Bar-High mit sehr weitem Stop kann das Chance-Risiko-Verhältnis der kurzfristigen Unit verderben. Die Lösung ist, für die Ausführung eine Zeitebene tiefer zu gehen.
+- Ein Verhältnis wie 3:1 ist hier Reward zu Risk, also 3 Dollar möglicher Gewinn auf 1 Dollar Risiko, das als Kapitaleinsatz verstanden wird.
+- Das Risiko je Einheit lässt sich als Differenz zwischen Einstiegspreis und initialem Schutzstoppreis definieren.
+- Die Belohnung ist immer nur eine bestmögliche Schätzung der wahrscheinlichen Mindestbewegung, die der Markt voraussichtlich macht.
 
 ## Funktionsweise
 
+- Ist der Einstieg 40 Dollar und der anfängliche Schutz-Sell-Stop 35 Dollar, ist das Risiko 5 Dollar, sofern kein Gap durch den Stop. Das Risiko ist eine Funktion aus Einstiegspreis minus Stoppreis.
+- Die Belohnungsschätzung soll auf denselben Faktoren beruhen wie die Trade-Entscheidung, nicht auf einem davon unabhängigen Faktor.
+- Glaubt man, eine Korrektur stehe vor dem Abschluss, ist die Mindestbelohnung ein neues Extrem jenseits des Hochs oder Tiefs, an dem die Korrektur begann. Die 100-Prozent-Alternate-Price-Projection ist ein weiteres logisches Ziel und wird oft, nicht immer, vom nächsten Abschnitt erreicht.
+- Genannte Arten, eine Belohnung zu berechnen, sind typische E-Wave-Preisziele, frühere Unterstützung oder früherer Widerstand, die Wahrscheinlichkeit, ein Swing-Hoch oder Swing-Tief zu überschreiten, und die prozentuale Preisänderung. Manches davon ist logisch und nützlich, manches nur ein Vorwand, eine Zahl zu erzeugen.
 
 ## Voraussetzungen
 
@@ -112,6 +146,14 @@ aktualisiert: 2026-10-30
 - Ein einzelnes Poor Low wiegt wenig. Mehrere Poor Lows bedeuten ein exponentiell höheres Risiko für Longs.
 - Je höher der Preis ohne Bestätigung von Struktur und Volumen läuft, desto besser wird die Abwärtsgelegenheit.
 - Ein Downside-Breakout-Failure ist oft ein starkes Signal, dass eine Veränderung eingetreten ist, und bietet eine günstige Trade Location.
+- Jeder gesetzte Trade kann ein Verlierer sein. Auf einen einzelnen Trade oder eine Gruppe offener Trades wird nie mehr als ein kleiner Kapitalanteil riskiert.
+- Erfolgreiche Trader haben immer einen relativ engen Stop. Ein ausgestoppter Verlust muss ein akzeptabler Verlust sein.
+- Ist der Einsatz zu groß, wird der Trade ausgelassen oder in einem gering oder nicht gehebelten Markt wie einem ETF oder Fonds genommen, statt im Future oder stark gehebelten Forex. Alternativ wird nach dem Setup der höheren Zeitebene die nächstkleinere abgewartet, deren Einsatz meist deutlich kleiner ist.
+- Es gibt nur zwei Einstiegsstrategien, und beide verlangen, dass der Markt sich vor dem Einstieg in die erwartete Richtung bewegt.
+- Die meisten Trades werden ausgeführt. Manchmal reagiert der Markt nicht wie erwartet und erfüllt die Ausführungsbedingungen nicht. Dann wird nicht eingestiegen.
+- Das Risiko je Einheit ist der Abstand zwischen Einstiegspreis und erstem Schutzstop, auch Kapitalbindung genannt.
+- Die Belohnung ist immer nur eine beste Schätzung der wahrscheinlichen Mindestbewegung, die der Markt machen dürfte.
+- Risiko im engeren Sinn ist die Wahrscheinlichkeit, dass ein Ereignis eintritt; im Handelsgebrauch ist meist der Geldbetrag gemeint, der gegen die Anfangsposition verloren werden kann.
 
 ## Risiken und Grenzen
 
@@ -129,14 +171,39 @@ aktualisiert: 2026-10-30
 - Der aufsummierte Verlust aufeinanderfolgender verlierender Momentum-Positionen kann trotzdem in die Insolvenz führen.
 - Momentum-Strategien überstehen Risiken und können in ihnen gedeihen, liefen nach riskanten Ereignissen aber schlecht.
 - Stop-Losses passen zu Momentum, weil ein Richtungswechsel in die Gegenposition führt und dieser neue Einstieg den Stop der verlierenden Position ersetzt; sie passen nicht zu Mean Reversion, weil sie deren Einstiegssignalen widersprechen.
+- Große Positionen können große Verluste erzeugen, die emotional und finanziell schwer aufzuholen sind.
+- Ein weiter Stop, um der Position Luft zu geben, und das Nachkaufen gegen den Lauf brechen die Risikoregeln und enden oft im großen Verlust oder darin, dass der Broker die Position schließt, wenn die Margin aufgebraucht ist.
 
 ## Beispiele
 
 - Die Chance auf weiteres Steigen wird mit 75 Prozent angesetzt, bei einem zusätzlichen Gewinnpotenzial von 3 Prozent.
 - Weil diese Aufwärtsbewegung sehr spät in der Gesamtauktion liegt, kann ein Bruch von diesem Niveau leicht 20 Prozent Verlust bringen.
+- Im XAU-Beispiel wäre der anfängliche Kapitaleinsatz eines Long nur 2 bis 3 Punkte gewesen, das Gewinnpotenzial 35 Punkte oder mehr.
+- Die 2 bis 3 Punkte sind die Differenz zwischen dem Schluss der letzten Kerze und dem bisher tiefsten Tagesschluss; die 35 Punkte oder mehr reichen bis über das Hoch, an dem die mögliche Korrektur begann.
+- Beim ES fielen die drei Schlüsselziele innerhalb von weniger als zwei Punkten zusammen.
+- Das Abwärtspotenzial war relativ begrenzt, um zu prüfen, ob das Tief der Welle 5 fertig ist, das Aufwärtspotenzial erheblich.
+- Kursziel der Welle 5 plus bullische Momentumumkehr ist ein Long-Setup mit minimalem Kapitaleinsatz und viel Aufwärtspotenzial.
+- Im 60-Minuten-Long läge der Einstieg bei 1431,25, ein Tick über dem Ein-Bar-Hoch, und der Schutzstop bei 1406,50, ein Tick unter dem Swing-Tief, also 24,75 Punkte Kapitaleinsatz je Kontrakt. Das ist für einen stark gehebelten Future-Trader eher zu groß.
+- Der klassische Ausbruch über das Hoch der Trading-Range im EUR/USD verlangt einen sehr weiten Stop. Das Momentum zweier Zeitebenen mit Trailing-One-Bar-High erlaubt einen Long mit relativ kleinem Einsatz. Bleibt der Bullentrend aus, ist der Verlust sehr klein.
+- Ein signifikanter Anfangseinsatz auf 60 Minuten kann für ein gehebeltes Future-Konto mit relativ kleinem Kapital ungeeignet und zugleich für eine ungehebelte oder marginierte Position im SPY oder in einem Indexfonds passend sein.
+- Beim XAU werden keine ausgefeilten Verhältnisrechnungen gemacht. Übersteigt es das Juli-Hoch, liegt die mögliche Belohnung deutlich über dem Dreifachen des Risikos, wenn die Order über dem Hoch vom 17. August ausgeführt wird. Viel Aufwärtspotenzial gegen minimales Kapitalrisiko genügt.
+- Die passende Positionsgröße riskiert nicht mehr als 3 Prozent. Für die Beispiele wird keine bestimmte Kontogröße angenommen.
+- Das Kapitalrisiko je Einheit ist für sich nicht maßgeblich, nur die Positionsgröße im Verhältnis zum Konto.
+- Liegt das Kapitalrisiko der Gesamtposition über 3 Prozent, wird kein Trade genommen. Ob die Position klein oder groß ist, bleibt das Risiko bei höchstens 3 Prozent, solange die Regel befolgt wird.
+- In der Rückschau des S&P-Trades betrug das anfängliche Kapitalrisiko 24,25 Punkte je Kontrakt und war damit relativ groß.
+- Das anfängliche Kapitalrisiko des S&P je Future-Kontrakt war mit 24,25 Punkten relativ groß, 24,25 mal 50 Dollar gleich 1.212,50 Dollar. Zwei Kontrakte sind 2.425 Dollar. Dafür nennt der Text 80.800 Dollar verfügbares Kapital, 2.425 geteilt durch 0,03.
+- Ist das Konto kleiner, wird die Position im SPY genommen, der Tick für Tick mit dem S&P läuft. Ungehebelt brachte die erste Unit ungefähr 2 Prozent in zwei Tagen, die zweite ungefähr 5,3 Prozent in weniger als zwei Wochen. Das anfängliche Kapitalrisiko lag unter 1,8 Prozent. Der Text nennt das beeindruckende Renditen in sehr kurzer Zeit bei sehr niedrigem Risiko.
+- Der 15-Minuten-Einstieg hatte 11,25 Punkte Kapitalrisiko je Kontrakt gegen 24,25 Punkte auf 60 Minuten. Der Tr-1BH lag bei 1422,50, im Text als ein Tick über dem Bar-Hoch von 1422,50 beschrieben, der Stop bei 1411,25, einen Tick unter dem Swing-Tief.
+- Beim EUR/USD wäre das Chance-Risiko-Verhältnis eines Tages-Tr-1BH mit dem sehr weiten Stop des weiten Range-Tags vom 17. August zumindest für die kurzfristige Unit nicht gut, weil eine bloße Korrektur nur etwa 1,3657 erreichen sollte. Die Ausführung geht deshalb auf 60 Minuten.
+- OIH: Einstieg 136,93, Stop 132,00, anfängliches Kapitalrisiko 4,93, und genau dieser Betrag wurde als Verlust beider Units realisiert, weil der Schutzstop nicht angepasst wurde.
+- EUR/USD: erster Versuch 21 Pips Verlust, zweiter Versuch 18 Pips Risiko, kurzfristige Unit 156 Pips, langfristige Unit 561 Pips. Einen kleinen Gewinn zu früh zu sichern, wenn ein großer Gewinn wahrscheinlich ist, widerspricht dem Ziel.
 
 ## Unterschiedliche Quellenpositionen
 
+- Manche Handelslehrer machen viel aus sogenannten Risk-Reward-Verhältnissen und nehmen nur Trades mit einem Verhältnis von 3:1. Ein Verhältnis von 3:1 Risiko zu Chance würde das Dreifache des Risikos gegenüber der Belohnung bedeuten. Gemeint ist ein Chance-Risiko-Verhältnis von 3:1.
+- Der Autor hält die Idee im Kern für unbrauchbar. Die Belohnung ist nur eine beste Schätzung, gewöhnlich eine optimistische Schätzung, um den Trade zu rechtfertigen.
+- Die meisten professionellen Trader beachten ein solches Verhältnis kaum. Sie konzentrieren sich auf optimale Setups, die Ausführung und das Management bis zum Ausstieg. Geschlossene profitable Trades sind dann gewöhnlich ein Mehrfaches des anfänglichen Kapitalrisikos.
+- Wer sich vor dem Trade an einem Mindestverhältnis festbeißt, hat gute Chancen, in die Lähmung durch Analyse zu geraten. Lehrer, die behaupten, nur Trades mit einem Mindestverhältnis zu lehren, soll man meiden. Es ist ein einigermaßen bedeutungsloses Schlagwort.
 
 ## Eigene Erkenntnisse
 

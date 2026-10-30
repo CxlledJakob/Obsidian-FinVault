@@ -48,6 +48,35 @@ aktualisiert: 2026-10-30
 - Eine Divergenz ist ein mögliches Signal, dass der bisher gemeinsame Trend schwächer geworden ist und sich umkehren könnte; die Umkehr gilt nicht als abgeschlossen, solange nur eine Reihe abweicht.
 - Zwei Ausgänge sind möglich: die ungestörte Reihe dreht zur abweichenden Begleiterin, oder die abweichende Reihe kehrt zur Begleiterin zurück und der gemeinsame Lauf setzt sich fort.
 - Ein abgeschlossenes Umkehrsignal wird erst unterstellt, wenn beide Reihen überzeugend gedreht haben und wieder in dieselbe Richtung laufen.
+- Ein Outside-Down-Tag mit weiter Spanne wird oft und typischerweise als Signal der Trendfortsetzung gelesen.
+- Macht ein Markt eine Korrektur, soll er das eröffnende Extrem des vorherigen Trends nicht nehmen, sondern diese Trendrichtung fortsetzen und ein neues Extrem machen.
+- Ist eine Korrektur erkannt, richtet sich die Strategie gegen ihre Richtung, auf die wahrscheinliche Fortsetzung des Trends zu einem neuen Hoch oder Tief nach ihrem Abschluss.
+- Sobald Abschnitte überlappen, soll kein neues Extrem entstehen, und der Markt soll schließlich in der Richtung des Trends von vor der Korrektur weiterlaufen.
+- Ein Handel jenseits des Wave-B-Extrems signalisiert, dass die Korrektur abgeschlossen sein soll und der vorherige Trend weiterläuft.
+- Trends machen gewöhnlich fünf nicht überlappende Abschnitte; nach der Korrektur wird die Fortsetzung des ursprünglichen Trends erwartet.
+- Das Nehmen eines Schwungtiefs signalisiert gewöhnlich, dass eine Korrektur abgeschlossen ist und der vorherige Trend weiterlaufen kann.
+- Nach einem neuen Hoch, das einen Trend anzeigt, und wenn erst die Wellen 1 und 2 abgeschlossen sein können, stehen die Wellen 3 bis 5 noch aus und können den Markt höher tragen.
+- Nach der Korrekturrallye auf einen abgeschlossenen Fünf-Wellen-Rückgang kann der Bärentrend später das Potenzial haben weiterzulaufen; zuvor ist der Markt wahrscheinlicher eine Zeit lang seitwärts bis aufwärts.
+- Innerhalb überlappender Abschnitte eines größeren Aufwärtstrends entstehen viele handelbare kleinere Trends und Korrekturen.
+- Nach einem abgeschlossenen Trend ist die Fortsetzung in die Gegenrichtung eine mögliche Erfüllung der Mindesterwartung, abhängig von der Lage im größeren Zeitrahmen; die andere Erfüllung ist eine Korrektur, die größer ist als Welle 2 oder Welle 4.
+- Ein Wave-C-Tief, an dem Zeit, Preis, Muster und Momentum zusammenfallen, ist ein Setup für die Fortsetzung des Bullentrends zu einem neuen Hoch.
+- Überlappende Abschnitte und die Zeitfaktoren können das letzte kleine Hoch einer komplexen Korrektur anzeigen, dem die Fortsetzung des Bärentrends zu einem neuen Tief folgt, nicht nur ein kurzfristiges Hoch.
+- Das Zeitziel einer kleinen Korrektur dient dazu, in Richtung des Trends der größeren Zeitebene einzusteigen und die Position zu halten.
+- Wer den wahrscheinlichen Abschluss einer Korrektur erkennt, kann in Richtung des übergeordneten Trends einsteigen. Deshalb liegt der Fokus der Zeitstrategien auf Korrekturen.
+- Die kleinere Zeitebene engt Zeit, Preis, Momentum oder Muster für eine Umkehr der höheren Zeitebene ein und damit den Einstieg in die übergeordnete Richtung.
+- Das Ziel ist, die wahrscheinliche Lage des Trends aus der vorliegenden Information zu lesen und die Position für den Großteil des Trends offen zu halten.
+- Der Nettoerfolg hängt stark davon ab, den Trade zu führen und im Trend zu bleiben, bis die Marktbedingungen ein Ende nahelegen. Geld entsteht erst, wenn der Trade geschlossen ist.
+- Solange das Momentum der höheren Zeitebene nicht in der typischen Umkehrlage ist und nicht mindestens fünf Abschnitte vollendet sind, gilt der Trend als fortgesetzt.
+- Oft liefert der Markt Information, die zu früh aussteigen lässt, und ein Wiedereinstieg ist dann nicht ideal. Logische Entscheidungen anhand der letzten Bars erfassen gewöhnlich trotzdem den Großteil des Trends.
+- Zu nah nachgezogene Stops beenden die Teilnahme, bevor Abschlussbedingungen vorliegen. Das ist ein Hauptgrund, warum die meisten Trader einen Trend nicht ausschöpfen.
+- Die zweite Unit bleibt für die Fortsetzung des größeren Trends. Die erste wird herausgenommen, falls nur eine Korrektur entsteht.
+- Gann: Das große Geld wird mit den großen Trends gemacht. Den Stop in der frühen Phase weit genug zu halten, ist die Bedingung, in der Fortsetzung zu bleiben.
+- Eine Fortsetzung wird nicht mitgenommen, wenn die Hochwahrscheinlichkeitsbedingungen fehlen, auch wenn der Markt danach stark weiterläuft.
+- Nach einer bärischen Wochenumkehr aus der überkauften Zone ist seitwärts bis abwärts über mehrere Wochen typisch. Longs auf die Fortsetzung warten, bis das Wochenmomentum überverkauft ist oder bullisch umkehrt.
+- Das Ziel ist nicht, jeden Trend zu erfassen, sondern die wahrscheinlichen Bedingungen zu handeln.
+- Ein Bruch aus einer irregulären Korrektur kann der Wiedereinstieg in den laufenden Aufwärtstrend sein.
+- Eine bestätigte dreiwellige Gegenbewegung impliziert die Fortsetzung der vorherigen Richtung; die Gegenposition wird dann geschlossen.
+- Ein mit dem Ausbruch bestätigter neuer Abschnitt, hier Welle 3, setzt den Trend fort und füllt eine zuvor offene Lücke.
 
 ## Funktionsweise
 
@@ -140,6 +169,10 @@ aktualisiert: 2026-10-30
 - Fallendes Volumen auf dem ersten Rücksetzer nach dem Aufwärtsbruch ist ein gutes Zeichen für die Fortsetzung.
 - Solange die folgenden Pivot-Hochs und Pivot-Tiefs in Trendrichtung wandern und das Volumen mitgeht, wird gehalten.
 - Eine zweite Stauzone mit Bruch in der alten Richtung ist nur eine Pause. Die Position bleibt, und die dynamischen Linien werden neu gebaut.
+- Schließt der Markt über dem 78,6%-Retracement, macht er typischerweise keine Korrektur, sondern trendet zu einem neuen Hoch oder Tief weiter.
+- Läuft der Preis über die Zone aus 50%-Retracement und 100%-APP hinaus, läuft er wahrscheinlich bis nahe an das 78,6%-Retracement weiter und überspringt das 61,8%-Retracement.
+- Korrekturabschnitte überschreiten das 162%-APP selten.
+- Nach einem Korrekturtief in der engen Zone der 100%-APPs früherer Korrekturen setzte der EUR/USD den Trend zu einem neuen Hoch fort.
 
 ## Risiken und Grenzen
 
@@ -150,6 +183,10 @@ aktualisiert: 2026-10-30
 - Ohne Volumen wäre an Hammer oder Shooting Star nicht zu erkennen, ob der Rücksetzer stark oder schwach ist.
 - Durchschnittliches oder schwächeres Volumen bei weiter steigendem Preis spricht gegen die Fortsetzung. Der Trend entwickelt sich dann nicht.
 - Ein Bruch der zweiten Stauzone gegen die Position beendet die Fortsetzung.
+- Ein Outside-Down-Tag mit weiter Spanne kann direkt am Tief vor einem wesentlichen Anstieg liegen und den Short in einen Verlust führen, wenn der Bärentrend fertig ist.
+- Eine ideale Musterlage, die gewöhnlich ein korrektives Hoch oder Tief ergibt, kann von einer starken Trendfortsetzung gefolgt werden.
+- Nicht jede Korrektur zeigt vor dem Abschluss eine Überlappung, und nicht jede Überlappung gehört zu einer Korrektur.
+- Beim 60-Minuten-Mini-Dow war die einzige Musterschlussfolgerung eine Korrektur im Aufwärtstrend mit folgendem neuen Hoch, doch der Markt fiel stark zu einem neuen Tief.
 
 ## Beispiele
 
@@ -160,6 +197,24 @@ aktualisiert: 2026-10-30
 - Der Hanging Man zeigte danach, dass die nächste Stauung zur Umkehr wurde und nicht zur Fortsetzung.
 - Auf 15 Minuten bestätigte das Volumen den Bruch aus etwa 70 Kerzen Stau, und der Trend sollte der aufgebauten Ursache entsprechend eine Weile laufen.
 - Der Dow stieg nach der Akkumulation auf durchschnittlichem Volumen weiter. Der ES kaufte am dritten Tag auf hohem Volumen in den bullischen Trend.
+- Die Überlappung beim Philadelphia Gold and Silver Index wurde von einem neuen Hoch fortgesetzt, ohne das Tief des vorherigen Trends zu unterschreiten.
+- Die Mini-Dow-Futures der früheren Abbildung machten nach der überlappenden Korrektur wie erwartet ein neues Hoch.
+- Der Russell-1000-ETF handelte unter das Wave-B-Tief und signalisierte damit das Ende der Korrektur und die Fortsetzung des Bärentrends.
+- Das Wochenpfund bestätigte mit dem Bruch über das Wave-B-Hoch, dass der Aufwärtstrend zu einem neuen Hoch weiterläuft, ohne unter das Wave-C-Tief zu handeln.
+- GBP/USD auf 60 Minuten und EUR/USD auf 15 Minuten setzten nach der komplexen Korrektur den Bärentrend zu einem neuen Tief fort.
+- Beim S&P 500 scheiterte das Korrektursignal, und der Index setzte den Anstieg zu einem neuen Hoch fort.
+- Beim 60-Minuten-S&P-Mini folgte auf eine Korrektur ohne Überlappung die Fortsetzung des Bärentrends zu einem neuen Tief.
+- Im XAU wiesen das zusammenfallende 50-Prozent-Preisretracement, die 62-Prozent-Alternate-Price-Projection, oversoldes Tagesmomentum und die bullische Umkehr zwei Tage nach dem Extrem auf die Fortsetzung des Bullentrends zu einem neuen Hoch.
+- Die EUR/GBP-Short-Position aus den 15-Minuten-Daten sollte mindestens mehrere Tage laufen und ein neues Tief des Bärentrends machen.
+- Nach dem Ausstieg der langfristigen XAU-Unit am 11. Oktober folgte nur eine einwöchige Korrektur und Anfang November ein neues Hoch, bevor die größere Korrektur des Trends ab dem 16. August begann. Zum Ausstiegszeitpunkt lagen die Abschlussbedingungen trotzdem vor, einschließlich überkauften Wochenmomentums.
+- Der S&P stieg nach dem Ausstieg der langfristigen Unit weiter bis 1527,00 am 11. Dezember, etwa 9 Punkte über dem 61,8-Prozent-Retracement, vollendete dort ein Hoch der Welle C und fiel danach unter das November-Tief.
+- Die zweite Unit bleibt genau für die Fortsetzung, wenn der Trend sich wie erwartet entwickelt. Die erste wird für den Fall geschlossen, dass nur eine kleinere Korrektur entsteht.
+- OIH implizierte am ABC-Tief die Fortsetzung über das Dezember-Hoch. Nach dem Fehlausstieg am 5. März brach der Markt etwa zwei Wochen später zu neuen Hochs aus und lief mehrere Monate bis 200 Dollar. Ein weiterer Long war nicht geboten.
+- Die langfristige EUR/USD-Unit zielte auf einen bullischen Abschnitt über das Juli-Hoch bei 1,3852 und lief fast sechs Wochen bis zu einem Gewinn von 561 Pips.
+- Danach setzte sich der Bullentrend weitere sechs Wochen bis in ein Hoch im November fort. Der Plan hat diese Fortsetzung nicht mehr begleitet, weil der erste Filter, die Momentum-Lage auf zwei Zeitebenen, das Halten nicht mehr erlaubte.
+- Ein Bruch über 825,50 war der erste mögliche Long, um den Gold-Aufwärtstrend nach der Korrektur fortzusetzen; der Ausbruch am 26. Dezember bestätigte Welle 3, brach das Dreieck und schloss die Lücke vom 27. November.
+- Das GBP setzte nach dem vorzeitigen Decken des Shorts zu einem neuen Hoch fort, der Yen ebenfalls, statt das erwartete neue Tief zu machen.
+- Das S&P-Long-Setup stand an einem möglichen Welle-3-Tief, also an einer Stelle, an der die größere Bewegung weiterlaufen kann.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -56,6 +56,27 @@ aktualisiert: 2026-10-30
 - Wird die analysierte Reihe vom Channel-Breakout-Operator als Abwärtstrend bestimmt, ist die Ausgabe der Trendregel −1.
 - Eine traditionelle Trendregel geht im S&P 500 short, also mit Ausgabewert −1, wenn die Zeitreihe nach dem Channel-Breakout-Operator im Abwärtstrend ist.
 - Inverse Trendregeln erzeugen die entgegengesetzten Signale der traditionellen Regel, die einen Abwärtstrend mit −1 codiert.
+- Die höhere Zeitebene bestimmt die Handelsrichtung.
+- Die Momentumumkehren der niedrigeren Zeitebene in Richtung des Momentums der höheren Zeitebene sind wichtige Filter, um ein Setup mit hoher Wahrscheinlichkeit zu identifizieren.
+- Sind bei einem Fünf-Wellen-Rückgang die Richtlinien für die Wellen 1 bis 4 erfüllt und ist die mögliche Welle 5 noch nicht abgeschlossen, kann das weitere Abwärtspotenzial relativ begrenzt sein.
+- Ein Ausbruch auf ein neues Tief nach einem monatelangen Bärentrend ist für Swingtrader typischerweise ein sehr bärisches Signal, der Bärentrend kann aber gerade dann sehr nahe am Ende liegen, wenn viele Trader extrem bärisch sind.
+- Das nächste wöchentliche Swing-Tief wird dann wahrscheinlich von einer Rallye gefolgt, die in Zeit und Preis größer ist als jede Rallye seit Beginn des Bärentrends.
+- Vier abgeschlossene Abschnitte, deren Welle 4 nicht in die Schluss-Spanne der Welle 1 schließt, und ein neues Tief für eine mögliche Welle 5 begrenzen das Abwärtspotenzial, bevor eine Rallye größer in Zeit und Preis als jede Rallye des Bärentrends beginnt, also größer als W.2 oder W.4.
+- Ein neues Tief spricht dafür, dass der Rückgang ein Trend und keine Korrektur ist.
+- Können drei Wellen abgeschlossen sein, sollte nach dem korrektiven Hoch der Welle 4 ein neues Tief folgen.
+- Im GM-Tagesbeispiel war der Kurs in einem Monat bereits über 30 Prozent gefallen, und nach der Musterlage war ein weiterer Rückgang wahrscheinlich, bevor der Abwärtstrend abgeschlossen ist.
+- Ein Fünf-Wellen-Rückgang, bestätigt durch Handel über dem wahrscheinlichen Hoch der Welle 4, sollte mindestens von einer Korrekturrallye gefolgt werden, die in Zeit und Preis größer ist als jede Korrektur innerhalb des Bärentrends.
+- Danach ist der Markt wahrscheinlicher eine Zeit lang seitwärts bis aufwärts, bevor der Bärentrend das Potenzial hat weiterzulaufen.
+- Die typische Low-Low- oder High-High-Zykluslänge unterscheidet sich im Allgemeinen zwischen Bullen- und Bärenmärkten und schwankt, wenn Volatilität und Preiszyklen schwanken.
+- Die Zeitspanne eines Korrekturabschnitts überschreitet gewöhnlich nicht die Zeitspanne eines Trendabschnitts.
+- Überlappende Abschnitte nach einem Fünf-Wellen-Rückgang warnen, dass der Anstieg wahrscheinlich eine komplexe Korrektur und kein neuer Bullentrend ist. Danach wird die Fortsetzung des Bärentrends zu einem neuen Tief erwartet, nicht nur ein kurzfristiger Rückgang.
+- Die Zeitrhythmen in Bullen- und Bärenmärkten sind oft verschieden. Das Time-Band-Menü hat deshalb getrennte Spalten für Bull High, Bull Low, Bear High und Bear Low.
+- Trends enden häufig mit fünf deutlichen Wellen oder Abschnitten. Hat ein Trend vier Wellen vollendet, ohne die Fünf-Wellen-Richtlinien zu verletzen, kann er an oder nahe seinem Ende sein.
+- Ist das Wochenmomentum zwei Wochen überverkauft, soll die Abwärtsseite sehr begrenzt sein, falls der Markt weiter fällt, und eine bullische Tages-Momentum-Umkehr soll mit einer bullischen Wochenumkehr zusammenfallen.
+- Bärisches Wochen- und Tagesmomentum lässt einen Short erwarten, der einen langen Weg vor sich haben kann.
+- Ein Rückgang bis zu einem kleineren Retracement kann nur eine kleine Korrektur sein und nicht der Beginn eines Abwärtstrends.
+- Eine bestätigte dreiteilige Abwärtsbewegung ist eine Korrektur und spricht für die Fortsetzung des Anstiegs, nicht für einen neuen Abwärtstrend.
+- Ein erwarteter Rückgang zu einem neuen Tief kann ausbleiben; der Markt kann stattdessen scharf zu einem neuen Hoch laufen.
 
 ## Funktionsweise
 
@@ -74,6 +95,11 @@ aktualisiert: 2026-10-30
 - Cash auf tieferen Niveaus verbessert die langfristige Rendite, solange die Abwärtsauktion endet. In dieser späten Phase ist für einen langfristigen Verwalter auch das Risiko von Cash und defensiven Papieren gestiegen.
 - Später im Abwärtstrend wird an temporären Rallys responsiv verkauft.
 - Erscheint diese Preisaktion nach einer Distributionsphase, gehört man vor den Schirm und wartet auf den schnellen Abverkauf.
+- Entscheidungen beruhen auf den Daten bis zum letzten Datenpunkt; gehandelt wird die rechte Seite des Charts, als bestmögliche Schätzung aus den bekannten Daten und der wahrscheinlichen Marktposition.
+- Momentum, Preis und Zeitposition helfen, das nächste Swing-Tief und ein mögliches Tief der Welle 5 zu erkennen.
+- Wenn Muster, Preis und Momentum typisch für den Abschluss eines Fünf-Wellen-Trendtiefs stehen, ist das Abwärtspotenzial relativ begrenzt, um zu prüfen, ob das Tief fertig ist, und das Aufwärtspotenzial erheblich.
+- Ob dieses Tief eine Trendumkehr ist, der ein erheblicher Anstieg folgt, bleibt unbekannt; der Markt kann tiefer weiterlaufen.
+- Fiel der ES weiter und erreichte 1405,50, war jede Momentum- oder Musterumkehr als Signal für ein mögliches Tief der Welle 5 sehr aufmerksam zu beobachten.
 
 ## Regeln und Kriterien
 
@@ -110,6 +136,19 @@ aktualisiert: 2026-10-30
 - Die Odds der Abwärtsfortsetzung können sinken, während der Preis noch fällt.
 - Im fallenden Markt liegt One-Timeframing vor, wenn das Hoch der nächsten Woche das Hoch der Vorwoche nicht herausnimmt.
 - Es ist unvernünftig, auf jeder folgenden Kerze ein höheres Volumen als auf der vorherigen zu verlangen, weil damit jeder Trend künstlich begrenzt würde.
+- DTF-Momentum-Regel 1: Gehandelt wird nur in Richtung des Momentumtrends des größeren Zeitrahmens, außer die Momentum-Position ist overbought oder oversold.
+- Ist das Momentum des größeren Zeitrahmens bärisch, werden nur Short-Trades nach bärischen Momentum-Umkehren des kleineren Zeitrahmens erwogen.
+- Bärische Momentum-Umkehren des kleineren Zeitrahmens in der Oversold-Zone werden ignoriert; bullische Umkehren in der Overbought-Zone ebenfalls.
+- Ein Trade wird nicht betreten, bis nach der Momentum-Umkehr des kleineren Zeitrahmens ein Balkenhoch oder Balkentief genommen wird.
+- Ist die höhere Zeitebene bärisch und nicht oversold, wird eine Short-Position nach einer bärischen Momentumumkehr der kleineren Zeitebene erwogen, solange diese Umkehr oberhalb der Oversold-Zone entsteht.
+- Das ist das ideale Short-Setup der Dual-Time-Frame-Momentum-Strategie, weil beide Zeitebenen in dieselbe Richtung laufen und das Setup unmittelbar auf die bärische Umkehr der kleineren Zeitebene in Richtung des bärischen Momentums der größeren Zeitebene folgt.
+- Ist die höhere Zeitebene bärisch, aber oversold, soll das Abwärtspotenzial begrenzt sein, und es wird keine neue Short-Position genommen.
+- In dieser bärischen Oversold-Lage dürfen Long-Trades nach einer bullischen Momentumumkehr der kleineren Zeitebene erwogen werden.
+- Legt die Musterposition nahe, dass der Bärentrend abschlussreif ist und eine wesentliche Aufwärtsumkehr folgt, wird der Short auf dem täglichen Outside-Down-Signal vermieden oder es werden nur minimale Erwartungen an den weiteren Fall gesetzt und die Strategie angepasst.
+- Bei einem korrektiven Anstieg mit geringem Aufwärtspotenzial wird ein Long sehr vorsichtig behandelt, und es wird die Umkehr vom korrektiven Hoch für einen Short in den weiteren Fall vorbereitet.
+- Eine Korrektur soll das Extrem nicht nehmen, das den vorherigen Trend eröffnet hat, sondern die Richtung vor der Korrektur fortsetzen und ein neues Extrem machen.
+- Ein Hoch im Time Band soll den Hochs der Rohdatenperiode vergleichbar sein. Das Band sagt nicht, ob dieses Hoch bedeutender wird als die jüngsten Hochs.
+- Deuten Muster, Preis oder das Momentum der größeren Zeitebene auf eine Umkehr größeren Grades, hilft das Time Band, das enge Zeitfenster zu finden, in dem das Hoch oder Tief größeren Grades abgeschlossen sein sollte.
 
 ## Risiken und Grenzen
 
@@ -117,6 +156,8 @@ aktualisiert: 2026-10-30
 - Nähert sich die Abwärtsauktion ihrem Ziel, steigt das Risiko der Short-Position, und die Chance, short profitabel zu bleiben, sinkt.
 - Ausgedehnte Trends über Monate sind weitgehend vorbei. Hochfrequenzhandel, Manipulation und elektronischer Handel haben die Märkte dafür verändert.
 - Ein Trade gegen den dominanten Trend ist riskanter und wird nur kurz gehalten.
+- Nicht jedes Dual-Time-Frame-Setup wird profitabel; der Autor nutzt die Periode mit den fehlgeschlagenen Shorts ausdrücklich, um die Realitäten des Handels zu zeigen.
+- Auch nach einer wöchentlichen bärischen Umkehr mit anschließendem Fall von fast fünf Punkten kann das Setup der kleineren Zeitebene ausbleiben oder einen Verlust bringen.
 
 ## Beispiele
 
@@ -127,6 +168,46 @@ aktualisiert: 2026-10-30
 - Nach dem Hanging Man verkaufte der Markt scharf. Das Volumen fiel im bärischen Verlauf weg, und nach sieben Stunden war der Abverkauf am Boden.
 - Der Kaffee-Future rutschte zuerst bei fallendem Volumen und damit ohne weiten Weg, verkaufte später auf hohem Volumen und bildete nach einer Shooting Star einen Preiswasserfall.
 - Im AUD/USD hielt der Verkaufsdruck in der Buying-Climax-Phase an, und das Paar rollte zurück in die Stauzone.
+- Im Anleihebeispiel über 18 Monate war das Wochenmomentum in Periode 2 mehrere Monate bärisch, obwohl die Anleihen schließlich höher liefen und die Periode mit wenig Nettogewinn beendeten; die Vorwärtsrate war gegenüber zuvor gesunken und der Markt mit kurzen Schwüngen choppig geworden.
+- Die erste tägliche bärische Momentum-Umkehr dieser Periode fiel auf einen Tag mit weiter Range nach unten, der sich als Swing-Tief erwies; ein Tagestief wurde danach nicht genommen.
+- Die täglichen bärischen Umkehren 2, 3, 4 und 5 lagen innerhalb von ein oder zwei Balken eines Swing-Hochs und wurden von handelbaren mehrtägigen Rückgängen gefolgt; Umkehr 2 entstand auf dem Swing-Hoch-Balken und wurde von einem scharfen Rückgang gefolgt.
+- In der Range dieser bärischen Wochenperiode machte das Tagesmomentum bullische Umkehren innerhalb von ein oder zwei Balken jedes Preistiefs; erwogen wurden nur Short-Setups.
+- Zwischen den Wochen endend 18. Februar und 8. April, als das Wochenmomentum bärisch war, entstand die erste tägliche bärische Umkehr etwa drei Wochen später; der Markt machte sofort eine kleine Korrekturrally, und jede Short-Strategie wäre ein kleiner Verlust gewesen.
+- Die zweite tägliche bärische Umkehr lag nur einen Tag nach dem Swing-Tief im März und hätte je nach Einstieg und erstem Schutzstop keinen Trade oder einen Verlust ergeben, obwohl die Anleihen nach der bärischen Wochenumkehr beständig um fast fünf Punkte fielen.
+- Nach der bullischen Wochenumkehr in der Woche endend 21. Mai setzten die Anleihen den Bärentrend noch fast drei Wochen fort, bis zur ersten täglichen bullischen Umkehr am 10. Juni.
+- Der ersten bullischen 15-Minuten-Umkehr im EUR/USD, während das 60-Minuten-Momentum bullisch war, folgte ein weiteres Fallen über einige Balken; die Umkehr ist nur die Bedingung, einen Trade zu erwägen, keine Ausführung.
+- Nach der wöchentlichen bärischen Umkehr und dem bärischen Momentumtrend fielen Bonds um fast fünf Punkte.
+- Die zweite tägliche bärische Momentumumkehr entstand nur einen Tag nach dem Swing-Tief im März und hätte je nach Einstieg und anfänglichem Schutz-Stop zu keinem Trade oder zu einem Verlust geführt.
+- Im gezeigten 15-Minuten-EUR/USD war das 60-Minuten-Momentum über den größten Teil der Periode bärisch und drehte wenige Bars vor dem starken Aufwärtsstoß bärisch.
+- Bärische 15-Minuten-Umkehren waren in diesem Abschnitt Short-Setups, solange die bärische 15-Minuten-Umkehr oberhalb der Oversold-Zone entstand.
+- Nach der bärischen 60-Minuten-Umkehr gab es über etwa 18 Stunden acht bärische 15-Minuten-Momentumumkehren.
+- Die zweite, dritte und vierte dieser acht Umkehren entstanden in einer recht engen Handelsspanne und hatten wenig bis kein Gewinnpotenzial, was bei ihrer Entstehung nicht bekannt war.
+- Die erste und die letzten vier dieser acht Umkehren wurden jeweils von starken Abwärtsbewegungen in Richtung des bärischen 60-Minuten-Momentums gefolgt.
+- Jede dieser fünf Umkehren hätte ein starkes Setup für einen Short als Daytrade oder Swingtrade ergeben.
+- Beim Stochastic erreichte der Indikator an den Momentumhochs dieses bärischen Momentumtrends die Overbought-Zone nicht, und dennoch folgte auf jede bärische 15-Minuten-Umkehr ein Rückgang.
+- Alle diese Stochastic-Setups waren gute Daytrade-Setups, und die meisten waren gute Swingtrade-Setups.
+- Abbildung 2.24 zeigt bärische Stochastic-Umkehren der kleineren Zeitebene während eines Bärentrends der größeren Zeitebene.
+- Abbildung 3.1 zeigt einen starken Bärentrend mit tieferen Tiefs und tieferen Hochs, dessen letzte Kerze ein Outside-Down-Tag mit weiter Spanne ist, oft ein Signal der Trendfortsetzung.
+- Ein Short auf diesen Outside-Down-Tag wäre ungünstig, wenn der Bärentrend in der Endphase steht und eine Umkehr bevorsteht.
+- Am Folgetag drehte derselbe Markt nach diesem Outside-Down-Tag zu einem wesentlichen Anstieg, sodass der Short genau am Tief vor diesem Anstieg gelegen hätte.
+- Der letzte Bar der folgenden Abbildung ist ein Aufwärtstag mit weiter Spanne, der ein Schwunghoch nimmt und nahe dem Tageshoch schließt, und dieser Anstieg kann nur eine Korrektur eines Bärentrends sein.
+- Ist der Anstieg nur eine Korrektur eines Bärentrends, kann das Aufwärtspotenzial sehr begrenzt sein, bevor der Markt dreht und den Bärentrend zu neuen Tiefs fortsetzt.
+- Beim Philadelphia Gold and Silver Index warnte die Überlappung, dass der Fall wahrscheinlich eine Korrektur und kein Bärentrend zu neuen Tiefs war.
+- Beim 60-Minuten-Chart des S&P-Mini-Futures war die Korrektur nur ein starker Aufwärtsschwung ohne Überlappung, danach lief der Bärentrend zu einem neuen Tief weiter.
+- Beim Tageschart des Russell-1000-ETF signalisierte der Handel unter das Wave-B-Tief, dass die Korrektur vorbei sein soll und der Bärentrend weiterläuft.
+- Beim 60-Minuten-GBP/USD überlappten die Abschnitte und machten sogar ein leicht neues Tief, sodass das Muster eine Korrektur zum Bärentrend und keinen neuen Aufwärtstrend signalisierte; der Bärentrend lief danach zu einem neuen Tief weiter.
+- Beim 15-Minuten-EUR/USD wurde in der komplexen Korrektur schließlich ein Schwungtief genommen, was gewöhnlich den Abschluss einer Korrektur signalisiert, und der Kurs fiel unter das Tief, an dem die Korrektur begonnen hatte.
+- Beim Tageschart von GM handelte der Kurs auf ein neues Hoch der Korrektur, aber unter das Hoch des Aufwärtstrends, und dann zurück in die Spanne des ersten Aufwärtsabschnitts, was eher wahrscheinlich eine Korrektur und eine spätere Fortsetzung nach unten signalisierte.
+- Beim 60-Minuten-Mini-Dow legten überlappende Abschnitte eine Korrektur in einem Aufwärtstrend nahe, doch der Markt fiel schließlich stark zu einem neuen Tief.
+- Seit Beginn des gezeigten Bärentrends im 15-Minuten-ES war die längste High-High-Zählung 18 Bars. Das nächste Hoch sollte bis zu dieser Zählung um 8:45 Uhr am 8. Januar abgeschlossen sein.
+- Eine Short-Position aus diesem 15-Minuten-Setup sollte wahrscheinlich mindestens mehrere Tage laufen und ein neues Tief machen, nicht nur ein kurzfristiger Tageshandel.
+- Der S&P stand am 23. November an oder nahe dem Abschluss eines etwa sechswöchigen Fünf-Wellen-Bärentrends. Die Mindest-Erwartung danach ist eine korrektive Rally zum 50-Prozent-Retracement bei 1501,75.
+- Das Tief vom 21. November erreichte die wahrscheinliche Zielzone der Welle 5. Sie umfasst die 127- und 162-Prozent-Ex-Rets der Welle 4, wobei Welle 5 die 100-Prozent-APP der Welle 1, die 61,8-Prozent-APP der Wellen 1 bis 3 und das 78,6-Prozent-Retracement vom August-Tief zum Oktober-Hoch ist.
+- Die möglichen Wellen 1 und 3 dauerten sieben und acht Handelstage. Das Tief vom 21. November liegt fünf Handelstage nach dem möglichen Hoch der Welle 4 und nur zwei Bars nach dem 62-Prozent-Zeit-Retracement vom August-Tief zum Oktober-Hoch. War es kein Welle-5-Tief, soll es in den nächsten zwei oder drei Handelstagen abgeschlossen sein.
+- Auf dem 60-Minuten-Chart ab dem wahrscheinlichen Welle-4-Hoch vom 14. November sieht die Welle 5 selbst wie ein Fünf-Wellen-Rückgang aus. Am Montag entstand ein leicht neues Hoch und danach ein neues Tief am unteren Ende der Zielzone, bei zum Montagsschluss noch bullischem Tagesmomentum.
+- Nach dem Hoch der Welle C bei 1527,00 am 11. Dezember fiel der S&P unter das November-Tief.
+- Beim GBP wurde der halbe Short am kleineren Retracement geschlossen für den Fall, dass der Rückgang nur eine kleine Korrektur und nicht der Beginn eines Bärentrends war.
+- Beim Yen waren Momentum, Preis, Zeit und Muster für ein Korrekturhoch und einen anschließenden Rückgang auf ein neues Tief beisammen; der Markt machte dieses neue Tief nicht.
 
 ## Unterschiedliche Quellenpositionen
 
