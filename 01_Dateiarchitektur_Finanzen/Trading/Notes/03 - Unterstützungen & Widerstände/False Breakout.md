@@ -22,9 +22,29 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Eine weit gespreizte Aufwärtskerze mit niedrigem Volumen ist oft eine Falle: der Preis wird hochgeschoben, um das Kaufinteresse zu testen, und zurückgezeichnet, wenn es fehlt.
+- Eine enge Kerze mit hohem Volumen ist ein falscher Move, der Trader in schwache Positionen lockt und Stops auslöst, bevor der Kurs scharf in die Gegenrichtung dreht.
+- Springt der Preis auf eine Nachricht bei niedrigem Volumen, nutzen Market Maker das, um Stops aus dem Markt zu nehmen.
+- Ohne Volumen sähe man nur die weite Aufwärtskerze und hielte den Markt für bullisch.
+- Scheitert der Supply-Test mit hohem Volumen, ist der Markt nicht bereit höher zu laufen, und die Insider nehmen ihn zurück in die Kongestion, bevor sie den Ausbruch neu ansetzen.
+- Steigende Preise bei fallendem Volumen nach der ersten Anomalie sind der Anschein eines noch bullischen Marktes; die Insider sind nicht mehr beteiligt und locken Trader in schwache Positionen.
+- Im Abverkauf zeichnen sie die Preise weiter tiefer, nachdem sie selbst schon gekauft haben, und locken zusätzliche Trader in schwache Shorts.
+- Ein Preissprung auf eine Nachricht bei niedrigem Volumen ist ein falscher Move, der Stops holt und danach scharf dreht.
+- Ein Ausbruch aus einer gerade entstandenen Stauzone auf niedrigem Volumen ist eine klassische Falle und wird oft Fake-out genannt.
+- Die Insider versuchen erneut, Trader auf der falschen Marktseite zu fangen. Nur wer das Volumen sieht, erkennt die falsche Bewegung.
+- Ein paar Punkte über oder unter dem Band sind kein Ausbruch. Es braucht einen klaren Schluss jenseits der Grenze mit sichtbarer Lücke.
+- Eine Aufwärtslücke auf niedrigem Volumen kann eine Falle der Insider nach oben sein, besonders wenn der Kurs wieder an einem früheren Fehlversuch steht.
+- Ein Ausbruch auf hohem Volumen mit Aufwärtslücke ist keine solche Falle, sondern eine echte Aufwärtsbewegung.
+- Ein Versuch, ein durch hohes Volume-at-Price markiertes Niveau zu brechen, kann scheitern.
+- Eine Falle nach oben ist eine weite Aufwärtskerze auf niedrigem bis durchschnittlichem Volumen. Die Insider locken Händler in eine schwache Position, danach fällt der Kurs.
+- Sie kommt besonders zur Eröffnung vor, in Futures und im Kassamarkt, und immer wieder auf jeder Zeitebene.
+- Volumen ist der Weg, diese Bewegung zu sehen. Eine ähnliche Spanne bei deutlich niedrigerem Volumen als bei der Vergleichskerze weist die Falle aus.
+- Dieselbe Spanne auf hohem Volumen, klar über dem Vortag, ist eine echte Bewegung.
+- Ein Bruch wird erst nach einem klaren Schluss deutlich außerhalb der Stauzone als gültig behandelt.
 
 ## Funktionsweise
 
+- Dicht besetzte Zonen brauchen viel Volumen, um verlassen zu werden. Genau deshalb ist niedriges Volumen auf dem Verlassen das Warnzeichen.
 
 ## Voraussetzungen
 
@@ -58,12 +78,25 @@ aktualisiert: 2026-10-30
 - Mehrere Tests eines Spike-Extrems in derselben Halbstundenperiode machen es wahrscheinlich, dass der Preis das Extrem durchhandelt. Doppelte TPOs in einer späteren Periode etablieren Value im Spike und heben die Referenz auf.
 - Testen Kurzfristhändler ein Balance-Extrem ohne neue Aktivität, folgt oft der Ausbruch in die Gegenrichtung.
 - Scheitert dieser Bruch in eine Richtung, handelt der Markt häufig zum gegenüberliegenden Extrem der Balance-Spanne.
+- Fehlt starkes und steigendes Volumen auf den nächsten Bars, ist es eine Falle nach oben oder es gibt kein Interesse, den Markt jetzt höher zu nehmen.
+- Der spätere Test einer schon gültig gebrochenen Decke auf niedrigem Volumen ist kein False Breakout, sondern der normale Rücktest eines echten Bruchs.
+- Es gibt keine feste Tickzahl für den klaren Abstand. Sie hängt von Urteil, Erfahrung und dem Preisverhalten des Instruments ab.
 
 ## Risiken und Grenzen
 
+- Sieht eine Erholung wie eine Falle auf niedrigem Volumen aus, können extreme Volumen davor die Skala verzerren. Was klein wirkt, kann über dem Durchschnitt liegen.
 
 ## Beispiele
 
+- Duke Energy zeigte nach einer Bullish-Engulfing-Kerze eine Aufwärtslücke mit niedrigem Volumen auf dem Ausgangspreis. Der Kurs hielt mehrere Tage bei 65,75 Dollar und brach den Widerstand erst danach.
+- Alcoa versuchte, die Stauzone zu durchbrechen, und scheiterte. Das Volumenprofil legte einen Ausbruch eher nach unten nahe.
+- SLV zeigte Schwäche mit einer weiten Aufwärtskerze und einem Scheitern auf demselben Niveau, driftete dort und verkaufte am nächsten Tag erneut.
+- Im ES stand am Session-Ende ein extrem hoher Volumenbalken mit einer Shooting Star, danach eine Aufwärtskerze mit sehr hohem Volumen, die nirgendwohin lief.
+- Am nächsten Tag kam die Falle auf ähnlicher Spanne mit wesentlich niedrigerem Volumen.
+- Am dritten Tag war die Aufwärtslücke auf hohem Volumen eine echte Bewegung.
+- Im Kaffee-Future wirkte die Erholung aus dem Wasserfall verdächtig, weil kaum Kauf- oder Stopping-Volumen zu sehen war.
+- Vorgespult lagen die Bodenvolumen über dem Durchschnitt, verzerrt durch den extremen Anstieg.
+- Der Kontrakt verkaufte am folgenden Tag und stieg in der gezeigten Session nicht mehr.
 
 ## Unterschiedliche Quellenpositionen
 

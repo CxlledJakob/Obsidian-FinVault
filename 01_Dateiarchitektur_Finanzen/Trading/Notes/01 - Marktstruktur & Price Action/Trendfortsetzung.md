@@ -21,6 +21,24 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Ein Shooting Star mit unterdurchschnittlichem Volumen im Aufwärtstrend wird anhand der vorherigen und der folgenden Preisaktion auf Fortsetzung geprüft.
+- Höheres Volumen auf einem zweiten ähnlichen Shooting Star bestätigt zunehmende Schwäche und spricht gegen eine einfache Fortsetzung.
+- Ein Anstieg, der gerade mit erfolgreichem Test die Akkumulation verlassen hat, wird kaum sofort umgekehrt.
+- Volumen-Preis-Analyse hilft nicht nur in den Trade, sondern auch, im Trend zu bleiben und erst dann auszusteigen. Im Trendbleiben liegt der größte Gewinn.
+- Ein Trend kann Minuten oder Stunden dauern, aber auch mehrere Tage und Wochen. Er läuft in Schritten, und kleine Rücksetzer müssen ausgehalten werden.
+- Ein Hammer mit niedrigem Volumen in einem Short ist kein Ausstieg. Folgen ein Shooting Star mit durchschnittlichem bis hohem Volumen, bleibt die Short-Position durch den Rücksetzer bestehen.
+- Ein Bruch aus der Stauzone kann die Fortsetzung des laufenden Trends bestätigen oder eine Umkehr einleiten.
+- Liegt bereits eine Position vor und der Bruch ist in ihrer Richtung durch Volumen bestätigt, ist das ein sehr klares Fortsetzungssignal und der Anlass, sie zu halten.
+- Der Rücktest auf niedrigem oder fallendem Volumen und danach wieder steigendes Volumen in Trendrichtung setzen die Fortsetzung fort. Danach übernimmt die Kerze-für-Kerze-Analyse.
+- Fällt in einem Abwärtstrend das Volumen auf den Rücksetzern nach oben, ist das eine Pause und kein Trendwechsel, besonders wenn zuvor kein Stopping-Volumen erschienen ist.
+- Fällt in einem Aufwärtstrend das Volumen auf den Rücksetzern und fehlt Topping-Out-Volumen, bleibt die Position im Trend.
+- Ein mit hohem Volumen und Aufwärtslücke bestätigter Ausbruch läuft als echte Fortsetzung weiter.
+- Eine Kerze, die auf gutem Volumen sofort aus einer beginnenden Pause läuft, setzt den Trend fort. Eine ausgebildete Stauung kann dagegen zur Umkehr werden.
+- Die Richtung des bestätigten Bruchs ist gleichgültig. Gehandelt wird die Fortsetzung oder die neue Richtung, sobald das Volumen den Bruch bestätigt.
+- Je länger die Stauung als Ursache gedauert hat, desto länger soll der folgende Trend laufen.
+- Ein Anstieg auf durchschnittlichem Volumen ohne Extreme läuft weiter, bis eine Selling Climax auf dieser Zeitebene erscheint.
+- Fällt das Volumen in einem Abverkauf weg, trägt die Fortsetzung nach unten nicht weit.
+- Mit dem dominanten Trend der langsameren Zeitebene zu handeln senkt das Risiko der Fortsetzung. Dagegen zu handeln erhöht es und verkürzt die Haltedauer.
 
 ## Funktionsweise
 
@@ -32,6 +50,11 @@ aktualisiert: 2026-10-30
 
 - Entspricht die Balance der eigenen Zeitebene, wird jeder Ausbruch aus dieser Balance mitgenommen und danach auf Fortsetzung geprüft.
 - Im Trend wird der Trade platziert und liegengelassen. Die Überzeugung ist stark, die Gewinnerwartung relativ hoch, den Rest übernimmt der Markt.
+- Ist der längere Trend bullisch, ist ein Short auf der schnelleren Chart nur eine begrenzte Position gegen den dominanten Trend.
+- Mehrere Zeitebenen helfen zu unterscheiden, ob ein Shooting Star eine kleine Pause oder der Beginn einer längeren Trendänderung ist.
+- Die Haltedauer einer Position wird an der längeren Zeitebene ausgerichtet, nicht an der einzelnen Signal-Kerze.
+- In der offenen Position wird die Volume-Price-Analyse laufend wiederholt. Sie gibt die Sicherheit, den Trend zu halten.
+- Einstieg, Führung und Ausstieg können allein darüber laufen.
 
 ## Regeln und Kriterien
 
@@ -102,15 +125,32 @@ aktualisiert: 2026-10-30
 - Gegen höher entstehende Value wird nicht gefadet, auch wenn die längerfristige Meinung dagegensteht.
 - Eine Bewegung wird in vielen Fällen am Folgetag korrigiert, weil das Volumen gefehlt hat.
 - Die Wirkung eines solchen Niedrigvolumen-Moves setzt oft verzögert ein.
+- Ein Hammer mit hohem oder ultra-hohem Volumen ist die frühe Warnung, Gewinne ganz oder teilweise mitzunehmen und sich auf die Long-Seite vorzubereiten, wenn der Ausbruch kommt.
+- Steigendes Volumen in einem Preiswasserfall spricht für weitere Schwäche, nicht für das Ende der Bewegung. Ein einzelner Hammer reicht dann nicht.
+- Ein frischer Ausbruch aus der Akkumulation mit erfolgreichem Test spricht gegen eine sofortige Umkehr und für die Fortsetzung des neuen Trends.
+- Fallendes Volumen auf dem ersten Rücksetzer nach dem Aufwärtsbruch ist ein gutes Zeichen für die Fortsetzung.
+- Solange die folgenden Pivot-Hochs und Pivot-Tiefs in Trendrichtung wandern und das Volumen mitgeht, wird gehalten.
+- Eine zweite Stauzone mit Bruch in der alten Richtung ist nur eine Pause. Die Position bleibt, und die dynamischen Linien werden neu gebaut.
 
 ## Risiken und Grenzen
 
 - Wer gegen den Trend Day positioniert ist, kann den Gewinn mehrerer Tage in einer einzigen Session verlieren.
 - Widersprechen sich die direktionalen Maße, heben sie sich auf, und die Sicherheit über die Fortsetzung sinkt.
 - Nähert sich der Preis dem Ziel, steigt das Risiko der Shorts, und die Chance, in der Short-Position profitabel zu bleiben, sinkt.
+- Hineinkommen ist der leichte Teil. Drinbleiben und zum richtigen Zeitpunkt hinausgehen ist sehr schwer und ein Hauptgrund, warum viele Trader scheitern.
+- Ohne Volumen wäre an Hammer oder Shooting Star nicht zu erkennen, ob der Rücksetzer stark oder schwach ist.
+- Durchschnittliches oder schwächeres Volumen bei weiter steigendem Preis spricht gegen die Fortsetzung. Der Trend entwickelt sich dann nicht.
+- Ein Bruch der zweiten Stauzone gegen die Position beendet die Fortsetzung.
 
 ## Beispiele
 
+- Im AUD/USD bestätigten die Rücksetzer-Kerzen den Versuch, auf fallendem Volumen zu steigen. Jeder weitere Rallyversuch im Abverkauf lief auf fallendem Volumen, bis Stopping-Volumen erschien und die Position beendet wurde.
+- Honeywell notierte drei Monate nach dem bestätigten Ausbruch bei 76,08 Dollar.
+- Duke Energy stieg nach dem späteren Bruch über 65,75 Dollar auf stetigem Volumen weiter, bevor der Move den Dampf verlor.
+- Im GBP/USD auf der Stunde war der erste vermeintliche Stau nur eine Pause. Das Paar lief auf gutem Volumen weiter nach oben.
+- Der Hanging Man zeigte danach, dass die nächste Stauung zur Umkehr wurde und nicht zur Fortsetzung.
+- Auf 15 Minuten bestätigte das Volumen den Bruch aus etwa 70 Kerzen Stau, und der Trend sollte der aufgebauten Ursache entsprechend eine Weile laufen.
+- Der Dow stieg nach der Akkumulation auf durchschnittlichem Volumen weiter. Der ES kaufte am dritten Tag auf hohem Volumen in den bullischen Trend.
 
 ## Unterschiedliche Quellenpositionen
 

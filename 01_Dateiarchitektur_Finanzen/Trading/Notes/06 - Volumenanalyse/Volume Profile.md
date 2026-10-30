@@ -20,6 +20,9 @@ aktualisiert: 2026-10-30
 
 - Market Profile ist kein Handelssystem und nicht vorhersagend. Es zeigt die Marktstruktur im Entstehen und macht erkennbar, welcher Timeframe die Bewegung kontrolliert.
 - Das Market Profile ordnet Zeit, Preis und Volumen der Auktion zu einer objektiven Verteilung, die allen Teilnehmern unverzerrt vorliegt.
+- Volume at Price ist das Volumenprofil während der Entstehung der Preisbar, also die Stelle, an der das Volumen in der Preisaktion konzentriert war.
+- Volume at Price, kurz VAP, ist eine jüngere Entwicklung der Volumenanalyse und führt die Volumen-Preis-Analyse auf die nächste Stufe, indem sie Volumen gegen einzelne Preise abbildet.
+- Volume at Price ist ein Volumenhistogramm je Preisniveau. Es zerlegt die einzelne Volumenspalte und zeigt, wo in der Spanne das Volumen lag.
 
 ## Kernaussagen
 
@@ -43,6 +46,17 @@ aktualisiert: 2026-10-30
 - Es zeigt das genaue Volumen je Preis, einschließlich Relative Volume, und die Kontraktzahl der Session.
 - Was das Volume Profile nicht zeigt, ist wichtiger als die Anzeige.
 - Volume Profiles allein kennzeichnen oft falsche Anomalien, etwa das Hoch oder Tief des Vortags.
+- Volume Price Analysis liest die lineare Beziehung von Volumen und Preis nach Schluss der Kerze von außen.
+- Volume at Price liefert das Profil innen und prüft damit die Außensicht; beide sind zwei Blicke auf dasselbe.
+- Eine normale Volumenbar zeigt nur die Summe des Volumens über die Preisspanne der Bar. Sie zeigt nicht, wie viel auf den einzelnen Preisen innerhalb dieser Spanne gekauft wurde.
+- VAP ist die Karte dieses Verhältnisses. Dreht man ein Diagramm mit Preis auf der waagerechten und Volumen auf der senkrechten Achse um 90 Grad, entspricht das der Darstellung am Chart.
+- Im einfachen Verkaufsbild fällt die abgesetzte Menge, wenn der Preis steigt. Das gilt in den meisten Märkten, aber nicht immer.
+- Die normale Volumenspalte zeigt nur das Gesamtvolumen zur Preisspanne. Volume at Price zeigt das Volumen an den einzelnen Preisniveaus.
+- Liegt die Konzentration unten, ist es eher Kaufvolumen. Liegt sie oben, eher Verkaufsvolumen.
+- Damit werden Momentum sowie Unterstützung und Widerstand aus einer anderen Richtung sichtbar. Die zuvor unsichtbaren Barrieren stehen auf dem Chart.
+- Volume at Price ergänzt die klassische Volume Price Analysis und ersetzt sie nicht. Es findet Preisstau sowie Unterstützungs- und Widerstandszonen, die danach mit Volume Price Analysis bestätigt werden.
+- Mehr Aufwärtskerzen färben den Schwerpunkt des Balkens blauer, mehr Abwärtskerzen röter, und zeigen so das Gleichgewicht in dieser Preisspanne.
+- Je länger der Markt in einer engen Spanne steht, desto höher die Konzentration. Eine kurze Zone kann trotzdem fast so viel Volumen sammeln wie eine viel längere.
 
 ## Funktionsweise
 
@@ -50,6 +64,12 @@ aktualisiert: 2026-10-30
 - Das Market Profile ist ein passives Messgerät. Es bildet die Marktaktivität in der Gegenwart ab.
 - Je breiter die Preiszeile von rechts nach links, desto mehr Zeit lag auf diesem Preis. Preis mal Zeit schätzt das Volumen je Preis.
 - Die Schätzung über TPOs ist nicht perfekt, gibt aber mehr her als Volumen ohne Zeit.
+- Ein Händler testet den Markt, indem er einen Preis anbietet, die Absatzmenge notiert und den Preis dann anhebt oder senkt.
+- Lässt sich zum höheren Preis dieselbe Menge verkaufen, steigt der Gewinn, ohne dass das Volumen fällt.
+- Irgendwann gilt der Preis als zu hoch, die Käufer hören auf, und die Menge fällt. Wird der Preis wieder gesenkt, zieht die Menge an.
+- Die klassischen Volumensäulen liegen unten, das Histogramm senkrecht an der Preisachse.
+- Dichte, überdurchschnittliche oder extreme Balken markieren bedeutende Zonen. Unterdurchschnittliche Balken markieren schwache Zonen.
+- Der Vergleich der Zonen untereinander deckt die Anomalie auf.
 
 ## Voraussetzungen
 
@@ -59,6 +79,11 @@ aktualisiert: 2026-10-30
 - Ein Balkenchart ist der beste Weg, visuelle Referenzen wie Hochs und Tiefs von Trading Ranges zu erkennen.
 - Sobald eine neue Richtungsauktion vermutet wird, beginnt ein neues Market Profile.
 - Es gibt keine einzelne einfache Antwort. Volume Profile und Market Profile sind nebeneinander zu vergleichen.
+- Ein starkes sichtbares Fundament gibt Vertrauen, einen Ausbruch zu handeln. Ein schwaches Fundament ist ein Grund zu warten.
+- Dieselben Zonen helfen bei Stops und bei der Risikobeurteilung.
+- Der Indikator ist auf den meisten guten Chartpaketen kostenlos. Die Beispiele in diesem Abschnitt stammen aus NinjaTrader.
+- Die Methode gilt auch außerhalb von Aktien.
+- Die CME bot früher Chart-EX für Futures an. Die Autorin hält es für eingestellt.
 
 ## Regeln und Kriterien
 
@@ -91,9 +116,15 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Die Lage der Value Area zum Vortag fällt in sechs Strukturen: höher, tiefer, überlappend höher, überlappend tiefer, außerhalb oder innerhalb.
+- Microsoft auf 15 Minuten über etwa fünf Tage: die dreitägige untere Stauung war am dichtesten, die kurze Zone darüber schwach, die nächste Zone überdurchschnittlich über eine tiefe Spanne, und die oberste Tageszone fast so dicht wie die dreitägige, aber seitwärts und damit schwach. Zur Eröffnung fiel die Aktie um 1,40 Dollar.
+- Alcoa auf dem Stundenchart zeigte einen sehr großen Balken mitten im Histogramm auf der laufenden Stauung. Der Ausbruchsversuch scheiterte, und die klassische Analyse sollte prüfen, ob der Bruch nach unten wahrscheinlicher ist.
+- Procter & Gamble auf dem Tageschart über etwa sechs Monate: drei Monate Stau mit einem extremen und einem durchschnittlichen Balken, Ausbruch mit Aufwärtslücke, danach eine zweimonatige Zone mit geringerer Dichte.
 
 ## Unterschiedliche Quellenpositionen
 
+- Dass am Volumen grundsätzlich nichts Neues sei und es seit über einem Jahrhundert gelesen werde, wird an dieser Stelle eingeschränkt. VAP wird als eine der neueren Entwicklungen der Volumenuntersuchung eingeführt.
+- VAP unterscheidet sich von der bisherigen Volumen-Preis-Analyse genau darin, dass nicht mehr nur die eine Summe je Bar gelesen wird, sondern die Verteilung auf die Preise.
+- Volume at Price ist eine stützende Technik zur Volume Price Analysis und nicht die führende Methode. Es gibt eine dreidimensionale Sicht und ersetzt die traditionelle Analyse nicht.
 
 ## Eigene Erkenntnisse
 

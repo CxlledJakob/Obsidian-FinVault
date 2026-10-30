@@ -21,15 +21,50 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Im oberen Docht verlieren die Käufer die Kraft, der Markt wird gegen höhere Preise widerständig, und die Verkäufer übernehmen wieder, bis der Schluss am Open liegt.
+- Widerstand und Unterstützung werden dort stark, wo der Markt nach einem Trend seitlich staut und die Gegenseite aufsaugt.
+- Sie sind die wichtigste Ergänzung der Volume Price Analysis, weil die Pause entweder die Umkehr vorbereitet oder ein Haltepunkt im längeren Trend ist.
+- Wo weiterer Aufwand keine höheren Preise mehr erzeugt, werden höhere Kurse zurückgeschlagen; dort leeren die Specialists ihr Lager.
+- Im overbought Markt kommen Verkäufer herein und schaffen Widerstand gegen höhere Preise, und fallendes Volumen auf den nächsten Kerzen bestätigt das.
+- Die Insider können den Markt nicht nach unten drehen, bevor sie fertig sind; sie halten den Preis und verkaufen weiter in die Käufe.
+- Die Lage im Trend und mögliche Umkehrpunkte werden unter anderem am Widerstand festgemacht, zusammen mit Kerzenmustern und Trendlinien.
+- Drei Shooting Stars, deren Hoch am selben Preis scheitert, zeigen, dass der Markt auf diesem Niveau kämpft und schwach ist.
+- Preisstauzonen sind Barrieren, an denen ein Anstieg wahrscheinlich Schwierigkeiten bekommt, weil der Markt dort früher pausiert oder gedreht hat.
+- Die Insider nehmen genau diese Barrieren als Ziel der Distribution, nachdem der Anstieg auf bullischen Nachrichten beschleunigt hat.
+- Die Widerstandsdecke ist die unsichtbare Barriere, die den Preis am weiteren Steigen hindert und ihn zurückdrückt.
+- Eine enge Aufwärtskerze mit relativ hohem Volumen zeigt, dass der Markt gegen höhere Preise resistent ist, obwohl er ein kleines Stück gestiegen ist.
+- Die nächste Kerze kann dann ein Shooting Star sein und diese Schwäche bestätigen.
+- Die Decke bleibt Widerstand, bis ein klarer Schluss und starkes steigendes Volumen sie brechen.
+- Danach wechselt sie die Rolle und wird auf dem Rücktest zur Unterstützung. Bis zu diesem gültigen Bruch bleibt sie die Barriere.
+- Auf dem Weg nach unten wird alter Boden zum Widerstand und bremst kurze Gegenläufe, während er die Abwärtsbewegung zusätzlich drückt.
+- Wie stark ein Widerstand ist, zeigt das Volumen der Zone.
+- Extremes Volumen, das den Kurs nicht anhebt, ist Verkauf auf diesem Niveau. Unterdurchschnittliches Volumen ist ein schwacher Widerstand.
+- Ein normaler Bruch durch Widerstand braucht überdurchschnittliches, möglichst stetig steigendes Volumen und muss nicht explosiv sein.
+- Ein Bruch mit Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt, bei dramatischer Bewegung ultrahohes Volumen.
+- Nach einem klaren Bruch wird die alte Decke zur Unterstützung, und nach einem Bruch des Bodens wird dieser zur Decke.
+- Die Grenze ist ein Gummiband. Pivot-Hochs liegen nicht auf einer Linie, und der Markt ist nicht linear.
+- Ein normaler Bruch durch Widerstand braucht überdurchschnittliches, stetig steigendes Volumen und muss nicht explosiv sein. Eine Aufwärtslücke verlangt deutlich überdurchschnittliches oder ultrahohes Volumen.
+- Ein zweitrangiger Widerstand an der Eröffnung gibt zusätzliches Vertrauen, wenn er auf dem Weg nach oben bricht.
+- Hält die neue Decke, kann ein scharfer Abverkauf folgen. Fällt das Volumen dabei weg, trägt er nicht weit.
 
 ## Funktionsweise
 
+- Im Selling Climax wird der Widerstand sichtbar: der Versuch, den Preis oben zu halten, scheitert am eigenen Verkaufsvolumen, und die Kerze schließt mit tiefem oberem Docht.
+- Nach einer Seitwärtsphase haben solche Kerzen noch mehr Gewicht, weil der historische Widerstand die Volumen-Preis-Analyse bestätigt.
+- Im Topping-Out-Abschnitt werden die oberen Dochte tiefer, die Spreads enger und der Anstieg langsamer, weil der Verkauf der Insider das Momentum nicht mehr leicht trägt.
+- Schwache Käufer an den Wellenhochs verkaufen bei der nächsten Annäherung und erzeugen so die unsichtbare Decke.
+- Der Hanging Man ist der erste Verkaufsdruck an diesem Hoch und die frühe Warnung, dass die Käufer den Markt nur noch stützen, statt ihn leicht weiterzutreiben.
+- Ein erneutes Scheitern an einer alten Decke, besonders wenn der Markt dort früher schon scheiterte, spricht für einen extrem schwachen Markt.
+- Diese Zonen sind die Ziele, an denen der Markt kämpfen oder drehen kann, und sie bleiben als DNA auf der Chart liegen.
+- Gelingt der Bruch einer lange gehaltenen Decke, ist der überwundene Widerstand bedeutender, und danach liegt eine starke Plattform.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Der Stop sitzt auf der anderen Seite der Stauzone.
+- An einem mehrfach gescheiterten Hoch wird short gegangen, wenn Volume Price Analysis und die Zeitebenen bestätigen, oder das Niveau wird nach einem Bruch als starkes Fundament behandelt.
 
 ## Regeln und Kriterien
 
@@ -64,12 +99,26 @@ aktualisiert: 2026-10-30
 - An Tagen mit tieferer Eröffnung bietet das untere Ende eines Preisspikes Widerstand.
 - Dieses Extrem gilt nur für die erste Probe. Mehrere Tests in derselben Halbstunde sprechen dafür, dass der Preis es durchhandelt; doppelte TPOs in einer späteren Periode heben den Widerstand auf.
 - Eine Gap, die hält, bietet signifikanten Widerstand.
+- Höhere Preise auf diesem letzten Abschnitt brauchen echten Aufwand. Ohne ihn wäre das Volumen nur hoch, aber nicht exzessiv, wie in der natürlichen Phase davor.
+- Die gezeichnete Linie ist elastisch. Ein kurzer Bruch mit Rückkehr in den Kanal ist kein gültiger Bruch des Widerstands.
+- Je länger die enge Zone, desto dramatischer die Wirkung, wenn der Widerstand schließlich verlassen wird.
+- Ein paar Ticks über der Linie überwinden den Widerstand nicht. Die Linie ist elastisch, und es braucht eine sichtbare Lücke im Schluss.
+- Ohne deutlich überdurchschnittliches Volumen ist der scheinbar gebrochene Widerstand eine Falle.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Alcoa scheiterte am Volumen der Stauung.
+- Duke Energy fand Widerstand auf dem früheren Fehlversuch bei 65,75 Dollar, hielt ihn mehrere Tage und brach dann auf stetigem Volumen darüber.
+- Am Ende dieses Anstiegs zeigten enge Kerzen mit ultrahohem Volumen erneut Widerstand gegen weiteres Steigen.
+- Im AUD/USD markiert die obere Linie der Stauung die Widerstanddecke, deren Bruch gutes steigendes Volumen braucht.
+- AUD/USD scheiterte dreimal an 1,0600.
+- Das aufsteigende Dreieck im EUR/USD testete dieselbe Decke, bis der Bruch mit Volumen kam und die Decke zur Unterstützung wurde.
+- Im GBP/USD auf der Stunde hielt die neue Decke, und es folgte ein Preiswasserfall.
+- Im YM gab der Bruch über den Widerstand der Eröffnung Vertrauen, obwohl das Niveau nur zweitrangig war.
+- Im Pennant von Microsoft kämpfte die Aktie nach oben und war zugleich nicht bereit zu fallen, bis die Spannung sich löste.
 
 ## Unterschiedliche Quellenpositionen
 

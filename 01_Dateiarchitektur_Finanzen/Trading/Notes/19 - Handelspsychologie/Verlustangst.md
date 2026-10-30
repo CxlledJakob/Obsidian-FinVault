@@ -21,9 +21,23 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Der emotionale Hebel der Akkumulation ist die Angst vor Verlust; die Insider schütteln die Halter mit gerade genug Volatilität heraus.
+- Die meisten Anleger und Trader steigen viel zu spät ein, bereuen den früheren Nicht-Einstieg und lassen sich leicht aus dem Markt erschrecken.
+- Insider, Specialists und Market Maker setzen auf diese Angst und sehen dabei beide Marktseiten.
+- Angst löst Verkauf aus. Die Insider erzeugen sie, damit das Publikum in der Akkumulation verkauft.
+- Nach dem freien Fall haben sie die Teilnehmer erschreckt. Ein sofortiger Gegenschuss würde sie aus dem Markt vertreiben, deshalb wird Vertrauen langsam aufgebaut.
+- Im Buying Climax kapitulieren die verängstigten Verkäufer, nachdem die Preise mehrfach rasch nach unten markiert und wieder angehoben wurden.
+- Käufer am Hoch einer Stauwelle sehen nie einen Gewinn, nur einen wachsenden Verlust, der bis nahe null zurückgeht. Sie steigen erleichtert mit kleinem Verlust aus.
+- Ihre Angst wäre auf dem Weg nach unten stetig gestiegen und auf dem Weg nach oben gefallen, ohne dass die Position je im möglichen Gewinn war.
+- Am Boden eines Abwärtstrends steigen schwache emotionale Trader erst ein, wenn andere schon verdient haben. Der Markt dreht sofort gegen sie, die Verluste wachsen, und die Angst steigt.
 
 ## Funktionsweise
 
+- Am Hoch nehmen manche Teilnehmer Gewinne mit, weil sie den Markt als erschöpft empfinden, und helfen so, die Kerze zurück zur Eröffnung zu schließen.
+- Dieselbe Angst kehrt nach der Gier wieder, sobald die leeren Lager einen neuen Abverkauf erzwingen.
+- Diese Gruppe handelt ohnehin aus Emotion und ist deshalb mit emotionalen Preisschwüngen leicht zu bewegen.
+- Die Käufer an den Böden haben einen anderen Druck: sie sehen einen möglichen Gewinn verrinnen, nicht einen Verlust, den sie erst aufholen müssen. Angst treibt sie noch nicht.
+- Beim Long-Legged Doji mit niedrigem Volumen werden Stops herausgeschlagen. Wer aus Angst auf diesem Ruck reagiert, sitzt in der Falle und bleibt besser draußen.
 
 ## Voraussetzungen
 

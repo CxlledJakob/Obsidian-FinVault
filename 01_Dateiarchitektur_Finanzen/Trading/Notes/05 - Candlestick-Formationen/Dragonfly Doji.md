@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/05 - Candlestick-Formationen/05 - Candlestick-Formationen|05 - Candlestick-Formationen]]"
 weitere_hauptthemen: []
 unterthema: "Einzelkerzen"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Dragonfly Doji
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Öffnet der Kurs, wird von Verkäufern nach unten gedrückt und schließt wieder am Open, haben die Käufer den Verkauf in der zweiten Hälfte der Kerze aufgenommen.
+- Die Stimmung am Schluss ist bullisch, weil der Kurs in den Schluss hinein gestiegen ist.
+- Die Verkäufer müssen nicht im Verhältnis 50 zu 50 überwunden worden sein; dasselbe gilt bei einer Aufteilung wie 25 zu 75 oder 15 zu 85.
+- Die entstehende Kerze gehört zu den stärksten Preisaktionen im Chart, besonders wenn die Volumenanalyse dazukommt.
 
 ## Funktionsweise
 

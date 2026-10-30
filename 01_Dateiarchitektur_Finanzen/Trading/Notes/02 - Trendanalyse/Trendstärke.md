@@ -22,6 +22,16 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Stärke und Dauer eines Trends hängen weitgehend vom Altern der ursprünglichen Teilnehmer und von Talent und Überzeugung neuen Geschäfts ab.
+- Ob ein Trend beginnt, wie stark er ist und wie weit er läuft, beantwortet nur Unterstützung und Widerstand im Kontext der Volumen-Preis-Analyse.
+- Die Anhaltspunkte sind die Ausdehnung der Stauzone über Ursache und Wirkung, das Volumen der Seitwärtsphase, Volumen und Preis nach dem Bruch, die langsameren Zeitebenen und vorausliegende Pausenstellen.
+- Ein Anstieg auf solidem und generell steigendem Volumen ist die Stärke, die eine Position rechtfertigt.
+- Stärke ist eine weite Aufwärtskerze mit steigendem oder überdurchschnittlichem Volumen, besonders wenn eine Aufwärtslücke zusätzlich mit hohem Volumen bestätigt wird.
+- Durchschnittliches Volumen unter einer Bullish-Engulfing-Kerze oder niedriges Volumen unter einer Aufwärtslücke ist noch keine Stärke.
+- Ultrahohes Volumen bei enger Spanne ohne Preisbewegung ist Schwäche. Bei Kauf müsste der Markt schnell steigen.
+- Ein Anstieg auf flachem oder fast fehlendem Volumen trägt nicht weit. Gutes Volumen auf oder um dem Durchschnitt genügt am Anfang eines Trends, auch wenn es schwankt.
+- Die Kraft des folgenden Trends wird danach beurteilt, wie lange die Konsolidierung gedauert hat. Je länger die Phase, desto größer der anschließende Trend.
+- Zeit ist neben Volumen und Preis nötig, um diese Kraft zu beurteilen. Ohne die Zeit fehlt diese Säule der Volume Price Analysis.
+- Cumulative Delta soll die Stärke des Kaufens oder Verkaufens zeigen, das zur Preisaktion gehört.
 
 ## Funktionsweise
 
@@ -45,12 +55,21 @@ aktualisiert: 2026-10-30
 - Der über Tage verglichene Rotation Factor misst die Stärke und die relative Änderung der langfristigen Überzeugung. Er allein bestimmt nicht die künftige Richtung.
 - Anhaltende Range Extension über mehrere Zeitperioden zeigt, dass der Handel in dieser Richtung besser ermöglicht wird.
 - Range Extension an aufeinanderfolgenden Tagen zeigt eine langfristige Tendenz. Initiative-Buying-Range-Extension weist dann auf starke Käufer des anderen Timeframes hin.
+- Durchschnittliches oder schwächeres Volumen bei steigendem Preis ist ein Trend ohne Momentum. Es fehlt Energie, und Käufer wie Verkäufer nehmen nicht teil.
+- Fehlende Pivots sind die frühe Warnung fehlender nachhaltiger Stärke und zeigen sich zusätzlich im Volumen.
+- Ein Bruch durch eine alte Zone, an der der Markt früher gescheitert ist, hat mehr Gewicht. Ein erneutes Scheitern dort spricht für einen extrem schwachen Markt.
 
 ## Risiken und Grenzen
 
+- Ein paar Linien auf der Chart klären die Stärke nicht und taugen nicht dazu, in eine starke Position zu kommen. Einmal begonnen, können sie den Trend nur begrenzt verdeutlichen.
+- Jeder Ausbruch hat ein anderes Momentum. Das perfekte Bild aus drei sauberen Schwingungen ist nicht zu erwarten.
 
 ## Beispiele
 
+- Bei Duke Energy war das Volumen der letzten weiten Aufwärtskerze nur geringfügig höher als bei der vorherigen Kerze mit halber Spanne. Später kamen die Käufer mit überdurchschnittlichem Volumen.
+- Drei ultrahohe Balken unter engen Kerzen am Ende der Duke-Bewegung zeigten Schwäche. Durchschnittliches Verkaufsvolumen sprach gegen einen großen Wendepunkt.
+- Im AUD/USD-Short bestätigte das niedrigere Hoch der zweiten Shooting Star die Schwäche.
+- Zwei weite Wochenkerzen des AUD/USD mit fast keinem Volumen waren das Erschöpfungssignal nach einem stetigen Anstieg.
 
 ## Unterschiedliche Quellenpositionen
 

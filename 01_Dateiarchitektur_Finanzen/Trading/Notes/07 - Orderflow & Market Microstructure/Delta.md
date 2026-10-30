@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Transaktionsfluss"
@@ -10,25 +10,30 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Delta
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Delta Volume ist die Differenz zwischen den Kontrakten, die zum Ask gehandelt werden, und denen, die zum Bid gehandelt werden. Angezeigt wird die Nettodifferenz.
 
 ## Kernaussagen
 
+- Verkaufen auf einem Balken 500 Kontrakte zum Bid und kaufen nur 200 zum Ask, ist die Nettodifferenz 300 verkaufte Kontrakte. Der Indikator zeigt das als negativen Volumenbalken von minus 300.
+- Delta zeigt die Nettodifferenz zwischen Kauf und Verkauf, während der Markt steigt und fällt, und ist eine weitere Lesart des Verhältnisses von Volumen und Preis.
+- Der Ansatz passt zu Märkten mit offener Börse, etwa Futures und Aktien.
+- Delta und Cumulative Delta sind relativ neu und in der Regel nicht kostenlos als Standardindikator verfügbar.
+- Die Autorin hält eine zunehmende Nutzung für wahrscheinlich, besonders für E-Mini-Indexhändler.
 
 ## Funktionsweise
 
 
 ## Voraussetzungen
 
+- Gebraucht wird ein Markt mit offener Börse, damit Ask- und Bid-Geschäfte getrennt gezählt werden können. Genannt werden Futures und Aktien.
 
 ## Anwendung im Trading
 

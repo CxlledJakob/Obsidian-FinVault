@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Hidden Liquidity
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Große Institute verbergen große Transaktionen in Dark Pools. Die Einzelheiten werden erst veröffentlicht, wenn der Handel abgeschlossen ist.
+- Eine Blockorder am Stück würde den Preis zu weit bewegen. Sie wird deshalb gestückelt oder im Dark Pool vollständig versteckt.
+- Für den Beobachter gibt es dabei keine Transparenz.
 
 ## Funktionsweise
 
@@ -38,6 +39,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Das ist die im Text selbst genannte Ausnahme von der Aussage, Volumen lasse sich als einzige Aktivität nicht verbergen.
 
 ## Beispiele
 

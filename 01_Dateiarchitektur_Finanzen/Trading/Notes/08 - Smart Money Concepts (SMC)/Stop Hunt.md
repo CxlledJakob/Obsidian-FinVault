@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Stop Hunt
@@ -21,9 +21,19 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Market Maker nutzen eine Nachricht, um Stops aus dem Markt zu nehmen: der Preis springt, das zugehörige Volumen bleibt niedrig.
+- Ein falscher Aufwärtsmove soll Trader in schwache Positionen locken und Stops auslösen, bevor der Kurs scharf in die Gegenrichtung dreht.
+- Eine Nachricht ist für Market Maker die Gelegenheit, Stops aus dem Markt zu nehmen: der Preis springt, das Volumen bleibt niedrig.
+- Der falsche Move soll in schwache Positionen locken und Stops holen, bevor es scharf in die Gegenrichtung geht.
+- Der häufigste Grund für niedriges Volumen auf einem Long-Legged Doji ist Stop Hunting. Market Maker und Insider schleudern den Preis hin und her, um Händler herauszuschütteln und Stops sowie Limit-Orders mitzunehmen.
+- Sie kaufen und verkaufen dabei selbst nicht, sondern racken den Preis nur, in der Regel mit einer Nachricht als Auslöser.
+- Die Kerze ist in diesem Fall kein Umkehrsignal, sondern Manipulation auf diesem Niveau.
 
 ## Funktionsweise
 
+- Man erkennt den Vorgang am fehlenden Volumen. Echte Volatilität dieser Art bräuchte Aufwand, und der bleibt aus.
+- Beim Nonfarm Payroll am ersten Freitag im Monat entsteht die Kerze wiederholt. Das ist die Gelegenheit, Trader schnell in Positionen hinein- und herauszuwerfen und dabei Stops zu nehmen.
+- Der Markt kann später drehen. Auf dieser Kerze bleibt man draußen und wartet auf die folgenden Kerzen.
 
 ## Voraussetzungen
 
@@ -39,6 +49,7 @@ aktualisiert: 2026-10-29
 - Trocknet die Aktivität nach dem Auslösen aus, haben Daytrader den Preis nur weit genug geschoben, um die Stops zu holen. Der Markt kehrt wahrscheinlich um und fällt in den Bracket zurück.
 - Der Markt tendiert dazu, Stops zu holen. Knapp unter dem Tief der letzten Tage liegen fast sicher Stops.
 - Wirkliche Schwäche im Day-Timeframe zeigt sich daran, dass Kurzfristhändler unter diesen Preis drücken und die Stops auslösen können.
+- Niedriges Volumen auf dem Long-Legged Doji ist eine Falle. Mindestens durchschnittliches, besser hohes oder ultra-hohes Volumen wäre die Bestätigung einer echten Bewegung.
 
 ## Risiken und Grenzen
 

@@ -19,10 +19,14 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Ein Low Volume Node zeigt die direktionale Überzeugung des anderen Timeframes und tritt eher in unbalancierten, trendenden Märkten auf. Er entsteht wie Excess und zeigt Gaps, einzelne TPO-Prints und Tails.
+- Ein dünner Volumenbereich im Volume at Price ist eine kleine Stauzone mit unterdurchschnittlichen Balken.
 
 ## Kernaussagen
 
 - Niedriges Volumen am Extrem lehnt dieses Extrem ab. In der Mitte zeigt es, dass das andere Timeframe den Preis mit Überzeugung getrieben hat, und künftige Rotationen werden eher abgelehnt als verlangsamt.
+- Eine Zone mit nur wenigen, unterdurchschnittlichen Volumenbalken ist mit wenig Aufwand von oben oder von unten zu durchstoßen.
+- Relativ niedrigeres Volumen in einer späteren Stauzone bietet bei einem Rücklauf nicht denselben Halt wie eine Zone mit extremem Volumen.
+- Fehlt die Volumenkonzentration in einem Preisabschnitt, fehlt dort die Dichte, die später als Barriere wirkt.
 
 ## Funktionsweise
 
@@ -48,6 +52,9 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Bei Microsoft dauerte die zweite Stauzone nur eine Handvoll Kerzen, höchstens ein paar Stunden, mit zwei überhaupt nennenswerten, aber unterdurchschnittlichen Balken.
+- Bei Procter & Gamble war das Volumen der zweiten, zweimonatigen Stauung relativ niedriger als das extreme Fundament darunter.
+- Zwei weite AUD/USD-Wochenkerzen mit fast keinem Volumen zeigten, dass die Preise ohne Volumen höher geschoben wurden.
 
 ## Unterschiedliche Quellenpositionen
 

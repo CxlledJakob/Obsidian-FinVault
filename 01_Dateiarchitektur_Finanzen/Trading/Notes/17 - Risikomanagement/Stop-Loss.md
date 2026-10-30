@@ -21,15 +21,29 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Nach einem Bruch durch eine Decke kann der Stop-Loss in den unteren Bereich der Preisstauzone gelegt werden.
+- Der neue Boden ist der natürliche Schutz bei einem Rücktest. Ein Weg zurück durch diese Zone bräuchte Aufwand und Volumen.
+- Abwärts wird die neue Decke zum Schutz gegen einen kurzen Rücksetzer, und der Stop liegt sinngemäß jenseits dieser neuen Barriere.
+- Der Stop unter dem Docht eines Hammers wird vom Markt gesetzt.
+- Nach der Shooting-Star-Folge liegt der Stop der Short-Position über dem Docht der ersten Shooting-Star-Kerze.
+- Die sichtbaren Stauzonen aus Volume at Price helfen beim Platzieren der Stops. Risiko- und Geldmanagement geben die Regeln vor.
+- Nach dem Bruch einer langen Stauzone liegt der Stop unter dem letzten Pivot-Tief, weil darunter ein tiefes natürliches Schutzpolster steht.
+- Der beste Platz ist die andere Seite der Stauzone, hinter der Barriere, die der Markt selbst gebaut hat.
+- Ist im aufsteigenden Dreieck die Decke zur Unterstützung geworden, ist das die natürliche Barriere für den Stop.
+- Das Risiko des Trades ist niedriger, wenn mit dem dominanten Trend der langsameren Zeitebene gehandelt wird, und höher, wenn dagegen gehandelt wird.
 
 ## Funktionsweise
 
+- Der Markt legt mit seinem eigenen Preisverhalten die Barriere, die eine plötzliche Richtungsänderung erst überwinden muss. Deshalb ist Ausbruchshandel verbreitet.
+- Das Volumen des Bruchs entscheidet, ob dieser Schutz real ist. Ein Bruch auf niedrigem Volumen ist eine Falle und liefert keinen verlässlichen Stop-Anker.
+- Die alten Zonen bleiben als Karte liegen und zeigen später, wo ein Stop an historischem Kampf, an Umkehr oder an Unterstützung orientiert werden kann.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Eine starke sichtbare Plattform hilft, das Risiko zu beurteilen. Ist sie schwach, kann der Einstieg warten.
 
 ## Regeln und Kriterien
 
@@ -47,6 +61,11 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Im SLV lag ein Stop unter dem Docht des Hammers.
+- Im AUD/USD auf 15 Minuten lag der Short-Stop über dem Docht der ersten Shooting Star.
+- Bei Procter & Gamble lieferten die Volumenunterschiede der beiden Stauzonen einen Anhalt für die Stop-Orders.
+- Im GBP/USD auf 15 Minuten saß der Stop unter dem letzten Pivot-Tief der etwa 70 Kerzen langen Stauung.
+- Auf der Stunde lag der Schutz über dem Markt, nachdem der alte Boden zur Decke geworden war.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -18,6 +18,7 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Drei Zeitebenen geben eine dreidimensionale Sicht auf Preis und Volumen, um Risiko, relative Stärke und die wahrscheinliche Dauer eines Trades zu beurteilen.
 
 ## Kernaussagen
 
@@ -47,6 +48,37 @@ aktualisiert: 2026-10-30
 - Die Handlungen der Zeitebenen haben unterschiedliches Gewicht. Die längste Zeitebene handelt meist mit den schwächeren Day- und Kurzfrist-Händen und bringt deren Inventar aus der Balance.
 - Mit zunehmender Erfahrung werden vier Timeframes unterschieden: Day, Short-Term, Intermediate-Term und Long-Term.
 - Welches Timeframe kontrolliert, ist vorrangig.
+- Coulling handelt Intraday-Forex auf dem 15-Minuten-Chart, mit 5 und 30 Minuten als seitliche Spiegel.
+- Der 5-Minuten-Chart ist die schnelle Spur, der 30-Minuten-Chart die langsame.
+- Wechselt die Stimmung auf dem schnellen Chart und läuft sie in die langsameren, wird daraus ein längerer Trend.
+- Ein bestätigter Wechsel auf 5 Minuten, der auf 15 Minuten sichtbar ist, wird dort gehandelt; erreicht er den 30-Minuten-Chart, ist die Umkehr weiter entwickelt und hat voraussichtlich mehr Laufweg.
+- Die Wellen laufen vom schnellsten zum langsamsten Zeitrahmen, und im langsamsten ist die längerfristige Wirkung am größten, weil der Aufbau am längsten gedauert hat.
+- Ein Trend auf 1 oder 5 Minuten ist genauso gültig wie einer über Tage; auf 5 Minuten kann er eine oder zwei Stunden dauern, auf dem Tageschart Wochen oder Monate.
+- Dieselbe Logik gilt für jede Kombination vom Tick-Chart bis zum höheren Zeitrahmen, für Spekulanten und Anleger.
+- Eine große Trendwende kann auf einem 5-Minuten-Chart oder einem Tageschart erscheinen; je länger die Ursache dauert, desto größer ist die Wirkung, und das Tempo unterscheidet sich je Markt.
+- Akkumulations- und Distributionszyklen liegen in allen Zeitebenen ineinander, wie russische Puppen.
+- Ein Zyklus auf der Ein-Minuten-Chart kann wenige Stunden dauern und Teil eines größeren Zyklus auf einer langsameren Chart sein.
+- Ein Zyklus, der auf der Ein-Minuten-Chart begonnen hat, setzt sich auf der Fünf-Minuten-Chart auf und kann auf der Fünfzehn-Minuten-Chart gerade erst entstehen.
+- Ein Signal wird auf der höheren und der tieferen Zeitebene geprüft, und die Volumen-Preis-Analyse wird dort ebenfalls angewendet.
+- Zwei Shooting Stars mit überdurchschnittlichem Volumen auf der 15-Minuten-Chart bestätigen einen Shooting Star der Stundenchart und machen eine Umkehr gewichtiger. Preisstau auf der 15-Minuten-Chart trägt zusätzlich bei.
+- Mehrere Zeitebenen zeigen, ob die Kerze nur eine kleine Umkehr oder der Start einer längeren Trendänderung ist, und wie lange eine Position voraussichtlich gehalten wird.
+- Der Trend eines Intraday-Scalpers ist fast sicher ein kleiner Trend und kann trotzdem in einem längeren Trend der langsameren Zeitebene liegen. Für ihn kann diese Ebene die Stundenchart sein.
+- Mehrere Charts rahmen den gehandelten Trend. Es ist zulässig, gegen den dominanten Trend zu handeln, etwa short in einer Aktie bei bullischem Index, wenn das als Gegentrend erkannt wird.
+- Ein Gegentrend ist riskanter, weil er gegen den Marktfluss läuft, und er wird nur kurz gehalten.
+- Dieselben Volume-Price-Prinzipien gelten unabhängig von Markt, Instrument und Zeitebene.
+- Die Risikobeurteilung stützt sich auch auf die langsamere Zeitebene. Warnt diese vor einer schwachen Bewegung, ist das Risiko hoch, besonders gegen den dominanten Trend.
+- Trends und Ergebnisse sind relativ zur Zeitebene. Ein Scalp kann 20 oder 30 Cent bringen, eine Aktienposition über Tage bis Monate Hunderte oder Tausende Dollar.
+- Große Trendwechsel brauchen Zeit.
+- Index-Futures handeln praktisch rund um die Uhr. Die Eröffnung des Kassamarktes folgt in der Regel dem Trend des elektronischen Kontrakts aus der Nacht.
+- Die langsamste der drei Charts ist der Maßstab und liefert die Richtung, gegen die die beiden anderen gelesen werden.
+- Gehandelt wird die mittlere Zeitebene.
+- Im Satz aus 5, 15 und 30 Minuten ist die 15-Minuten-Chart die Handelschart, die 30-Minuten-Chart der dominante Maßstab und die 5-Minuten-Chart das Detail.
+- Im Satz aus 30, 60 und 240 Minuten wäre die 60-Minuten-Chart die Handelschart.
+- Dieselbe Preisaktion ist auf 30 Minuten eine Kerze, auf 15 Minuten zwei Kerzen und auf 5 Minuten sechs Kerzen. Die langsame Chart macht die Schwäche erkennbar, die auf der schnellen Chart kaum zusammenzusetzen ist.
+- Eine Stauung ist auf der langsameren Chart leichter zu sehen.
+- Läuft die Position mit dem dominanten Trend, ist das Risiko niedriger. Läuft sie dagegen, ist das Risiko höher, und die Position wird voraussichtlich nicht lange gehalten, weil ein Rücksetzer oder eine Umkehr gehandelt wird.
+- Ein echter Wechsel erscheint zuerst auf der schnellen Chart, dann auf der Handelschart und zuletzt auf der dominanten Chart.
+- Drei Charts genügen. Auch ohne Volume Price Analysis bleibt die Methode eine dreidimensionale Sicht.
 
 ## Funktionsweise
 
@@ -54,6 +86,14 @@ aktualisiert: 2026-10-30
 - Zeit gibt das Signal für den Kontrollwechsel, die Struktur bestätigt ihn. Eingestiegen werden kann, sobald die Kontrolle zu wechseln beginnt, nicht erst nach der strukturellen Bestätigung.
 - Je weiter der Preis läuft und je breiter die Value Area wird, desto eher werden andere Timeframes aktiv, weil sie den Preis als von der Value entfernt wahrnehmen.
 - Locals schlagen das Inventar schnell um, mit hohem Umsatz und kleiner Spanne. Langfristige Trader führen ihre Positionen mit größerer Geduld.
+- Die schnelle Zeitebene ist die mikroskopische Sicht, die längere die breitere Sicht auf Volumen und Preis. VPA auf einer Chart ist stark, über langsamere Zeitebenen trianguliert wird sie dreidimensional.
+- Richard Ney setzt den kurzfristigen Trend auf zwei Tage bis zwei Monate an, mit noch kürzeren Trends von nur mehreren Stunden darin.
+- In diesem kurzfristigen Rahmen löst der Specialist seine täglichen Inventarprobleme, während die mittleren und langen Ziele im Blick bleiben. Ney nennt diesen Trend den Spaten für das längerfristige Grab des Investors.
+- Volumen und Preis des Ausbruchs werden auf langsameren Zeitebenen geprüft, zusammen mit vorausliegenden Unterstützungs- und Widerstandszonen, die einen längeren Trend pausieren können.
+- Preisstau auf der 5-Minuten-Chart hat weniger Bedeutung als auf der 15-Minuten-Chart und noch weniger als auf der Stundenchart. Die längere Zeitebene wiegt mehr, bei sonst gleichen Bedingungen.
+- Dows ursprüngliche Spannen waren 2 bis 3 Tage, 2 bis 3 Wochen und 2 bis 3 Monate. Auf elektronischen Intraday-Charts liegen die näheren Größen bei 2 bis 3 Stunden, 2 bis 3 Tagen und 2 bis 3 Wochen.
+- Gelesen wird ständig von der langsamen zur schnellen Chart und zurück. Die Volume Price Analysis sitzt in der Mitte.
+- Die langsame Chart ist der Blick aus der Distanz auf die letzten Tage. Die mittlere zoomt heran, die schnelle zeigt das Detail.
 
 ## Voraussetzungen
 
@@ -66,6 +106,12 @@ aktualisiert: 2026-10-30
 - Stabile Ergebnisse abseits des Floors entstehen am ehesten durch Handel mit der Kontrolle des Other-Timeframe-Teilnehmers.
 - Die Vorbereitung beginnt möglichst weit weg vom Tagespreis, beim Monats-Bar, danach beim Wochen-Bar, dann beim Tages-Bar und erst dann bei den Profilen.
 - Bei Auktionen, die das längere Timeframe treibt, wechseln anpassungsfähige Day-Trader vom rotationalen Handel zum Momentum-Handel.
+- Ist der längere Trend bullisch und die Position auf der schnelleren Chart short, wird sie nur begrenzt gehalten, weil sie gegen den dominanten Trend der Session läuft.
+- Ist der längere Trend bullisch und man ist auf der schnelleren Chart short, hält man nur begrenzt, weil die Position gegen den dominanten Trend der Session läuft.
+- Ursache und Wirkung sind relativ zur Zeitebene. Wochen der Konsolidierung auf dem Tageschart sprechen für einen Trend ähnlicher Länge, ein Ausbruch der 5-Minuten-Chart vielleicht nur für eine Stunde.
+- Ein Einstieg auf der schnellen Zeitebene wird an der langsameren geprüft. Widerspricht sie, bleibt ein vorsichtiger Händler draußen oder handelt das höhere Risiko bewusst.
+- Kerzenmuster in der Stauung werden zusammen mit Volume Price Analysis und den drei Zeitebenen gelesen.
+- Ein Dreifachtop wird für den Short nur genommen, wenn Volume Price Analysis und die mehreren Zeitebenen die Sicht bestätigen.
 
 ## Regeln und Kriterien
 
@@ -144,6 +190,8 @@ aktualisiert: 2026-10-30
 - Die längeren Timeframes stechen die Handlungen der kürzeren immer aus.
 - Je weiter die Eröffnung aus der Balance liegt, desto eher ist das andere Timeframe verantwortlich.
 - Späte Liquidation oder Short Covering in der Pit-Session kann entstehen, weil dem Day-Timeframe die Zeit ausgeht, nicht nur weil Volumen fehlt.
+- Die längere Zeitebene wiegt bei der Frage schwerer, ob ein Short nur eine Pause gegen den dominanten Trend ist.
+- Die ganze Prüfung dauert Minuten oder Sekunden, während die nächste Kerze entsteht.
 
 ## Risiken und Grenzen
 
@@ -153,6 +201,15 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Ein Scalper nutzt 5, 15 und 60 Minuten, ein Swing-Trader 60 Minuten, 240 Minuten und den Tag, ein Trendtrader 4 Stunden, Tag und Woche.
+- Ein Shooting Star auf der Stundenchart gewinnt an Gewicht, wenn die 15-Minuten-Chart zwei Shooting Stars mit überdurchschnittlichem Volumen zeigt.
+- Der Trend eines Index ist nach Dow aussagekräftiger als der Trend einer einzelnen Aktie, weil die Aktie von Berichten und Empfehlungen verzerrt wird und der Index die breitere Stimmung zeigt.
+- Der allgemeine Silbertrend war bärisch. Der Scalp im SLV lief damit gegen den dominanten Trend und war schon deshalb ein Trade mit höherem Risiko.
+- Der Wochenchart AUD/USD über rund achtzehn Monate zeigt, wie lange eine Selling Climax wirken kann, und dass die Analyse auf dieser Zeitebene genauso gilt.
+- Im GBP/USD war die markierte Kerze auf 30 Minuten eine Shooting Star mit ultrahohem Volumen, davor eine enge Kerze ebenfalls mit ultrahohem Volumen. Auf 15 Minuten waren es zwei Kerzen, davon eine Aufwärtskerze mit hohem Volumen und tiefem oberem Docht, auf 5 Minuten sechs Kerzen.
+- Die drei GBP/USD-Charts stammen aus MT4.
+- Index-Futures handeln praktisch rund um die Uhr. Die Eröffnung des Kassamarktes folgt in der Regel dem elektronischen Kontrakt der Nacht.
+- Der Dow-Wochenchart ist die Zeitebene eines längerfristigen Investors. Eine Selling Climax wäre dort auf Monats-, Wochen- oder Tageschart sofort sichtbar.
 
 ## Unterschiedliche Quellenpositionen
 

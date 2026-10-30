@@ -21,6 +21,11 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Liegt das Kaufvolumen der zweiten Aufwärtswelle etwas unter der ersten, kann der Move den Dampf verlieren.
+- Sehr niedrige Volumen auf den Abwärtskerzen und eine Stauzone bei allgemein fallendem Volumen zeigen nachlassendes Interesse.
+- Ultrahohes Volumen ohne die Preisreaktion, die nach den vorherigen Kerzen zu erwarten wäre, zeigt, dass die großen Akteure zu kämpfen beginnen.
+- Fällt das Volumen in einem bärischen Verlauf weg, trägt der Abverkauf nicht weit.
+- Steigende Preise bei fallenden Volumen auf einer Erholung sind weitere Schwäche.
 
 ## Funktionsweise
 
@@ -30,6 +35,7 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Nachlassendes Interesse ist ein Grund, wachsam zu sein. Stauung plus allgemeiner Volumenrückgang kann den Ausstieg nahelegen, auch wenn einzelne Kerzen danach nichts Bedrohliches zeigen.
 
 ## Regeln und Kriterien
 
@@ -45,6 +51,10 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Im YM war das Volumen der zweiten Welle etwas niedriger als das der ersten. Auf der rechten Seite hatten die Abwärtskerzen sehr niedriges Volumen, und die Stauung kam dazu.
+- Im Kaffee-Future war der neunte Balken das erste Schwächesignal. Die folgende Stauung mit engen Aufwärtskerzen und oberen Dochten bestätigte es, die Erholung lief auf fallendem Volumen.
+- Im GBP/USD fiel das Volumen im Abverkauf weg, und nach sieben Stunden war der Move am Boden.
+- Ein neunmonatiger Anstieg im AUD/USD verlor am Ende mit einer Selling Climax den Dampf.
 
 ## Unterschiedliche Quellenpositionen
 

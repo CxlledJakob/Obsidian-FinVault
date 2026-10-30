@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Basisgrößen"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Up Volume
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Up Volume ist das Volumen der Aufwärtskerzen. Im Volume at Price wird der Balken stärker blau, wenn in der Preisspanne mehr Aufwärts- als Abwärtskerzen liegen.
 
 ## Kernaussagen
 
+- Steigendes Volumen mit weiter Aufwärtskerze ist Kauf. Eine Aufwärtslücke auf starkem Volumen zeigt, dass die Insider mitmachen.
+- Eine Aufwärtskerze auf niedrigem oder nur durchschnittlichem Volumen ist kein Zeichen von Stärke. Ein Anstieg auf flachem Volumen kommt nicht weit.
+- Ultrahohes Volumen bei einer engen Aufwärtskerze, die nicht steigt, ist Verkauf. Bei Kauf müsste der Markt schnell steigen.
+- Fällt das Volumen auf den Aufwärtskerzen eines Rücksetzers im Abwärtstrend, ist die Gegenbewegung schwach.
 
 ## Funktionsweise
 
@@ -41,6 +44,9 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Bei Honeywell bestätigten steigendes Volumen und weite Aufwärtskerzen den Ausbruch, zusätzlich mit hohem Volumen und Aufwärtslücke.
+- Bei Duke Energy kamen die Käufer mit überdurchschnittlichem Volumen. Die frühere weite Aufwärtskerze hatte nur geringfügig mehr Volumen als die vorherige Kerze mit halber Spanne.
+- Im GLD war die enge Kerze mit extrem hohem Volumen ein Signal, dass verkauft wird, obwohl der Kurs zu steigen versucht.
 
 ## Unterschiedliche Quellenpositionen
 

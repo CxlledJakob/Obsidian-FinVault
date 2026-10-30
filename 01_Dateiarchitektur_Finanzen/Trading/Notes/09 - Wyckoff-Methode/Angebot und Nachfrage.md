@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Angebot und Nachfrage
@@ -27,11 +27,32 @@ aktualisiert: 2026-10-29
 - Fließen Mittel zu, auktioniert der Markt schließlich höher. Fließen sie ab, auktioniert er schließlich tiefer.
 - Gibt es mehr Bieter als Papiere, beginnt häufig sofort eine starke Aufwärtsauktion.
 - Bleibt das Inventar bei den Zwischenhändlern statt bei den langfristigen Investoren, wird es tiefer auktioniert, bis die Balance wiederhergestellt ist.
+- Preise bewegen sich nach Wyckoff nach Angebot und Nachfrage, und aus der Beziehung von Preis und Volumen lässt sich die künftige Marktrichtung einschätzen.
+- Ist die Nachfrage größer als das Angebot, steigen die Preise, um diese Nachfrage zu treffen.
+- Ist das Angebot größer als die Nachfrage, fallen die Preise, und das Überangebot wird aufgenommen.
+- Das Tape misst das momentane Angebot und die momentane Nachfrage in einzelnen Aktien und im Gesamtmarkt und vergleicht die Kräfte dahinter.
+- Market Maker sehen beide Seiten und kennen die Balance von Angebot und Nachfrage, die dem Außenstehenden nicht zur Verfügung steht.
+- Im Future-Markt zeigt Volumen Angebot und Nachfrage zusammen mit Sentiment und Orderfluss, wenn die großen Akteure ein- und aussteigen.
+- In der Akkumulation füllen die Insider das Lager, weil erzeugte Nachfrage sonst ohne Angebot bliebe.
+- Nach der Akkumulation testen sie, ob noch Verkaufsdruck, oft Supply genannt, vor dem Anstieg liegt.
+- Beim Test wird der Markt tiefer gezeichnet, oft auf eine kleine schlechte Nachricht; bleibt das Volumen niedrig, sind kaum Verkäufer übrig.
+- Wären noch viele Verkäufer da, würde die Kerze bei überdurchschnittlichem Volumen tiefer schließen.
+- Ein Test mit hohem Volumen ist gescheitert, und die Insider nehmen den Markt schnell zurück in die Kongestion, um den Verkauf herauszuschütteln.
+- Die Insider wollen Nachfrage erzeugen; ein Überangebot stoppt die Bullenkampagne.
+- Der Körper des Tests muss ein enger Spread mit tiefem unterem Docht sein, die Farbe kann bullisch oder bärisch sein.
+- Der Angebotstest nach der Akkumulation prüft, ob der Restverkauf in den unmittelbar höheren Preisen absorbiert ist.
+- Der Nachfragetest am Ende der Distribution prüft, ob in Zonen mit kurz zuvor hohem Kaufvolumen noch Kaufdruck übrig ist.
+- Niedriges Volumen und ein Schluss nahe der Eröffnung zeigen, dass die gesuchte Seite fehlt.
 
 ## Funktionsweise
 
 - Unter Value für die Verkäufer eines Timeframes werden nur wenige Gebote ausgeführt, und die Auktion steigt schnell. Sobald der Preis über der Vorstellung von fairem Wert liegt, steigen Bieter aus.
 - Kaufen danach nur noch jene weiter, die Nachfrage decken müssen oder im Auktionsrausch sind. Lässt die Nachfrage nach, übersteigen die Angebote die Gebote, und die Auktion dreht.
+- Lassen sich die Regale einer Warengruppe nicht voll halten, werden die Kauforders erhöht.
+- Bewegen sich Waren nicht, werden die Preise gesenkt, um Käufer anzulocken.
+- Hohes Volumen beim Angebotstest bedeutet, dass Verkäufer in großer Zahl zurückkehren und weitere Versuche nach oben erschweren.
+- Hohes Volumen beim Nachfragetest bedeutet, dass Käufer den bullischen Trend für fortgesetzt halten und die Abwärtskampagne stoppt.
+- Verkauf in großem Volumen erzeugt selbst Druck und lässt den Preis fallen, sodass die Insider Inventar nicht in einer einzigen Session räumen.
 
 ## Voraussetzungen
 
@@ -46,12 +67,14 @@ aktualisiert: 2026-10-29
 - Ausnahme: Höhere Preise können die Nachfrage steigern, statt sie abzuschneiden. Dann ist die Auktion nicht abgeschlossen.
 - Am oberen Profilende trocknet das Kaufen aus, am unteren wird das Verkaufen abgeschnitten.
 - Die erwartete Reaktion auf tiefere Preise ist, dass das Angebot langsamer wird. Dort liegt Kaufgelegenheit unter Value.
+- Knappheit hebt den Preis, ein Massenangebot drückt ihn. Deshalb wird ein großer Block nicht in einer Order verkauft.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Im Bild des Winterschlussverkaufs fallen die Preise, und die Käufer kommen, um das Überangebot aufzunehmen.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Dark Pool
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Dark Pools sind eine Einrichtung, mit der große Institute große Transaktionen verbergen. Die Details werden erst nach dem Abschluss veröffentlicht.
 
 ## Kernaussagen
 
+- Eine einzelne Order für einen ganzen Block am Hoch würde den Preis zu weit drücken und den Verkaufsgewinn schmälern.
+- Die Alternative ist, die Order in kleinere Blöcke zu teilen oder sie vollständig im Dark Pool zu verstecken.
+- Es gibt dabei keine Transparenz, und die wenigsten Trader oder Investoren wissen davon.
 
 ## Funktionsweise
 
@@ -38,6 +40,7 @@ aktualisiert: 2026-10-26
 
 ## Risiken und Grenzen
 
+- Für die praktische Analyse ändert das wenig, weil sich daran nichts ändern lässt. Es schränkt aber die Aussage ein, Volumen sei die einzige Aktivität, die sich nicht verbergen lässt.
 
 ## Beispiele
 

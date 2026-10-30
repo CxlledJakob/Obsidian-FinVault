@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Transaktionsfluss"
@@ -10,22 +10,26 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Cumulative Volume Delta
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Cumulative Volume Delta summiert das Delta, indem jeder weitere Balken zum vorherigen addiert wird, und zeigt die Summe als Folge von Balken.
 
 ## Kernaussagen
 
+- Die Darstellung gibt eine Sicht auf die Tages- oder Intraday-Preisaktion.
+- Sie soll die Stärke des Kaufens oder Verkaufens zeigen, das zur Preisaktion gehört.
+- Delta und Cumulative Delta sind in der Volume Price Analysis relativ neu und in der Regel nicht kostenlos als Standardindikator verfügbar. Das kann sich ändern.
+- Die Autorin rechnet damit, dass Delta und seine Ableitungen in bestimmten Märkten häufiger genutzt werden, besonders bei E-Mini-Indexhändlern.
 
 ## Funktionsweise
 
+- Es werden alle Delta-Daten gesammelt und jeder folgende Balken zum vorherigen addiert. Die Summen erscheinen als Balkenserie.
 
 ## Voraussetzungen
 

@@ -56,9 +56,15 @@ aktualisiert: 2026-10-30
 - In der frühen Phase gibt es keine gute Trade Location, weil der Preis bei echtem Trend die Value fortlaufend führt.
 - Korrektur ist für die Gesundheit eines Trends wichtig.
 - Im Trend zeigt das Langfristprofil relativ niedriges Volumen und eine elongierte Struktur.
+- Ein Markt kann nur in eine von drei Richtungen laufen: aufwärts trendend, abwärts trendend oder seitwärts in einer Konsolidierung.
+- Auf den Trend entfallen grob nur 30 Prozent der Zeit, auf den Seitwärtslauf etwa 70 Prozent.
+- Der Weg geht in Schritten nach oben und in Schritten nach unten, nie als Gerade.
 
 ## Funktionsweise
 
+- Abwärtsbewegungen sind schneller als Aufwärtsbewegungen. In einem von Panikverkauf getriebenen Markt ist der Druck enorm.
+- Ein Preiswasserfall pausiert, zieht höher und fällt dann weiter. Diesen Rücklauf müssen auch starke Trends zeigen, weil die Insider unterwegs Inventar räumen.
+- Steigt das Volumen im Wasserfall, ist das weitere Schwäche und nicht das Ende des Trends.
 
 ## Voraussetzungen
 
@@ -133,6 +139,8 @@ aktualisiert: 2026-10-30
 - An einem soliden Tag schließt der Markt eher nahe dem oberen Ende der Range.
 - Zu unterscheiden ist, ob das Volumen in einem rotierenden Markt oder als Teil eines Trends verteilt wird.
 - Welches Timeframe kontrolliert, ist vorrangig.
+- Ob ein Hammer oder ein Shooting Star nur eine Pause im längerfristigen Trend oder die echte Umkehr ist, bleibt die wiederkehrende Frage.
+- Die Antwort kommt aus der folgenden Preisaktion, aus Volumen, aus den zugehörigen Zeitebenen und aus nahem Preisstau.
 
 ## Risiken und Grenzen
 

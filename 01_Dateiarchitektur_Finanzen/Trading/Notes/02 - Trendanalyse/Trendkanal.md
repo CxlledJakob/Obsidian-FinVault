@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Trendkanal
@@ -19,12 +19,19 @@ aktualisiert: 2026-10-29
 ## Kurzdefinition
 
 - Ein Trendkanal ist der Preisabstand von der Ober- zur Unterseite der Trendlinie.
+- Der Trendkanal ist hier das Band aus oberer und unterer Region, das durch die laufenden Pivot-Hochs und Pivot-Tiefs entsteht, nicht durch eine nachträglich gezogene Linie.
 
 ## Kernaussagen
 
+- Das klassische Bild zeigt drei Stufen und danach die obere und die untere Linie. Lehrbücher sagen, zwei Punkte seien endlos deutbar, deshalb werde auf drei Punkte gewartet.
+- Derselbe Kanal wird hier aufgebaut, während die Position schon läuft. Das Endergebnis sieht gleich aus, der Weg ist ein anderer.
+- Ein Pivot-Hoch auf oder unter dem vorherigen, mit einem folgenden ähnlichen Pivot-Tief, hebt den Kanal in eine zweite Stauzone auf, bis der nächste Bruch die Richtung klärt.
 
 ## Funktionsweise
 
+- Die Stauzone setzt die Szene, das Volumen trägt die Bewegung, und die Pivots sind die Lichter am Straßenrand, die den Kanal sichtbar machen.
+- Im Fall wird der Kanal spiegelbildlich aus dem ersten Pivot-Tief und dem folgenden Pivot-Hoch aufgebaut.
+- Fehlen Pivots, kann der Preis in eine Stauzone auf etwas höherem Niveau zurückfallen, statt den Kanal fortzusetzen.
 
 ## Voraussetzungen
 
@@ -40,6 +47,8 @@ aktualisiert: 2026-10-29
 ## Risiken und Grenzen
 
 - Wer ohne Absicherung bis zur Untergrenze im Markt bleibt und dort nach unten ausgebrochen wird, hat den Gewinn auf diesem Weg bereits abgegeben.
+- Jeder Bruch erzeugt einen anderen Kanal, mit anderem Momentum und anderer Dauer. Das Lehrbuchbild ist nicht der Normalfall.
+- Eine erst hinterher gezeichnete statische Linie beschreibt den Kanal, hilft beim Einstieg aber nicht.
 
 ## Beispiele
 

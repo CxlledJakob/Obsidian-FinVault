@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/05 - Candlestick-Formationen/05 - Candlestick-Formationen|05 - Candlestick-Formationen]]"
 weitere_hauptthemen: []
 unterthema: "Zweikerzenmuster"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Bullish Engulfing
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Eine Bullish-Engulfing-Kerze mit nur durchschnittlichem Volumen ist noch kein Zeichen von Stärke.
+- Folgt am nächsten Tag eine Aufwärtslücke mit niedrigem Volumen, wirkt die Bewegung schwach und kann eine Falle der Insider sein.
 
 ## Funktionsweise
 
@@ -41,6 +41,8 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Duke Energy versuchte eine Rally mit einer Bullish-Engulfing-Kerze, das Volumen war aber erneut nur durchschnittlich.
+- Die spätere Bullish-Engulfing-Kerze wurde am Folgetag von einer Aufwärtslücke mit niedrigem Volumen begleitet, zurück auf dem früheren Preis und damit vor potenziellem Widerstand.
 
 ## Unterschiedliche Quellenpositionen
 

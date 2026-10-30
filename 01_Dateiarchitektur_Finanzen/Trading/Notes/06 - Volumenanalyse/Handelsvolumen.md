@@ -19,6 +19,7 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Volumen misst, wie erfolgreich eine Auktionsgelegenheit war.
+- Die gewöhnliche Volumenspalte zeigt nur das Gesamtvolumen zur Preisspanne der Kerze und nicht das Volumen auf den einzelnen Preisniveaus.
 
 ## Kernaussagen
 
@@ -36,6 +37,53 @@ aktualisiert: 2026-10-30
 - Volumenanalyse ist zwingend, um die Inventurlage anderer Day-Timeframe-Trader und das Handeln der längeren Zeitebenen zu verstehen.
 - Steht die versuchte Richtung fest, ist Volumen das vorrangige Maß der direktionalen Performance und das beste Maß dafür, wie gut Handel erleichtert wird. Je mehr Transaktionen, desto besser ist die Erleichterung.
 - Die Kombination aus Zeit und Volumen sagt mehr als Volumen allein.
+- Preis und Volumen sind die beiden führenden Indikatoren; einzeln sind sie schwach, zusammen zeigen sie die nächste Bewegung.
+- Volumen zeigt, ob eine Preisbewegung echt oder falsch ist, und es lässt sich nicht verbergen.
+- Volumen zeigt die Aktivität und die Wahrheit hinter der Preisaktion und bestätigt den Preis.
+- Volumen gilt in allen Märkten, mit und ohne Manipulation.
+- Im Future-Markt, der reinsten Form von Kauf und Verkauf, zeigt Volumen, wann der Markt die Kraft verliert und ob das Kaufinteresse von Tag zu Tag steigt oder fällt.
+- Volumen ist der Treibstoff des Marktes, und ohne Volumen bewegt sich nichts.
+- Steigender Future-Preis bei starkem und steigendem Volumen wird durch Käufe der großen Akteure bestätigt, fallender Preis bei steigendem Volumen ebenfalls.
+- Diese Bestätigung gilt für Anleihen, Zinsen, Indizes, Rohstoffe und Währungen.
+- Im Kassenmarkt der Aktien ist Volumen das Mittel, der Manipulation der Market Maker nicht aufzusitzen.
+- In den Futures bestätigt Volumen den Preis und das wahre Sentiment und zeigt Trendumkehren an, indem den großen Akteuren gefolgt wird.
+- Im Spot-Forex wird kein echtes Volumen gemeldet, als Ersatz dient Tick Volume.
+- Dieselben Hinweise zu Preis, Volumen, Aktivität, Unterstützung und Druck gelten nach Wyckoff für die nächste halbstündige Schwingung wie für den Trend der nächsten zwei oder drei Wochen.
+- Die Methode setzt voraus, dass Preis und Volumen im selben Chart stehen.
+- Der Preis allein zeigt nur Kauf und Verkauf, weder das Ausmaß einer künftigen Bewegung noch, ob sie falsch ist.
+- Studien zeigen Tick-Daten als Stellvertreter für Volumen zu etwa 90 Prozent repräsentativ für die wahre Aktivität, weil Volumen Aktivität ist und schnelle Preisänderung erhebliche Aktivität bedeutet.
+- Vor den Nonfarm Payrolls kann ein 233-Tick-Bar Minuten brauchen; während und direkt nach der Veröffentlichung entstehen die Bars in Sekunden.
+- Alles Volumen ist relativ: erst der Vergleich mit dem Üblichen zeigt, ob die Aktivität durchschnittlich, darüber oder darunter liegt.
+- Volumen ohne Preis ist bedeutungslos; es zeigt nur Interesse, die Wirkung entsteht erst zusammen mit dem Preis.
+- Zeit ist eine dritte Komponente: dauert das Bieten Stunden statt Minuten, ist das Interesse gedämpft.
+- Dieselbe Wassermenge durch eine engere Öffnung erhöht den Druck, weil die Zeit knapp wird, und dasselbe gilt im Markt.
+- Kauf und Verkauf werden aus der Sicht der Großhändler gelesen, weil ihrem Orderfluss gefolgt werden soll.
+- Der Preis ist für sich ein führender Indikator, zeigt aber nur, was schon geschehen ist; das Volumen vervollständigt das Bild.
+- In einem manipulierten Markt zeigt Volumen die Wahrheit hinter der Preisaktion, in einem reinen Markt Sentiment und Orderfluss.
+- Im elektronischen Handel liegt der Open einer Bar meist auf dem Close der vorherigen, sodass für die Stimmung das Volumen umso wichtiger wird.
+- Die Volume Price Analysis sucht nur zwei Dinge: Bestätigung der Preisaktion durch das Volumen oder eine Anomalie.
+- Steigende Preise mit steigendem Volumen sind gültig, und die Specialists steigen ein; ein Fall braucht ebenfalls steigendes Volumen, wenn sie den Abverkauf begleiten.
+- Kerzen ohne Dochte und mit steigendem Volumen im Anstieg sind Kaufvolumen, weil Verkauf in der Preisaktion sichtbar wäre.
+- Im Abverkauf ohne Dochte und mit steigendem Volumen ist dasselbe Volumen Verkaufsvolumen.
+- Eine enge Kerze bei sehr hohem Volumen zeigt Schwäche: der Aufwand hätte eine weite Kerze tragen müssen, und die Käufer überwiegen die Verkäufer nur knapp.
+- Die erste Prüfung gilt der einzelnen Kerze, die zweite der Kerzengruppe, die den Trend bildet.
+- Niedrig, durchschnittlich, hoch und sehr hoch werden gegen die vorherigen Bars im selben Zeitrahmen gelesen.
+- Der Ausbruch aus der Akkumulation läuft mit durchschnittlichem Volumen.
+- Ein späterer Test mit niedrigem Volumen zeigt, dass der Verkauf aufgenommen ist; hohes Volumen im Test zeigt Restangebot.
+- Volumen ist das, was die Insider nicht verbergen können, und zeigt, ob sie kaufen oder verkaufen.
+- Im Buying Climax ist das Volumen hoch, weil sie kaufen. Im Selling Climax ist es hoch, weil sie verkaufen.
+- Ultra-hohes Volumen mit der zugehörigen Preisaktion zeigt deutlicher als alles andere, dass eine Trendumkehr vorbereitet wird.
+- Volumen ist für die Autorin der Weg, ins Marktverhalten hineinzusehen, auch wenn es manipuliert ist.
+- Die Volume Price Analysis gilt im Kassamarkt, in Futures und im Spot-Forex gleich. Im Kassa- und Futuremarkt ist es echtes Volumen, im Spot-Forex dasselbe Prinzip.
+- Es braucht Volumen, um zu steigen und um zu fallen.
+- Volumen entscheidet, ob eine Bewegung echt ist.
+- Kein Programm ersetzt die Analyse. Handel ist eine Kunst, weil Märkte von Menschen, Geld, Angst und Gier getrieben werden.
+- Volumen ist Aktivität. Auf einem Tick-Chart wird sie an der Geschwindigkeit sichtbar, mit der die Kerzen entstehen.
+- Ein Zeit-Chart zeigt nur den Preis, während die Kerze läuft.
+- Volumen lässt sich nicht verstecken. Es gibt Tricks, große Blockaufträge zu verbergen, aber der größte Teil des Tagesvolumens ist für alle sichtbar.
+- Die Analyse wird von Hand gemacht. Der Markt ist nicht linear, technische Analyse ist eine Kunst, und Volumen-Software, die Trendwechsel vorhersagen will, kann unzuverlässig sein.
+- Volume Price Analysis gilt auf allen Zeitebenen, in allen Instrumenten und Märkten.
+- Das Auge geht zuerst zu Anomalien: extrem hohe Volumen, extrem niedrige Volumen oder Konzentrationen. Danach wird genauer hingesehen.
 
 ## Funktionsweise
 
@@ -46,6 +94,13 @@ aktualisiert: 2026-10-30
 - Hohe Volumenkonzentrationen entstehen, wenn der Markt relativ lange in einer engen Preisspanne handelt und beide Seiten aktiv sind. Der Preis verlangsamt sich, weil der Bereich als fair gilt.
 - Im kürzeren Timeframe ist das die jüngste Wertwahrnehmung und zieht den Preis an. Ist die laufende Auktion ausgesprochen stark, kehrt der Preis gar nicht erst in den alten High-Volume-Bereich zurück.
 - Die Beurteilung hat drei Schritte: zuerst die versuchte Richtung, dann die Erleichterung über das Volumen, dann die Wirkung dieser Erleichterung auf die Lage der Value Area.
+- Anomalien werden sichtbar, wenn Volumenbereiche miteinander verglichen werden.
+- Mit Volumen und Spanne lässt sich die Preisaktion Kerze für Kerze lesen. Einstieg, Führung und Ausstieg können allein darüber laufen.
+- Im Equivolume-Chart ersetzt Volumen die Zeitachse. Die Höhe der Box ist Hoch und Tief, die Breite das Volumen.
+- Der Schluss färbt die Box schwarz, wenn er über dem vorigen Schluss liegt, und rot, wenn er darunter liegt.
+- Die Zeit bleibt auf einer eigenen Achse unter dem Chart, sonst wäre die Lage in der Session unbekannt.
+- Das Volumen wird normalisiert, indem das Periodenvolumen durch die Summe des auf dem Chart gezeigten Volumens geteilt wird.
+- Candle-Volume-Charts legen die Equivolume-Box über eine Kerze mit Eröffnung, Hoch, Tief und Schluss und ergänzen die Dochte. Breite und Höhe folgen dem Volumen.
 
 ## Voraussetzungen
 
@@ -54,6 +109,11 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Das neue Volumen wird mit dem alten Volumen im Rahmen getrennter Richtungsbewegungen verglichen.
+- Volume Price Analysis liefert die Gelegenheiten und die Logik für das Risiko. Wie viel Kapital eingesetzt wird, beurteilt der Händler, auch über mehrere Zeitebenen.
+- Der Volume-at-Price-Indikator ist auf den meisten guten Chartpaketen kostenlos.
+- Die CME bot früher mit Chart-EX ein ähnliches Bild für Futures an. Die Autorin hält dieses Angebot für eingestellt.
+- Auf einem Tick-Chart wird Trade Volume statt Tick Volume gewählt, sonst sind alle Säulen gleich hoch.
+- Richard Arms entwickelte Equivolume und veröffentlichte es 1994 in Volume Cycles in the Stock Market. Sein Satz dazu: trüge der Markt eine Armbanduhr, wäre sie in Aktien geteilt, nicht in Stunden.
 
 ## Regeln und Kriterien
 
@@ -116,6 +176,9 @@ aktualisiert: 2026-10-30
 - Volumen ist im Verhältnis zur Zeit zu lesen, weil das prominente Einzelniveaus eher glättet.
 - Die Wirkung eines Moves mit niedrigem Volumen setzt häufig verzögert ein.
 - Volumen ist an einem Handelstag nur eines von mehreren Elementen.
+- Volumen validiert den Preis. Zuerst kommt die Kerze, dann die Volumenbar als Bestätigung oder Anomalie.
+- Ein Shooting Star gewinnt seine Bedeutung erst durch das zugehörige Volumen. Die Preisaktion allein nennt nur mögliche Schwäche.
+- Mehrere gleiche Kerzen im selben Preisbereich steigern die Stimmung schon über die Preisaktion. Das Volumen hebt diese Lesart auf die nächste Stufe.
 
 ## Risiken und Grenzen
 
@@ -124,13 +187,25 @@ aktualisiert: 2026-10-30
 - Auch wenn eine One-Timeframing-Auktion vom Volumen nicht gestützt wird, wird sie nicht gefadet.
 - Das Niedrigvolumen am Tag oder an den beiden Tagen vor einer Großmeldung ist gefährlich, weil Gerüchte und Prognosen den Preis wild rotieren lassen.
 - Volume Profiles allein kennzeichnen oft falsche Anomalien, etwa das Hoch oder Tief des Vortags.
+- Volumen ist nicht vollkommen, weil Market Maker große Aktienbewegungen oft erst im After-Hours-Handel melden.
+- Historische Tickerdaten konnten Minuten bis Stunden veraltet sein; heute sind Preis und Volumen live.
+- Beim Anstieg von 45,17 auf 45,30 mit scheinbar starkem Volumen fehlen noch die Zeit zwischen den Änderungen und die Einordnung, ob das Volumen niedrig, durchschnittlich oder hoch ist.
+- Indikatoren und käufliche Systeme können die Preis-Volumen-Beziehung nach Coulling nicht richtig lesen, weil die Auswertung subjektiv ist und Trading eine Kunst und keine Wissenschaft ist.
+- Die Methode eignet sich nicht für Automatisierung.
+- Dark Pools schränken die Sichtbarkeit ein, weil große Transaktionen erst nach dem Abschluss öffentlich werden.
 
 ## Beispiele
 
 - Im Rechenbeispiel liegt die TPO-Value-Area bei 99-21 bis 99-28, das sind 73 Prozent von 78 TPOs; die Volumen-Value-Area liegt bei 99-20 bis 99-30.
+- Die Charts stammen aus NinjaTrader oder aus einem MT4-Konto.
+- Im AUD/USD auf 15 Minuten wurden Einstieg, Führung und Ausstieg einer Short-Position nur mit Volume Price Analysis ausgeführt.
+- Im GLD handelten einzelne Kerzen über 6 Millionen bei einem Durchschnitt um 500.000.
+- Der Wochenchart des Dow Jones ist die Zeitebene, die ein längerfristiger Investor für Aktien und die großen Indizes betrachtet.
+- Der ES E-Mini wird als der von großen Akteuren am stärksten manipulierte Index beschrieben. Das Beispiel ist ein Zehn-Minuten-Chart über eine Session zwischen dem Tag davor und dem Tag danach.
 
 ## Unterschiedliche Quellenpositionen
 
+- Manche Händler halten Tick-Daten als Volumenersatz für nur 90 Prozent genau; Coulling stellt die Konsistenz einer Quelle darüber und akzeptiert auch 70 oder 80 Prozent, solange jede Bar mit früheren Bars derselben Quelle verglichen wird.
 
 ## Eigene Erkenntnisse
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Kompression
@@ -18,10 +18,17 @@ aktualisiert: 2026-10-29
 
 ## Kurzdefinition
 
+- Kompression ist das Zusammenziehen der Preisaktion in einer langen Stauzone, im Pennant bis zu einer gespannten Feder.
 
 ## Kernaussagen
 
 - Vor einem langfristigen Ausbruch kann eine sehr enge Balance mit extrem niedriger Volatilität und begrenzten Handelsgelegenheiten liegen.
+- Ein Pennant entsteht aus tieferen Hochs oben und höheren Tiefs unten.
+- Der Kurs kommt nicht höher und ist zugleich nicht bereit zu fallen. Diese Spannung erzeugt das Muster.
+- Je länger die Spannung anhält, desto mehr Energie sammelt sich. Sie entlädt sich in einem heftigen Ausbruch.
+- Vorher gibt es in der Regel keinen Hinweis, wohin gebrochen wird. Für einen Richtungstrade wird auf den Ausbruch gewartet.
+- Ursache und Wirkung gelten auch hier. Die Dauer der Spannung bestimmt die Kraft der Entladung.
+- Das Muster eignet sich für Strategien ohne feste Richtung, etwa mit Optionen.
 
 ## Funktionsweise
 
@@ -44,6 +51,7 @@ aktualisiert: 2026-10-29
 ## Beispiele
 
 - Im Beispiel hielt diese enge Spanne etwa vier Monate bei ungefähr fünf Dollar, innerhalb eines Brackets von etwa 35 bis 59 Dollar über drei Jahre.
+- Microsoft zeigte auf dem Monatschart eine extrem lange Stauzone und direkt vor dem endgültigen Ausbruch eine Verengung der Preisaktion.
 
 ## Unterschiedliche Quellenpositionen
 

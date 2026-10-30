@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/01 - Marktstruktur & Price Action/01 - Marktstruktur & Price Action|01 - Marktstruktur & Price Action]]"
 weitere_hauptthemen: []
 unterthema: "Preisbildung"
@@ -10,19 +10,27 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Lower High
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein isoliertes Pivot-Tief verlangt eine Drei-Kerzen-Formation, deren mittlere Kerze ein tieferes Tief und ein tieferes Hoch hat als die Kerzen auf beiden Seiten.
 
 ## Kernaussagen
 
+- Das tiefere Hoch der mittleren Kerze ist die zweite Bedingung neben dem tieferen Tief. Fehlt es, ist das Muster kein Pivot-Tief.
+- Erst dieses Pivot-Tief nach einem Pivot-Hoch erlaubt, Boden und Decke der Stauzone zu zeichnen.
+- Vorher bleibt das einzelne Pivot nur eine mögliche kurzfristige Umkehr.
+- Tiefere Hochs beschreiben zusammen mit tieferen Tiefs den fallenden Markt.
+- Im dynamischen Abwärtstrend folgt auf das erste Pivot-Tief ein Pivot-Hoch. Dieses Hoch liegt unter dem vorigen Schwingungshoch, wenn der Fall intakt ist.
+- Ein Pivot-Hoch, das tiefer oder gleich hoch wie das vorherige Aufwärts-Pivot liegt, ist im Anstieg das Warnzeichen einer zweiten Stauzone.
+- Im fallenden Dreieck ist jede Rally eine Serie tieferer Hochs. Das ist ein klares Schwächesignal, weil das Hoch der Kerzen immer schwächer wird.
+- Deshalb steht die Chance auf einen Bruch nach unten.
+- Ein Pennant baut oben eine Serie tieferer Hochs auf, während der Markt zu steigen versucht, und unten höhere Tiefs.
 
 ## Funktionsweise
 
@@ -35,12 +43,16 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Das isolierte Pivot-Tief verlangt auf der mittleren Kerze ein tieferes Hoch und ein tieferes Tief als die Nachbarkerzen. Das tiefere Hoch ist Teil dieser Definition.
+- Lehrbücher zeichnen die Abwärtslinie erst nach drei tieferen Hochs. Der Einstieg auf dem bestätigten Bruch wartet diese drei Punkte nicht ab.
 
 ## Risiken und Grenzen
 
 
 ## Beispiele
 
+- Das fallende Dreieck auf dem Fünf-Minuten-Chart zeigte die tieferen Hochs über einem klar definierten Boden.
+- Im Microsoft-Pennant auf dem Monatschart kämpfte die Aktie mit tieferen Hochs nach oben und war zugleich nicht bereit zu fallen.
 
 ## Unterschiedliche Quellenpositionen
 

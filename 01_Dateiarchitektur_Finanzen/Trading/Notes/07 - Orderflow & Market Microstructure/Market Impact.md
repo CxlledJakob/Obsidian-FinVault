@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/07 - Orderflow & Market Microstructure/07 - Orderflow & Market Microstructure|07 - Orderflow & Market Microstructure]]"
 weitere_hauptthemen: []
 unterthema: "Mikrostruktur"
@@ -10,22 +10,25 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Market Impact
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Eine einzelne Order über einen ganzen großen Block am Hoch drückt den Preis und schmälert den Verkaufsgewinn.
+- Kauf in großem Volumen hebt den Preis gegen den Käufer. Verkauf in großem Volumen drückt ihn gegen den Verkäufer.
+- In einem illiquiden Titel oder einer illiquiden Währung tritt diese Gegenbewegung sehr schnell ein.
 
 ## Funktionsweise
 
+- Deshalb erledigen die Insider Kauf und Verkauf nicht in einer Session, sondern über zwei, drei oder vier Sessions.
+- Dieselbe Gegenbewegung zwingt auch Distribution, Selling Climax und Buying Climax, sich über einen Zeitraum zu erstrecken.
 
 ## Voraussetzungen
 
@@ -41,6 +44,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Nick Leeson konnte die Positionen, die Barings zu Fall brachten, nicht auflösen, ohne den Markt gegen den eigenen Kauf und Verkauf zu bewegen.
 
 ## Unterschiedliche Quellenpositionen
 

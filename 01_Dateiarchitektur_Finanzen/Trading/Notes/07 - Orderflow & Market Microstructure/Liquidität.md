@@ -32,6 +32,8 @@ aktualisiert: 2026-10-30
 - Der Local ist typischerweise für über 50 Prozent des Tagesvolumens verantwortlich, doch mit dem elektronischen Handel hat die Bedeutung der Floors stetig abgenommen. Off-Floor-Händler stellen weiter Märkte und erhöhen damit die Liquidität.
 - Ein elongiertes Profil zeigt, dass der Handel gut vermittelt wird.
 - Wie gut der Markt den Handel vermittelt, entscheidet sich daran, wohin er zu laufen versucht und ob ihm dieser Versuch gelingt.
+- Market Making im Hochfrequenzhandel stellt, wie traditionelles Market Making, Liquidität auf beiden Seiten des Buchs und verdient den Spread.
+- Die Insider sehen alle Kauf- und alle Verkaufsorders und damit die tatsächliche Marktstimmung, bevor diese in der öffentlichen Preisaktion sichtbar wird.
 
 ## Funktionsweise
 
@@ -57,6 +59,7 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Eine SEC-Konzeptveröffentlichung von Ende 2012 ordnet Market Making als eine von vier Gruppen von Hochfrequenzstrategien ein, neben Arbitrage, strukturellen und direktionalen Strategien.
 
 ## Unterschiedliche Quellenpositionen
 

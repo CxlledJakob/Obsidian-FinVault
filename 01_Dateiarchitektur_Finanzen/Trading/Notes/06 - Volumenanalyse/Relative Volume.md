@@ -24,6 +24,14 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Ohne früheren Maßstab lässt sich nicht sagen, ob die gesehene Aktivität durchschnittlich, darüber oder darunter liegt; erst der wiederholte Besuch macht das Urteil möglich.
+- Menschen beurteilen relative Größen sehr schnell, und der Chart zeigt die relativen Volumenbars sofort, vom Tick-Chart bis zum Anlagechart.
+- Die Beziehung in relativen Begriffen ist das Entscheidende, nicht die absolute Höhe der einzelnen Bar.
+- Die Stufen niedrig, durchschnittlich, hoch und sehr hoch entstehen aus dem Vergleich der aktuellen Bar mit den vorherigen Bars desselben Zeitrahmens.
+- Schlösse ein Supply-Test tiefer bei überdurchschnittlichem Volumen, wären noch Verkäufer in Zahl im Markt; niedriges Volumen verneint das.
+- Ein Shooting Star mit unterdurchschnittlichem Volumen nennt nur eine mögliche Pause. Durchschnittliches Volumen auf weiteren gleichen Kerzen bestätigt die Schwäche.
+- Ist das Volumen des zweiten ähnlichen Shooting Stars höher als das des ersten, hat die Schwäche zugenommen, weil mehr Verkauf den Kurs in der Session drückt.
+- Drei gleiche Kerzen am selben Hoch mit steigendem Volumen zeigen, dass der Markt auf diesem Preis kämpft.
 
 ## Funktionsweise
 
@@ -43,6 +51,8 @@ aktualisiert: 2026-10-30
 - Bei einem nicht abgeschlossenen Hoch oder Tief liegt das Volumen oft unter dem relativen Volumen der vergangenen Tage.
 - Volumen ist im Verhältnis zur Zeit zu lesen, weil das prominente Einzelniveaus eher glättet.
 - Das Volumen einer neuen Richtungsauktion wird mit dem Volumen der vorherigen Richtungsbewegung verglichen.
+- In der natürlichen Distributionsphase liegt das Volumen deutlich über dem Durchschnitt, aber nicht exzessiv. Im Climax wird es hoch oder ultra-hoch.
+- Die Bedeutung eines Shooting Stars hängt vom Volumen ab, nicht von der Kerzenform allein.
 
 ## Risiken und Grenzen
 
@@ -52,6 +62,7 @@ aktualisiert: 2026-10-30
 
 ## Unterschiedliche Quellenpositionen
 
+- Gegen die Ansicht, Tick-Daten seien als Volumen nur zu 90 Prozent genau, setzt Coulling die Konsistenz einer Quelle, und auch 70 oder 80 Prozent genügen ihr beim Vergleich jeder Bar mit früheren Bars derselben Quelle.
 
 ## Eigene Erkenntnisse
 

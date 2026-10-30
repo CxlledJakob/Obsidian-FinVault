@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/14 - Marktzyklen/14 - Marktzyklen|14 - Marktzyklen]]"
 weitere_hauptthemen: []
 unterthema: "Zyklusstruktur"
@@ -10,25 +10,29 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Markdown-Phase
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Markdown-Phase ist der schnelle Abverkauf, nachdem die Lager leer sind und der Nachfragetest die Distribution abgeschlossen hat.
 
 ## Kernaussagen
 
+- Der Markt fällt schneller, als er steigt. Der Weg nach oben ist eine Treppe, der Weg nach unten eine Rutsche.
+- Panikverkäufe setzen ein, Angst wird ausgelöst, und die Lager werden am unteren Ende erneut gefüllt.
+- Nach dem Selling Climax läuft dieser Abgang schnell und lässt die letzte Käuferschicht auf dem hohen Niveau gefangen.
 
 ## Funktionsweise
 
 
 ## Voraussetzungen
 
+- Nur wenn der Nachfragetest niedriges Volumen zeigt, gilt die Kampagne als abgeschlossen und der Markt wird schnell tiefer bewegt.
+- Ein Nachfragetest mit hohem Volumen hält den Abverkauf auf, bis diese Käufer aus der Zone geräumt sind.
 
 ## Anwendung im Trading
 

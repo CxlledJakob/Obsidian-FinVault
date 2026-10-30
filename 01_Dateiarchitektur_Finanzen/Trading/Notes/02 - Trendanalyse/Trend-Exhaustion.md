@@ -22,6 +22,11 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Kauferschöpfung durch austrocknendes Volumen in Trendrichtung löst die gegenläufige zwischenfristige Auktion aus. Das ist das seltenere, ruhige Ende; die treibenden Teilnehmer sind vollständig positioniert.
+- Ein langsamer stetiger Volumenrückgang über einen mehrmonatigen Anstieg und danach zwei weite Kerzen mit fast keinem Volumen sind ein starkes Warnsignal. Die Market Maker schieben die Preise ohne Volumen und haben sich zurückgezogen.
+- Bis zu dieser Anomalie muss kein Wechsel unmittelbar bevorstehen. Gutes Volumen auf oder um dem Durchschnitt trägt den Anstieg, und Feiertage sowie dünne Tage verlangen Spielraum.
+- Drei ultrahohe Volumenbalken unter engen Kerzen am Trendende zeigen einen schwachen Markt, und der Kurs kann scharf fallen. Bleibt das Verkaufsvolumen nur durchschnittlich, ist das noch kein großer Wendepunkt.
+- Steigt der Markt auf flachem oder wegfallendem Volumen, tragen die Insider ihn nicht weit.
+- Es ist unvernünftig, auf zehn Aufwärtskerzen in Folge jeweils höheres Volumen als auf der vorherigen zu verlangen.
 
 ## Funktionsweise
 
@@ -61,6 +66,10 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Im AUD/USD-Wochenchart fiel das Volumen über mehrere Monate langsam und im markierten Bereich auf fast null bei zwei weiten Kerzen. Enge Aufwärtskerzen auf sehr hohem und fallendem Volumen kündigten die weitere Schwäche an.
+- Duke Energy verlor am Ende den Dampf. Drei ultrahohe Balken unter engen Kerzen ließen den Kurs scharf fallen, das Verkaufsvolumen blieb durchschnittlich, und die Aktie notierte zum Zeitpunkt des Textes bei 74,41 Dollar.
+- Der neunmonatige Aufwärtstrend im zweiten AUD/USD-Wochenbeispiel endete mit einer einsetzenden Selling Climax.
+- GLD stieg auf flachem Volumen und war damit unwahrscheinlich weit zu tragen. Auf den nächsten beiden Aufwärtskerzen fiel das Volumen weg.
 
 ## Unterschiedliche Quellenpositionen
 

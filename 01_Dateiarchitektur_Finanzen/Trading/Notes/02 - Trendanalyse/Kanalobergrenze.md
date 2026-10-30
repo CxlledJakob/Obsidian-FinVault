@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Kanalobergrenze
@@ -18,10 +18,14 @@ aktualisiert: 2026-10-29
 
 ## Kurzdefinition
 
+- Die Obergrenze des dynamischen Kanals ist die Folge der höheren Pivot-Hochs. Das dritte Pivot-Hoch definiert die obere Region.
 
 ## Kernaussagen
 
 - Die Obergrenze ist die obere Seite der Trendlinie. Der Abstand zur Untergrenze liegt im gezeigten Verlauf bei etwa 5 Prozent und bei höherer Volatilität nicht selten bei 8 bis 10 Prozent.
+- Solange jedes neue Pivot-Hoch über dem vorherigen liegt, bleibt die obere Begrenzung intakt und die Position wird gehalten.
+- Ein Pivot-Hoch auf gleicher Höhe oder darunter ist das Zeichen, dass die Obergrenze nicht mehr trägt und eine zweite Stauzone beginnen kann.
+- Die klassischen Kanalinien aus drei fertigen Stufen zeichnen dieselbe Obergrenze erst, wenn der Trend schon weit gelaufen ist.
 
 ## Funktionsweise
 
@@ -32,6 +36,8 @@ aktualisiert: 2026-10-29
 ## Anwendung im Trading
 
 - Gängige Theorie im Aufwärtstrend: eine Rally bis zur Obergrenze des Kanals verkaufen.
+- Die Obergrenze wird während der Position mitgezogen und nicht als nachträgliche Linie für einen verspäteten Einstieg benutzt.
+- Bricht eine Stauzone an dieser Grenze nach oben, war das Anlaufen nur eine Pause, und die obere Linie wird neu aufgebaut.
 
 ## Regeln und Kriterien
 
@@ -40,6 +46,7 @@ aktualisiert: 2026-10-29
 
 ## Risiken und Grenzen
 
+- Fehlt das Pivot-Hoch nach dem Bruch ganz, kann die Obergrenze sich nicht ausbilden. Das ist oft der erste Hinweis auf fehlendes Momentum.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Breakout-Volumen
@@ -21,9 +21,25 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Ein Ausbruch aus einer Konsolidierungszone zusammen mit Volumen ist immer ein starkes Signal.
+- Eine weit gespreizte Aufwärtskerze mit niedrigem Volumen zur Eröffnung ist kein bestätigter Ausbruch; die Market Maker testen das Kaufinteresse und zeichnen den Preis zurück, wenn kaum Käufer da sind.
+- Springt der Preis auf eine Nachricht und bleibt das Volumen niedrig, ist die Bewegung nicht durch Volumen bestätigt.
+- Stauzonen sind dicht mit gefangenen Tradern besetzt. Jeder Wegbruch braucht Volumen, in der Regel viel davon.
+- Niedriges Volumen auf dem Bruch ist eine Falle der Insider und wird oft als Fake-out bezeichnet.
+- Der erste Schub durch die Decke muss von starkem und steigendem Volumen begleitet sein, deutlich über dem Durchschnitt.
+- Volumen weist aus, ob ein Ausbruch echt ist. Hohes Volumen plus Aufwärtslücke ist eine echte Aufwärtsbewegung.
+- Für einen normalen Bruch durch Widerstand genügt überdurchschnittliches, stetig steigendes Volumen. Explosiv muss es nicht sein.
+- Eine Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt. Ist die Bewegung dramatisch, wird ultrahohes Volumen erwartet.
+- Ein Bruch aus einer langen Stauzone ist gültig, wenn das Volumen ihn trägt. Der Aufwand muss nach einer ausgedehnten Ursache erheblich sein.
+- Für einen normalen Widerstandbruch genügt überdurchschnittliches, stetig steigendes Volumen. Explosiv muss es nicht sein.
+- Eine Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt, bei dramatischer Bewegung ultrahohes Volumen.
+- Eine weite Aufwärtskerze auf niedrigem bis durchschnittlichem Volumen, deren Spanne einer früheren Kerze mit deutlich höherem Volumen gleicht, ist keine echte Bruchbewegung.
+- Eine Power-Box im Equivolume-Chart ist hohes Volumen und weiter Preis und entspricht am Ausbruch aus der Stauung überdurchschnittlichem Volumen mit weiter Kerze.
 
 ## Funktionsweise
 
+- In der Stauzone wird Volumen zweifach gelesen: einmal, ob die Seitwärtsphase eine Klimax und damit eine große Umkehr ist, und einmal, was Volumen und Preis nach dem Bruch über die Reichweite des Trends sagen.
+- Beides wird auf langsameren Zeitebenen und an vorausliegenden Unterstützungs- und Widerstandszonen geprüft, die einen längeren Trend pausieren lassen können.
 
 ## Voraussetzungen
 
@@ -61,12 +77,26 @@ aktualisiert: 2026-10-29
 - Gap, Elongation, ordentliches Volumen und ein Close nahe dem Tief sprechen für die Fortsetzung eines Abwärtsausbruchs.
 - Der genannte Rahmen für durchschnittliches Volumen liegt bei 1,6 Milliarden Aktien unten und 2 Milliarden oben; 1,8 Milliarden an diesem Tag galt als ordentlich.
 - Ohne beträchtliches Volumen weg vom Mean, dem Bauch der b-Formation, werden diese Preise wahrscheinlich wieder besucht.
+- Fehlt dieses Volumen auf den nächsten Bars, ist die Bewegung eine Falle oder es fehlt das Interesse der Teilnehmer.
+- Der Test der Decke nach einem gültigen Aufwärtsbruch läuft auf niedrigem oder fallendem Volumen. Der Test des Bodens nach einem Abwärtsbruch ebenfalls.
+- Fallende Märkte sollen auf dem Weg nach unten steigendes Volumen zeigen, nicht abnehmendes.
 
 ## Risiken und Grenzen
 
+- Eine Aufwärtslücke auf niedrigem Volumen ist schwach. Liegt davor Widerstand aus einem früheren Fehlversuch, ist besonders Vorsicht geboten.
+- Nach einer solchen schwachen Lücke können die folgenden Volumen deutlich unter dem Durchschnitt liegen.
+- Ultrahohes Volumen ohne passende Preisreaktion ist kein gesunder Fortsetzungsbruch, sondern ein Schwächesignal.
+- Extreme Volumen in einer Richtung können die Skala verzerren, sodass späteres Volumen kleiner wirkt, als es gegen den Durchschnitt ist.
 
 ## Beispiele
 
+- Bei Duke Energy war die Aufwärtslücke nach der Bullish-Engulfing-Kerze von niedrigem Volumen begleitet und lag wieder auf dem Ausgangspreis.
+- Der bestätigte Honeywell-Ausbruch lief mit hohem Volumen und höherer Eröffnungslücke. Drei Monate später stand der Kurs bei 76,08 Dollar.
+- Der erste Ausbruch von Duke Energy aus der Stauung lief auf hohem Volumen und war zusätzlich eine Aufwärtslücke. Die Insider stiegen mit ein.
+- Im GBP/USD auf 15 Minuten bestätigte das Volumen den Bruch, und es zog erneut an, als der Kurs die Stauzone verließ. Damit war auch die Nachricht bestätigt.
+- Der spätere Stunden-Ausbruch lief auf überdurchschnittlichem Volumen, wie es erwartet wird.
+- Im ES war die Spanne der Fallen-Kerze ähnlich wie die Aufwärtskerze vom Vorabend, das Volumen aber wesentlich niedriger. Am dritten Tag lag das Volumen der Aufwärtslücke hoch und klar über dem Vortag.
+- Im Kaffee-Future zeigte der neunte Balken ultrahohes Volumen ohne passende Reaktion, bevor der Markt rollte und auf hohem Volumen verkaufte.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/06 - Volumenanalyse/06 - Volumenanalyse|06 - Volumenanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Basisgrößen"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Volumenspitze
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Im Selling Climax fluten Käufer mit hohem oder ultra-hohem Volumen herein, während die Insider in diese Nachfrage verkaufen.
+- Im Buying Climax ist das Volumen hoch, weil die Insider in großem Umfang kaufen und den Preis damit gegen sich anheben.
+- Ultra-hohe Volumen zeigen deutlicher als alles andere, dass der Markt eine Trendumkehr vorbereitet.
 
 ## Funktionsweise
 
@@ -35,6 +36,8 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Die natürliche Distributionsphase hat Volumen deutlich über dem Durchschnitt, aber nicht exzessiv. Die Spitze kommt erst, wenn die Insider den Preis erzwingen müssen.
+- Die Spitze wiederholt sich zwei- oder dreimal mit Schluss nahe der Eröffnung, bevor der Markt die Zone verlässt.
 
 ## Risiken und Grenzen
 

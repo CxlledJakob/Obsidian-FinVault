@@ -22,6 +22,19 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Ganzhirniges Handeln braucht Zeit, Geduld und Erfahrung.
+- Der Markt ist wie ein Supertanker: er dreht nicht auf der Stelle und läuft fast immer über die Kerze oder das Muster hinaus, das eine mögliche Umkehr oder Anomalie anzeigt.
+- Ein Signal ist nur eine Warnung vor einer bevorstehenden Änderung, und die Umkehr kommt nicht sofort aus einem Signal auf einer Kerze.
+- Nicht alle Verkäufer oder Käufer werden innerhalb einer Kerze aufgesogen; das Hin und Her erzeugt nach einem ausgedehnten Trend seitliche Stauzonen.
+- Der Markt ist wie ein Schwamm: der erste Durchgang nimmt das meiste auf, der zweite schließt die Arbeit ab.
+- Die Auswertung ist subjektiv, lässt sich nicht automatisieren, und Coulling hat nach dem Kurs sechs Monate Charts studiert, bevor sie schnell ging.
+- Wer beim ersten Signal einsteigt, ist oft zu früh und wird ausgestoppt; der Markt dreht erst, wenn Kauf oder Verkauf absorbiert ist.
+- Auf dem Tageschart kann dieses Aufsaugen Tage, Wochen oder Monate dauern, und mehrere Umkehrsignale sagen, dass gedreht wird, aber nicht wann.
+- Je länger die Konsolidierung, desto ausgedehnter die folgende Umkehr.
+- Über wenige Kerzen ist nur ein kleiner Rücksetzer wahrscheinlich; wiederholt sich das Bild im ganzen Chart, ist die Ursache größer, und es ist zu warten.
+- Läuft eine Änderung vom 5-Minuten-Chart in den 15- und dann den 30-Minuten-Chart, hat der Move länger gebraucht und läuft voraussichtlich weiter.
+- Große Volumen lassen sich nicht in einer Session verkaufen oder kaufen, ohne den Preis gegen die Insider zu bewegen. Der Climax braucht deshalb zwei, drei oder vier Sessions.
+- Man wartet, bis der Climax abgeschlossen ist, weil es Zeit braucht, große Volumen schnell zu bewegen.
+- Der Markt dreht nicht auf einen Punkt. Er pausiert, steigt, pausiert erneut und fällt dann.
 
 ## Funktionsweise
 
@@ -38,6 +51,8 @@ aktualisiert: 2026-10-30
 - Beim Open-Auction innerhalb der Range wird gewartet, bis Extreme und Value Area stehen, und dann an den Extremen der Value Area gehandelt. Ein Nontrend-Tag ohne Gelegenheit wird ausgelassen.
 - Wer den Verkauf am Bracket-Hoch oder den Kauf am Bracket-Tief verpasst, steigt nicht aus Angst nach, die Gelegenheit komme nicht wieder.
 - Öffnet der Markt innerhalb der Balance zur Range des Vortags, sind die Gelegenheiten meist begrenzt, und es ist besser, auf eine bessere Trade Location zu warten.
+- Der erste Shooting Star ist nur das Signal, aufmerksam zu werden und die folgenden Kerzen auf Bestätigung zu prüfen, nicht der Einstieg.
+- Die Prüfung der höheren und tieferen Zeitebenen dauert Minuten oder Sekunden, während die nächste Kerze entsteht.
 
 ## Regeln und Kriterien
 
@@ -61,6 +76,7 @@ aktualisiert: 2026-10-30
 - Mit dem Long darf etwas später eingestiegen werden. Die zusätzliche Information senkt das Risiko, groß falsch zu liegen.
 - Je näher die Eröffnung an der Mitte der Vortagesrange liegt, desto geringer ist der Anlass, früh zu handeln.
 - Je näher die Eröffnung an den Extremen des Vortags liegt, desto eher kann ein früher Einstieg nützen.
+- Solange die Richtung eines einzelnen Signals unklar ist, wird nicht aus Ungeduld in den Trade gesprungen.
 
 ## Risiken und Grenzen
 

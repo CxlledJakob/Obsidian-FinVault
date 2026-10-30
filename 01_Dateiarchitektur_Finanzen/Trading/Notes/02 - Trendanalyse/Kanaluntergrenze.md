@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Kanaluntergrenze
@@ -18,13 +18,20 @@ aktualisiert: 2026-10-29
 
 ## Kurzdefinition
 
+- Die Untergrenze des dynamischen Kanals ist die Folge der höheren Pivot-Tiefs. Das dritte Pivot-Tief definiert die untere Region.
 
 ## Kernaussagen
 
 - Die Untergrenze ist die untere Seite der Trendlinie. Der Abstand zur Obergrenze beträgt im gezeigten Verlauf etwa 5 Prozent und bei steigender Volatilität nicht selten 8 bis 10 Prozent.
+- Jeder Rücksetzer zur Untergrenze soll im intakten Anstieg klein bleiben und auf niedrigem Volumen kommen.
+- Liegt das neue Pivot-Tief höher als das vorherige, bleibt die Untergrenze steigend und die Position bestehen.
+- Ein Pivot-Tief auf ähnlicher Höhe wie das vorherige, nach einem nicht mehr höheren Pivot-Hoch, bedeutet eine zweite Stauzone.
 
 ## Funktionsweise
 
+- Im Abwärtstrend wird die entsprechende untere Begrenzung zuerst vom ersten Pivot-Tief gesetzt und danach von den folgenden tieferen Tiefs.
+- Die Untergrenze entsteht während der Bewegung. Eine erst hinterher gezogene Linie zeigt dasselbe Endergebnis, lässt den Einstieg aber am Ende des Trends statt am Anfang.
+- Fehlen diese Tiefs, während der Preis nur mit durchschnittlichem oder schwächerem Volumen steigt, entwickelt sich der Kanal nicht.
 
 ## Voraussetzungen
 

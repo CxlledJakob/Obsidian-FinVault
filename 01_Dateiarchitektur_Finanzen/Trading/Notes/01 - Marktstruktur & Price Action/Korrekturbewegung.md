@@ -25,15 +25,40 @@ aktualisiert: 2026-10-30
 - Korrektur ist Gegenaktion. Nach einer Aufwärtsauktion muss der Preis dafür nicht fallen.
 - Alte Käufer nehmen Gewinne mit, während neue Initiative-Käufer Positionen eröffnen. Ist dieses Kaufen stark genug, bleiben Preis, Value und Schluss höher.
 - Ein höherer Open mit Abverkauf über den Tag kann höheren Preis, höhere Value und einen höheren Schluss hinterlassen und trotzdem Korrektur sein.
+- Eine Anomalie über wenige Kerzen ist oft nur ein kleiner Rücksetzer: die Ursache ist schwach, also ist die Wirkung schwach.
+- Auch eine kleine Änderung im längeren Trend kann ein Trade mit geringem Risiko sein, der nur kurze Zeit offen bleibt.
+- Im Anstieg aus der Akkumulation gibt es kleine Rücksetzer, aber nichts, das stark erschreckt, solange das bullische Momentum aufgebaut wird.
+- Ob die Stelle ein Rücksetzer auf halbem Weg oder der Vorbote eines Trendwechsels ist, zeigen der weitere Chart und das Gesetz von Ursache und Wirkung.
+- Auf dem Weg nach oben wird das Inventar in kleinen Rückläufern aufgefüllt, wenn Verkäufer Gewinne mitnehmen.
+- Der Markt dreht nicht sofort. Er pausiert, reflektiert, steigt, pausiert erneut und fällt dann.
+- Ein Shooting Star mit unterdurchschnittlichem Volumen im Aufwärtstrend ist ein möglicher kurzfristiger Rücksetzer.
+- Märkte steigen in Schritten und fallen in Schritten, nie in einer geraden Linie. Positionen müssen diese kleinen Rücksetzer überstehen.
+- Ein Preiswasserfall pausiert immer, zieht höher und fällt dann weiter. Der erste Anstieg ist oft ein Short Squeeze und nicht die Umkehr.
+- Ein Hammer im Abwärtstrend mit niedrigem Volumen ist kein Grund, eine Short-Position zu schließen, weil die Insider dort nicht kaufen.
+- Nach einem gültigen Aufwärtsbruch ist der Rücklauf zum Test der Decke auf niedrigem oder fallendem Volumen normal und nicht das Ende.
+- Nach einem Abwärtsbruch ist der Rücklauf zum Boden auf niedrigem Volumen derselbe normale Test.
+- Im Aufbau des dynamischen Trends sollen die Rücksetzer von den Pivot-Hochs klein bleiben und auf niedrigem Volumen laufen.
+- Märkte laufen nicht geradeaus. Sie fallen, ziehen zurück und fallen wieder, oder sie steigen und setzen gegen die Position zurück.
+- Fällt das Volumen auf der Gegenbewegung, ist es ein vorübergehender Rücksetzer und kein Trendwechsel.
+- Fehlt vor dem Rücksetzer Stopping-Volumen, sind die Käufer auf diesem Niveau nicht im Markt, und die Umkehr hält nicht lange.
+- Im Aufwärtstrend gilt dasselbe: fallendes Volumen auf den Rücksetzern und fehlendes Topping-Out-Volumen bedeuten eine kleine Gegenbewegung.
+- Kleine Rücksetzer in einem Anstieg sind Gewinnmitnahmen, wenn die Abwärtskerzen fallendes Volumen haben und die Käufer am Steuer bleiben.
+- Eine Welle nach unten, die von einer Welle höheren Volumens ausgeglichen wird, ist der normale Weg eines Anstiegs und kein Wechsel.
+- Zieht ein neuer Abwärtstrend bei fallendem Volumen zurück, ist das keine Beendigung des Abverkaufs.
+- Eine Position gegen den dominanten Trend der langsameren Zeitebene handelt einen Rücksetzer oder eine Umkehr und wird voraussichtlich nicht lange gehalten. Auf dem Tageschart kann so eine Gegenbewegung mehrere Tage dauern.
 
 ## Funktionsweise
 
+- Märkte laufen nie als Gerade. Das erste Pivot nach dem Bruch ist das erste Zeichen eines Rücklaufs und kann zugleich die äußere Region des neuen Trends markieren.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Ist der übergeordnete Trend aufwärts und die Position auf der schnelleren Zeitebene short, ist das eine kurze Position gegen den dominanten Trend und damit eher ein begrenzter Rücksetzer als eine große Wende.
+- Volumen-Preis-Analyse hilft, in der Position zu bleiben, weil sie Pause und echte Wende unterscheidet. Ohne Volumen fehlt diese Unterscheidung.
+- Die Volume-Price-Analyse wird in der offenen Position weitergeführt, damit ein Rücksetzer nicht mit einem Trendwechsel verwechselt wird.
 
 ## Regeln und Kriterien
 
@@ -49,6 +74,14 @@ aktualisiert: 2026-10-30
 - Entsteht während der Korrektur einer Aufwärtsauktion höhere Value, sind die zugrunde liegenden Bedingungen sehr stark.
 - Die naheliegenden Zeichen wie tiefere Preise fehlen oft. Für eine Korrektur muss der Preis nicht nach unten brechen.
 - Überwiegt der Einfluss des responsiven Verkäufers den des Initiative-Käufers, kann die Aufwärtsauktion vorbei sein.
+- Ob der Rücksetzer nur eine Pause oder der Beginn längerer Schwäche ist, zeigen die folgenden Kerzen, das Volumen und die Lage zur letzten Konsolidierung.
+- Im Abwärtstrend erscheinen Shooting Stars auch an kleineren Gegenläufen tiefer im Trend. Überdurchschnittliches Volumen heißt dann, dass der Buying Climax noch nicht erreicht ist.
+- Folgt auf diesen Hammer ein Shooting Star mit durchschnittlichem bis hohem Volumen, ist die Schwäche im Abwärtstrend bestätigt und der Rücksetzer nur eine Pause.
+- Ein Hammer mit hohem oder ultra-hohem Volumen ist dagegen die frühe Warnung, dass der Rücksetzer zur Umkehr werden kann.
+- Steigt das Volumen im Preiswasserfall, spricht das für weitere Schwäche. Ein einzelner Hammer reicht dann nicht, um den Rücksetzer als Ende zu lesen.
+- Eine zweite Stauzone mit Bruch nach oben ist nur eine Pause. Die Position bleibt, und die dynamischen Linien werden neu gebaut.
+- Ein Bruch dieser Zone nach unten ist keine Korrektur mehr, sondern die Umkehr, und die Position wird geschlossen.
+- Ein Trade gegen den dominanten Trend ist eine kurze Gegenbewegung. Er wird nur für kurze Zeit gehalten.
 
 ## Risiken und Grenzen
 
@@ -56,6 +89,11 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Vier Kerzen nach der zweiten Shooting Star im AUD/USD kam eine weite Abwärtskerze. Der Rücksetzer begann mit einer relativ engen Kerze und überdurchschnittlichem Volumen, und der steigende Versuch lief danach auf fallendem Volumen.
+- Jeder weitere Rallyversuch in diesem Abverkauf zeigte fallendes Volumen und bestätigte die Schwäche, bis schließlich Stopping-Volumen erschien.
+- Im YM waren die zwei Abwärtskerzen nach der Aufwärtslücke frühe Gewinnmitnahmen. Der untere Docht der zweiten Kerze zeigte, dass die Käufer die Kontrolle behielten.
+- Im GBP/USD auf der Stunde zog der Markt nach dem Bruch nach oben zurück, das Volumen fiel, und ein zweiter Hanging Man zeigte weitere Schwäche. Der Abverkauf selbst trug nur sieben Stunden.
+- Die Erholung im Kaffee-Future lief mit steigenden Preisen und fallenden Volumen und bestätigte die Schwäche.
 
 ## Unterschiedliche Quellenpositionen
 

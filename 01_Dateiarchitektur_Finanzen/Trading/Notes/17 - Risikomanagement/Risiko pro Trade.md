@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Verlustrisiko"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Risiko pro Trade
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Es gibt zwei Risiken: das finanzielle Risiko der Position lässt sich mit einfachen Regeln wie der 1-Prozent-Regel beziffern und steuern.
+- Das zweite ist das Risiko des Trades selbst und ist schwerer zu beziffern; die Volume Price Analysis dient dazu, es aus Preis und Volumen zu quantifizieren.
+- Eine vom Volumen bestätigte Bewegung ohne Dochte ist eine Gelegenheit mit geringem Risiko, weil die Analyse nur auf Preis und Volumen steht.
+- Auch ein kleiner Rücksetzer im längeren Trend kann ein Trade mit geringem Risiko sein, der nur kurze Zeit offen bleibt.
 
 ## Funktionsweise
 

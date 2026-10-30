@@ -21,9 +21,26 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- In der Distributionsphase nach Dow stürmen Anleger in den Markt, aus Angst, eine goldene Gelegenheit zu verpassen, während das Smart Money an die Öffentlichkeit verkauft.
+- In der Distributionsphase ist der Hebel die Angst, einen guten Trade zu verpassen, und deshalb kaufen die meisten an der Spitze und verkaufen am Boden.
+- Sie haben den langsamen, dann schnellen Anstieg gesehen und steigen aus Angst vor entgangenen schnellen Gewinnen genau dort ein, wo die Insider pausieren und drehen wollen.
+- Eine Gelegenheit zu verpassen ist die klassische Angst: der Trader wartet und springt erst, wenn der Markt dreht und er aussteigen sollte.
+- Darauf setzen Insider, Specialists, Market Maker und große Operatoren, weil sie beide Marktseiten sehen.
+- Nahe der Distribution geben zurückhaltende Käufer der Angst nach, den nächsten Aufwärtsschub zu verpassen, und steigen ein.
+- Im Selling Climax ist das der letzte Aufwand der Insider: wer lange gewartet hat, kauft schließlich aus dieser Angst.
+- Das geschieht zwei- oder dreimal auf hohem Volumen, während der Markt wieder am Eröffnungskurs schließt.
+- Im reifenden Aufwärtstrend steigen Trader und Investoren aus Gier und aus Angst ein, leichte Gewinne zu verpassen.
+- Die Volumen sind dann hoch und steigend, und die Insider verkaufen in genau diese Nachfrage.
+- An der Decke der ersten Welle einer Stauzone verbindet sich Gier mit der Angst, eine gute Gelegenheit zu verpassen. Diese Käufer haben lange zugesehen und steigen am Hoch ein.
+- Wer einen langen Aufwärtstrend verpasst hat, kauft aus Angst, eine goldene Gelegenheit zu verpassen, genau dann, wenn die Market Maker den Markt verlassen.
+- Zu diesem Zeitpunkt werden die Preise ohne Volumen höher geschoben, und die Nachzügler steigen ein, während die Market Maker durch die Seitentür gehen.
+- Zur Eröffnung nutzen Insider die Angst, eine Bewegung nach oben oder unten zu verpassen. Händler springen emotional hinein, und danach setzt der Verkauf ein.
+- Dieser Moment, in dem auf die Eröffnung gewartet wird, ist der leichteste Zeitpunkt für eine solche Falle.
 
 ## Funktionsweise
 
+- Die Insider ziehen zusätzliche Nachfrage an, indem sie die Preise hin- und hersägen, während ängstliche Käufer eine goldene Gelegenheit zu verpassen glauben.
+- Das vermeintlich nächste Bein nach oben läuft in die Gegenrichtung, und diese Käufer bleiben auf dem Niveau gefangen.
 
 ## Voraussetzungen
 
@@ -42,6 +59,8 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Im AUD/USD-Wochenchart sprangen Händler in den Anstieg, nachdem sie ihn lange hatten steigen sehen, just als zwei weite Kerzen fast kein Volumen mehr zeigten.
+- Im ES war die Falle nach oben in der Nacht vorbereitet und erschien zur Session-Eröffnung als weite Aufwärtskerze auf niedrigem bis durchschnittlichem Volumen.
 
 ## Unterschiedliche Quellenpositionen
 

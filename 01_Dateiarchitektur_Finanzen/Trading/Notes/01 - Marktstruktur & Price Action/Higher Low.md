@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-29
+aktualisiert: 2026-10-30
 ---
 
 # Higher Low
@@ -21,9 +21,25 @@ aktualisiert: 2026-10-29
 
 ## Kernaussagen
 
+- Die höhere Tiefs der Aufwärtsbewegung entstehen in den Pausen und kleinen Rückläufern, in denen Gewinnmitnahmen das Inventar der Insider wieder auffüllen.
+- Der Anstieg ist damit keine Gerade, sondern eine Treppe aus höheren Tiefs, die Käufer schrittweise zurückholt.
+- Das Pivot-Hoch verlangt auf der mittleren Kerze nicht nur ein höheres Hoch, sondern auch ein höheres Tief als auf den Nachbarkerzen.
+- Dieses höhere Tief allein macht aus dem Muster noch keine Konsolidierung. Es gehört zur Definition des möglichen kurzfristigen Wendepunkts.
+- Die Käufer an den Böden der Stauwellen haben auf dem Rücksetzer gekauft und sehen ihr Tief nicht im Verlust. Sie halten auf höhere Preise.
+- Das zweite Pivot-Tief muss höher liegen als das vorherige, sonst wird die Aufwärtsposition nicht weiter als intakt behandelt.
+- Das dritte höhere Pivot-Tief definiert die untere Region des dynamischen Trends.
+- Der Rücksetzer zu diesem Pivot-Tief soll in einem gesunden Anstieg klein sein und auf niedrigem Volumen laufen.
+- Im aufsteigenden Dreieck steigt das Tief jeder Kerze langsam, während dieselbe Decke getestet wird. Fallende Tiefs wären das bärische Bild.
+- Steigende Tiefs zeigen positive Stimmung.
+- Ein Pennant verbindet höhere Tiefs unten mit tieferen Hochs oben.
 
 ## Funktionsweise
 
+- Nahe der Distribution werden diese Pausen kürzer und der Anstieg schneller, weil die Angst, den Move zu verpassen, die letzten Käufer hineinzieht.
+- Die oszillierende Bewegung zwischen diesen Tiefs und den Hochs erzeugt den Boden der Unterstützung und die Decke des Widerstands.
+- Nach dem ersten Pivot-Hoch fällt das Volumen im Rücklauf. Das ist ein gutes Zeichen, bis das höhere Pivot-Tief den zweiten Marker setzt.
+- Liegt ein folgendes Pivot-Tief auf ähnlichem Niveau wie das vorherige, ist zusammen mit einem nicht mehr höheren Pivot-Hoch eine zweite Stauzone im Gang.
+- Man muss auf diese höheren Tiefs nicht warten, um einzusteigen. Sie bestätigen den Trend, nachdem die Position schon läuft.
 
 ## Voraussetzungen
 
@@ -41,6 +57,8 @@ aktualisiert: 2026-10-29
 
 ## Beispiele
 
+- Auf dem Tageschart des EUR/USD stiegen die Tiefs im aufsteigenden Dreieck bis zum volumensbestätigten Bruch der Decke.
+- Auf dem Monatschart von Microsoft zog sich die Preisaktion im Pennant vor dem endgültigen Bruch zusammen, mit höheren Tiefs und tieferen Hochs.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -21,12 +21,37 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Ein Gap-up oder Gap-down war früher oft ein starkes Ausbruchssignal, besonders mit Volumenbestätigung.
+- Solche Gaps sind heute selten und weitgehend auf Aktienmärkte beschränkt, die am nächsten Tag zum elektronischen Handel aufschließen.
+- Ein Ausbruch aus einer Konsolidierung zusammen mit Volumen ist immer ein starkes Signal.
+- Nach bestandenem Test mit niedrigem Volumen nehmen die Insider den Markt höher; der Test ist ihre Ansage, dass der Ausbruch nach oben kommt.
+- Scheitert der Test mit hohem Volumen, geht der Markt zurück in die Kongestion, und der Ausbruch wird erst nach einem weiteren Test neu angesetzt.
+- Der Ausbruch aus der Akkumulation läuft zunächst stetig und mit durchschnittlichem Volumen, ohne Eile, weil der Großteil der Distribution erst an der Spitze zu den höchsten Preisen stattfindet.
+- Sobald der Preis die Stauzonen von Akkumulation oder Distribution verlässt, ist die nächste Phase der Kampagne im Gang.
+- Nach einem gescheiterten Test kehrt der Markt in die Stauzone zurück, spült den Gegendruck aus und bereitet einen neuen Ausbruch mit erneutem Test vor.
+- Je länger ein Markt auf einem bestimmten Niveau seitwärts läuft, desto wahrscheinlicher werden Ausbruch und Umkehr.
+- Der Bruch aus der Stauzone ist der Auslöser, entweder die Fortsetzung des laufenden Trends zu bestätigen oder eine Umkehr zu signalisieren.
+- Ein gültiger Bruch braucht klaren Abstand über der Decke, einen eindeutig definierten Schluss darüber und starkes, steigendes Volumen.
+- Ein paar Ticks über oder unter der Linie sind kein Ausbruch. Die Linien sind elastisch.
+- Ein Ausbruch aus einer langen Stauzone nach oben auf einer Kurslücke ist ein starkes Signal und wird mit Volume Price Analysis bestätigt.
+- Ein Ausbruch auf hohem Volumen zusammen mit einer höheren Eröffnungslücke ist keine Falle nach oben, sondern eine echte Bewegung, weil das Volumen sie ausweist.
+- Sieht man unter dem Ausbruch ein starkes Volumenfundament, steigt das Vertrauen, die Position zu nehmen und zu halten. Bei einem schwachen Fundament wartet man auf weitere Signale.
+- Nach einer langen Stauzone wird auf einen klaren Schluss deutlich außerhalb der Zone gewartet. Die erste weite Kerze kann diesen Schluss liefern, und das Volumen muss den Bruch bestätigen.
+- Eine ausgedehnte Stauung braucht für den Wegbruch erheblichen Aufwand. Die Käufer müssen den Markt klar anheben.
+- Die Richtung ist gleichgültig, gebrochen werden kann die Decke oder der Boden.
+- Gehandelt wird der mit Volumen bestätigte Bruch.
+- Eine Stauzone kann den laufenden Trend fortsetzen oder in eine Umkehr übergehen. Eine Kerze, die sofort auf gutem Volumen davonläuft, war nur eine Pause und keine ausgebildete Stauung.
+- Je länger die Ursache in der Stauung aufgebaut wurde, desto länger soll der folgende Trend dauern.
+- Beim Pennant gibt es vor dem Bruch meist keinen Hinweis auf die Richtung. Für einen Trendtrade wird auf den Ausbruch gewartet.
+- Je länger die Spannung im Pennant anhält, desto stärker ist die Entladung.
 
 ## Funktionsweise
 
 
 ## Voraussetzungen
 
+- Ein Ausbruch aus der Akkumulation wird erst dann als tragfähig gelesen, wenn ein erfolgreicher Test auf niedrigem Volumen gezeigt hat, dass der Verkauf absorbiert ist.
+- Ein neuer Trend, der gerade so begonnen hat, wird kaum sofort wieder umgekehrt, besonders wenn diesem Test ein erfolgreicher Check gefolgt ist.
 
 ## Anwendung im Trading
 
@@ -37,6 +62,12 @@ aktualisiert: 2026-10-30
 - Frühe hohe Überzeugung lässt ein gestrecktes Profil erwarten; bleibt es aus, ist auszusteigen, auch wenn der Preis weiter läuft.
 - Beim Open-Drive und beim Open-Test-Drive wiegt der frühe Einstieg schwerer als die perfekte Trade Location. Wer den Rücksetzer abwartet, verpasst den Bruch oft.
 - Ein laufendes Profil ab der Periode des Bruchs, getrennt von den früheren Perioden, überwacht den Übergang.
+- Liegt die Kerze in einer Preiszone, in der der Markt früher bereits drehte, liefert das zusätzlich einen Hinweis auf die mögliche Tiefe der Bewegung nach dem Ausbruch.
+- Drei Folgen sind klar: eine bestehende Position in Ausbruchsrichtung wird gehalten, ohne Position ist der bestätigte Bruch der Einstieg, eine Umkehr gegen die Position ist der Ausstieg.
+- Viele Trader handeln nur Ausbrüche. Die Zone wird mit Pivots definiert, die Preisaktion mit Volumen-Preis-Analyse gelesen, und die Position kommt, wenn das Volumen den Bruch bestätigt.
+- Nach dem Bruch werden die alten Zonen zu zukünftigen Plattformen und zu Zielen für das Management des Ausstiegs.
+- Ist der bestätigte Bruch da, kann mitgegangen werden. Darunter liegt dann ein tiefes natürliches Schutzpolster, und der Stop sitzt unter dem letzten Pivot-Tief.
+- Volumen kann die Nachricht bestätigen. Reagiert der Markt mit hohem Volumen, haben die Market Maker die Meldung als gute Nachricht bestätigt.
 
 ## Regeln und Kriterien
 
@@ -119,6 +150,13 @@ aktualisiert: 2026-10-30
 - Je größer die Gap, desto kleiner ist die Chance, dass sie noch am selben Handelstag geschlossen wird.
 - Je größer die Gap, desto wahrscheinlicher liegen längere Timeframes falsch.
 - Längerfristige Händler liegen falsch und müssen in Richtung der Gap handeln, um ihr bestehendes Inventar anzupassen.
+- Wie viel klarer Abstand nötig ist, hat keine feste Regel und hängt von Urteil, Erfahrung und dem Preisverhalten des Instruments ab. Sichtbar muss eine Lücke im Schlusskurs der Kerze sein, die die Decke bricht.
+- Das Volumen der ersten Bewegung durch die Decke muss stark und steigend sein. Auf einem gültigen Bruch liegt es deutlich über dem Durchschnitt und steigt weiter.
+- Ein Rücksetzer zum Test der Decke auf niedrigem oder fallendem Volumen ist danach normal. Abwärts gilt dasselbe durch den Boden, mit niedrigem Volumen auf dem Test und steigendem Volumen im Fall.
+- Ein normaler Bruch durch ein Widerstandsgebiet braucht gutes, steigendes Volumen. Stetig und überdurchschnittlich genügt und ist oft besser als explosives Volumen.
+- Ein Bruch mit Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt, bei einer dramatischen Bewegung ultrahohes Volumen.
+- Ein normaler Bruch durch Widerstand braucht gutes steigendes Volumen, stetig und überdurchschnittlich, nicht explosiv. Eine Aufwärtslücke verlangt Volumen deutlich über dem Durchschnitt, bei dramatischer Bewegung ultrahohes Volumen.
+- Im Equivolume-Chart ist die erwartete Ausbruchsform eine Power-Box, also hohes Volumen und weiter Preis.
 
 ## Risiken und Grenzen
 
@@ -126,9 +164,21 @@ aktualisiert: 2026-10-30
 - Wer einen langfristigen Bruch aus der Balance nicht erkennt, riskiert große Verluste und verpasste Gelegenheiten.
 - Ein blindes Mitgehen der Gap führt in vielen Fällen schließlich zum Erfolg. Ohne Blick auf die frühe Aktivität kann ein zu früher Einstieg unnötiges Exposure erzeugen.
 - Je weiter die Gap von der Range des Vortags entfernt ist, desto eher ist der Markt überdehnt. Dann wird die Aktivität kurz nach der Eröffnung beobachtet, bevor der Trade gelegt wird.
+- Ein Ausbruch aus einer solchen Preiszone auf niedrigem Volumen ist eine klassische Falle, oft Fake-out genannt. Nur das sichtbare Volumen zeigt sie.
+- Sieht man den Aufwand in den nächsten Bars nicht, ist es entweder eine Falle nach oben oder mangelndes Interesse, den Markt jetzt höher zu nehmen.
+- Eine Aufwärtslücke auf niedrigem Volumen vor einem früheren Widerstand, an dem der Kurs schon gescheitert ist, ist doppelt verdächtig und kann eine Falle der Insider sein.
 
 ## Beispiele
 
+- Procter & Gamble brach aus der mehrmonatigen unteren Stauzone mit einer Aufwärtslücke aus und stieg danach stark.
+- Bei Microsoft bestätigte das Volumenhistogramm der dreitägigen Stauung beim Ausbruch ein starkes Unterstützungsfundament.
+- Bei Honeywell kam der Ausbruch mit steigendem Volumen, weiten Aufwärtskerzen, hohem Volumen und einer Aufwärtslücke.
+- Duke Energy lieferte nach einer Stauzone eine weitere Aufwärtslücke und einen Ausbruch auf hohem Volumen.
+- GBP/USD auf 15 Minuten brach nach etwa 70 Kerzen Stau mit einer weiten Aufwärtskerze klar durch die Decke. Das Volumen bestätigte, und es zog an, als der Markt sich entfernte.
+- Auslöser war eine britische Datenveröffentlichung. Der genaue Bericht ist für die Beurteilung nebensächlich.
+- Auf dem Stundenchart brach der GBP/USD später mit überdurchschnittlichem Volumen aus der nächsten Stauzone.
+- Ein Hanging Man mit deutlich überdurchschnittlichem Volumen brach den Boden mit einer weiten Abwärtskerze. Diese Stauung wurde zur Umkehr, nicht zur Fortsetzung.
+- Der ES eröffnete am dritten Tag mit einer Aufwärtslücke auf hohem Volumen. Das war ein echter Bruch, im Gegensatz zur Falle vom Vortag auf niedrigem bis durchschnittlichem Volumen.
 
 ## Unterschiedliche Quellenpositionen
 

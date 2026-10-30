@@ -43,10 +43,29 @@ aktualisiert: 2026-10-30
 - Two-Timeframe-Handel, in dem der Preis ohne klare Richtung rotiert, entspricht einem Day-Timeframe-Bracket.
 - Überlappende Value, Failed Auctions, Breakouts und die Outside Days wiederholen sich und bilden das Rückgrat eines Bracket-Marktes.
 - Der Handel im Bracket ist deutlich schwieriger als im Trend.
+- Ein Markt kann nur aufwärts, abwärts oder seitwärts laufen. Seitwärts verbringt er deutlich mehr Zeit, grob 70 Prozent, im Trend nur etwa 30 Prozent.
+- Drei Gründe dominieren: eine anstehende Nachricht, das Füllen oder Leeren der Lager im Climax und alte Preiszonen, in denen gefangene Händler mit kleinem Verlust aussteigen.
+- Die Bewegung prallt wie ein Ball zwischen Boden und Decke, bis sie irgendwann aus dieser Region ausbricht.
+- Der Seitwärtsmarkt ist die Phase, in der der nächste Trend vorbereitet wird. Er ist in diesem Sinn wichtiger als ein schon laufender Trend, weil der neue Trend früh gehandelt werden kann.
+- Viele Trader werden ungeduldig, wenn der Markt seitwärts läuft. Die Haltung dazu ist Geduld, bis der Bruch kommt.
+- Ob Pause oder Umkehr, der Markt sammelt Kraft, um die Region in die eine oder die andere Richtung zu verlassen.
+- Ein Markt, der auf starkem Volumen seitwärts bleibt, statt zu steigen, ist auf diesem Niveau schwach, und das Volumen ist wahrscheinlich Verkauf.
+- Seitwärtsbewegung mit fallendem Verkaufsvolumen ist kein bärischer Markt, weil ein echter Fall steigendes Volumen bräuchte.
+- Nach einem Hammer kann der Kurs auf dem Niveau pausieren und seitwärts in eine Stau- oder Akkumulationsphase gehen, bevor er ausbricht.
+- Volumen deutlich unter dem Durchschnitt zeigt den Seitwärtsmarkt schon an. Pivots helfen nur, Boden und Decke zu erkennen, und einer von beiden kann fehlen.
+- Nicht jede Pause ist ein Seitwärtsmarkt. Läuft die nächste Kerze auf gutem Volumen sofort weg, war es eine kleine Pause im Trend.
+- Märkte trenden ein Stück, laufen seitwärts und setzen dann fort oder drehen vollständig.
+- In der Seitwärtsphase kann das Volumen allgemein fallen und zwischen Kauf und Verkauf wechseln. Fallende Preise bei fallendem Volumen tragen keinen anhaltenden Trend.
 
 ## Funktionsweise
 
 - Der Preis läuft im Bracket gewöhnlich nicht geradlinig von einem Extrem zum anderen, sondern schwankt über die Mitte.
+- Vor dem Nonfarm Payroll ist die Spanne oft mehrere Stunden eng.
+- Im Selling Climax und im Buying Climax läuft der Markt seitwärts, während Lager geleert oder gefüllt werden.
+- An alten Preisen nutzen Spekulanten und Investoren die Rückkehr, um mit kleinem Verlust auszusteigen.
+- Der Eingang wird mit Pivots markiert. Weitere Pivots verstärken Decke und Boden, wenige Pivots bedeuten eine kurze Pause.
+- In der Zone wird das Volumen darauf gelesen, ob ein Buying Climax, ein Selling Climax oder nur eine Unterbrechung vorliegt.
+- Der Bruch auf hohem Volumen beendet den Seitwärtslauf. Niedriges Volumen beendet ihn nicht, sondern ist eine Falle.
 
 ## Voraussetzungen
 
@@ -92,6 +111,12 @@ aktualisiert: 2026-10-30
 - Brüche oder Rallys dieser Art definieren oft die Extreme der Brackets, die danach entstehen.
 - Das Ziel einer langfristigen Auktion kann vom Hoch oder Tief eines Fünf-Monats-Brackets zum gegenüberliegenden Extrem laufen.
 - Dieses Ziel kann Tage, Wochen oder Monate brauchen. Es muss nicht erreicht werden und bleibt immer der Maßstab.
+- Im Live-Markt wird der Seitwärtslauf erst hinterher offensichtlich. Pivot-Hoch und Pivot-Tief markieren den Eingang.
+- Läuft der Markt in einer solchen Zone nur kurz an und setzt dann in der ursprünglichen Trendrichtung fort, ist das ein eigenes Signal und wird mit Volumen geprüft.
+- Die Analyse von Linien und Volumen ist eine Kunst, keine Wissenschaft. Die Bänder haben Spiel.
+- Eine zweite Seitwärtsphase mitten im Trend entsteht, wenn ein Pivot-Hoch nicht mehr höher liegt und das folgende Pivot-Tief auf ähnlichem Niveau bleibt.
+- Der Bruch dieser zweiten Phase nach oben ist eine Fortsetzung, der Bruch nach unten eine Umkehr.
+- Dauer und Enge sind relativ. Dieselben Regeln gelten von Minuten bis zu Monaten, weil Ursache und Wirkung zusammengehören.
 
 ## Risiken und Grenzen
 
@@ -100,6 +125,14 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Honeywell lief auf dem höheren Niveau zwei Wochen seitwärts und rutschte dabei tiefer, während das Verkaufsvolumen fortlaufend fiel.
+- GLD driftete in der Session lange seitwärts. Mehrere Rallyversuche scheiterten, das Volumen fiel auf niedrige Niveaus, und der Schluss war sehr schwach.
+- SLV driftete einige Kerzen seitwärts, bevor zwei enge Abwärtskerzen mit hohem und extrem hohem Volumen erschienen.
+- Der AUD/USD ging auf dem Wochenchart auf durchschnittlichem Volumen seitwärts, bevor die erste Anomalie kam.
+- GBP/USD auf 15 Minuten lief etwa 70 Kerzen seitwärts, mit Pivots an Decke und Boden, die nicht auf einer Linie lagen.
+- Auf der Stunde lag das Volumen der Stauung unter der Durchschnittslinie. Der Boden entstand ohne Pivot-Tiefs, drei Kerzen stoppten auf demselben Preis.
+- Der Dow konsolidierte etwa vier bis fünf Monate, bevor er auf durchschnittlichem Volumen weiterstieg.
+- Im YM mündete der Anstieg auf der rechten Seite in eine Stauzone, zusammen mit allgemein fallendem Volumen.
 
 ## Unterschiedliche Quellenpositionen
 

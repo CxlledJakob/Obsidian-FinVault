@@ -26,6 +26,9 @@ aktualisiert: 2026-10-30
 - Long only und voll investiert ist ein Trendfolge-Ansatz und stützt sich nur auf den Preis.
 - Long-only-Investoren fühlen sich wohl, wenn Short Covering die Positionen treibt, und bauen nicht ab.
 - Nicht voll investierte Long-only-Manager halten sich oft für short, weil sie im Markt unterallokiert sind.
+- Die mittlere Dow-Stufe ist die technische Trendfolge, zwischen Akkumulation und Distribution.
+- Der Einstieg liegt auf dem volumenbestätigten Bruch aus der Stauzone, also am Beginn dieser Stufe, nicht nach drei fertigen Schwingungen.
+- Gehalten wird, solange das Volumen den Preis bestätigt und die Pivots höhere Hochs und höhere Tiefs bauen.
 
 ## Funktionsweise
 
@@ -39,6 +42,9 @@ aktualisiert: 2026-10-30
 - Bewertet wird das Risiko der Position. Überdurchschnittliches Risiko wird geschlossen, ein günstiges Chance-Risiko-Verhältnis eröffnet, danach die Fortsetzung geprüft.
 - Gängige Theorie im Aufwärtstrend: die Kanaluntergrenze kaufen und die Kanalobergrenze verkaufen. Ohne Absicherung kann aus dem Rücksetzer ein Abwärtsausbruch werden, der den Gewinn zurückgibt.
 - Trends verlangen eine weniger aktive Strategie.
+- Viele Trader handeln ausschließlich Ausbrüche und folgen damit dem neuen Trend, sobald das Volumen ihn bestätigt.
+- Ein Bruch einer zweiten Stauzone in Trendrichtung wird weiter gehalten. Ein Bruch gegen die Position beendet sie.
+- Gegen den dominanten Trend zu folgen ist zulässig, aber riskanter und nur für kurze Zeit.
 
 ## Regeln und Kriterien
 
@@ -54,12 +60,17 @@ aktualisiert: 2026-10-30
 - Ist das Short Covering abgeschlossen, bleibt weniger Kaufpotenzial, und der Markt kann schnell zum Mittel zurückkehren. Trendfolge-Positionen machen dann große Verluste.
 - Long Liquidation entzieht Verkaufspotenzial und legt oft eine Rally an, die deutlich über die Levels hinausgeht, die die Liquidation ausgelöst haben.
 - Trendfolgende Systeme brauchen anhaltende Preisbewegung. Im Bracket laufen sie oft gerade weit genug an, dann bleibt der Move stecken und der Markt dreht.
+- Wer drei höhere Hochs und höhere Tiefs abwartet, hat die Trendfolge-Stufe bereits durchquert und kauft am Start der Distribution.
+- Linien allein beantworten nicht, ob ein Trend beginnt, wie stark er ist und wie weit er läuft. Das beantwortet nur Unterstützung und Widerstand im Kontext der Volumen-Preis-Analyse.
 
 ## Beispiele
 
 
 ## Unterschiedliche Quellenpositionen
 
+- Der Satz, der Trend sei der Freund, wird als leere Formel abgelehnt, weil er meist an historischen Charts gezeigt wird. Wer dann einsteigt, steigt ein, während die Insider aussteigen.
+- Statische Trendlinien zeigen am Ende dasselbe Bild, bringen den Trader aber an das Ende der Bewegung statt an den Anfang.
+- In einem Bullenmarkt wird die Bullenseite gearbeitet, in einem Bärenmarkt die Bärenseite.
 
 ## Eigene Erkenntnisse
 

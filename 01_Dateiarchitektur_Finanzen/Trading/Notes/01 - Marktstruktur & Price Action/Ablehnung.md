@@ -28,10 +28,15 @@ aktualisiert: 2026-10-30
 - Am oberen Ende des Profils ist der Preis zu hoch gelaufen und das Kaufen trocknet aus. Am unteren Ende ist der Preis zu niedrig gelaufen und das Verkaufen wird abgeschnitten.
 - Beim Open-Rejection-Reverse ist die gerichtete Überzeugung geringer als bei Open-Drive und Open-Test-Drive, weil das andere Timeframe später eintritt.
 - Niedriges Volumen steht für Ablehnung. Künftige Auktionsrotationen werden dort wahrscheinlich abgelehnt statt verlangsamt.
+- Ein Angebotstest mit hohem Volumen nach der Akkumulation zeigt, dass Verkäufer in großer Zahl zurückkehren und der alte Verkauf nicht absorbiert ist.
+- Der Markt ist dann nicht reif für den weiteren Anstieg, und ein neuer Versuch nach oben kann stocken oder scheitern.
+- Ein Shooting Star ist die Ablehnung höherer Preise: der Kurs wird hinaufgedrückt, findet keine Nachfrage und fällt zum Schluss nahe an den Eröffnungskurs zurück.
 
 ## Funktionsweise
 
 - Responsive Activity an den Bracket-Extremen entwickelt sich gewöhnlich viel langsamer und allmählicher. Dadurch bleibt meist Zeit, die Extreme auf Ablehnung oder Folgeaktivität zu prüfen.
+- Nach dem gescheiterten Test nehmen die Insider den Markt schnell zurück in die Stauzone, um den Verkaufsdruck auszuspülen, und bereiten danach einen neuen Ausbruch mit erneutem Test vor.
+- Erst ein folgender Test auf niedrigem Volumen bestätigt, dass der Verkaufsdruck entfernt ist.
 
 ## Voraussetzungen
 
@@ -102,6 +107,9 @@ aktualisiert: 2026-10-30
 - Führen responsive Teilnehmer den Preis vollständig durch die Gap, haben sich die Bedingungen geändert, und die Gap ist kein signifikanter Leitfaden mehr.
 - Eine Rückkehr des Preises in die Balance-Area nach dem Bruch ist die Ablehnung durch responsive Käufer.
 - Ein Preis, der über die Zeit nicht akzeptiert wird, ist abgelehnt.
+- Drei aufeinanderfolgende Shooting Stars, deren Hoch am selben Preis scheitert, zeigen Ablehnung auf diesem Niveau.
+- Steigendes Volumen auf diesen gleichen Kerzen verstärkt die Ablehnung.
+- Die letzten beiden von drei solchen Kerzen können Teil des Selling Climax sein.
 
 ## Risiken und Grenzen
 

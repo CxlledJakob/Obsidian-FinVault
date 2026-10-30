@@ -20,12 +20,18 @@ aktualisiert: 2026-10-30
 
 - Ein High Volume Node entsteht, wenn der Markt relativ lange in einer engen Preisspanne handelt, Käufer und Verkäufer aktiv sind und der Preis sich für zweiseitigen Handel verlangsamt. Der Markt hält den Bereich für fair.
 - Hohes Volumen bedeutet Akzeptanz und zieht den Preis an.
+- Ein dichter Volumenbereich im Volume at Price ist eine Preiszone, in der sich über die Zeit besonders viel Volumen gesammelt hat.
 
 ## Kernaussagen
 
 - Im kürzeren Timeframe ist er die jüngste Wertwahrnehmung und zieht den Preis an. Bei einer Rückkehr soll er den Preis bremsen, außer die Auktion ist so stark, dass der Preis gar nicht zurückkommt.
 - Je länger der Preis von diesem Akzeptanzbereich wegbleibt, desto weniger Bedeutung hat er. Für Day- und Swing-Trader bremst früher hohes Volumen den Preis noch lange genug zum Ein- oder Ausstieg.
 - An einem einzelnen Preis liegt oft deutlich höheres Volumen als im übrigen Profil.
+- Die dichteste Volumenkonzentration markiert die bedeutendste Stauzone und damit die wahrscheinlich stärkste spätere Barriere.
+- Liegt die Konzentration unten in der Kerze, ist es eher Kaufvolumen. Liegt sie oben, eher Verkaufsvolumen.
+- Extremes Volumen in einer engen Range, ohne dass der Kurs steigt, zeigt Schwäche und wahrscheinlich Verkauf.
+- Eine Zone mit extremem Volumen ist ein starkes Fundament und braucht extremes Volumen, um durchstoßen zu werden.
+- Je länger der Markt in einer engen Spanne pausiert, desto höher wird die Konzentration im Histogramm.
 
 ## Funktionsweise
 
@@ -60,6 +66,10 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Bei Microsoft war die dreitägige untere Stauung am dichtesten, mit einem überdurchschnittlichen und einem extremen Balken. Die nur einen Tag lange obere Zone erreichte fast dieselbe Konzentration.
+- Die dritte Microsoft-Zone war kurz, trug aber überdurchschnittliche Balken über eine tiefe Preisspanne und war damit ein Alarmsignal.
+- Bei Alcoa stand ein sehr großer Balken in der Mitte des Histogramms genau auf der laufenden Stauung.
+- Procter & Gamble zeigte in drei Monaten unterer Stauung einen extremen und einen durchschnittlichen Balken, ein erhebliches Fundament.
 
 ## Unterschiedliche Quellenpositionen
 

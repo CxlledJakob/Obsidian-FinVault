@@ -22,10 +22,41 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - High- und Low-Volume-Bereiche sind beide Unterstützung oder Widerstand, aber auf gegensätzliche Art.
+- Unterstützung und Widerstand werden dort stark, wo der Markt nach einem ausgedehnten Trend seitlich staut und die Gegenseite aufsaugt.
+- Sie sind die wichtigste Ergänzung der Volume Price Analysis, weil die Pause entweder die Umkehr vorbereitet oder ein Haltepunkt im längeren Trend ist, den das Volumen bestätigt.
+- Wo man im Trend steht und wo eine Umkehr liegen kann, wird an Unterstützung und Widerstand, an Kerzenmustern, einzelnen Kerzen und Trendlinien festgemacht.
+- Der Supply-Test nach der Akkumulation braucht einen engen Körper und einen tiefen unteren Docht; die Farbe des Körpers kann bullisch oder bärisch sein.
+- Bleibt das Volumen dabei niedrig, ist der alte Verkauf aufgenommen, und der Anstieg kann weitergehen.
+- Hohes Volumen im Test heißt, dass dieser Verkauf noch nicht aufgenommen ist und der Markt zurück in die Kongestion muss.
+- Preisstauzonen sind Gebiete, in denen der Markt wahrscheinlich Unterstützung findet oder kämpft.
+- Sie entstehen in den Seitwärtsphasen von Akkumulation und Distribution und sind die natürlichen Kampagnenziele der Insider.
+- Eine frühere Umkehrzone, in der eine neue Kerze erscheint, ist ein starkes Zusatzsignal und ein Hinweis auf die mögliche Tiefe der nächsten Bewegung.
+- Der Unterstützungsboden ist das unsichtbare Kissen, das den weiteren Fall hindert und den Preis nach oben abprallen lässt.
+- Käufer, die dort eingestiegen sind, waren nie im Verlust und halten auf höhere Preise. Sie gelten als die starke Gruppe.
+- Dieselbe Zone wird am Boden eines Abwärtstrends zur späteren Plattform, weil schwache und starke Gruppen dort dicht sitzen.
+- Nach dem Bruch der Decke ist der alte Widerstand der natürliche Boden und schützt die Long-Position bei einem Rücksetzer.
+- Dieser Boden stützt zugleich den weiteren Anstieg. Ihn zurückzudurchhandeln bräuchte Aufwand und Volumen.
+- Im Fall sind alte Unterstützungszonen die Plattformen, die einen weiteren Rückgang aufhalten. Tiefe, Breite und eine große frühere Umkehr erhöhen ihre Bedeutung.
+- Eine Stauzone mit extremem Volumen ist eine starke Unterstützung und braucht extremes Volumen, um durchstoßen zu werden. Eine Zone mit unterdurchschnittlichem Volumen hält kaum.
+- Stützen Käufer den Markt, bleibt eine Kerze mit ultrahohem Volumen eng, statt als weite Abwärtskerze zu erscheinen.
+- Untere Dochte zeigen etwas Unterstützung. Läuft der Markt danach auf steigendem Volumen weiter nach unten, reicht diese Stütze nicht.
+- Nach absorbierter Verkaufsphase liegt unter dem folgenden Ausbruch eine unterstützende Plattform.
+- Nach dem Bruch wird die alte Widerstanddecke zur Unterstützung.
+- Der Boden einer langen Stauung ist ein tiefes natürliches Schutzpolster. Der Stop liegt darunter, am letzten Pivot-Tief.
+- Ein Boden kann allein aus der Preisaktion entstehen. Drei Kerzen, die auf demselben Preis stoppen, genügen, auch ohne Pivot-Tief.
+- Ein Dreifachboden testet die Unterstützung und prallt ab. Hält ein Bruch darunter, wird das Niveau starker Widerstand.
+- Ein gebrochener Dreifachtop baut ein extrem starkes Unterstützungsfundament.
+- Am Boden eines deutlichen Falls werden auch auf einem schnellen Intraday-Chart hohe Volumen erwartet. Fehlen sie scheinbar, kann ein vorheriges Extrem die Skala verzerrt haben.
 
 ## Funktionsweise
 
 - Am unteren Bracket-Extrem tritt der responsive Käufer ein und dreht den Preis wieder aufwärts.
+- Stopping Volume ist die aktive Form dieser Unterstützung: die Insider absorbieren Panikverkauf über mehrere Sessions, schließen weit weg von den Tiefs und bereiten den Buying Climax vor.
+- Eine enge Abwärtskerze mit hohem Volumen ist das frühe Zeichen, dass Käufer den Markt auf diesem Niveau stützen.
+- Kommt der Preis später zurück, ist mindestens eine Pause und ein Test zu erwarten.
+- Auch eine kurze Stauzone auf der 5-Minuten-Chart stützt den Intraday-Trader, wirkt auf den längeren Trend aber wenig.
+- Eine tiefe Zone auf dem Tageschart macht den Bruch von Decke oder Boden bedeutend.
+- Die Unterstützung bleibt auf der Chart liegen, auch wenn der Preis weiterzieht, und wird bei späteren Besuchen wieder wirksam.
 
 ## Voraussetzungen
 
@@ -33,6 +64,8 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Fehlt in einem steigenden Markt der Tail am Tagestief, ist die Unterstützung schwach. Gewinne sind früher mitzunehmen, weil eine Umkehr möglich ist.
+- Der Stop kann in den unteren Bereich dieser Unterstützungszone gelegt werden, nachdem der Bruch bestätigt ist.
+- Der Rücktest der neuen Unterstützung soll auf niedrigem Volumen kommen. Steigendes Volumen auf dem Test würde den Schutz infrage stellen.
 
 ## Regeln und Kriterien
 
@@ -67,6 +100,9 @@ aktualisiert: 2026-10-30
 - Nach einer höheren Eröffnung werden die Auktionsrotationen oft vom oberen Spike-Ende gestützt. Das gilt nur für die erste Preisprobe in den Spike.
 - Mehrere Tests in derselben Halbstundenperiode machen einen Durchbruch durch dieses Extrem wahrscheinlich.
 - Eine Gap, die hält, bietet dem Preis signifikante Unterstützung.
+- Gut ausgebaute Stauzonen und kleine frühere Pausen werden unterschieden. Als Kampagnenziel dienen die ausgebauten Zonen, nicht jede kurze frühere Pause.
+- Die Linie ist elastisch und kann kurz durchhandelt werden, bevor der Markt in die Zone zurückkehrt.
+- Wyckoffs Ursache und Wirkung verbindet die Dauer dieser Unterstützung mit der Wucht der späteren Bewegung.
 
 ## Risiken und Grenzen
 
@@ -74,6 +110,14 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Der 200-Tage-Durchschnitt wurde als Unterstützung erwartet; steigendes Volumen in der Abwärtsauktion und fallendes Volumen auf den Rallyes sprach dafür, dass er genommen wird.
+- Die dreitägige Microsoft-Stauung war beim Ausbruch und für einen späteren Test ein starkes Fundament.
+- Bei Procter & Gamble war das untere dreimonatige Volumen ein erhebliches natürliches Hindernis. Die höhere Zone mit relativ niedrigerem Volumen hätte weniger gestützt.
+- Im AUD/USD-Wochenchart stützten die Käufer das Paar auf dem Niveau der ultrahohen, aber engen Kerze. Der Hammer mit tiefem Docht bestätigte den Kauf.
+- Im GLD zeigten zwei Abwärtskerzen untere Dochte, der Markt fiel trotzdem auf steigendem Volumen weiter.
+- Im GBP/USD auf 15 Minuten lag nach dem Bruch ein tiefes Schutzpolster unter dem Markt, und die Decke war zur Unterstützung geworden.
+- Auf der Stunde definierten drei Kerzen den Boden. Fallender Kurs bei fallendem Volumen sprach dagegen, dass der Fall weit läuft.
+- EUR/CHF testete auf der Stunde die Unterstützung des Dreifachbodens und prallte ab.
+- Im Kaffee-Future lag das Volumen am Boden des Wasserfalls über dem Durchschnitt und wirkte neben dem extremen Anstieg klein.
 
 ## Unterschiedliche Quellenpositionen
 

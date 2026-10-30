@@ -24,6 +24,9 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Die Preisprobe schaltet dann die Aktivität ab. Oft muss der Markt erst brechen, bevor eine Aufwärtsauktion mit Überzeugung läuft.
+- Ein Bruch durch den Boden der Stauzone auf niedrigem Volumen ist eine Falle. Die Insider wollen Trader auf der falschen Seite fangen.
+- Ein paar Ticks unter der Linie sind noch kein Breakdown. Die Linie ist elastisch, und es braucht einen sauberen, klar ausgebildeten Schluss darunter.
+- Fehlt auf den nächsten Bars deutlich überdurchschnittliches und steigendes Volumen, ist der Bruch nach unten nicht gültig.
 
 ## Funktionsweise
 
@@ -39,6 +42,9 @@ aktualisiert: 2026-10-30
 
 - Das ist oft ein starkes Signal, dass eine Veränderung eingetreten ist, und bietet eine günstige Trade Location.
 - Excess markiert den Moment der Veränderung.
+- Ein Rücklauf nach oben zum Test des Bodens auf niedrigem Volumen gehört zu einem gültigen Breakdown und ist selbst kein Fehlbruch.
+- Fallende Märkte müssen auf dem echten Weg nach unten steigendes Volumen zeigen. Bleibt es aus, war der Aufwand nicht da.
+- Nur das sichtbare Volumen unterscheidet den Fehlbruch vom echten Wegbruch. Die Preisaktion allein tut es nicht.
 
 ## Risiken und Grenzen
 

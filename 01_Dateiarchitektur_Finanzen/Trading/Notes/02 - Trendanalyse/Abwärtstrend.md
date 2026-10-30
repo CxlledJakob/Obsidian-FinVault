@@ -25,9 +25,37 @@ aktualisiert: 2026-10-30
 - Abwärtsauktionen laufen als absteigende Treppe aus Balancebereichen.
 - Nach einem anhaltenden Abwärtstrend kann die Deckungswelle mehrere Tage dauern.
 - Solche Käufe werden leicht als Ende des Abwärtstrends oder als Beginn eines neuen Trends in die Gegenrichtung gelesen.
+- Der Markt braucht steigendes Volumen, um zu fallen, nicht nur um zu steigen.
+- Steigen die Volumenbars im Abverkauf mit, sind die Specialists im Move, und das Volumen ist Verkaufsvolumen.
+- Vier Abwärtskerzen ohne Dochte, mit jeweils weiterem Spread und höherem Volumen, bestätigen jede Kerze und die Gruppe; das Sentiment ist klar bärisch.
+- Im Price Waterfall ist die zweite Kerze die erste Anomalie, wenn der Spread nur wenig weiter, das Volumen aber hoch oder sehr hoch ist.
+- Der Markt widersteht dann dem weiteren Fall, die bärische Stimmung läuft ab, und die Lage gilt als oversold.
+- Folgen weitere Kerzen mit fallendem Volumen, läuft der Verkaufsdruck ab; eine weit gespreizte Abwärtskerze müsste hohes Volumen haben.
+- Die Insider kaufen auf dieser zweiten Kerze und zeichnen die Preise weiter tiefer, damit der Markt bärisch wirkt, während sie auf den nächsten Kerzen zusätzliche Trader in schwache Shorts locken.
+- Das kann nur eine Pause sein und kein großer Trendwechsel, warnt aber vor kommender Stärke.
+- Märkte steigen in Stufen und fallen schnell, analog zur Rutsche einer Helter Skelter oder zu Schlangen und Leitern.
+- Sind die Lager leer, wird der Markt nach unten gedrückt, Panikverkäufe setzen ein, und die Lager werden erneut gefüllt.
+- Nach dem Selling Climax bricht der Markt schnell nach unten aus und lässt diese Käuferschicht auf dem Niveau gefangen.
+- Ein gültiger Abwärtsausbruch aus einer Stauzone bricht sauber durch den Boden und wird von deutlich überdurchschnittlichem Volumen begleitet.
+- Fallende Märkte sollen dabei ebenfalls steigendes Volumen zeigen, wenn die Bewegung echt ist.
+- Der Rücklauf nach oben zum Test des Bodens gehört dazu und soll auf niedrigem Volumen laufen.
+- Märkte fallen nicht in einer geraden Linie, sondern geben zwischendurch nach und fallen danach weiter.
+- Zieht ein Short zurück, während das Volumen der Aufwärtskerzen fällt, ist das eine Pause und kein Trendwechsel.
+- Fehlt vor dem Rücksetzer Stopping-Volumen, sind die Käufer auf diesem Niveau nicht im Markt, und die Umkehr hält nicht lange.
+- Beim Beurteilen des Volumens in einem Trend ist Spielraum nötig, weil Feiertage, dünner Handel und Schließtage anderer Märkte das Volumen verzerren.
+- Fallende Preise bei fallendem Volumen sind Schwäche, aber kein Abwärtstrend, der durchhält.
+- Entwickelt sich ein bärischer Trend und fällt das Volumen dabei weg, trägt der Abverkauf nicht weit.
+- Beim Volumen in einem steigenden oder fallenden Trend ist Spielraum nötig. Eine kleine Welle tiefer wird von einer Welle höheren Volumens ausgeglichen, ohne dass jede Kerze ein neues Volumenhoch setzen muss.
+- Eine Erholung aus einem Preiswasserfall ohne erkennbares Kauf- oder Stopping-Volumen bleibt verdächtig, auch auf einem schnellen Intraday-Chart.
 
 ## Funktionsweise
 
+- Ein Shooting Star im Abwärtstrend bestätigt die Schwäche, besonders kurz nach Beginn der Abwärtsbewegung.
+- Folgt er einem Selling Climax, kann er ein Nachfragetest sein, während der Markt die Distributionszone verlässt.
+- An einem kleineren Rückläufer tiefer im Abwärtstrend sagt ein Shooting Star mit überdurchschnittlichem Volumen, dass der Markt weiter schwach ist und der Buying Climax noch nicht erreicht ist.
+- Die dynamische Abwärtstrendlinie beginnt mit einem Pivot-Tief und danach einem Pivot-Hoch, nicht mit dem Warten auf drei fertige Swings.
+- Ein Bruch einer zweiten Stauzone nach unten ist die Trendumkehr, und eine bestehende Long-Position wird geschlossen.
+- In einem Bärenmarkt wird auf der Bärenseite gearbeitet, so die von Charles Dow gesetzte Regel am Beginn des Volume-at-Price-Kapitels.
 
 ## Voraussetzungen
 
@@ -36,6 +64,7 @@ aktualisiert: 2026-10-30
 
 - Cash auf tieferen Niveaus verbessert die langfristige Rendite, solange die Abwärtsauktion endet. In dieser späten Phase ist für einen langfristigen Verwalter auch das Risiko von Cash und defensiven Papieren gestiegen.
 - Später im Abwärtstrend wird an temporären Rallys responsiv verkauft.
+- Erscheint diese Preisaktion nach einer Distributionsphase, gehört man vor den Schirm und wartet auf den schnellen Abverkauf.
 
 ## Regeln und Kriterien
 
@@ -71,14 +100,24 @@ aktualisiert: 2026-10-30
 - Ein zu elongiertes Abwärtsprofil bedeutet oft das Gegenteil von Fortsetzung.
 - Die Odds der Abwärtsfortsetzung können sinken, während der Preis noch fällt.
 - Im fallenden Markt liegt One-Timeframing vor, wenn das Hoch der nächsten Woche das Hoch der Vorwoche nicht herausnimmt.
+- Es ist unvernünftig, auf jeder folgenden Kerze ein höheres Volumen als auf der vorherigen zu verlangen, weil damit jeder Trend künstlich begrenzt würde.
 
 ## Risiken und Grenzen
 
 - Wer das Auktionstief erkennt und kauft, hat niedriges Risiko und hohen Ertrag. Wer short bleibt, hat hohes Risiko und niedrigen Ertrag, weil die folgende Rally oft scharf und schnell ist.
 - Nähert sich die Abwärtsauktion ihrem Ziel, steigt das Risiko der Short-Position, und die Chance, short profitabel zu bleiben, sinkt.
+- Ausgedehnte Trends über Monate sind weitgehend vorbei. Hochfrequenzhandel, Manipulation und elektronischer Handel haben die Märkte dafür verändert.
+- Ein Trade gegen den dominanten Trend ist riskanter und wird nur kurz gehalten.
 
 ## Beispiele
 
+- SLV brach mit fünf aufeinanderfolgenden Abwärtskerzen auf steigendem, überdurchschnittlichem Volumen unter die Zwischenunterstützung.
+- Der AUD/USD rollte auf dem Wochenchart in einen Preiswasserfall, der durch steigendes Verkaufsvolumen bestätigt wurde.
+- Der längerfristige Goldtrend war zu diesem Zeitpunkt bärisch, bei niedriger Inflation, höheren Renditen in Risikomärkten und einem Geldabfluss aus sicheren Häfen.
+- Im GBP/USD fiel das Paar auf nachlassendem Volumen und war damit schwach, aber nicht in einem anhaltenden Abwärtstrend.
+- Nach dem Hanging Man verkaufte der Markt scharf. Das Volumen fiel im bärischen Verlauf weg, und nach sieben Stunden war der Abverkauf am Boden.
+- Der Kaffee-Future rutschte zuerst bei fallendem Volumen und damit ohne weiten Weg, verkaufte später auf hohem Volumen und bildete nach einer Shooting Star einen Preiswasserfall.
+- Im AUD/USD hielt der Verkaufsdruck in der Buying-Climax-Phase an, und das Paar rollte zurück in die Stauzone.
 
 ## Unterschiedliche Quellenpositionen
 

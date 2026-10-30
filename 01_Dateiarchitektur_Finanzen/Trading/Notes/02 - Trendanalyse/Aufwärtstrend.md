@@ -31,9 +31,35 @@ aktualisiert: 2026-10-30
 - Danach verengt sich die Value-Sicht, und innerhalb der Bracket-Grenzen entsteht ein relativ breites Gleichgewicht.
 - Ein Aufwärtstrend beginnt gewöhnlich mit dem aggressiven Einstieg des längerfristigen Käufers, der Excess als langfristigen Buying Tail oder als Buying Gap erzeugt.
 - Aus dem responsiven Kauf wird Initiative, sobald zuvor etablierte Value durchlaufen wird.
+- Steigende Preise mit steigendem Volumen bestätigen den Aufwärtstrend, und die Specialists steigen ein.
+- Kerzen ohne Dochte und mit steigendem Volumen im Anstieg sind Kaufvolumen; Verkauf wäre in der Preisaktion sichtbar.
+- Eine nur wenig weitere Kerze mit hohem Volumen ist das erste Zeichen von Overbought: die Insider verkaufen, der Aufwand hebt den Preis nicht entsprechend.
+- Folgen weitere Anstiege bei fallendem Volumen, wirkt der Markt noch bullisch, die Insider sind aber draußen und locken Trader in schwache Longs.
+- Eine enge Kerze bei sehr hohem Volumen an der Spitze zeigt, dass weiterer Aufwand keine höheren Preise mehr erzeugt, weil Longs Gewinne mitnehmen und Specialists das Lager leeren.
+- Ein Trend auf einem 1- oder 5-Minuten-Chart ist genauso ein Preistrend wie einer auf dem Tageschart; er kann ein Rücksetzer im längeren Trend oder dessen Bestätigung sein.
+- Der Anstieg läuft als Serie höherer Hochs und höherer Tiefs, mit Pausen und kleinen Rückläufern, und baut nach der Angst wieder Vertrauen auf.
+- Er startet langsam und wird schneller, bis nahe der Distribution Käufer unter dem Druck nachgeben, den Move zu verpassen.
+- Auf dem Weg wird das Inventar allmählich reduziert und in kleinen Rückläufern durch Gewinnmitnahmen wieder aufgefüllt.
+- Ein gültiger Aufwärtsausbruch braucht einen klaren Schluss über der Decke und starkes, steigendes Volumen.
+- Der Rücksetzer testet die Decke auf niedrigem oder fallendem Volumen. Danach soll der Markt mit steigendem Volumen weiter steigen.
+- In einem Bullenmarkt wird auf der Bullenseite gearbeitet.
+- Steigendes Volumen zusammen mit weiten Aufwärtskerzen ist ein bullisches Signal.
+- Ein Ausbruch mit hohem Volumen und zusätzlicher Aufwärtslücke ist eine echte Aufwärtsbewegung, sofern das Volumen sie bestätigt.
+- Im Aufwärtstrend sind Rücksetzer mit fallendem Volumen und ohne Topping-Out-Volumen nur kleine Gegenbewegungen.
+- Ein langsamer, stetiger Volumenrückgang über Monate eines Anstiegs warnt, dass der Markt den Dampf verliert.
+- Zwei weite Kerzen hintereinander bei fast keinem Volumen zeigen, dass die Market Maker die Preise ohne Volumen höher schieben und sich zurückgezogen haben.
+- Die ersten Kerzen eines Anstiegs dürfen von gutem Volumen getragen sein, das schwankt, aber über oder um dem Durchschnitt liegt.
+- Ein Anstieg mit kleinen Rücksetzern bleibt intakt, solange jede Welle nach unten von einer Welle höheren Volumens ausgeglichen wird und die Abwärtskerzen fallendes Volumen haben.
+- Liegt das Kaufvolumen der zweiten Welle etwas unter der ersten, kann der Move Dampf verlieren. Solange die folgende Preisaktion nichts Bedrohliches zeigt, ist das noch kein Ausstiegssignal.
+- Ein Bruch über den Widerstand der Eröffnung auf dem Weg nach oben ist ein zusätzlicher Vertrauenspunkt, auch wenn es nur ein zweitrangiger Widerstand ist.
+- Ein Aufwärtstrend auf durchschnittlichem Volumen ohne Extreme läuft weiter, bis auf dieser Zeitebene eine Selling Climax erscheint.
+- Steigende Tiefs bei Tests derselben Decke zeigen einen bullischen Markt.
 
 ## Funktionsweise
 
+- Der Einstieg liegt auf dem bestätigten Bruch, nicht erst nach drei höheren Hochs und höheren Tiefs. Die Pivots bauen den Trend, während die Position läuft.
+- Ein zweites Pivot-Hoch über dem vorherigen und ein zweites Pivot-Tief über dem vorherigen halten die Position. Das dritte Paar definiert die obere und die untere Region.
+- Fällt das Volumen auf dem ersten Rücksetzer, ist das ein gutes Zeichen und kein Widerspruch zum Anstieg.
 
 ## Voraussetzungen
 
@@ -46,6 +72,9 @@ aktualisiert: 2026-10-30
 - Später im Aufwärtstrend wird der temporäre Break gekauft.
 - Eine Eröffnung über einem Buying Spike ist extrem aufwärts aus der Balance. Longs werden nahe der Unterstützung am oberen Spike-Ende gesucht.
 - Größere Verkäufe an diesem Hoch werden erst gelegt, nachdem das Hoch bestätigt ist.
+- Nach dem ersten Shooting Star wird nicht sofort gehandelt. Die folgende Kerze muss zeigen, ob die Schwäche anhält oder nur eine Pause ist.
+- In der offenen Position wird die Volume-Price-Analyse laufend wiederholt, damit der Trend gehalten und der Gewinn ausgereizt werden kann.
+- Volumen in einem steigenden Trend wird mit Spielraum gelesen. Abwärtskerzen mit sehr niedrigem Volumen und eine Stauzone plus allgemein fallendes Volumen können trotzdem der Anlass sein, wachsam zu werden oder auszusteigen.
 
 ## Regeln und Kriterien
 
@@ -97,16 +126,29 @@ aktualisiert: 2026-10-30
 - Ein solider Aufwärtsversuch zeigt ein elongiertes Profil, dessen Preise meist nicht mehr als fünf oder sechs TPOs anziehen.
 - An einem soliden Aufwärtstag liegt der Schluss eher nahe dem oberen Ende der Range.
 - Gegen höher entstehende Value wird nicht gefadet, auch wenn die längerfristige Meinung dagegensteht.
+- Auf dem frühen Anstieg wollen die Insider keinen großen Volumenkauf sehen, weil der größte Gewinn erst am Retail-Ziel der Distribution liegt.
+- Ein Shooting Star mit unterdurchschnittlichem Volumen im Aufwärtstrend signalisiert eine mögliche Pause und einen kurzfristigen Rücksetzer, keine sofortige Umkehr.
+- Ein Anstieg, der gerade erst mit erfolgreichem Test aus der Akkumulation ausgebrochen ist, dreht danach kaum sofort wieder nach unten.
 
 ## Risiken und Grenzen
 
 - Die Composite-Analyse sagt nicht, wie gut der Versuch gelingt. Ein Markt kann höher gappen, den ganzen Tag abwärts auktionieren und trotzdem höhere Value bilden.
+- Das erste Pivot-Hoch nach dem Bruch könnte eine große Umkehr sein. Das ist angesichts des Volumenprofils und der gerade verlassenen Stauzone unwahrscheinlich, aber an dieser Stelle ist man nie sicher und bleibt geduldig.
 
 ## Beispiele
 
+- Duke Energy stieg zuerst auf relativ niedrigem Volumen. Die letzte weite Aufwärtskerze hatte nur geringfügig mehr Volumen als die vorherige Kerze mit halber Spanne, und zwei Kerzen später kam die Schwäche.
+- Honeywell notierte drei Monate nach dem bestätigten Ausbruch bei 76,08 Dollar.
+- Der AUD/USD stieg mehrere Monate in stetigem Tempo auf stetigem Volumen, während das Volumen langsam und stetig fiel.
+- Der YM E-Mini eröffnete mit Aufwärtslücke, hohem Volumen und weiter Aufwärtskerze. Die großen Akteure stiegen ein, zwei Abwärtskerzen bei fallendem Volumen waren frühe Gewinnmitnahmen, und die Käufer blieben am Steuer.
+- Am dritten Tag eröffnete der ES mit Aufwärtslücke auf hohem Volumen, deutlich über dem Vortag. Das war eine echte Bewegung, und die großen Akteure kauften den bullischen Trend.
+- Der Dow stieg nach der Akkumulation stetig auf durchschnittlichem Volumen.
+- Im GBP/USD auf der Stunde löste sich eine vermeintliche Stauung sofort auf gutem Volumen nach oben und war nur eine kleine Pause im Anstieg.
 
 ## Unterschiedliche Quellenpositionen
 
+- Wer auf drei höhere Hochs und höhere Tiefs wartet, hat die Trendfolge-Stufe schon hinter sich und kauft am Beginn der Distribution.
+- Dass ein Trend erst erkennbar sei, wenn er vorbei ist, gilt für den reinen Blick zurück. Ein Selling Climax oder ein Buying Climax sagt vorher, dass ein neuer Trend beginnt.
 
 ## Eigene Erkenntnisse
 

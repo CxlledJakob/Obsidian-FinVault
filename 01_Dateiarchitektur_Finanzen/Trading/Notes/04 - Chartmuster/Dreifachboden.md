@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/04 - Chartmuster/04 - Chartmuster|04 - Chartmuster]]"
 weitere_hauptthemen: []
 unterthema: "Umkehrmuster"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Dreifachboden
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein Dreifachboden testet eine Unterstützung, und der Kurs prallt jedes Mal daran ab.
 
 ## Kernaussagen
 
+- Es gibt zwei Lagen: eine Long-Position, wenn die Volume Price Analysis sie bestätigt, oder ein Short nach einem Bruch, der unter der Unterstützung hält.
+- Folgt der Short durch, wird die gebrochene Unterstützung zu starkem Widerstand darüber.
+- Das Muster erscheint in Anleihen, Rohstoffen, Aktien und Währungen und auf allen Zeitebenen.
+- Wie die anderen Muster zeigt es eine Stauzone und einen Boden. Der folgende Ausbruch ist Umkehr oder Fortsetzung und wird mit Volume Price Analysis und Volume at Price geprüft.
 
 ## Funktionsweise
 
@@ -41,6 +44,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Das Beispiel steht auf dem Stundenchart des EUR/CHF.
 
 ## Unterschiedliche Quellenpositionen
 

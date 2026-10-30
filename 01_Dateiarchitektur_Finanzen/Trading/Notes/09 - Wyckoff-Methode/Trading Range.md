@@ -38,6 +38,10 @@ aktualisiert: 2026-10-30
 - Ohne Richtungsüberzeugung liegt die meiste Zeit in sehr kurzen Balance-Bereichen, unterbrochen von scharfen Ausbrüchen auf ein neues Niveau mit anschließender Rückkehr in die Balance.
 - Ein Inside Day ist eine Form von Balance.
 - Das längere Timeframe erkennt eine solche mehrtägige Spanne eher als der Day-Timeframe.
+- Die Akkumulation erzeugt die klassische Preiskongestion, sichtbar in allen Zeitrahmen an der Form von Preis und Volumen.
+- In der Distribution handelt der Preis in einer engen Spanne und zieht auf jedem Rücksetzer weitere Käufer an.
+- Ist der Verkauf aus der alten Trading Range in der Akkumulation nicht absorbiert, scheitert der Test, und der Markt geht in die Kongestion zurück.
+- Auf dem Tageschart kann die seitliche Phase Tage, Wochen oder Monate laufen, und mehrere Umkehrsignale sagen noch nicht, wann die Drehung kommt.
 
 ## Funktionsweise
 
