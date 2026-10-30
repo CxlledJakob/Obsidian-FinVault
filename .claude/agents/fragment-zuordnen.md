@@ -39,6 +39,6 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish
 
 `<ordner>` ist der Buchordner dieses Laufs. Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/wissensgeruest`. Shard-Dateien bleiben liegen. Meldet es `nichts zu committen`, ist der Lauf schon auf dem Branch. Nenne den erledigten Ordner und den nächsten. Danach stopp.
 
-Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `zuordnung`. Nur diese Datei ändern.
+Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `claude` und `grenzen`. Den Abschnitt `cursor` und `.cursor/rules` nicht anfassen. Nur diese Datei ändern.
 
 `status: geprüft` und `status: archiviert` bleiben unberührt. Wenn das Skript `gesperrt` oder `unbekannt` meldet, korrigierst du den Namen oder lässt den Begriff weg. Du umgehst das Skript nicht. Kein n8n, kein Ollama-Flow.

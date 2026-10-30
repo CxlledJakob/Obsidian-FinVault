@@ -1,19 +1,24 @@
 {
-  "hinweis": "Nur diese Datei ändern. Der nächste go liest sie. Erlaubt sind sonnet und opus, die Modelle aus dem Claude-Abo. Cursor-Modellnamen sind ungültig und werden verworfen.",
-  "zuordnung": {
-    "modell": "sonnet",
+  "hinweis": "Die Grenzen gelten für Cursor und Claude gemeinsam. Branch und Modell stehen getrennt unter cursor und claude. Das Skript erkennt die Anwendung selbst: Claude setzt CLAUDECODE, Cursor setzt CURSOR_AGENT. Override nur wenn nötig: FINVAULT_APP=cursor oder FINVAULT_APP=claude. Beide Regelordner bleiben im Repo. .cursor/rules nicht löschen, .claude nicht löschen.",
+  "grenzen": {
     "strenge": "locker",
     "max_begriffe_pro_fragment": 25,
-    "fragmente_pro_shard": 4,
-    "strenge_werte": "streng = nur Definition, Regel oder Kriterium, lieber zu wenige. mittel = erklärt den Begriff oder gibt eine konkrete Regel, eine Namensnennung reicht nicht. locker = eine tragende Erwähnung reicht, ein Inhaltsverzeichnis nicht."
-  },
-  "ergaenzung": {
-    "modell": "opus",
+    "fragmente_pro_shard_zuordnung": 4,
     "max_neue_punkte_pro_fragment": 20,
     "max_zeichen_pro_punkt": 1500,
     "wiederholung_schwelle": 0.72,
-    "fragmente_pro_shard": 3,
+    "fragmente_pro_shard_ergaenzung": 3,
     "vorhandene_punkte_zeigen": 12,
-    "felder": "max_neue_punkte_pro_fragment ist die harte Obergrenze pro Begriff und Fragment. wiederholung_schwelle von 0 bis 0.95 wirft Umformulierungen weg, 0 schaltet das ab. vorhandene_punkte_zeigen ist, wie viele alte Stichpunkte der Subagent sieht. fragmente_pro_shard ist die Paketgröße."
+    "strenge_werte": "streng = nur Definition, Regel oder Kriterium, lieber zu wenige. mittel = erklärt den Begriff oder gibt eine konkrete Regel, eine Namensnennung reicht nicht. locker = eine tragende Erwähnung reicht, ein Inhaltsverzeichnis nicht."
+  },
+  "cursor": {
+    "branch": "jakob/features",
+    "zuordnung_modell": "grok-4.7-medium",
+    "ergaenzung_modell": "grok-4.7-high"
+  },
+  "claude": {
+    "branch": "alex/wissensgeruest",
+    "zuordnung_modell": "sonnet",
+    "ergaenzung_modell": "opus"
   }
 }

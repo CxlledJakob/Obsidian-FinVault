@@ -22,6 +22,7 @@ Modell und Grenzen liegen in parameter.json neben diesem Skript.
 from __future__ import annotations
 
 import json
+import os
 import re
 import subprocess
 import sys
@@ -47,9 +48,20 @@ FORBIDDEN_SECTIONS = frozenset({"Eigene Erkenntnisse"})
 LOCKED_STATUS = frozenset({"geprüft", "archiviert"})
 MAX_BULLET_CHARS = 2000
 PAGE_DASH = "–"
-BRANCH = "alex/wissensgeruest"
 BULLET_CHARS = 220
-ALLOWED_MODELS = frozenset({"sonnet", "opus"})
+CURSOR_MODELS = frozenset(
+    {
+        "grok-4.7-low",
+        "grok-4.7-medium",
+        "grok-4.7-high",
+        "grok-4.7-xhigh",
+    }
+)
+CLAUDE_MODELS = frozenset({"sonnet", "opus"})
+PROFILES = {
+    "cursor": ("jakob/features", "grok-4.7-medium", "grok-4.7-high", CURSOR_MODELS),
+    "claude": ("alex/wissensgeruest", "sonnet", "opus", CLAUDE_MODELS),
+}
 STRENGE_TEXT = {
     "streng": (
         "Nur zuordnen, wenn das Fragment den Begriff definiert, eine Regel gibt oder ein Kriterium nennt. "
@@ -94,11 +106,13 @@ def default_roots() -> Roots:
 
 @dataclass(frozen=True)
 class Lauf:
-    zuordnung_modell: str = "sonnet"
+    app: str = ""
+    branch: str = ""
+    zuordnung_modell: str = ""
     strenge: str = "locker"
     max_begriffe: int = 25
     link_shard_size: int = 4
-    ergaenzung_modell: str = "opus"
+    ergaenzung_modell: str = ""
     max_neue_punkte: int = 20
     max_zeichen: int = 1500
     wiederholung_schwelle: float = 0.72
@@ -106,11 +120,27 @@ class Lauf:
     vorhandene_punkte: int = 12
 
 
-def clamp_modell(value: object, default: str) -> str:
+def detect_runtime(env: dict | None = None, branch: str = "") -> str:
+    source = os.environ if env is None else env
+    forced = str(source.get("FINVAULT_APP") or "").strip().lower()
+    if forced in PROFILES:
+        return forced
+    if str(source.get("CLAUDECODE") or "") == "1" or source.get("CLAUDE_CODE_ENTRYPOINT"):
+        return "claude"
+    if source.get("CURSOR_AGENT"):
+        return "cursor"
+    if branch == "alex/wissensgeruest":
+        return "claude"
+    if branch == "jakob/features":
+        return "cursor"
+    return ""
+
+
+def clamp_modell(value: object, default: str, allowed: frozenset[str]) -> str:
     if value is None or value == "":
         return default
     text = str(value).strip()
-    if text in ALLOWED_MODELS:
+    if text in allowed:
         return text
     print(f"parameter modell {text} ungültig, {default}", file=sys.stderr)
     return default
@@ -156,12 +186,27 @@ def clamp_schwelle(value: object, default: float) -> float:
     return number
 
 
-def load_lauf() -> Lauf:
+def load_lauf(env: dict | None = None, branch: str = "") -> Lauf:
     defaults = Lauf()
+    app = detect_runtime(env, branch)
+    profile = PROFILES.get(app)
+    if profile is None:
+        print(
+            "anwendung unerkannt. Cursor setzt CURSOR_AGENT, Claude setzt CLAUDECODE. "
+            "Sonst FINVAULT_APP=cursor oder FINVAULT_APP=claude.",
+            file=sys.stderr,
+        )
+        return defaults
+    branch_name, zuordnung_default, ergaenzung_default, allowed = profile
     path = Path(__file__).resolve().parent / "parameter.json"
     if not path.is_file():
         print("parameter fehlt, Voreinstellung", file=sys.stderr)
-        return defaults
+        return Lauf(
+            app=app,
+            branch=branch_name,
+            zuordnung_modell=zuordnung_default,
+            ergaenzung_modell=ergaenzung_default,
+        )
     try:
         data = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
@@ -170,62 +215,79 @@ def load_lauf() -> Lauf:
     if not isinstance(data, dict):
         print("parameter ungültig, Voreinstellung", file=sys.stderr)
         return defaults
-    zuordnung = data.get("zuordnung") or {}
-    ergaenzung = data.get("ergaenzung") or {}
-    if not isinstance(zuordnung, dict) or not isinstance(ergaenzung, dict):
+    grenzen = data.get("grenzen") or {}
+    chosen = data.get(app) or {}
+    if not isinstance(grenzen, dict) or not isinstance(chosen, dict):
         print("parameter abschnitte ungültig, Voreinstellung", file=sys.stderr)
         return defaults
+    configured_branch = str(chosen.get("branch") or "").strip() or branch_name
     return Lauf(
-        zuordnung_modell=clamp_modell(zuordnung.get("modell"), defaults.zuordnung_modell),
-        strenge=clamp_strenge(zuordnung.get("strenge")),
+        app=app,
+        branch=configured_branch,
+        zuordnung_modell=clamp_modell(chosen.get("zuordnung_modell"), zuordnung_default, allowed),
+        strenge=clamp_strenge(grenzen.get("strenge")),
         max_begriffe=clamp_int(
-            zuordnung.get("max_begriffe_pro_fragment"),
+            grenzen.get("max_begriffe_pro_fragment"),
             defaults.max_begriffe,
             1,
             40,
             "max_begriffe_pro_fragment",
         ),
         link_shard_size=clamp_int(
-            zuordnung.get("fragmente_pro_shard"),
+            grenzen.get("fragmente_pro_shard_zuordnung"),
             defaults.link_shard_size,
             1,
             8,
-            "fragmente_pro_shard",
+            "fragmente_pro_shard_zuordnung",
         ),
-        ergaenzung_modell=clamp_modell(ergaenzung.get("modell"), defaults.ergaenzung_modell),
+        ergaenzung_modell=clamp_modell(
+            chosen.get("ergaenzung_modell"),
+            ergaenzung_default,
+            allowed,
+        ),
         max_neue_punkte=clamp_int(
-            ergaenzung.get("max_neue_punkte_pro_fragment"),
+            grenzen.get("max_neue_punkte_pro_fragment"),
             defaults.max_neue_punkte,
             1,
             30,
             "max_neue_punkte_pro_fragment",
         ),
         max_zeichen=clamp_int(
-            ergaenzung.get("max_zeichen_pro_punkt"),
+            grenzen.get("max_zeichen_pro_punkt"),
             defaults.max_zeichen,
             80,
             MAX_BULLET_CHARS,
             "max_zeichen_pro_punkt",
         ),
         wiederholung_schwelle=clamp_schwelle(
-            ergaenzung.get("wiederholung_schwelle"),
+            grenzen.get("wiederholung_schwelle"),
             defaults.wiederholung_schwelle,
         ),
         fill_shard_size=clamp_int(
-            ergaenzung.get("fragmente_pro_shard"),
+            grenzen.get("fragmente_pro_shard_ergaenzung"),
             defaults.fill_shard_size,
             1,
             8,
-            "fragmente_pro_shard",
+            "fragmente_pro_shard_ergaenzung",
         ),
         vorhandene_punkte=clamp_int(
-            ergaenzung.get("vorhandene_punkte_zeigen"),
+            grenzen.get("vorhandene_punkte_zeigen"),
             defaults.vorhandene_punkte,
             0,
             40,
             "vorhandene_punkte_zeigen",
         ),
     )
+
+
+def require_lauf() -> Lauf:
+    lauf = load_lauf()
+    if not lauf.app or not lauf.branch:
+        raise RuntimeError(
+            "Anwendung unerkannt. Cursor setzt CURSOR_AGENT, Claude setzt CLAUDECODE. "
+            "Sonst FINVAULT_APP=cursor oder FINVAULT_APP=claude."
+        )
+    return lauf
 
 
 def limit_names(names: list, cap: int) -> tuple[list[str], int]:
@@ -1069,7 +1131,13 @@ def write_fill_shards(roots: Roots, lauf: Lauf | None = None) -> list[Path]:
 
 
 def cmd_link_shards(roots: Roots) -> int:
-    lauf = load_lauf()
+    try:
+        lauf = require_lauf()
+    except RuntimeError as exc:
+        print(f"fehler: {exc}", file=sys.stderr)
+        return 1
+    print(f"app {lauf.app}")
+    print(f"branch {lauf.branch}")
     print(f"modell {lauf.zuordnung_modell}")
     print(f"strenge {lauf.strenge}")
     print(f"max_begriffe {lauf.max_begriffe}")
@@ -1077,7 +1145,13 @@ def cmd_link_shards(roots: Roots) -> int:
 
 
 def cmd_fill_shards(roots: Roots) -> int:
-    lauf = load_lauf()
+    try:
+        lauf = require_lauf()
+    except RuntimeError as exc:
+        print(f"fehler: {exc}", file=sys.stderr)
+        return 1
+    print(f"app {lauf.app}")
+    print(f"branch {lauf.branch}")
     print(f"modell {lauf.ergaenzung_modell}")
     print(f"max_neue_punkte {lauf.max_neue_punkte}")
     return print_shards(roots, write_fill_shards(roots, lauf), "keine offenen Fragmente")
@@ -1168,19 +1242,19 @@ def pop_stash(repo: Path) -> None:
         raise RuntimeError(f"git stash pop: {detail}")
 
 
-def checkout_work_branch(repo: Path) -> None:
-    if current_branch(repo) == BRANCH:
+def checkout_work_branch(repo: Path, branch: str) -> None:
+    if current_branch(repo) == branch:
         return
     stashed = stash_tracked(repo)
     try:
-        exists = git(repo, "show-ref", "--verify", "--quiet", f"refs/heads/{BRANCH}")
+        exists = git(repo, "show-ref", "--verify", "--quiet", f"refs/heads/{branch}")
         if exists.returncode == 0:
-            checkout = git(repo, "checkout", BRANCH)
+            checkout = git(repo, "checkout", branch)
         else:
-            checkout = git(repo, "checkout", "-B", BRANCH, f"origin/{BRANCH}")
+            checkout = git(repo, "checkout", "-B", branch, f"origin/{branch}")
         if checkout.returncode != 0:
             detail = (checkout.stderr or checkout.stdout).strip()
-            raise RuntimeError(f"Wechsel auf {BRANCH}: {detail}")
+            raise RuntimeError(f"Wechsel auf {branch}: {detail}")
     except Exception:
         if stashed:
             git(repo, "stash", "pop")
@@ -1191,13 +1265,14 @@ def checkout_work_branch(repo: Path) -> None:
 
 def cmd_prepare() -> int:
     try:
+        lauf = require_lauf()
         repo = repo_root()
-        fetch = git(repo, "fetch", "origin", BRANCH)
+        fetch = git(repo, "fetch", "origin", lauf.branch)
         if fetch.returncode != 0:
             detail = (fetch.stderr or fetch.stdout).strip()
             raise RuntimeError(f"git fetch: {detail}")
-        checkout_work_branch(repo)
-        pull = git(repo, "pull", "--rebase", "--autostash", "origin", BRANCH)
+        checkout_work_branch(repo, lauf.branch)
+        pull = git(repo, "pull", "--rebase", "--autostash", "origin", lauf.branch)
         if pull.returncode != 0:
             detail = (pull.stderr or pull.stdout).strip()
             raise RuntimeError(f"git pull: {detail}")
@@ -1205,18 +1280,19 @@ def cmd_prepare() -> int:
     except RuntimeError as exc:
         print(f"fehler: {exc}", file=sys.stderr)
         return 1
-    print(f"branch {BRANCH} {head}")
+    print(f"app {lauf.app}")
+    print(f"branch {lauf.branch} {head}")
     return 0
 
 
-def push_work_branch(repo: Path) -> None:
+def push_work_branch(repo: Path, branch: str) -> None:
     last_detail = ""
     for _attempt in range(2):
-        pull = git(repo, "pull", "--rebase", "--autostash", "origin", BRANCH)
+        pull = git(repo, "pull", "--rebase", "--autostash", "origin", branch)
         if pull.returncode != 0:
             detail = (pull.stderr or pull.stdout).strip()
             raise RuntimeError(f"git pull: {detail}")
-        push = git(repo, "push", "-u", "origin", f"HEAD:{BRANCH}")
+        push = git(repo, "push", "-u", "origin", f"HEAD:{branch}")
         if push.returncode == 0:
             return
         last_detail = (push.stderr or push.stdout).strip()
@@ -1229,8 +1305,9 @@ def cmd_publish(message: str) -> int:
         print("fehler: Commit-Nachricht fehlt", file=sys.stderr)
         return 2
     try:
+        lauf = require_lauf()
         repo = repo_root()
-        if current_branch(repo) != BRANCH:
+        if current_branch(repo) != lauf.branch:
             print(
                 f"fehler: Branch ist {current_branch(repo)}. Zuerst prepare.",
                 file=sys.stderr,
@@ -1251,12 +1328,13 @@ def cmd_publish(message: str) -> int:
             raise RuntimeError(f"git commit: {detail}")
         if commit.stdout.strip():
             print(commit.stdout.strip())
-        push_work_branch(repo)
+        push_work_branch(repo, lauf.branch)
         head = git_text(repo, "rev-parse", "--short", "HEAD").strip()
     except RuntimeError as exc:
         print(f"fehler: {exc}", file=sys.stderr)
         return 1
-    print(f"gepusht {BRANCH} {head}")
+    print(f"app {lauf.app}")
+    print(f"gepusht {lauf.branch} {head}")
     return 0
 
 
@@ -1281,12 +1359,28 @@ def self_test() -> int:
         raise SystemExit("parameter.json wird nicht veröffentlicht")
     if split_groups(["a", "b", "c", "d", "e"], 3) != [["a", "b", "c"], ["d", "e"]]:
         raise SystemExit("Shard-Schnitt falsch")
-    if clamp_modell("claude-sonnet-5-5-medium", "sonnet") != "sonnet":
-        raise SystemExit("cursor-modell wurde akzeptiert")
-    if clamp_modell("grok-4.7-medium", "opus") != "opus":
-        raise SystemExit("grok wurde akzeptiert")
-    if clamp_modell("sonnet", "opus") != "sonnet":
+    if detect_runtime({"FINVAULT_APP": "claude", "CURSOR_AGENT": "1"}) != "claude":
+        raise SystemExit("explizite Anwendung verliert")
+    if detect_runtime({"CLAUDECODE": "1", "CURSOR_AGENT": "1"}) != "claude":
+        raise SystemExit("Claude wurde nicht erkannt")
+    if detect_runtime({"CURSOR_AGENT": "1"}) != "cursor":
+        raise SystemExit("Cursor wurde nicht erkannt")
+    if detect_runtime({}, "alex/wissensgeruest") != "claude":
+        raise SystemExit("Branch alex wurde nicht erkannt")
+    if detect_runtime({}, "jakob/features") != "cursor":
+        raise SystemExit("Branch jakob wurde nicht erkannt")
+    if clamp_modell("grok-4.7-high-fast", "grok-4.7-high", CURSOR_MODELS) != "grok-4.7-high":
+        raise SystemExit("fast-modell wurde akzeptiert")
+    if clamp_modell("sonnet", "opus", CLAUDE_MODELS) != "sonnet":
         raise SystemExit("sonnet abgelehnt")
+    if clamp_modell("grok-4.7-medium", "sonnet", CLAUDE_MODELS) != "sonnet":
+        raise SystemExit("grok wurde in Claude akzeptiert")
+    cursor = load_lauf({"CURSOR_AGENT": "1"})
+    claude = load_lauf({"CLAUDECODE": "1"})
+    if cursor.app != "cursor" or cursor.branch != "jakob/features" or cursor.zuordnung_modell != "grok-4.7-medium":
+        raise SystemExit(f"Cursor-Profil falsch: {cursor}")
+    if claude.app != "claude" or claude.branch != "alex/wissensgeruest" or claude.ergaenzung_modell != "opus":
+        raise SystemExit(f"Claude-Profil falsch: {claude}")
     kept, extra = limit_names(["A", " A", "B", "", "C"], 2)
     if kept != ["A", "B"] or extra != 1:
         raise SystemExit(f"Begriffsgrenze falsch: {kept} {extra}")
@@ -1396,9 +1490,9 @@ def self_test() -> int:
             register=register,
             ledger=trading / "Pilot" / "data" / "ledger.jsonl",
         )
-        lauf = load_lauf()
-        if lauf.zuordnung_modell not in ALLOWED_MODELS or lauf.ergaenzung_modell not in ALLOWED_MODELS:
-            raise SystemExit("modell nicht erlaubt")
+        lauf = load_lauf({"CURSOR_AGENT": "1"})
+        if lauf.app != "cursor" or lauf.zuordnung_modell not in CURSOR_MODELS:
+            raise SystemExit(f"modell nicht erlaubt: {lauf}")
         early = write_link_shards(roots, lauf)
         if len(early) != 1:
             raise SystemExit(f"link-shards: {early}")

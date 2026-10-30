@@ -39,6 +39,6 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish
 
 Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/wissensgeruest`. Shard-Dateien bleiben liegen. Nenne kurz, welche Begriffe ergänzt wurden. Danach stopp.
 
-Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `ergaenzung`. Nur diese Datei ändern.
+Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `claude` und `grenzen`. Den Abschnitt `cursor` und `.cursor/rules` nicht anfassen. Nur diese Datei ändern.
 
 Der erste Treffer legt die tragenden Punkte an. Jedes weitere Fragment fügt nur hinzu, was noch nicht dasteht. Eine Korrektur nur, wenn das neue Fragment eine bestehende Aussage ausdrücklich anders sagt. Steht nichts Neues in dem Fragment, bleiben die Abschnitte leer und `fertig` ist `true`. Deutsch, ein Fakt pro Stichpunkt, vollständig bis zur Zeichengrenze. Nur Aussagen aus dem gerade gelesenen Fragment. Die Notiz nicht selbst editieren. `geprüft` und `archiviert` nicht anfassen.
