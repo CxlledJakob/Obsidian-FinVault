@@ -45,7 +45,7 @@ SECTIONS = (
 )
 FORBIDDEN_SECTIONS = frozenset({"Eigene Erkenntnisse"})
 LOCKED_STATUS = frozenset({"geprüft", "archiviert"})
-MAX_BULLET_CHARS = 800
+MAX_BULLET_CHARS = 2000
 PAGE_DASH = "–"
 BRANCH = "jakob/features"
 BULLET_CHARS = 220
@@ -102,12 +102,12 @@ def default_roots() -> Roots:
 @dataclass(frozen=True)
 class Lauf:
     zuordnung_modell: str = "grok-4.7-medium"
-    strenge: str = "mittel"
-    max_begriffe: int = 18
+    strenge: str = "locker"
+    max_begriffe: int = 25
     link_shard_size: int = 4
     ergaenzung_modell: str = "grok-4.7-high"
-    max_neue_punkte: int = 12
-    max_zeichen: int = 360
+    max_neue_punkte: int = 20
+    max_zeichen: int = 1500
     wiederholung_schwelle: float = 0.72
     fill_shard_size: int = 3
     vorhandene_punkte: int = 12
@@ -1040,7 +1040,7 @@ def write_fill_shards(roots: Roots, lauf: Lauf | None = None) -> list[Path]:
             "Setze fertig immer auf true, auch wenn du Stichpunkte ergänzt.",
             "Steht in dem Fragment nichts Neues, lass sections leer.",
             f"Erlaubte Abschnitte: {sections}.",
-            "Eigene Erkenntnisse nicht füllen. Deutsch, ein Fakt pro Stichpunkt, höchstens zwei Sätze.",
+            "Eigene Erkenntnisse nicht füllen. Deutsch, ein Fakt pro Stichpunkt. Zahlen, Bedingungen und Ausnahmen vollständig lassen.",
             f"Höchstens {lauf.max_neue_punkte} neue Stichpunkte für diesen Begriff aus diesem Fragment, über alle Abschnitte. Die wichtigsten zuerst.",
             f"Ein Stichpunkt hat höchstens {lauf.max_zeichen} Zeichen. Das Skript streicht darüber hinaus.",
             "Nur Aussagen aus dem gerade gelesenen Fragment. Vorhandene Stichpunkte nicht wiederholen und nicht umformulieren.",

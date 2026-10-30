@@ -48,7 +48,7 @@ Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipelin
 
 - `modell` ist `grok-4.7-high`: Grok 4.7, hoher Aufwand, nicht Fast. Erlaubt sind nur `grok-4.7-low`, `grok-4.7-medium`, `grok-4.7-high`, `grok-4.7-xhigh`.
 - `max_neue_punkte_pro_fragment` ist die harte Obergrenze neuer Stichpunkte pro Begriff und Fragment. Das Skript streicht den Rest. Die wichtigsten Punkte stehen zuerst.
-- `max_zeichen_pro_punkt` begrenzt die Länge. Längere Punkte fallen weg.
+- `max_zeichen_pro_punkt` begrenzt die Länge. Der Wert liegt hoch, damit ein vollständiger Fakt stehen bleibt. Nur darüber hinaus fällt ein Punkt weg.
 - `wiederholung_schwelle` von `0` bis `0.95` wirft Umformulierungen eines vorhandenen Stichpunkts weg. `0` schaltet das ab.
 - `vorhandene_punkte_zeigen` ist, wie viele alte Stichpunkte ein Subagent sieht.
 - `fragmente_pro_shard` ist, wie viele Fragmente ein Subagent auf einmal liest.
@@ -58,7 +58,7 @@ Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipelin
 - Der erste Treffer legt die tragenden Punkte an. Jedes weitere Fragment fügt nur hinzu, was noch nicht dasteht.
 - Eine Korrektur nur, wenn das neue Fragment eine bestehende Aussage ausdrücklich anders sagt. `alt` ist der bisherige Stichpunkt ohne führendes `- `.
 - Steht in dem Fragment nichts Neues, setze `sections` leer und `fertig` auf `true`. Ohne `fertig` bleibt das Fragment offen.
-- Deutsch, Fachbegriffe wie in der Notiz. Stichpunkte, ein Fakt pro Punkt, höchstens zwei Sätze, keine Einleitung.
+- Deutsch, Fachbegriffe wie in der Notiz. Ein Fakt pro Stichpunkt, vollständig bis zur Zeichengrenze, keine Einleitung.
 - Nur Aussagen, die in dem gerade gelesenen Fragment stehen. Nichts aus dem Modellwissen dazuschreiben.
 - Zahlen, Bedingungen, Ausnahmen und Abgrenzungen behalten. Anekdoten weglassen.
 - Die Notiz nicht selbst editieren und nicht neu formulieren. Das Skript hängt an oder ersetzt den einen genannten Stichpunkt.
