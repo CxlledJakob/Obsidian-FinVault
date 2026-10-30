@@ -56,5 +56,6 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - A Complete Guide to Volume Price Analysis.pdf, S. 153–157 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-009-p153-p157|S. 153–157]]
+- Advances in Financial Machine Learning.pdf, S. 286–305 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-016-p286-p305|S. 286–305]]
 
 ## Verwandte Themen

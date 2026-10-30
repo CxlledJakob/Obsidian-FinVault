@@ -59,6 +59,7 @@ aktualisiert: 2026-10-29
 
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 1–20 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-001-p001-p020|S. 1–20]]
 - Markets in Profile_ Profiting from the Auction Process.pdf, S. 214–225 → [[Trading/Pilot/blocks/markets-in-profile/markets-in-profile-block-016-p214-p225|S. 214–225]]
+- Advances in Financial Machine Learning.pdf, S. 248–267 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-014-p248-p267|S. 248–267]]
 
 ## Verwandte Themen
 
