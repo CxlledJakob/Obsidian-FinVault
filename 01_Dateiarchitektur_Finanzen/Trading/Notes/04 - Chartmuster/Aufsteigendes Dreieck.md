@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/04 - Chartmuster/04 - Chartmuster|04 - Chartmuster]]"
 weitere_hauptthemen: []
 unterthema: "Dreiecke und Keile"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Aufsteigendes Dreieck
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Ein aufsteigendes Dreieck ist ein bullisches Muster: der Kurs testet dieselbe Decke, und die Tiefs der Kerzen steigen langsam.
 
 ## Kernaussagen
 
+- Wäre der Markt bärisch, würden die Tiefs fallen. Steigende Tiefs zeigen positive Stimmung.
+- Nähert sich der Kurs der Decke, wird der folgende Ausbruch vorbereitet und mit Volumen bestätigt.
+- Ist der Widerstand klar überwunden, wird die alte Decke zur Unterstützung und damit zur natürlichen Barriere für Stops.
 
 ## Funktionsweise
 
@@ -41,6 +43,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Das Beispiel steht auf dem Tageschart des EUR/USD.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +53,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- A Complete Guide to Volume Price Analysis.pdf, S. 134–153 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-008-p134-p153|S. 134–153]]
 
 ## Verwandte Themen

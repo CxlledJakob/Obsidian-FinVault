@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/16 - Quantitative & statistische Konzepte/16 - Quantitative & statistische Konzepte|16 - Quantitative & statistische Konzepte]]"
 weitere_hauptthemen: []
 unterthema: "Statistik"
@@ -10,37 +10,68 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Kovarianz
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Eine nicht singuläre Kovarianzmatrix der Größe N braucht mindestens halb so viele unabhängige und identisch verteilte Beobachtungen, wie das Produkt aus N und N plus 1.
 
 ## Kernaussagen
 
+- Quadratische Programmierung verlangt die Inverse einer positiv definiten Kovarianzmatrix, also lauter positive Eigenwerte.
+- Die Inversion ist fehleranfällig, wenn die Matrix numerisch schlecht konditioniert ist.
+- Für eine invertierbare Matrix der Größe 50 braucht man mindestens fünf Jahre täglicher IID-Daten.
+- Eine größere Matrix verschärft das Problem, weil jeder Kovarianzkoeffizient mit weniger Freiheitsgraden geschätzt wird.
+- Hierarchical Risk Parity nutzt die Kovarianzmatrix, ohne Invertierbarkeit oder positive Definitheit zu verlangen, und rechnet auch auf einer singulären Matrix.
+- Eine Matrix der Größe N entspricht einem vollständigen Graphen mit halb so vielen Kanten, wie das Produkt aus N und N minus 1.
+- Eine Kovarianzmatrix von 50 mal 50 hat 50 Knoten und 1225 Kanten.
+- Die Wurzel der Instabilität quadratischer Optimierer ist die verlangte Inversion der Kovarianzmatrix.
+- Q(t) ist die Varianz des Prognosefehlers der beobachtbaren Variable, gebildet als x transponiert mal R mal x plus Ve, und ist von der Kovarianz der verborgenen Variable zu unterscheiden.
 
 ## Funktionsweise
 
+- Die Quasi-Diagonalisierung ordnet Zeilen und Spalten so, dass die größten Werte auf der Diagonale liegen, ohne einen Basiswechsel.
+- Ähnliche Anlagen stehen danach beieinander und unähnliche weit auseinander.
+- Die Varianz einer Teilmenge wird als quadratische Form einer Inverse-Varianz-Gewichtung definiert.
+- Ist die Kovarianzmatrix diagonal, ist das Minimum-Varianz-Gewicht proportional zum Kehrwert der eigenen Varianz.
+- Bei zwei Teilmengen ist der Anteil der ersten Hälfte eins minus der Bruch aus ihrer Varianz und der Summe beider Varianzen.
+- Die Rauschterme des Kalman-Filters werden bei Mittelwert null durch eine sich entwickelnde Kovarianzmatrix beschrieben.
+- R(t gegeben t−1) ist die Kovarianz des Fehlers der verborgenen Variable, nicht eine Varianz, weil β aus Achsenabschnitt und Steigung besteht, und R ist deshalb eine 2-mal-2-Matrix.
+- Die Zustandsprognose erhöht diese Kovarianz um Vw, und das Update zieht Gain mal x mal R wieder ab.
+- Vw wird als (δ geteilt durch 1 minus δ) mal der Einheitsmatrix angesetzt.
+- In der Mehrportfolio-Kelly-Formel ist C die Kovarianzmatrix der Portfoliorenditen, und der Hebelvektor ist C hoch minus 1 mal dem Vektor der mittleren Excess Returns.
+- Bei risikofreiem Zins null und optimalen Hebeln ist die annualisierte zusammengesetzte Wachstumsrate F transponiert mal C mal F, geteilt durch 2.
+- Diese Wachstumsformel gilt nur bei den optimalen Hebeln.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Prognostizierte Renditen, Ledoit-Wolf-Shrinkage und Black-Litterman-Sichten lassen sich in den hierarchischen Ansatz einbauen.
+- Dieselbe Idee, Matrixinversionen zu vermeiden, kann instabile Verfahren wie VAR oder VECM ersetzen.
+- Weitere Einsätze bei fast singulärer Kovarianzmatrix sind die Kapitalallokation auf Manager, algorithmische Strategien, Bagging, Boosting und Random-Forest-Prognosen.
 
 ## Regeln und Kriterien
 
 
 ## Risiken und Grenzen
 
+- Mit so vielen Kanten dürfen Gewichte völlig frei umschichten, und kleine Schätzfehler führen zu völlig anderen Lösungen.
+- Nebenbedingungen, Black-Litterman-Priors oder eine stabilere Inverse nach Ledoit und Wolf bleiben in Geometrie, linearer Algebra und Analysis und beheben die fehlende Hierarchie nicht.
+- Die Annahme einer diagonalen Kovarianzmatrix bringt dem Inverse-Varianz-Portfolio etwas Stabilität, seine Varianz liegt aber weiter über der von Hierarchical Risk Parity.
+- Simulierte Renditen verfehlen serielle Korrelationen, die in historischen Strategierenditen stecken können, in die Zukunft fortbestehen und den maximalen Drawdown in der realen Welt senken können.
+- Historische Strategierenditen erfassen diese Korrelationen vollständig.
 
 ## Beispiele
 
+- Die Konditionszahl der Kovarianzmatrix im Zahlenbeispiel beträgt 150,9324.
+- Außer Stichprobe betragen die Portfoliovarianzen 0,1157 für CLA, 0,0928 für das Inverse-Varianz-Portfolio und 0,0671 für Hierarchical Risk Parity.
+- Im Beispiel ist die Korrelation der beiden Strategien null, und die Renditen sind gaußisch.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +81,8 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Advances in Financial Machine Learning.pdf, S. 248–267 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-014-p248-p267|S. 248–267]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 81–100 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-006-p081-p100|S. 81–100]]
+- Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 187–206 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-014-p187-p206|S. 187–206]]
 
 ## Verwandte Themen

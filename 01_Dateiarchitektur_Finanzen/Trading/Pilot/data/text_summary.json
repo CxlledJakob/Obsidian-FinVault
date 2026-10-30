@@ -1,0 +1,88 @@
+{
+  "repaired_records": 595,
+  "files": [
+    {
+      "file": "A Complete Guide to Volume Price Analysis.pdf",
+      "key": "a-complete-guide-to-volume-price",
+      "pdf_pages": 157,
+      "stored_pages": 157,
+      "methods": {
+        "pymupdf": 157
+      }
+    },
+    {
+      "file": "Advances in Financial Machine Learning.pdf",
+      "key": "advances-in-financial-machine-le",
+      "pdf_pages": 393,
+      "stored_pages": 393,
+      "methods": {
+        "pymupdf": 393
+      }
+    },
+    {
+      "file": "Algorithmic Trading_ Winning Strategies and Their Rationale.pdf",
+      "key": "algorithmic-trading-winning-stra",
+      "pdf_pages": 225,
+      "stored_pages": 225,
+      "methods": {
+        "pymupdf": 225
+      }
+    },
+    {
+      "file": "Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf",
+      "key": "evidence-based-technical-analysi",
+      "pdf_pages": 523,
+      "stored_pages": 523,
+      "methods": {
+        "pymupdf": 523
+      }
+    },
+    {
+      "file": "High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf",
+      "key": "high-probability-trading-strateg",
+      "pdf_pages": 290,
+      "stored_pages": 290,
+      "methods": {
+        "pymupdf": 290
+      }
+    },
+    {
+      "file": "The New Trading For a Living.pdf",
+      "key": "the-new-trading-for-a-living-pdf",
+      "pdf_pages": 377,
+      "stored_pages": 377,
+      "methods": {
+        "pymupdf": 377
+      }
+    },
+    {
+      "file": "The Richard D.Wyckoff Method of Trading and Investing in Stocks.pdf",
+      "key": "the-richard-d-wyckoff-method-of-",
+      "pdf_pages": 405,
+      "stored_pages": 405,
+      "methods": {
+        "pymupdf": 405
+      }
+    },
+    {
+      "file": "The Three Skills of Top Trading_ Behavioral Systems Building, Pattern Recognition, and Mental State Management (Wiley Trading).pdf",
+      "key": "the-three-skills-of-top-trading-",
+      "pdf_pages": 303,
+      "stored_pages": 303,
+      "methods": {
+        "pymupdf": 303
+      }
+    }
+  ],
+  "chunks": 159,
+  "skipped": [
+    {
+      "file": "A.J. Frost, Robert R. Prechter - Elliott Wave Principle_ Key To Market Behavior (2005, New Classics Library) - libgen.li.pdf",
+      "key": "a-j-frost-robert-r-prechter-elli",
+      "pdf_pages": 256,
+      "reason": "no text layer",
+      "sampled_chars": 0,
+      "sample_pages": 23
+    }
+  ]
+}

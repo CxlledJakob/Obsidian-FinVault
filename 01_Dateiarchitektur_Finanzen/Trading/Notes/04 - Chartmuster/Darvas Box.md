@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/04 - Chartmuster/04 - Chartmuster|04 - Chartmuster]]"
 weitere_hauptthemen: []
 unterthema: "Fortsetzungsmuster"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Darvas Box
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Nicholas Darvas, ein professioneller Tänzer, führte seinen Erfolg in How I Made Two Million Dollars in the Stock Market auf eine Chartmethode namens Box Theory zurück.
+- Darvas stützte die Analyse auf eine treppenartige Anordnung von Preisspannen, die er Boxes nannte.
+- Diese Boxes sind die altbekannten Unterstützungs- und Widerstandszonen der technischen Analyse.
 
 ## Funktionsweise
 
@@ -41,6 +42,7 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Für Aronson war daran als erste Berührung mit der technischen Analyse neu, dass sich Kauf- und Verkaufssignale aus dem Verhalten einer Aktie ableiten lassen.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -50,5 +52,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
 
 ## Verwandte Themen

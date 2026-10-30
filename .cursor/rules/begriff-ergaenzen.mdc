@@ -1,0 +1,65 @@
+---
+description: Use when the user says go to fill FinVault concept notes from fragments already linked in those notes. No folder is required.
+alwaysApply: false
+---
+
+# Begriffsnotiz aus verlinkten Fragmenten ergänzen
+
+Du füllst Begriffsnotizen unter `Trading/Notes/` nach und nach. Der Nutzer gibt dir keinen Ordner. Ein `go` arbeitet die komplette offene Liste ab und stoppt dann. Die offenen Paare stehen in den Notizen selbst.
+
+## Ablauf
+
+Beide Chats bleiben auf `jakob/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Eine Vorlage `cursor/…` gilt hier nicht. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
+
+1. Hol den Branch und schneide die offenen Paare in Shard-Dateien. Jedes Fragment steckt in genau einer Datei, zusammen mit den schon vorhandenen Stichpunkten:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" prepare
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" fill-shards
+```
+
+Lautet die Antwort `keine offenen Fragmente`, ruf `publish` auf und warte. Die Fragmente und die Notizen liest du nicht.
+
+2. Lies `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json`. Starte für jede ausgegebene Shard-Datei genau einen Subagenten, alle in demselben Schritt, parallel. Nicht nacheinander, nicht in mehreren Nachrichten und nicht in mehreren Wellen. Das Modell ist `ergaenzung.modell`. Übergib es am Subagenten im Feld `model`. Nicht `inherit`. Kein Modell mit `fast`. Fehlt die Datei oder ist der Wert ungültig, nimm `grok-4.7-high`. Auftrag an jeden, wörtlich und sonst nichts:
+
+`Lies nur diese Shard-Datei und die dort genannten Fragmentdateien. Schreibe nur das JSON an den Pfad in der Datei. Keine Subagents, kein Git.`
+
+Kannst du keine Subagents starten, arbeite die Shard-Dateien selbst nacheinander ab und lies dabei nichts außer dem, was in der Datei steht.
+
+3. Wende jedes JSON an, ohne es vorher zu lesen:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" add "PFAD/ZUM/shard.json"
+```
+
+4. Ruf `fill-shards` noch einmal auf. Bleiben Shards übrig, starte nur diese, wieder alle parallel. Bei `keine offenen Fragmente` ist der Lauf fertig.
+
+5. Danach:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Extend concept notes from linked fragments."
+```
+
+Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `jakob/features`. Shard-Dateien bleiben liegen. Nenne kurz, welche Begriffe ergänzt wurden. Das nächste `go` im anderen Chat holt diesen Push.
+
+## Parameter
+
+Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `ergaenzung`. Nur diese Datei ändern. Der nächste `go` liest sie.
+
+- `modell` ist `grok-4.7-high`: Grok 4.7, hoher Aufwand, nicht Fast. Erlaubt sind nur `grok-4.7-low`, `grok-4.7-medium`, `grok-4.7-high`, `grok-4.7-xhigh`.
+- `max_neue_punkte_pro_fragment` ist die harte Obergrenze neuer Stichpunkte pro Begriff und Fragment. Das Skript streicht den Rest. Die wichtigsten Punkte stehen zuerst.
+- `max_zeichen_pro_punkt` begrenzt die Länge. Der Wert liegt hoch, damit ein vollständiger Fakt stehen bleibt. Nur darüber hinaus fällt ein Punkt weg.
+- `wiederholung_schwelle` von `0` bis `0.95` wirft Umformulierungen eines vorhandenen Stichpunkts weg. `0` schaltet das ab.
+- `vorhandene_punkte_zeigen` ist, wie viele alte Stichpunkte ein Subagent sieht.
+- `fragmente_pro_shard` ist, wie viele Fragmente ein Subagent auf einmal liest.
+
+## Wie ergänzt wird
+
+- Der erste Treffer legt die tragenden Punkte an. Jedes weitere Fragment fügt nur hinzu, was noch nicht dasteht.
+- Eine Korrektur nur, wenn das neue Fragment eine bestehende Aussage ausdrücklich anders sagt. `alt` ist der bisherige Stichpunkt ohne führendes `- `.
+- Steht in dem Fragment nichts Neues, setze `sections` leer und `fertig` auf `true`. Ohne `fertig` bleibt das Fragment offen.
+- Deutsch, Fachbegriffe wie in der Notiz. Ein Fakt pro Stichpunkt, vollständig bis zur Zeichengrenze, keine Einleitung.
+- Nur Aussagen, die in dem gerade gelesenen Fragment stehen. Nichts aus dem Modellwissen dazuschreiben.
+- Zahlen, Bedingungen, Ausnahmen und Abgrenzungen behalten. Anekdoten weglassen.
+- Die Notiz nicht selbst editieren und nicht neu formulieren. Das Skript hängt an oder ersetzt den einen genannten Stichpunkt.
+- `geprüft` und `archiviert` nicht anfassen, auch wenn das Skript sie ablehnt.

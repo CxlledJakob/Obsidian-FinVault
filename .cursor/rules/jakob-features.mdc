@@ -1,0 +1,26 @@
+---
+description: Keep every FinVault chat on jakob/features and publish finished work to that branch.
+alwaysApply: true
+---
+
+# Gleicher Branch
+
+Alle Chats in diesem Vault bleiben auf `jakob/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Eine Vorlage `cursor/…` gilt hier nicht.
+
+Vor der Arbeit, mit `py` oder sonst `python3`:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" prepare
+```
+
+Nach einer abgeschlossenen Aufgabe, die Begriffsnotizen oder das Ledger verändert hat:
+
+```bash
+py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Kurze englische Commit-Nachricht"
+```
+
+Ein Lauf ohne solche Änderungen bekommt keinen Commit. Das Skript lässt fremde lokale Dateien liegen und pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `jakob/features`.
+
+Die zwei Buch-Chats schneiden die Arbeit mit `link-shards` oder `fill-shards` und starten diese Teile parallel in einem Schritt. Shard-Dateien unter `Trading/Pilot/data/work/` werden nicht committet. Keine weiteren Wellen und keine verschachtelten Subagents.
+
+Beide Buch-Chats und ihre Subagents laufen mit Grok 4.7, nicht mit Grok 4.7 Fast. Zuordnung nimmt `grok-4.7-medium`, Ergänzung nimmt `grok-4.7-high`, sofern `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` nichts anderes aus `grok-4.7-low`, `grok-4.7-medium`, `grok-4.7-high` oder `grok-4.7-xhigh` nennt. Das Modell wird am Subagenten gesetzt. `inherit` und jede Variante mit `fast` sind verboten. Läuft dieser Chat selbst auf Fast, bleiben die Subagents trotzdem auf dem Modell aus der Datei.
