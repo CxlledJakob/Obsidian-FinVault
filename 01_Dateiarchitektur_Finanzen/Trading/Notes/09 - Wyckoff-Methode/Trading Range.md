@@ -42,6 +42,10 @@ aktualisiert: 2026-10-30
 - In der Distribution handelt der Preis in einer engen Spanne und zieht auf jedem Rücksetzer weitere Käufer an.
 - Ist der Verkauf aus der alten Trading Range in der Akkumulation nicht absorbiert, scheitert der Test, und der Markt geht in die Kongestion zurück.
 - Auf dem Tageschart kann die seitliche Phase Tage, Wochen oder Monate laufen, und mehrere Umkehrsignale sagen noch nicht, wann die Drehung kommt.
+- Man kann nie im Voraus wissen, ob ein Markt eine Trading Range beginnen wird.
+- Besondere Strategien für das Handeln einer Trading Range haben nur nachträglich funktioniert; wer sie lehrt, ist zu meiden, weil man nie im Voraus weiß, wann sie einzusetzen sind.
+- Dieser Ansatz hat keine Trading-Range-Strategie, weil Beginn und Ende einer Trading Range nie im Voraus bekannt sind; nur akademische Autoren mit zweifelhafter Handelserfahrung haben eine.
+- Gehandelt wird immer rechts vom letzten Balken; verfügbar ist nur die Information bis zu diesem Balken.
 
 ## Funktionsweise
 
@@ -99,6 +103,11 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- In der bärischen Wochenmomentum-Periode der Anleihen lag der Markt im Wesentlichen in einer Trading Range mit ansehnlichen Schwüngen auf und ab, der Preis am Ende seitwärts bis geringfügig höher und mit wenig Nettogewinn.
+- Das Tagesmomentum machte bullische Umkehren innerhalb von ein oder zwei Balken jedes Preistiefs; erwogen wurden nur Short-Setups, weil das höhere Wochenmomentum bärisch war.
+- Hätte man Ende August gewusst, dass die Anleihen vier Monate klar abgegrenzte Trading-Range-Schwünge machen, wäre mit einer Range-Strategie viel Geld möglich gewesen; dieses Wissen gibt es vorher nicht.
+- Der Anleihemarkt wurde choppig mit kurzen Schwüngen, als die Änderungsrate sank.
+- Der vierten 15-Minuten-Umkehr im EUR/USD folgten mehrere seitwärts bis abwärts laufende Balken, bevor das höhere 60-Minuten-Momentum bärisch wurde.
 
 ## Unterschiedliche Quellenpositionen
 

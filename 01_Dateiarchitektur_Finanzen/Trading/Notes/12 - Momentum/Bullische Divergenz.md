@@ -20,9 +20,12 @@ aktualisiert: 2026-10-30
 
 - Eine positive oder bullische Divergenz liegt vor, wenn eine Reihe in einem etablierten Abwärtstrend weiter sukzessiv tiefere Täler setzt, während die zweite Reihe Täler auf höheren Niveaus bildet; das heißt auch bullische Nonconfirmation.
 - In der objektiven Regel der Fallstudie gilt eine positive Divergenz, wenn der Divergenzindikator über seiner oberen Schwelle liegt.
+- Eine Preis-Momentum-Divergenz nach oben liegt vor, wenn der Preis ein neues Tief macht, der Momentum-Indikator aber ein höheres Tief.
 
 ## Kernaussagen
 
+- Sie warnt, dass der Rückgang langsamer wird und bald ein Preistief entstehen kann, dem ein Anstieg folgt.
+- Eine bullische Preis-Momentum-Divergenz warnt, dass der Rückgang sich verlangsamt und bald ein Kurstief entstehen kann, dem ein Anstieg folgt.
 
 ## Funktionsweise
 
@@ -61,6 +64,8 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Der S&P erreichte das Kursziel hoher Wahrscheinlichkeit für ein Tief der Welle 5 und machte eine bullische Momentumumkehr auf einer bullischen Momentum-Preis-Divergenz.
+- Diese Lage ist ein ideales Setup für einen Long mit geringem Kapitaleinsatz und viel Aufwärtspotenzial.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -36,6 +36,18 @@ aktualisiert: 2026-10-30
 - Weicht der Live-Handel vom Backtest ab, ist die Ursache oft ein grundlegender Wandel der Marktstruktur und nicht ein Fehler beim Backtesten.
 - Dieser Wandel ist ein Regime Shift durch staatliche Regulierung oder makroökonomische Änderungen.
 - Fondsmanager bleiben auch bei einer angeblich algorithmischen, automatisierten Strategie in der Rolle, auf dieser Ebene zu urteilen, ob die Modelle noch gültig sind.
+- Die Musterposition ist der zweite von vier technischen Faktoren und liefert eines der vier Schlüsselstücke für eine Handelsentscheidung.
+- Einfache Mustererkennung soll zeigen, ob der Markt in einem Trend oder einer Korrektur ist und welche Lage er darin hat.
+- Die drei Ziele sind, Trend oder Korrektur zu erkennen, zu prüfen, ob die Bedingungen erfüllt sind, die typischerweise einen nahen Abschluss warnen, und vorherzusagen, was nach dem Abschluss wahrscheinlich folgt.
+- Die einfache Leitlinie und die einfachen Muster beruhen auf der Elliott-Wellen-Analyse.
+- Angekündigt werden eine wichtige Leitlinie für Trend oder Korrektur und zwei einfache Muster für die Mindestbedingungen eines Abschlusses.
+- Ausgeführt werden danach eine Leitlinie und drei Muster auf Elliott-Wellen-Basis, ausreichend für konkrete Handelsentscheidungen ohne kompliziertes Zählen.
+- Die eine Schlüsselleitlinie erkennt Trend oder Korrektur, und drei Muster helfen, die Lage darin zu bestimmen.
+- Die Leitlinie lautet: Überlappt ein Markt einen Abschnitt, macht er eher wahrscheinlich eine Korrektur; eine Überlappung ist ein neues Hoch oder Tief mit anschließendem Handel zurück in die Spanne des vorherigen Abschnitts.
+- Korrekturen haben gewöhnlich mindestens drei Abschnitte, Trends gewöhnlich fünf, und die Trendabschnitte überlappen nicht.
+- Welle, Schwung und Abschnitt bezeichnen dasselbe; Korrekturen werden mit Buchstaben bezeichnet, Trends mit Zahlen.
+- Die Trendposition ist ein weiterer Schlüssel für Handelsrichtung und Handelsstrategie und gehört in den Tradingplan.
+- Eine Momentumumkehr zeigt nicht, wo der Markt im Preistrend steht und ob der Trend selbst an oder nahe einer Umkehr ist; das leistet die Musterposition.
 
 ## Funktionsweise
 

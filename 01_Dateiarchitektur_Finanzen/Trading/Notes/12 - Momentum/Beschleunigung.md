@@ -22,9 +22,15 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Die Umkehren eines Momentum-Indikators stehen für die Änderung des Momentums, also die Zu- oder Abnahme der Änderungsrate des Preistrends.
+- Alle preisbasierten Indikatoren stellen ungefähr dasselbe dar: die Änderungsrate, also wie schnell der Preistrend sich bewegt.
+- Jeder Indikator hat andere Bedingungen für eine Momentum-Umkehr, aber alle stehen dafür, dass der Preistrend umkehrt, sich verlangsamt oder beschleunigt.
+- Beim MACD ändert sich die Momentum-Geschwindigkeit, wenn die Balken höher oder kürzer werden oder die Signallinie kreuzen.
 
 ## Funktionsweise
 
+- Während eines Momentumtrends ohne Umkehr kann die Geschwindigkeit des Preistrends ebben und fließen, ohne eine Momentum-Umkehr auszulösen.
+- Die Dual-Time-Frame-Momentum-Strategie soll während des Preistrends erkennen, wann entweder eine kleine Korrektur wahrscheinlich abgeschlossen ist oder die Geschwindigkeit des Trends zunehmen könnte.
 
 ## Voraussetzungen
 

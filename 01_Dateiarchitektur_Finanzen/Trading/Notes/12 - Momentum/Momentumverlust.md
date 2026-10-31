@@ -18,6 +18,7 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Ein kürzerer MACD-Histogrammbalken als der vorherige Balken bedeutet eine engere Spanne zwischen den zwei gleitenden Durchschnitten und einen Verlust an Momentum.
 
 ## Kernaussagen
 
@@ -29,6 +30,11 @@ aktualisiert: 2026-10-30
 
 ## Funktionsweise
 
+- Eine bärische MACD-Momentumumkehr liegt vor, wenn ein Balken oberhalb der Mittellinie, auch Signallinie genannt, kürzer ist als der vorherige Balken.
+- Eine bullische MACD-Momentumumkehr liegt vor, wenn ein Balken unterhalb der Mittellinie kürzer ist als der vorherige Balken.
+- Jede dieser beiden Lagen ist eine engere Spanne zwischen dem kürzerfristigen und dem längerfristigen gleitenden Durchschnitt und damit eine Abnahme des Momentums.
+- Eine Änderung des Momentums ist eine Änderung der Preis-Rate-of-Change.
+- Gewöhnlich fällt diese Momentumänderung mit einer Änderung des Preistrends zusammen, manchmal aber nicht.
 
 ## Voraussetzungen
 

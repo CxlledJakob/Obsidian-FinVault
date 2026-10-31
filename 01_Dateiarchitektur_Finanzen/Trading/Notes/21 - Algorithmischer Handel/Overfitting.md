@@ -125,6 +125,9 @@ aktualisiert: 2026-10-30
 - Komplexität wird hinzugefügt, bis die Leistung im Testset zu sinken beginnt. Das zeigt, dass die Grenze zwischen Underfitting und Overfitting überschritten ist.
 - Jenseits dieser Grenze hat die zusätzliche Komplexität begonnen, das Rauschen in den Trainingsdaten anzupassen.
 - Die optimale Regel ist die Regel der höchsten Komplexität, die im Testset die beste Leistung erbracht hat.
+- Die besten Einstellungen für einen begrenzten Zeitraum von nur wenigen Monaten täglicher SPX-Daten zu wählen, wird hier Optimieren der historischen Daten genannt.
+- Ob diese historisch gewählten Einstellungen künftig nützlich bleiben, gilt gewöhnlich, nicht immer.
+- Perfektion gibt es nicht; gesucht wird die beste Passung, und besser als diese beste Passung wird es nicht.
 
 ## Funktionsweise
 
@@ -209,6 +212,8 @@ aktualisiert: 2026-10-30
 
 ## Unterschiedliche Quellenpositionen
 
+- Manche Handelschulungen behaupten einen einzigen besten Einstellungssatz eines Indikators für die ganze Zeit; dem wird entgegengehalten, dass sich Marktvolatilität und Momentumzyklen ändern und die bisherigen Einstellungen dann deutlich weniger nützlich werden.
+- Wer lehrt, ein Indikator und eine Einstellung erzeugten verlässlich Umkehren an Preishochs und -tiefs, lehrt nicht die Wahrheit eines erfahrenen und erfolgreichen Traders.
 
 ## Eigene Erkenntnisse
 

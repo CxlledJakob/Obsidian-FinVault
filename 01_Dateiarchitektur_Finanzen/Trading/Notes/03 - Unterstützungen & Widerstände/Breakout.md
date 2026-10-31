@@ -19,6 +19,8 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Der Channel-Breakout-Operator CBO hat in der Indicator Scripting Language zwei Argumente: Indicator gleich CBO(Time Series, n).
+- Die Swing-Breakout-Einstiegsstrategie eröffnet long oder short einen Tick über dem jüngsten Swing-Hoch oder unter dem jüngsten Swing-Tief, sobald die Trade-Bedingungen erfüllt sind.
+- Die zwei in diesem Buch empfohlenen Einstiegsstrategien sind der Momentum-Reversal-Trailing-One-Bar-High/Low und der Swing-Breakout.
 
 ## Kernaussagen
 
@@ -61,6 +63,10 @@ aktualisiert: 2026-10-30
 - Die Turtles, eine Gruppe von Rohstoffhändlern, handeln auf der Grundlage von Ausbrüchen.
 - Eine Bullenfalle oder ein Breakout Failure liegt vor, wenn die Preise kurz nach dem Ausbruchsdurchbruch das Ausbruchsniveau in der Gegenrichtung wieder durchstoßen.
 - Dieses Wieder-Durchstoßen wird Turtle-Soup-Signal genannt, weil die Turtles bei Breakout Failures in Schwierigkeiten geraten.
+- Aus längerfristiger Sicht ist ein Ausbruch des XAU aus der mehr als einjährigen Trading-Range nach oben wahrscheinlich, nicht nach unten, und zwar in einen neuen Bullentrend zu einem neuen Hoch.
+- Über etwa ein Jahr machte das XAU mehrere Wochentiefs und danach Anstiege über mehrere Wochen, brach aber nie zu einem neuen Hoch aus. Die Strategie blieb dieselbe: long für einen möglichen bullischen Ausbruch positionieren.
+- Ein Bruch über 825,50 im Februar-2008-Goldfuture ist ein erster möglicher Long-Einstieg, auch wenn der Kurs vorher auf 808 bis 800 zurücklaufen kann, entsprechend 807 bis 797 in den kontinuierlichen Tagesdaten.
+- Solange Silber den ersten kleineren Widerstand bei 1485 nicht bricht, fehlt dem Aufwärtsschub zusätzliche Kraft; ein Ausbruch darüber würde Gold und Silber nach oben stärken.
 
 ## Funktionsweise
 
@@ -74,6 +80,13 @@ aktualisiert: 2026-10-30
 - Optimal ist, was die Leistung des Indikators maximiert, etwa die Durchschnittsrendite oder die risikobereinigte Rendite.
 - Weil sich das Verhalten der Finanzmarkt-Zeitreihen über die Zeit ändert, würde sich auch der optimale Look-back des CBO ändern; adaptive CBO-Versionen wurden in der Fallstudie nicht verwendet.
 - Zeitreihenoperatoren umfassen unter anderem den gleitenden Durchschnitt, die gleitende Kanalnormalisierung, also die Stochastik, Ausbruchskanäle und gleitende Steigungen.
+- Der erste Schutzstop liegt einen Tick jenseits des Swing-Hochs oder Swing-Tiefs, das vor dem Einstieg entstanden ist.
+- Das Prinzip ist, dass Umkehr oder Trendfortsetzung vorbereitet sind und der Trade erst ausgeführt wird, wenn der Markt ein Swing-Extrem in der erwarteten Richtung nimmt.
+- Neben der Momentumumkehr ist der Swing-Breakout eine der zwei objektiven Einstiegsstrategien; beide zusammen genügen.
+- Ist das Setup erfüllt, bleibt über Art, Preis und ersten Schutzstop keine weitere Entscheidung.
+- Sind die Bedingungen für einen Trade erfüllt, wird ein Go-long- oder Go-short-Einstieg einen Tick über beziehungsweise unter dem jüngsten Swing-Hoch oder Swing-Tief ausgelöst.
+- Der initiale Schutz-Stop-Loss wird einen Tick unter beziehungsweise über dem Swing-Hoch oder Swing-Tief platziert, das vor dem Einstieg entstanden ist.
+- Das Prinzip ist, dass die Bedingungen für eine Umkehr oder eine Trendfortsetzung erfüllt sind und der Trade eingegangen wird, wenn der Markt ein Swing-Hoch oder Swing-Tief in der erwarteten Trendrichtung über- oder unterschreitet.
 
 ## Voraussetzungen
 
@@ -96,6 +109,7 @@ aktualisiert: 2026-10-30
 - Ist der bestätigte Bruch da, kann mitgegangen werden. Darunter liegt dann ein tiefes natürliches Schutzpolster, und der Stop sitzt unter dem letzten Pivot-Tief.
 - Volumen kann die Nachricht bestätigen. Reagiert der Markt mit hohem Volumen, haben die Market Maker die Meldung als gute Nachricht bestätigt.
 - Die fünf getesteten Trendfolge-Systeme waren Channel-Breakout, das Kreuz zweier gleitender Durchschnitte, zwei Fassungen von Momentum und MACD gegen seine Signallinie.
+- Der Ausbruch des britischen Pfunds auf ein neues Tief nach einem monatelangen Bärentrend ist für Swingtrader typischerweise ein sehr bärisches Signal, kann aber bei erfüllten Wellen 1 bis 4 gerade dann nahe am Ende des Bärentrends liegen, wenn viele Trader extrem bärisch sind.
 
 ## Regeln und Kriterien
 
@@ -199,6 +213,10 @@ aktualisiert: 2026-10-30
 - Die Benennung lautet TT oder TI, dann Eingabereihennummer, dann Look-back; TT-15-137 ist die traditionelle Trendregel auf Reihe 15, Cumulative Money Flow, mit 137 Tagen, und TI-40-41 die inverse Regel auf Reihe 40, den Quality Spread BAA minus AAA, mit 41 Tagen.
 - Neben dem Channel Breakout nennt der Text als weit verbreitete Trendindikatoren gleitende Durchschnitte, Moving-Average-Bänder und Alexander-Filter, auch Zickzack-Filter genannt, beschrieben bei Kaufman.
 - Eine Channel-Breakout-Regel gibt nach traditioneller Lesart der technischen Analyse ein Kaufsignal, wenn die Eingabereihe am aktuellen Tag und an allen früheren Tagen im Look-back-Fenster auf dem Maximum steht, und ein Verkaufssignal, wenn sie auf dem Minimum steht.
+- Ein Ausbruch aus einer mehrtägigen Konsolidierung nach oben ist Anlass, den Stop unter das Tief dieser Konsolidierung zu ziehen.
+- Ein Short kann ausgeführt werden, wenn ein kleineres Swing-Tief oder ein Ein-Bar-Tief unterschritten wird.
+- Ein alternativer Auslöser neben dem Bruch des Ein-Bar-Tiefs ist ein Indikator-Kreuz, hier der 3-Minuten-CCI mit Periode 14 unter die Nulllinie.
+- Die empfohlenen Einstiegsstrategien sind vollständig objektiv, sobald die Trade-Bedingungen erfüllt sind.
 
 ## Risiken und Grenzen
 
@@ -233,6 +251,13 @@ aktualisiert: 2026-10-30
 - Eine Studie von Dunn & Hargitt aus dem Jahr 1970 fand einen Channel-Breakout mit einer Spanne von vier Wochen, Donchians Vier-Wochen-Regel, als bestes von mehreren populären Systemen, getestet auf 16 Jahren Daten von sieben Rohstoffmärkten.
 - Kaufman vergleicht Channel-Breakout mit exponentieller Glättung, der Steigung der linearen Regression, Swing-Breakout und Point-and-Figure an Eurodollars über die zehn Jahre 1985 bis 1994.
 - In diesem Vergleich hatte die Channel-Breakout-Methode über die zehn Jahre die höchste risikobereinigte Performance.
+- Die Erwartung zum 17. August 2007 ist, dass das XAU die lange Range schließlich nach oben verlässt und ein neues Hoch deutlich über dem Juli-Hoch 2007 macht.
+- Übersteigt das XAU das Juli-Hoch, liegt die mögliche Belohnung deutlich über dem Dreifachen des Risikos, wenn die Order über dem Hoch vom 17. August ausgeführt wird.
+- Der Goldausbruch erfolgte am 26. Dezember, bestätigte Welle 3, brach aus dem Dreieck und schloss die kleine Lücke vom 27. November.
+- Der ES-Long wurde als Kaufstop ein Tick über dem kleineren Swing-Hoch bei 1311,00 geplant und bei 1311,25 ausgeführt.
+- Die Sojabohnen brachen aus einer sechstägigen Konsolidierung nach oben aus; der Stop wurde auf das Tief vom 29. Juni bei 875 gelegt.
+- Vier Sessions nach diesem Ausbruch erreichten die Bohnen am 13. Juli die Oberseite des Regressionskanals.
+- Im ES wurde der Short ausgeführt, als das Ein-Bar-Tief 1291,75 genommen wurde, mit Stop bei 1294,50; der alternative Einstieg lag zwei Ticks unter dem nachgezogenen Ein-Bar-Tief von 1291,50.
 
 ## Unterschiedliche Quellenpositionen
 

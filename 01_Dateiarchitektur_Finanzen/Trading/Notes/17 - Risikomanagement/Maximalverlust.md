@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Verlustrisiko"
@@ -10,16 +10,15 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Maximalverlust
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Der maximale Monatsverlust ist der Verlust, bei dessen Erreichen für den Rest des Monats nicht mehr gehandelt wird.
 
 ## Kernaussagen
 
@@ -35,6 +34,9 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Die meisten Trader haben einen für einen Monat akzeptablen Höchstverlust. Ein maximaler Monatsverlust darf nicht mehr als 10 Prozent betragen.
+- Haben geschlossene Trades in weniger als einem Monat einen Drawdown von 10 Prozent auf dem Konto erzeugt, wird der Handel für den Rest des Monats eingestellt.
+- Dann brauchen entweder der Trader oder der Tradingplan eine Auszeit. Gelegenheiten gibt es immer im nächsten Monat.
 
 ## Risiken und Grenzen
 

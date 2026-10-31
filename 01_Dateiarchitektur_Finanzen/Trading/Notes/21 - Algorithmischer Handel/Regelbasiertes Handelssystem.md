@@ -24,6 +24,7 @@ aktualisiert: 2026-10-30
 - Eine Methode ist genau dann objektiv, wenn sie als Computerprogramm eindeutige Marktpositionen long, short oder neutral erzeugen kann; alles, was sich nicht so reduzieren lässt, ist subjektiv.
 - Eine künstliche Handelsregel ist ein computersimuliertes Handelssignal, dessen Genauigkeit, der Anteil richtiger Signale, experimentell gesetzt werden kann, sodass die erwartete Rendite bekannt ist.
 - Eine Regel ist ein Eingabe-Ausgabe-Prozess. Sie verwandelt eine oder mehrere Zeitreihen in eine neue Zeitreihe aus +1 und −1, die Long- und Short-Positionen im gehandelten Markt, dem S&P 500, anzeigen.
+- Ein Handelssystem ist ein Satz vollständig objektiver Regeln, die die genauen Einstiegs-, Stop-Loss- und Ausstiegspreise bestimmen.
 
 ## Kernaussagen
 
@@ -139,6 +140,18 @@ aktualisiert: 2026-10-30
 - Formale Modelle auf verallgemeinerten autoregressiven verteilten Lags übertreffen menschliche Experten in der zweidimensionalen Bewertung aus Diskrimination und Kalibrierung deutlich.
 - Cowles zeigte, dass von 1902 bis 1929 die Hälfte der Prognosen von Hamilton, dem Herausgeber des Wall Street Journal, zur Richtungsänderung falsch war. Auch 20 Versicherungen, 16 Finanzdienste und 24 Finanzpublikationen hatten unscheinbare Ergebnisse.
 - In einer Hulbert-Studie wurden 57 Newsletter von August 1987 bis August 1998 verfolgt. Weniger als 10 Prozent schlugen die zusammengesetzte Rendite des Wilshire 5000.
+- Die Dual-Time-Frame-Momentum-Strategie ist ein vollständig objektiver Ansatz, um Trade-Setups als einen Teil eines umfassenden Tradingplans zu identifizieren.
+- Dieser Teil des Tradingplans hat vollständig objektive Regeln, unabhängig davon, welcher Indikator verwendet wird.
+- Zuerst wird definiert, was bei dem gewählten Indikator eine Momentumumkehr ist.
+- Hat der Indikator Overbought- oder Oversold-Zonen, werden sie anhand seines typischen Verhaltens bei Momentumänderungen in die Regeln aufgenommen.
+- Die Setups sind keine Ausführungssignale, sondern objektive Bedingungen, die erfüllt sein müssen, um einen Trade zu erwägen.
+- Zur Momentumlage und zu ihrer Verwendung für konkrete Handelsentscheidungen gibt es keine Interpretation.
+- Die Regeln gelten für jedes Paar von Zeitebenen, von Wochen- und Tagesdaten bis zu 15-Minuten- und 5-Minuten-Daten.
+- Es wird nie ein eigener Momentumsatz für Bullen-, Bären- oder Seitwärtsmarkt oder für volatile und ruhige Märkte aufgestellt, weil die vorausliegende Marktart unbekannt ist.
+- Indikator und Einstellungssatz werden beibehalten, bis ein sehr zwingender Grund zur Änderung vorliegt.
+- Der Glossartext formuliert den Satz „You can't buy success.“.
+- Nach Kenntnis des Autors ist kein verkauftes Handelssystem im Echtzeithandel über die Zeit durchgehend profitabel gewesen.
+- Statt ein System zu kaufen, sollen die Systemkosten und das Handelskonto an eine Wohltätigkeitsorganisation der eigenen Wahl gegeben werden.
 
 ## Funktionsweise
 
@@ -201,6 +214,14 @@ aktualisiert: 2026-10-30
 - Für den Vergleich eigenständiger Handelsregeln sind die Handelskosten anzusetzen, weil häufige Umkehrsignale höhere Kosten verursachen als seltene.
 - In diesen Studien wurden keine Handelskosten angesetzt, weil das Ziel Prognosekraft war und nicht eine eigenständige Strategie; Kosten können den Wert einer häufig umkehrenden Regel verdecken.
 - Eine positive Backtest-Abweichung von null führt nur dann dazu, die Regel als vorhersagend zu behandeln, wenn sie größer ist, als die um null zentrierte Stichprobenverteilung als Zufallsschwankung plausibel macht.
+- Ist die höhere Zeitebene bullisch und nicht overbought, werden nur Long-Positionen nach einer bullischen Umkehr der kleineren Zeitebene erwogen, solange diese Umkehr unterhalb der Overbought-Zone entsteht.
+- Ist die höhere Zeitebene bullisch, aber overbought, wird keine neue Long-Position genommen, und eine Short-Position darf nach einer bärischen Umkehr der kleineren Zeitebene erwogen werden.
+- Ist die höhere Zeitebene bärisch und nicht oversold, folgt eine Short-Position auf eine bärische Umkehr der kleineren Zeitebene, solange diese Umkehr oberhalb der Oversold-Zone entsteht.
+- Ist die höhere Zeitebene bärisch, aber oversold, wird keine neue Short-Position genommen, und Long-Trades dürfen nach einer bullischen Umkehr der kleineren Zeitebene erwogen werden.
+- Für den Stochastic werden dieselben vier Regeln verwendet wie für den DTosc, weil auch der Stochastic Overbought- und Oversold-Zonen hat.
+- Für MACD oder einen anderen bekannten Indikator wird zuerst die Aktivität bestimmt, die eine Momentumänderung darstellt, also Kreuzung von schneller und langsamer Linie, höherer oder tieferer Histogrammbalken oder ein Stoß über oder unter eine Overbought- oder Oversold-Linie, und danach werden die vier Lagen der höheren Zeitebene in Regeln gefasst.
+- Die Mindestbedingungen, die auf beiden Zeitebenen erfüllt sein müssen, um einen Trade zu erwägen, sind der erste Teil eines Tradingplans mit einem Vorteil bei der Setup-Erkennung.
+- Die in diesem Buch empfohlenen Einstiegsstrategien sind vollständig objektiv, sobald die Trade-Bedingungen erfüllt sind.
 
 ## Risiken und Grenzen
 

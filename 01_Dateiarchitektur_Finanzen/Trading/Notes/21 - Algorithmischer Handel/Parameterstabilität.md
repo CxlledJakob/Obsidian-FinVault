@@ -29,6 +29,14 @@ aktualisiert: 2026-10-30
 - Fehlende Hierarchie lässt Gewichte frei variieren und ist eine Wurzel der Instabilität des Critical Line Algorithm.
 - Hierarchical Risk Parity stellt die Stabilität der Gewichte wieder her, und die Lösung ist konstruktionsbedingt intuitiv.
 - Robustheit, Anschaulichkeit und Flexibilität von Hierarchical Risk Parity folgen daraus, dass keine Kovarianz-Invertierbarkeit verlangt wird.
+- Für einen gegebenen Momentumindikator gibt es gewöhnlich verschiedene Einstellungen für verschiedene Märkte und gewöhnlich verschiedene Einstellungen für verschiedene Zeitebenen desselben Marktes.
+- Die für die jüngsten Daten eines Marktes und einer Zeitebene gefundenen besten Einstellungen ändern sich.
+- Momentumtrends wechseln von niedriger Volatilität mit relativ seltenen Momentumumkehren zu hoher Volatilität mit relativ häufigen Momentumumkehren.
+- Gelegentlich werden die Indikatoreinstellungen angepasst, damit sie die jüngste Momentumvolatilität abbilden.
+- Sind nach einer Änderung von Trendgeschwindigkeit und Volatilität die früher besten Einstellungen nach einigen Momentumzyklen nicht mehr optimal, kann die Lookback-Periode verkürzt oder vergrößert werden.
+- Hat man einen Indikator und einen Einstellungssatz gewählt, bleibt man dabei, bis ein sehr zwingender Grund zur Änderung vorliegt.
+- Dieselben zuvor nützlichen Einstellungen blieben über die folgenden Monate nützlich, bis der Aufwärtstrend stärker und die Korrekturen in Zeit und Preis kleiner wurden und der Indikator die Oversold-Zone nicht mehr erreichte.
+- Nach einigen weiteren Oszillationen ohne Erreichen der Oversold-Zone auf den Korrekturen würde man wahrscheinlich auf eine kürzere Lookback-Periode wechseln.
 
 ## Funktionsweise
 

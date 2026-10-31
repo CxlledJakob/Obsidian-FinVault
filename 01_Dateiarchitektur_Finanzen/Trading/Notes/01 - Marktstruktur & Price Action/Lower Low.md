@@ -32,6 +32,13 @@ aktualisiert: 2026-10-30
 - Diese sukzessiv tieferen Täler der ersten Reihe sind der eine Teil der auch bullische Nonconfirmation genannten Lage.
 - Wie viel Bewegung nötig ist, um ein neues Tal als gebildet anzusehen, ist in der subjektiven Divergenzanalyse eine offene Frage.
 - Unklar bleibt außerdem, welche nicht zeitgleichen Täler der beiden Reihen verglichen werden sollen und wie lange die Divergenz bestehen muss.
+- Abbildung 3.1 zeigt einen starken Bärentrend, der tiefere Tiefs und tiefere Hochs macht.
+- Eine Korrektur soll das Extrem, das den vorherigen Trend eröffnet hat, nicht nehmen, sondern in der vorherigen Trendrichtung ein neues Extrem machen.
+- Ist ein Rückgang die Korrektur eines Aufwärtstrends, soll er nicht unter das Schwungtief vom 14. März fallen.
+- Beim 60-Minuten-S&P-Mini folgte auf die Korrektur ein neues Tief des Bärentrends, ohne dass die Korrektur selbst eine Schwungüberlappung hatte.
+- Beim 15-Minuten-EUR/USD wurde ein Schwungtief genommen, was gewöhnlich den Abschluss der Korrektur signalisiert, und der Kurs machte ein neues Tief unter dem Beginn der Korrektur.
+- Beim 60-Minuten-Mini-Dow, dessen Überlappungen eine Korrektur im Aufwärtstrend nahelegten, entstand statt eines neuen Hochs ein starkes neues Tief.
+- Die Überlappung beim Philadelphia Gold and Silver Index warnte, dass kein Bärentrend zu neuen Tiefs lief, und der Markt handelte nicht unter das Tief des vorherigen Trends.
 
 ## Funktionsweise
 

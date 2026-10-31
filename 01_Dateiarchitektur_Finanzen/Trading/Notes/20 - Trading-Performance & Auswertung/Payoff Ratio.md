@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Renditekennzahlen"
@@ -10,19 +10,25 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-10-30
 ---
 
 # Payoff Ratio
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Bei etwa 30 bis 40 Prozent Gewinntrades müssen die Verluste der Verlusttrades relativ klein und die Gewinne der Gewinntrades relativ groß sein. Einen anderen Weg zum Erfolg nennt der Text nicht.
+- Die besten Profis haben selten mehr als 50 Prozent Gewinner. Langfristig Erfolgreiche haben gewöhnlich mehr Verlierer als Gewinner.
+- Eine Trefferquote über 50 Prozent über die Zeit gehört zur Elite.
+- Ein Drawdown von 20 Prozent braucht 25 Prozent Gewinn bis zum Breakeven, einer von 50 Prozent braucht 100 Prozent. Einen erheblichen Verlust aufzuholen verlangt viel.
+- Beim Trailing-One-Bar-Entry bleiben die Verluste relativ klein und die möglichen Gewinne relativ groß.
+- Der Swing Entry sollte eine höhere Erfolgsquote haben als der Trailing-One-Bar-Entry, gewöhnlich bei größerem Kapitaleinsatz. Ein sehr früher Einstieg kann die niedrigere Quote mit kleinerem Einsatz tauschen.
+- Die Verluste auf Verlusttrades müssen relativ klein und die Gewinne auf Gewinntrades relativ groß sein. Einen anderen Weg zum Handelserfolg gibt es nicht.
+- Das folgt aus der Gewinnquote: Die besten professionellen Trader liegen selten über 50 Prozent, langfristig erfolgreiche Trader haben gewöhnlich mehr Verlierer als Gewinner, und wer gut wird, hat etwa 30 bis 40 Prozent Gewinntrades.
 
 ## Funktionsweise
 

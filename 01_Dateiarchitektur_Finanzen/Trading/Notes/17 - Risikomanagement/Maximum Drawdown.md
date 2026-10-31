@@ -29,6 +29,11 @@ aktualisiert: 2026-10-30
 - In Drawdowns ist es für erfolgreiche Trendfolger nicht ungewöhnlich, bis zu 30 Prozent ihres Handelskapitals zu verlieren.
 - Diese Drawdowns treten auf, wenn die Märkte trendlos sind, und das ist die Mehrheit der Zeit.
 - Die meisten Trendfolge-Systeme erzeugen in 50 bis 65 Prozent der Fälle unprofitable Signale. Das sind die Phasen, in denen die Trendfolger den Drawdown erleben.
+- Ein Drawdown von 20 Prozent braucht einen Gewinn von 25 Prozent, nur um wieder auf Breakeven zu kommen.
+- Einen erheblichen Verlust aufzuholen verlangt viel.
+- Große Positionen können große Verluste erzeugen, die sich sehr schwer erholen lassen.
+- Ein großer Verlust ist emotional und finanziell sehr schwer aufzuholen. Deshalb bleiben erfolgreiche Trader bei einem relativ engen Stop und einem akzeptablen Verlust.
+- Einen bedeutenden Verlust aufzuholen, erfordert viel.
 
 ## Funktionsweise
 

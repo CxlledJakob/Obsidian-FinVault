@@ -33,6 +33,16 @@ aktualisiert: 2026-10-30
 - Im Topping-Out-Abschnitt treiben Gier und die Angst vor verpassten leichten Gewinnen das hohe und steigende Volumen, in das die Insider verkaufen.
 - Märkte werden von Menschen und ihrem Geld getrieben und von Angst und Gier getragen.
 - Gier zeigt sich, wenn Nachzügler einen langen Anstieg kaufen, weil sie eine goldene Gelegenheit nicht verpassen wollen, während die Market Maker den Markt schon verlassen.
+- Zu viele Trader schlagen nach den großen Gewinnen und stellen sich große Profite aus großen Positionen vor. Das ist ein Wunschtraum.
+- Große Positionen können große Verluste erzeugen, die sehr schwer aufzuholen sind.
+- Läuft der Markt gegen die übergroße Position, gilt das als Kaufgelegenheit, zu einem besseren Preis noch weitere Positionen aufzustocken.
+- Viele, die in einem anderen Geschäft schon erfolgreich sind, halten Trading für etwas anderes, werfen die Erfolgsregeln weg und glauben an einen schnellen, leichten Weg zum Reichtum.
+- Anzeigen versprechen Geheimnisse, mühelose große Gewinne, Charts, auf denen jeder Trade gewinnt, oder Hunderte Prozent, wenn man einem System oder einem Advisory folgt.
+- Seriöse Handelslehrer machen keine ergebnisbezogenen Versprechen; sie können nur lehren, worin sie gut geworden sind, die Anwendung liegt beim Lernenden.
+- Angst und Gier verdrängen zeitweise den Menschenverstand gegenüber solchen Versprechen.
+- Erfolg lässt sich nicht kaufen, weder als fertiger Plan noch als System.
+- Trading als Schnell-reich-Aktivität steht dem ernsthaften Lernen gegenüber, das auf hohen Hebel verzichtet, bis der Handel gekonnt ist.
+- Je mehr Wissen und Erfahrung, desto schneller lässt sich brauchbare Information von einem Köder unterscheiden.
 
 ## Funktionsweise
 
@@ -52,6 +62,7 @@ aktualisiert: 2026-10-30
 ## Risiken und Grenzen
 
 - Wer fortlaufend die großen Deals sucht und auf den großen Wurf hofft, geht in der Regel pleite.
+- Der Markt hört dann nicht auf, dagegen zu laufen. Man steigt mit einem großen Verlust aus oder wird vom Broker aus dem Markt genommen, wenn das Kapital für die Margin aufgebraucht ist.
 
 ## Beispiele
 

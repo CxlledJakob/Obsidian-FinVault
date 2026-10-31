@@ -19,6 +19,9 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Drei Zeitebenen geben eine dreidimensionale Sicht auf Preis und Volumen, um Risiko, relative Stärke und die wahrscheinliche Dauer eines Trades zu beurteilen.
+- Die Multiple-Time-Frame-Momentum-Strategie dieses Kapitels ist ein objektiver Filter, um Trade-Setups mit hoher Wahrscheinlichkeit zu identifizieren.
+- Die Multiple-Time-Frame-Momentum-Strategie eröffnet Trades nur, wenn mindestens zwei Zeitebenen des Momentums in dieselbe Richtung zeigen, etwa Woche und Tag oder Tag und 60 Minuten.
+- Gehandelt wird in Richtung der größeren Zeitebene, ausgeführt nach einer Momentumumkehr der kleineren Zeitebene in dieselbe Richtung; es können mehr als zwei Zeitebenen genutzt werden.
 
 ## Kernaussagen
 
@@ -79,6 +82,44 @@ aktualisiert: 2026-10-30
 - Läuft die Position mit dem dominanten Trend, ist das Risiko niedriger. Läuft sie dagegen, ist das Risiko höher, und die Position wird voraussichtlich nicht lange gehalten, weil ein Rücksetzer oder eine Umkehr gehandelt wird.
 - Ein echter Wechsel erscheint zuerst auf der schnellen Chart, dann auf der Handelschart und zuletzt auf der dominanten Chart.
 - Drei Charts genügen. Auch ohne Volume Price Analysis bleibt die Methode eine dreidimensionale Sicht.
+- Die höhere Zeitebene bestimmt die Handelsrichtung.
+- Die Momentumumkehren der niedrigeren Zeitebene in Richtung des Momentums der höheren Zeitebene sind wichtige Filter für ein Setup mit hoher Wahrscheinlichkeit.
+- Ein späteres Kapitel lehrt konkrete Ausführungsstrategien, sobald die optimale Handelsbedingung identifiziert ist.
+- Wer die Disziplin hat, einen Trade nur zu erwägen, wenn ein Setup der Dual-Time-Frame-Momentum-Strategie vorliegt, dessen Handelsergebnisse sollten sich dramatisch verbessern.
+- Ob der Markt eine Korrektur macht, wird oft nach der Lage von Momentum, Preis, Muster und Zeit im größeren Zeitrahmen angenommen.
+- Dieselben Kurszielzonen für Trend und Korrektur werden von Intraday-Daten bis zu Monatsdaten verwendet.
+- Die DT-Reports decken Futures, Aktien und ETFs sowie Forex auf diesen Zeitebenen ab, von Intraday bis monatlich.
+- Dieselbe Dynamic Time Strategy wird auf allen aktiv gehandelten Märkten und auf allen Zeitebenen verwendet.
+- Auch ohne Daytrading lassen sich Intraday-Setups nutzen, um eine Position für einen Swing- oder Positions-Trade aufzubauen.
+- Die meisten Trader sollen Daytrading meiden. Die Begründung steht im Schlusskapitel. Die 15-Minuten-Beispiele sollen den Tageshandel nicht empfehlen.
+- Mit jedem Teil der Strategie kann die kleinere Zeitebene eine engere Spanne von Zeit, Preis, Momentum oder Muster kenntlich machen, in der eine Umkehr der höheren Zeitebene entstehen kann.
+- Deutet die Momentumposition der größeren Zeitebene auf eine Umkehr größeren Grades, identifiziert das Time Band das enge Zeitfenster für dieses Hoch oder Tief.
+- Time Bands lassen sich auf jedem Markt und jeder Zeitebene bilden. Das Menü nennt Markt oder Symbol und die Zeitebene, etwa täglich oder 60 Minuten.
+- Der Ausstieg beruht auf denselben Faktoren wie der Einstieg. War das Momentum auf zwei Zeitebenen entscheidend für die Richtung des größeren Trends, ist es auch für den Ausstieg entscheidend.
+- Zwei übereinstimmende höhere Zeitebenen erhöhen die Wahrscheinlichkeit, verringern aber immer die Zahl der Trades.
+- Mindestens die nächsthöhere Zeitebene ist bei jedem Trade zu beachten, weil ihr Momentum die Richtung bestimmt.
+- Die erste Unit behandelt die Annahme, der Trend der größeren Zeitebene sei falsch eingeschätzt und es liege nur eine kleinere Korrektur vor. Die zweite Unit bleibt für den Trend der größeren Zeitebene.
+- Ob Daytrader, Positionstrader oder eine Zeitebene dazwischen: Eine Strategie mit mindestens zwei Units soll ein Kernstück des Tradingplans sein.
+- Auch wer kurzfristig handelt, muss die höhere Zeitebene kennen. Das große Geld liegt nach Gann in den großen Trends, nicht in Ticks oder Pips.
+- Dieselben Entscheidungen aus Momentum, Muster, Preis und Zeit gelten vom Intraday-Daytrade bis zum Positions-Trade auf Wochen- und Tagesdaten.
+- Zwei höhere Zeitebenen sind der erste Filter. Die kleinere Zeitebene dient der Ausführung und der kurzfristigen Unit, die größere dem Halt der langfristigen Unit.
+- Eine Zeitebene tiefer zu gehen, verringert das Kapitalrisiko der Ausführung oft, aber nicht immer, und setzt voraus, dass man den Bildschirm im Handelstag beachten kann.
+- Ist die kurzfristige Unit draußen, werden die Intraday-Daten für die langfristige Unit nicht mehr gebraucht. Die Führung auf Wochen und Tag dauert buchstäblich ein paar Minuten am Tag.
+- Gehandelt wird auf der unteren Zeitebene in Richtung der höheren, im Beispiel der Stundenchart in Richtung des Tagestrends.
+- Mit zwei Einheiten und Entscheidungen nach der sich entwickelnden Marktlage lässt sich auch dann Gewinn machen, wenn der Trend der größeren Zeitebene falsch eingeschätzt wurde.
+- Bärisches Momentum auf Wochen- und Tageschart lässt einen Short erwarten, der einen langen Weg vor sich hat.
+- Die Lage von Wochen- und Tageschart kann ideal für ein ABC-Hoch und ein Short-Setup sein.
+- Dieselbe Handelslogik gilt vom Wochen- und Tageschart bis zum sehr kurzen Tagessystem.
+- Gehandelt wird in Richtung des Momentums der höheren Zeitebene und ausgeführt nach der Umkehr der niedrigeren.
+- Der Ansatz für Positionstrades lässt sich mit Intraday-Daten auf kürzere Trades übertragen.
+- Über-Nacht-Schwünge in 24-Stunden-Daten können bei niedrigem Volumen schnell und bedeutungslos sein; eine Alternative ist, nur die Pit-Session zu lesen.
+- Ein Daytrader ist meist während der Handelszeit am Bildschirm und eröffnet und schließt innerhalb eines Tages; die Erfolgschance ist sehr klein, solange nicht vorher ein durchgehend profitabler Plan für Swing- oder Positionstrades steht.
+- Ein Swingtrader handelt Schwünge, die typischerweise zwei bis drei Tage oder länger laufen, handelt Punkte statt Ticks, hat eine deutlich bessere Erfolgschance als ein Daytrader und muss den Markt während der Handelszeit gegebenenfalls beobachten.
+- Ein Positionstrader handelt Trends von mehreren Tagen bis mehreren Wochen, handelt Punkte statt Ticks und beobachtet den Markt während der Handelszeit selten oder nie.
+- Ein erfolgreicher Positionstrader verdient bei gleichem Kapital und Risiko über die Zeit wahrscheinlich mehr als ein Raum voll erfolgreicher Daytrader.
+- Die meisten legendären Trader des vergangenen Jahrhunderts waren Positionstrader.
+- Der Einstieg folgt einer Momentum-Umkehr auf der kleineren Zeitebene in Richtung des Momentums der größeren Zeitebene.
+- Das Nachziehen des Einstiegs einen Tick über oder unter dem Hoch oder Tief des vorherigen Balkens wird auf allen Zeitebenen der Daten verwendet.
 
 ## Funktionsweise
 
@@ -94,6 +135,11 @@ aktualisiert: 2026-10-30
 - Dows ursprüngliche Spannen waren 2 bis 3 Tage, 2 bis 3 Wochen und 2 bis 3 Monate. Auf elektronischen Intraday-Charts liegen die näheren Größen bei 2 bis 3 Stunden, 2 bis 3 Tagen und 2 bis 3 Wochen.
 - Gelesen wird ständig von der langsamen zur schnellen Chart und zurück. Die Volume Price Analysis sitzt in der Mitte.
 - Die langsame Chart ist der Blick aus der Distanz auf die letzten Tage. Die mittlere zoomt heran, die schnelle zeigt das Detail.
+- Das XAU-Beispiel nutzt den Wochenchart für die Lage eines Tiefs und den Tageschart für die Ausführung. Wochen-Time-Band für ein Tief ist die enge Spanne vom Wochenende 10. August bis zum Wochenende 17. August 2007, aus der Überlappung der Tief-Tief- und Hoch-Tief-Zyklen, wobei nur die Tief-Tief-Zählungen im Chart stehen.
+- Auf dem Tageschart ist der 22. August das 100-Prozent-Tief-Tief, der 13. August das 100-Prozent-Zeit-Retracement. Der zwingendste Zeitfaktor ist das Tief vom 16. August innerhalb des Wochen-Time-Bands.
+- Das S&P-Beispiel nutzt Wochen- und Tagesdaten für das Setup und 60-Minuten-Daten für Ausführung und Management. Der Einstieg beider Units ist der 60-Minuten-Trailing-One-Bar-High. Der Stop der kurzfristigen Unit folgt dem 60-Minuten-Ein-Bar-Tief, der langfristigen später dem täglichen Ein-Bar-Tief, sobald das Wochenmomentum überkauft ist.
+- Solange Momentum der höheren Zeitebene und fünf Abschnitte den Abschluss nicht anzeigen, gilt der Trend der größeren Zeitebene als fortgesetzt, auch wenn die kleinere Zeitebene schon umkehrt.
+- Der Index beschreibt eine Multiple Time Frame Momentum Strategy auf den Seiten 9–47, darunter die grundlegende Dual Time Frame Momentum Strategy auf den Seiten 12–14, die Handelsrichtung auf Seite 13, die Ausführung auf Seite 14, die Strategieregeln auf den Seiten 43–46 und einen Trade-Filter auf den Seiten 46–47.
 
 ## Voraussetzungen
 
@@ -112,6 +158,16 @@ aktualisiert: 2026-10-30
 - Ein Einstieg auf der schnellen Zeitebene wird an der langsameren geprüft. Widerspricht sie, bleibt ein vorsichtiger Händler draußen oder handelt das höhere Risiko bewusst.
 - Kerzenmuster in der Stauung werden zusammen mit Volume Price Analysis und den drei Zeitebenen gelesen.
 - Ein Dreifachtop wird für den Short nur genommen, wenn Volume Price Analysis und die mehreren Zeitebenen die Sicht bestätigen.
+- Mit 15-Minuten-Daten lässt sich das Zeitziel für ein korrektives Hoch oft auf eine Spanne von nur ein bis zwei Stunden eingrenzen.
+- Das Zeitziel einer kleinen Korrektur dient dazu, in Richtung des Trends der größeren Zeitebene einzusteigen und die Position zu halten.
+- Legt die Trendanalyse der größeren Zeitebene eine Korrektur nahe, ist die erste Annahme, dass sie mindestens drei Abschnitte hat.
+- Eine Short-Position auf Basis von 15-Minuten-Daten kann mindestens mehrere Tage dauern und ein neues Tief machen, nicht nur ein kurzfristiger Tageshandel.
+- Die Zeitstrategien des Kapitels sollen täglich für jeden Markt und jede Zeitebene genutzt werden.
+- Das EUR/USD-Time-Band im Beispiel ist auf 60-Minuten-Daten gerechnet, das DJIA-Band auf Tagesdaten.
+- Der Swing Entry kann auf 60 Minuten erkannt und die Order nach den regulären Stunden gelegt werden, ohne den Markt tagsüber zu beobachten. Wer beobachten kann, nutzt die nächstkleinere 15-Minuten-Zeitebene.
+- Ein Alert auf die 15-Minuten-Momentumumkehr genügt. Danach werden Swing-Hoch und Swing-Tief für Buy-Stop und Schutzstop bestimmt. Den ganzen Tag am Bildschirm zu sitzen ist nicht nötig.
+- Die kleinere Zeitebene dient dazu, den Swing Entry mit geringerem Anfangseinsatz zu machen als auf der höheren Zeitebene allein.
+- Währungs-ETFs dienen bei Wochen- und Tages-Setups mit minimalem bis keinem Hebel für mögliche langfristige Positionen.
 
 ## Regeln und Kriterien
 
@@ -192,6 +248,17 @@ aktualisiert: 2026-10-30
 - Späte Liquidation oder Short Covering in der Pit-Session kann entstehen, weil dem Day-Timeframe die Zeit ausgeht, nicht nur weil Volumen fehlt.
 - Die längere Zeitebene wiegt bei der Frage schwerer, ob ein Short nur eine Pause gegen den dominanten Trend ist.
 - Die ganze Prüfung dauert Minuten oder Sekunden, während die nächste Kerze entsteht.
+- Für einen Long nach bullischer Momentumumkehr der kleineren Zeitebene muss das höhere Momentum bullisch oder bärisch oversold sein. Für einen Short muss es bärisch oder bullisch overbought sein.
+- Ist die höhere Zeitebene oversold, soll das unmittelbare Abwärtspotenzial begrenzt sein, und die nächste bullische Umkehr der kleineren Zeitebene wird wahrscheinlich schnell von der höheren nachvollzogen.
+- Ist der Einsatz auf 60 Minuten zu groß, kann nach diesem Setup auf die 15-Minuten-Daten gewechselt werden. Ein Setup dort ist nicht garantiert, der Anfangseinsatz aber wahrscheinlich viel kleiner.
+- Für die großen Trends werden Wochen- und Tages-Setups gehandelt, besonders in Währungen, und auf Punkte statt auf Ticks, im Forex statt auf Pips.
+- Für einen Daytrade sollen zwei höhere Zeitebenen in Richtung der kleineren liegen. Ein bärischer Bias der 60 Minuten allein rechtfertigt keinen Trade, solange die kleinere Zeitebene nicht vollständig ist.
+- Dieselben zwei Einstiegsstrategien gelten für jeden Markt, jede Zeitebene und jede Bedingung.
+- Für Aktien und jeden anderen Markt reichen Wochen- und Tagesdaten für Positions-Trades über wahrscheinliche Trends von mehreren Wochen bis mehreren Monaten.
+- Ausnahmen für überkauftes bullisches und überverkauftes bärisches Momentum stehen in den Dual-Time-Frame-Regeln: bei bärischem Momentum werden nur Shorts erwogen, außer das Momentum ist bärisch überverkauft, und bei bullischem Momentum nur Longs, außer es ist bullisch überkauft.
+- Dual-Timeframe-Momentum-Setups sind der beste objektive Filter, den der Autor in über 20 Jahren gefunden hat; sie sind logisch, objektiv und funktionieren.
+- Dieselbe Routine gilt für Daytrading auf 15- und 5-Minuten-Bars und für Positionstrading auf Wochen- und Tagesbars.
+- Ein Overbalance nach W. D. Gann liegt vor, wenn Zeit oder Preis einer Korrektur größer ist als bei den vorangehenden Korrekturen, und warnt, dass der Trend der größeren Zeitebene drehen kann, in eine höhere Korrektur oder in einen neuen Gegentrend.
 
 ## Risiken und Grenzen
 
@@ -210,6 +277,25 @@ aktualisiert: 2026-10-30
 - Die drei GBP/USD-Charts stammen aus MT4.
 - Index-Futures handeln praktisch rund um die Uhr. Die Eröffnung des Kassamarktes folgt in der Regel dem elektronischen Kontrakt der Nacht.
 - Der Dow-Wochenchart ist die Zeitebene eines längerfristigen Investors. Eine Selling Climax wäre dort auf Monats-, Wochen- oder Tageschart sofort sichtbar.
+- Abbildung 2.24 zeigt bärische Stochastic-Umkehren der kleineren Zeitebene während eines Bärentrends der größeren Zeitebene.
+- Der EUR/GBP-Short auf der Tageszeitebene an der Wave-5-Preiszielzone wird auf den 60-Minuten-Daten ausgeführt.
+- Im ES waren Tages- und 60-Minuten-Momentum bereits bullisch, ein Setup über drei Zeitebenen, als die 15-Minuten-Daten bullisch drehten.
+- Vom frühen Oktoberhoch bis zum Tief am 26. November dauerte der Bärentrend über fünf Wochen. Nach einem abgeschlossenen Wave-5-Tief sollte die Rally mindestens zwei bis drei Wochen laufen.
+- Am 17. Januar war das 60-Minuten-Momentum bärisch, das 15-Minuten-Momentum um 11:15 Uhr overbought, und der Short kam auf der bärischen 5-Minuten-Umkehr.
+- Der S&P auf 60 Minuten hatte 24,25 Punkte Risiko je Kontrakt. Auf 15 Minuten lag die bullische 60-Minuten-Umkehr auf dem 11:30-Bar und die bullische 15-Minuten-Umkehr auf dem 15:30-Bar. Einstieg 1422,50, Stop 1411,25, 11,25 Punkte.
+- Beim EUR/USD wäre der Stop eines Tages-Tr-1BH wegen des sehr weiten Range-Tags am 17. August sehr weit gewesen. Die Ausführung beider Units geht auf 60 Minuten, solange Wochenmomentum überverkauft und Tagesmomentum bullisch ist. Die Abbildungsunterschrift nennt Long-Setups mit bullischem Momentum auf zwei höheren Zeitebenen.
+- Nach dem Ausstieg der kurzfristigen EUR/USD-Unit wird die langfristige Unit nur noch mit Wochen- und Tagesdaten geführt. An den meisten Tagen der fast sechs Wochen änderte sich der Plan nicht. Nur wenige Male verlangte die Marktposition eine Anpassung.
+- Die Intraday-Daten gehören zur kurzfristigen Unit, die nur wenige Tage laufen kann, falls die größere Erwartung falsch ist und lediglich eine Korrektur vorliegt. Das Ziel der langfristigen Unit ist der Wochen-Tages-Trend über das Juli-07-Hoch.
+- Die meisten neuen und erfolglosen Trader konzentrieren sich auf eine sehr kleine Zeitebene und handeln Ticks oder Pips statt der größeren Trends auf Punkte.
+- EUR/USD: hohe Zeitebene Tageschart, untere 60 Minuten, Long in Richtung des bullischen höheren Trends.
+- GBP: hohe Zeitebenen Wochen- und Tageschart, untere 60 Minuten.
+- Gold: hohe Zeitebenen Monats- und Wochenchart, untere der Tageschart.
+- S&P: hohe Zeitebene Tageschart, untere 60 Minuten; der Einstieg lag ein Tick über dem kleineren 60-Minuten-Swing-Hoch.
+- Kerry nutzt die 24-Stunden-Daten des ES; Robert sieht in der Regel nur die Pit-Session, weil das Volumen über Nacht niedrig ist.
+- Sojabohnen: hohe Zeitebene Wochenchart, untere Tageschart.
+- Bei Carolyn ist der 15-Minuten-Chart die hohe Zeitebene und der 3-Minuten-Chart die untere; sie handelt sehr kurze Index-Tagestrades.
+- Jaime schaut für Forex selten unter 60 Minuten; die hohe Zeitebene ist der Tageschart mit dem 13er-DTosc, die untere der 60-Minuten-Chart mit dem 34er-DTosc.
+- Der Index nennt Weekly-Daily-Setups für einen Positionstrade auf den Seiten 169–178 sowie Weekly-Daily-60-Minuten-Setups für einen Long-Trade auf den Seiten 178–185 und für einen kurzfristigen Positionstrade auf den Seiten 187–197.
 
 ## Unterschiedliche Quellenpositionen
 

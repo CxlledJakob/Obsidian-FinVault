@@ -68,6 +68,25 @@ aktualisiert: 2026-10-30
 - Optimal ist, was die Leistung maximiert, etwa die Durchschnittsrendite oder die risikobereinigte Rendite; weil sich die Reihen ändern, änderte sich auch der optimale Look-back, adaptive Versionen wurden nicht genutzt.
 - 39 von 40 Reihen, ohne den als redundant ausgeschlossenen Eröffnungskurs des S&P 500, und 11 Look-backs von 3 bis 205 Tagen, aufeinanderfolgend etwa um den Faktor 1,5 gestuft, ergaben 858 Trendregeln, je 429 traditionell und invers.
 - Die traditionelle Regel geht long im S&P 500, wenn die Reihe im Aufwärtstrend ist, und short, wenn sie im Abwärtstrend ist; die inverse Regel tut das Gegenteil, zum Beispiel short, wenn die Reihe im Aufwärtstrend bestimmt wird.
+- Der Vorteil ist, am Ende einer Korrektur in Richtung des Trends einzusteigen oder in den sehr frühen Stadien des neuen Trends und in den sehr späten Stadien zu verkaufen, oft innerhalb von ein oder zwei Balken des Tiefs oder Hochs.
+- Eine einfache Leitlinie auf Elliott-Wellen-Strukturen soll sofort zeigen, ob ein Markt in einem Trend oder einem Gegentrend sein sollte.
+- Entscheidend ist, ob die aktuelle Lage Teil einer Korrektur oder eines Trends ist und ob Korrektur oder Trend abgeschlossen werden können; das bereitet auf Marktumkehren jedes Zeitrahmens vor.
+- Ein Momentum-Indikator hilft, die Trendrichtung und die Trade-Ausführung zu erkennen, wenn er mit der Multiple-Time-Frame-Momentum-Strategie genutzt wird; allein zeigen Momentum-Studien als nachlaufende Indikatoren die wahrscheinliche künftige Trendposition kaum.
+- Fast jedes Handelsbuch und jeder Kurs betont, mit dem Trend zu handeln; wer immer mit dem Trend handelt, sollte sehr eindrucksvolle Gewinne ansammeln.
+- Zwei Fragen bleiben meist offen: wie die Trendrichtung objektiv erkannt wird und ob der Trend früh oder spät ist.
+- Ohne einen Ansatz, wo im Trend der Markt wahrscheinlich steht, kommt die typische Trendanalyse über die Zeit zu früh oder zu spät, um nützlich zu sein.
+- Die Strategie sucht nicht das exakte Swing-Hoch oder Swing-Tief, sondern Trades in Trendrichtung, auch nahe dem frühen Stadium, und meidet die späten Stadien.
+- Gehandelt wird in Richtung des Momentums des größeren Zeitrahmens; ein guter Indikator mit passender Rückschau trendet gewöhnlich mit dem Preis und kehrt innerhalb sehr weniger Balken der Preisumkehr um.
+- Die Multiple-Time-Frame-Momentum-Strategie ist für ihn der stärkste Filter für Handelsrichtung und Ausführung und die einzige praktische Indikatorstrategie für den realen Handel.
+- Gehandelt wird die Hauptrichtung, in Richtung des Momentums der größeren Zeitebene.
+- Trends sind oft in fünf Abschnitten fertig; macht der Markt eine fünfte Welle, ist auf das Trendende zu achten.
+- Ein Overlap zurück in die Spanne des vorherigen Abschnitts warnt, dass eine Korrektur und kein neuer Trend entstehen sollte.
+- Ein Overbalance von Zeit oder Preis gegenüber früheren Korrekturen warnt, dass der Trend der größeren Zeitebene drehen kann.
+- W. D. Gann lehrt, das große Geld werde in den großen Trends verdient; neue Trader sollen das sorgfältig bedenken.
+- Für Punkte handeln, nicht für Ticks: Daytrading hat nur das Bewegungspotenzial eines Tages und damit begrenztes Gewinnpotenzial.
+- Auch ein erfolgreicher Daytrader soll längere Positionen von wenigen Tagen bis wenigen Wochen erwägen, um die größeren Trends mit größerem Potenzial mitzunehmen.
+- Ein Positionstrader handelt diese längeren Trends, Punkte statt Ticks, und die meisten legendären Trader waren Positionstrader.
+- Die Grundstrategie ist, in Richtung der größeren Zeitebene zu handeln und nach der Umkehr der kleineren in dieselbe Richtung einzusteigen.
 
 ## Funktionsweise
 
@@ -87,6 +106,9 @@ aktualisiert: 2026-10-30
 - Viele Trader handeln ausschließlich Ausbrüche und folgen damit dem neuen Trend, sobald das Volumen ihn bestätigt.
 - Ein Bruch einer zweiten Stauzone in Trendrichtung wird weiter gehalten. Ein Bruch gegen die Position beendet sie.
 - Gegen den dominanten Trend zu folgen ist zulässig, aber riskanter und nur für kurze Zeit.
+- Kapitel 4 projiziert die wahrscheinlichen Trendziele im Voraus und das Preisniveau, an dem ein Trend vollständig sein sollte, einschließlich neuer Ratios außerhalb der Fibonacci-Reihe, und bereitet auf die konkreten Preisniveaus für Trend- und Gegentrendumkehrungen vor.
+- Die über 20 Jahre entwickelten dynamischen Zeit- und Preisstrategien benennen im Voraus Zielzonen vor allem für die Trendumkehr; W. D. Gann lehrte, wenn die Zeit um ist, sei Veränderung unvermeidlich.
+- Die Dynamic Time Strategies projizieren die wahrscheinlichen minimalen und maximalen Zeitziele einer Trendumkehr und Zeitbänder auf eine relativ enge Zeitspanne mit hoher Wahrscheinlichkeit für eine Trendänderung in jedem Zeitrahmen.
 
 ## Regeln und Kriterien
 
@@ -100,6 +122,8 @@ aktualisiert: 2026-10-30
 - Die Learning Rule von Hsu und Kuan verbindet die einfachen Regeln nicht, sondern wählt aus einer Menge ähnlicher einfacher Regeln die mit der besten jüngeren Leistung.
 - Die Fallstudie prüfte bei den Trendregeln nur Long-Short-Umkehrregeln und keine Regeln mit neutralem Zustand.
 - Die Fractional Position innerhalb eines Themas setzt die Positionsgröße proportional zum Nettoanteil der einfachen Regeln, die long oder short signalisieren.
+- DTF-Regel 2 erlaubt die Ausführung nach der Umkehr des kleineren Zeitrahmens in Richtung des größeren; mindestens zwei Momentum-Zeitrahmen sollen dieselbe Richtung haben, sonst ist der Trader stark im Nachteil.
+- DTF-Regel 1 lautet, nur in Richtung des Momentumtrends des größeren Zeitrahmens zu handeln, außer die Momentum-Position ist overbought oder oversold.
 
 ## Risiken und Grenzen
 
@@ -112,6 +136,12 @@ aktualisiert: 2026-10-30
 - Linien allein beantworten nicht, ob ein Trend beginnt, wie stark er ist und wie weit er läuft. Das beantwortet nur Unterstützung und Widerstand im Kontext der Volumen-Preis-Analyse.
 - Ein profitabler Backtest dieser Regel beweist die Hypothese nicht; ein unprofitabler falsifiziert sie.
 - Die zugehörige Nullhypothese lautet, dass solche Aufwärtsdurchbrüche über die folgenden drei Monate keine Gewinne erzeugen, und ein profitabler Backtest falsifiziert diese Null.
+- Trendlinien, gleitende Durchschnitte, Kanäle und Momentum-Indikatoren zeigen den Trend auf historischen Daten, alarmieren aber nicht zuverlässig auf den Beginn eines neuen Trends oder die Endphase; sie erkennen einen etablierten Trend gewöhnlich lange nach dem optimalen Einstieg.
+- Die meisten Methoden, einen Preistrend zu erkennen, scheitern für praktische Strategien mit ebenso vielen falschen Umkehrsignalen wie bestätigten; diese kühne Aussage hält er für wahr und fordert jeden Handelsexperten heraus, Belege für einen Trendindikator zu liefern, der Position und Umkehr rechtzeitig und nutzbar signalisiert.
+- Jeder gleitende Durchschnitt, Kanal oder Indikator beruht nur auf historischen Preisen, ist immer nachlaufend und nie führend für die wahrscheinliche Zukunft.
+- Nennt man einen Trendindikator und ein Beispiel, zeigt er zwei schnelle Fehlschläge; auf jedes nachträgliche Beispiel mindestens zwei, in denen die Umkehr nicht rechtzeitig kam, und Preisumkehren fallen immer wieder nicht mit den Indikatorumkehren zusammen.
+- Divergiert das größere Momentum bärisch bei noch bullischem Preis, bleibt man aus Trades draußen, während der Trend sich verlangsamt.
+- Keine einzelne Technik taugt für sich, die künftige Trendrichtung zu erkennen; zusammen mit dem Plan können Trendlinie, Volatilitätskanal, Kreuzung gleitender Durchschnitte oder Momentum-Indikator nützlich sein.
 
 ## Beispiele
 

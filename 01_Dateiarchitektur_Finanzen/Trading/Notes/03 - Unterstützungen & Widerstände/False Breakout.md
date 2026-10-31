@@ -43,6 +43,10 @@ aktualisiert: 2026-10-30
 - Dieselbe Spanne auf hohem Volumen, klar über dem Vortag, ist eine echte Bewegung.
 - Ein Bruch wird erst nach einem klaren Schluss deutlich außerhalb der Stauzone als gültig behandelt.
 - Ein gescheiterter Aufwärtsausbruch wird nachträglich als erfolgreiche Bullenfalle bezeichnet und dadurch vom Prognosefehler zum Treffer eines anderen Musters gemacht.
+- Auf jeden Trendlinienbruch, dem eine Trendumkehr folgt, kann der Autor einen Trendlinienbruch als Fake-out zeigen, nach dem der vorherige Trend weiterläuft.
+- Kreuzungen gleitender Durchschnitte sind berüchtigt für falsche Trendumkehrsignale.
+- Die meisten Methoden, einen Preistrend zu erkennen, sind für praktische Handelsstrategien zum Scheitern verurteilt, mit ebenso vielen falschen Umkehrsignalen wie bestätigten.
+- Preisumkehren fallen immer wieder nicht mit den Umkehren des Trendindikators zusammen.
 
 ## Funktionsweise
 
@@ -88,6 +92,9 @@ aktualisiert: 2026-10-30
 ## Risiken und Grenzen
 
 - Sieht eine Erholung wie eine Falle auf niedrigem Volumen aus, können extreme Volumen davor die Skala verzerren. Was klein wirkt, kann über dem Durchschnitt liegen.
+- Nennt man einen Trendindikator und ein Beispiel, wie er den Trend für einen beliebigen Markt oder Zeitrahmen definiert, zeigt der Autor zwei Beispiele, in denen er schnell versagte.
+- Auf jedes nachträglich gut gewählte Beispiel findet er schnell mindestens zwei, in denen der Trendindikator eine Trendumkehr nicht rechtzeitig erkannte.
+- Keine einzelne Technik, ob Trendlinie, Volatilitätskanal, Kreuzung gleitender Durchschnitte oder Momentum-Indikator, taugt für sich, die wahrscheinliche Trendrichtung einer künftigen Periode zu erkennen, auch wenn sie Teil eines umfassenden Plans sein kann.
 
 ## Beispiele
 

@@ -21,6 +21,7 @@ aktualisiert: 2026-10-30
 - Der Stop-Loss ist die untere horizontale Barriere und eine dynamische Funktion der geschätzten Volatilität.
 - Der Stop-Loss ist die negative Schwelle, bei deren Erreichen die offene Gelegenheit mit Verlust geschlossen wird.
 - Der Stop-Loss ist die Bedingung, eine Position mit Verlust zu schließen.
+- Der Stop-Loss dieses Kapitels ist der erste schützende Stop. Er steht immer genau an dem Preis, der das Setup ungültig macht.
 
 ## Kernaussagen
 
@@ -70,6 +71,19 @@ aktualisiert: 2026-10-30
 - Das Auslösen von Stops ist eine zusätzliche Momentum-Ursache vor allem auf kurzen Horizonten und führt oft zu Breakout-Strategien.
 - Viele Stop-Orders liegen auf oder nahe Unterstützung und Widerstand, einschließlich runder Zahlen nahe dem aktuellen Preis.
 - Stop Hunting stützt sich auf genau diese Orders.
+- Das Buch lehrt, optimale Handelsbedingungen zu erkennen, objektive Einstiegsstrategien mit dem exakten Einstiegs- und Ausstiegspreis und das Führen des Trades mit Stop-Loss-Anpassungen bis zum Ausstieg.
+- Die Strategien in Kapitel 6 sollen jedes Raten beseitigen, zu welchem Preis ein Markt betreten wird und welcher Stop-Loss-Preis gelten soll.
+- Kapitel 7 lehrt, alle praktischen Strategien anzuwenden: vom Erkennen der Setups hoher Wahrscheinlichkeit über die konkrete Einstiegsstrategie und die Stop-Loss-Anpassung bis zur Ausstiegsstrategie.
+- Die zweite tägliche bärische Momentumumkehr, nur einen Tag nach dem Swing-Tief im März, hätte je nach Einstieg und anfänglichem Schutz-Stop zu keinem Trade oder zu einem Verlust geführt.
+- Ist eine Momentumumkehr des Indikators Teil des Tradingplan-Setups, bevor ausgeführt werden darf, müssen die Stops bei einer relativ langen Lookback-Periode typischerweise weit vom Einstiegspreis entfernt liegen.
+- Der Zweck aller Handelsstrategien ist, Bedingungen mit einem Ergebnis hoher Wahrscheinlichkeit und akzeptablem Kapitaleinsatz zu identifizieren.
+- Das Geschäft des Tradings ist, Bedingungen mit einem Ergebnis hoher Wahrscheinlichkeit und akzeptablem Kapitaleinsatz zu identifizieren.
+- Man wird nicht immer recht haben, soll es aber die meiste Zeit sein, und wenn nicht, sollen die Kosten akzeptabel sein.
+- Strategien sind wichtig, um Verluste zu begrenzen, wenn Daten, Strategie und Plan nicht wie erwartet aufgehen.
+- Handelsstrategien und Handelsmanagement sind genauso wichtig wie die technische Analyse, die das Setup hoher Wahrscheinlichkeit identifiziert.
+- Später im Buch folgen konkrete Strategien von Einstieg bis Ausstieg, die Verluste klein halten, wenn ein Setup scheitert, und Gewinne vergrößern, wenn es aufgeht.
+- Erfolgreiche Trader haben immer einen relativ engen Stop. Ein damit entstandener Verlust ist akzeptabel. Verluste zu minimieren, ist absolut entscheidend.
+- Sobald die Hochwahrscheinlichkeitsbedingungen erkannt sind, bestimmen Marktposition und Einstiegsstrategie den Einstiegspreis und den anfänglichen Schutz-Stop-Loss. Das maximale Kapitalrisiko je Einheit ist vor der Ausführung bekannt.
 
 ## Funktionsweise
 
@@ -88,6 +102,7 @@ aktualisiert: 2026-10-30
 - Die seltenere Verwendung schließt die ganze Strategie, wenn der Drawdown unter eine Schwelle fällt; das kann nur einmal im Leben der Strategie vorkommen und soll idealerweise nie eintreten.
 - Für denselben Schutz des Maximal-Drawdowns wird deshalb CPPI vorgezogen.
 - Er hält das Verlustlimit nur ein, wenn der Markt während der Position offen ist, etwa ohne Overnight-Positionen oder in Währungen und manchen Futures, die außer an Wochenenden und Feiertagen elektronisch offen sind.
+- Eine objektive Ausstiegsform zieht den Stop nach einer Momentum-Umkehr am One-Bar-High oder One-Bar-Low nach.
 
 ## Voraussetzungen
 
@@ -118,6 +133,47 @@ aktualisiert: 2026-10-30
 - Ein fortlaufend aktualisiertes Momentum-Signal ist ein De-facto-Stop-Loss; Momentum-Modelle haben deshalb nicht dasselbe Tail-Risiko.
 - Nur CPPI oder ein Stop-Loss können garantieren, dass der künftige Drawdown ein vorgegebenes Maximum nicht überschreitet.
 - Die Key Points nennen ihn als Schutz vor Black Swans trotz meist schlechterer Mean-Reversion-Backtests, fordern, dass er im Backtest nie auslöst, und sehen ihn bei Momentum als natürlichen Bestandteil.
+- Wird das Extrem von Wave-B genommen, ist das korrektive Hoch oder Tief eher wahrscheinlich abgeschlossen, und daraus wird je nach Hoch oder Tief von Wave-B ein entschiedenes Long- oder Short-Signal.
+- Der Stop dieses Signals liegt nicht jenseits des möglichen Extrems von Wave-C.
+- Was der Markt tun kann, um die Bedingung des Trades aufzuheben, ist die Stelle des Stops. Wird sie erreicht, wird schnell mit akzeptablem Verlust ausgestiegen, statt einen möglicherweise ruinösen Verlust laufen zu lassen.
+- Beim Trailing-One-Bar-Entry und beim Swing Entry liegt der erste Stop einen Tick jenseits des Swing-Hochs oder Swing-Tiefs vor dem Einstieg.
+- Nur ein Handel jenseits dieses Extrems hebt das Setup auf. Ein näherer, willkürlicher Stop zwischen Einstieg und Extrem ist nicht zulässig.
+- Das Nachziehen des Stop-Loss, wenn der Markt in die erwartete Richtung läuft, und die Ausstiegsstrategie sind nicht Gegenstand dieses Kapitels, sondern von Kapitel 7.
+- Erfolgreiche Trader haben immer einen relativ engen Stop. Ein Verlust am Stop muss akzeptabel sein.
+- Ein weiter Stop, nur um der Position Luft zu geben, bricht die Risikosregel.
+- Der Markt soll die Position über einen nachgezogenen Stop herausnehmen, indem er gegen sie läuft. Ein vorher festgelegtes Kursziel ist nie der Ausstiegspreis, außer man kann die Daten im Urlaub nicht jede Nacht nachführen. Dann liegen Schutzstop und Take-Profit-Order gleichzeitig im Markt.
+- Vor dem Einstieg stehen die Bedingungen fest, unter denen der Stop jeder Unit angepasst wird. Konkrete Handlungen folgen, wenn diese Bedingungen eintreten.
+- Neue Information darf den Plan ändern. Jede Änderung muss aus denselben Faktoren folgen wie der Einstieg: Momentum, Muster, Preis und Zeit. Entscheidungen lassen sich nicht durch Regeln, Systeme oder Software ersetzen, wenn die Rendite maximiert werden soll.
+- Stops werden nie nur wegen einer bestimmten Höhe des nicht realisierten Gewinns angepasst und nie um einen festen, willkürlichen Abstand vom aktuellen Preis. Es gibt immer einen logischen Grund.
+- Ein zu nah nachgezogener Stop ist ein Hauptgrund, vor den Abschlussbedingungen ausgestoppt zu werden und die Trendrendite nicht zu maximieren. Solange das Momentum der höheren Zeitebene und fünf Abschnitte den Abschluss nicht anzeigen, bleibt der Stop weit genug, auch ein Welle-4-Retracement von typischerweise 38,2 bis 50 Prozent der Welle 3 auszuhalten.
+- Der anfängliche Schutzstop steht vor dem Trade fest. Danach wird er nur angepasst, wenn die Marktposition einen logischen Grund liefert. Es gibt keine feste Formel.
+- Die zweite Unit kann zuerst auf Breakeven bleiben, bis die Korrekturstruktur einen engeren logischen Platz ergibt, und erst danach nah an das Ein-Bar-Tief der arbeitenden Zeitebene rücken.
+- Nach einer überkauften höheren Zeitebene gehört der Stop nah an den Markt, besonders wenn die niedrigere Zeitebene bärisch umkehrt. Vorher bleibt er weit genug, um die frühe Trendphase nicht zu verlieren.
+- Weite Umkehrbars können den Preis deutlich bewegen, bevor ein Momentum-Signal kommt. Hochs und Tiefs entstehen manchmal außerhalb typischer Zeitfaktoren. Der Stop folgt trotzdem der Information bis zum letzten Bar.
+- Der Stop der zweiten Einheit bleibt relativ weit vom Markt und wird nur nach einer Momentumumkehr der unteren Zeitebene oder einem anderen technischen Grund angepasst.
+- Wer den Stop zu nah nachzieht, wird mit kleinem Gewinn ausgestoppt und verschenkt den größeren Lauf.
+- Erfolgreiche Trader halten den Stop auf den meisten Trades weit und ändern ihn erst, wenn ein technischer Grund vorliegt.
+- Ist der nötige Anfangsstop für einen Future zu weit, kann der passende ETF die Kapitalbindung begrenzen, statt das Setup wegen des Hebels zu verwerfen.
+- Ein nachgezogener Stop, der bei Auslösung mindestens einen kleinen Gewinn lässt, sichert die zweite Einheit, auch wenn die größere Bewegung ausbleibt.
+- Erfolgreiche Trader halten den Stop weit vom Markt und passen ihn nur an, wenn eine konkrete Marktaktion das rechtfertigt.
+- Die künftige Struktur ist nicht im Voraus bekannt, deshalb darf sich die konkrete Stop-Führung im Lauf des Trades ändern.
+- Ein Swing-Tief wird erst nach mindestens zwei Tagen Abverkauf als Strukturpunkt akzeptiert, an den der Stop gezogen werden darf.
+- Struktur für Stop-Anpassungen sind Lücken, kleinere Swing-Tiefs und Ausbrüche aus Konsolidierungen.
+- Steigt die Volatilität, nimmt der Markt diese Struktur oft mit und stoppt die Position aus; wer die Regel beibehält, fängt Ausreißer und macht in unruhigen Lagen kleine Gewinne oder kleine Verluste.
+- Der Stop bleibt relativ weit, bis ein logischer technischer Grund vorliegt, und wird danach häufiger an die jeweils neue Struktur gelegt.
+- Nahe einem möglichen Abschluss des Trends wird der Stop näher an den Markt gezogen, um einen vernünftigen Gewinn zu sichern.
+- Ist das Setup erfüllt, sind Einstiegsart, Einstiegspreis und erster Schutzstop objektiv festgelegt; darüber fällt keine weitere Entscheidung.
+- Bei der Momentumumkehr und beim Swing-Breakout liegt der erste Schutzstop einen Tick jenseits des Swing-Extrems, das vor dem Einstieg entstanden ist.
+- Ein objektiver Ausstieg zieht den Stop einer Einheit am Ein-Bar-Tief oder Ein-Bar-Hoch nach, nach der ersten Momentumumkehr der kleineren Zeitebene gegen den Trend der größeren.
+- Ein weiterer objektiver Ausstieg zieht den Stop einer Einheit nach, wenn der Markt die 100-Prozent-APP erreicht.
+- Diese objektiven Ausstiege leisten gute Dienste; der Großteil der Entscheidungen liegt trotzdem in der weiteren Führung.
+- Preis, Zeit und Musterlage gehören zur Führung, und der Plan darf sich ändern, wenn der Trend neue Information liefert.
+- Die Kapitalbindung je Einheit ist der Abstand von Einstieg und erstem Schutzstop.
+- Greift der erste Schutzstop nicht, werden im weiteren Verlauf die signifikanten Entscheidungspunkte festgehalten und die Stop-Anpassungen notiert.
+- Ein mechanisches System legt Einstieg, Stop-Loss und Ausstieg vollständig objektiv fest.
+- Beim Swing-Breakout liegt der initiale Schutz-Stop-Loss einen Tick unter beziehungsweise über dem Swing-Hoch oder Swing-Tief, das vor dem Einstieg entstanden ist.
+- Bei der Momentum-Reversal-Strategie liegt der initiale Schutzstop nach Ausführung einen Tick unter dem Swing-Tief oder über dem Swing-Hoch vor dem Einstieg.
+- Ein Handelssystem bestimmt mit vollständig objektiven Regeln auch den genauen Stop-Loss-Preis.
 
 ## Risiken und Grenzen
 
@@ -133,6 +189,7 @@ aktualisiert: 2026-10-30
 - Moderne Market Maker mussten im Stress nur ein Bid von 0,01 Dollar halten, das Stub Quote; eine Verkaufs-Stop-Order auf Accenture wurde an diesem Tag zu 0,01 Dollar je Aktie ausgeführt (Arnuk und Saluzzi, 2012).
 - CPPI und Stop-Loss verhindern einen Drawdown im Overnight-Gap oder bei ausgesetztem Handel nicht.
 - Bei Mean Reversion scheint der Stop-Loss der Annahme zu widersprechen, und der Autor hat keine solche Strategie gebacktestet, deren APR oder Sharpe Ratio dadurch stieg.
+- Ein weiter Stop, nur um der Position Raum zu geben, und weiteres Aufstocken bei Gegenlauf enden in einem großen Verlust oder darin, dass der Broker die Position schließt, wenn das Margin-Kapital aufgebraucht ist.
 
 ## Beispiele
 
@@ -143,6 +200,47 @@ aktualisiert: 2026-10-30
 - Auf der Stunde lag der Schutz über dem Markt, nachdem der alte Boden zur Decke geworden war.
 - Im Beispiel beträgt die Verlustschwelle minus 0,01 und das Gewinnziel 0,005.
 - Bei Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 zehrt ein Rückgang der Trefferwahrscheinlichkeit von 0,7 auf 0,67 den erwarteten Gewinn auf, weil die Schwelle für eine Sharpe Ratio von null bei zwei Dritteln liegt.
+- Im 60-Minuten-Long lag der Sell-Stop bei 1406,50, ein Tick unter dem Swing-Tief, bei 24,75 Punkten Abstand zum Einstieg bei 1431,25, ein Tick über dem Ein-Bar-Hoch.
+- Im Trailing-Short lag der Buy-Stop einen Tick über dem Hoch von Bar 3. Im IBM-Tages-Short einen Tick über dem Swing-Hoch vor dem Einstieg, und der Trade endete mit kleinem Verlust.
+- Im EUR/GBP lag der Buy-Stop einen Pip über dem korrektiven Hoch. Im EUR/USD-Long einen Tick unter dem Swing-Tief vor der bullischen Umkehr.
+- Beim Swing Entry im ES lag der Schutz-Sell-Stop bei 1411,25, sobald der Buy-Stop bei 1449,50 ausgeführt wurde.
+- Im 5-Minuten-Short lag der Buy-Stop einen Tick über dem Swing-Hoch bei 1362,75.
+- Im ES-Beispiel liegt der anfängliche Schutz-Sell-Stop bei 1435,25, einen Tick unter dem Tief, der Einstieg bei 1441,75.
+- Im Google-Beispiel liegt der anfängliche Schutz-Sell-Stop einen Tick unter dem kleineren Swing-Tief bei 505,79.
+- XAU-Long am 20. August auf dem TR-1BH bei 132,34, einen Tag nach der bullischen Tagesumkehr. Anfänglicher Schutz-Sell-Stop 120,40, einen Tick unter dem Tief vom 16. August, Kapitalrisiko 11,94. Der Ein-Bar-Hoch am 17. August lag bei 132,33, das Swing-Tief bei 120,41, fast 12 Punkte.
+- Nachdem das kleinere Swing-Hoch vom 24. August genommen war, wurde der Stop beider XAU-Positionen auf 132,59 gesetzt, einen Tick unter dem kleineren Swing-Tief der bullischen Momentum-Umkehr. Das war nicht eigens im Plan vorgesehen.
+- Ein Bruch des Tiefs vom 28. August hätte jedes logische bullische Muster entwertet. Wäre der neue Stop sofort getroffen worden, wäre wenigstens ein kleiner Gewinn entstanden.
+- Am 4. September, nach dem 61,8-Prozent-Retracement und vor der zweiten bärischen Tagesumkehr, wird nur der Stop der kurzfristigen XAU-Unit am Ein-Bar-Tief nachgezogen.
+- Am 9. September nimmt das XAU dieses nachgezogene Ein-Bar-Tief und stoppt die kurzfristige Unit bei 150,36 aus.
+- Der Stop der zweiten XAU-Unit wird auf einen Schluss bei oder unter 139,42 gesetzt, das mögliche Schluss-Hoch von Welle 1 oder A.
+- Nach dem weiten Aufwärtstag am 18. September wird dieser Stop auf das Tief vom 5. September gelegt, ein Stück unter dem 61,8-Prozent-Retracement des Hochs vom 18. September und am Tief eines engen Tages vor einem weiteren weiten Aufwärtstag.
+- Am 9. Oktober wird der Stop auf 163,48 gesetzt, einen Tick unter dem möglichen Tief der Welle 4.
+- Handelt das XAU 179,15 oder macht das Tagesmomentum eine bärische Umkehr, liegt der Stop einen Tick unter dem täglichen Ein-Bar-Tief.
+- Die zweite XAU-Unit wurde drei Tage nach Erreichen des Preisziels ausgestoppt, mit 46,11 Punkten Gewinn, 178,45 minus 132,34.
+- S&P am 27. November: Einstieg 1431,25, Stop 1406,50, in der Ausführung 24,75 Punkte Kapitalrisiko je Kontrakt. Die Rückschau nennt dasselbe anfängliche Risiko mit 24,25 Punkten.
+- Ist dieses Kapitalrisiko je Future-Kontrakt für den Tradingplan zu groß, wird der Trade im SPY-ETF ausgeführt.
+- Der Stop der kurzfristigen S&P-Unit geht ans Ein-Bar-Tief, wenn 1462 erreicht ist oder die zweite bärische 60-Minuten-Umkehr vorliegt. Ausstieg am ersten Bar des 29. November bei 1466,25.
+- Der Stop der langfristigen S&P-Unit wird auf 1462,75 gesetzt, einen Tick unter dem Tief der Welle B.
+- Er geht danach auf das Ein-Bar-Tief, wenn 1510,25 gehandelt wird oder das 60-Minuten-Momentum bärisch umkehrt. Ausgestoppt wurde bei 1507,00.
+- 15-Minuten-S&P: Stop 1411,25, einen Tick unter dem Swing-Tief, Einstieg 1422,50, Kapitalrisiko 11,25 Punkte, gegen 24,25 Punkte auf 60 Minuten. Danach Breakeven auf der zweiten Unit, bis zwei ABC-Abschnitte fertig sind, dann das mögliche Tief der Welle B, dann das 60-Minuten-Ein-Bar-Tief bei überkauftem 60-Minuten-Momentum und erreichter Welle-C-Zone.
+- OIH: Einstieg am 23. Februar bei 136,93, einen Tick über dem Trailing-One-Bar-High, Stop 132,00, einen Tick unter dem möglichen Welle-C-Tief vom 20. Februar, Risiko 4,93. Am 5. März ausgestoppt, der Stop wurde nicht angepasst. Verlust beider Units 4,93.
+- EUR/USD erster Long 1,3479, Stop ausgelöst bei 1,3458, Verlust 21 Pips. Zweiter Long 1,3469, Stop 1,3451, Risiko 18 Pips.
+- Nachdem am 22. August über das Hoch von Welle 1 oder A gehandelt wurde, wandert der Stop beider Units auf 1,3465, einen Tick unter dem kleineren Swing-Tief.
+- Kurzfristige EUR/USD-Unit: bei 1,3636 das 60-Minuten-Ein-Bar-Tief, und zusätzlich einen Tick unter das Tief vor jeder bullischen 60-Minuten-Umkehr. Am letzten Bar des betreffenden Charts 1,3544. Ausstieg 1,3625, einen Tick unter dem nachgezogenen Ein-Bar-Tief, Gewinn 156 Pips.
+- Langfristige Unit: weit vom Markt, bis das Tagesmomentum wieder bullisch umkehrt, dann 1,3549. Bis zur überkauften Wochenlage unter das Swing-Tief vor jeder folgenden bullischen Tagesumkehr. Danach unter das Swing-Tief nach der nächsten bullischen Tagesumkehr, und nach der nächsten bärischen Tagesumkehr einen Tick unter dem täglichen Ein-Bar-Tief.
+- Am 5. Oktober Stop auf 1,4030, das Tief vor der bullischen Tagesumkehr. Am 9. Oktober ausgestoppt bei 1,4030, als unter 1,4031 gehandelt wurde. Gewinn 561 Pips bei Einstieg 1,3469. In der frühen Trendphase lag der Stop relativ weit weg. Das Tagesmomentum hatte vor dem Ausstopp weder die überkaufte Zone erreicht noch bärisch umgekehrt.
+- Im EUR/USD lag der Long bei 1,4341 am 21. Dezember um 2 Uhr MEZ, mit 35 Pips Stop bei 1,4306; der Stop der zweiten Einheit wurde jeweils ein Tick unter das Tief vor jeder bullischen Umkehr des 34er 60-Minuten-DTosc gesetzt.
+- Die erste Einheit wurde mit dem nachgezogenen 60-Minuten-Ein-Bar-Tief geführt, sobald das 50-Prozent-Retracement erreicht war, und ging bei 1,4387 heraus.
+- Beim GBP lag der erste Kaufstop ein Tick über dem Hoch vom 24. September bei 2,0322, der Short bei 2,0254; später lag der Stop ein Pip über dem kleineren Swing-Hoch bei 2,0230.
+- Beim Yen lag der Einstiegsstop ein Pip unter dem nachgezogenen 60-Minuten-Ein-Bar-Tief, zwei Einheiten bei 115,33; nach der nächsten bärischen 60-Minuten-Umkehr wurde der Stop auf das Swing-Hoch 115,16 gesetzt, die zweite Einheit ging mit 26 Pips heraus.
+- Beim ES lag der Einstieg bei 1311,25 und der erste Verkaufsstop bei 1269, ein Tick unter dem kleineren Swing-Tief; empfohlen wurde ersatzweise der SPY-ETF.
+- Am Tag nach dem ES-Einstieg sollte der Stop 10 Punkte unter das jüngste Hoch gezogen werden, sodass ein Ausstoppen mindestens einen kleinen Gewinn lässt.
+- Der ES-Stop der zweiten Einheit wurde am Morgen des 25. Januar auf 1356,25 gesetzt, ein Tick unter ein kleineres Swing-Tief, und später mit 45 Punkten Gewinn ausgelöst.
+- Sojabohnen: erster Stop 743'75, dann Break-even nach dem Tief bei 765, dann auf das Tief vom 30. Mai bei 823, später auf das Tief vom 29. Juni bei 875.
+- Vom 18. bis 22. Juni liefen die Bohnen 68 Cent gegen die Position, der Stop blieb bei 823 und wurde knapp nicht erreicht; die Lücke vom 29. Juni nahm den Druck.
+- Der ES-Short-Stop lag bei 1294,50; der Ausstiegs-Kaufstop ein Tick über dem Ein-Bar-Hoch bei 1281,75 griff auf der nächsten Bar.
+- Im USD/CAD lag der erste Stop bei 1,0328; an der 100-Prozent-APP wurde eine Einheit mit einem Stop 10 Pips über dem Markt geführt und die zweite auf Break-even gesetzt.
+- Nachdem das Welle-3-Tief vom 24. Januar genommen war, lag der Stop wenige Pips über dem Welle-4-Hoch vom 28. Januar; am möglichen Welle-5-von-5-Tief wenige Pips über 0,9972, Ausstieg bei 0,9980.
 
 ## Unterschiedliche Quellenpositionen
 

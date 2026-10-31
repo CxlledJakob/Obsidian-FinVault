@@ -106,6 +106,8 @@ aktualisiert: 2026-10-30
 - Je ausgedehnter die Stauzone, desto bedeutender ihre spätere Wirkung. Auf der 5-Minuten-Chart bleibt die Wirkung weitgehend im Intraday, auf dem Tageschart ist ein Bruch von Decke oder Boden bedeutend.
 - Die längere Zeitebene hat, bei sonst gleichen Bedingungen, die größere Bedeutung: 5 Minuten weniger als 15 Minuten, diese weniger als die Stunde.
 - Ein Index kann Tage oder Wochen eng laufen, ein Währungspaar Monate, Anleihen besonders in der damaligen Finanzkrise sehr eng, Aktien monatelang festliegen. Minuten oder Stunden kommen ebenso vor.
+- Für Time-Band-Ziele sind die relevanten Pivots meist die offensichtlichen Swing-Hochs und Swing-Tiefs. Zusätzlich werden Phasen der Marktkonsolidierung gesucht, die zu den typischen High-High-Zählungen passen.
+- Für die Time-Band-Pivots werden neben den offensichtlichen Swing-Hochs und Swing-Tiefs auch Konsolidierungsphasen gesucht, die zu den typischen High-High-Zählungen passen.
 
 ## Risiken und Grenzen
 

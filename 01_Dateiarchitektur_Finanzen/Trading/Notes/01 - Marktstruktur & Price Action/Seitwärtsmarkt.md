@@ -56,6 +56,10 @@ aktualisiert: 2026-10-30
 - Nicht jede Pause ist ein Seitwärtsmarkt. Läuft die nächste Kerze auf gutem Volumen sofort weg, war es eine kleine Pause im Trend.
 - Märkte trenden ein Stück, laufen seitwärts und setzen dann fort oder drehen vollständig.
 - In der Seitwärtsphase kann das Volumen allgemein fallen und zwischen Kauf und Verkauf wechseln. Fallende Preise bei fallendem Volumen tragen keinen anhaltenden Trend.
+- Man kann nie im Voraus wissen, wann ein Markt in eine Trading Range geht oder einen Trend verlangsamt.
+- Gehandelt wird immer auf der rechten Seite des Charts nach dem letzten Balken, der unbekannten Seite; für die Entscheidung steht nur die Information bis zum letzten Preisbalken.
+- Man kann nie im Voraus wissen, ob ein Markt eine Trading Range beginnen wird; versucht ein Lehrer besondere Strategien für Trading Ranges, soll man weglaufen, denn sie haben alle nur nachträglich funktioniert.
+- Weil Beginn und Ende nie im Voraus bekannt sind, hat dieser Ansatz keine Trading-Range-Strategie; nur akademische Autoren mit zweifelhafter Handelserfahrung haben eine.
 
 ## Funktionsweise
 
@@ -133,6 +137,11 @@ aktualisiert: 2026-10-30
 - Auf der Stunde lag das Volumen der Stauung unter der Durchschnittslinie. Der Boden entstand ohne Pivot-Tiefs, drei Kerzen stoppten auf demselben Preis.
 - Der Dow konsolidierte etwa vier bis fünf Monate, bevor er auf durchschnittlichem Volumen weiterstieg.
 - Im YM mündete der Anstieg auf der rechten Seite in eine Stauzone, zusammen mit allgemein fallendem Volumen.
+- In der Anleihe-Wochenperiode 2 lag der Markt im Wesentlichen in einer Trading Range mit Schwüngen auf und ab, das Wochenmomentum war bärisch, und der Preis stand am Ende seitwärts bis geringfügig höher, bei wenig Nettogewinn.
+- Der Anleihemarkt wurde choppig mit kurzen Schwüngen auf und ab, als die Vorwärtsrate sank; das zwang jeden Preis-Momentum-Indikator, bärisch zu werden.
+- In der Range machte das Tagesmomentum bullische Umkehren innerhalb von ein oder zwei Balken jedes Preistiefs; weil das Wochenmomentum bärisch war, wurden nur Short-Setups erwogen.
+- Ende August zu wissen, dass die Anleihen vier Monate klar abgegrenzte Range-Schwünge machen würden, hätte mit einer Range-Strategie viel Geld gebracht; dieses Wissen gibt es im Voraus nicht.
+- Der vierten bullischen 15-Minuten-Umkehr im EUR/USD folgten mehrere seitwärts bis abwärts laufende Balken, bevor das 60-Minuten-Momentum bärisch umkehrte.
 
 ## Unterschiedliche Quellenpositionen
 

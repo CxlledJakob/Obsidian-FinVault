@@ -20,6 +20,9 @@ aktualisiert: 2026-10-30
 
 - Die Bet Size mi,t einer Strategie i zum Zeitpunkt t liegt in [−1, 1]; −1 ist eine volle Short-Position und 1 eine volle Long-Position.
 - Die Zielposition zu Prognose fi ist der ganzzahlige Wert von m[ω, fi − pt] mal Q, wobei Q die maximale absolute Positionsgröße und pt der Marktpreis ist.
+- Die maximale Positionsgröße ist das für das verfügbare Kontokapital erlaubte maximale Kapitalrisiko, geteilt durch das Kapitalrisiko je Einheit.
+- Die Positionsgröße ist die Zahl der gehandelten Einheiten, also Kontrakte, Aktien oder Lots.
+- Die Positionsgröße ist die Zahl der Handelseinheiten, also Kontrakte, Aktien oder Lots, für den Trade.
 
 ## Kernaussagen
 
@@ -34,6 +37,19 @@ aktualisiert: 2026-10-30
 - Der optimale Hebel wird für Fälle gesucht, in denen die Renditen nicht mehr als gaußverteilt gelten können.
 - Schwarze Schwäne, Constant Proportion Portfolio Insurance und Stop-Losses mildern die praktische Anwendung dieser Allokation.
 - Risikoindikatoren werden daraufhin geprüft, ob sie ein nützlicher Teil eines umfassenden Risikomanagements sind.
+- Kapitel 6 lehrt zwei vollständig objektive Einstiegsstrategien und wie die maximale Positionsgröße für jeden Trade schnell bestimmt wird.
+- Die richtige Positionsgröße für jedes Trade-Setup auf jedem Zeitrahmen ist einer der wichtigsten Schlüssel zum langfristigen Erfolg im Geschäft des Tradings; das wissen alle erfolgreichen Trader.
+- Die Strategien in Kapitel 6 sollen jedes Raten beseitigen, zu welchem Preis ein Markt betreten wird und welcher Stop-Loss-Preis gelten soll.
+- Die maximale Positionsgröße für jeden Trade ist ein Schlüsselfaktor des Handelserfolgs.
+- Für jeden Trade, jede Bedingung und jeden Markt werden der maximale Kapitaleinsatz und die maximale Positionsgröße objektiv festgelegt.
+- Das Risiko des Setups wird nicht gesteuert. Gesteuert wird, ob das Risiko akzeptiert wird, und die Positionsgröße.
+- Ist der Einsatz zu groß, wird nicht gehandelt oder die Position in einem gering oder nicht gehebelten Markt kleiner gefasst, etwa in einem ETF oder Fonds statt im Future.
+- Auf einen einzelnen Trade oder eine Gruppe offener Trades wird nie mehr als ein kleiner Kapitalanteil riskiert. Jeder Trade kann ein Verlierer sein.
+- Große Positionen mit der Aussicht auf große Gewinne sind ein Wunschbild und können Verluste erzeugen, die sich schwer erholen lassen.
+- Das Kapitalrisiko je Einheit ist für sich nicht relevant. Relevant ist nur das gesamte Kapitalrisiko der Positionsgröße im Verhältnis zum Konto.
+- Kein Trade, wenn dieses gesamte Risiko größer als 3 Prozent ist. Klein oder groß ändert daran nichts, solange die Regel befolgt wird.
+- Die Schönheit der objektiven maximalen Positionsgröße ist genau diese Unabhängigkeit vom Risiko je Einheit.
+- Eine kleinere Zeitebene senkt das Risiko je Kontrakt oft und erlaubt damit bei demselben Konto die Position, ohne die 3-Prozent-Grenze zu verletzen. Nicht immer, aber oft.
 
 ## Funktionsweise
 
@@ -91,6 +107,11 @@ aktualisiert: 2026-10-30
 - Eine gewichtete lineare Kombination weist jeder einfachen Regel einen Koeffizienten ai zu, der von ihrer Vorhersagekraft abhängt.
 - Der Satz der Gewichte, der nach einem Gütemaß wie minimalem Prognosefehler oder maximaler finanzieller Leistung am besten ist, wird durch Optimierung gesucht.
 - Die einfachste lineare Kombination gibt jedem Bestandteil dasselbe Gewicht; zwei binäre Umkehrregeln ergeben dann −2, wenn beide short sind, 0, wenn eine short und eine long ist, und +2, wenn beide long sind.
+- Viele Verfahren der Positionsgröße sind kompliziert, das einfachste ist das beste. Die maximale Positionsgröße ist eine Funktion des maximalen anfänglichen Kapitalrisikos je Handelseinheit.
+- Zuerst werden 3 Prozent des verfügbaren Kontosaldos berechnet. Dann das Kapitalrisiko je Einheit aus objektivem Einstiegspreis und anfänglichem Schutzstop. Die Einheit kann ein Future-Kontrakt oder eine Aktie sein. Danach wird geteilt.
+- Die Formel lautet: verfügbares Kapital mal 3 Prozent, geteilt durch das Kapitalrisiko je Einheit, gleich maximale Positionsgröße.
+- Wer diese Rechnung nicht versteht, soll sofort aufhören zu handeln. Erfolgreiches Trading verlangt, einfache Begriffe und Mathematik zu verstehen.
+- Der Autor benutzt seit Jahren ein einfaches Spreadsheet mit Einstiegspreis, Stoppreis, Wert je Tick und Kontosaldo. Eine MS-Excel-Fassung liegt unter www.highprobabilitytradingstrategies.com. In den meisten Fällen braucht man weder Spreadsheet noch Rechner.
 
 ## Voraussetzungen
 
@@ -98,6 +119,8 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Ein Backtest ist unter anderem eine Plausibilitätsprüfung der Einsatzgröße.
+- Die Berechnung der maximalen Positionsgröße steht in Kapitel 6; der Index verweist die Berechnung auf Seite 160 und ein Beispiel der Long-Position in Google auf die Seiten 161–162.
+- Ein Plan mit mehreren Einheiten soll den Nettogewinn über die Zeit erhöhen.
 
 ## Regeln und Kriterien
 
@@ -107,6 +130,15 @@ aktualisiert: 2026-10-30
 - Im SPY-Beispiel erhält jede kointegrierende Aktie gleiches Kapital; der Johansen-Eigenvektor auf Logpreisen setzt die Dollar-Allokation zwischen diesem Portfolio und SPY, nicht die Stückzahl.
 - Die lineare Mean-Reversion-Strategie setzt die Zahl der Einheiten auf den negativen Abstand des Log-Marktwerts von seinem gleitenden Mittel, geteilt durch die gleitende Standardabweichung, bei Look-back 5.
 - Im querschnittlichen Modell ist wi gleich minus (ri minus der Durchschnittsrendite) geteilt durch die Summe der absoluten Abweichungen, sodass jeden Tag dasselbe Bruttokapital von 1 Dollar investiert wird.
+- Die maximale Positionsgröße soll eine Kapitalbindung von nicht mehr als 3 Prozent des Kontos darstellen; die Berechnung steht in Kapitel 6.
+- Jeder Trade soll mit mindestens zwei Einheiten genommen werden, und die Ausstiegsstrategie ist je Einheit verschieden.
+- Eine Einheit gilt als kurzfristig und wird geschlossen, wenn der Markt ein kleineres Korrekturziel erreicht; die zweite gilt als längerfristig und wird an einem Trendziel geschlossen.
+- Ein Plan mit mehreren Einheiten soll den Nettogewinn über die Zeit erhöhen.
+- Für die kurzfristige Einheit wird ein objektiver Ausstieg erwogen, für die Einheit der höheren Zeitebene eine Führung nach der sich entwickelnden Marktlage.
+- Nicht mit zu großem Risiko für die Kontogröße überhandeln.
+- Um mit Daytrading die Kosten zu decken, ist Größe nötig; zwei oder drei Future-Kontrakte lohnen die Zeit selbst bei hoher Trefferquote kaum.
+- Die maximale Positionsgröße soll ein Kapitalrisiko von nicht mehr als 3 Prozent des Kontos darstellen.
+- Jeder Trade soll mit mindestens zwei Einheiten eingegangen werden.
 
 ## Risiken und Grenzen
 
@@ -120,6 +152,7 @@ aktualisiert: 2026-10-30
 - Buy-on-Gap handelt je Tag recht wenige Aktien und hat deshalb keine große Kapazität.
 - Ein Backtest auf Trade- oder Quote-Preisen ist nur realistisch, wenn nur 100 Stück gehandelt werden oder erhebliche Transaktionskosten angesetzt sind; die NBBO-Größe von AAPL ist oft nur 100 Stück, die von EWC an einem typischen Tag etwa 5.000.
 - Werden nach dem Signal nicht beide Seiten als Market Order geschickt, bleiben bei Teilausführung kleiner Orderbruchteile zeitweise kleine ungehedgte Positionen.
+- Wer glaubt, den Markt zu kennen, die Risikosregeln bricht, das Konto mit weitem Stop bindet und gegen den Lauf nachkauft, verliert groß oder wird vom Broker aus der Margin genommen.
 
 ## Beispiele
 
@@ -131,6 +164,14 @@ aktualisiert: 2026-10-30
 - Bei einer Maximalposition von 100, einem Prognosepreis von 115 und einem Marktpreis von 100 hat die Order die Größe 97, und ihr Limitpreis 112,3657 liegt zwischen Marktpreis und Prognosepreis.
 - Setzt man den Prognosepreis auf 110, beträgt die Zielposition 95, im Einklang mit der Kalibrierung von ω.
 - Abbildung 10.3 zeigt die Potenzfunktion Vorzeichen von x mal Betrag von x zum Quadrat, die von konkav zu konvex wechselt, und die Sigmoidfunktion x / √(0,1 + x²), die von konvex zu konkav wechselt.
+- 24,75 Punkte je Kontrakt, von 1431,25 bis 1406,50, wären für einen stark gehebelten Future eher zu groß. Dieselbe Richtung lässt sich im SPY mit weniger oder ohne Hebel nehmen, oder nach dem 60-Minuten-Setup auf der 15-Minuten-Zeitebene mit wahrscheinlich kleinerem Einsatz.
+- Im 15-Minuten-ES nach bullischer Umkehr liegt der Buy-Stop der Tr-1BH-Strategie bei 1441,75, einen Tick über dem Hoch des letzten abgeschlossenen Bars, der Schutz-Sell-Stop bei 1435,25, einen Tick unter dem Tief. Das Risiko ist 6,5 Punkte oder 325 Dollar, weil 6,5 mal 50 Dollar.
+- Bei einem Konto von 20.000 Dollar sind 3 Prozent 600 Dollar. 600 geteilt durch 325, aufgerundet, ergeben zwei Kontrakte als Maximum. Ein Buy-Stop über zwei Kontrakte hinaus heißt, den Kapitalerhalt nicht verstanden zu haben.
+- Bei Google und 50.000 Dollar verfügbarem Kapital ist das maximale Risiko 1.500 Dollar, das Risiko je Aktie 21,05 Dollar aus 526,83 minus 505,78. 1.500 geteilt durch 21,05 ergeben nach dem Text 72 Aktien. 73 Aktien brechen die Regel.
+- 24,25 Punkte mal 50 Dollar sind 1.212,50 Dollar je S&P-Future-Kontrakt. Zwei Units sind 2.425 Dollar. Der Text verlangt dafür 80.800 Dollar verfügbares Kapital, gerechnet als 2.425 geteilt durch 0,03. Ist das Konto kleiner, wird der SPY genommen, der Tick für Tick mit dem S&P läuft.
+- Auf dem ungehebelten SPY lag das anfängliche Kapitalrisiko unter 1,8 Prozent. Die erste Unit brachte ungefähr 2 Prozent in zwei Tagen, die zweite ungefähr 5,3 Prozent in weniger als zwei Wochen.
+- Der 15-Minuten-Tr-1BH bei 1422,50 mit Stop 1411,25 hat 11,25 Punkte Risiko je Kontrakt, gegen 24,25 Punkte auf 60 Minuten.
+- Beim EUR/USD wird in Pips gerechnet, weil ein Pip je nach gewählter Losgröße verschieden viel wert ist. Der zweite Einstieg hat 18 Pips Kapitalrisiko, der erste Versuch endete mit 21 Pips Verlust. Der wichtige Punkt ist, dass das anfängliche Kapitalrisiko sehr klein ist.
 
 ## Unterschiedliche Quellenpositionen
 

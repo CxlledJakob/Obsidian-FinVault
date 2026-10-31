@@ -35,6 +35,13 @@ aktualisiert: 2026-10-30
 - Große Volumen lassen sich nicht in einer Session verkaufen oder kaufen, ohne den Preis gegen die Insider zu bewegen. Der Climax braucht deshalb zwei, drei oder vier Sessions.
 - Man wartet, bis der Climax abgeschlossen ist, weil es Zeit braucht, große Volumen schnell zu bewegen.
 - Der Markt dreht nicht auf einen Punkt. Er pausiert, steigt, pausiert erneut und fällt dann.
+- Wer nicht die Geduld und die Disziplin hat, laut Tradingplan auf Bedingungen mit hoher Erfolgswahrscheinlichkeit zu warten, ist kein Trader, sondern ein Spieler ohne Respekt vor den Regeln, die ihn schützen sollen.
+- Das Handelskonto geht dann schließlich an die Profis, die Geduld haben und die Regeln befolgen.
+- Vor dem Trade sind alle Preis- und Zeitprojektionen zu erstellen, und es ist zu warten, bis alle Bedingungen stehen.
+- Geduld und harte Arbeit sind der Schlüssel zum Erfolg; Trading ist kein leichtes Geschäft, man muss auf die beste Gelegenheit warten.
+- Geduld gehört zum Money-Management: nicht überhandeln, damit man nach mehreren Verlusten in Folge am nächsten Tag noch dabei ist.
+- Der erfahrene Trader wartet auf ein Setup hoher Wahrscheinlichkeit und folgt dem Plan, statt überaktiv das Tief zu kaufen und das Hoch zu verkaufen.
+- Diese Geduld und Disziplin, auf das ideale Setup zu warten, kennzeichnet den erfolgreichen Umgang mit dem Trade.
 
 ## Funktionsweise
 
@@ -53,6 +60,10 @@ aktualisiert: 2026-10-30
 - Öffnet der Markt innerhalb der Balance zur Range des Vortags, sind die Gelegenheiten meist begrenzt, und es ist besser, auf eine bessere Trade Location zu warten.
 - Der erste Shooting Star ist nur das Signal, aufmerksam zu werden und die folgenden Kerzen auf Bestätigung zu prüfen, nicht der Einstieg.
 - Die Prüfung der höheren und tieferen Zeitebenen dauert Minuten oder Sekunden, während die nächste Kerze entsteht.
+- Der Fokus liegt darauf, ein erfolgreicher Trader zu sein und nicht auf der Handelsaktivität, und die Geduld zu haben, einen Trade nur zu erwägen, wenn die Bedingungen optimal sind.
+- Das Ziel sind Bedingungen mit hoher Wahrscheinlichkeit und akzeptablem Kapitaleinsatz, nicht einen bestimmten Markt die ganze Zeit zu handeln.
+- Oft fallen APP und Retracement nicht zu einer engen Zielzone zusammen; nur wenn sie es tun, steigen die Chancen deutlich.
+- Wer sich auf nur eine oder zwei Arten von Setups sehr hoher Wahrscheinlichkeit spezialisiert, hat weniger Setups, aber wie Spezialisten in anderen Geschäften eine gute Chance auf größeren Erfolg.
 
 ## Regeln und Kriterien
 
@@ -77,6 +88,7 @@ aktualisiert: 2026-10-30
 - Je näher die Eröffnung an der Mitte der Vortagesrange liegt, desto geringer ist der Anlass, früh zu handeln.
 - Je näher die Eröffnung an den Extremen des Vortags liegt, desto eher kann ein früher Einstieg nützen.
 - Solange die Richtung eines einzelnen Signals unklar ist, wird nicht aus Ungeduld in den Trade gesprungen.
+- Die Swing-Einstiegsstrategie ist die zweite von zwei Einstiegsstrategien für jeden Markt, jede Zeitebene und jede Bedingung. Sie kauft oder verkauft nie zu einem Zielpreis und verlangt, dass der Markt sich erst in die erwartete Trendrichtung bewegt, bevor ein Trade ausgeführt wird.
 
 ## Risiken und Grenzen
 
@@ -84,6 +96,7 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Im EUR/USD wurde gewartet, bis am 20. Dezember alle Faktoren für ein mögliches ABC-Korrekturtief beisammen waren, und erst danach der Plan ausgeführt.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -32,6 +32,13 @@ aktualisiert: 2026-10-30
 - Die Kraft des folgenden Trends wird danach beurteilt, wie lange die Konsolidierung gedauert hat. Je länger die Phase, desto größer der anschließende Trend.
 - Zeit ist neben Volumen und Preis nötig, um diese Kraft zu beurteilen. Ohne die Zeit fehlt diese Säule der Volume Price Analysis.
 - Cumulative Delta soll die Stärke des Kaufens oder Verkaufens zeigen, das zur Preisaktion gehört.
+- In einem starken Trend ist ein Tagesmomentum, das über den größten Teil der Periode overbought bleibt, eine typische Momentumlage.
+- Je stärker der bullische Trend, desto ausgeprägter hängt der Stochastic in der Overbought-Zone und desto flacher bleiben die Momentumkorrekturen.
+- In einem viermonatigen starken Aufwärtstrend mit nur kleinen Korrekturen fiel der Stochastic nur bei den größeren, mehrere Bars dauernden Korrekturen unter die Overbought-Linie, während innerhalb der Zone häufig oszilliert wurde.
+- Wurde der Aufwärtstrend später stärker und die Korrekturen in Zeit und Preis kleiner, erreichte der Indikator auf den Korrekturen nicht mehr die Oversold-Zone.
+- Das Ausbleiben der Oversold-Zone macht den Indikator bei bullischem Trend der größeren Zeitebene nicht wertlos.
+- Ist dieser größere Trend bullisch, bleibt jede bullische Umkehr der kleineren Zeitebene unter der Overbought-Zone ein Long-Setup.
+- Der MACD identifizierte in einem starken Aufwärtstrend mit nur wenige Tage dauernden Korrekturen die kleineren Hochs und Tiefs innerhalb von ein oder zwei Bars und damit Einstiege in Richtung des größeren Trends.
 
 ## Funktionsweise
 
