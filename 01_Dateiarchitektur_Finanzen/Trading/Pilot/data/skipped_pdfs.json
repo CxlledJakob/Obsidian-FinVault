@@ -7,6 +7,22 @@
       "reason": "no text layer",
       "sampled_chars": 0,
       "sample_pages": 23
+    },
+    {
+      "file": "Algorithmic trading and DMA _ an introduction to direct -- by Barry Johnson -- London, England, 2010 -- 4Myeloma Press -- isbn13 9780956399205 -- e8a3f780fb7625a2dcf1632825936fb7 -- Anna’s Archive.pdf",
+      "key": "algorithmic-trading-and-dma-an-i",
+      "pdf_pages": 595,
+      "reason": "no text layer",
+      "sampled_chars": 0,
+      "sample_pages": 22
+    },
+    {
+      "file": "Market Microstructure Theory  .pdf",
+      "key": "market-microstructure-theory-pdf",
+      "pdf_pages": 293,
+      "reason": "no text layer",
+      "sampled_chars": 0,
+      "sample_pages": 22
     }
   ]
 }

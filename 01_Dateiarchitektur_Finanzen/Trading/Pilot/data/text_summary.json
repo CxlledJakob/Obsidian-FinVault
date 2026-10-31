@@ -1,5 +1,5 @@
 {
-  "repaired_records": 595,
+  "repaired_records": 0,
   "files": [
     {
       "file": "A Complete Guide to Volume Price Analysis.pdf",
@@ -7,7 +7,7 @@
       "pdf_pages": 157,
       "stored_pages": 157,
       "methods": {
-        "pymupdf": 157
+        "skipped": 157
       }
     },
     {
@@ -16,7 +16,16 @@
       "pdf_pages": 393,
       "stored_pages": 393,
       "methods": {
-        "pymupdf": 393
+        "skipped": 393
+      }
+    },
+    {
+      "file": "Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf",
+      "key": "algorithmic-trading-winning-stra",
+      "pdf_pages": 214,
+      "stored_pages": 214,
+      "methods": {
+        "pymupdf": 214
       }
     },
     {
@@ -25,7 +34,52 @@
       "pdf_pages": 225,
       "stored_pages": 225,
       "methods": {
-        "pymupdf": 225
+        "skipped": 225
+      }
+    },
+    {
+      "file": "Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf",
+      "key": "analysis-of-financial-time-serie",
+      "pdf_pages": 714,
+      "stored_pages": 714,
+      "methods": {
+        "pymupdf": 714
+      }
+    },
+    {
+      "file": "Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf",
+      "key": "behavioural-investing-a-practiti",
+      "pdf_pages": 730,
+      "stored_pages": 730,
+      "methods": {
+        "pymupdf": 730
+      }
+    },
+    {
+      "file": "Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf",
+      "key": "cycle-analytics-for-traders-adva",
+      "pdf_pages": 239,
+      "stored_pages": 239,
+      "methods": {
+        "pymupdf": 239
+      }
+    },
+    {
+      "file": "Dual momentum investing _ an innovative strategy for higher -- Gary Antonacci -- 1st, FR, 2014 -- Mc Graw Hill Education -- isbn13 9780071849449 -- 07bd1b85af6f099eed2d06d3ca3689b2 -- Anna’s Arch.pdf",
+      "key": "dual-momentum-investing-an-innov",
+      "pdf_pages": 236,
+      "stored_pages": 236,
+      "methods": {
+        "pymupdf": 236
+      }
+    },
+    {
+      "file": "Elliott Wave Principle_ Key to Market Behavior.pdf",
+      "key": "elliott-wave-principle-key-to-ma",
+      "pdf_pages": 138,
+      "stored_pages": 138,
+      "methods": {
+        "pymupdf": 138
       }
     },
     {
@@ -34,7 +88,34 @@
       "pdf_pages": 523,
       "stored_pages": 523,
       "methods": {
-        "pymupdf": 523
+        "skipped": 523
+      }
+    },
+    {
+      "file": "Expectations Investing_ Reading Stock Prices for Better -- Michael J_ Mauboussin; Alfred Rappaport -- Heilbrunn Center for Graham & Dodd Investing -- isbn13 9780231554848 -- f484613c09ae9440733e6de2b85f04a2 -- Anna’.pdf",
+      "key": "expectations-investing-reading-s",
+      "pdf_pages": 262,
+      "stored_pages": 262,
+      "methods": {
+        "pymupdf": 262
+      }
+    },
+    {
+      "file": "Financial Statement Analysis and Security Valuation 5e -- Stephen H_ Penman, Professor -- 5_ ed, New York, NY, 2012 -- McGraw-Hill School Education -- isbn13 9780071326407 -- 1bc02ca6faf08795dfa9eb150972f92a -- Anna.pdf",
+      "key": "financial-statement-analysis-and",
+      "pdf_pages": 769,
+      "stored_pages": 769,
+      "methods": {
+        "pymupdf": 769
+      }
+    },
+    {
+      "file": "Global Macro Trading (Profiting in a New World Economy) __ -- Gliner, Greg -- 10_1002_97, 2012 -- John Wiley & Sons, Incorporated -- isbn13 9781118362426 -- e98e86fb783772b0b45ea5b8043aaee9 -- Anna’s Archive.pdf",
+      "key": "global-macro-trading-profiting-i",
+      "pdf_pages": 354,
+      "stored_pages": 354,
+      "methods": {
+        "pymupdf": 354
       }
     },
     {
@@ -43,7 +124,142 @@
       "pdf_pages": 290,
       "stored_pages": 290,
       "methods": {
-        "pymupdf": 290
+        "skipped": 290
+      }
+    },
+    {
+      "file": "Inefficient Markets_ An Introduction to Behavioral Finance -- Andrei Shleifer -- Oxford University Press USA, Oxford, 2000 -- Oxford University Press, -- isbn13 9780191521928 -- d0878a2a107a74bb53d441ea1bcc5fbb -- A.pdf",
+      "key": "inefficient-markets-an-introduct",
+      "pdf_pages": 225,
+      "stored_pages": 225,
+      "methods": {
+        "pymupdf": 225
+      }
+    },
+    {
+      "file": "INVESTMENT VALUATION TOOLS AND TECHNIQUES FOR DETERMINING -- Aswath Damodaran -- Wiley finance series, 3rd ed_, Hoboken, N_J, New Jersey, -- John -- isbn13 9781118011522 -- f84d1622bdc2de526da0dda803c52830 -- Anna’s.pdf",
+      "key": "investment-valuation-tools-and-t",
+      "pdf_pages": 993,
+      "stored_pages": 993,
+      "methods": {
+        "pymupdf": 993
+      }
+    },
+    {
+      "file": "Margin of Safety _ Risk-Averse Value Investing Strategies -- Seth A_ Klarman -- 1st, First Edition, PS, 1991 -- HarperCollins -- isbn13 9780887305108 -- e5c796c4a38208ed57c7498c6a904e10 -- Anna’s Archive.pdf",
+      "key": "margin-of-safety-risk-averse-val",
+      "pdf_pages": 258,
+      "stored_pages": 258,
+      "methods": {
+        "pymupdf": 258
+      }
+    },
+    {
+      "file": "Margin of safety _ risk-averse value investing strategies -- Seth A_ Klarman -- 1st, First Edition, PS, 1991 -- HarperCollins -- isbn13 9780887305108 -- f0d928a3e232d80c61139c66c2f66c6a -- Anna’s.pdf",
+      "key": "margin-of-safety-risk-averse-val",
+      "pdf_pages": 252,
+      "stored_pages": 252,
+      "methods": {
+        "pymupdf": 252
+      }
+    },
+    {
+      "file": "Option Volatility and Pricing_ Advanced Trading Strategies -- Sheldon Natenberg -- 2nd ed, 2014 -- McGraw Hill Professional -- isbn13 9780071818773 -- 6a48d008bd9beef283debf7bad0b2e4a -- Anna’s Archive.pdf",
+      "key": "option-volatility-and-pricing-ad",
+      "pdf_pages": 588,
+      "stored_pages": 588,
+      "methods": {
+        "pymupdf": 588
+      }
+    },
+    {
+      "file": "Practical Portfolio Performance Measurement and Attribution -- Bacon, Carl R_ -- 10_1002_9781119206309, 2012 jan 02 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781119206309 -- bc9440f8ca87cf4e34d9c3fda66edb46 -- Anna.pdf",
+      "key": "practical-portfolio-performance-",
+      "pdf_pages": 393,
+      "stored_pages": 393,
+      "methods": {
+        "pymupdf": 393
+      }
+    },
+    {
+      "file": "Quantitative financial analytics_ the path to investment profits.pdf",
+      "key": "quantitative-financial-analytics",
+      "pdf_pages": 621,
+      "stored_pages": 621,
+      "methods": {
+        "pymupdf": 621
+      }
+    },
+    {
+      "file": "Quantitative Risk Management_ Concepts, Techniques, and -- Alexander J_ McNeil, Rüdiger Frey, Paul Embrechts -- Princeton series in finance, -- isbn13 9780691122557 -- 478a0059673fecd0c76229cd3d8884e7 -- Anna’s Arc.pdf",
+      "key": "quantitative-risk-management-con",
+      "pdf_pages": 554,
+      "stored_pages": 554,
+      "methods": {
+        "pymupdf": 554
+      }
+    },
+    {
+      "file": "Quantitative Trading_ How to Build Your Own Algorithmic -- Chan, Ernest P_ -- 2nd edition, Erscheinungsort nicht ermittelbar, 2021 -- Wiley & Sons, -- isbn13 9781119800064 -- 1ed7eeb8d90b7955ef079f94931f4e66 -- Anna.pdf",
+      "key": "quantitative-trading-how-to-buil",
+      "pdf_pages": 256,
+      "stored_pages": 256,
+      "methods": {
+        "pymupdf": 256
+      }
+    },
+    {
+      "file": "Quantitative Trading_ How to Build Your Own Algorithmic -- Ernest P_ Chan -- Wiley Trading, 1, 2008 -- John Wiley & Sons, Ltd_ -- isbn13 9780470284889 -- e4d660df1c1a75e8676a28ff4f852fa7 -- Anna’s Archive.pdf",
+      "key": "quantitative-trading-how-to-buil",
+      "pdf_pages": 204,
+      "stored_pages": 204,
+      "methods": {
+        "pymupdf": 204
+      }
+    },
+    {
+      "file": "Security Analysis_ Sixth Edition, Foreword by Warren Buffett -- Benjamin Graham, David Dodd, Warren Buffett -- Security Analysis Prior Editions, 6, -- isbn13 9780071412285 -- 34cb2f3be2fa3845918f33ea6815d640 -- Anna.pdf",
+      "key": "security-analysis-sixth-edition-",
+      "pdf_pages": 818,
+      "stored_pages": 818,
+      "methods": {
+        "pymupdf": 818
+      }
+    },
+    {
+      "file": "Statistical Arbitrage_ Algorithmic Trading Insights and -- Karen M_ Sowers; Andrew Pole -- Wiley Finance, 1, 2007 -- Wiley & Sons, Incorporated, John -- isbn13 9780470138441 -- 6b0138550172e24db7f13c932e054fb9 -- An.pdf",
+      "key": "statistical-arbitrage-algorithmi",
+      "pdf_pages": 257,
+      "stored_pages": 257,
+      "methods": {
+        "pymupdf": 257
+      }
+    },
+    {
+      "file": "Study Guide for Technical Analysis Explained Fifth Edition -- Martin J_ Pring -- 5th ed, New York, ©2014 -- McGraw-Hill School Education Group -- isbn13 9780071823982 -- b05f5d7865ff0ca759da617ae4868f89 -- Anna’s Ar.pdf",
+      "key": "study-guide-for-technical-analys",
+      "pdf_pages": 225,
+      "stored_pages": 225,
+      "methods": {
+        "pymupdf": 225
+      }
+    },
+    {
+      "file": "The Daily Trading Coach_ 101 Lessons for Becoming Your Own -- Brett N_ Steenbarger -- Wiley Trading Series, 1_, Auflage, New York, NY, 2009 -- John -- isbn13 9780470398562 -- f9a2f175961ef21a1a312fda9ac0f3fc -- Anna.pdf",
+      "key": "the-daily-trading-coach-101-less",
+      "pdf_pages": 370,
+      "stored_pages": 370,
+      "methods": {
+        "pymupdf": 370
+      }
+    },
+    {
+      "file": "The Kelly capital growth investment criterion _ theory and -- Leonard C_ Maclean, Edward O_ Thorp, W_ T_ Ziemba, Leonard -- World Scientific Handbook -- isbn13 9781283148344 -- bec576e26410d0c695fd5b867d08ec4f -- An.pdf",
+      "key": "the-kelly-capital-growth-investm",
+      "pdf_pages": 883,
+      "stored_pages": 883,
+      "methods": {
+        "pymupdf": 883
       }
     },
     {
@@ -52,7 +268,7 @@
       "pdf_pages": 377,
       "stored_pages": 377,
       "methods": {
-        "pymupdf": 377
+        "skipped": 377
       }
     },
     {
@@ -61,7 +277,7 @@
       "pdf_pages": 405,
       "stored_pages": 405,
       "methods": {
-        "pymupdf": 405
+        "skipped": 405
       }
     },
     {
@@ -70,11 +286,92 @@
       "pdf_pages": 303,
       "stored_pages": 303,
       "methods": {
-        "pymupdf": 303
+        "skipped": 303
+      }
+    },
+    {
+      "file": "Trade Your Way to Financial Freedom -- Van K Tharp -- c8eb492bdcb0cbf6cc9b2bc4d6e00976 -- Anna’s Archive.pdf",
+      "key": "trade-your-way-to-financial-free",
+      "pdf_pages": 183,
+      "stored_pages": 183,
+      "methods": {
+        "pymupdf": 183
+      }
+    },
+    {
+      "file": "Trades About to Happen_ A Modern Adaptation of the Wyckoff Method.pdf",
+      "key": "trades-about-to-happen-a-modern-",
+      "pdf_pages": 206,
+      "stored_pages": 206,
+      "methods": {
+        "pymupdf": 206
+      }
+    },
+    {
+      "file": "Trading and Investing for Beginners_ Stock Trading Basics, High level Technical Analysis, Risk Management and Trading Psychology (1).pdf",
+      "key": "trading-and-investing-for-beginn",
+      "pdf_pages": 534,
+      "stored_pages": 534,
+      "methods": {
+        "pymupdf": 534
+      }
+    },
+    {
+      "file": "Trading and Investing for Beginners_ Stock Trading Basics, High level Technical Analysis, Risk Management and Trading Psychology.pdf",
+      "key": "trading-and-investing-for-beginn",
+      "pdf_pages": 534,
+      "stored_pages": 534,
+      "methods": {
+        "pymupdf": 534
+      }
+    },
+    {
+      "file": "Trading Psychology 2_0 -- Brett N_ Steenbarger -- 2015 -- 80b6bbb23f92ae593b7e670d90b3bdf3 -- Anna’s Archive.pdf",
+      "key": "trading-psychology-2-0-brett-n-s",
+      "pdf_pages": 451,
+      "stored_pages": 451,
+      "methods": {
+        "pymupdf": 451
+      }
+    },
+    {
+      "file": "Volatility Trading_ Sinclair_Volatility Trading -- Euan Sinclair(auth_) -- Wiley Trading, 1, 2013 -- John Wiley & Sons, Incorporated -- isbn13 9781118347133 -- 2634a86bfed8248fa7ba3fb72595bbbc -- Anna’s Archive.pdf",
+      "key": "volatility-trading-sinclair-vola",
+      "pdf_pages": 298,
+      "stored_pages": 298,
+      "methods": {
+        "pymupdf": 298
+      }
+    },
+    {
+      "file": "Wiley Trading, Volume 586 _ Trading with Intermarket -- John J_ Murphy -- Wiley Trading, Volume 586, 1, 2012 -- Wiley -- 8f5cc292bf8b87bec24e9cbcb60bc608 -- Anna’s Archive.pdf",
+      "key": "wiley-trading-volume-586-trading",
+      "pdf_pages": 250,
+      "stored_pages": 250,
+      "methods": {
+        "pymupdf": 250
+      }
+    },
+    {
+      "file": "Wyckoff 2.0_ Structures, Volume Profile and Order Flow (Trading and Investing Course_ Advanced Te...{Rubén Villahermosa}{94095402} libgen.li.pdf",
+      "key": "wyckoff-2-0-structures-volume-pr",
+      "pdf_pages": 342,
+      "stored_pages": 342,
+      "methods": {
+        "pymupdf": 342
+      }
+    },
+    {
+      "file": "Zero to Hero in Cryptocurrency Trading.pdf",
+      "key": "zero-to-hero-in-cryptocurrency-t",
+      "pdf_pages": 339,
+      "stored_pages": 339,
+      "methods": {
+        "pymupdf": 339
       }
     }
   ],
-  "chunks": 159,
+  "chunks": 800,
   "skipped": [
     {
       "file": "A.J. Frost, Robert R. Prechter - Elliott Wave Principle_ Key To Market Behavior (2005, New Classics Library) - libgen.li.pdf",
@@ -83,6 +380,22 @@
       "reason": "no text layer",
       "sampled_chars": 0,
       "sample_pages": 23
+    },
+    {
+      "file": "Algorithmic trading and DMA _ an introduction to direct -- by Barry Johnson -- London, England, 2010 -- 4Myeloma Press -- isbn13 9780956399205 -- e8a3f780fb7625a2dcf1632825936fb7 -- Anna’s Archive.pdf",
+      "key": "algorithmic-trading-and-dma-an-i",
+      "pdf_pages": 595,
+      "reason": "no text layer",
+      "sampled_chars": 0,
+      "sample_pages": 22
+    },
+    {
+      "file": "Market Microstructure Theory  .pdf",
+      "key": "market-microstructure-theory-pdf",
+      "pdf_pages": 293,
+      "reason": "no text layer",
+      "sampled_chars": 0,
+      "sample_pages": 22
     }
   ]
 }
