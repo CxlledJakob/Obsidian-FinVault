@@ -1,0 +1,187 @@
+{
+  "name": "FinVault – Patreon → Vault v0.3",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Manuell starten",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 5,
+        "simple": false,
+        "filters": {
+          "q": "label:finvault-eingang"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "Gmail: Mails aus FinVault/Eingang",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        240,
+        0
+      ],
+      "webhookId": "5b1d6c2e-7a1f-4d0e-9a51-3c1f0b7e2a11"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 1: Mail bereinigen (v0.2)\n// - erkennt manuell weitergeleitete Mails (Fwd/WG) und nutzt den Originalteil\n// - schneidet bei Patreon-Mails (DE/EN) Kopfbereich und Footer ab\n// - entfernt Füllzeichen, Bild-Links, Tracking und harte Zeilenumbrüche\n// - liest Veröffentlichungsdatum, Titel, Ticker und Beitrags-URL aus\n\nconst FORWARD_MARKER = /-{3,}\\s*(Forwarded message|Weitergeleitete Nachricht|Original Message|Ursprüngliche Nachricht)\\s*-{3,}/i;\n// Ende des Beitragskopfs: letzte \"In der App anzeigen\"/\"View in app\"-Zeile inkl. Link-Zeile\nconst HEADER_END = /^(In der App anzeigen|View in app|Open in app)\\s*\\n\\[[^\\]]*\\]\\s*$/gim;\n// Beginn des Footers (erste Fundstelle zählt)\nconst FOOTER_MARKERS = [\n  /^\\s*HAT DIR DIESER POST GEFALLEN\\??/im,\n  /^\\s*DID YOU (ENJOY|LIKE) THIS POST\\??/im,\n  /^\\s*Teile diesen Post\\b/im,\n  /^\\s*Share this post\\b/im,\n  /^\\s*©\\s*\\d{4}\\b/m,\n  /^\\s*(Abbestellen|Unsubscribe)\\b/im,\n  /E-Mail wurde an .* gesendet/i,\n  /This email was sent to/i,\n];\nconst MONTHS = { jan:1, feb:2, 'mär':3, mar:3, apr:4, mai:5, may:5, jun:6, jul:7, aug:8, sep:9, okt:10, oct:10, nov:11, dez:12, dec:12 };\n\nfunction htmlToText(html) {\n  return String(html || '')\n    .replace(/<(script|style)[\\s\\S]*?<\\/\\1>/gi, '')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr)>/gi, '\\n\\n')\n    .replace(/<[^>]+>/g, '')\n    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')\n    .replace(/&#39;|&rsquo;/g, '’').replace(/&quot;/g, '\"');\n}\n\nfunction headerValue(block, names) {\n  for (const name of names) {\n    const m = block.match(new RegExp('^\\\\s*\\\\*?' + name + '\\\\*?:\\\\s*(.+)$', 'im'));\n    if (m) return m[1].trim();\n  }\n  return '';\n}\n\nfunction removeInvisible(text) {\n  // Füllzeichen aus E-Mail-Vorschauen: CGJ, Soft Hyphen, Zero-Width, Figure Space, BOM\n  return text.replace(/[͏­​-‍ ⁠﻿]/g, '');\n}\n\nfunction parseDate(text) {\n  // \"30. Okt. 2026\" | \"30 Oct 2026\" | \"Oct 30, 2026\"\n  let m = text.match(/^\\s*(\\d{1,2})\\.?\\s+([A-Za-zÄÖÜäöü]{3,})\\.?\\s+(\\d{4})\\s*$/m);\n  let d, mo, y;\n  if (m) { d = +m[1]; mo = MONTHS[m[2].slice(0, 3).toLowerCase()]; y = +m[3]; }\n  else {\n    m = text.match(/^\\s*([A-Za-z]{3,})\\.?\\s+(\\d{1,2}),\\s+(\\d{4})\\s*$/m);\n    if (m) { d = +m[2]; mo = MONTHS[m[1].slice(0, 3).toLowerCase()]; y = +m[3]; }\n  }\n  if (!m || !mo) return '';\n  return `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;\n}\n\nfunction berlinDate(iso) {\n  if (!iso) return '';\n  const dt = new Date(iso);\n  if (isNaN(dt)) return '';\n  return dt.toLocaleDateString('sv-SE', { timeZone: 'Europe/Berlin' }); // YYYY-MM-DD\n}\n\nfunction cutFooter(text) {\n  let cut = text.length;\n  for (const re of FOOTER_MARKERS) {\n    const m = re.exec(text);\n    if (m && m.index < cut && m.index > 20) cut = m.index;\n  }\n  return text.slice(0, cut);\n}\n\nfunction cleanBody(text) {\n  return text\n    .replace(/^\\s*\\[https?:\\/\\/[^\\]]*\\]\\s*\\S*\\s*$/gim, '')   // Bildzeilen \"[https://...png]link\"\n    .replace(/\\[https?:\\/\\/[^\\]]*\\]/g, '')                    // übrige Link-Klammern\n    .replace(/(https?:\\/\\/[^\\s<>()\\]]+)\\?[^\\s<>()\\]]*/g, '$1') // Tracking-Parameter\n    .replace(/\\r/g, '')\n    .replace(/[ \\t]+\\n/g, '\\n')\n    .replace(/\\n{3,}/g, '\\n\\n')\n    .split(/\\n\\s*\\n/)                                          // Absätze\n    .map(p => p.replace(/\\s*\\n\\s*/g, ' ').trim())              // harte Umbrüche entfernen\n    .filter(Boolean)\n    .join('\\n\\n')\n    .trim();\n}\n\nconst out = [];\nfor (const item of $input.all()) {\n  const m = item.json;\n  let raw = (m.text && String(m.text).trim()) ? String(m.text) : htmlToText(m.html);\n  raw = removeInvisible(raw).replace(/\\r/g, '');\n\n  let isForwarded = false;\n  let origFrom = (m.from && (m.from.text || (m.from.value && m.from.value[0] && m.from.value[0].address))) || '';\n  let origDateRaw = m.date || '';\n  let origSubject = String(m.subject || '');\n\n  const fwd = FORWARD_MARKER.exec(raw);\n  if (fwd) {\n    isForwarded = true;\n    const after = raw.slice(fwd.index + fwd[0].length);\n    const split = after.match(/^([\\s\\S]*?\\n\\s*\\n)([\\s\\S]*)$/);\n    const headerBlock = split ? split[1] : '';\n    raw = split ? split[2] : after;\n    origFrom = headerValue(headerBlock, ['From', 'Von']) || origFrom;\n    origDateRaw = headerValue(headerBlock, ['Date', 'Datum', 'Gesendet', 'Sent']) || origDateRaw;\n    origSubject = headerValue(headerBlock, ['Subject', 'Betreff']) || origSubject;\n  }\n\n  // Kopfbereich (Vorschau, Titel, Autor, Datum, Like/Comment/Share) abschneiden\n  let body = raw;\n  let headerPart = '';\n  let lastHeaderEnd = -1;\n  for (const hm of raw.matchAll(HEADER_END)) lastHeaderEnd = hm.index + hm[0].length;\n  if (lastHeaderEnd > -1) { headerPart = raw.slice(0, lastHeaderEnd); body = raw.slice(lastHeaderEnd); }\n  body = cleanBody(cutFooter(body));\n\n  const subject = origSubject.replace(/^\\s*((fwd?|fw|wg|aw|re)\\s*:\\s*)+/i, '').trim();\n  const tickerMatch = subject.match(/\\$([A-Z][A-Z0-9.]{0,6})\\b/) || body.match(/\\$([A-Z][A-Z0-9.]{0,6})\\b/);\n  const postUrl = (raw.match(/https?:\\/\\/(?:www\\.)?patreon\\.com\\/(?:[\\w-]+\\/)?posts\\/[\\w-]+/i) || [''])[0];\n  const datePost = parseDate(headerPart || raw);\n  const dateFallback = berlinDate(isForwarded ? origDateRaw : m.date);\n\n  const errors = [];\n  if (!body || body.length < 80) errors.push('Beitragstext fehlt oder ist zu kurz');\n  if (!/patreon/i.test(origFrom + postUrl)) errors.push('Absender/Link ist nicht Patreon');\n\n  out.push({\n    json: {\n      gmail_message_id: m.id,\n      gmail_thread_id: m.threadId,\n      email_date: m.date || '',\n      is_forwarded: isForwarded,\n      original_from: origFrom,\n      published_date: datePost || dateFallback,\n      date_status: datePost ? 'aus_beitrag' : (dateFallback ? 'aus_email_datum' : 'unbekannt'),\n      subject,\n      ticker_hint: tickerMatch ? tickerMatch[1] : '',\n      post_url: postUrl,\n      body_clean: body,\n      body_words: body ? body.split(/\\s+/).length : 0,\n      ok: errors.length === 0,\n      errors,\n    },\n  });\n}\nreturn out;\n"
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Mail bereinigen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 2a: Anfrage an Claude bauen (v0.3)\n// Claude muss über ein \"Werkzeug\" antworten -> die Antwort ist garantiert ein JSON-Objekt nach Schema.\n\nconst MODEL = 'claude-haiku-5-5';\nconst PROMPT_VERSION = 'analyst-extraction-v2';\n\nconst SYSTEM = `Du bist ein Extraktionssystem für Analystenbeiträge zu Wertpapieren. Du erhältst einen Patreon-Beitrag des Analysten \"The Long Investor\" und rufst genau einmal das Werkzeug \"analyse_speichern\" mit den extrahierten Daten auf.\n\nRegeln:\n1. Übernimm nur Informationen, die im Beitrag ausdrücklich stehen. Erfinde keine Kursmarken, Spannen, Daten, Unternehmensnamen oder Zeithorizonte.\n2. Fehlt eine wichtige Angabe (Invalidierung, Kursziel, Zeithorizont), nenne sie in \"missing_information\" (höchstens 4 Einträge). Sonst \"\", [] oder null.\n3. Rollen von Kursmarken nur zuordnen, wenn der Text die Rolle ausdrücklich nennt:\n   - supports: \"support\", \"Unterstützung\", \"holding $X\", \"buyers step in\"\n   - resistances: \"resistance\", \"Widerstand\", \"break above $X\"\n   - invalidations: \"invalidation\", \"invalidates\", \"count fails below\"\n   - targets: \"target\", \"Ziel\", \"Bull Case\", \"Bear Case\" (Label entsprechend)\n   - observation_zones: \"buy zone\", \"accumulation zone\", \"attractive to add/buy\". Eine einzelne Marke als from = to. Spannen nur, wenn der Text beide Grenzen nennt.\n   Alle anderen genannten Marken (aktueller Kurs, frühere Hochs/Tiefs, verlorene oder zurückeroberte Durchschnitte) gehören in \"other_levels\" mit kurzer Rollenbeschreibung.\n4. Eine Marke darf in mehreren Feldern stehen, wenn der Text ihr mehrere Rollen gibt (z. B. Invalidierung und \"holding $143\").\n5. Das Haupt-Wertpapier ist das im Betreff genannte. Andere Ticker im Text gehören nur in \"mentioned_tickers\" (ohne $).\n6. Kursziele, Konsens oder Einschätzungen anderer Analysten sind keine Ziele von The Long Investor: in \"fundamental_statements\".\n7. Termine wie Earnings oder Hauptversammlungen in \"upcoming_events\" (Datum wie im Text).\n8. \"WMA\" = Weekly Moving Average, \"Day MA\" = Daily Moving Average, \"PM\" = Premarket. Fib-Verhältnisse wie im Original schreiben (z. B. \"0.618 Fib\"). Monatsangaben ohne Jahr bleiben ohne Jahr.\n9. Kurz und ohne Wiederholungen: \"summary\" höchstens 3 Sätze; jedes andere Textfeld höchstens 1 Satz; \"note\" höchstens 8 Wörter oder leer. Dieselbe Information nicht in mehreren Textfeldern wiederholen.\n10. Alle Texte auf Deutsch, sachlich, als Einschätzung des Analysten. Keine eigene Bewertung, keine Empfehlung.\n11. recognized_concepts: höchstens 8 Fachbegriffe aus dem Beitrag in deutscher Standardbezeichnung (z. B. \"Elliott-Wellen\", \"Fibonacci-Retracement\", \"Gleitender Durchschnitt\", \"Invalidierung\").`;\n\nconst level = {\n  type: 'object',\n  properties: {\n    level: { type: ['number', 'null'] },\n    currency: { type: 'string' },\n    label: { type: 'string' },\n    note: { type: 'string' },\n  },\n  required: ['level', 'label'],\n};\nconst zone = {\n  type: 'object',\n  properties: {\n    from: { type: ['number', 'null'] },\n    to: { type: ['number', 'null'] },\n    currency: { type: 'string' },\n    label: { type: 'string' },\n  },\n  required: ['from', 'to', 'label'],\n};\nconst strings = { type: 'array', items: { type: 'string' } };\n\nconst TOOL = {\n  name: 'analyse_speichern',\n  description: 'Speichert die strukturierte Analyse des Beitrags.',\n  input_schema: {\n    type: 'object',\n    properties: {\n      ticker: { type: 'string', description: 'Haupt-Ticker ohne $' },\n      main_category: { type: 'string', enum: ['Technisch', 'Fundamental', 'Sonstige'] },\n      analysis_types: { type: 'array', items: { type: 'string', enum: ['technisch', 'fundamental', 'makro', 'sonstige'] } },\n      time_horizon: { type: 'string' },\n      summary: { type: 'string' },\n      market_state: { type: 'string' },\n      primary_scenario: { type: 'string' },\n      alternative_scenario: { type: 'string' },\n      supports: { type: 'array', items: level },\n      resistances: { type: 'array', items: level },\n      observation_zones: { type: 'array', items: zone },\n      invalidations: { type: 'array', items: level },\n      targets: { type: 'array', items: level },\n      other_levels: { type: 'array', items: level },\n      elliott_wave: { type: 'string' },\n      trend_structure: { type: 'string' },\n      fundamental_statements: strings,\n      upcoming_events: strings,\n      reevaluation_conditions: strings,\n      changes_stated_by_analyst: { type: 'string' },\n      uncertainties_and_risks: strings,\n      mentioned_tickers: strings,\n      missing_information: strings,\n      recognized_concepts: strings,\n    },\n    required: ['ticker', 'main_category', 'analysis_types', 'summary', 'supports', 'resistances',\n      'observation_zones', 'invalidations', 'targets', 'missing_information', 'recognized_concepts'],\n  },\n};\n\nreturn $input.all().map(item => {\n  const p = item.json;\n  const user = [\n    `Betreff: ${p.subject}`,\n    `Haupt-Ticker laut Betreff: ${p.ticker_hint || 'unbekannt'}`,\n    `Veröffentlicht: ${p.published_date || 'unbekannt'}`,\n    '',\n    'Beitrag:',\n    p.body_clean,\n  ].join('\\n');\n\n  return {\n    json: {\n      ...p,\n      model: MODEL,\n      prompt_version: PROMPT_VERSION,\n      request: {\n        model: MODEL,\n        max_tokens: 4000,\n        system: SYSTEM,\n        tools: [TOOL],\n        tool_choice: { type: 'tool', name: 'analyse_speichern' },\n        messages: [{ role: 'user', content: user }],\n      },\n    },\n  };\n});\n"
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Prompt bauen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        720,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "anthropicApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "name": "Claude Haiku",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        960,
+        0
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 2b: Antwort von Claude prüfen (v0.3)\n// Holt das JSON aus der Werkzeug-Antwort, normalisiert sicher Normalisierbares\n// und prüft die Regeln aus dem Datenvertrag. Ergebnis: ok=true/false + errors/warnings.\n\nconst PRICE_IN = 0.10 / 1e6;   // Haiku 5.5, USD pro Input-Token (Prompt < 100k)\nconst PRICE_OUT = 0.50 / 1e6;  // USD pro Output-Token\nconst CATEGORIES = ['Technisch', 'Fundamental', 'Sonstige'];\n\nconst sources = $('Prompt bauen').all();\n\nreturn $input.all().map((item, i) => {\n  const res = item.json;\n  const src = sources[i] ? sources[i].json : {};\n  const { request, ...meta } = src;\n  const errors = [];\n  const warnings = [];\n\n  const toolUse = (res.content || []).find(c => c.type === 'tool_use');\n  let a = toolUse ? toolUse.input : null;\n  if (!a || typeof a !== 'object') {\n    errors.push('Keine strukturierte Antwort von Claude erhalten');\n    a = {};\n  }\n\n  // --- sicher normalisierbar ---\n  const arr = v => Array.isArray(v) ? v : (v == null || v === '' ? [] : [v]);\n  for (const k of ['analysis_types', 'supports', 'resistances', 'observation_zones', 'invalidations', 'targets', 'other_levels',\n    'fundamental_statements', 'upcoming_events', 'reevaluation_conditions', 'uncertainties_and_risks',\n    'mentioned_tickers', 'missing_information', 'recognized_concepts']) a[k] = arr(a[k]);\n  a.ticker = String(a.ticker || '').replace(/^\\$/, '').trim().toUpperCase();\n  a.mentioned_tickers = a.mentioned_tickers.map(t => String(t).replace(/^\\$/, '').toUpperCase()).filter(t => t && t !== a.ticker);\n  if (a.main_category) {\n    const c = String(a.main_category).trim();\n    a.main_category = CATEGORIES.find(x => x.toLowerCase() === c.toLowerCase()) || c;\n  }\n  for (const k of ['supports', 'resistances', 'invalidations', 'targets', 'other_levels']) {\n    a[k] = a[k].map(l => ({ ...l, level: (l && l.level != null && l.level !== '') ? Number(l.level) : null, currency: (l && l.currency) || (l && l.level != null ? 'USD' : '') }));\n  }\n\n  // --- Pflichtprüfungen ---\n  if (!CATEGORIES.includes(a.main_category)) errors.push(`Unbekannte Kategorie: ${a.main_category}`);\n  if (['Technisch', 'Fundamental'].includes(a.main_category) && !/^[A-Z][A-Z0-9.]{0,6}$/.test(a.ticker)) errors.push(`Ungültiger oder fehlender Ticker: \"${a.ticker}\"`);\n  if (!a.summary) errors.push('Zusammenfassung fehlt');\n  for (const k of ['supports', 'resistances', 'invalidations', 'targets']) {\n    a[k].forEach((l, j) => { if (l.level !== null && !Number.isFinite(l.level)) errors.push(`${k}[${j}]: Kurs ist keine Zahl`); });\n  }\n\n  // --- Warnungen (kein Abbruch, aber im Review sichtbar) ---\n  if (meta.ticker_hint && a.ticker && meta.ticker_hint !== a.ticker) warnings.push(`Ticker weicht vom Betreff ab: Betreff ${meta.ticker_hint}, Claude ${a.ticker}`);\n  const body = String(meta.body_clean || '');\n  const allLevels = ['supports', 'resistances', 'invalidations', 'targets', 'other_levels'].flatMap(k => a[k].map(l => l.level)).filter(v => v !== null);\n  for (const v of allLevels) {\n    const plain = String(v);\n    const withComma = plain.replace('.', ',');\n    if (!body.includes(plain) && !body.includes(withComma)) warnings.push(`Kursmarke ${v} kommt im Originaltext nicht wörtlich vor – bitte prüfen`);\n  }\n  for (const z of a.observation_zones) for (const v of [z.from, z.to]) {\n    if (v != null && !body.includes(String(v)) && !body.includes(String(v).replace('.', ','))) warnings.push(`Zonengrenze ${v} kommt im Originaltext nicht wörtlich vor – bitte prüfen`);\n  }\n  const lv = k => new Set(a[k].map(l => l.level).filter(v => v !== null));\n  for (const v of lv('supports')) if (lv('resistances').has(v)) warnings.push(`Kursmarke ${v} ist gleichzeitig Unterstützung und Widerstand`);\n  if (res.stop_reason === 'max_tokens') errors.push('Antwort von Claude wurde abgeschnitten (max_tokens)');\n\n  const usage = res.usage || {};\n  const cost = (usage.input_tokens || 0) * PRICE_IN + (usage.output_tokens || 0) * PRICE_OUT;\n\n  return {\n    json: {\n      ...meta,\n      ok: errors.length === 0 && meta.ok !== false,\n      errors: [...(meta.errors || []), ...errors],\n      warnings,\n      analysis: a,\n      usage: { input_tokens: usage.input_tokens || 0, output_tokens: usage.output_tokens || 0, cost_usd: Number(cost.toFixed(6)), cost_cent: Number((cost * 100).toFixed(4)) },\n    },\n  };\n});\n"
+      },
+      "id": "a1b2c3d4-0007-4000-8000-000000000007",
+      "name": "Antwort prüfen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1200,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## FinVault – Patreon → Vault v0.3\n\n**Baustein 1** – Mails aus Gmail-Label *FinVault/Eingang* holen und bereinigen\n**Baustein 2** – Claude Haiku extrahiert die Analyse, der Flow prüft sie\n\nEinrichtung nach dem Import:\n1. *Gmail*-Node → Credential **Gmail FinVault**\n2. *Claude Haiku*-Node → Credential **Anthropic FinVault**\n3. **Execute workflow**\n\nErgebnis in *Antwort prüfen*:\n- `ok` / `errors` / `warnings`\n- `analysis` = extrahierte Daten\n- `usage.cost_cent` = Kosten dieses Beitrags\n\nAls Nächstes: Baustein 3 (Markdown + Datei) und 4 (Label, Log, Zeitplan)",
+        "height": 420,
+        "width": 480
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "Hinweis",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -480
+      ]
+    }
+  ],
+  "connections": {
+    "Manuell starten": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Mails aus FinVault/Eingang",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Mails aus FinVault/Eingang": {
+      "main": [
+        [
+          {
+            "node": "Mail bereinigen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mail bereinigen": {
+      "main": [
+        [
+          {
+            "node": "Prompt bauen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prompt bauen": {
+      "main": [
+        [
+          {
+            "node": "Claude Haiku",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude Haiku": {
+      "main": [
+        [
+          {
+            "node": "Antwort prüfen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin"
+  },
+  "pinData": {}
+}
