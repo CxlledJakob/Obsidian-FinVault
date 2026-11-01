@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Kovarianz
@@ -31,6 +31,12 @@ aktualisiert: 2026-10-30
 - Eine Kovarianzmatrix von 50 mal 50 hat 50 Knoten und 1225 Kanten.
 - Die Wurzel der Instabilität quadratischer Optimierer ist die verlangte Inversion der Kovarianzmatrix.
 - Q(t) ist die Varianz des Prognosefehlers der beobachtbaren Variable, gebildet als x transponiert mal R mal x plus Ve, und ist von der Kovarianz der verborgenen Variable zu unterscheiden.
+- R(t|t minus 1) ist die Kovarianz des Fehlers der verborgenen Variable, cov(β(t) minus β-Dach(t|t minus 1)), und eine 2-mal-2-Matrix, weil β aus Mittel des Spreads und Hedge Ratio besteht. R(t|t) ist die Kovarianz nach dem Update.
+- Vω, die Kovarianz des Zustandsrauschens, wird als δ/(1 minus δ) mal der Einheitsmatrix gesetzt. Ve, die Varianz des Messrauschens, ist im Beispiel 0,001. Die Zustandskovarianz-Prognose addiert Vω.
+- Im Modell mit einem einzelnen Mittelpreis ist R die Varianz des Fehlers dieses Mittels. Q(t) ist Var(m(t)) plus Ve, und das Varianz-Update lautet R(t|t) = (1 minus K(t)) mal R(t|t minus 1), mit K(t) = R(t|t minus 1) / (R(t|t minus 1) + Ve).
+- Die Kelly-Formel für mehrere Portfolios setzt den Hebelvektor F gleich der Inversen der Kovarianzmatrix C der Portfoliorenditen mal dem Vektor M der mittleren Excess Returns.
+- Bei risikofreiem Zins null ist die annualisierte zusammengesetzte Wachstumsrate bei diesen optimalen Hebeln g gleich F transponiert mal C mal F geteilt durch 2.
+- Im Beispiel ist die Korrelation der beiden Strategierenditen null, und daraus folgen Kelly-Hebel von 4,4 und 4,9 bei annualisierten Überschussrenditen von 30 und 60 Prozent und Volatilitäten von 26 und 35 Prozent.
 
 ## Funktionsweise
 

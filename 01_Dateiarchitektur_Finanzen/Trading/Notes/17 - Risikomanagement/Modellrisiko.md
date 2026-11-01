@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Modellrisiko
@@ -34,6 +34,10 @@ aktualisiert: 2026-10-30
 - Je zahlreicher die Annahmen, Bedingungen und Nebenbedingungen einer Erklärung sind, desto eher passt sie eine Menge von Beobachtungen zufällig. Einfachere Erklärungen treffen die wahren Muster eher.
 - Bei einer Kleinste-Quadrate-Regression ist ein perfekter Fit garantiert, wenn die Funktion so viele Freiheitsgrade wie Datenpunkte hat. Eine Kurve mit dieser Flexibilität beschreibt dann höchstwahrscheinlich neben der eigentlichen Beziehung die Zufallsschwankungen der Daten.
 - Unter sonst gleichen Bedingungen ist die einfachere Erklärung eher richtig. Gibt es genug Daten und stammen sie aus einem komplexen Prozess, kann ein aufwendiges Modell sehr wohl gerechtfertigt sein.
+- Dass manchmal geurteilt werden muss, macht quantitative Regeln nicht nutzlos und algorithmische Händler nicht weniger leistungsfähig als diskretionäre: Kahneman schreibt, Experten seien Algorithmen in jedem Bereich mit erheblicher Unsicherheit einheitlich unterlegen, von Fußballsiegern bis zur Lebenserwartung von Krebspatienten, und der Finanzmarkt sei hoffentlich keine Ausnahme.
+- Hat das Modell frühere Stressphasen im Backtest überstanden, wird der Hebel vor einer kommenden Krise nicht gesenkt; konservativer wird schon in guten Zeiten gehebelt, weil die unbekannten Unbekannten schaden und das Modell davor nicht abgeschaltet werden kann.
+- Underperformance gegenüber dem Backtest soll auf einen fundamentalen Grund zurückgeführt und quantitativ geprüft werden, wie beim Paar GLD gegen GDX, das 2008 die Kointegration verlor und nach Aufnahme des Rohölpreises wieder funktionierte.
+- Kelly auf jede Strategie einzeln ist nach der Erfahrung praktischer als die mathematisch optimale Gesamtallokation, sobald ein schwerer Drawdown die Annahme unveränderter erwarteter Renditen und Volatilitäten infrage stellt.
 
 ## Funktionsweise
 

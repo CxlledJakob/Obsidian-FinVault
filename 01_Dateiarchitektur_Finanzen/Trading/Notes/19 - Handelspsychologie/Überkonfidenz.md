@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Überkonfidenz
@@ -63,6 +63,8 @@ aktualisiert: 2026-10-30
 - Shiller sieht echte Ponzi-Systeme als Bestätigung. Anfangs sind die Anleger skeptisch und setzen nur kleine Beträge. Sobald frühe Anleger Gewinne erzielen und ihre Erfolgsgeschichte erzählen, fassen spätere Vertrauen, und der Kapitalzufluss gewinnt Momentum.
 - Es kommt die Zeit, in der man glaubt, den Markt durchschaut zu haben, und jede technische Position von der kurzen bis zur langen Frist auf einen einzigen großen Trend zeigt.
 - Dann wird jede vernünftige Risikoregel gebrochen, das Konto mit einem weiten Stop in die Position gelegt, um ihr Raum zu geben, und bei Gegenlauf wird zum vermeintlich besseren Preis noch weiter aufgestockt.
+- Die Leistung von Strategien mean-revertiert oft.
+- Der Zusammenbruch einer Mean-Reversion-Strategie, dessen fundamentaler Grund oft erst im Nachhinein erkennbar ist, trifft häufig, während sie nach einer ungebrochenen Erfolgsserie mit maximalem Hebel gehandelt wird. Der seltene Verlust ist dann sehr schmerzhaft oder katastrophal.
 
 ## Funktionsweise
 

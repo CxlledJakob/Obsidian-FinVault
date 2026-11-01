@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Stop Order
@@ -24,6 +24,11 @@ aktualisiert: 2026-10-30
 - Broker nehmen keine ungefähren Orders an, sondern konkrete Preisorders. Deshalb haben Einstieg und erster Schutzstop einen exakten Preis.
 - Der Einstieg erfolgt über einen Buy-Stop einen Tick über dem Hoch oder einen Sell-Stop einen Tick unter dem Tief, entweder des letzten abgeschlossenen Bars oder des Swing-Extrems.
 - Der erste Schutz ist ein Sell-Stop einen Tick unter dem Swing-Tief oder ein Buy-Stop einen Tick über dem Swing-Hoch.
+- Das Auslösen von Stops ist eine vor allem kurzfristige Ursache von Momentum und führt oft zu Breakout-Strategien.
+- Über Nacht oder am Wochenende können Stop-Orders auf verschiedenen Preisen bei der Eröffnung zugleich ausgelöst werden, und eine Kaskade trifft auch weiter vom Open entfernte Stops.
+- Ein Bruch der Unterstützung löst die dort liegenden Sell-Stops aus und treibt den Preis weiter nach unten; beim Widerstand ist es symmetrisch.
+- Diese Niveaus können die täglich von Banken oder Brokern gemeldeten sein oder runde Zahlen nahe dem aktuellen Preis.
+- High-Frequency-Händler legen nahe der Unterstützung große Verkaufsorders, um den nächsten Tick zu drücken, die Stops auszulösen und die Shorts danach zu decken.
 
 ## Funktionsweise
 

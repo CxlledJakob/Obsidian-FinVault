@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Backtesting
@@ -348,6 +348,52 @@ aktualisiert: 2026-10-30
 - Die optimale Regel ist die Regel höchster Komplexität, die im Testset die beste Leistung erbracht hat.
 - Der Ausdruck neue Beobachtung kann den Backtest einer neu vorgeschlagenen Regel meinen, weil frühere Beobachtungen sich immer im Nachhinein durch unendlich viele Hypothesen oder Regeln erklären lassen.
 - Welche dieser Hypothesen stimmen könnte, lässt sich nur entscheiden, indem Prognosen mit neuen Beobachtungen verglichen werden.
+- Dieselbe theoretische Strategie kann je nach Umsetzungsdetails spektakuläre Gewinne oder katastrophale Verluste erzeugen.
+- Fallstricke wie Data-Snooping-Bias, Survivorship Bias, Primär- gegen konsolidierte Quotes, die Venue-Abhängigkeit von Währungsquotes, Leerverkaufsbeschränkungen, der Bau fortlaufender Futures-Kontrakte und Schluss- gegen Settlement-Preise können Live-Ergebnisse deutlich von den Backtests abweichen lassen.
+- Historisch gibt es Regimewechsel, nach denen selbst der korrekteste Backtest die künftigen Erträge einer Strategie nicht vorhersagt.
+- Geht man die gemeinsamen Fallstricke unbekümmert an, ist der Backtest nutzlos oder irreführend und kann erhebliche finanzielle Verluste verursachen.
+- Ein Backtest speist historische Daten in die Strategie, in der Hoffnung, die historische Leistung lasse die künftige erwarten, und auch eine veröffentlichte Strategie muss unabhängig gebacktestet werden.
+- Die Profitabilität hängt empfindlich von Umsetzungsdetails ab, die veröffentlichte Artikel oft übergehen, etwa Market-on-Open gegen Market Orders kurz nach der Eröffnung, die E-mini-S&P-500-Order vor 16:00 Uhr Aktien-Schluss oder vor 16:15 Uhr Futures-Schluss und der Auslöser Bid, Ask oder Last.
+- Idealerweise wird dasselbe Programm per Knopfdruck vom Backtest zur automatischen Ausführung, damit diese Details exakt umgesetzt werden.
+- Ein Fallstrick bläht gewöhnlich die Backtest-Leistung gegenüber der tatsächlichen vergangenen Leistung auf.
+- Wahrer Out-of-Sample-Test beginnt erst, wenn die Strategie veröffentlicht und festgeschrieben ist, weil der Autor sonst Parameter ändern oder das Modell so nachjustieren kann, dass die sogenannten Out-of-Sample-Daten gut aussehen.
+- Der Backtest folgt der wissenschaftlichen Methode: eine Hypothese über eine Arbitragemöglichkeit wird durch den Backtest bestätigt oder widerlegt und bei schwachem Ergebnis geändert und erneut geprüft.
+- Je mehr Roundtrip-Trades der Backtest enthält, desto höher ist die statistische Signifikanz; ein korrekter und signifikanter Backtest sagt künftige Renditen nicht notwendig voraus, weil Regimewechsel alles verderben können.
+- Selbst wenn alle Fallstricke vermieden sind und genug Trades die statistische Signifikanz sichern, ruht die Prognosekraft auf unveränderten statistischen Eigenschaften der Preisreihe; ändern sich Wirtschaftsaussichten, Management oder Marktstruktur, ist die Annahme entwertet.
+- Ein Backtest ist nutzlos, wenn er die künftige Leistung nicht vorhersagt; Fallstricke senken diese Prognosekraft.
+- Strategien, die vor einem Regimewechsel hervorragend liefen, können danach aufhören und umgekehrt; Backtests auf Daten vor dem Wechsel können wertlos sein, und jüngere Daten sagen künftige Gewinne nicht besser voraus, wenn ein weiterer Wechsel droht.
+- Algorithmischer Handel ist nicht nur Algorithmen, Programmierung und Mathematik; das Wissen um solche fundamentalen Markt- und Wirtschaftsfragen entscheidet mit, ob ein Backtest prognosefähig bleibt.
+- Die statistische Signifikanz von ADF-Test, Variance-Ratio-Test und Halbwertszeit ist gewöhnlich höher als die eines direkten Strategie-Backtests, weil die Tests jeden Tag oder jeden Bar nutzen, ein Backtest aber nur die deutlich wenigeren Roundtrip-Trades.
+- Das Ergebnis eines Backtests hängt vom konkreten Parametersatz ab. Hat eine Preisreihe die Stationaritätstests bestanden oder ist ihre Halbwertszeit kurz genug, lässt sich eine profitable Strategie erwarten, auch wenn es nicht die gebacktestete ist.
+- Der Backtest der linearen Mean-Reversion auf USD.CAD in Beispiel 2.5 enthält keine Transaktionskosten, bestimmt den Lookback aus der In-Sample-Halbwertszeit und begrenzt den Portfoliomarktwert nicht, sodass unbegrenztes Kapital nötig sein kann. Der Autor empfiehlt ihn nicht als praktische Strategie und verweist auf eine praktischere Fassung in Kapitel 5.
+- Die einfachste lineare Strategie ist praktisch ungeeignet, weil das maximale Kapital am Anfang unbekannt ist und sich keine infinitesimalen Stückzahlen bei infinitesimalen Preisbewegungen handeln lassen. Ihr Backtest zeigt trotzdem, dass sich aus einer mean-revertierenden Reihe Gewinne ohne Data-Snooping-Bias ziehen lassen.
+- Der Lookback gleich der Halbwertszeit hängt von den Eigenschaften der Preisreihe ab und nicht von der konkreten Handelsstrategie.
+- Die Tagesrendite des EWA-EWC-IGE-Backtests ist der Tages-P&L geteilt durch den Bruttomarktwert, also die Summe der Beträge der um einen Tag verzögerten Positionsmarktwerte. Der P&L ist die Summe über die ETFs aus verzögertem Positionsmarktwert mal einfacher Rendite.
+- Beim Test des Crack Spreads müssen die fortlaufenden Kontrakte mit Preisen und nicht mit Renditen zurückadjustiert werden, sonst springt der Preisspread an den Rollterminen unstetig.
+- Vor einem Backtest von Intermarket-Spreads müssen die Preise synchron sein.
+- Ein Backtest des BZ-CL-Spreads mit Schlusskursen vor dem 5. September 2001 ist falsch, weil BZ bis dahin an der Intercontinental Petroleum Exchange in London gehandelt wurde und CL immer an der NYMEX, mit anderer Schlusszeit.
+- Futures-Preise müssen oft mit einem Faktor multipliziert werden, um Punkte in US-Dollar umzurechnen.
+- Ein Punkt Bewegung in VX entspricht 1.000 Dollar und ein Punkt in ES 50 Dollar; vor der Regression werden die VX-Preise mit 1.000 und die ES-Preise mit 50 multipliziert.
+- Die Regressionskoeffizienten für ES gegen VX werden nur auf den ersten 500 Tagen nach August 2008 geschätzt, weil die Statistiken daraus das Handelsmodell bauen.
+- Bei einem Portfolio aus zwei Währungs-Cross-Rates sind die Renditeformeln nicht dieselben, je nachdem ob beide dieselbe Notierungswährung, dieselbe Basiswährung oder keine von beiden teilen.
+- Wegen der langen Haltedauern gibt es in den begrenzten Testdaten wenige Trades, deshalb besteht das Risiko eines Data-Snooping-Bias; der eigentliche Test ist echtes Out-of-Sample-Testing.
+- Die TU-Rendite ist auf den Nominalwert von etwa 200.000 Dollar gerechnet, nicht auf die Margin von etwa 400 Dollar.
+- Die Schlusskurse von GC werden um 13:30 Uhr ET erfasst, die von GLD um 16:00 Uhr ET; die Asynchronität ist hier unschädlich, weil die Signale allein aus den GC-Schlusskursen kommen.
+- XLE und CL haben verschiedene Schlusszeiten, deshalb wird die Arbitrage über XLE und USO untersucht, und USO hält nur Front-Month-Kontrakte von CL.
+- Die VX-ES-Rollrendite-Strategie wird vom 29. Juli 2010 bis zum 7. Mai 2012 bewertet, und dieser Zeitraum wurde nicht zur Bestimmung der Hedge Ratio verwendet.
+- Für die Korrelationstests dürfen die Renditepaare nicht überlappen; eine Verschiebung der Daten um einen Tag ändert die Menge, wurde aber nur für eine Menge gerechnet.
+- Lange Haltedauern bei Interday-Momentum senken die Sharpe Ratio und die statistische Signifikanz des Backtests, weil unabhängige Handelssignale selten sind.
+- Im PEAD-Backtest auf S&P-500-Aktien vom 3. Januar 2011 bis 24. April 2012 wird die Rendite durch 30 geteilt, die höchste Zahl gleichzeitiger Positionen an einem Tag; das ist ein begrenzter Look-ahead-Bias, weil dieses Maximum im Voraus unbekannt ist, die tägliche Höchstzahl der Meldungen aber recht vorhersagbar bleibt.
+- Die Optimierung des Hebels auf der historischen Wachstumsrate eines Backtests leidet am Data-Snooping-Bias: der für diese eine Realisation optimale Hebel ist für eine künftige, andere Realisation nicht optimal, und anders als bei Monte Carlo reichen die Daten nicht für viele Realisationen.
+- Für dieselbe Mean-Reversion-Strategie aus Beispiel 5.1 ergibt die historische Optimierung den Hebel 18,4, identisch mit Kelly, und die Monte-Carlo-Optimierung auf dem Pearson-System etwa 19.
+- Der maximale Drawdown lässt sich auf simulierten oder auf historischen Strategierenditen schätzen. Simulierte Reihen haben höhere statistische Signifikanz und ähneln dem Value-at-Risk, können aber einen Drawdown zeigen, der in einer Million Jahren kaum eintritt, und verfehlen serielle Korrelationen, die den realen Drawdown senken können.
+- Historische Strategierenditen erfassen diese Korrelationen und eine realistische Lebensdauer der Strategie, enthalten aber zu wenig Daten für den Worst Case; ein Kompromiss ist ein Hebel zwischen beiden Methoden.
+- Im Simulationsbeispiel muss der unbeschränkte optimale Hebel 19,2 um den Faktor 7 auf etwa 2,7 sinken, damit der Betrag des maximalen Drawdowns etwa 0,5 wird; auf der Historie genügt der Faktor 1,5, also 13, um unter minus 0,49 zu kommen. Die Simulationszahlen hängen von der Zufallsreihe ab.
+- Beim Test führender Risikoindikatoren ist Data-Snooping leicht, weil Finanzpaniken selten sind, und kein Finanzindikator sagt natürliche oder andere nichtfinanzielle Katastrophen voraus.
+- Die Strategien des Buches illustrieren Prinzipien und sind nicht garantiert frei von den Fallstricken aus Kapitel 1; selbst bereinigt können Regimewechsel sie treffen, und die Leser sollen sie out-of-sample prüfen.
+- Hat das Modell frühere Stressphasen im Backtest überstanden, gibt es nach der Erfahrung des Autors keinen Grund, den Hebel vor einer kommenden Krise zu senken.
+- Weicht der Live-Handel vom Backtest ab, liegt das oft nicht an Fallstricken beim Backtesten, sondern an einem grundlegenden Wandel der Marktstruktur, einem Regimewechsel durch staatliche Regulierung oder makroökonomische Änderungen.
+- Wenn eine Strategie den Backtest underperformt, soll nach einem fundamentalen Grund gesucht und dieser quantitativ geprüft werden, statt blind weitere Regeln und Indikatoren hinzuzufügen.
 
 ## Funktionsweise
 
@@ -366,12 +412,20 @@ aktualisiert: 2026-10-30
 - Detrending transformiert die Marktdaten so, dass die mittlere tägliche Änderung null beträgt, und beseitigt damit die Verzerrung der Regel-Performance aus dem Zusammenwirken von Positionsverzerrung und dem Markttrend während der Backtest-Periode.
 - Tägliche Renditen meinen hier die von einer Regel auf nullzentrierten oder detrended Marktdaten verdienten Renditen.
 - Zufällig gepaart heißt, dass die historischen täglichen Preisänderungen des Marktes verwürfelt und dann jeweils zufällig mit einem Regelausgang von +1 oder −1 gepaart werden.
+- Die ausgewiesene Rendite ist der Tages-P&L geteilt durch den Bruttomarktwert, die Summe der Beträge der um einen Tag verzögerten Positionsmarktwerte.
 
 ## Voraussetzungen
 
 - Die Station braucht Data Scientists mit tiefem Verständnis empirischer und experimenteller Techniken.
 - Die Stärke eines induktiven Schlusses und die Sicherheit seiner Folgerung hängen von Menge und Qualität der aufgezählten Belege ab: Je zahlreicher die Fälle und je höher ihre Qualität, desto wahrscheinlicher trifft die Verallgemeinerung auf künftige Beobachtungen zu.
 - Die angeführten Belege müssen repräsentativ für die Arten von Beobachtungen sein, die künftig zu erwarten sind.
+- Der wichtigste Vorzug integrierter Handelsplattformen, von industriellen Systemen wie Deltix bis zu Open-Source-Versionen wie TradeLink, ist der leichte Wechsel vom Backtest in den Live-Handel.
+- Wenig Programmierkenntnis führt zu Spezialplattformen mit grafischer Oberfläche wie Deltix und Progress Apama, deren Oberflächen die Strategienvielfalt begrenzen; MATLAB, R und Python als REPL-Sprachen erlauben sofortige Auswertung, flexiblere Strategien und große Datenmengen.
+- Nachrichtengetriebener Handel braucht einen maschinenlesbaren Newsfeed, den die meisten Spezialplattformen und offenen IDEs nicht haben; Ausnahmen sind Progress Apama mit Dow Jones und Reuters, Deltix mit Ravenpack News Sentiment und Marketcetera mit benzinga.com.
+- Beim Kointegrationstest und bei der Rendite eines Währungsportfolios muss eine Punktbewegung in einem Paar denselben Dollarwert haben wie im anderen, sonst sind die Ergebnisse sinnlos.
+- Der Johansen-Test für AUD gegen CAD läuft auf AUD.USD und CAD.USD, nicht auf USD.AUD gegen USD.CAD, damit der Eigenvektor Kapitalgewichte meint.
+- Eine Order, eine Einheit CAD.USD zu kaufen, wird live zum Verkauf von 1/y Einheiten USD.CAD, wobei y der aktuelle Kurs von USD.CAD ist.
+- Der realisierte Gewinn eines synthetischen Kreuzkurses fällt in beiden Währungen an. Damit er zum Backtest in der Heimatwährung passt, müssen Basis- und Kurswährung regelmäßig umgetauscht werden, sonst verfälscht ein großer aufgelaufener Bestand das Ergebnis.
 
 ## Anwendung im Trading
 
@@ -442,6 +496,23 @@ aktualisiert: 2026-10-30
 - Bei 12 Typen, 38 Begleitreihen, den Schwellenabständen 10 und 20 und den Look-backs 15, 30 und 60 entstanden 2.736 Divergenzregeln, gerechnet als 12 mal 38 mal 2 mal 3.
 - Die Benennung einer Divergenzregel lautet (D)-Typ-Begleitreihe-Schwellenabstand-Look-back; D-3-23-10-30 ist Typ 3, Begleitreihe 23, der 30-Tage-Durchschnitt des Positive Volume Index, Abstand 10, also Schwellen 60 und 40, und 30 Tage Look-back.
 - Jede Fassung dieser Methoden, die so weit objektiviert ist, dass sie backtestbar ist, entkräftet die Kritik an nicht prüfbaren Verfahren.
+- Bei einem N-zu-1-Split ist die Preisreihe vor dem Ex-Tag durch N zu teilen, sonst entsteht ein scheinbarer Kurseinbruch und ein Fehlersignal; bei einem Reverse-Split 1-zu-N werden die Preise vor dem Ex-Tag mit N multipliziert, und dieselbe Anpassung gilt live unmittelbar vor der Eröffnung am Ex-Tag.
+- Eine Barausschüttung von d Dollar je Aktie senkt den Kurs um d; ohne Rückanpassung vor dem Ex-Tag kann der Sprung ein Fehlersignal auslösen, dasselbe gilt für ETFs, und bei Optionen ist die Behandlung etwas komplizierter.
+- Historische Splits und Dividenden samt künftiger Beträge und Ex-Tage stehen kostenlos auf earnings.com; bereits angepasste Aktienreihen liefert csidata.com.
+- Eine MOC- oder MOO-Order geht immer nur an die Primärbörse, etwa IBM an die NYSE, SPY an NYSE Arca und MSFT an die Nasdaq, während der übliche historische Tages-Schluss die letzte Ausführung an irgendeinem Venue ist.
+- Bei Devisen ist der Backtest nur realistisch mit Daten des Venues, an dem gehandelt wird, weil ein Trade nicht zum besten Bid oder Ask über alle Venues erfolgen muss; Bid-Ask-Quotes sind zu verwenden, weil Spreads und Kosten stark vom Venue abhängen.
+- Shortet das Modell Aktien, die hard to borrow oder nicht leihbar waren, ist die Rendite unrealistisch; Small Caps sind stärker betroffen als Large Caps, auch ETFs können hard to borrow sein, und SPY ließ sich in den Monaten nach dem Lehman-Kollaps nicht shorten.
+- Die alte Uptick-Regel galt von 1938 bis 2007 und verlangte einen Leerverkauf über dem letzten Trade oder zum letzten Trade, wenn der höher war als der davor, bei Nasdaq über dem letzten Bid; die Alternative Uptick Rule ab 2010 verlangt einen Preis über dem nationalen besten Bid nur nach einem Circuit Breaker.
+- Der Circuit Breaker löst aus, wenn die Aktie 10 Prozent unter dem Vortagesschluss handelt, gilt auch am Folgetag und verhindert Short-Market-Orders; ohne diese Beschränkungen ist der Backtest aufgebläht.
+- Bei fortlaufenden Futures macht die Preis-Rückanpassung den P&L am Rollover richtig und die Rendite falsch, die Rendite-Rückanpassung umgekehrt; beides zugleich stimmt nur, wenn die Einzelkontrakte samt eigenem Rollover gebacktestet werden.
+- Handelssignale aus der Preisdifferenz zweier Kontrakte verlangen die Preis-Rückanpassung, Signale aus dem Preisverhältnis die Rendite-Rückanpassung; bei Kalenderspreads ist ein Rollover-Fehler ein großer Prozentsatz des kleinen Spreads.
+- Der von den meisten Anbietern gelieferte tägliche Future-Schluss ist der Settlement-Preis, nicht der letzte Trade; bei gleichem Underlying garantiert er gleichzeitige Spread-Preise, während letzte Trades asynchron sein und einen unrealistisch großen, im Backtest zu profitablen Spread erzeugen können.
+- Intermarket-Spreads und ein Future gegen einen ETF dürfen nicht aus den jeweiligen Schlusskursen gebildet werden, weil die Schlusszeiten verschieden sind; statt GC mit Settlement um 13:30 Uhr ET gegen GDX lassen sich GLD und GDX handeln, beide auf Arca mit Schluss um 16:00 Uhr ET.
+- Eine erwartete APR von 10 Prozent, signifikant innerhalb von 1 Prozent, heißt entweder, dass unter 10.000 simulierten Preisreihen derselben Länge und mit denselben ersten drei Momenten nur 100 eine APR von mindestens 10 Prozent haben, oder dass nur eine von 100 Permutationen der Einstiegstage diese APR erreicht.
+- Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios mindern Data-Snooping-Bias, nichts davon ist aber so endgültig wie der Walk-Forward-Test; einfache Modelle sind ein einfaches Heilmittel.
+- Dieselbe Programmquelle für Backtest und Live speist Historie Tick für Tick oder Bar für Bar ein, beseitigt damit Look-ahead Bias und Übertragungsfehler und ermöglicht theoretisch ein tickbasiertes Hochfrequenz-Backtesting, sofern die Hardware stark genug ist.
+- Die meiste Hochfrequenz-Latenz entsteht durch Marktdaten und Orderbestätigung: 1 bis 10 Millisekunden verlangen Kolokation und einen direkten Feed statt des konsolidierten SIAC-CTS, Interactive Brokers liefert nur alle 250 Millisekunden einen Schnappschuss, und manche Retail-Broker bestätigen Ausführungen erst nach bis zu sechs Sekunden.
+- Die meisten Plattformen führen im Bereich von 1 bis 10 Millisekunden aus, backtesten Hochfrequenzdaten aber schlecht: Monate von Tick-Daten, oft Level 2 und auf vielen Symbolen, überfordern den Speicher, und die meisten Spezialplattformen können Bid, Ask, Last und Größen samt Level 2 nicht prüfen, sodass ein eigenes Programm nötig ist.
 
 ## Risiken und Grenzen
 
@@ -539,6 +610,42 @@ aktualisiert: 2026-10-30
 - Die Breite der Stichprobenverteilung und damit die Hürde für den Backtest hängt von zwei Faktoren ab. Je größer die Variation der täglichen Regelrenditen in der Elternpopulation, desto breiter ist sie. Je größer die Zahl der Beobachtungen in der Stichprobe, desto schmaler ist sie.
 - Die konkreten Bias-Größen dieses Tests gelten nur für einen bestimmten Satz monatlicher S&P-500-Renditen, eine 24-Monats-Historie, unabhängige Regelrenditen und eine erwartete Rendite von null.
 - In einem anderen Data-Mining-Vorhaben bleibt das Prinzip, dass mehr Regeln einen größeren Bias erzeugen, die konkreten Niveaus wären aber andere.
+- Die Beispiel-Backtests enthalten keine Transaktionskosten, obwohl diese für einen sinnvollen Backtest entscheidend sind.
+- Oft dienen dieselben In-Sample-Daten zugleich der Parameteroptimierung und der Leistungsmessung, was die Ergebnisse aufbläht.
+- Diese Beispiele heißen Prototyp-Strategien und sind nicht zum Handel as-is gedacht, sondern als Illustration üblicher Techniken und als Anstoß zur Verfeinerung.
+- Die Dezimalisierung der US-Aktienquotes am 9. April 2001, zuvor Quotierung in Achteln oder Sechzehnteln eines Penny, senkte Bid-Ask-Spreads und die angezeigte Liquidität am besten Bid und Ask, senkte die Profitabilität vieler Statistical-Arbitrage-Strategien und erhöhte die vieler Hochfrequenzstrategien.
+- Die Finanzkrise 2008 ließ die durchschnittlichen Tagesumsätze um 50 Prozent einbrechen, Retail-Handel und Aktienbesitz gingen besonders zurück, die durchschnittliche Volatilität sank, und Ausbrüche wie der Flash Crash im Mai 2010 und die Herabstufung der US-Bonität im August 2011 wurden häufiger.
+- Die alte Uptick-Regel für Leerverkäufe wurde im Juni 2007 abgeschafft und 2010 als Alternative Uptick Rule neu eingeführt.
+- Ein neuronales Netz mit etwa 100 Knoten und einer Backtest-Sharpe-Ratio von 6 hat wenig Prognosekraft, weil die Zahl der In-Sample-Parameter proportional zur Knotenzahl ist und sich so jede Reihe anpassen lässt.
+- Eine Hochfrequenzstrategie auf den E-mini S&P 500 mit 200 Prozent durchschnittlicher Jahresrendite, Sharpe Ratio 6 und 50 Sekunden mittlerer Haltedauer hängt von Ordertypen, Ausführung und Mikrostruktur ab; selbst das historische Gesamtorderbuch lässt den Gewinn von den Reaktionen anderer Teilnehmer abhängen.
+- Das Platzieren oder Ausführen einer Order kann das Verhalten der anderen Teilnehmer ändern; ein sogenannter Backtest einer Hochfrequenzstrategie ist deshalb sehr skeptisch zu sehen.
+- Die Backtests der Prototypstrategien enthalten keine Transaktionskosten und benutzen manchmal dieselben Daten für die Parameteroptimierung, etwa die beste Hedge Ratio, und für den Test. Das ist Look-ahead Bias und wird nur hingenommen, damit Darstellung und Code einfach bleiben; vor dem Einsatz sollen diese Fallstricke bereinigt werden.
+- Der Lookback von 20 Handelstagen für die tägliche Hedge Ratio von GLD und USO sowie δ gleich 0,0001 und Ve gleich 0,001 im Kalman-Filter sind mit Wissen im Nachhinein gesetzt. Das optimale δ lässt sich wie der optimale Lookback einer gleitenden Regression auf Trainingsdaten bestimmen.
+- Fehler oder Ausreißer in den historischen Daten blähen gewöhnlich die Backtest-Performance von Mean-Reversion-Strategien auf.
+- Waren die wahren Preise um 11:00, 11:01 und 11:02 Uhr je 100 Dollar, die Historie aber 100, 110 und 100 Dollar, shortet der Mean-Reversion-Backtest um 11:01 bei 110 Dollar und deckt um 11:02 bei 100 Dollar ein, mit einem fiktiven Gewinn von 10 Dollar.
+- Seriöse Datenanbieter arbeiten die Cancel-and-Correct-Codes der Börse ein, um Trades zu korrigieren, die wegen eines zu weit vom normalen Preis entfernten Transaktionspreises storniert wurden. Was normal ist, bestimmt allein die zuständige Börse, manchmal von Fall zu Fall.
+- Dieselbe Art Datenfehler drückt die Backtest-Performance von Momentum-Strategien und ist dort weniger gefährlich: der Backtest kauft um 11:01 bei 110 Dollar und wird um 11:02 bei 100 Dollar womöglich mit Verlust ausgestoppt.
+- Dieselben Fehler lösen im Live-Handel falsche Trades aus und führen oft zu realen Verlusten.
+- Strategien auf Spreads sind gegen kleine Datenfehler besonders empfindlich, im Backtest wie im Live-Handel.
+- Die Backtests dieses Buches enthalten keine Transaktionskosten, weil diese stark von der genauen Ausführung und vom genauen Aktienuniversum abhängen.
+- Ein biasfreier Nachbau muss berücksichtigen, dass der gewählte Index, typisch der S&P 500, seine Zusammensetzung ändert, und braucht die historischen täglichen Indexzusammensetzungen.
+- Die historischen Preise hier sind durchgängig konsolidierte Eröffnungen und Schlüsse. MOO-, LOO-, MOC- oder LOC-Orders werden zum Open oder Close der Primärbörse gefüllt, deshalb liegen die tatsächlichen Renditen gewöhnlich unter den berichteten.
+- Buy-on-Gap kann das Signal für den Einstieg zur Eröffnung nicht aus dem offiziellen Open bilden und zugleich zum offiziellen Open gefüllt werden. Pre-Open-Kurse, etwa von ARCA, erzeugen die Signale. Die Abweichung heißt Signalrauschen.
+- Auch close-to-close darf den exakten Schluss nicht zugleich als Gewicht und als Einstiegskurs nutzen. Kurse wenige Sekunden vor dem Schluss liegen typischerweise viel näher am offiziellen Schluss der Primärbörse, weil der Primärmarkt dann offen und liquide ist.
+- Die Intraday-Fassung des linearen Long-Short-Modells handelt zweimal täglich statt einmal, deshalb verdoppeln sich die im Backtest fehlenden Transaktionskosten, und sie unterliegt demselben Signalrauschen.
+- Der SPY-Backtest fixiert den Lookback für Mittel und Standardabweichung auf 5, mit dem Vorteil des Rückblicks. Die Performance fällt mit der Zeit, teils weil Bestandteile und Hedge Ratios nicht periodisch neu geschätzt werden.
+- Wer statt des ETF einen Future auf denselben Index oder Teilindex nutzt, muss die Future-Preise im Backtest zeitgleich mit den Aktienschlüssen halten.
+- Die Johansen-Implementierung, die der Autor kennt, akzeptiert höchstens 12 Symbole (LeSage, 1998).
+- Die Leistung des linearen Long-Short-Modells ab Anfang 2008 ist ein echter Out-of-Sample-Test, weil die Strategie 2007 veröffentlicht wurde.
+- Das Buy-on-Gap-Universum im Beispiel ist der S&P 500, aber einer mit Survivorship Bias.
+- Die einfachen Renditeformeln für Bi.USD und USD.Qi lassen die Rollover-Zinsen weg. Bei kurzfristigen Strategien wie dem 250-Tage-Beispiel ist ihre Wirkung gewöhnlich klein.
+- Übernacht heißt, eine Position bis oder über 17:00 Uhr ET zu halten. Liegt T+3 für eine der beiden Währungen auf einem Wochenende oder Feiertag, wird der Rollover mit eins plus der Zahl geschlossener Tage multipliziert. Haltung über Mittwoch 17:00 Uhr ET verdreifacht den Tagessatz.
+- Bei USD.CAD und USD.MXN wird an T+1 abgewickelt. Die Verdreifachung greift nur, wenn T+2 Wochenende oder Feiertag ist, also bei Haltung über Donnerstag 17:00 Uhr ET. Das berührt jeden Backtest mit Übernachtpositionen.
+- Die Sharpe Ratio verwendet die Überschussrendite, also Positionsrendite minus Finanzierungskosten. Intraday sind diese Kosten null, bei einem dollarneutralen Long-Short-Aktienportfolio nahe null, bei Futures null, weil Kontrakte kein zu finanzierendes Vermögen sind und die Margin zinst.
+- Bei Kreuzkursen dürfen die Finanzierungskosten null gesetzt werden, wenn der Rollover in die prozentuale Änderung eingeht: Log-Preisänderung plus log(1 + iB) minus log(1 + iQ).
+- Beispiel 5.1 wählt ein festes Trainingsfenster von 250 Tagen, weil es im Rückblick besser abschnitt als 20 Tage für die Hedge Ratio. Die ersten 250 Tage zählen nicht zur Performance.
+- Trotz angenommener konstanter Rollrendite hängt die Regression vom gewählten Tag und vom verfügbaren Kontraktsatz ab, das geschätzte Gamma variiert also langsam.
+- Die Log-Preise von CL gegen die Restlaufzeit liegen für die fünf nächsten Kontrakte nahezu auf einer Geraden. Weiter entfernte Kontrakte tun das oft nicht, dort bricht die Gleichung F(t, T) = S(t) mal exp(γ(t − T)).
 
 ## Beispiele
 

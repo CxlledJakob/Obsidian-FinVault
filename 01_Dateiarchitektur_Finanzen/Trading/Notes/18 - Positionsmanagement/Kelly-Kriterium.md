@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Kelly-Kriterium
@@ -44,6 +44,18 @@ aktualisiert: 2026-10-30
 - In diesem Spiel ist der optimale Anteil je Wette 0,25. Wird er überschritten, trägt der Wettende mehr Risiko, ohne dass das Kapital schneller wächst.
 - Bei einem Einsatzanteil von 0,58 ist es wahrscheinlich, dass das gesamte Kapital verloren geht, trotz der günstigen Erwartung.
 - Dasselbe widerfährt einem Arbitrageur mit guter Information, der zu viel Hebel einsetzt.
+- Für mehrere Portfolios aus einem gemeinsamen Eigenkapital ist der Vektor der optimalen Hebel F gleich C hoch minus 1 mal M, wobei C die Kovarianzmatrix der Portfoliorenditen und M der Vektor der mittleren Excess Returns ist.
+- Bei einem Dollar Eigenkapital bedeutet F gleich [3,2 1,5] transponiert, dass das erste Portfolio einen Marktwert von 3,2 Dollar und das zweite von 1,5 Dollar haben soll.
+- Die Broker-Nebenbedingung betrifft den Bruttohebel, die Summe der Beträge von Long- und Short-Marktwert geteilt durch das Eigenkapital, nicht den Nettohebel aus der Differenz von Long und Short.
+- Liegt Fmax unter der Summe der Beträge der Kelly-Hebel, ist die übliche proportionale Kürzung aller Fi unter der Nebenbedingung nicht mehr wachstumsoptimal.
+- Im Beispiel unkorrelierter Strategien mit 30 und 60 Prozent annualisierter Überschussrendite und 26 und 35 Prozent Volatilität sind die Kelly-Hebel 4,4 und 4,9. Bei Fmax gleich 2 ergibt die proportionale Kürzung g gleich 0,82, die Konzentration auf die zweite Strategie g gleich 0,96.
+- Bei sehr verschiedenen unabhängigen Wachstumsraten und einem Fmax weit unter dem Kelly-Hebel ist es oft optimal, die ganze Kaufkraft in die Strategie mit der höchsten Wachstumsrate zu legen.
+- Ersetzt man die Gauß-Annahme durch eine andere Form mit endlich vielen Momenten, etwa die Student-t, folgt aus Thorps Herleitung ein anderer optimaler Hebel, nicht mehr f gleich m geteilt durch s hoch 2. Die Pareto-Levy-Verteilung hat keine endliche Zahl von Momenten; wo keine analytische Lösung existiert, hilft Monte Carlo.
+- Für die Mean-Reversion-Strategie aus Beispiel 5.1 ist der Kelly-Hebel 18,4, die Pearson-Monte-Carlo-Optimierung ergibt 19 und die historische Optimierung wieder 18,4.
+- Die Erfahrung des Autors zur zweiten Ermessensfrage ist, dass Kelly auf jede Strategie einzeln, sodass Underperformer schnell eingehen, praktischer ist als die Allokation über alle Strategien, obwohl die Mathematik die Gesamtallokation bei unveränderten Erwartungen als optimal ausweist.
+- Vor einem großen bevorstehenden Ereignis bleibt die Ermessensfrage, ob das Modell wie im Backtest weiterläuft oder der Hebel gesenkt oder das Modell vorübergehend abgeschaltet wird.
+- Hat das Modell frühere Stressphasen im Backtest überstanden, gibt es nach der Erfahrung keinen Grund, den Hebel vor der kommenden Krise zu senken; besser ist ein von Anfang an konservativerer Hebel in guten Zeiten.
+- Die unbekannten Unbekannten schaden, nicht die bekannten Unbekannten, und vor den unbekannten lässt sich das Modell nicht abschalten.
 
 ## Funktionsweise
 

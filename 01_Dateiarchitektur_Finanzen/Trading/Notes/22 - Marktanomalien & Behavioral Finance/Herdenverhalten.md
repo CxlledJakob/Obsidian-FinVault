@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Herdenverhalten
@@ -47,6 +47,18 @@ aktualisiert: 2026-10-30
 - Dominiert Nachahmung statt unabhängiger Wahl, entsteht positives Feedback: Anleger kaufen nach den ersten Zeichen der Stärke und verkaufen nach den ersten Zeichen der Schwäche und verstärken eine kleine Bewegung zum großen Trend.
 - In der Hypothese von Hong und Stein werden die Handlungen der Anleger korreliert und bilden einen Herdeneffekt, beschrieben als Kaskade immer unempfindlicherer Trendfolge-Signale.
 - Shiller hält Spekulationsblasen für spontan entstehende Ponzi-Gebilde ohne betrügerischen Promoter. Steigende Preise wirken wie die Gewinne früher Ponzi-Anleger als Aufruf zum Mitmachen, verstärkt von Verkäufern, die die Chance betonen und das Risiko herunterspielen, ohne lügen zu müssen.
+- Coval und Stafford 2007 finden, dass Publikumsfonds mit großen Rückgaben bestehende Aktienpositionen reduzieren oder schließen und Fonds mit großen Zuflüssen bestehende Positionen aufstocken, statt neue Aktien zu kaufen.
+- PRESSURE(i, t) misst am Quartalsende den Kauf- oder Verkaufsdruck auf Aktie i über den Nettoanteil der haltenden Fonds mit großen Zuflüssen oder Abflüssen.
+- Buy(j, i, t) ist 1, wenn Fonds j die Haltung in Aktie i im Quartal t erhöht hat und die Zuflüsse mehr als 5 Prozent des Nettoinventarwerts betragen, sonst 0; Sell ist analog für Senkungen der Haltung definiert.
+- Der Nenner ist die Zahl der Publikumsfonds, die Aktie i zu Beginn des Quartals t halten.
+- Buy ist binär und berücksichtigt die Fondsgröße nicht; offen bleibt, ob eine Gewichtung mit dem Nettoinventarwert bessere Ergebnisse brächte.
+- Ein marktneutrales Portfolio shortet das unterste PRESSURE-Dezil und kauft das oberste und erzielt vor Kosten etwa 17 Prozent annualisiert; weil Holdings meist nur vierteljährlich vorliegen, wird das Portfolio vierteljährlich neu gebildet.
+- Käufe der Aktien mit dem stärksten Verkaufsdruck in den Quartalen t minus 4 bis t minus 1, und umgekehrt, erzielen weitere 7 Prozent annualisiert, weil die Kurse nach dem Ende des Drucks oft mean-reverten.
+- Momentum, Front-Running und diese Mean Reversion zusammen ergeben vor Kosten etwa 41 Prozent.
+- Die Slippage ist voraussichtlich erheblich, weil die Holdings-Information zum Quartalsende verzögert eintrifft.
+- Saubere Holdings- und Renditedaten kommen vom Center for Research in Security Prices und kosten etwa 10.000 Dollar je Datenjahr.
+- Auch Indexfonds, gehebelte ETFs und erzwungene Käufe und Verkäufe von Hedgefonds zünden Aktienmomentum; die Hedgefonds-Verkäufe verursachten den Einbruch der Quant-Fonds im August 2007.
+- Das Zünden von Preismomentum durch Orderflow ist allgemein und tritt auch auf der kürzesten Zeitskala auf.
 
 ## Funktionsweise
 

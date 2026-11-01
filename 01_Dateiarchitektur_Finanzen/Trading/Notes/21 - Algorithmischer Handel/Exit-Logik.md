@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Exit-Logik
@@ -52,6 +52,19 @@ aktualisiert: 2026-10-30
 - Stop-Losses sind mit Momentum-Strategien verträglich und mit Mean-Reversion-Strategien nicht, weil sie deren Einstiegssignalen widersprechen; das wird in Kapitel 8 wieder aufgenommen.
 - Durch zeitbasierten Ausstieg oder Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt.
 - Eine willkürlich gesetzte Gewinnobergrenze bei Momentum ist unratsam, weil das Aufwärtspotenzial sonst unbegrenzt ist.
+- Die zwei üblichen Ausstiege von Momentum-Strategien sind zeitbasiert und Stop-Loss.
+- Alle bisher besprochenen Momentum-Strategien nutzen nur den zeitbasierten Ausstieg: eine Haltedauer wird festgelegt, und bei ihrem Erreichen wird geschlossen.
+- Ein Stop-Loss kann die Ausstiegsbedingung sein oder zusätzlich zur Haltedauer gelten.
+- Stop-Losses passen zu Momentum: dreht das Momentum, wird die Gegenposition eröffnet, und weil die alte Position verloren hätte, wirkt dieser Ausstieg als Stop.
+- Stop-Losses passen nicht zu Mean Reversion, weil sie den Einstiegssignalen widersprechen; das wird in Kapitel 8 wieder aufgenommen.
+- Der kumulierte Verlust aufeinanderfolgender Verlustpositionen einer Momentum-Strategie kann trotzdem ruinös sein.
+- Eine willkürliche Gewinnobergrenze ist unratsam, weil das Aufwärtspotenzial von Momentum sonst unbegrenzt ist.
+- Die Opening-Gap-Strategie hält vom Open bis zum Close desselben Tages; die Rendite ist die Position mal (Open minus Close) geteilt durch Open.
+- Die PEAD-Strategie wird am Schluss desselben Tages geschlossen. Ob eine noch kürzere Haltedauer bessere Renditen bringt, bleibt zu testen.
+- Die DRN-Strategie steigt am Handelsschluss aus.
+- Beim Ratio Trade wird verkauft, sobald der Bid um einen oder mehrere Ticks steigt, oder eine Verkaufsorder auf den Best Ask gelegt, wenn der Spread die Round-Trip-Kommission übersteigt; sonst Verkauf zum ursprünglichen Best Bid.
+- Beim Ticking wird zum Best Ask minus einem Tick verkauft; scheitert die Füllung, Verkauf zum ursprünglichen Best Bid mit Verlust der Kommissionen plus einem Tick.
+- Stop Hunting deckt die Short-Position, sobald die Sell-Stops ausgelöst sind und das Abwärtsmomentum läuft.
 
 ## Funktionsweise
 
@@ -98,6 +111,14 @@ aktualisiert: 2026-10-30
 - Für GLD gegen GDX soll zumindest eine Regel den Handel beenden, sobald der Ölpreis eine bestimmte Schwelle überschreitet.
 - Bei einem einzelnen Aktienpaar setzt konsistente Profitabilität voraus, dass man jedes Unternehmen fundamental versteht und die Position verlässt, bevor schlechte Nachrichten eines der beiden öffentlich werden.
 - Wer bei Aktienpaaren auf Overnight-Positionen verzichtet, kann die Änderungen der fundamentalen Unternehmensbewertung vermeiden, die längere Positionen treffen.
+- Beim Bollinger-Band bedeutet exitZscore gleich 0 einen Ausstieg am aktuellen Mittel. exitZscore gleich minus entryZscore bedeutet einen Ausstieg erst jenseits des gegenüberliegenden Bandes, der dort das Gegensignal auslöst.
+- Schrittweises Aussteigen nimmt Gewinn bei jeder kleinen Rückkehr mit und wartet nicht auf die volle Rückkehr zum Mittel. Dadurch kann die Strategie auch profitabel bleiben, wenn die Reihe nicht stationär ist und den Mittelwert nie erreicht.
+- Im Vergleich von Schoenberg und Corwin wird dagegen jeder Kontrakt erst beim Endpreis F geschlossen, auch wenn der Einstieg ein average-in war.
+- Beim Kalman-Beispiel wird der Long geschlossen, sobald der Prognosefehler e über minus der Wurzel von Q steigt, und der Short, sobald e unter die Wurzel von Q fällt.
+- Ein Kontraktpaar im CL-Kalenderspread wird drei Monate gehalten, gerechnet als 61 Handelstage, und zehn Tage vor Verfall des nahen Kontrakts in das nächste Paar gerollt.
+- Die Fälligkeiten von nahem und fernem Kontrakt liegen ein Jahr auseinander.
+- Fehlt ein Z-Score, ist die Position null. Ein positiver Z-Score dreht die Ausgangslage long fern und short nah um.
+- Im Devisenhandel sind Stop-Losses brauchbar, weil von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET durchgehend gehandelt wird. Ist ein Markt lange geschlossen, sind Stops nutzlos, weil er zur Wiedereröffnung gappen kann.
 
 ## Risiken und Grenzen
 

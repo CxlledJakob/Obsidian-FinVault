@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Look-Ahead Bias
@@ -44,6 +44,12 @@ aktualisiert: 2026-10-30
 - Liegt die rechte Schulter nur 4 Prozent über der Nackenlinie und die Schwelle bei 10 Prozent, wäre ein Einstieg nur 4 Prozent unter der Schulter günstiger als das Warten auf einen Preis 10 Prozent unter der Schulter.
 - Es wäre nicht zulässig anzunehmen, ein Händler habe von der Nackenlinienpenetration gewusst, denn erst ein Rückgang von 10 Prozent ab der rechten Schulter identifiziert diese Schulter.
 - Chang und Osler setzten den Einstieg erst an, nachdem der Zigzag die rechte Schulter objektiv erkannt hatte; der Preis war in manchen Fällen ungünstiger, der Backtest aber frei von Look-ahead Bias.
+- Allgemeiner heißt Look-ahead Bias, zukünftige Information für eine Prognose zum aktuellen Zeitpunkt zu verwenden.
+- Ein häufiges Beispiel ist, Tageshoch oder Tagestief als Einstiegssignal noch am selben Tag zu verwenden; vor dem Schluss sind Hoch und Tief des Tages unbekannt.
+- Look-ahead Bias ist im Wesentlichen ein Programmierfehler und kann nur das Backtest-Programm befallen, nicht das Live-Programm, weil dieses keine Zukunftsinformation erhalten kann.
+- Im Backtest der linearen Mean-Reversion auf USD.CAD entsteht Look-ahead Bias, weil Halbwertszeit und damit Lookback auf denselben In-Sample-Daten bestimmt werden, auf denen die Strategie bewertet wird.
+- Die Backtests der Prototypstrategien benutzen teilweise dieselben Daten zur Parameteroptimierung, etwa für die beste Hedge Ratio, und für die Bewertung. Das ist Look-ahead Bias, hingenommen nur damit Darstellung und Code einfach bleiben, und soll vor dem Einsatz entfernt werden.
+- Der Lookback von 20 Handelstagen für GLD gegen USO und die Kalman-Parameter δ gleich 0,0001 und Ve gleich 0,001 sind mit Wissen im Nachhinein gesetzt.
 
 ## Funktionsweise
 
@@ -75,6 +81,9 @@ aktualisiert: 2026-10-30
 - Bei Daten täglicher Frequenz, wie in der Fallstudie, fällt der erste zulässige Ausführungspreis erst auf die Eröffnung des Marktes am Tag nach dem Signal.
 - Look-ahead Bias entsteht auch, wenn eine Regel Datenreihen mit Meldeverzug nutzt, etwa Cash-Statistiken von Fonds, oder Reihen, die Revisionen unterliegen, etwa staatliche Wirtschaftsstatistiken.
 - In diesen Fällen müssen verzögerte Werte verwendet werden, die Meldefristen oder Revisionen berücksichtigen.
+- Sind Backtest und Live dasselbe Programm und unterscheidet sich nur die Datenquelle, historische gegen Live-Daten, kann im Programm kein Look-ahead Bias entstehen.
+- Eine Plattform, die dasselbe Programm für Backtest und Live nutzt, beseitigt Look-ahead Bias, weil sie historische Marktdaten Tick für Tick oder Bar für Bar einspeist, genau wie Live-Daten, sodass zukünftige Information nicht eingehen kann.
+- Dieselbe Programmquelle beseitigt auch Abweichungen beim Übertragen eines Backtests in eine Live-Strategie, die Programme in einer allgemeinen Sprache wie C++ oder MATLAB oft befallen.
 
 ## Risiken und Grenzen
 

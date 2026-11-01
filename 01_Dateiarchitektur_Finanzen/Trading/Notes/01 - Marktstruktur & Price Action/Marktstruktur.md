@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Marktstruktur
@@ -48,6 +48,8 @@ aktualisiert: 2026-10-30
 - Welle, Schwung und Abschnitt bezeichnen dasselbe; Korrekturen werden mit Buchstaben bezeichnet, Trends mit Zahlen.
 - Die Trendposition ist ein weiterer Schlüssel für Handelsrichtung und Handelsstrategie und gehört in den Tradingplan.
 - Eine Momentumumkehr zeigt nicht, wo der Markt im Preistrend steht und ob der Trend selbst an oder nahe einer Umkehr ist; das leistet die Musterposition.
+- Abweichungen des Live-Handels vom Backtest entstehen oft durch einen grundlegenden Wandel der Marktstruktur, einen Regimewechsel infolge staatlicher Regulierung oder makroökonomischer Änderungen, und nicht durch Fallstricke des Backtests.
+- Auch bei einer angeblich automatischen Strategie bleibt die Aufgabe, anhand des fundamentalen Marktverständnisses zu beurteilen, ob die Modelle noch gültig sind.
 
 ## Funktionsweise
 

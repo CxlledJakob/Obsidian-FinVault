@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Kalman-Filter
@@ -23,6 +23,15 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Der Kalman-Filter gehört zu den einfachsten Techniken für den Handel mean-revertierender Portfolios, neben linearen Modellen und Bollinger-Bändern.
+- Er ist für Trader auf mehrere Arten und in mehreren Strategien nützlich.
+- Vω wird vereinfacht als δ/(1 minus δ) mal der 2-mal-2-Einheitsmatrix gesetzt und Ve als Skalar. δ gleich 0 hält β konstant und reduziert das Filter auf eine OLS-Regression mit festem Achsenabschnitt und fester Steigung. δ gleich 1 lässt β mit der letzten Beobachtung wild schwanken.
+- Das optimale δ wird wie der optimale Lookback einer gleitenden Regression auf Trainingsdaten bestimmt. Mit Wissen im Nachhinein werden δ gleich 0,0001 und Ve gleich 0,001 gewählt. Gestartet wird mit β-Dach(1|0) gleich 0 und R(0|0) gleich 0.
+- Ve und Vω lassen sich aus den Daten mit Autocovariance Least Squares nach Rajamani und Rawlings (2007, 2009) schätzen.
+- Auf EWA als x und EWC als y schwankt die Kalman-Steigung bei diesem δ um 1, und der Achsenabschnitt steigt monoton. Der Prognosefehler e(t) ist die Abweichung des Spreads EWC minus EWA von seinem prognostizierten Mittel; Q(t) ändert sich bei kleinem δ nur langsam.
+- Long, wenn e unter minus der Wurzel von Q liegt, Short, wenn e darüber liegt. Die übrige Positionsführung folgt dem Bollinger-Code, mit der Kalman-Steigung als Hedge Ratio. APR 26,2 Prozent, Sharpe Ratio 2,4, Abbildung 3.8.
+- Für eine einzelne Reihe ist der verborgene Zustand der Mittelpreis m(t). Die Messgleichung ist y(t) = m(t) + ε(t), der Übergang m(t) = m(t minus 1) + ω(t minus 1). Das Update ist m(t|t) = m(t|t minus 1) + K(t) mal (y(t) minus m(t|t minus 1)), mit Q(t) = Var(m(t)) + Ve, K(t) = R(t|t minus 1) / (R(t|t minus 1) + Ve) und R(t|t) = (1 minus K(t)) mal R(t|t minus 1).
+- Ein kurzes gleitendes Fenster verändert Hedge Ratio, Mittel und Standardabweichung sprunghaft beim Austausch des ältesten gegen den neuesten Bar. Ein EMA gewichtet neue Daten stärker, doch der exponentielle Abfall ist nicht als optimal begründet.
 
 ## Funktionsweise
 
@@ -46,9 +55,22 @@ aktualisiert: 2026-10-30
 - Ist die Trade-Größe T gleich der Benchmark Tmax, ist die Unsicherheit des beobachteten Preises null, der Kalman-Gain ist 1, und die neue Schätzung m(t) ist genau der beobachtete Preis.
 - Tmax kann ein Bruchteil des gesamten Handelsvolumens des Vortags sein; der genaue Bruchteil wird mit Trainingsdaten optimiert.
 - Größere Trades und jüngere Trade-Preise erhalten mehr Gewicht; der Ansatz ist damit einem volumen- und zeitgewichteten Durchschnittspreis vergleichbar.
+- Im Market-Making-Einsatz schätzt der Kalman-Filter nur den Mittelpreis einer einzelnen mean-revertierenden Reihe. Die Hedge Ratio zweier kointegrierender Reihen wird dabei nicht gesucht.
+- Der Mittelpreis m(t) ist die verborgene Variable und der Preis y(t) die beobachtbare. Die Messgleichung lautet y(t) = m(t) + ε(t).
+- Die Zustandsübergangsgleichung lautet m(t) = m(t − 1) + ω(t − 1).
+- Das Zustands-Update lautet m(t|t) = m(t|t − 1) + K(t) mal (y(t) − m(t|t − 1)).
+- Die Varianz des Prognosefehlers ist Q(t) = Var(m(t)) + Ve.
+- Der Kalman-Gain ist K(t) = R(t|t − 1) geteilt durch (R(t|t − 1) + Ve).
+- Das Update der Zustandsvarianz lautet R(t|t) = (1 − K(t)) mal R(t|t − 1).
+- Nach Sinclair (2010) ist das ein bevorzugtes Modell, mit dem Market Maker ihren Schätzer für den Mittelpreis eines Assets aktualisieren.
+- Praktiker machen die Messunsicherheit Ve zeitabhängig. Eine große Handelsgröße gegenüber einer Benchmark bedeutet kleine Unsicherheit, und umgekehrt.
+- Ist die Handelsgröße T gleich der Benchmark Tmax, ist die Unsicherheit des beobachteten Preises null, der Kalman-Gain gleich 1, und der neue Mittelwert m(t) exakt der beobachtete Preis.
+- Gegenüber einem VWAP gewichtet dieser Filter nicht nur größere Trades stärker, sondern auch jüngere Preise. Das entspricht einem volumen- und zeitgewichteten Durchschnittspreis.
+- Der erwartete Preis eines Instruments lässt sich so aus dem letzten Trade, also aus Preis und Größe, dynamisch nachführen.
 
 ## Voraussetzungen
 
+- Als Eingaben für diese Tests und Strategien kommen Rohpreise, Log-Preise oder Verhältnisse infrage, und es wird gezeigt, welche Wahl am sinnvollsten ist.
 
 ## Anwendung im Trading
 

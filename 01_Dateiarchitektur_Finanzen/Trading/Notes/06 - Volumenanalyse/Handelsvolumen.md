@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Handelsvolumen
@@ -130,6 +130,9 @@ aktualisiert: 2026-10-30
 - Die Benchmark-Trade-Größe Tmax kann ein Bruchteil des gesamten Handelsvolumens des Vortags sein; der genaue Bruchteil wird mit Trainingsdaten optimiert.
 - Ist die Trade-Größe T gleich Tmax, gibt es keine Unsicherheit im beobachteten Preis, der Kalman-Gain ist 1, und die neue Schätzung des mittleren Preises ist genau der beobachtete Preis.
 - Der Kalman-Filter gibt nicht nur Trades mit größerer Stückzahl mehr Gewicht, sondern auch jüngeren Trade-Preisen mehr Gewicht und ist damit mit einem volumen- und zeitgewichteten Durchschnittspreis vergleichbar.
+- Im Market-Making-Kalman-Filter hängt die Messunsicherheit Ve von der Handelsgröße ab: ist die Größe T groß gegenüber einer Benchmark Tmax, ist die Unsicherheit des beobachteten Transaktionspreises klein, und umgekehrt.
+- Ist T gleich Tmax, ist diese Unsicherheit null, der Kalman-Gain gleich 1, und der neue Schätzer des Mittelpreises ist exakt der beobachtete Preis.
+- Der Filter gewichtet größere Trades stärker und zusätzlich jüngere Preise stärker. Das entspricht einem volumen- und zeitgewichteten Durchschnittspreis, nicht nur einem VWAP.
 
 ## Voraussetzungen
 

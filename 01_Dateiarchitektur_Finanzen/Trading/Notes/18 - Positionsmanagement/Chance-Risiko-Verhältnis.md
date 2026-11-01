@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Chance-Risiko-Verhältnis
@@ -67,6 +67,12 @@ aktualisiert: 2026-10-30
 - Ein Verhältnis wie 3:1 ist hier Reward zu Risk, also 3 Dollar möglicher Gewinn auf 1 Dollar Risiko, das als Kapitaleinsatz verstanden wird.
 - Das Risiko je Einheit lässt sich als Differenz zwischen Einstiegspreis und initialem Schutzstoppreis definieren.
 - Die Belohnung ist immer nur eine bestmögliche Schätzung der wahrscheinlichen Mindestbewegung, die der Markt voraussichtlich macht.
+- Bei Momentum ist das Aufwärtspotenzial unbegrenzt, solange keine willkürliche Gewinnobergrenze gesetzt wird, und eine solche Obergrenze ist unratsam; das Abwärtspotenzial einer einzelnen Position ist begrenzt.
+- Bei Mean Reversion ist das Aufwärtspotenzial durch die natürliche Gewinnobergrenze begrenzt, den Mean, zu dem die Preise zurückkehren, und das Abwärtspotenzial kann unbegrenzt sein.
+- Zeitbasierter Ausstieg oder Stop-Loss begrenzen den Verlust einer einzelnen Momentum-Position; der kumulierte Verlust aufeinanderfolgender Verlustpositionen kann trotzdem ruinös sein.
+- Eine einzige Mean-Reversion-Position kann einen enormen Drawdown erzeugen.
+- Je häufiger Black-Swan-Ereignisse auftreten und je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis sind, desto eher profitiert eine Momentum-Strategie.
+- Momentum kann in Risiken gedeihen, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
 
 ## Funktionsweise
 

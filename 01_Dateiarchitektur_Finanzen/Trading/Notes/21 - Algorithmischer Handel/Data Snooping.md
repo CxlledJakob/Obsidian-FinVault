@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Data Snooping
@@ -200,6 +200,23 @@ aktualisiert: 2026-10-30
 - Der Test war dadurch übermäßig konservativ: Die Chance eines Fehlers erster Art, also eines fälschlichen Ablehnens der Null, lag unter 0,10, und die Power des Tests, die Null korrekt abzulehnen, war geringer, als wenn die inversen Regeln weggelassen worden wären.
 - Die inversen Regeln wurden einbezogen, weil nicht bekannt war, ob die traditionelle Interpretation der technischen Analyse richtig ist.
 - Komplexität meint bei der Suche nach Regeln der technischen Analyse die Zahl der getrennten Parameter und der bedingten Anweisungen, die die Regel definieren. Regeln höherer Komplexität haben mehr Parameter und mehr Bedingungen.
+- Einfache und lineare Strategien werden als Gegenmittel gegen Overfitting und Data-Snooping-Bias betont, die komplexe Strategien oft befallen.
+- Die zufälligen Marktmuster, an die zu viele freie Parameter angepasst werden, kehren in der Zukunft wahrscheinlich nicht wieder, sodass das Modell wenig Prognosekraft hat.
+- Der bekannte Nachweis ist der Out-of-Sample-Test und die Verwerfung eines Modells, das ihn nicht besteht; wer das Modell danach so nachjustiert, dass In-Sample und Out-of-Sample beide vernünftig aussehen, hat die Out-of-Sample-Daten in In-Sample-Daten verwandelt.
+- Wenige Parameter, aber viele komplizierte Handelsregeln, sind ebenso anfällig; nichtlineare Modelle sind anfälliger als lineare, weil sie komplizierter sind und gewöhnlich mehr freie Parameter haben.
+- Trotz aller Vorsicht schleicht sich Data-Snooping-Bias ein, deshalb ist ein Walk-Forward-Test der abschließende echte Out-of-Sample-Test.
+- Die lineare Mean-Reversion hat keine zu optimierenden Parameter. Auch der Lookback ist die Halbwertszeit der Preisreihe und nicht ein an der Strategie geeichter Parameter, deshalb zeigt der Backtest Gewinne ohne Data-Snooping-Bias.
+- Die lineare Strategie ist praktisch parameterfrei und deshalb am wenigsten anfällig für Data-Snooping-Bias. Sie dient dem Nachweis, ob Mean Reversion auf einem Portfolio profitabel sein kann.
+- Beim Bollinger-Band sind entryZscore und oft der Lookback freie Parameter und werden auf einem Trainingsset optimiert. Bei mehreren Bändern ist N ein weiterer Trainingsparameter.
+- Lookback 20 für GLD-USO sowie δ gleich 0,0001 und Ve gleich 0,001 im Kalman-Filter sind in den Beispielen mit Wissen im Nachhinein gesetzt.
+- Weil die langen Haltedauern in der begrenzten Testhistorie nur wenige Trades erzeugen, besteht in diesen Momentum-Ergebnissen das Risiko eines Data-Snooping-Bias.
+- Der eigentliche Test der Strategie ist, wie immer, echtes Out-of-Sample-Testing.
+- Für die Korrelationen wurde der Einfachheit halber nur eine von vielen möglichen, um einen Tag verschobenen Renditemengen getestet.
+- Alle höheren Momente zu erfassen lädt wegen der meist geringen empirischen Datenmenge zum Data-Snooping-Bias ein; praktisch nutzt das Pearson-System deshalb nur Mittelwert, Standardabweichung, Schiefe und Kurtosis.
+- Die Optimierung des Hebels auf der historischen Wachstumsrate im Backtest hat den üblichen Data-Snooping-Bias der Parameteroptimierung: der Hebel dieser Realisation ist für eine künftige andere nicht optimal.
+- Historische Renditen bieten zu wenig Daten, um einen Hebel zu bestimmen, der für viele Realisationen gut funktioniert; die Monte-Carlo-Optimierung ist dafür angelegt.
+- Weil Finanzpaniken selten sind, ist es beim Entscheiden, ob ein führender Risikoindikator nützlich ist, leicht, einem Data-Snooping-Bias zu erliegen.
+- Kein Finanzindikator sagt natürliche und andere nichtfinanzielle Katastrophen voraus.
 
 ## Funktionsweise
 
@@ -220,6 +237,7 @@ aktualisiert: 2026-10-30
 - Bei den Trendregeln wurden alle 429 Kombinationen aus 11 möglichen Look-backs des Channel Breakout und 39 Zeitreihen aufgenommen, 11 mal 39.
 - Traf eine dieser Regeln zufällig eine früher entdeckte Regel, war die Aufnahme Zufall; so wurde die volle Zahl der bis zur besten Regel untersuchten Regeln berücksichtigt.
 - Das Ausbleiben statistisch signifikanter Renditen nach Bereinigung um den Data-Mining-Bias unterstreicht, wie wichtig Inferenzmethoden sind, die die verzerrende Wirkung des Data Mining einrechnen.
+- Der Walk-Forward kann als Paper-Trading laufen, besser aber mit echtem Geld bei minimalem Hebel; die meisten Trader sind zufrieden, wenn die Live-Sharpe-Ratio besser als die Hälfte des Backtests ist.
 
 ## Regeln und Kriterien
 
@@ -228,6 +246,15 @@ aktualisiert: 2026-10-30
 - Strategien mit hoher Rendite und niedriger Sharpe Ratio lohnen den Backtest nicht, weil die hohe Rendite wahrscheinlich auf Data-Snooping beruht.
 - Die Key Points mahnen, den Data-Snooping-Bias im Blick zu behalten, wenn der Hebel direkt an der zusammengesetzten Wachstumsrate der Backtest-Renditen optimiert wird.
 - Dieselbe Mahnung gilt für den Test, ob führende Risikoindikatoren wirken.
+- Statt möglichst viele technische Indikatoren oder Regeln an eine Preisreihe zu werfen, um die profitable auszuwählen, was Data-Snooping-Bias einlädt, wird die fundamentale Eigenschaft der Reihe in einem einfachen mathematischen Modell destilliert und dieses Modell ausgenutzt.
+- Einfache mathematische Modelle gelten für den Handel als vorteilhafter als der übliche Data-Mining-Ansatz.
+- Das Modell soll so einfach wie möglich und mit so wenigen Parametern wie möglich sein.
+- Eine nichtlineare Extrapolation der historischen Preise passt die Historie besser, garantiert aber keine bessere Prognose eines künftigen Werts.
+- Die extremste lineare Prognose gibt allen Faktoren betragsgleiche Koeffizienten: die Faktoren werden auf In-Sample-Daten in Z-Scores verwandelt, und die Renditeprognose ist der historische Mittelwert der Rendite plus ihre Standardabweichung mal dem Mittel der mit dem Vorzeichen der historischen Korrelation gewichteten Z-Scores.
+- Kahneman schreibt, Formeln mit gleichen Gewichten aller Prädiktoren seien oft überlegen, weil sie nicht von Zufällen der Stichprobe betroffen sind.
+- Die Prognose der absoluten Renditen kann ungenau sein, die der relativen Renditen zwischen Aktien ist oft gut genug: Long das obere Dezil und Short das untere Dezil liefert oft eine positive Durchschnittsrendite des Portfolios.
+- Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios mindern den Bias, nichts davon ist aber so endgültig wie ein Walk-Forward-Test; einfache Modelle sind ein einfaches Heilmittel.
+- CEP-Vertreter entgegnen, sie schürften keine beliebigen Regeln, sondern setzten um, was erfahrene Trader schon als profitabel kennen; der Autor ist davon nicht völlig überzeugt.
 
 ## Risiken und Grenzen
 
@@ -247,6 +274,7 @@ aktualisiert: 2026-10-30
 - Nach Wissen des Autors gibt es kein verfügbares Produkt, das komplexe nichtlineare Regeln erzeugt und dabei einen Signifikanztest enthält, der gegen den Data-Mining-Bias robust ist.
 - Ohne diesen Schutz bleibt als Schutz nur eine anspruchsvolle Form des Out-of-Sample-Tests mit drei Datensätzen, Training, Test und Evaluation.
 - Darf die Suche die Komplexität einer Regel optimieren, steigt die Zahl der betrachteten Regeln stark, und damit die Chance, dass die beste Regel überangepasst ist; das ist ein Beispiel für Data-Mining-Bias.
+- Die Beispiel-Backtests optimieren Parameter und messen die Leistung oft auf denselben In-Sample-Daten und blähen die Ergebnisse damit auf.
 
 ## Beispiele
 
@@ -257,6 +285,9 @@ aktualisiert: 2026-10-30
 - Eine extreme Regel vom Typ 12 beruht auf der Eingabereihe 28, dem 10-Tage-Durchschnitt des Auf-Ab-Volumenverhältnisses, mit einem Schwellenversatz von 10, also oben 60 und unten 40, und einem Look-back der Kanalnormalisierung von 30 Tagen.
 - Typ 12 ist short, obwohl der Indikator über der oberen Schwelle liegt, und long zu allen anderen Zeiten.
 - Zufall wird in einigen der stärksten Data-Mining-Algorithmen für komplexe Regelsynthese genutzt. Ein Beispiel sind Random Forests von Leo Breiman.
+- Greenblatts Magic Formula rankt Aktien nach Kapitalrendite und Earnings Yield, kauft die 30 bestplatzierten und hält sie ein Jahr; die APR betrug 30,8 Prozent von 1988 bis 2004 gegen 12,4 Prozent des S&P 500.
+- Ein neuronales Netz mit etwa 100 Knoten kann jede Zeitreihe mit einer fantastischen Sharpe Ratio anpassen, weil die Zahl der In-Sample-Parameter proportional zur Knotenzahl ist, und hat wegen Data-Snooping-Bias wenig oder keine Prognosekraft.
+- Eine annualisierte Backtest-Rendite von 30 Prozent bei einer Sharpe Ratio von 0,3 und zwei Jahren maximaler Drawdown-Dauer ist wahrscheinlich Data-Snooping, und die lange Dauer macht das Bestehen einer Cross-Validation unwahrscheinlich.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Widerstand
@@ -76,6 +76,9 @@ aktualisiert: 2026-10-30
 - Mehrere 100-Prozent-APPs in einer sehr engen Zone heißen Symmetrie-Setup und markieren diesen Widerstand.
 - Ein mögliches ABC-Hoch an einer solchen größeren Widerstandszone wird als Two-Step-Pattern bezeichnet.
 - Die Decke eines Regressionskanals bei zwei Standardabweichungen ist ein konkretes oberes Ziel, an dem eine Long-Position geschlossen werden kann.
+- Intraday-Breakout-Einstiege können an verschiedenen Widerstandsniveaus erfolgen.
+- Diese Niveaus können täglich von Banken oder Brokern gemeldet sein oder runde Zahlen nahe dem aktuellen Preis.
+- Viele Stop-Orders liegen auf oder nahe dem Widerstand, und ihr Auslösen treibt den Preis weiter in Bruchrichtung.
 
 ## Funktionsweise
 

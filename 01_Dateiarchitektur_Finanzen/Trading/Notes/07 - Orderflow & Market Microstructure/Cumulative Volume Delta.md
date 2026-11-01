@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Cumulative Volume Delta
@@ -28,6 +28,12 @@ aktualisiert: 2026-10-30
 - Die Autorin rechnet damit, dass Delta und seine Ableitungen in bestimmten Märkten häufiger genutzt werden, besonders bei E-Mini-Indexhändlern.
 - Orderflow ist bei Lyons (2001) vorzeichenbehaftetes Transaktionsvolumen: Kauf von 100 Einheiten ergibt plus 100, Verkauf von 100 Einheiten minus 100.
 - Orderflow sagt die kurzfristige Preisbewegung in derselben Richtung voraus.
+- Orderflow ist ein Informationsstrom jenseits der üblichen Bid-, Ask- und Last-Preise.
+- Kauf aus dem Orderbuch heißt Kauf zum Ask, gleichbedeutend mit einer Market Order zum Kauf, und ergibt positiven Orderflow in Höhe der Stückzahl.
+- Orderflow sagt Preisbewegungen voraus, weil Market Maker daraus fundamentale Information lesen und Bid und Ask entsprechend setzen.
+- Die Dringlichkeit großer gleichgerichteter Market Orders zeigt, dass die Information neu und nicht weit bekannt ist.
+- Für Aktien und Futures lässt sich aus jedem Tick, also Änderungen von Best Bid, Ask sowie Transaktionspreis und -größe, bestimmen, ob am Bid mit negativem oder am Ask mit positivem Orderflow gehandelt wurde.
+- Im Devisenmarkt melden die meisten Dealer keine Transaktionspreise; für diese Strategie kann auf Währungsfutures ausgewichen werden.
 
 ## Funktionsweise
 

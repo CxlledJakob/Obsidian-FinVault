@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Orderbuch
@@ -32,6 +32,12 @@ aktualisiert: 2026-10-30
 - Die meisten High-Frequency-Momentum-Strategien ziehen Information aus dem Orderbuch: Ist die Bid-Size viel größer als die Ask-Size, wird ein Tick nach oben erwartet, und umgekehrt.
 - Ein Ungleichgewicht des gesamten Buchs, nicht nur des NBBO, erzeugt Preisänderungen, gezeigt von Hellström und Simonsen (2006) für eine Aktie in Stockholm.
 - Käufe aus dem Buch zum Ask erzeugen positiven Orderflow, Verkäufe negativen.
+- Private Feeds wie ITCH von Nasdaq, der EDGX Book Feed von Direct Edge und PITCH von BATS liefern die Lebensgeschichte einer Order einschließlich Änderungen und Teilausführungen und helfen, Flipper zu erkennen.
+- Viele traditionelle Market Maker zeigen keine großen Größen mehr: bei AAPL oft nur wenige hundert Aktien im NBBO, bei SPY an ARCA oft weniger als 10.000.
+- Nach Füllung der kleinen Orders wird zu denselben Preisen neu quotiert.
+- Große institutionelle Orders werden in winzige Child Orders zerlegt, über verschiedene Plätze gestreut und über den Tag ausgeführt.
+- Viele Stop-Orders liegen auf oder nahe Unterstützung und Widerstand, auch auf runden Zahlen nahe dem aktuellen Preis, und ihr Auslösen treibt den Preis weiter in Bruchrichtung.
+- High-Frequency-Händler können nahe der Unterstützung große Verkaufsorders ins Buch legen, um den nächsten Tick zu drücken und diese Sell-Stops auszulösen.
 
 ## Funktionsweise
 
@@ -43,6 +49,7 @@ aktualisiert: 2026-10-30
 
 ## Voraussetzungen
 
+- Für das Hochfrequenz-Backtesting müssen manchmal Level-2-Quotes zusätzlich zu vielen Monaten von Trade- und Quote-Ticks, möglicherweise auf vielen Symbolen, eingegeben werden; die meisten Spezialplattformen können Bid, Ask, Last und Größen samt Level 2 nicht backtesten.
 
 ## Anwendung im Trading
 
@@ -57,6 +64,7 @@ aktualisiert: 2026-10-30
 - Die meisten Spezialplattformen können Level-2-Daten des Orderbuchs nicht backtesten, sodass dafür meist ein eigenes Programm nötig ist.
 - Die NBBO-Sizes sind allgemein gesunken; bei AAPL oft nur ein paar hundert Aktien, bei SPY auf ARCA oft unter 10.000.
 - Große institutionelle Orders werden in winzige Child Orders zerlegt und über den Tag sowie verschiedene Plätze gestreut.
+- Selbst historische Daten des gesamten Orderbuchs bestimmen den Gewinn einer Hochfrequenzstrategie nicht, weil er von den Reaktionen der anderen Marktteilnehmer abhängt und die eigene Order dieses Verhalten ändern kann.
 
 ## Beispiele
 

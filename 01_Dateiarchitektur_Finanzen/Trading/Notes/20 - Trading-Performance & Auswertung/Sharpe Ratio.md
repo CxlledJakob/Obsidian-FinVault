@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Sharpe Ratio
@@ -75,6 +75,31 @@ aktualisiert: 2026-10-30
 - Abbildung 7.15 zeigt die risikoadjustierten Renditen der Trendfolge in Futures gegen Aktien.
 - Diese Ergebnisse stützen die Vorstellung, dass Futures-Trendfolger eine Risikoprämie verdienen, die Trendfolgern in Aktien nicht zur Verfügung steht.
 - Der MLM-Index liefert einige Evidenz, dass die Futures-Märkte eine Entschädigung in Form systematischer Preisbewegungen bieten. Wäre eine Risikotransfer-Prämie die gültige Erklärung, sollte Trendfolge in Aktien nicht so lohnend sein wie an den Rohstoff-Futures, weil ein Aktien-Trendfolger keine Risikotransfer-Leistung erbringt.
+- Ob die erwartete Rendite oder die Sharpe Ratio einer Mean-Reversion-Strategie ausreicht, ist das Ziel der Vorprüfung. Halbwertszeit und Stationaritätstests haben dafür gewöhnlich höhere statistische Signifikanz als der direkte Backtest, weil sie jeden Bar nutzen und nicht nur die wenigen Roundtrips.
+- Eine kurze Zeitskala erhöht die Zahl der Trades pro Jahr und damit die Sharpe Ratio von Backtest und Live-Handel sowie die zusammengesetzte Rendite.
+- Die lineare Strategie auf EWA, EWC und IGE hat eine Sharpe Ratio von 1,4 bei einer APR von 12,6 Prozent.
+- Ist die Wahrscheinlichkeit einer weiteren Abweichung nicht konstant, kann Scaling-in eine bessere realisierte Sharpe Ratio erreichen als all-in, auch wenn der erwartete Gewinn im Modell mit konstantem p niedriger ist.
+- Die lineare Mean Reversion auf dem 12-Monats-Kalenderspread von CL hat vom 2. Januar 2008 bis zum 13. August 2012 eine Sharpe Ratio von 1,3 bei ungehebelter annualisierter Rendite von 8,3 Prozent.
+- Die lineare Ratio-Strategie auf dem VX-Kalenderspread hat vom 27. Oktober 2008 bis zum 23. April 2012 eine Sharpe Ratio von 1,5 bei 17,7 Prozent annualisierter Rendite.
+- Die Bollinger-ähnliche ES-VX-Strategie hat auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 eine Sharpe Ratio von 1,4 bei 12,3 Prozent annualisierter Rendite.
+- Profitable Momentum-Strategien haben in der Erfahrung des Autors tendenziell niedrigere Sharpe Ratios als Mean-Reversion-Strategien, und profitable Momentum-Strategien sind schwerer zu bauen.
+- Lange Lookbacks und Haltedauern erzeugen wenige unabhängige Signale und damit eine niedrigere Sharpe Ratio; tägliches Rebalancing macht diese Signale nicht unabhängiger.
+- Das lineare Mean-Reversion-Modell für S&P-500-Aktien hält weniger als einen Tag und hat eine Sharpe Ratio von 4,7; die entgegengesetzte querschnittliche Momentum-Strategie hält 25 Tage und brach in der Finanzkrise ein.
+- Kurze Haltedauern erzeugen tendenziell die besten Sharpe Ratios.
+- TU vom 1. Juni 2004 bis 11. Mai 2012: der Text nennt eine Sharpe Ratio von 1, Tabelle 6.2 weist 1,04 aus, bei 1,7 Prozent annualisierter Rendite.
+- Die Rollrendite-Variante auf TU hat vom 2. Januar 2009 bis 13. August 2012 eine Sharpe Ratio von 2,1 bei 2,5 Prozent annualisierter Rendite.
+- Tabelle 6.2: BR hat eine Sharpe Ratio von 1,09 bei 17,7 Prozent annualisiert, HG 1,05 bei 18,0 Prozent.
+- Die CL-Kombination aus Mean Reversion und Momentum hat eine Sharpe Ratio von 1,1 bei 12 Prozent annualisiert.
+- XLE gegen USO hat eine Sharpe Ratio von etwa 1 bei 16 Prozent annualisiert; die VX-ES-Rollrendite-Strategie hat eine Sharpe Ratio von 1 bei 6,9 Prozent.
+- Das querschnittliche Futures-Ranking hat bis Ende 2007 eine Sharpe Ratio von 1,37; Beispiel 6.2 auf Aktien hat bis Ende 2007 eine Sharpe Ratio von 4,1, Daniel und Moskowitz über 1947 bis 2007 eine von 0,83.
+- Hafez und Xie berichten vor Kosten Sharpe Ratios von 3,9 bis 5,3.
+- Der S&P DTI hat von Januar 1988 bis Dezember 2010 eine Sharpe Ratio von 1,3, der S&P 500 im selben Zeitraum 0,61.
+- Momentum-Strategien zusätzlich zu einem Portfolio aus Mean-Reversion-Strategien erzeugen höhere Sharpe Ratios und kleinere Drawdowns als jeder Typ für sich.
+- Lange Haltedauern bei Interday-Momentum erzeugen niedrigere Sharpe Ratios, weil unabhängige Handelssignale selten sind.
+- Die Opening-Gap-Strategie auf FSTX hat vom 16. Juli 2004 bis 17. Mai 2012 eine Sharpe Ratio von 1,4 bei 13 Prozent APR.
+- Dieselbe Strategie auf GBPUSD hat vom 23. Juli 2007 bis 20. Februar 2012 eine Sharpe Ratio von 1,3 bei 7,2 Prozent APR.
+- Die PEAD-Strategie auf S&P-500-Aktien hat vom 3. Januar 2011 bis 24. April 2012 eine Sharpe Ratio von 1,5 bei 6,7 Prozent APR.
+- Die DRN-Strategie hat vom 12. Oktober 2011 bis 25. Oktober 2012 eine Sharpe Ratio von 1,8 bei 15 Prozent APR.
 
 ## Funktionsweise
 
@@ -93,6 +118,13 @@ aktualisiert: 2026-10-30
 - Bei einem long-short-dollarneutralen Aktienportfolio können die Finanzierungskosten nahe null gesetzt werden, auch wenn der Habenzins gewöhnlich etwas kleiner ist als der Betrag des Sollzinses.
 - Bei Futures sind die Finanzierungskosten null, weil Futures Kontrakte sind und keine Assets, die Cash zur Finanzierung brauchen; die Margin-Kasse wird nicht gezählt, weil dieses Cash auf dem Konto Zinsen erwirtschaftet.
 - Bei Währungs-Crosses können die Finanzierungskosten ebenfalls null gesetzt werden, wenn der Rollover-Zins zur prozentualen Änderung des Cross addiert wird.
+- Im gaußschen Hypothesentest ist die Teststatistik die tägliche Sharpe Ratio mal der Wurzel der Zahl der Tage, also Mittelwert der Tagesrenditen geteilt durch ihre Standardabweichung mal dieser Wurzel.
+- Kritische Werte dieser Größe sind 1,282 bei p gleich 0,10, 1,645 bei 0,05, 2,326 bei 0,01 und 3,091 bei 0,001.
+- Eine hohe Sharpe Ratio macht es leicht, die Null einer wahren Durchschnittsrendite von null zu verwerfen.
+- Die Sharpe Ratio ist der Durchschnitt der Überschussrendite geteilt durch die Standardabweichung der Überschussrenditen, passend annualisiert. Die Überschussrendite ist die Rendite der gehaltenen Positionen minus ihre Finanzierungskosten.
+- Bei reinen Intraday-Positionen sind die Finanzierungskosten null. Bei einem dollarneutralen Long-Short-Aktienportfolio liegen sie nahe null, auch wenn der Habenzins meist etwas unter dem Betrag des Sollzinses liegt.
+- Bei Futures sind die Finanzierungskosten null, weil es Kontrakte und keine zu finanzierenden Assets sind. Die Margin wird nicht abgezogen, weil das Cash auf dem Konto Zinsen trägt.
+- Bei Kreuzkursen sind sie null, sobald der Rollover in die Rendite eingeht, als log(1 + Zins der Basis) minus log(1 + Zins der Kurswährung) zusätzlich zur Log-Preisänderung.
 
 ## Voraussetzungen
 
@@ -119,6 +151,8 @@ aktualisiert: 2026-10-30
 - Strategien mit hoher Rendite und niedriger Sharpe Ratio lohnen den Backtest nicht.
 - Hohe Sharpe Ratios gehören mit Out-of-Sample-Tests und Cross-Validation zu den guten Praktiken gegen Data-Snooping-Bias. Maßgeblicher bleibt der Walk-Forward-Test.
 - Der Vergleichsmaßstab einer Long-only-Strategie ist die Information Ratio, nicht die Sharpe Ratio.
+- Hohe Sharpe Ratios mindern Data-Snooping-Bias, sind aber weniger endgültig als ein Walk-Forward-Test.
+- Strategien mit hoher Rendite und niedriger Sharpe Ratio, im Beispiel 30 Prozent bei 0,3, lohnen den Backtest nicht; die hohe Durchschnittsrendite kann ein Zufall sein und wiederholt sich live wahrscheinlich nicht.
 
 ## Risiken und Grenzen
 
@@ -136,6 +170,8 @@ aktualisiert: 2026-10-30
 - Rosenberg et al. (2016) haben das Problem der optimalen Handelstrajektorie mit einem Quantum Annealer gelöst.
 - Die Standardabweichung, das Risikomaß der Sharpe Ratio, berücksichtigt die Abfolge von Gewinn- und Verlustperioden nicht.
 - Der Ulcer Index ist ein alternatives und möglicherweise überlegenes Risikomaß, das die Größe der Equity-Rücksetzer betrachtet, die von der Sharpe Ratio nicht direkt berücksichtigt werden.
+- Eine Sharpe Ratio von 6 bei einem neuronalen Netz mit etwa 100 Knoten belegt keine Prognosekraft, weil die Parameterzahl proportional zur Knotenzahl ist und jede Reihe so angepasst werden kann.
+- Eine Hochfrequenzstrategie auf den E-mini S&P 500 mit 200 Prozent durchschnittlicher Jahresrendite, Sharpe Ratio 6 und 50 Sekunden mittlerer Haltedauer ist als Backtest skeptisch zu sehen, weil Ordertypen, Ausführung und Mikrostruktur die Leistung bestimmen.
 
 ## Beispiele
 
@@ -190,6 +226,14 @@ aktualisiert: 2026-10-30
 - Beispiel 6.2 hat vom 15. Mai 2007 bis zum 31. Dezember 2007 eine Sharpe Ratio von 4,1; Daniel und Moskowitz finden von 1947 bis 2007 eine Sharpe Ratio von 0,83.
 - Hafez und Xie erreichen vor Kosten Sharpe Ratios von 3,9 bis 5,3.
 - Das lineare Mean-Reversion-Modell für S&P-500-Aktien hat eine Sharpe Ratio von 4,7 bei einer Haltedauer von weniger als einem Tag.
+- Für die TU-Momentum-Strategie beträgt die Teststatistik 2,93, die Null wird mit besser als 99 Prozent verworfen.
+- Linearer adaptiver Preisspread GLD-USO: Sharpe Ratio etwa 0,59 bei rund 10,9 Prozent APR. Logpreisspread: 0,5 bei 9 Prozent APR. Bollinger mit entryZscore 1 und exitZscore 0: 0,96 bei 17,8 Prozent APR. Kalman-Filter auf EWA-EWC: 2,4 bei 26,2 Prozent APR.
+- Transaktionskosten sind in diesen Sharpe Ratios nicht enthalten. Die Logpreis-Strategie liegt zusätzlich vor den Kosten des täglichen Rebalancings.
+- Die Arbitrage der SPY-Bestandteile gegen SPY hat vom 2. Januar 2008 bis 9. April 2012 eine Sharpe Ratio von 1,3 bei 4,5 Prozent annualisierter Rendite.
+- Das lineare Long-Short-Modell auf dem S&P 500 hat vom 2. Januar 2007 bis 30. Dezember 2011 eine Sharpe Ratio von 1,3 bei 13,7 Prozent annualisierter Rendite.
+- Die Intraday-Variante dieses Modells hat über denselben Zeitraum eine Sharpe Ratio von 4,7 bei 73 Prozent annualisierter Rendite. Transaktionskosten sind nicht enthalten.
+- AUD.USD gegen CAD.USD hat eine Sharpe Ratio von 1,6 bei 11 Prozent annualisierter Rendite, vom 18. Dezember 2009 bis 26. April 2012.
+- Der ungehebelt CL-Kalenderspread hat eine Sharpe Ratio von 1,3 bei 8,3 Prozent annualisierter Rendite, vom 2. Januar 2008 bis 13. August 2012.
 
 ## Unterschiedliche Quellenpositionen
 

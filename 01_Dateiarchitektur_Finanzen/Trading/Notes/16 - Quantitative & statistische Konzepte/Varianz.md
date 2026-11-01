@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Varianz
@@ -74,6 +74,17 @@ aktualisiert: 2026-10-30
 - Sind die Beobachtungen seriell korreliert, wie es in einer Zeitreihe vorkommen kann, sinkt die Varianz langsamer, als die Quadratwurzelregel nahelegt.
 - Diese Aussage gilt, wenn die Teststatistik der Stichprobenmittelwert ist, aber sie gilt nicht allgemein.
 - Bei normalverteilten Preisänderungen ist die Unsicherheit mit 10 Beobachtungen zehnmal so groß wie mit 1.000 Beobachtungen.
+- Beim geometrischen Random Walk ist das Mittel von |z(t+τ) minus z(t)| zum Quadrat proportional zu τ. Für großes τ wird daraus eine Gleichheit mit Proportionalitätskonstante, für kleines τ kann die Beziehung von der Geraden abweichen.
+- Bei Mean Reversion oder bei positiver Korrelation aufeinanderfolgender Preisbewegungen gilt stattdessen die Proportionalität zu τ hoch 2H, mit Hurst-Exponent H.
+- Der Variance-Ratio-Test prüft, ob das Varianzverhältnis Var(τ) geteilt durch τ mal die Varianz des Einsschritts gleich 1 ist. Für USD.CAD wird die Null nicht verworfen, pValue 0,367281.
+- Auch eine stationäre Reihe mit 0 < H < 0,5 hat eine Varianz, die mit der Zeit steigt, nur langsamer als beim geometrischen Random Walk. Deshalb wird eine gleitende Standardabweichung benutzt.
+- Der Variance-Ratio-Test prüft die Null, dass der Hurst-Exponent wirklich 0,5 ist, also dass das Varianzverhältnis gleich 1 ist.
+- Für TU verwirft dieser Test die Random-Walk-Hypothese nicht, obwohl der Hurst-Exponent 0,44 beträgt.
+- Der Test kann nicht die einzelnen Zeitrahmen prüfen, in denen die Korrelationen der Renditen stärker als im Durchschnitt sind.
+- Unter der Gauß-Annahme ist der Kelly-Hebel f gleich dem mittleren Excess Return m geteilt durch die Varianz s hoch 2 der Excess Returns.
+- Eine unterschätzte Varianz überschätzt diesen Hebel und kann bei ausreichender Höhe zum Ruin führen; eine überschätzte Varianz führt nur zu einer untermaximalen Wachstumsrate.
+- Im Allokationsbeispiel hat Strategie 1 eine annualisierte Volatilität von 26 Prozent bei 30 Prozent mittlerer Überschussrendite und Strategie 2 eine von 35 Prozent bei 60 Prozent; bei Korrelation null sind die Kelly-Hebel 4,4 und 4,9.
+- Für mehrere Portfolios geht die Kovarianzmatrix der Renditen als C in F gleich C hoch minus 1 mal M ein.
 
 ## Funktionsweise
 
@@ -93,6 +104,9 @@ aktualisiert: 2026-10-30
 - Im Market-Making-Modell ist die Prognosevarianz die Varianz des Mittelpreisschätzers plus Ve, und das Zustandsvarianz-Update multipliziert die alte Varianz mit 1 minus dem Kalman-Gain.
 - In der Kelly-Formel ist s hoch 2 die Varianz der Excess Returns, und der optimale Hebel ist der mittlere Excess Return geteilt durch diese Varianz.
 - Das Pearson-System nimmt neben dem Mittelwert die Standardabweichung sowie Schiefe und Kurtosis als Input der Monte-Carlo-Verteilung.
+- Die Varianz des Prognosefehlers im Market-Making-Kalman-Filter ist Q(t) = Var(m(t)) + Ve.
+- Der Kalman-Gain ist K(t) = R(t|t − 1) geteilt durch (R(t|t − 1) + Ve), und die aktualisierte Zustandsvarianz ist R(t|t) = (1 − K(t)) mal R(t|t − 1).
+- Die Messfehlervarianz Ve wird klein, wenn die Handelsgröße gegenüber einer Benchmark groß ist. Bei T gleich Tmax ist Ve null und der neue Mittelwert gleich dem beobachteten Preis.
 
 ## Voraussetzungen
 

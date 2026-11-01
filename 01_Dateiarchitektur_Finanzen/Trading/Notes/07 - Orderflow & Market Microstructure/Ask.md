@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Ask
@@ -54,6 +54,8 @@ aktualisiert: 2026-10-30
 
 - Zeigt ein Datenfehler den Ask von Y als 106 Dollar, wird der fehlerhafte Spread 6 Dollar, ein Anstieg von 20 Prozent über den realen Spread von 5 Dollar, und das kann eine fehlerhafte Order zum Kauf von X und Verkauf von Y auslösen.
 - Market Maker passen Bid und Ask sofort an, wenn großer gleichgerichteter Orderflow auf informierte Händler hindeutet.
+- Ein Datenfehler kann den wahren Ask von Y, 105 Dollar, als 106 Dollar anzeigen. Der Spread Y minus X steigt dann von 5 auf 6 Dollar, also um 20 Prozent, und kann eine Order auslösen, die X kauft und Y verkauft, obwohl der wahre Spread von 5 Dollar dafür zu klein war.
+- Die Differenz zweier Quotes ist gewöhnlich viel kleiner als die Quotes selbst, deshalb wird aus einem kleinen Fehler im Ask ein viel größerer prozentualer Fehler im Spread.
 
 ## Beispiele
 

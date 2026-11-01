@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Standardabweichung
@@ -64,6 +64,13 @@ aktualisiert: 2026-10-30
 - Die Standardabweichung berücksichtigt die Reihenfolge von Gewinn- und Verlustperioden nicht.
 - Sind die Beobachtungen seriell korreliert, sinkt die Varianz langsamer, als die Quadratwurzelregel erwarten lässt. Das gilt für den Stichprobenmittelwert als Teststatistik, aber nicht allgemein.
 - Bei normalverteilten Preisänderungen ist die Unsicherheit mit 10 Beobachtungen zehnmal so groß wie mit 1.000 und kann noch viel größer sein, wenn die Änderungen der Normalverteilung nicht folgen.
+- Die normalisierte Abweichung der linearen Strategie ist die Differenz aus Preis und gleitendem Durchschnitt, geteilt durch die gleitende Standardabweichung. Beide Fenster haben die Länge der Halbwertszeit.
+- Die ADF-Teststatistik ist der Regressionskoeffizient λ geteilt durch den Standardfehler des Fits, λ/SE(λ).
+- Im GLD-USO-Bollinger-Beispiel liegt der Einstieg eine gleitende Standardabweichung vom Mittel und der Ausstieg bei null Standardabweichungen, also am Mittel. Allgemein sind entryZscore und exitZscore freie Vielfache dieser Standardabweichung, mit exitZscore kleiner als entryZscore.
+- Im Kalman-Filter ersetzt die Wurzel aus Q(t), die Standardabweichung des Prognosefehlers, die gleitende Standardabweichung. Bei δ gleich 0,0001 ändert sich Q nur langsam. Long unter minus dieser Standardabweichung, Short darüber.
+- Ein kurzes Schätzfenster macht auch die gleitende Standardabweichung sprunghaft, sobald der älteste Bar gegen den neuesten ausgetauscht wird.
+- Beim VX-Verhältnis Back zu Front werden die Standardabweichungen mit einem Lookback von 15 Tagen berechnet.
+- Die Einstiegsschwelle der ES-VX-Strategie ist eine Standardabweichung der Residuen aus dem Trainingsset der ersten 500 Tage nach August 2008, nicht eine fortlaufend neu geschätzte Standardabweichung.
 
 ## Funktionsweise
 
@@ -81,6 +88,10 @@ aktualisiert: 2026-10-30
 - Im Market-Making-Modell ist Q die Varianz des Mittelpreis-Fehlers plus Ve.
 - Die Varianz des Prognosefehlers im Kalman-Filter ist Q(t) gleich Var(m(t)) plus Ve.
 - Der Kalman-Gain ist K(t) gleich R(t gegeben t minus 1) geteilt durch diese Varianz plus Ve, und die Zustandsvarianz wird mit (1 minus K(t)) fortgeschrieben.
+- Im gaußschen Hypothesentest einer Backtest-Rendite ist die Standardabweichung die Stichproben-Standardabweichung der Tagesrenditen, und die Teststatistik ist der Mittelwert geteilt durch diese Standardabweichung mal der Wurzel der Zahl der Datenpunkte.
+- Im gleichgewichteten Faktormodell ist std(f) die historische Standardabweichung des Faktors und std(R) die historische Standardabweichung der Ein-Tages-Renditen, beide auf In-Sample-Daten.
+- Können Mittel und Standardabweichung eines Spreads künftig variieren, empfiehlt der Text einen gleitenden Lookback oder den Kalman-Filter.
+- Im Market-Making-Filter ist die Varianz des Prognosefehlers Q(t) gleich Var(m(t)) plus Ve, und das Varianz-Update lautet R(t|t) = (1 − K(t)) mal R(t|t − 1).
 
 ## Voraussetzungen
 
@@ -94,6 +105,12 @@ aktualisiert: 2026-10-30
 - Die Sharpe Ratio teilt die durchschnittliche Überschussrendite durch die Standardabweichung der Überschussrenditen, geeignet annualisiert.
 - Im Währungspaar ist der Z-Score der Abstand des Portfolio-Marktwerts von seinem Mittel, geteilt durch die Standardabweichung über den Look-back von 20 Tagen, und die Positionsgröße ist das Negative dieses Z-Scores.
 - Beim Kalender-Spread werden Mittel und Standardabweichung von γ über einen Look-back gleich der gerundeten Halbwertszeit berechnet, und der Z-Score ist die Abweichung geteilt durch diese gleitende Standardabweichung.
+- Buy-on-Gap verlangt, dass die Rendite vom Tief des Vortags zur heutigen Eröffnung unter minus einer Standardabweichung liegt. Die Standardabweichung wird aus den täglichen Close-to-Close-Renditen der letzten 90 Tage berechnet und im Code um einen Tag verschoben.
+- Der Einstiegs-Z-Score ist 1. Der Kaufpreis im Code ist das Tief des Vortags mal (1 minus diesem Z-Score mal der Standardabweichung).
+- Im SPY-Beispiel ist die Stückzahl minus (Log-Marktwert minus gleitender Durchschnitt) geteilt durch die gleitende Standardabweichung, bei einem im Rückblick auf 5 gesetzten Lookback.
+- Der Z-Score des Währungspaars teilt die Abweichung des Portfoliomarktwerts von seinem 20-Tage-Mittel durch die Standardabweichung desselben Fensters.
+- Die Sharpe Ratio teilt die mittlere Überschussrendite durch die Standardabweichung der Überschussrenditen, passend annualisiert.
+- Beim Kalenderspread ist die Standardabweichung die gleitende Standardabweichung der Rollrendite über die Halbwertszeit von etwa 36 Tagen.
 
 ## Regeln und Kriterien
 

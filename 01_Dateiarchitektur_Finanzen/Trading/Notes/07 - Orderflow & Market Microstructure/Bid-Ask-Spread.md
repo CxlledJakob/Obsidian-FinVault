@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Bid-Ask-Spread
@@ -41,6 +41,12 @@ aktualisiert: 2026-10-30
 - Die Dezimalisierung der US-Aktienkurse am 9. April 2001 senkte die Bid-Ask-Spreads und zugleich die angezeigte Liquidität an den besten Bid- und Ask-Preisen, nach Arnuk und Saluzzi 2012.
 - Die meisten Spezial-Backtesting-Plattformen sind nicht dafür ausgerüstet, Daten mit sämtlichen Bid-, Ask- und Last-Tick-Preisen und -Größen zu backtesten.
 - Slippage entsteht durch den Bid-Ask-Spread und dadurch, dass die Order des Anlegers den Marktpreis beim Kauf nach oben und beim Verkauf nach unten schiebt.
+- Die Dezimalisierung der US-Aktienquotes am 9. April 2001 senkte die Bid-Ask-Spreads und zugleich die angezeigte Liquidität am besten Bid und Ask.
+- Vor diesem Datum wurden US-Aktien in Achteln oder Sechzehnteln eines Penny quotiert.
+- Die Dezimalisierung der US-Aktienkurse hat die Bid-Ask-Spreads drastisch verengt. Paarhändler, die wie Market Maker auftreten, sehen deshalb auch ihre Market-Making-Gewinne sinken (Serge, 2008).
+- Ticking verlangt einen ursprünglichen Bid-Ask-Spread von mehr als zwei Ticks.
+- Ticking ist nur profitabel, wenn die Round-Trip-Kommission je Stück kleiner ist als der Bid-Ask-Spread minus zwei Ticks.
+- Nach der Kauf-Füllung einen Tick über dem Best Bid wird ein Verkauf einen Tick unter dem Best Ask mit Gewinn von mindestens einem Tick versucht; scheitert er, wird zum ursprünglichen Best Bid mit Verlust von einem Tick verkauft.
 
 ## Funktionsweise
 

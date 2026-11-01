@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Structural Break
@@ -40,6 +40,13 @@ aktualisiert: 2026-10-30
 - Eine weitergehende Fassung nimmt an, die Änderung sei eingetreten, weil zu viele Händler die Regel übernommen und das Muster durch ihr Handeln zerstört haben.
 - Beide Fassungen setzen eine Änderung der Marktdynamik voraus; die Erklärung über den Data-Mining-Bias passt ebenfalls dazu, dass die Leistung außer Stichprobe tendenziell schlechter ist, und kommt ohne diese Annahme aus.
 - Es wäre seltsam, fast teuflisch, wenn der Markt sein Verhalten immer genau dann änderte, wenn eine Regel aus dem Labor in den Handel wechselt, und zwar so oft, wie Regeln außer Stichprobe scheitern.
+- Um die Finanzkrise 2008 ändern VIX und seine Futures das Regime, was den Leistungssprung der VX-Kalenderspread-Strategie um Oktober 2008 erklären kann.
+- Das Streudiagramm ES gegen VX zeigt zwei Hauptregime, 2004 bis Mai 2008 und August 2008 bis 2012; kürzere Abschnitte können Übergänge sein und werden ignoriert.
+- Eine lineare Regression oder ein Johansen-Test auf der Mischung beider Regime wäre ein Fehler.
+- Der Crack Spread steigt dramatisch etwa vom 9. März 2007 bis zum 3. Juli 2008 und fällt danach scharf.
+- Das ETF-Paar GLD gegen GDX verlor 2008 die Kointegration; die ergänzte Hypothese war der hohe Rohölpreis, und mit dem Ölpreis als zusätzlicher Eingabe arbeitete das Modell wieder.
+- Abweichungen des Live-Handels vom Backtest werden oft als Strukturbruch der Marktstruktur durch Regulierung oder Makroökonomie erklärt und nicht als Backtest-Fallstrick.
+- Auch eine algorithmische Strategie verlangt danach die Beurteilung, ob das Modell nach dem Bruch noch gültig ist.
 
 ## Funktionsweise
 
@@ -120,6 +127,10 @@ aktualisiert: 2026-10-30
 - Um die Finanzkrise 2008 liegt ein Regimewechsel im Verhalten von VIX und seinen Futures, und die VX-Kalenderspread-Strategie läuft vor Oktober 2008 deutlich schlechter.
 - Die Beziehung von ES und VX zerfällt in die Regime 2004 bis Mai 2008 und August 2008 bis 2012, mit kürzeren Phasen, die Übergänge sein können.
 - Der Crack Spread steigt um den 9. März 2007 bis zum 3. Juli 2008 dramatisch und fällt danach scharf.
+- GLD und GDX verlieren die Kointegration um den 14. Juli 2008, als WTI bei etwa 145 Dollar je Barrel ein Allzeithoch markierte. Teures Öl verteuert die Goldförderung, und die Minenaktien bleiben hinter dem Goldspot zurück.
+- Vom 23. Mai 2006 bis 14. Juli 2008 kointegrieren sie im Johansen-Test mit 99 Prozent, vom 15. Juli 2008 bis 9. April 2012 nicht mehr.
+- Die Erklärung lässt sich prüfen: mit USO kointegriert das Triplett über 2006 bis 2012 mit 99 Prozent für genau eine Beziehung.
+- Hört eine Strategie auf zu arbeiten, wird eine Ursache als Hypothese formuliert und an den Daten geprüft. Oft wird daraus eine geänderte Strategie, hier das Triplett oder ein Stopp von GLD gegen GDX ab einer Ölpreisschwelle.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Event-Driven-System
@@ -27,6 +27,13 @@ aktualisiert: 2026-10-30
 - Neben Gewinnmeldungen können Earnings Guidance, Analystenratings und Empfehlungsänderungen, Same-Store-Sales und Airline Load Factors einen Drift nach der Ankündigung zeigen.
 - Theoretisch sollte jede Ankündigung, die den fairen Marktwert neu bewerten lässt, den Kurs zu einem neuen Gleichgewicht bewegen.
 - Hafez (2011) untersucht diese Ereignisse und ihre Wirkung auf die Renditen nach dem Ereignis umfassend.
+- Ein rein technisches Modell wie das der PEAD-Strategie zieht aus Fusionen und Übernahmen noch eine APR von etwa 3 Prozent, obwohl spezialisierte Fonds dafür fundamentales Wissen über Käufer und Ziel nutzen.
+- Entgegen der üblichen Annahme fand Hafez, dass der Kurs des Übernahmeziels nach der ersten Ankündigung stärker fällt als der des Käufers.
+- Der Dow-Jones-Newswire über Newsware ist ein tauglicher täglicher Lieferant solcher Ereignisse, weil jede Meldung einen ereignisspezifischen Code trägt und maschinenlesbar ist.
+- Tests der Zinsentscheide des Federal Open Market Committee und der Veröffentlichung des Verbraucherpreisindex auf EURUSD fanden kein signifikantes Momentum.
+- Clare und Courtenay berichten, dass britische Makrodaten und Zinsankündigungen der Bank of England bis mindestens zehn Minuten nach der Ankündigung Momentum in GBPUSD erzeugten; die Daten reichen bis 1999, und die Dauer dürfte inzwischen kürzer sein, falls das Momentum noch besteht.
+- Ein großer Mittelzufluss in gehebelte Long-ETFs erzeugt positives Momentum der zugrunde liegenden Aktien, ein großer Zufluss in inverse ETFs negatives Momentum.
+- Verkaufen viele Anleger am Tag eines starken Indexanstiegs die gehebelten Long-ETFs, etwa als Mean Reversion, könnte das das Rebalancing-Momentum neutralisieren; die Backtests zeigen, dass das nicht oft geschah.
 
 ## Funktionsweise
 
@@ -36,6 +43,10 @@ aktualisiert: 2026-10-30
 - Genügt die Unverzüglichkeit, reichen die Callback-Funktionen, die fast jede Broker-API bietet. Ein Callback feuert bei jedem neuen Tick oder jeder Nachricht. Eine einfache Regel wie der gleitende Durchschnitt der letzten Stunde ist damit leicht umzusetzen.
 - Komplexe Regeln, etwa verkaufen, wenn der Orderflow der letzten halben Stunde positiv ist, der Preis über dem gleitenden Durchschnitt liegt, die Volatilität niedrig ist und gerade eine wichtige Nachricht kam, oder Klauseln wie during, between, afterwards und in parallel auf der Ereignisfolge, lassen sich nach Ansicht der CEP-Anhänger in einer CEP-Sprache knapper ausdrücken als in einer herkömmlichen Programmiersprache.
 - FXone sieht aus wie Excel, der Rechenkern ist aber in einer Hochleistungssprache wie C++ geschrieben und nicht auf VB-Makros angewiesen. Jeder Tick, im Devisenfall eine neue Quote, berechnet alle Zellen neu. Ein interner Cache verhindert doppelte Abos derselben Daten. Verschiedene Arbeitsmappen und verschiedene Zellen derselben Mappe verarbeiten Daten und Orders gleichzeitig. Eine lange Rechnung in einer Zelle hält die anderen nicht davon ab, auf einen neuen Tick zu reagieren, etwa eine Order zu senden.
+- Ist Unverzüglichkeit die einzige Stärke von Complex Event Processing, genügen die Callback-Funktionen fast jeder Broker-API; eine einfache Regel wie der gleitende Durchschnitt der letzten Stunde ist damit leicht umzusetzen.
+- Regeln mit Klauseln wie during, between, afterwards und in parallel auf Ereignisfolgen lassen sich nach Ansicht der CEP-Vertreter in einer CEP-Sprache deutlich kürzer ausdrücken als in einer herkömmlichen Programmiersprache.
+- FXone ist auf zwei Ebenen echt multithreaded: Strategien in verschiedenen Arbeitsmappen können gleichzeitig Daten empfangen und Orders schicken, und verschiedene Zellen derselben Mappe können gleichzeitig auf einen neuen Tick reagieren, sodass eine langsame Zelle andere nicht am Orderversand hindert.
+- FXone hält Echtzeitdaten in einem internen Cache, damit Zellen, die dieselben Daten brauchen, sie nicht doppelt abonnieren.
 
 ## Voraussetzungen
 
@@ -48,6 +59,8 @@ aktualisiert: 2026-10-30
 - Die Colocation an der Börse ist teuer und nützt nur mit Prime-Broker-Beziehung und Sponsored Access, also ohne die Infrastruktur des Brokers, typischerweise bei institutionellen Kommissionen oder einem Konto in Millionenhöhe, nach Johnson 2010. Bei Forex-Prime-Brokern und ECNs sind Anforderungen und Kosten niedriger. Currenex, EBS, FXall und Hotspot sitzen in großen Zentren wie Equinix NY4.
 - Ein genannter täglicher Lieferant ist der Dow-Jones-Newswire über Newsware, weil jeder Meldung ein maschinenlesbarer Code für den Ereignistyp anhängt.
 - Auslöser für den Einstieg zur Eröffnung sind nur Gewinnmeldungen nach 16:00 Uhr ET des Vortags und vor 9:30 Uhr ET.
+- Progress Apama zeichnet sich durch CEP-Technik aus; unter den offenen IDEs sind Algo-Trader und Marketcetera CEP-fähig, ActiveQuant und TradeLink nicht.
+- Für nachrichtengetriebenen Hochfrequenzhandel ist die API des News-Anbieters nötig, etwa von Dow Jones oder Thomson Reuters; sonst genügt ein günstigerer Feed wie Newsware, der periodisch eine XML-Datei liefert.
 
 ## Anwendung im Trading
 
@@ -74,6 +87,7 @@ aktualisiert: 2026-10-30
 - Der Einwand lautet, Handelsregeln sollten einfach bleiben, um Data-Snooping-Bias zu vermeiden. Die CEP-Anhänger antworten, sie schürften keine beliebigen Regeln, sondern setzten um, was erfahrene Trader bereits als profitabel kennen. Der Autor ist nicht völlig überzeugt. Progress Apama hebt sich durch seine CEP-Technik ab.
 - Hafez findet entgegen verbreiteter Annahme, dass die Aktie des Übernahmeziels nach der ersten Ankündigung stärker fällt als die des Käufers.
 - Für die bis 1999 beobachtete Makro-Momentumdauer in GBPUSD erwartet der Text in jüngeren Jahren eine kürzere Dauer, falls das Momentum überhaupt noch besteht.
+- CEP-Vertreter sagen, sie implementierten Regeln, die erfahrene Trader schon als profitabel kennen, und schürften keine beliebigen Regeln; der Autor ist davon nicht völlig überzeugt.
 
 ## Eigene Erkenntnisse
 

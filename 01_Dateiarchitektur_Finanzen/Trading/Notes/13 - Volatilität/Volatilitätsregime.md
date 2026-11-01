@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Volatilitätsregime
@@ -38,6 +38,9 @@ aktualisiert: 2026-10-30
 - Es wird Perioden geben, in denen sich Marktvolatilität und Momentumzyklen ändern und die bisher genutzten Indikatoreinstellungen deutlich weniger nützlich sind.
 - Ob sich Volatilität und Momentumzyklen künftig ändern, lässt sich nie wissen; anzunehmen ist, dass sie fortbestehen.
 - Dieselben Einstellungen blieben über die Monate nach dem Beispiel nützlich, bis ein stärkerer Aufwärtstrend mit kleineren Korrekturen die bisherige Zonenreaktion veränderte.
+- Eine lineare Regression oder ein Johansen-Test auf der Mischung der Regime 2004 bis Mai 2008 und August 2008 bis 2012 wäre ein Fehler; geschätzt wird nur das zweite Regime.
+- Die Regressionskoeffizienten werden nur auf den ersten 500 Tagen nach August 2008 geschätzt.
+- Die ES-VX-Mean-Reversion-Strategie war um die Herabstufung der US-Bonität durch Standard & Poor's besonders profitabel.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Unterstützung
@@ -74,6 +74,10 @@ aktualisiert: 2026-10-30
 - Im Voraus werden enge Zeitziele für Unterstützung, Widerstand und Trendumkehr projiziert.
 - Preisretracements und Alternate Price Projections kennzeichnen im Voraus das wahrscheinliche Preisziel für Unterstützung, Widerstand und die Umkehr von Trends und Korrekturen.
 - Alternate Price Projections qualifizieren, welches Preisretracement wahrscheinlich die Stelle von Unterstützung, Widerstand oder Trendumkehr ist.
+- Intraday-Breakout-Einstiege können an verschiedenen Unterstützungsniveaus erfolgen.
+- Forschung an Devisenmärkten zeigt, dass Preise nach einem Bruch der Unterstützung noch eine Weile weiter fallen (Osler, 2000, 2001).
+- Das kurzfristige Momentum entsteht, weil viele Stop-Orders auf oder nahe der Unterstützung liegen; ihr Auslösen treibt den Preis weiter nach unten.
+- High-Frequency-Händler können nahe der Unterstützung große Verkaufsorders legen, um den nächsten Tick nach unten zu treiben und diese Stops auszulösen.
 
 ## Funktionsweise
 

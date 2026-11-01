@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Bid
@@ -53,6 +53,8 @@ aktualisiert: 2026-10-30
 - Eine Falle besteht darin, dass der ursprüngliche Bid eigentlich verkaufen wollte und den Bid storniert, sobald zum Bid plus einem Tick gekauft wurde.
 - Wird die große Buy-Limit-Order beim Flipping wirklich gefüllt, kann der Verkauf mit Verlust nötig werden.
 - Eine Transaktion am Bid ist negativer Orderflow.
+- Ein fehlerhafter Bid von 110 Dollar um 11:02 Uhr kann eine Short-Market-Sell-Order auslösen, die bei 100 Dollar gefüllt wird, weil tatsächlich kein Bid bei 110 Dollar vorhanden war.
+- Im Paarbeispiel hat X einen wahren Bid von 100 Dollar. Zusammen mit einem wahren Ask von Y bei 105 Dollar ist der Spread von 5 Dollar zu klein, um eine Market Order zum Kauf von X und Verkauf von Y auszulösen.
 
 ## Beispiele
 

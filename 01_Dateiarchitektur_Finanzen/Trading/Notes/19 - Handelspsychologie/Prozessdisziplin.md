@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Prozessdisziplin
@@ -49,6 +49,8 @@ aktualisiert: 2026-10-30
 - Die meisten neuen Trader überhandeln mit zu großem Risiko für die Kontogröße; ungehebelt und in Echtzeit zu testen hält dieses Risiko klein.
 - Beim Daytrading ist es extrem schwer, diszipliniert am Plan zu bleiben; wer es lernen will, baut zuerst Plan und Erfahrung mit Swing- und Positionstrades auf, vorzugsweise ohne Hebel.
 - Wer die Strategien des Buches anwendet, dem wird großer Erfolg zugetraut, ohne Versprechen oder Garantie; wer schon erfolgreich handelt, soll sie in den eigenen Plan aufnehmen, die Ergebnisse sollten sich verbessern, vielleicht dramatisch.
+- Die Leistung von Strategien mean-revertiert oft.
+- Mit genügend Entschlossenheit und mit Anpassungen lassen sich alle hier beschriebenen Strategien von einem unabhängigen Trader umsetzen, ohne siebenstelliges Brokerkonto und ohne fünfstellige Technikausgaben.
 
 ## Funktionsweise
 

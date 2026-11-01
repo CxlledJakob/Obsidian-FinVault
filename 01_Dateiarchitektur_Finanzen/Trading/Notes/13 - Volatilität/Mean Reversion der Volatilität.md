@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Mean Reversion der Volatilität
@@ -31,6 +31,8 @@ aktualisiert: 2026-10-30
 - Gleichung 5.7 erklärt das nicht, weil sie nur für einen Future gilt, dessen Basiswert gehandelt wird, und VIX ist kein gehandeltes Asset; die Log-Preise der VX-Futures gegen die Restlaufzeit liegen nicht auf einer Geraden.
 - Auch die alternativen Formeln, etwa von Dupoyet, Daigler und Chen 2011, erklären diese Mean Reversion der Kalenderspreads nicht.
 - Ein ADF-Test auf dem Verhältnis Back zu Front von VX zeigt Stationarität mit 99 Prozent Wahrscheinlichkeit.
+- Die lineare Ratio-Strategie auf dem VX-Kalenderspread hat in diesem Abschnitt eine Sharpe Ratio von 1,5, und Abbildung 5.8 zeigt ihre kumulierten Renditen.
+- Saisonalität kann dazu führen, dass an einem Markt nur Kalenderspreads bestimmter Monate und bestimmter Abstände mean-reverten; der Text verfolgt diese marktabhängigen Einzelheiten nicht weiter.
 
 ## Funktionsweise
 

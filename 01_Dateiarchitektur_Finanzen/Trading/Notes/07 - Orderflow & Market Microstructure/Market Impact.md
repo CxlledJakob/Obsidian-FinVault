@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Market Impact
@@ -39,6 +39,14 @@ aktualisiert: 2026-10-30
 - Das Rebalancing gehebelter ETFs nahe dem Schluss erzeugt Momentum im Marktwert des Portfolios und in den Basiswerten.
 - Momentum Ignition legt eine große Buy-Limit-Order auf den Best Bid, um Kaufdruck vorzutäuschen und andere zum Kauf am Ask zu bewegen.
 - Zum Slippage gehört neben dem Bid-Ask-Spread der Betrag, um den die Order des Anlegers den Marktpreis schiebt, nach oben beim Kauf und nach unten beim Verkauf.
+- Das Platzieren oder Ausführen einer Order kann das Verhalten der anderen Marktteilnehmer ändern, sodass der Gewinn einer Hochfrequenzstrategie selbst mit dem historischen Gesamtorderbuch von diesen Reaktionen abhängt.
+- Wer große Größen handelt, verringert den Market Impact von Ein- und Ausstieg, wenn die Position schrittweise auf- und abgebaut wird.
+- Cheng und Madhavan schätzen, dass eine Bewegung des SPX um 1 Prozent Käufe oder Verkäufe von etwa 17 Prozent des Market-on-Close-Volumens erzwingt und damit erheblichen, momentumtreibenden Market Impact hat.
+- Das Rebalancing eines dreifach gehebelten ETF wie DRN mit über hundert Millionen Dollar Eigenkapital nahe dem Schluss verkauft bei negativer Portfoliorendite die Komponenten und kauft bei positiver.
+- Ende Januar 2009 lag das AUM aller gehebelten ETFs, Long und Short, bei 19 Milliarden Dollar.
+- High-Frequency-Händler können nahe einer Unterstützung künstlichen Verkaufsdruck erzeugen, indem sie große Verkaufsorders legen, um den nächsten Tick nach unten zu treiben.
+- Große institutionelle Orders werden nicht mehr als ein Block ausgeführt, sondern in winzige Child Orders zerlegt und über den Tag sowie verschiedene Plätze ausgeführt.
+- Eine aktuellere Analyse des Intraday-Rebalancing stammt von Rodier, Haryanto, Shum und Hejazi, 2012.
 
 ## Funktionsweise
 
@@ -61,6 +69,7 @@ aktualisiert: 2026-10-30
 
 - Wird die große Buy-Limit-Order beim Flipping gefüllt, kann der anschließende Verkauf mit Verlust erfolgen.
 - Eine aktuellere Impact-Analyse zum Rebalancing gehebelter ETFs stammt von Rodier, Haryanto, Shum und Hejazi (2012).
+- Die Regulation NMS im Juli 2007 trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei.
 
 ## Beispiele
 

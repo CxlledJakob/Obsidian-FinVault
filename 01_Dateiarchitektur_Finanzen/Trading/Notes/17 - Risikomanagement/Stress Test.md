@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/17 - Risikomanagement/17 - Risikomanagement|17 - Risikomanagement]]"
 weitere_hauptthemen: []
 unterthema: "Portfoliorisiko"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-01
 ---
 
 # Stress Test
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Hat das Modell im Backtest frühere Stressphasen überstanden, gibt es nach der Erfahrung des Autors keinen Grund, den Hebel vor einer kommenden Krise zu senken.
+- Besser ist ein von Anfang an konservativerer Hebel in guten Zeiten als eine Senkung in schlechten, weil die unbekannten Unbekannten schaden und das Modell vor ihnen nicht abgeschaltet werden kann.
 
 ## Funktionsweise
 

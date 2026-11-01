@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Entry-Logik
@@ -25,6 +25,35 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Gehandelt werden Vielfache eines Einheitsportfolios, dessen Stückzahlen der Johansen-Eigenvektor festlegt. Das Vielfache ist negativ, wenn das Einheitsportfolio geshortet wird.
+- Der Preis eines Einheitsportfolios ist sein Marktwert, analog zum Preis eines Fonds oder ETF. Hat es nur eine Long- und eine Short-Position in zwei Instrumenten, heißt es gewöhnlich Spread.
+- Fortlaufendes Ein- und Aussteigen hat voraussichtlich mehr statistische Signifikanz als Strategien mit komplizierteren und selektiveren Ein- und Ausstiegsregeln.
+- Bei VX-Kalenderspreads ist das Signal das Verhältnis aus Back- und Front-Kontrakt, mit einem Lookback von 15 Tagen für gleitenden Durchschnitt und Standardabweichungen.
+- Die ES-VX-Strategie shortet das Portfolio aus 0,3906 VX und einem ES, sobald der Portfoliowert um eine Standardabweichung der Trainingsresiduen abweicht.
+- Dieselbe lineare Mean-Reversion-Strategie wird auf den 12-Monats-Kalenderspread von CL angewendet.
+- Die Vorlage von Moskowitz, Yao und Pedersen kauft bei positiver und verkauft bei negativer 12-Monats-Rendite und hält einen Monat; hier wird täglich entschieden, und jeden Tag nur ein Fünfundzwanzigstel des Kapitals eingesetzt.
+- Für TU ist die Long-Bedingung, dass der Schluss über dem Schluss vor 250 Tagen liegt, und die Short-Bedingung, dass er darunter liegt; die Signale der letzten 25 Tage werden zur Positionsgröße aufsummiert.
+- Als saubereres Signal dient die verzögerte Rollrendite: long über einer Schwelle, short unter dem Negativen dieser Schwelle, sonst wird eine bestehende Position geschlossen.
+- Für TU ist diese Schwelle eine annualisierte Rollrendite von 3 Prozent.
+- Weitere Einstiege sind ein neues N-Tage-Hoch, ein Schluss über dem N-Tage-Durchschnitt oder dem exponentiellen Durchschnitt, ein Schluss über dem oberen Bollinger-Band und mehr Aufwärts- als Abwärtstage in einem gleitenden Fenster.
+- Der Alexander-Filter kauft, wenn die Tagesrendite um mindestens x Prozent steigt, und verkauft und geht short, wenn der Preis von einem späteren Hoch um mindestens x Prozent fällt, nach Fama und Blume 1966.
+- Bei CL wird zum Schluss gekauft, wenn der Preis unter dem von vor 30 Tagen und über dem von vor 40 Tagen liegt; für Shorts gilt das Umgekehrte, und ist keine Bedingung erfüllt, wird glattgestellt.
+- Der S&P Diversified Trends Indicator geht einen Future long, wenn er über seinem exponentiellen gleitenden Durchschnitt liegt, und short, wenn er darunter liegt, mit monatlichem Rebalancing.
+- Ist die Rollrendite negativ, also Contango, wird der Basiswert gekauft und der Future geshortet; bei positiver Rollrendite, Backwardation, wird umgekehrt gehandelt.
+- Short USO und long XLE, wenn CL in Contango ist; long USO und short XLE, wenn CL in Backwardation ist.
+- Liegt der VX-Frontkontrakt um 0,1 Punkte mal der Zahl der Handelstage bis zum Settlement über dem VIX, werden 0,3906 VX und ein ES geshortet und einen Tag gehalten; liegt er um denselben Betrag darunter, werden beide gekauft und einen Tag gehalten.
+- Die querschnittliche Regel kauft unter 52 physischen Rohstoffen den Future mit der höchsten 12-Monats-Rendite und shortet den mit der niedrigsten, jeweils für 25 Handelstage.
+- Bei US-Aktien wird das oberste Dezil der um 12 Monate verzögerten Renditen einen Monat gekauft und das unterste Dezil geshortet.
+- Nach News Sentiment wird ein Portfolio mit positiver Sentimentänderung gekauft und eines mit negativer Änderung geshortet.
+- Nach dem PRESSURE-Faktor wird das unterste Dezil, also der höchste Verkaufsdruck, geshortet und das oberste Dezil, also der höchste Kaufdruck, gekauft.
+- Die Opening-Gap-Strategie kauft, wenn das Open über dem Vortageshoch mal (1 plus 0,1 mal der um einen Tag verschobenen 90-Tage-Standardabweichung der Close-to-Close-Renditen) liegt, und leerverkauft spiegelbildlich unter dem Vortagestief.
+- Für GBPUSD wird der Close auf 17:00 Uhr ET und das Open auf 5:00 Uhr ET, die Londoner Eröffnung, gesetzt.
+- Die PEAD-Strategie steigt nur ein, wenn die Gewinnmeldung nach 16:00 Uhr ET des vorigen Handelstags und vor 9:30 Uhr ET der heutigen Eröffnung lag.
+- Long, wenn die Rendite vom vorigen Schluss zum Open mindestens eine halbe 90-Tage-Standardabweichung dieser Rendite beträgt und eine solche Meldung vorliegt; Short bei höchstens minus einer halben. Die Deutung als gut oder schlecht und der Vergleich mit Analystenerwartungen entfallen.
+- Die DRN-Strategie kauft, wenn die Rendite vom Vortagesschluss bis 15 Minuten vor Handelsschluss größer als 2 Prozent ist, und verkauft, wenn sie kleiner als minus 2 Prozent ist.
+- Der Ratio Trade tritt dem Bid nur bei, wenn die ursprüngliche Bid-Size viel größer ist als die Ask-Size.
+- Beim Ticking liegt die Kauforder auf dem Best Bid plus einem Tick, sofern der Spread größer als zwei Ticks ist.
+- Stop Hunting legt große Verkaufsorders, wenn der Preis nah genug an einer Unterstützung ist, um den nächsten Tick nach unten zu treiben.
 
 ## Funktionsweise
 
@@ -119,6 +148,14 @@ aktualisiert: 2026-10-30
 - Ein Handel über das Swing-Hoch, der ein Wave-5-Tief bestätigen soll, hebt jedes logische Bärenmuster auf und ist ein Grund, long zu sein. Das wird Pattern-Reversal-Signal genannt.
 - Für Daytrades sollen zwei höhere Zeitebenen das Momentum in Richtung der kleineren Zeitebene haben. Dieselben zwei Strategien gelten für jeden Markt, jede Zeitebene und jede Bedingung.
 - Nie an einem Zielpreis kaufen oder verkaufen. Immer verlangen, dass der Markt in Richtung des erwarteten Trends läuft, bevor der Trade ausgeführt wird.
+- Die erwarteten Punktgewinne bei garantierter Rückkehr nach F sind 2(F minus L1) für all-in bei L1, 2p(F minus L2) für all-in bei L2 und (F minus L1) plus p(F minus L2) für average-in. Unterhalb von p-Dach gleich (F minus L1)/(F minus L2) ist all-in bei L1 besser, oberhalb all-in bei L2; average-in ist in keinem Fall am profitabelsten.
+- In diesem Vergleich wird jeder Kontrakt erst beim Endpreis F geschlossen, also ohne average-out, und die Kaufkraft reicht für zwei Kontrakte. Die Wahrscheinlichkeit p, vor der Rückkehr noch L2 zu erreichen, wird als konstant angenommen.
+- Beim Kalman-Filter auf EWC gegen EWA wird der Spread long gekauft, wenn der Prognosefehler e unter minus der Wurzel von Q liegt, und short, wenn e über der Wurzel von Q liegt.
+- Für die Ratio USO/GLD haben Long- und Short-Seite dasselbe Dollarkapital: die Position ist das Vielfache mal minus 1 und plus 1, nicht mal den Preisen.
+- Auf AUD.USD gegen CAD.USD soll CAD gekauft werden, wenn CAD.USD deutlich unter AUD.USD liegt. Die Stückzahl des Einheitsportfolios ist der negative Z-Score.
+- Die Hedge Ratio ist nicht eins, deshalb lässt sich das Paar nicht als einzelner Kreuzkurs AUD.CAD eröffnen.
+- Auf dem fertigen AUD.CAD ist die Position das negative Vorzeichen von Schluss minus gleitendem 20-Tage-Durchschnitt, nicht ein vollständiger Z-Score, und sie wird über 17:00 Uhr ET gehalten.
+- Beim CL-Kalenderspread wird zunächst der ferne Kontrakt long und der nahe short gehalten. Ist der Z-Score der Rollrendite positiv, drehen alle Vorzeichen. Ist der Z-Score nicht endlich, wird die Position auf null gesetzt.
 
 ## Risiken und Grenzen
 
@@ -130,6 +167,7 @@ aktualisiert: 2026-10-30
 - Im Short-Beispiel nahm Bar 4 das nachgezogene Ein-Bar-Tief. Weder Bar 2 noch Bar 3 hatten das Tief des vorigen Bars genommen. Der Schutz-Buy-Stop lag einen Tick über dem Hoch von Bar 3, dem höchsten Bar seit der bärischen Momentumumkehr.
 - Beim EUR/USD entstand die bullische Wochen-MACD-Umkehr in der Woche zum 20. Oktober. Drei Tagesbars später drehte der Tages-MACD bullisch. Am Folgetag wurde einen Tick über dem Hoch des Vortags gekauft, mit Stop einen Tick unter dem Swing-Tief vor der bullischen Umkehr.
 - Im 5-Minuten-Daytrade lag der Swing-Entry-Short unter 1356,25 und wurde am nächsten Bar ausgeführt, mit Buy-Stop einen Tick über dem Swing-Hoch bei 1362,75.
+- Im GLD-USO-Vergleich arbeitet der adaptive Preisspread deutlich besser als die Ratio, obwohl das Paar nicht wirklich kointegriert ist und die Ratio dann eine dynamische Hedge Ratio ersparen kann.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Hedging
@@ -37,6 +37,28 @@ aktualisiert: 2026-10-30
 - Großräumige Trends bieten eine Gewinngelegenheit für Trendfolger, die ausreichend kapitalisiert sind und den Hebel richtig steuern.
 - Ist die Risikotransfer-Prämie eine gültige Erklärung der Trendfolge-Renditen, sollte Trendfolge in Aktien nicht so lohnend sein wie an den Rohstoff-Futures, weil ein Aktien-Trendfolger keine Risikotransfer-Leistung erbringt. Es gibt Daten, die nahelegen, dass Trendfolge in Aktien tatsächlich weniger lohnend ist.
 - Aktien- und Anleihemärkte beschaffen Unternehmen Eigen- und Fremdkapital. Weil Aktien und Unternehmensanleihen Risiken über den risikofreien Satz der Staatspapiere hinaus tragen, werden Anleger mit der Aktienrisikoprämie und der Unternehmensanleihe-Risikoprämie entschädigt.
+- Die Hedge Ratio eines Assets ist die Zahl der Einheiten, die im Portfolio long oder short gehalten werden. Bei einer Aktie ist das die Aktienzahl, und eine negative Hedge Ratio bedeutet eine Short-Position.
+- Die passenden Hedge Ratios sind vor dem Test nicht bekannt, und nicht jede Linearkombination kointegrierender Reihen bildet ein stationäres Portfolio.
+- Engle und Granger (1987) schätzen die Hedge Ratio zuerst per linearer Regression zweier Preisreihen und prüfen danach die Stationarität des Portfolios. Die Funktion cadf bündelt diese Schritte.
+- Die CADF-Hedge-Ratio ist reihenfolgeabhängig und beim Tausch von abhängiger und unabhängiger Variable nicht der genaue Kehrwert. Oft führt nur eine der beiden Ordnungen zu einem stationären Portfolio; gewählt wird die Ordnung mit der negativsten t-Statistik.
+- Die Eigenvektoren des Johansen-Tests dienen als Hedge Ratios und sind nach fallenden Eigenwerten geordnet. Der erste Eigenvektor hat die kürzeste Halbwertszeit, und der Test hängt nicht von der Reihenfolge der Preisreihen ab.
+- Für EWA, EWC und IGE lautet der erste Eigenvektor minus 1,0460, 0,7600 und 0,2233. Er bestimmt die Stückzahlen des stationären Portfolios.
+- Von den Johansen-Eigenvektoren bildet derjenige mit dem größten Eigenwert das stationäre Portfolio mit der kürzesten Halbwertszeit. Er bestimmt die Stückzahlen je ETF.
+- Der Nettomarktwert yport ist die Summe aus Stückzahl mal Preis über alle ETFs und ersetzt in der Halbwertszeitregression die Einzelpreisreihe.
+- Im Preisspread y = h1 y1 + … + hn yn sind die Hedge Ratios die Stückzahlen. Für zwei Reihen wird y = y1 minus h y2 geschrieben, damit h bei der üblichen Long-short-Kombination positiv ist.
+- Für ein wirklich kointegrierendes Paar genügen OLS oder der Johansen-Eigenvektor auf möglichst langer Historie. Für reale Reihen, die das Ideal verfehlen, wird die Hedge Ratio dynamisch geschätzt.
+- Ein kurzes gleitendes Fenster ändert die Hedge Ratio sprunghaft, sobald der älteste Bar heraus- und der neueste hineinfällt. Der Kalman-Filter liefert eine dynamische Hedge Ratio ohne willkürlichen Gewichts-Cutoff.
+- Im GLD-USO-Beispiel wird die Hedge Ratio täglich per OLS über 20 Handelstage neu geschätzt. Der erste Johansen-Eigenvektor wäre eine Alternative. Der Spread ist minus Hedge-Ratio mal GLD plus USO.
+- Bei Logpreisen sind die h Kapitalgewichte, nicht Stückzahlen. Die Ratio y1/y2 ist nur stationär, wenn die Hedge Ratios gleichen Betrag haben, nach Normierung also minus 1. Das ist nicht der Normalfall.
+- Für nicht wirklich kointegrierte Paare braucht der Spread oft eine laufend neue Hedge Ratio; die Ratio als Signal erspart das. Im GLD-USO-Vergleich ist der adaptive Preisspread der Ratio dennoch deutlich überlegen.
+- EUR.GBP ist selbst eine Ratio, nämlich EUR.USD geteilt durch GBP.USD. Für ein nicht fertig notiertes Kreuz wie MXN.NOK kann die Ratio wirksamer sein als der Spread, auch wenn USD.NOK und USD.MXN gehandelt werden müssen. Deren P&L fällt in NOK und in MXN an, der direkte MXN.NOK-P&L nur in NOK; die Wege sind nicht identisch.
+- Im Kalman-Filter auf EWC gegen EWA ist die Steigung die dynamische Hedge Ratio und schwankt bei δ gleich 0,0001 um 1. Im anschließenden Handel ersetzt diese Steigung die Hedge Ratio des Bollinger-Codes.
+- Der Crack Spread ist long drei Kontrakte CL, short zwei Kontrakte RB und short einen Kontrakt HO.
+- Die 3:2:1-Ratios folgen daraus, dass drei Barrel CL ungefähr zwei Barrel Benzin und ein Barrel Heizöl ergeben; das gilt nicht für alle Raffinerien.
+- Die NYMEX bietet für den Crack Spread einen fertigen Korb mit deutlich niedrigerer Margin, als wenn die Kontrakte getrennt gehandelt werden.
+- Ein ADF-Test vom 20. Mai 2002 bis zum 4. Mai 2012 zeigt, dass dieser Crack Spread nicht mean-reverting ist.
+- Damit die Hedge Ratio das Verhältnis der Kontraktzahlen trifft, werden die VX-Preise mit 1.000 und die ES-Preise mit 50 multipliziert, weil ein Punkt VX 1.000 Dollar und ein Punkt ES 50 Dollar entspricht.
+- Aus der Regression folgt ein Portfolio, das long 0,3906 Kontrakte VX und long einen Kontrakt ES stationär sein soll.
 
 ## Funktionsweise
 
@@ -72,6 +94,13 @@ aktualisiert: 2026-10-30
 - Nach bestätigter Kointegration wird ein long-short-stationäres Portfolio aus den ausgewählten Aktien und SPY gebildet; der Johansen-Eigenvektor mit dem größten Eigenwert, die erste Spalte der Eigenmatrix, bestimmt die Gewichte.
 - Weil der Johansen-Test auf Logpreisen lief, sind die Hedge Ratios eine Dollar-Kapitalallokation und keine Stückzahl; das Gewicht jeder einzelnen Aktie ist gleich, unterscheidet sich aber vom Gewicht von SPY.
 - Das lineare Long-Short-Modell ist fast vollkommen dollarneutral, und einzelne Aktien dienen an manchen Tagen nur als Hedges, sodass Gewinne nur über alle Aktien aggregiert entstehen.
+- Beim SPY-Beispiel bestimmt der Johansen-Eigenvektor die Gewichte von SPY gegen das Aktienportfolio. Weil der Test auf Log-Preisen lief, sind die Hedge Ratios Dollarkapital und nicht Stückzahlen.
+- Das Gewicht jeder einzelnen Aktie ist wegen der gleichen Kapitalzuteilung dasselbe, es unterscheidet sich aber vom Gewicht auf SPY.
+- Es gibt zwei kointegrierende Relationen. Genommen wird die mit dem größten Eigenwert, die erste Spalte der Eigenmatrix.
+- Ein Test auf allen 500 Aktien plus SPY scheitert daran, dass die bekannte Johansen-Implementierung höchstens 12 Symbole nimmt und die Eigenvektoren gewöhnlich Long- und Short-Aktien mischen.
+- Long- und Short-Aktien im Korb verhindern einen sauberen Hedge aus Long-only-Aktien gegen Short-SPY oder umgekehrt. Short-Aktien zusammen mit Short-SPY sind bei einzelnen Titeln doppelt short und erhöhen das spezifische Risiko.
+- Als Ausweg werden die Hedge Ratios der vorausgewählten Aktien per genetischem Algorithmus oder Simulated Annealing so bestimmt, dass der durchschnittliche absolute Abstand der Aktienreihe zur SPY-Reihe minimal wird und alle Hedge Ratios positiv bleiben.
+- Das lineare Long-Short-Modell ist nahezu perfekt dollarneutral und setzt jeden Tag dasselbe Bruttokapital von 1 Dollar ein.
 
 ## Regeln und Kriterien
 
@@ -91,6 +120,12 @@ aktualisiert: 2026-10-30
 - Eine Alternative minimiert nach dem Einzeltest gegen SPY per genetischem Algorithmus oder Simulated Annealing die mittlere absolute Differenz zwischen Aktienportfolio und SPY-Preisreihe; alle Hedge Ratios müssen positiv sein, und MATLABs Global Optimization Toolbox stellt beide Verfahren bereit.
 - Der Johansen-Test liefert die Hedge Ratio des Kapitals zwischen AUD.USD und CAD.USD; ist diese Ratio nicht eins, kann das Paar nicht als ein Cross AUD.CAD gehandelt werden.
 - Damit der Eigenvektor Kapitalgewichte ist, müssen beide Preisreihen dieselbe Quotierungswährung haben, sonst haben Punktbewegungen nicht denselben Wert und der Johansen-Test ist bedeutungslos.
+- Soll ein mean-revertierendes Portfolio während des Trades eine feste Stückzahl halten, werden die Hedge Ratios aus den Preisreihen bestimmt.
+- Sollen die Marktwerte der Bestandteile während des Trades fest bleiben, werden die Hedge Ratios aus den Log-Preisreihen bestimmt.
+- Können Hedge Ratio, Mittel und Standardabweichung eines Spreads künftig variieren, helfen ein gleitender Lookback oder der Kalman-Filter.
+- Der Johansen-Eigenvektor ist nur als Kapitalgewichte lesbar, wenn beide Reihen dieselbe Kurswährung haben. Sonst hat eine Punktbewegung nicht denselben Wert, und der Test ist bedeutungslos. Deshalb werden AUD.USD und CAD.USD verwendet.
+- Die Hedge Ratio ist hier nicht eins, das Paar ist also kein fertiger Kreuzkurs AUD.CAD. Live wird der Kauf einer Einheit CAD.USD zum Verkauf von 1/y Einheiten USD.CAD.
+- Ein Kalenderspread ist long einen Future und short einen anderen auf denselben Basiswert mit anderer Fälligkeit. Bei gleichen Marktwerten ist der Spread die Differenz der Log-Preise, und sein Log-Marktwert ist γ mal (T1 − T2).
 
 ## Risiken und Grenzen
 
@@ -106,6 +141,8 @@ aktualisiert: 2026-10-30
 
 ## Unterschiedliche Quellenpositionen
 
+- Nach Keynes und Hicks shorten die Besitzer der physischen Ware, die Hedger, Futures und erwarten, auf dem Hedge zu verlieren. Die Spekulanten sind netto long und kaufen nur Futures mit positiver Rollrendite, also mit einem Preis unter dem erwarteten künftigen Spot. Das ist die normale Backwardation.
+- Die Eselsbrücke lautet, Backwardation gehöre zu normal, und normal heiße, der Future liege immer unter dem Spot. Das ist nicht vollständig richtig: Rohöl, eine normale Ware, liegt über verschiedene Zeiträume in Contango.
 
 ## Eigene Erkenntnisse
 

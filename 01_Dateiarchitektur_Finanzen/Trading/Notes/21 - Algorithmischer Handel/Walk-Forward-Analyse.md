@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Walk-Forward-Analyse
@@ -55,6 +55,8 @@ aktualisiert: 2026-10-30
 - Michael Cooper verwendete eine Walk-forward-out-of-sample-Simulation, um Portfolios aus Long- und Short-Positionen über 1978 bis 1993 zu bilden und der Möglichkeit von Data Mining zu begegnen.
 - Die aus 300 Aktien großer Kapitalisierung gebildeten Portfolios erzielten eine annualisierte Rendite von 44,95 Prozent gegen eine Buy-and-hold-Benchmark von 17,91 Prozent.
 - Das so geprüfte Muster sind Aktien, die über die vorangegangenen zwei Wochen bei fallendem Volumen scharf gefallen sind und über die folgende Woche systematisch zu steigen neigen.
+- Der Walk-Forward-Test ist der abschließende echte Out-of-Sample-Test, nachdem sich Data-Snooping-Bias trotz aller Vorsicht einschleicht.
+- Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios mindern Data-Snooping-Bias, nichts davon ist aber so endgültig wie der Walk-Forward-Test.
 
 ## Funktionsweise
 
@@ -67,12 +69,16 @@ aktualisiert: 2026-10-30
 - Bei fest vorgegebener Komplexität und reiner Suche nach optimalen Parametern genügen zwei Segmente, Training und Test; das dritte Segment wird erst nötig, wenn die Komplexität selbst optimiert wird.
 - Im menschlichen Beispiel beginnt die Suche mit 100 Tests einer Regel aus zwei gleitenden Durchschnitten, wenn jeder Durchschnitt 10 Parameterwerte hat.
 - Solange der Testsatz nur einmal benutzt wird, sind 15 Prozent annualisierte Rendite dort eine unverzerrte Schätzung; sobald weitere Komplexitätsstufen denselben Testsatz erneut besuchen, entsteht der Data-Mining-Bias, den erst der Validierungssatz korrigiert.
+- Im ungleichen Währungspaar wird die Hedge Ratio an jedem Tag neu aus den vorangehenden 250 Handelstagen mit dem Johansen-Test geschätzt. Mittel und Standardabweichung bleiben bei 20 Tagen, und die ersten 250 Tage zählen nicht zur ausgewiesenen Performance.
+- Dieses feste Fenster von 250 Tagen wurde gewählt, weil es im Nachhinein bessere Ergebnisse lieferte als ein Lookback von 20 Tagen für die Hedge Ratio.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Er kann als Paper-Trading laufen, besser aber mit echtem Geld bei minimalem Hebel, um Aspekte zu prüfen, die selbst dem Paper-Trading entgehen.
+- Die meisten Trader sind zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Werts erzeugt.
 
 ## Regeln und Kriterien
 
@@ -89,6 +95,7 @@ aktualisiert: 2026-10-30
 - Die ersten Entscheidungen beruhen auf einem kleineren Teil der Gesamtstichprobe; selbst mit Aufwärmphase wird der Großteil der Information nur von einem kleinen Teil der Entscheidungen verwendet.
 - Nutzt die Aufwärmphase t0 von T Beobachtungen, trifft die Strategie die Hälfte ihrer Entscheidungen auf durchschnittlich nur einem Anteil von drei Vierteln t0/T plus einem Viertel der Beobachtungen.
 - Eine längere Aufwärmphase mildert dieses Problem, verkürzt aber auch den Backtest.
+- Ein Backtest einer Momentum-Strategie kann ohne erkennbare Fallstricke sein und vor 2008 gut aussehen und danach trotzdem schlecht laufen.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Risk of Ruin
@@ -26,6 +26,8 @@ aktualisiert: 2026-10-30
 - Ein überschätzter Kelly-Hebel, durch überschätzten Mittelwert oder unterschätzte Varianz, führt bei ausreichender Höhe schließlich zum Ruin.
 - Nichtgaußische Renditen können den Kelly-Hebel schon im Backtest auf einen maximalen Drawdown von minus 1 bringen.
 - Half-Kelly wird gewählt, weil die Folge eines zu hohen Hebels der Ruin sein kann und die Folge eines zu niedrigen nur eine geringere Wachstumsrate ist.
+- Das Verkaufen in die Verluste wegen konstanten Hebels kann eine Ansteckung auslösen, wie beim Zusammenbruch der Quant-Fonds im August 2007: ein Fonds liquidiert ähnliche Positionen, die anderen erleiden Verluste und müssen ebenfalls liquidieren.
+- Am 6. Mai 2010 wurde eine Sell-Stop-Order auf Accenture zu 0,01 Dollar je Aktie ausgeführt, weil Market Maker im Stress nur ein Stub Quote von 0,01 Dollar halten mussten und die Liquidität zugleich verschwand.
 
 ## Funktionsweise
 

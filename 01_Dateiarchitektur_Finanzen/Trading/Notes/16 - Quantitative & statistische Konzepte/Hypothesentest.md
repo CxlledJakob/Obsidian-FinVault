@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Hypothesentest
@@ -201,6 +201,31 @@ aktualisiert: 2026-10-30
 - Ein wissenschaftlicher Test sucht deshalb Evidenz, die zeigen kann, dass die Behauptung falsch ist, und nicht Evidenz, die die Behauptung bestätigen könnte.
 - Dieselbe Menge von Beobachtungen kann mit mehr als einer Theorie und vielleicht mit unendlich vielen alternativen Theorien vereinbar sein. Das ist das Problem der Unterbestimmtheit der Theorien, und die Daten allein sagen nicht, welche Hypothese richtig ist.
 - Der Fehlschluss des Bejahens des Konsequens lautet: Wenn die Hypothese wahr ist, sollte X beobachtet werden. X wird beobachtet. Der Schluss, die Hypothese sei wahr, ist ungültig.
+- Die Nullhypothese ist nicht eindeutig, und verschiedene Nullen liefern verschiedene Schätzungen der statistischen Signifikanz; das ist ein Grund, warum Kritiker den Hypothesentest für eine fehlerhafte Methode halten (Gill, 1999).
+- Gewünscht ist die bedingte Wahrscheinlichkeit, dass die Null wahr ist, gegeben die Teststatistik R, also P(H0|R); das Verfahren berechnet aber P(R|H0), und selten sind beide gleich.
+- Der ADF-Test prüft die Null, dass λ in Δy(t) = λ y(t minus 1) + μ + βt + Summe αi Δy(t minus i) + εt gleich 0 ist. Die Teststatistik ist λ geteilt durch den Standardfehler des Fits und muss für Mean Reversion negativer sein als der kritische Wert.
+- Dickey und Fuller haben die Verteilung von λ/SE(λ) tabelliert. Die kritischen Werte hängen vom Stichprobenumfang ab und davon, ob ein von null verschiedener Mittelwert minus μ/λ oder ein stetiger Drift minus βt/λ angenommen wird.
+- Im praktischen Handel wird der Drift β gleich 0 gesetzt, weil er meist klein gegen die täglichen Schwankungen ist. Der Offset μ bleibt ungleich null, weil der Mittelwert selten null ist. Der zweite Parameter der adf-Funktion ist deshalb 0.
+- Der Lag k wird oft auf 1 gesetzt, weil sich die Null häufig erst dann verwerfen lässt. Das bedeutet, dass die Preisänderungen serielle Korrelation haben. k gleich 0 genügt oft nicht.
+- Für USD.CAD, verdichtet auf den Schluss um 17:00 Uhr ET, ist die ADF-Statistik minus 1,840744 bei einem Lag, die AR(1)-Schätzung 0,994120 und die kritischen Werte minus 3,458, minus 2,871 und minus 2,594. Die Null wird auf dem 90-Prozent-Niveau nicht verworfen. λ ist negativ, die Reihe trendet also zumindest nicht.
+- Eine intradägliche Abtastung erhöht die statistische Signifikanz des ADF-Tests nicht.
+- Die Tests verlangen mindestens 90 Prozent Sicherheit. Profitables Handeln ist oft auch darunter möglich; dann misst die Halbwertszeit minus log(2)/λ, ob die Rückkehr für die Strategie schnell genug ist.
+- Der CADF-Test auf EWC gegen EWA, mit Offset ungleich null, Drift null und einem Lag, liefert die t-Statistik minus 3,64346635, die AR(1)-Schätzung minus 0,020411 und die kritischen Werte minus 3,880, minus 3,359 und minus 3,038. Die Null wird auf dem 95-Prozent-Niveau verworfen.
+- Der Johansen-Test schätzt den Rang r der Matrix Λ. r ist die Zahl unabhängiger kointegrierender Portfolios. Trace- und Eigen-Statistik prüfen die Nullen r gleich 0 bis r kleiner gleich n minus 1. Werden alle verworfen, ist r gleich n. Ist Λ gleich 0, gibt es keine Kointegration.
+- Für EWA und EWC verwirft die Trace-Statistik r gleich 0 auf 99 Prozent, 19,983 gegen 19,935, und r kleiner gleich 1 auf 95 Prozent, 3,983 gegen 3,841. Die Eigen-Statistik verwirft beide Nullen auf 95 Prozent, 16,000 gegen 14,264 und 3,983 gegen 3,841. Beide Tests ergeben zwei kointegrierende Beziehungen.
+- Für EWA, EWC und IGE schließt der Text aus Trace- und Eigen-Statistik auf drei kointegrierende Beziehungen mit 95 Prozent Sicherheit. Die Trace-Werte 34,429, 17,532 und 4,471 liegen über den 95-Prozent-Schwellen 29,796, 15,494 und 3,841, aber unter den 99-Prozent-Schwellen. Die Eigen-Statistik für r kleiner gleich 0 ist 16,897 und liegt unter der 90-Prozent-Schwelle 18,893; für r kleiner gleich 1 ist sie 13,061 gegen 14,264 auf 95 Prozent.
+- Johansen wird mit p gleich 0 aufgerufen, also konstantem Offset ohne Driftterm, und mit Lag k gleich 1.
+- Der ADF-Test ist auf Mean Reversion ausgelegt, Hurst-Exponent und Variance-Ratio-Test auf Stationarität.
+- Die Halbwertszeit misst, wie schnell eine Preisreihe zu ihrem Mittel zurückkehrt, und ist ein guter Prädiktor für Profitabilität oder Sharpe Ratio einer Mean-Reversion-Strategie auf dieser Reihe.
+- Der p-Wert des Korrelationskoeffizienten ist die Wahrscheinlichkeit der Nullhypothese, dass keine Korrelation besteht.
+- Für TU verwirft der Variance-Ratio-Test die Random-Walk-Hypothese nicht, während mehrere Paare aus Lookback und Haltedauer signifikant positive Korrelationen zeigen, darunter 250 und 25 mit einem p-Wert von 0,02.
+- Hurst-Exponent 0,44 und das Nichtverwerfen des Random Walk widersprechen diesen Korrelationen nicht, weil Momentum und Mean Reversion auf verschiedenen Zeitrahmen auftreten und der Variance-Ratio-Test einzelne Zeitrahmen nicht prüft.
+- Daniel und Moskowitz untersuchen Momentum-Crashes und finden, dass Momentum-Strategien auf Futures oder Aktien mehrere Jahre nach einer Finanzkrise miserabel abschneiden.
+- Der Ansatz des algorithmischen Handels wird als wissenschaftlich beschrieben: eine Hypothese wird als quantitatives Modell formuliert und an neuen, ungesehenen Daten darauf geprüft, ob sie vorhersagt.
+- Scheitert das Modell an bestimmten Daten, werden die Gründe gesucht, gegebenenfalls Variablen ergänzt, und der Test wird wiederholt.
+- Das Paar GLD gegen GDX hörte 2008 auf zu kointegrieren; die Hypothese betraf den hohen Rohölpreis, und nach Aufnahme des Ölpreises in die Eingaben funktionierte das Kointegrationsmodell wieder.
+- Underperformt eine Strategie den Backtest, soll dieser fundamentale Grund quantitativ geprüft werden, statt blind weitere Regeln und Indikatoren zu ergänzen und auf eine Verbesserung zu hoffen.
+- Die Strategien des Buches sind Illustrationen der Prinzipien, keine garantierten Rezepte, und sollen out-of-sample geprüft werden.
 
 ## Funktionsweise
 
@@ -239,6 +264,12 @@ aktualisiert: 2026-10-30
 - Gewöhnlich braucht ein Test drei Zutaten: eine Hypothese, eine Teststatistik und ein Mittel, die Wahrscheinlichkeitsverteilung der Teststatistik unter der Annahme zu erzeugen, dass die Hypothese wahr ist. Teststatistik und Stichprobenstatistik sind austauschbar.
 - Beim Regeltest sagt die Nullhypothese eine erwartete Rendite von null oder weniger. Die Teststatistik ist die mittlere Rendite aus dem Backtest einer historischen Stichprobe. Die Stichprobenverteilung ist um die mittlere Rendite null zentriert und zeigt die Zufallsschwankung über viele unabhängige Stichproben.
 - Eine positive Abweichung vom hypothetischen Wert null kann Stichprobenfehler sein oder daher kommen, dass null falsch ist. Ist sie größer, als sich vernünftig als Stichprobenfehler erklären lässt, wird die Nullhypothese verworfen und die Alternativhypothese angenommen.
+- Im Backtest ist die Teststatistik die durchschnittliche Tagesrendite einer endlichen Stichprobe; die Null setzt die wahre Durchschnittsrendite auf einem unendlichen Datensatz auf null und unterstellt eine bekannte Verteilung der Tagesrenditen mit Mittelwert null.
+- Der p-Wert ist die Wahrscheinlichkeit, unter dieser Null eine mindestens so große oder, bei allgemeiner Teststatistik, so extreme Größe zu beobachten; ist er sehr klein, etwa unter 0,01, wird die Null verworfen und die Backtest-Rendite gilt als statistisch signifikant.
+- Bei gaußschen Tagesrenditen mit Mittelwert null und der Stichproben-Standardabweichung ist die Teststatistik der Mittelwert geteilt durch die Standardabweichung mal der Wurzel der Zahl der Datenpunkte.
+- Ein zweiter Weg erzeugt per Monte Carlo viele Preisreihen derselben Länge und derselben ersten Momente, schickt die Strategie darüber und nimmt als p den Anteil mit mindestens der Backtest-Durchschnittsrendite.
+- Ein dritter Weg nach Lo, Mamaysky und Wang 2000 erzeugt zufällig verteilte Trade-Mengen mit derselben Zahl von Long- und Short-Einstiegen und derselben mittleren Haltedauer auf der echten Preisreihe und misst den Anteil mit mindestens der Backtest-Durchschnittsrendite.
+- Die drei Verteilungen vergleichen die Strategie mit verschiedenen Zufalls-Benchmarks und können verschiedene Antworten geben.
 
 ## Voraussetzungen
 
@@ -281,6 +312,9 @@ aktualisiert: 2026-10-30
 - Die Nullhypothese für den Signifikanztest der Renditen von Long-Short-Signalen ist ein Zufallssignal mit demselben Anteil von Long- und Short-Positionen.
 - Detrending setzt die mittlere tägliche Änderung der Marktdaten auf null und beseitigt so die Verzerrung der Regel-Performance aus Positionsverzerrung und Markttrend in der Backtest-Periode.
 - Beim zufälligen Paaren werden die historischen täglichen Preisänderungen verwürfelt und jeweils zufällig einem Regelausgang von +1 oder −1 zugeordnet.
+- Kritische Werte der mit der Wurzel der Tage multiplizierten täglichen Sharpe Ratio sind 1,282 bei p gleich 0,10, 1,645 bei 0,05, 2,326 bei 0,01 und 3,091 bei 0,001.
+- Eine hohe Sharpe Ratio macht die Verwerfung der Null leicht, im Einklang mit der Überzeugung, dass solche Strategien statistisch signifikanter sind.
+- Eine erwartete APR von 10 Prozent, signifikant innerhalb von 1 Prozent, bedeutet bei randomisierten Einstiegstagen, dass nur eine von 100 Permutationen eine APR von mindestens 10 Prozent erreicht.
 
 ## Risiken und Grenzen
 
@@ -355,6 +389,10 @@ aktualisiert: 2026-10-30
 - Sagt die Hypothese eine Tennis-Gewinnquote von 0,75 voraus und werden 0,66 beobachtet, soll der Test entscheiden, ob diese Differenz nur Zufall der Stichprobe ist oder groß genug, die Hypothese infrage zu stellen. Null Siege in 20 Spielen, Quote 0, wären mit der Vorhersage unvereinbar.
 - Bei einer Backtest-Rendite von plus 3,5 Prozent und einem Flächenanteil von 0,10 beträgt der p-Wert 0,10: Wäre die wahre Rendite null, erreichte ein Backtest mit Wahrscheinlichkeit 0,10 plus 3,5 Prozent oder mehr.
 - Für TT-4-91 beträgt der Bootstrap-p-Wert 0,0692 und gilt als möglicherweise signifikant, wenn nur diese Regel geprüft wurde; die Monte-Carlo-Permutation kommt auf einen fast gleichen p-Wert.
+- Die TU-Momentum-Strategie kauft den TU-Future bei positiver und verkauft ihn bei negativer 12-Monats-Rendite und hält einen Monat; die gaußsche Teststatistik beträgt 2,93, die Null wird mit besser als 99 Prozent verworfen.
+- Im zweiten Test haben 1.166 von 10.000 simulierten TU-Renditepfaden mit demselben Mittelwert, derselben Standardabweichung, Schiefe und Kurtosis, aber ohne die Korrelationen, eine mindestens so hohe Strategierendite; die Null lässt sich nur mit 88 Prozent verwerfen.
+- Im dritten Test der TU-Strategie gibt es unter 100.000 Permutationen der Long- und Short-Einstiegstage keine einzige Durchschnittsrendite auf oder über der beobachteten; der Text nennt diesen dritten Test für die Strategie viel schwächer.
+- Auch wenn die Verwerfung der Null kein sehr befriedigender Signifikanzschätzer ist, kann das Scheitern der Verwerfung Einsichten anregen: Beispiel 1.1 zeigt, dass jede zufällige Renditeverteilung mit hoher Kurtosis Momentum-Strategien begünstigen kann.
 
 ## Unterschiedliche Quellenpositionen
 

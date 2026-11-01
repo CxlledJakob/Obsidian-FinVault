@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/23 - Fundamentalanalyse/23 - Fundamentalanalyse|23 - Fundamentalanalyse]]"
 weitere_hauptthemen: []
 unterthema: "Unternehmensrisiken"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-01
 ---
 
 # Regulierungsrisiko
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Ein Regimewechsel der Marktstruktur durch staatliche Regulierung oder makroökonomische Änderungen kann dazu führen, dass der Live-Handel vom Backtest abweicht, ohne dass beim Backtest ein Fallstrick begangen wurde.
+- Deshalb bleibt auch bei einer algorithmischen Strategie zu beurteilen, ob die Modelle unter der neuen Regulierung noch gültig sind.
 
 ## Funktionsweise
 

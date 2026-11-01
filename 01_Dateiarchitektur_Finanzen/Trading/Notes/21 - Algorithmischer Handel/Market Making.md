@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Market Making
@@ -61,6 +61,14 @@ aktualisiert: 2026-10-30
 - Viele traditionelle Market Maker quoten keine großen Sizes mehr, weil High-Frequency-Strategien große Bids oder Asks frontrunnen; die NBBO-Sizes sind deshalb über viele Märkte gesunken.
 - Selbst bei AAPL betragen die NBBO-Sizes oft nur ein paar hundert Aktien, bei SPY auf ARCA oft weniger als 10.000.
 - High-Frequency-Händler verdienen nur an langsameren Händlern; bleiben nur sie übrig, ist der durchschnittliche Nettogewinn aller null.
+- Market-Making-Strategien stehen am kurzen Ende der Mean-Reversion-Zeitskalen und setzen auf Preise, die sich innerhalb von Sekunden zurückbilden.
+- Paarhändler wirken wie eine Art Market Maker. Durch die Dezimalisierung verengten sich die Bid-Ask-Spreads drastisch, und ihre Market-Making-Gewinne sanken mit (Serge, 2008).
+- Market Maker zögern, große Ordergrößen anzuzeigen, damit Hochfrequenzhändler sie nicht ausnutzen. Das trägt dazu bei, dass die NBBO-Größen sehr klein geworden sind.
+- Market Maker lesen aus dem Orderflow fundamentale Information und setzen Bid und Ask entsprechend.
+- Große gleichgerichtete Market Orders in Sekundenbruchteilen zeigen informierte Händler; der Market Maker passt die Quotes sofort an, und die Dringlichkeit zeigt, dass die Information neu und nicht weit bekannt ist.
+- Bei AAPL sind die NBBO-Größen oft nur wenige hundert Aktien, bei SPY an ARCA oft weniger als 10.000 Stück.
+- Erst nach Füllung dieser kleinen Orders wird zu denselben Preisen neu quotiert, um nicht von High-Frequency-Händlern ausgenutzt zu werden.
+- Große Quotes werden auch vermieden, weil ihre Füllung große Inventare erzeugt.
 
 ## Funktionsweise
 
@@ -83,6 +91,11 @@ aktualisiert: 2026-10-30
 - Große gleichgerichtete Market Orders in Sekundenbruchteilen deuten auf informierte Händler hin; der Market Maker passt Bid und Ask sofort zum eigenen Schutz an.
 - Die Dringlichkeit von Market Orders zeigt, dass die Information neu und nicht weit bekannt ist.
 - Nach der Füllung kleiner Quotes stellt der Market Maker dieselben Preise nach, um nicht von High-Frequency-Händlern ausgenutzt zu werden.
+- Market Maker aktualisieren den geschätzten Mittelpreis eines Assets bevorzugt mit diesem Kalman-Filter, nach Sinclair (2010).
+- Die Unsicherheit des beobachteten Transaktionspreises wird an die Handelsgröße gekoppelt: große Trades gegenüber einer Benchmark bedeuten kleine Unsicherheit.
+- Ist die Handelsgröße gleich der Benchmark, ist der Kalman-Gain 1 und der neue Mittelwert gleich dem beobachteten Preis.
+- Die Benchmark kann ein an Trainingsdaten optimierter Bruchteil des Handelsvolumens vom Vortag sein.
+- Neben der Größe werden jüngere Preise stärker gewichtet, analog zu einem volumen- und zeitgewichteten Durchschnitt.
 
 ## Voraussetzungen
 

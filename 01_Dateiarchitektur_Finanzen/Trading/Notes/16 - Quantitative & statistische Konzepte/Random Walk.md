@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Random Walk
@@ -138,6 +138,18 @@ aktualisiert: 2026-10-30
 - Die starke Form ist nicht testbar, weil nicht zuverlässig feststellbar ist, wer was wusste und wann er es wusste. Die Aussagen derer, die auf Insiderinformation handeln, sind notorisch unzuverlässig.
 - Die schwache Form spricht typischerweise nur über vergangene Preise und vergangene Preisänderungen. Aronson meint, ihre Vertreter würden zusätzlich behaupten, dass auch jede andere von der technischen Analyse genutzte Datenreihe für die Prognose künftiger Renditen nutzlos sei.
 - Ein Verwalter ohne Können hat eine Wahrscheinlichkeit von 0,5, den Markt in einer gegebenen Zeitperiode, zum Beispiel einem Jahr, zu schlagen.
+- Die meisten Finanzpreisreihen sind geometrische Random Walks. Um einen Mittelwert von null verteilt sind gewöhnlich die Renditen, nicht die Preise.
+- Wird die ADF-Null λ gleich 0 nicht verworfen, hängt der nächste Preisschritt nicht vom aktuellen Niveau ab und die Reihe gilt als Random Walk.
+- Für USD.CAD bleibt die Random-Walk-Null bestehen: vratiotest ergibt h gleich 0 und pValue 0,367281. Die ADF-Statistik minus 1,84 liegt über dem 90-Prozent-Wert minus 2,594, die AR(1)-Schätzung ist 0,994120. λ ist negativ, ein Trend ist damit nicht angezeigt.
+- Ist im Mehrreihenmodell Λ gleich 0, hängt der nächste Schritt des Preisvektors nicht vom aktuellen Niveau ab und es gibt keine Mean Reversion.
+- Aktienkurse folgen geometrischen Random Walks, wie Malkiel (2008) betont, aber nur wenn die Reihe streng in regelmäßigen Abständen geprüft wird, etwa an den Tagesschlüssen.
+- Der geometrische Random Walk beschreibt einzelne Aktien auf Tagesbasis gut: einmal weggelaufen, kehren sie selten zum Ausgangspunkt zurück. Intraday- und saisonale Mean Reversion sind Sonderfälle.
+- Die Aufgabe ist, besondere Bedingungen oder Zeiträume zu finden, in denen Mean Reversion regelmäßig auftritt, und dabei Data-Snooping-Bias zu vermeiden.
+- Preisreihen, die auf Tagesbars keine Mean Reversion zeigen, können in bestimmten Perioden stark mean-reverten.
+- Für den Zwei-Jahres-Treasury-Future TU beträgt der Hurst-Exponent 0,44, und der Variance-Ratio-Test verwirft die Random-Walk-Hypothese nicht.
+- Die Korrelationstests zeigen trotzdem Momentum auf bestimmten Zeitrahmen; der Variance-Ratio-Test kann diese Zeitrahmen, in denen die Korrelationen überdurchschnittlich sind, nicht prüfen.
+- Dieselbe Reihe zeigt auf verschiedenen Zeitrahmen Momentum und Mean Reversion.
+- Hurst-Exponent und Variance-Ratio-Test sollen gemeinsam die Null eines Random Walk ausschließen, wenn langfristiges Trendverhalten ohne festes Zeitfenster geprüft wird.
 
 ## Funktionsweise
 

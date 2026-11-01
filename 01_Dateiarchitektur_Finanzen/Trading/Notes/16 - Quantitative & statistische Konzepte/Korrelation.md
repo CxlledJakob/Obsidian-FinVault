@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Korrelation
@@ -99,6 +99,16 @@ aktualisiert: 2026-10-30
 - Zuvor waren binäre Variablen gemeint, die nur zwei Werte annehmen: Muster vorhanden oder Muster nicht vorhanden.
 - Die mittlere Korrelation zwischen Prognose und Ergebnis betrug auf einer Skala von 0 bis 1,0 beim Expertenurteil 0,33 und beim objektiven Modell 0,64.
 - In einer Metaanalyse von über 100 begutachteten Studien, die Expertenurteil und statistische Regeln vergleichen, waren die statistischen Regeln in 96 Prozent der Fälle genauer.
+- Der Aktienindex steht invers zur Volatilität: fällt der Markt, steigt die Volatilität stark, und in geringerem Maß gilt das auch umgekehrt.
+- Sichtbar wird das als Streudiagramm der Front-Month-Preise von ES gegen die Front-Month-Preise von VX in Abbildung 5.10.
+- In diesem Streudiagramm liegen 2004 bis Mai 2008 und August 2008 bis 2012 als zwei getrennte Regime.
+- Für TU hat das Renditepaar mit Lookback 250 und Haltedauer 25 einen Korrelationskoeffizienten von 0,27 bei einem p-Wert von 0,02.
+- Die höchste ausgewiesene Korrelation in Tabelle 6.1 ist 0,5112 für Lookback 250 und Haltedauer 120, bei einem p-Wert von 0,0617; das Paar 250 und 250 hat 0,4873, aber einen p-Wert von 0,3269.
+- Kurze Lags können schwach oder negativ sein: Lookback 25 und Haltedauer 1 hat minus 0,0140 bei einem p-Wert von 0,5353.
+- VX und ES sind stark antikorreliert; der Korrelationskoeffizient der Tagesrenditen erreicht minus 75 Prozent.
+- Für die Extraktion der Rollrendite genügt ein Instrument mit hoher Korrelation oder Antikorrelation zur Spotrendite; ein exakter Nachbau des Spots ist nicht nötig, und für VIX erfüllt SPY das.
+- Die Rollrendite von ES beträgt etwa 1 Prozent annualisiert, deshalb hat ES fast dieselben Renditen wie der Basiswert.
+- Die Hoffnung des querschnittlichen Futures-Portfolios ist, dass die Spotpreise positiv mit Wirtschaftswachstum oder anderen Makroindizes korrelieren und sich die Spot-Renditen daher aufheben.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Cross-Validation
@@ -131,6 +131,7 @@ aktualisiert: 2026-10-30
 - Cross-Validation kommt infrage, wenn ein Modell wegen schwacher Leistung auf einem festen Out-of-Sample-Satz nicht verworfen werden soll, weil das Pech sein kann, oder wenn der Datensatz klein ist und zum Justieren fast alle Daten gebraucht werden.
 - Dabei werden mehrere verschiedene Teilmengen zum Trainieren und Justieren gewählt, und vor allem muss das Modell auf diesen verschiedenen Teilmengen gut abschneiden.
 - Modelle mit hoher Sharpe Ratio und kurzer maximaler Drawdown-Dauer bestehen diesen Test fast automatisch. Die einzigen Teilmengen, auf denen sie durchfallen, sind die seltenen Drawdown-Perioden.
+- Cross-Validation ist angezeigt, wenn ein Modell wegen schwacher Leistung auf einem festen Out-of-Sample-Satz nicht verworfen werden soll, weil das Pech sein kann, oder wenn der Datensatz klein ist und das Modell auf dem größten Teil der Daten nachjustiert werden muss.
 
 ## Regeln und Kriterien
 
@@ -144,6 +145,7 @@ aktualisiert: 2026-10-30
 - Außerhalb des Meta-Labelings sind Accuracy oder neg_log_loss vertretbar, weil alle Fälle gleichermaßen interessieren.
 - Eine Umbeschriftung der Fälle ändert Accuracy und neg_log_loss nicht, wohl aber f1.
 - Beim Score neg_log_loss bleibt der sklearn-Fehler aus Issue 9144 zu beachten; als Umgehung dient die Funktion cvScore aus Kapitel 7.
+- Modelle mit hoher Sharpe Ratio und kurzer maximaler Drawdown-Dauer bestehen die Cross-Validation fast automatisch; sie fallen nur auf den seltenen Drawdown-Teilmengen durch.
 
 ## Risiken und Grenzen
 

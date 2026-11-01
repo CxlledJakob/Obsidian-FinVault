@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Stationarität
@@ -115,6 +115,31 @@ aktualisiert: 2026-10-30
 - Nichtstationarität ist ein Risiko, das jeder Anlage auf Basis einer Regel innewohnt, ob die Regel statistisch abgeleitet wurde oder nicht.
 - Der Grundsatz, dass größere Stichproben besser sind, gilt für stationäre Prozesse.
 - Bei Finanzmarkt-Zeitreihen, die höchstwahrscheinlich nicht stationär sind, können alte Daten irrelevant oder sogar irreführend sein, und größere Stichproben sind dann nicht besser.
+- Die Prognosekraft jedes Backtests ruht auf der Annahme, dass die statistischen Eigenschaften der Preisreihe unverändert bleiben, sodass früher profitable Regeln künftig profitabel bleiben.
+- Stationäre Einzelreihen, die an öffentlichen Börsen gehandelt werden, sind selten. Stationäre Reihen lassen sich als Marktwert eines Portfolios aus nichtstationären, kointegrierenden Assets herstellen.
+- USD.CAD besteht den ADF-Test nicht: die Statistik ist etwa minus 1,84 gegen den 90-Prozent-Wert minus 2,594. Der Variance-Ratio-Test ergibt pValue 0,367281, ein Random Walk bleibt möglich.
+- Die Tests fordern mindestens 90 Prozent Sicherheit. Für den Handel genügt oft weniger; dann misst die Halbwertszeit minus log(2)/λ, ob die Rückkehr praktisch schnell genug ist. Bei USD.CAD sind das etwa 115 Tage, beim Portfolio aus EWA, EWC und IGE 23 Tage.
+- Eine intradägliche Abtastung erhöht die Signifikanz des ADF-Tests nicht.
+- Für Mean-Reversion-Strategien muss das einzelne Instrument nicht von sich aus stationär sein. Ein stationäres Portfolio lässt sich aus einer großen Vielfalt kointegrierender Aktien und ETFs bauen, und jährlich neu aufgelegte, nur geringfügig andere ETFs vergrößern diese Auswahl.
+- Erfolgreiche Mean Reversion braucht keine echte Stationarität. Kurzfristige oder saisonale Rückkehr lässt sich handeln und vor dem nächsten Gleichgewicht schließen. Saisonal bedeutet Rückkehr nur in bestimmten Tagesabschnitten oder unter bestimmten Bedingungen.
+- Eine stationäre Reihe mit einer Halbwertszeit von zehn Jahren führt nicht zu großen Gewinnen.
+- Der Spread von USO gegen GLD mit täglich neu geschätzter Hedge Ratio sieht sehr stationär aus, obwohl GLD und USO nicht kointegriert sind. Die Ratio USO/GLD sieht dagegen kaum stationär aus.
+- Wird bei jeder kleinen Rückkehr ausgestiegen, lassen sich kleine Gewinne auch dann mitnehmen, wenn die Reihe nicht stationär ist und den Mittelwert nie erreicht.
+- Ob Preis- oder Logpreisspread benutzt wird, hängt davon ab, welche der beiden Reihen kointegriert. Die Ratio ist nur stationär, wenn die Beträge der Hedge Ratios gleich sind.
+- Die täglichen Preisreihen einzelner Aktien erfüllen die Stationaritätsdefinition aus Kapitel 2 fast nie. Der geometrische Random Walk passt: einmal weggelaufen, kehren sie selten zurück.
+- Das gilt bei Prüfung in regelmäßigen Abständen, etwa an den Tagesschlüssen. Dieselben Reihen können intraday und saisonal mean-reverten.
+- Selbst branchenähnliche Paare sind out of sample selten kointegriert, weil sich Firmenschicksale schnell ändern. ETF-Paare halten die Beziehung eher, weil sich die Korbfundamentaldaten langsamer ändern.
+- Der 12-Monats-Log-Kalenderspread von CL ist im ADF-Test mit 99 Prozent Wahrscheinlichkeit stationär. Die Halbwertszeit beträgt etwa 36 Tage.
+- Der VIX ist im ADF-Test mit 99 Prozent stationär. Die back-adjustierten Frontmonatskurse des VX-Futures mean-reverten im ADF-Test definitiv nicht. Der Unterschied ist die Rollrendite.
+- Kalenderspreads sind trotz desselben Basiswerts nicht allgemein stationär, weil das Signal von der Rollrendite und nicht vom Spot getrieben wird.
+- Die Gleichung einer in der Restlaufzeit linearen Log-Preiskurve gilt nur, wenn der Basiswert gehandelt wird. Für VX liegen die Log-Preise nicht auf einer Geraden.
+- Die meisten Währungs- und Future-Paare bilden kein stationäres Portfolio, weil sie nicht kointegrieren.
+- Ein ADF-Test auf dem Verhältnis Back zu Front von VX zeigt Stationarität mit 99 Prozent Wahrscheinlichkeit.
+- Ein ADF-Test auf CL und BZ im Verhältnis 1:1 zeigt, dass der Spread weit von stationär entfernt ist.
+- Ein Portfolio long 0,3906 Kontrakte VX und long einen Kontrakt ES soll stationär sein; Abbildung 5.11 zeigt seinen Marktwert.
+- Die Log-Preise der VX-Futures gegen die Restlaufzeit fallen nicht auf eine Gerade, anders als die Log-Preise von CL in Abbildung 5.4.
+- Im Schlusskapitel heißt stationär, dass die Wahrscheinlichkeitsverteilung der Preise über die Zeit unverändert bleibt, und das ist ausdrücklich ein anderer Sinn als die Stationarität der Zeitreihe in Kapitel 2.
+- Wissenschaft kommt eigentlich nur mit stationären Statistiken zurecht; weil finanzielle Zeitreihen in diesem Sinn nicht stationär sind, bleibt subjektives Urteil nötig.
 
 ## Funktionsweise
 
@@ -167,6 +192,7 @@ aktualisiert: 2026-10-30
 - Das Expanding Window erzeugt einen negativen Drift, der auch nach Kontrolle des Gewichtsverlusts erheblich bleibt, weil jede Schätzung auf einem weiter wachsenden Fenster beruht.
 - Auch eine stationäre Reihe mit Hurst-Exponent zwischen 0 und 0,5 hat eine mit der Zeit steigende Varianz, nur langsamer als ein geometrischer Random Walk.
 - Auch eine Reihe, die auf kurzer Frist mean-reverting wirkt, muss nicht im strengen Sinn stationär sein; gleitender Durchschnitt, gleitende Standardabweichung oder ein Verhältnis passen die Schwellen dann an das wandernde Niveau an.
+- Diese Annahme wird oft entwertet: die Wirtschaftsaussichten eines Landes, das Management eines Unternehmens und die Struktur eines Finanzmarkts ändern sich.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Out-of-Sample-Test
@@ -117,6 +117,22 @@ aktualisiert: 2026-10-30
 - Danach wird angenommen, dass diese Einstellungen nützlich bleiben; mehr ist nicht möglich, weil sich die Zukunft nicht sehen lässt.
 - Ob Volatilität und Momentumzyklen sich künftig ändern, lässt sich nie wissen, und es muss angenommen werden, dass sie fortbestehen.
 - Ändern ein Markt später Trendgeschwindigkeit und Volatilität und sind die früher besten Einstellungen nach einigen Momentumzyklen nicht mehr optimal, kann die Lookback-Periode verkürzt oder verlängert werden.
+- Der bekannte Weg, Data-Snooping-Bias zu erkennen, ist der Test auf Out-of-Sample-Daten und die Verwerfung eines Modells, das ihn nicht besteht.
+- Wer das Modell danach so nachjustiert, dass es auf In-Sample und Out-of-Sample vernünftig läuft, hat die Out-of-Sample-Daten in In-Sample-Daten verwandelt.
+- Wahrer Out-of-Sample-Test beginnt erst nach der Veröffentlichung, weil der Autor bei schlechten Zwischenergebnissen Parameter ändern oder das Modell wesentlich nachjustieren kann, bis die sogenannten Out-of-Sample-Daten gut aussehen.
+- Scaling-in über mehrere Bollinger-Bänder ist in der Stichprobe nie optimal, kann die All-in-Methode außerhalb der Stichprobe aber übertreffen, wenn die Wahrscheinlichkeit einer weiteren Abweichung nicht konstant ist.
+- δ im Kalman-Filter und der Lookback einer gleitenden Regression sollen auf Trainingsdaten bestimmt werden. In den Beispielen sind δ gleich 0,0001, Ve gleich 0,001 und der Lookback 20 mit Wissen im Nachhinein gesetzt.
+- Kointegrierende Aktienpaare findet man in einem gewählten Fenster leicht, out of sample verlieren sie die Kointegration ebenso leicht.
+- Ein einzelnes Aktienpaar bleibt nur mit fundamentalem Verständnis der Firmen konsistent profitabel, das den Ausstieg erlaubt, bevor schlechte Nachrichten einer Seite öffentlich werden.
+- Viele Paare helfen nur, wenn die erwartete Out-of-Sample-Rendite des einzelnen Paares positiv ist. Bei Aktienpaaren hat der Autor das nicht gefunden.
+- EWA gegen EWC kointegrierte im November 2012 noch, nachdem das Paar 2009 genannt worden war, weil sich die Ökonomie eines ETF-Korbs langsamer ändert als die einer Firma.
+- GLD gegen GDX kointegrierte bis etwa 14. Juli 2008 mit 99 Prozent und verlor die Beziehung danach. Die Hypothese teuren Öls lässt sich prüfen: mit USO kointegriert das Triplett über 2006 bis 2012 mit 99 Prozent.
+- Hört eine Strategie auf zu funktionieren, wird eine Hypothese über den Grund gebildet und an den Daten geprüft. Oft entsteht eine geänderte Strategie, die wieder profitabel wird.
+- Das SPY-Modell trainiert vom 1. Januar bis 31. Dezember 2007 und testet vom 2. Januar 2008 bis 9. April 2012. Die Performance fällt mit der Zeit, teils weil Bestandteile und Hedge Ratios nicht nachtrainiert werden.
+- Beim linearen Long-Short-Modell ist die Leistung ab Anfang 2008 echt out of sample, weil die Strategie 2007 veröffentlicht wurde. 2008 lag die annualisierte Rendite bei 30 Prozent, 2011 bei 11 Prozent.
+- Die Regressionskoeffizienten für ES gegen VX werden nur auf den ersten 500 Tagen nach August 2008 geschätzt, damit die Statistiken anschließend das Handelsmodell bauen.
+- Die gemeldete Leistung gilt für das Testset vom 29. Juli 2010 bis zum 8. Mai 2012: 12,3 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,4.
+- Dieses Testfenster liegt nach dem Trainingsfenster, aus dem Residual-Standardabweichung und Hedge Ratio stammen.
 
 ## Funktionsweise
 
@@ -155,6 +171,9 @@ aktualisiert: 2026-10-30
 - Sobald die beste komplexe Regel gefunden ist, wird sie auf dem dritten Segment bewertet, dem Validierungssatz, der bis zur Entdeckung von Parametern und Komplexitätsgrad zurückgehalten wurde.
 - Weil der Validierungssatz in dieser Entdeckung nicht benutzt wurde, ist die Leistung der besten Regel dort eine unverzerrte Schätzung ihrer künftigen Leistung.
 - Die Leistung, die die Regel optimaler Komplexität im Testsatz erreicht, ist positiv verzerrt, weil der Testsatz wiederholt aufgesucht wurde; das ist der Data-Mining-Bias.
+- Schwache Leistung auf einem festen Out-of-Sample-Satz kann Pech sein; dann kommt Cross-Validation mit mehreren Trainings- und Prüfmengen infrage.
+- Der abschließende echte Out-of-Sample-Test ist ein Walk-Forward, als Paper-Trading oder besser mit echtem Geld bei minimalem Hebel.
+- Die meisten Trader sind zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Werts erzeugt.
 
 ## Risiken und Grenzen
 

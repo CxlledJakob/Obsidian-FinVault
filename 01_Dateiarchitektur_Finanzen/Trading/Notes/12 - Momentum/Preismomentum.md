@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Preismomentum
@@ -159,6 +159,28 @@ aktualisiert: 2026-10-30
 - Eine kurze Lookback-Periode macht den Indikator relativ empfindlich für die jüngste Preisvolatilität und den jüngsten Trend, eine lange Lookback-Periode macht ihn relativ langsam.
 - Ein überverkauftes Niveau ist ein relativ niedriges Niveau, gewöhnlich etwa 20 bis 30 Prozent.
 - Erreichen viele Indikatoren ein überverkauftes Niveau, soll das Abwärtspotenzial des Kurses begrenzt sein, bevor ein Kurstief entsteht.
+- Viele Momentum-Strategien haben als einzige Rechtfertigung, dass andere Anleger langsamer auf Nachrichten reagieren. Holen diese auf, kann die Strategie eines Tages ohne Erklärung aufhören zu funktionieren.
+- Mean-Reversion-Paare haben dagegen oft eine fundamentale Geschichte, und wenn die Kointegration endet, bleibt der Grund häufig noch verständlich.
+- Von Gewinnmeldungen getriebenes Preismomentum dauerte früher mehrere Tage und hält inzwischen kaum bis zum Börsenschluss.
+- Die Dauer wird kürzer, je mehr Händler die Information schneller und früher lernen, wenn Momentum aus langsamer Informationsdiffusion entsteht.
+- Die Haltedauer muss womöglich ständig verkürzt werden, ohne vorhersagbaren Zeitplan.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist der Markt für Momentum-Strategien.
+- Beispiel 1.1 erzeugt mit der Kurtosis der TU-Futures und ohne serielle Autokorrelation in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Die meisten Instrumente, Aktien wie Futures, zeigen Cross-Sectional-Momentum und oft Zeitreihenmomentum, typischerweise über einen Monat oder länger.
+- Lange Haltedauern senken die Sharpe Ratio und die statistische Signifikanz, weil unabhängige Signale selten sind, und sie underperformen nach Finanzkrisen; kurzfristige Intraday-Strategien haben diese Nachteile nicht und behalten einige zentrale Vorteile.
+- Von vier Hauptursachen des Momentums wirkt intraday alle außer der Persistenz der Rollrendite, deren Betrag und Volatilität intraday zu klein sind.
+- Eine zusätzliche, vor allem kurzfristige Ursache ist das Auslösen von Stops, das oft zu Breakout-Strategien führt.
+- Wird Momentum durch langsame Diffusion von Nachrichten getrieben, lässt sich von den ersten Tagen, Stunden oder sogar Sekunden nach dem Ereignis profitieren.
+- Die Opening-Gap-Strategie auf FSTX liefert vom 16. Juli 2004 bis 17. Mai 2012 13 Prozent APR und eine Sharpe Ratio von 1,4; auf GBPUSD mit Close 17:00 Uhr ET und Open 5:00 Uhr ET vom 23. Juli 2007 bis 20. Februar 2012 7,2 Prozent APR und eine Sharpe Ratio von 1,3.
+- Das Gap-Momentum entsteht, weil bei der Eröffnung viele Stops zugleich ausgelöst werden und eine Kaskade weiter entfernte Stops treffen kann, oder weil über Nacht wesentliche Ereignisse lagen.
+- Die DRN-Strategie kauft bei einer Rendite vom Vortagesschluss bis 15 Minuten vor Schluss über 2 Prozent und verkauft unter minus 2 Prozent, mit Ausstieg am Schluss; APR 15 Prozent und Sharpe Ratio 1,8 vom 12. Oktober 2011 bis 25. Oktober 2012.
+- Eine große positive Indexbewegung erzeugt Momentum in derselben Richtung auch beim gehebelten Short-ETF, weil dessen Sponsor Shorts abbaut und damit kauft.
+- Eine Bewegung des SPX um 1 Prozent erzwingt Käufe oder Verkäufe von etwa 17 Prozent des Market-on-Close-Volumens.
+- Auf der kürzesten Skala erzeugen das Ungleichgewicht der Bid- und Ask-Sizes, Änderungen im Orderflow oder ungleich verteilte Stop-Orders Preismomentum, und High-Frequency-Händler erzeugen das Ungleichgewicht manchmal selbst.
+- Momentum-Strategien profitieren vom Stop-Loss auf geradlinige Weise: ein Verlust heißt, dass das Momentum gedreht hat, also sind Ausstieg und vielleicht die Umkehr der Position logisch.
+- Ein fortlaufend aktualisiertes Momentum-Signal wirkt als faktischer Stop-Loss, und deshalb haben Momentum-Modelle nicht dasselbe Tail Risk wie Mean-Reversion-Modelle.
+- Die FSTX-Opening-Gap-Strategie hatte vom 16. Juli 2004 bis 17. Mai 2012 eine annualisierte Durchschnittsrendite von etwa 13 Prozent und eine Sharpe Ratio von 1,4; lag der VIX des Vortags über 35, fielen die annualisierte Tagesrendite auf 2,6 Prozent und die Sharpe Ratio auf 0,16, der VIX rät also, am Folgetag nicht zu handeln.
+- Der Stop-Loss ist bei Momentum ein natürlicher Bestandteil der Strategie, während er bei Mean Reversion die Backtest-Performance wegen Survivorship Bias meist senkt und vor allem ein künftiges Black-Swan-Ereignis abfangen soll.
 
 ## Funktionsweise
 
@@ -222,6 +244,11 @@ aktualisiert: 2026-10-30
 - Momentum, Muster und Preis werden gemeinsam benutzt; die Preisposition allein trägt die Entscheidung nicht.
 - Die Dynamic Price Strategies gelten als die schnellsten, leichtesten und verlässlichsten Preisstrategien aus mehr als 20 Jahren, aber nicht jedes Hoch und Tief liegt genau auf dem vorher bestimmten Schlüsselziel.
 - Am Ziel einer möglichen Welle 5 wird jede Momentumumkehr zusammen mit einer Musterumkehr als Signal beachtet.
+- Die zweite Buy-on-Gap-Regel ist ein Momentum-Filter auf einer Mean-Reversion-Strategie und oft sehr nützlich.
+- Aktien, die nur wenig gefallen sind, kehren eher um als stark gefallene, weil letztere häufig negative Nachrichten wie schlechte Gewinnmeldungen haben. Nachrichtengetriebene Einbrüche kehren seltener um.
+- Auf solchen Nachrichten lassen sich eigene Momentum-Strategien bauen. Das wird in Kapitel 7 behandelt.
+- Ein Kurs über einem langfristigen gleitenden Durchschnitt zieht Verkaufsdruck größerer Long-only-Fonds mit längerem Horizont an.
+- Ein Momentum-Filter auf Mean-Reversal-Strategien verbessert typischerweise ihre Stetigkeit.
 
 ## Regeln und Kriterien
 
@@ -247,6 +274,9 @@ aktualisiert: 2026-10-30
 - Nennt man einen Trendindikator und ein Beispiel, zeigt er zwei schnelle Fehlschläge, und auf jedes nachträgliche Beispiel mindestens zwei, in denen die Umkehr nicht rechtzeitig kam.
 - Verluste wird es geben; eine Strategie, die Verluste auf Verlusttrades minimiert, ist wesentlich, und Divergenz von Momentum und Preis soll wenigstens diese Verluste begrenzen.
 - Nicht jedes Dual-Time-Frame-Setup ist profitabel; ohne Einhalten des Tradingplans ist man zum Scheitern verurteilt.
+- Datenfehler dieser Art drücken die Backtest-Performance von Momentum-Strategien: der Backtest kauft im Beispiel um 11:01 bei 110 Dollar und wird um 11:02 bei 100 Dollar womöglich mit Verlust ausgestoppt.
+- Im Live-Handel lösen fehlerhafte Ticks auch bei Momentum-Strategien falsche Orders aus und sind für die Ausführung ebenso verlustbringend.
+- Datenfehler können Mean-Reversion-Backtests aufblähen, Momentum-Backtests dagegen nicht.
 
 ## Beispiele
 

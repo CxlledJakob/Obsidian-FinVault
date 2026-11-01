@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Leverage
@@ -56,6 +56,22 @@ aktualisiert: 2026-10-30
 - Tagestrader handeln Ticks statt Punkte; um die Kosten zu decken, brauchen sie Größe, und zwei oder drei Future-Kontrakte lohnen die Zeit selbst bei hoher Trefferquote kaum.
 - Früher kostete ein Future-Kontrakt bis zu 100 Dollar Kommission, und der Fill lag wegen der Verzögerung oft einige Ticks vom Entscheidungsmarkt weg; heute kosten Future-Trades etwa 3 Dollar und Aktien einen Penny je Aktie, mit Ein-Minuten-Charts und sofortiger Ausführung.
 - Die neue Technik hat den Anteil erfolgreicher Trader wahrscheinlich nicht erhöht, eher gesenkt.
+- Die Finanzierungskosten einer Future-Position sind null, weil Futures Kontrakte und keine bar zu finanzierenden Assets sind. Die Margin-Kasse wird nicht mitgezählt, weil sie auf dem Konto Zinsen trägt.
+- Ein Portfolio, das den MSCI US REIT Index RMZ vor allem zum Handelsschluss mit konstantem Hebel 3 abbilden soll, muss nach einem starken Tagesverlust Aktien über das Buch verkaufen und nach einem Anstieg kaufen.
+- DRN ist ein dreifach gehebelter Immobilien-ETF mit über hundert Millionen Dollar Eigenkapital; der gehebelte ETF dient dazu, das Momentum der zugrunde liegenden Aktien zu vergrößern, das auch ungehebelte ETFs wie SPY nahe dem Schluss treffen sollte.
+- Die PEAD-Strategie ist intraday und lässt sich mindestens vierfach hebeln; aus 6,7 Prozent APR wird damit eine annualisierte Durchschnittsrendite nahe 27 Prozent.
+- Die Rendite der Rebalancing-Strategie sollte mit dem aggregierten Vermögen aller gehebelten ETFs steigen.
+- Ende Januar 2009 betrug das gesamte AUM gehebelter ETFs, Long und Short zusammen, 19 Milliarden Dollar, nach Cheng und Madhavan 2009.
+- Dieselben Autoren schätzen, dass eine Bewegung des SPX um 1 Prozent Käufe oder Verkäufe von Aktien im Umfang von etwa 17 Prozent des Market-on-Close-Volumens erzwingt.
+- Für Manager, die nur eigenes Geld verwalten und niemandem Rechenschaft schulden, ist das einzige Ziel die langfristige Maximierung des Nettovermögens; Drawdowns und Volatilitäten zählen dabei nicht.
+- Der Hebel muss ständig konstant gehalten werden, mit oder ohne Drawdown-Nebenbedingung, damit die Wachstumsrate optimiert wird.
+- Start mit 100.000 Dollar und optimalem Hebel 5 verlangt einen Marktwert von 500.000 Dollar. Nach einem Verlust von 10.000 Dollar müssen weitere 40.000 Dollar liquidiert werden, damit 5 mal 90.000 gleich 450.000 Dollar erreicht werden; nach einem Gewinn von 20.000 Dollar sind Wertpapiere für 80.000 Dollar zuzukaufen, weil der Zielwert 550.000 und der aktuelle Wert 470.000 Dollar ist.
+- Viele Analysten sehen dieses Verkaufen in die Verluste als Ansteckung in Finanzkrisen, insbesondere als Ursache des Quant-Fonds-Zusammenbruchs im August 2007 nach Khandani und Lo 2007: ähnliche Positionen, ein Fonds liquidiert wegen konstantem Hebel, die anderen erleiden Verluste und müssen ebenfalls liquidieren.
+- Das wird als Tragik der Allmende gefasst: das Risikomanagement eines Fonds kann die Katastrophe für alle bedeuten.
+- Liegt die erlaubte Bruttohebel-Grenze weit unter der Summe der Kelly-Hebel, ist es oft optimal, die ganze Kaufkraft in die Strategie mit der höchsten mittleren Überschussrendite zu legen, statt alle Hebel proportional zu kürzen.
+- Im Beispiel sinkt die annualisierte Wachstumsrate bei proportionaler Kürzung auf den Bruttohebel 2 von 2,1 auf 0,82, während die Konzentration auf die zweite Strategie 0,96 ergibt.
+- Vor einer kommenden Krise den Hebel zu senken ist nach der Erfahrung unnötig, wenn das Modell frühere Stressphasen im Backtest überstanden hat; besser wird schon in guten Zeiten konservativer gehebelt.
+- Schaden tun die unbekannten Unbekannten, nicht die bekannten Unbekannten, und vor den unbekannten lässt sich das Modell nicht abschalten.
 
 ## Funktionsweise
 
@@ -103,6 +119,7 @@ aktualisiert: 2026-10-30
 - Die 3-fach-ETFs BGU und TNA liegen über dem Kelly-Hebel von etwa 1,8 der Russell-Indizes; ihr Nettoinventarwert kann auf null gehen.
 - Unknown Unknowns schaden, nicht die Known Unknowns; die Modelle lassen sich nicht abschalten, bevor die Unknown Unknowns eintreten.
 - Große gehebelte Positionen mit weitem Stop können in Verlusten enden, die der Broker schließt, wenn die Margin aufgebraucht ist.
+- Die scheinbar hohe Stetigkeit einer Mean-Reversion-Strategie führt nach Dever (2011) oft zu übermäßigem Hebel. Der Zusammenbruch trifft dann häufig beim maximalen Hebel nach einer ungebrochenen Erfolgsserie, und der seltene Verlust ist sehr schmerzhaft oder katastrophal.
 
 ## Beispiele
 

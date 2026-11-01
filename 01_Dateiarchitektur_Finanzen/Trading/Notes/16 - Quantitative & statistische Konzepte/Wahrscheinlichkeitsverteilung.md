@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Wahrscheinlichkeitsverteilung
@@ -143,6 +143,17 @@ aktualisiert: 2026-10-30
 - Die Bootstrap-Verteilung, die zu einem Backtest einer einzelnen Regel passt, ist dagegen bei null zentriert.
 - Bei einem gewöhnlichen Signifikanztest wären etwa 320 der 6.402 Regeln auf dem Niveau 0,05 signifikant, genau die Zahl, die der Zufall vorhersagt.
 - Über 15 Prozent annualisierte Rendite hätten in den Verteilungen der besten von 6.402 Regeln bei 0,05 signifikant gelegen, über 17 Prozent mit einem p-Wert unter 0,001.
+- Die drei Arten, die Verteilung unter der Null zu schätzen, geben verschiedene Antworten, weil jede die Strategie mit einem anderen Zufalls-Benchmark vergleicht.
+- Der dritte Weg nach Lo, Mamaysky und Wang 2000 verteilt zufällig dieselbe Zahl von Long- und Short-Einstiegen mit derselben mittleren Haltedauer über die echte historische Preisreihe.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist der Markt für Momentum-Strategien.
+- Beispiel 1.1 simuliert eine Renditereihe mit derselben Kurtosis wie die TU-Futures und ohne serielle Autokorrelationen und erzeugt in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Je häufiger Black-Swan-Ereignisse auftreten, desto wahrscheinlicher profitiert eine Momentum-Strategie von ihnen.
+- Alle drei Hebelmethoden unterstellen, dass die künftige Verteilung der Marktrenditen der vergangenen entspricht; restriktiver wird dasselbe für die Strategie selbst unterstellt, am restriktivsten eine Gauß-Verteilung der Strategierenditen. Die restriktivsten Annahmen liefern die eleganteste Lösung, deshalb beginnt die Übersicht mit Kelly.
+- Eine andere analytische Form mit endlich vielen Momenten, etwa die Student-t, erfasst die Fat Tails und führt über Thorps Herleitung zu einem anderen optimalen Hebel. Die Pareto-Levy-Verteilung hat keine endliche Zahl von Momenten, und für manche Verteilungen gibt es keine analytische Lösung.
+- Das Pearson-System bildet aus Mittelwert, Standardabweichung, Schiefe und Kurtosis eine von sieben analytischen Verteilungen, darunter Gauß, Beta, Gamma und Student-t.
+- Im Beispiel der Mean-Reversion-Strategie ist der Verteilungstyp 4, also keine der benannten Standardverteilungen wie die Student-t.
+- Ist die Verteilung gaußisch, ist der Erwartungswert der Wachstumsrate g(f) gleich f mal m minus f zum Quadrat mal m zum Quadrat geteilt durch 2.
+- Stationär im Schlusskapitel ist ein anderer Sinn als die Stationarität der Zeitreihe in Kapitel 2: hier bleibt die Wahrscheinlichkeitsverteilung der Preise über die Zeit unverändert, und Wissenschaft kommt eigentlich nur mit solchen stationären Statistiken zurecht.
 
 ## Funktionsweise
 
@@ -193,6 +204,7 @@ aktualisiert: 2026-10-30
 - Wäre die erwartete Rendite einer Regel wirklich null, kann die Wahrscheinlichkeit 0,03 betragen, dass der Backtest eine Rendite von plus 20 Prozent oder mehr liefert.
 - Bei einer beobachteten mittleren Rendite von 15 Prozent könnte das 95-Prozent-Konfidenzintervall die wahre Rendite zwischen 5 und 25 Prozent eingrenzen. In einem anderen Beispiel ist die geschätzte Rendite 10 Prozent, mit einer Wahrscheinlichkeit von 95 Prozent für den Bereich von 5 bis 15 Prozent.
 - Bei einer beobachteten Rendite von plus 3,5 Prozent und einem Flächenanteil von 0,10 ist der p-Wert 0,10.
+- Die simulierten TU-Tagesrenditen im zweiten Test haben denselben Mittelwert, dieselbe Standardabweichung, Schiefe und Kurtosis wie die beobachteten Futures-Renditen, aber nicht dieselben Korrelationen; 1.166 von 10.000 Pfaden erreichen die beobachtete Strategierendite.
 
 ## Unterschiedliche Quellenpositionen
 

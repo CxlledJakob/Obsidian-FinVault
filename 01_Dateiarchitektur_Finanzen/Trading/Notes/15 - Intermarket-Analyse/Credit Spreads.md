@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Credit Spreads
@@ -28,6 +28,11 @@ aktualisiert: 2026-10-30
 
 - Das Arbitrage-Pricing-Modell nennt als Faktoren unter anderem die Inflationsrate, den Spread zwischen Anleihen niedriger und hoher Qualität und die Steigung der Zinsstrukturkurve.
 - Diese lineare Beziehung der Aktienrendite zu den Faktoren entsteht, weil Arbitrageure nach risikolosen Gelegenheiten mit Investment null suchen.
+- Der TED Spread ist die Differenz zwischen dem Dreimonats-LIBOR und dem Zinssatz der Dreimonats-T-Bills und misst das Ausfallrisiko der Banken.
+- In der Kreditkrise 2008 stieg der TED Spread auf ein Rekordhoch von 457 Basispunkten.
+- Der Kreditmarkt wird von großen Institutionen dominiert, die vermutlich informierter sind als Indikatoren des Aktienmarkts, in dessen Bewertung der Herdentrieb der Privatanleger eingeht.
+- Der TED Spread bleibt ein brauchbarer führender Risikoindikator trotz der Manipulation der LIBOR-Sätze durch Banken, die sie niedriger erscheinen ließen, nach Snider und Youle 2010; entscheidend ist der relative Wert über die Zeit, nicht der absolute.
+- Hochzinsanleihen, vertreten etwa durch den ETF HYG, haben zu verschiedenen Zeiten als Risikoindikator gedient und müssen darauf geprüft werden, ob sie führend sind.
 
 ## Funktionsweise
 

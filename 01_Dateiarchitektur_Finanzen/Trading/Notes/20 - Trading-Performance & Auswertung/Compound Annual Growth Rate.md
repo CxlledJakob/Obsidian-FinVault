@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Compound Annual Growth Rate
@@ -27,6 +27,15 @@ aktualisiert: 2026-10-30
 - Drei Methoden berechnen diesen Hebel; jede hat eigene Annahmen und Nachteile.
 - Ist der maximale Drawdown bei einem Hebel minus 100 Prozent, ist die zusammengesetzte Wachstumsrate ebenfalls minus 100 Prozent, und der Hebel ist nicht optimal.
 - Der Hebel muss konstant gehalten werden, mit oder ohne Drawdown-Nebenbedingung, damit die Wachstumsrate optimiert wird.
+- Die drei Methoden zur Maximierung der zusammengesetzten Wachstumsrate sind die Kelly-Formel unter Gauß-Annahme, die Monte-Carlo-Optimierung einer nichtgaußschen Verteilung und die direkte Optimierung der historischen Wachstumsrate im Backtest.
+- Im Beispiel zweier unkorrelierter gaußscher Strategien mit annualisierten Überschussrenditen von 30 und 60 Prozent und Volatilitäten von 26 und 35 Prozent sind die Kelly-Hebel 4,4 und 4,9, der Bruttohebel 9,3 und die annualisierte Wachstumsrate g = F transponiert mal C mal F geteilt durch 2 gleich 2,1, bei risikofreiem Zins null.
+- Wird dieser Bruttohebel proportional auf ein Maximum von 2 gekürzt, auf 0,95 und 1,05, fällt g auf 0,82; Gleichung 8.3 gilt nur bei optimalen Hebeln.
+- Unter dieser engen Nebenbedingung ist g mit 0,96 höher, wenn die gesamte Kaufkraft auf die Strategie mit der höchsten Wachstumsrate gelegt wird, also F2 gleich 2 und F1 gleich 0.
+- Ist die Rendite gaußisch, reduziert sich g(f) analytisch auf f mal m minus f zum Quadrat mal m zum Quadrat geteilt durch 2, und das Maximum reproduziert Kelly sowie im Ein-Strategie-Fall die maximale Rate aus Gleichung 8.3.
+- Für die Mean-Reversion-Strategie liegt das Maximum der auf 100.000 Pearson-Ziehungen geschätzten Wachstumsrate bei einem Hebel von 19, nahe am Kelly-Wert 18,4; die historische Optimierung trifft 18,4.
+- Bei Hebel 31 ist die Wachstumsrate minus 1, weil die schlechteste Periodenrendite minus 0,0331 beträgt und jeder Hebel über 1 geteilt durch 0,0331 gleich 30,2 in dieser Periode zum Totalverlust führt.
+- In einer CPPI-Simulation über 100.000 Tage mit D gleich 0,5 ist die tägliche Wachstumsrate 0,002484 gegen 0,002525 beim Hebel f mal D auf dem Gesamtkonto.
+- Konstanter Hebel 5 auf 100.000 Dollar Eigenkapital verlangt einen Marktwert von 500.000 Dollar. Nach einem Tagesverlust von 10.000 Dollar müssen weitere 40.000 Dollar liquidiert werden, damit der Marktwert 5 mal 90.000 gleich 450.000 Dollar ist; nach einem Gewinn von 20.000 Dollar sind 80.000 Dollar zuzukaufen, weil der Zielwert 550.000 und der aktuelle Wert 470.000 Dollar ist.
 
 ## Funktionsweise
 

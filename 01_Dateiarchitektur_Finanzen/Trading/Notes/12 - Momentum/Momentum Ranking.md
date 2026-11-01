@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Momentum Ranking
@@ -22,6 +22,15 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Portfolios aus Futures oder Aktien zeigen oft querschnittliches Momentum, und ein einfacher Rang-Algorithmus auf Basis der Renditen genügt.
+- Dieselbe einfache Rangstrategie funktionierte laut Daniel und Moskowitz auch für Weltaktienindizes, Währungen, internationale Aktien und US-Aktien.
+- Daniel und Moskowitz finden von 1947 bis 2007 eine annualisierte Durchschnittsrendite von 16,7 Prozent und eine Sharpe Ratio von 0,83.
+- Nach 2009 stabilisierte sich die Aktienrendite, das frühere Hoch ist noch nicht wieder erreicht; die Futures-Variante erholte sich nach dem Abschnitt 2008 bis 2009.
+- Die Strategie ist eine vereinfachte Fassung von Daniel und Moskowitz 2011 und fast ein Spiegelbild des linearen Long-Short-Mean-Reversion-Modells von Khandani und Lo, mit deutlich längerem Lookback und längerer Haltedauer.
+- In Beispiel 6.2 werden die Renditen aufsteigend sortiert, fehlende Werte stabil ausgeschlossen, und die Tagesrendite durch 2 mal topN und durch die Haltedauer geteilt.
+- Ein Futures-Querschnitt kann statt nach Renditen nach BIP-Wachstum, Inflation oder einer Hauptkomponentenanalyse rangiert werden.
+- Hafez und Xie rangieren nach der Änderung des RavenPack Sentiment Index und erzielen vor Kosten 52 bis 156 Prozent annualisiert und Sharpe Ratios von 3,9 bis 5,3, je nach Zahl der Aktien.
+- Die Finanzkrise 2008 bis 2009 ruinierte das Rohstoff-Ranking ebenso wie den S&P DTI.
+- Käufe der Aktien mit dem stärksten Verkaufsdruck aus t minus 4 bis t minus 1 und Shorts der Aktien mit dem stärksten Kaufdruck erzielen weitere 7 Prozent annualisiert.
 
 ## Funktionsweise
 

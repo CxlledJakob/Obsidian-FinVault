@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Monte-Carlo-Simulation
@@ -82,6 +82,16 @@ aktualisiert: 2026-10-30
 - Die Spalte MC Sig prüft die Signifikanz auf dem Niveau 0,05 mit der Monte-Carlo-Permutation, die den Data-Mining-Bias berücksichtigt; keine Regel erhielt ein Sternchen.
 - White’s Reality Check und die Monte-Carlo-Permutation zeigten beide, dass die beste der 6.402 getesteten Regeln nicht statistisch signifikant war.
 - RC bezeichnet die bei Quantmetrics verfügbare Reality-Check-Fassung ohne die Wolf-Romano-Erweiterung, während MC diese Erweiterung enthält.
+- Monte-Carlo-Simulationen waren eine zuvor übersehene allgemeine Technik.
+- Wo der optimale Hebel bei einer nichtgaußschen Verteilung keine analytische Lösung hat, wird der Erwartungswert von log(1 plus f mal R) über Zufallsziehungen der ungehebelten Strategierendite je Bar maximiert, bei risikofreiem Zins null.
+- Das Pearson-System baut die Verteilung aus den ersten vier Momenten als eine von sieben analytischen Formen, darunter Gauß, Beta, Gamma und Student-t; unendliche höhere Momente wie bei der Pareto-Levy-Verteilung bleiben draußen, weil ihre Schätzung Data-Snooping einlädt.
+- Für die Mean-Reversion-Strategie aus Beispiel 5.1 ist der Kelly-Hebel 18,4. Aus den Tagesrenditen werden 100.000 Zufallsrenditen gezogen; der Verteilungstyp 4 ist keine Standardform wie die Student-t.
+- g(f) von 0 bis 23 hat ein Maximum nahe 19, und die numerische Optimierung liefert den Hebel 19, nahe an 18,4. Ein anderer Zufallsstart kann einen etwas anderen Wert liefern.
+- MATLAB hat kein fmaxbnd, deshalb wird das Negative der Wachstumsrate minimiert.
+- Bei Hebel 31 ist die Wachstumsrate minus 1, also Ruin, weil die negativste Periodenrendite minus 0,0331 beträgt und jeder Hebel über 30,2 in dieser Periode zum Totalverlust führt.
+- Die Optimierung auf den historischen statt den simulierten Renditen trifft ebenfalls 18,4, leidet aber am Data-Snooping-Bias und hat zu wenig Daten für viele Realisationen.
+- Der maximale Drawdown der simulierten Reihe beim Hebel 19,2 ist minus 0,999. Simulierte Reihen haben höhere Signifikanz, ähnlich dem Value-at-Risk, können einen in einer Million Jahren kaum eintretenden Drawdown zeigen und verfehlen serielle Korrelationen.
+- CPPI auf derselben Reihe über 100.000 Tage ergibt bei D gleich 0,5 eine tägliche Wachstumsrate von 0,002484 gegen 0,002525 beim Hebel f mal D; der CPPI-Drawdown bleibt unter 0,5, der alternative ohne Stop-Loss erreicht 0,9.
 
 ## Funktionsweise
 
@@ -130,6 +140,8 @@ aktualisiert: 2026-10-30
 - Anders als bei White's Reality Check muss die Renditeverteilung nicht auf null zentriert werden, weil die Null hier nicht lautet, alle Regeln hätten die erwartete Rendite null.
 - Der Mittelwert der so erzeugten Stichprobenverteilung ist die erwartete Rendite einer nutzlosen Regel in einem Data-Mining-Vorhaben; liegt sie nach der Zufallszuordnung über null, bleibt das so.
 - Der p-Wert ist die Fläche im rechten Rand bei oder jenseits der mittleren Rendite der gebacktesteten Regel, gleich dem Anteil der M Werte, die größer oder gleich dieser mittleren Rendite sind.
+- Zur Schätzung der Nullverteilung werden viele simulierte Preisreihen mit denselben ersten Momenten und derselben Länge wie die echten Daten erzeugt und durch die Strategie geschickt; p ist der Anteil, in dem die Durchschnittsrendite mindestens die Backtest-Rendite erreicht.
+- Ein dritter Weg nach Lo, Mamaysky und Wang 2000 randomisiert die Einstiege auf der echten Preisreihe bei gleicher Zahl von Long- und Short-Trades und gleicher mittlerer Haltedauer.
 
 ## Voraussetzungen
 
@@ -139,6 +151,8 @@ aktualisiert: 2026-10-30
 
 ## Regeln und Kriterien
 
+- Eine erwartete APR von 10 Prozent, signifikant innerhalb von 1 Prozent, bedeutet, dass unter 10.000 simulierten Preisreihen derselben Länge und mit denselben ersten drei Momenten nur 100 eine APR von mindestens 10 Prozent haben.
+- Dieselbe Aussage bedeutet alternativ, dass nur eine von 100 Permutationen der Einstiegstage eine APR von mindestens 10 Prozent erreicht.
 
 ## Risiken und Grenzen
 
@@ -152,6 +166,7 @@ aktualisiert: 2026-10-30
 - Das Verfahren kann keine Konfidenzintervalle erzeugen, weil es keine Hypothese über die mittlere Rendite der Regel testet.
 - Masters prüfte seine Power gemeinsam mit White's Reality Check an künstlichen Regeln beiderseits der Benchmark; bei extrem großer Varianz einer Regel mit negativer erwarteter Rendite kann die Power drastisch sinken, in wahrscheinlicheren Fällen der technischen Analyse sind beide Verfahren einigermaßen robust.
 - Die Erweiterung von Romano und Wolf scheint auch die Power dieses Verfahrens zu steigern; die erweiterte Fassung wird gemeinfrei gestellt, der Code auf www.evidencebasedta.com.
+- Verschiedene Nullhypothesen liefern verschiedene Signifikanzschätzungen, weil jede simulierte Verteilung die Strategie mit einem anderen Zufalls-Benchmark vergleicht.
 
 ## Beispiele
 
@@ -176,6 +191,10 @@ aktualisiert: 2026-10-30
 - Für den Fall ohne Data Mining wurden 1.000 Historien von je 24 Monaten erzeugt.
 - Der Bias für die beste von 2, 10, 50 und 400 wurde jeweils über 10.000 Wiederholungen gemessen, alle Historien 24 Monate lang, Gewinnwahrscheinlichkeit 0,50 und Renditen unkorreliert.
 - Die Monatszahl wurde von einem Monat bis 1.000 in Schritten von 50 Monaten variiert, und der Bias wurde bei jedem Schritt für die beste von 10 und die beste von 100 berechnet, alle mit erwarteter Rendite null.
+- Im TU-Beispiel erzeugt pearsrnd 10.000 Renditepfade mit demselben Mittelwert, derselben Standardabweichung, Schiefe und Kurtosis, aber ohne die eingebetteten Korrelationen; die Preise sind das kumulative Produkt aus eins plus der simulierten Rendite, minus eins.
+- Davon haben 1.166 eine mindestens so hohe durchschnittliche Strategierendite wie die beobachtete Reihe, die Null wird nur mit 88 Prozent verworfen.
+- Unter 100.000 Zufallsanordnungen der Long- und Short-Einstiegstage der TU-Strategie erreicht keine die beobachtete Durchschnittsrendite.
+- Von 10.000 Zufallsreihen der TU-Renditen mit denselben Momenten erreichen 1.166 mindestens die beobachtete Strategierendite, die Null wird nur mit 88 Prozent verworfen.
 
 ## Unterschiedliche Quellenpositionen
 

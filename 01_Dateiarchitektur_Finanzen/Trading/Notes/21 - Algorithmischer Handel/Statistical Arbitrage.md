@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Statistical Arbitrage
@@ -28,6 +28,21 @@ aktualisiert: 2026-10-30
 - Nur die ausgefeiltesten Händler können daraus noch Gewinn ziehen, und die Strategie muss intraday, vielleicht hochfrequent, gehandelt werden; die Differenz lässt sich vergrößern, indem nur eine Teilmenge der Indexaktien das Portfolio bildet.
 - Gelegenheiten für Mean-Reversion-Strategien in Währungen und Futures sind begrenzt, aber nicht inexistent, weil die meisten Paare nicht kointegrieren und die meisten Portfolios keine querschnittliche Mean Reversion zeigen.
 - Die zentrale Schwierigkeit beim Backtest von Währungsarbitrage ist nicht die Komplexität der Strategien, sondern die richtige Aufbereitung der Datenreihen für Kointegrationstests und die richtige Formel zur Renditemessung.
+- Die Extraktion der Rollrendite funktioniert, solange das Vorzeichen der Rollrendite nicht schnell wechselt, was gewöhnlich nicht geschieht.
+- Sie hat voraussichtlich kürzere Haltedauer und geringeres Risiko als Buy-and-Hold, weil der verrauschte Spot nicht lange ausgemittelt werden muss.
+- Den Basiswert zu kaufen und besonders zu shorten ist logistisch schwer, außer ein ETF hält den Basiswert.
+- GLD hält physisches Gold und folgt dem Spot eng; Gold-Futures haben von Dezember 1982 bis Mai 2004 eine Rollrendite von minus 4,9 Prozent annualisiert.
+- Long GLD und short GC erzielen vom 3. August 2007 bis zum 2. August 2010 1,9 Prozent annualisiert bei einem maximalen Drawdown von 0,8 Prozent; ein Hebel von 5 oder 6 wirkt attraktiv, die Finanzierungskosten von GLD liegen aber nahe bei 1,9 Prozent, die Überschussrendite ist nahe null.
+- Die GC-Schlüsse liegen um 13:30 Uhr ET, die GLD-Schlüsse um 16:00 Uhr ET; weil die Signale nur aus GC kommen, schadet diese Asynchronität hier nicht.
+- Es gibt keine ETFs, die andere physische Rohstoffe statt Rohstoff-Futures halten, wegen der hohen Lagerkosten.
+- ETFs von Förderunternehmen kointegrieren oft mit dem Spot, weil die Rohstoffe einen großen Teil ihrer Vermögenswerte ausmachen, und können als Proxy dienen.
+- Short USO und long XLE, wenn CL in Contango ist, und umgekehrt in Backwardation, erzielen vom 26. April 2006 bis zum 9. April 2012 16 Prozent annualisiert bei einer Sharpe Ratio von etwa 1.
+- Einen Optionskorb zu halten, der den VIX nachbaut, ist sehr teuer, und kein ETF-Sponsor hat das getan; gesucht wird nur hohe Korrelation oder Antikorrelation zur Spotrendite, und SPY erfüllt das für VIX.
+- Weil ES leichter als ein ETF zu handeln ist und nur etwa 1 Prozent annualisierte Rollrendite hat, ersetzt ES in der Arbitrage den Aktien-ETF.
+- Die Regel von Simon und Campasano shortet 0,3906 VX und ein ES, wenn der VX-Frontkontrakt um 0,1 Punkte je Handelstag bis zum Settlement über dem VIX liegt, und kauft beide, wenn er um denselben Betrag darunter liegt; gehalten wird ein Tag.
+- Die Hedge Ratio stammt aus der Preisregression von Gleichung 5.11, nicht aus der Renditeregression des Originalpapiers; Settlement ist der Tag nach dem Verfall der Kontrakte.
+- Vom 29. Juli 2010 bis zum 7. Mai 2012, außerhalb der Bestimmung der Hedge Ratio, beträgt die annualisierte Rendite 6,9 Prozent bei einer Sharpe Ratio von 1.
+- Ein dritter Weg kauft Futures in Backwardation und shortet zugleich Futures in Contango, damit sich die Spot-Renditen aufheben und die günstigen Rollrenditen bleiben.
 
 ## Funktionsweise
 
@@ -42,6 +57,12 @@ aktualisiert: 2026-10-30
 - Für andere physische Rohstoffe gibt es solche ETFs nicht, wegen der erheblichen Lagerkosten; eine ungenauere Form der Arbitrage nutzt ETFs von Rohstoffproduzenten, die oft mit dem Spotpreis kointegrieren.
 - USO enthält nichts als die Frontmonatskontrakte von CL und ersetzt CL, weil XLE und CL verschiedene Schlusszeiten haben.
 - Bei Contango von CL wird USO geshortet und XLE gekauft, bei Backwardation wird USO gekauft und XLE geshortet.
+- Ein Kointegrationstest von Währungen ist nur sinnvoll, wenn eine Punktbewegung in beiden Reihen denselben Dollarwert hat. AUD gegen CAD wird deshalb auf AUD.USD und CAD.USD getestet.
+- Eine Einheit einer Währung gegen USD ist so viele Dollar wert wie ihr Kurs, eine Einheit USD gegen eine andere Währung ist genau einen Dollar wert. Für einen Kreuzkurs wird die Log-Rendite verwendet, auch wenn die Heimatwährung EUR ist.
+- Die Überschussrendite eines über Nacht gehaltenen Kreuzkurses addiert log(1 + Zins der Basis) minus log(1 + Zins der Kurswährung) zur Log-Preisänderung.
+- Kalenderspreads sind die Stelle, an der Mean Reversion bei Futures die Ausnahme ist. Der 12-Monats-Spread von CL ist im ADF-Test mit 99 Prozent stationär, hat eine Halbwertszeit von etwa 36 Tagen und erzielt ungehebelt 8,3 Prozent annualisierte Rendite bei einer Sharpe Ratio von 1,3.
+- Im Allgemeinen mean-reverten Kalenderspreads nicht, weil die Rollrendite das Signal vom gemeinsamen Spot abkoppelt.
+- Als weitere Ausnahme nennt der Text den Spread aus Volatilitäts-Future und Aktienindex-Future.
 
 ## Voraussetzungen
 
@@ -60,6 +81,16 @@ aktualisiert: 2026-10-30
 - Die Steigung der Log-Forward-Kurve aus Gleichung 5.7 wird nicht verwendet, weil diese Gleichung für VX nicht gilt und die VX-Forward-Preise nicht auf einer Geraden liegen.
 - Die Hedge Ratio folgt der Preisregression in Gleichung 5.11, nicht der Renditeregression des Originalpapiers, und das Settlement ist der Tag nach dem Verfall der Kontrakte.
 - Vom 29. Juli 2010 bis zum 7. Mai 2012, nicht verwendet für die Hedge Ratio, beträgt die annualisierte Rendite 6,9 Prozent bei einer Sharpe Ratio von 1.
+- Im SPY-Beispiel des Trainingsjahrs 2007 kointegrieren 98 Aktien einzeln mit mindestens 90 Prozent. Das gleichgewichtige Long-only-Portfolio wird auf Log-Preisen erneut geprüft, weil täglich auf konstantes Kapital rebalanciert wird, und kointegriert mit besser als 95 Prozent.
+- Die lineare Mean Reversion auf dem Testzeitraum 2. Januar 2008 bis 9. April 2012, Lookback 5 im Rückblick, erzielt 4,5 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,3. Ohne periodisches Neutraining fällt die Performance.
+- Die Trace-Statistik 15,869 überschreitet den 95-Prozent-Wert 15,494, nicht den 99-Prozent-Wert 19,935. Die Eigenwert-Statistik 9,671 bleibt unter dem 90-Prozent-Wert 12,297. Genommen wird von zwei Relationen die mit dem größten Eigenwert.
+- Weil Log-Preise getestet wurden, sind die Hedge Ratios Dollarkapital. Jede Aktie bekommt dasselbe Gewicht, SPY ein anderes.
+- Die bekannte Johansen-Implementierung nimmt höchstens 12 Symbole. Eigenvektoren über das ganze Universum mischen zudem Long- und Short-Aktien, sodass ein Long-only-Korb nicht sauber gegen Short-SPY steht und einzelne Titel doppelt short werden können.
+- Alternativ minimieren ein genetischer Algorithmus oder Simulated Annealing den durchschnittlichen absoluten Abstand zur SPY-Reihe unter der Nebenbedingung positiver Hedge Ratios.
+- Die Leerverkaufsbeschränkung wiegt hier weniger schwer, weil der Korb mit etwa 98 Aktien diversifiziert ist. Fallen wenige Titel weg, bleibt die Wirkung begrenzt.
+- Das parameterfreie lineare Long-Short-Modell auf relativen Tagesrenditen ist nahezu dollarneutral, setzt jeden Tag 1 Dollar Brutto ein und erzielt auf dem S&P 500 13,7 Prozent annualisierte Rendite bei einer Sharpe Ratio von 1,3, 2008 sogar 30 Prozent.
+- Ab Anfang 2008 ist dieser Test echt out of sample, die Veröffentlichung war 2007. Die Intraday-Fassung erreicht 73 Prozent und eine Sharpe Ratio von 4,7, bei verdoppelten Kosten und Signalrauschen.
+- Als Ranggröße neben der relativen Rendite dient das Kurs-Gewinn-Verhältnis, damit eine durch geänderte Gewinnschätzungen gedeckte Bewegung nicht als Umkehr geshortet wird.
 
 ## Regeln und Kriterien
 
@@ -69,6 +100,11 @@ aktualisiert: 2026-10-30
 - Paar- und andere Arbitragestrategien, deren Signale von Quote-Differenzen abhängen, sind gegen fehlerhafte Live-Bid-Ask-Quotes besonders empfindlich, weil die Differenz meist viel kleiner ist als die Quotes und der prozentuale Fehler im Spread dadurch viel größer wird.
 - Ein Johansen-Test auf alle 500 Aktien plus SPY scheitert an einer Obergrenze von 12 Symbolen und daran, dass die Eigenvektoren meist Long- und Short-Aktien mischen und damit spezifisches Doppel-Short-Risiko erzeugen.
 - Dieselbe Short-Sale-Beschränkung trifft auch diese Strategie, wirkt bei etwa 98 Titeln aber begrenzt, wenn wenige Aktien entfallen.
+- Nach 2008 fiel die durchschnittliche Marktvolatilität, während plötzliche Ausbrüche häufiger wurden; Mean-Reversion-Strategien, die ein hohes, aber konstantes Volatilitätsniveau brauchen, verloren dadurch allgemein an Gewinn.
+- Die Regulation NMS im Juli 2007 trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei.
+- Beim Handel von Paaren oder anderen Arbitrage-Strategien sind fehlerhafte Bid- und Ask-Quotes besonders gefährlich, weil die Signale auf kleinen Quote-Differenzen beruhen und ein kleiner Fehler den Spread prozentual stark verfälscht.
+- Im Beispiel steigt ein wahrer Spread von 5 Dollar durch einen um 1 Dollar falschen Ask auf 6 Dollar, also um 20 Prozent, und kann eine fehlerhafte Order zum Kauf von X und Verkauf von Y auslösen.
+- Die Backtests lassen Transaktionskosten weg, weil sie von Ausführung und Universum abhängen, und sie nutzen Aktien mit Survivorship Bias sowie konsolidierte statt primärer Eröffnungen und Schlüsse, sodass MOO- und MOC-Fills schlechter ausfallen als berichtet.
 
 ## Beispiele
 
@@ -78,6 +114,7 @@ aktualisiert: 2026-10-30
 - Ein Hebel von 5 oder 6 wirkt darauf attraktiv, ist es aber nicht, weil die Finanzierungskosten von GLD nicht weit von diesen 1,9 Prozent entfernt liegen und die Überschussrendite nahe null ist.
 - GC wird um 13:30 Uhr ET festgestellt, GLD um 16:00 Uhr ET; die Signale kommen allein aus den GC-Schlusskursen, deshalb ist die Asynchronität hier folgenlos.
 - XLE gegen USO erzielt vom 26. April 2006 bis zum 9. April 2012 eine annualisierte Rendite von 16 Prozent bei einer Sharpe Ratio von etwa 1.
+- AUD.USD gegen CAD.USD mit Johansen-Gewichten erzielt 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6. AUD.CAD mit Rollover erzielt 6,2 Prozent und 0,54.
 
 ## Unterschiedliche Quellenpositionen
 

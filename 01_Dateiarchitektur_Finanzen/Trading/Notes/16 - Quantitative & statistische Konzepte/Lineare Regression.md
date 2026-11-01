@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Lineare Regression
@@ -38,6 +38,21 @@ aktualisiert: 2026-10-30
 - Bei Camerer waren die subjektiven Urteile der Experten am ungenauesten und die mit Regressionsanalyse geschätzten multivariaten linearen Modelle am genauesten, genauer auch als ein mathematisches Modell davon, wie die Experten ihre Urteile bildeten.
 - Goldberg zeigte 1968, dass ein lineares Prognosemodell auf Persönlichkeitstestwerten neurotische von psychotischen Patienten besser trennte als erfahrene klinische Diagnostiker.
 - Das Modell von Goldberg traf zu 70 Prozent, die Treffer der Experten lagen zwischen 52 und 67 Prozent.
+- Lineare Modelle meinen hier nicht nur eine lineare Preisprognose, sondern auch eine lineare Kapitalallokation.
+- Zu jedem nichtlinearen Modell gibt es über die Taylor-Entwicklung meist eine einfachere lineare Näherung; eine Begründung ist nötig, warum sie nicht genügt, außer wenn die Terme niedriger Ordnung verschwinden, was realistische Finanzzeitreihen selten beschreiben.
+- Die ADF-Gleichung ist die lineare Regression Δy(t) = λ y(t minus 1) + μ + βt + α1 Δy(t minus 1) + … + αk Δy(t minus k) + εt. Die Teststatistik ist der Koeffizient von y(t minus 1), geteilt durch seinen Standardfehler.
+- Für die Halbwertszeit werden Drift und verzögerte Differenzen weggelassen und Δy auf das verzögerte y plus eine Konstante regressiert. λ ist der erste Steigungskoeffizient, die Halbwertszeit ist minus log(2)/λ.
+- Die Hedge Ratio eines Paares ist der Steigungskoeffizient der Kleinste-Quadrate-Regression der einen Preisreihe auf die andere plus Konstante. Sie ist nicht der genaue Kehrwert, wenn abhängige und unabhängige Variable getauscht werden.
+- Im Mehrreihenfall ist Λ eine Matrix. Λ gleich 0 bedeutet, dass der nächste Schritt nicht vom aktuellen Preisniveau abhängt und keine Kointegration vorliegt.
+- Die Halbwertszeit eines Portfolios wird bestimmt, indem die Änderung seines Nettomarktwerts yport auf den verzögerten yport und eine Konstante regressiert wird. Die Halbwertszeit ist minus log(2) geteilt durch den ersten Steigungskoeffizienten.
+- yport ist die Summe aus Eigenvektor-Stückzahl mal Preis über alle ETFs. Für EWA, EWC und IGE ergibt diese Regression 23 Tage, gegen etwa 115 Tage bei USD.CAD.
+- Für ein wirklich kointegrierendes Paar wird die Hedge Ratio mit OLS auf möglichst langer Historie oder mit dem Johansen-Test geschätzt.
+- Für GLD und USO wird die Hedge Ratio täglich neu geschätzt: OLS von USO auf GLD plus Konstante über die letzten 20 Handelstage. Der Spread ist minus Hedge-Ratio mal GLD plus USO. Alternativ dient der erste Johansen-Eigenvektor.
+- Dieselbe Regression auf Logpreisen liefert die Gewichte als Kapitalgewichte. Sie erreicht etwa 9 Prozent APR und eine Sharpe Ratio von 0,5, unter den etwa 10,9 Prozent und 0,59 des Preisspreads, und das vor den Rebalancing-Kosten.
+- Der Kalman-Filter ist eine dynamische lineare Regression. δ gleich 0 setzt Steigung und Achsenabschnitt fest und fällt mit der OLS-Regression zusammen.
+- Die Koeffizienten der ES-VX-Regression werden nur auf den ersten 500 Tagen nach August 2008 als Trainingsset geschätzt.
+- Eine Regression auf der Mischung der Regime 2004 bis Mai 2008 und August 2008 bis 2012 wäre ein Fehler; verwendet wird das zweite Regime, das bis zum Schreibzeitpunkt reicht.
+- Vor der Regression werden die VX-Preise mit 1.000 und die ES-Preise mit 50 multipliziert, weil ein Punkt VX 1.000 Dollar und ein Punkt ES 50 Dollar entspricht und die Hedge Ratio sonst nicht das Kontraktverhältnis trifft.
 
 ## Funktionsweise
 
@@ -68,6 +83,18 @@ aktualisiert: 2026-10-30
 - Der Fosback Index signalisiert, wenn die Cash-Quote der Fonds deutlich von dem Niveau abweicht, das die lineare Beziehung zu den kurzfristigen Zinsen vorhersagt.
 - Neben der einfachen linearen Kombination gibt es anspruchsvollere lineare Kombinationen, in denen den Variablen Gewichte zugewiesen werden, also eine gewichtete algebraische Summe.
 - Algebraisch meint hier, dass Zahlen mit positiven und mit negativen Werten kombiniert werden.
+- Die extremste lineare Prognose gibt allen Faktoren betragsgleiche Gewichte: z(i) ist (f(i) minus Mittel von f) geteilt durch die Standardabweichung von f, geschätzt auf In-Sample-Daten, und die prognostizierte Rendite ist Mittel von R plus Standardabweichung von R mal dem Mittel der Produkte aus Vorzeichen der historischen Korrelation und z(i).
+- Wer nur eine Rangfolge braucht, bildet je Faktor den Rang der Aktie, multipliziert mit dem Vorzeichen der Korrelation zur erwarteten Rendite und summiert diese vorzeichenbehafteten Ränge.
+- Kahneman schreibt, Formeln mit gleichen Gewichten aller Prädiktoren seien oft überlegen, weil sie nicht von Zufällen der Stichprobe betroffen sind.
+- Das Preismodell lautet F(t, T) = c mal e hoch αt mal exp(γ(t − T)). Die Gesamtrendite, die Ableitung des Log-Preises nach t, ist α plus γ. Die Rollrendite, minus die Ableitung nach der Fälligkeit T, ist γ.
+- Die Spot-Rendite wird geschätzt, indem der Logarithmus des Spots gegen die Zeit regressiert wird. Annualisiert wird mit 252 mal dem Mittel des Steigungskoeffizienten.
+- Die Rollrendite wird je Tag aus den Log-Preisen der fünf nächsten aufeinanderfolgenden Kontrakte gegen die Restlaufzeit in Monaten geschätzt. Gamma ist minus 12 mal dem Steigungskoeffizienten.
+- Nur die fünf nächsten Kontrakte werden genommen, weil die Forward-Kurve weiter draußen von Contango in Backwardation oder umgekehrt wechseln kann.
+- Trotz konstanter Gamma im Modell hängt der Koeffizient vom Tag und vom Kontraktsatz ab, das geschätzte Gamma variiert also langsam.
+- Bei CL fallen die Log-Preise der fünf nächsten Kontrakte gegen die Restlaufzeit nahezu auf eine Gerade, gezeigt für die Kontrakte Januar bis Mai 2007. Entferntere Laufzeiten verlassen die Gerade, und die Gleichung bricht.
+- Die annualisierten Mittel sind für den Real-Future −2,7 Prozent Spot und 10,8 Prozent Roll, für Mais 2,8 und −12,8, für WTI 7,3 und −7,1, für Kupfer 5,0 und 7,7 und für die zweijährige Note −0,0 und 3,2 Prozent.
+- Positives Gamma bedeutet Backwardation, negatives Contango. Die geschätzte Rollrendite von CL läuft vom 22. November 2004 bis 13. August 2012.
+- Erb und Harvey finden für Heizöl von Dezember 1982 bis Mai 2004 eine annualisierte Rollrendite von 4,6 Prozent gegen eine Spot-Rendite von 0,93 Prozent.
 
 ## Voraussetzungen
 
@@ -82,6 +109,7 @@ aktualisiert: 2026-10-30
 - Das Arbitrage-Pricing-Modell sagt, ein lineares Modell verknüpfe die Rendite einer Aktie mit einer Reihe von Faktoren, und diese Beziehung entstehe, weil Arbitrageure nach risikolosen Gelegenheiten mit Investment null suchen.
 - Der Indikator der Beziehung zweier Reihen ist die Zeitreihe der Residuen der linearen Beziehung zwischen ihnen.
 - Der Operator YY normiert seine Werte mit dem Standardfehler der Regression und führte keinen expliziten Test auf die Stationarität der Residuen durch.
+- Die absolute Renditeprognose des gleichgewichteten Faktormodells kann ungenau sein, die relative zwischen Aktien ist oft gut genug, sodass Long das obere Dezil und Short das untere Dezil oft eine positive Durchschnittsrendite liefert.
 
 ## Regeln und Kriterien
 
@@ -108,6 +136,8 @@ aktualisiert: 2026-10-30
 - Positive γ zeigen Backwardation, negative Contango; für CL sind die annualisierten γ vom 22. November 2004 bis 13. August 2012 geplottet.
 - Haben von sieben Variablen mit den Werten +1 oder −1 fünf den Wert +1 und zwei den Wert −1, ist die lineare Kombination +3, also (+5) + (−2).
 - Eine lineare Kombination dreier binärer Variablen kann nur vier verschiedene Werte annehmen, während drei binäre Variablen acht verschiedene Konfigurationen bilden.
+- Greenblatts Magic Formula nutzt Kapitalrendite und Earnings Yield, kauft die 30 bestplatzierten Aktien und hält sie ein Jahr; die APR war 30,8 Prozent von 1988 bis 2004 gegen 12,4 Prozent des S&P 500.
+- Beispiel 4.2 ist eine lineare Mean-Reversion zwischen einem ETF und seinen Bestandteilaktien, die Beispiele 4.3 und 4.4 sind zwei lineare Long-Short-Statistical-Arbitrage-Strategien auf Aktien.
 
 ## Unterschiedliche Quellenpositionen
 

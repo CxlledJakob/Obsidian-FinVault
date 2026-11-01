@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Overfitting
@@ -128,6 +128,10 @@ aktualisiert: 2026-10-30
 - Die besten Einstellungen für einen begrenzten Zeitraum von nur wenigen Monaten täglicher SPX-Daten zu wählen, wird hier Optimieren der historischen Daten genannt.
 - Ob diese historisch gewählten Einstellungen künftig nützlich bleiben, gilt gewöhnlich, nicht immer.
 - Perfektion gibt es nicht; gesucht wird die beste Passung, und besser als diese beste Passung wird es nicht.
+- Einfache und lineare Strategien gelten als Gegenmittel gegen Overfitting und Data-Snooping-Bias, die komplexe Strategien oft befallen.
+- Den Lookback als kleines Vielfaches der Halbwertszeit zu wählen, vermeidet die Brute-Force-Optimierung eines freien Parameters anhand der Performance der Handelsstrategie.
+- Underperformt eine Strategie den Backtest, sollen nicht blind weitere Regeln und Indikatoren ergänzt werden in der Hoffnung, die Leistung stelle sich wieder ein; gesucht wird ein fundamentaler Grund, der dann quantitativ geprüft wird.
+- Einfache lineare Strategien werden betont, weil eine verstandene Marktunvollkommenheit durch ein einfaches Modell ausgenutzt werden kann und beliebige Zusatzregeln unnötig sind.
 
 ## Funktionsweise
 
@@ -161,6 +165,10 @@ aktualisiert: 2026-10-30
 - Findet der Backtest keine profitable Strategie, wird von vorn begonnen und das Wiederverwenden der Ergebnisse unterlassen.
 - Den Lookback auf ein kleines Vielfaches der Halbwertszeit zu setzen, vermeidet die Brute-Force-Optimierung eines freien Parameters anhand der Performance der Handelsstrategie.
 - Die lineare Mean-Reversion-Strategie wird als wirklich parameterfrei beschrieben.
+- Data-Snooping-Bias wird minimiert, indem das Modell so einfach wie möglich und mit so wenigen Parametern wie möglich gebaut wird.
+- Wenige Parameter bei vielen komplizierten Handelsregeln bleiben anfällig; nichtlineare Modelle sind anfälliger als lineare, weil sie komplizierter sind und gewöhnlich mehr freie Parameter haben.
+- Einfache Modelle sind ein einfaches Heilmittel gegen Data-Snooping-Bias.
+- Strategien mit hoher Rendite und niedriger Sharpe Ratio, im Beispiel 30 Prozent bei 0,3 und zwei Jahren maximaler Drawdown-Dauer, lohnen den Backtest nicht, weil die hohe Rendite wahrscheinlich Data-Snooping ist.
 
 ## Risiken und Grenzen
 
@@ -199,6 +207,9 @@ aktualisiert: 2026-10-30
 - Eine bestimmte Datendichte ist nötig, damit Data-Mining-Software gültige Muster vom Hintergrundzufall unterscheiden kann.
 - Reichen 100 Beobachtungen für die nötige Dichte in zwei Dimensionen, werden 1.000 in drei Dimensionen und 10.000 in vier Dimensionen benötigt.
 - Trotz dieser Grenze ist moderne Data-Mining-Software im konfiguralen Schlussfolgern und in der Erkennung komplexer Muster unendlich besser als die klügsten Menschen.
+- Die Beispiel-Backtests optimieren Parameter und messen die Leistung oft auf denselben In-Sample-Daten und blähen die Ergebnisse damit auf.
+- Eine nichtlineare Extrapolation passt die historischen Preise besser, garantiert aber keine bessere Prognose künftiger Werte.
+- Wer ein Modell so lange nachjustiert, bis In-Sample und Out-of-Sample beide gut aussehen, hat die Out-of-Sample-Daten in Trainingsdaten verwandelt.
 
 ## Beispiele
 
@@ -209,6 +220,7 @@ aktualisiert: 2026-10-30
 - Weitere Komplexität wird ergänzt, bis die Leistung im Testsatz nachlässt; die optimale Regel ist dann die Regel der höchsten Komplexität, die im Testsatz am besten abgeschnitten hat.
 - Eine Regel, deren Komplexitätswachstum vor diesem Testgipfel gestoppt wird, hat nicht alle gültigen Muster erfasst und heißt unterangepasst.
 - Die Vier-Parameter-Regel verdiente in den Trainingsdaten 50 Prozent, die Zwei-Parameter-Vorgängerregel 30 Prozent.
+- Ein neuronales Netz mit etwa 100 Knoten passt mindestens etwa 100 Parameter an die In-Sample-Daten an, kann eine Backtest-Sharpe-Ratio von 6 erzeugen und hat danach wenig oder keine Prognosekraft.
 
 ## Unterschiedliche Quellenpositionen
 

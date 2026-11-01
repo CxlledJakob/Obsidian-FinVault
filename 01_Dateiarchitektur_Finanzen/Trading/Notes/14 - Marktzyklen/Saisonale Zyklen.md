@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/14 - Marktzyklen/14 - Marktzyklen|14 - Marktzyklen]]"
 weitere_hauptthemen: []
 unterthema: "Zeitzyklen"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-01
 ---
 
 # Saisonale Zyklen
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die meisten Aktien zeigen unter normalen Umständen, also ohne Nachricht, kurzfristig Mean Reversion, obwohl sie langfristig geometrischen Random Walks folgen. Der Text nennt das saisonale Mean Reversion.
+- Diese Umkehr sitzt im Intraday-Fenster und ist mit den üblichen Stationaritäts- oder Kointegrationstests schwer zu erkennen, kann aber sehr profitabel sein.
+- Preisreihen ohne Mean Reversion auf Tagesbars können in bestimmten Perioden stark mean-reverten. Das ist Saisonalität auf kurzer Zeitskala.
 
 ## Funktionsweise
 
@@ -41,6 +42,9 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Buy-on-Gap kauft Aktien, die vom Tief des Vortags zur Eröffnung um mehr als eine Standardabweichung fallen und deren Open über dem 20-Tage-Durchschnitt liegt, und verkauft sie zum Schluss. Vom 11. Mai 2006 bis 24. April 2012 sind die annualisierte Rendite 8,7 Prozent und die Sharpe Ratio 1,5.
+- Die Begründung ist der Tagesablauf: Panikverkäufe zur Eröffnung, wenn die Index-Futures vorher unten sind, ebbt ab, und die Aktie erholt sich über den Tag.
+- Das Short-Spiegelbild, ein Gap nach oben um eine Standardabweichung bei einem Kurs unter dem 20-Tage-Durchschnitt, erzielt 46 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,27, bei steilerem Drawdown.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Parameterstabilität
@@ -37,6 +37,8 @@ aktualisiert: 2026-10-30
 - Hat man einen Indikator und einen Einstellungssatz gewählt, bleibt man dabei, bis ein sehr zwingender Grund zur Änderung vorliegt.
 - Dieselben zuvor nützlichen Einstellungen blieben über die folgenden Monate nützlich, bis der Aufwärtstrend stärker und die Korrekturen in Zeit und Preis kleiner wurden und der Indikator die Oversold-Zone nicht mehr erreichte.
 - Nach einigen weiteren Oszillationen ohne Erreichen der Oversold-Zone auf den Korrekturen würde man wahrscheinlich auf eine kürzere Lookback-Periode wechseln.
+- Die mathematische Optimalität der Kelly-Allokation über das Gesamtportfolio setzt voraus, dass die erwarteten Renditen und die Volatilitäten der Strategien unverändert bleiben.
+- Nach einem jüngeren schweren Drawdown ist zweifelhaft, ob diese Erwartungen noch gelten; die Erfahrung bevorzugt dann Kelly auf jede Strategie einzeln.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Serial Correlation
@@ -45,6 +45,16 @@ aktualisiert: 2026-10-30
 - Querschnittliches Momentum bei Währungen lässt sich der seriellen Korrelation des Weltwirtschafts- oder Zinswachstums zuschreiben.
 - Eine kritische Annahme ist, dass die Beobachtungen der Stichprobe unabhängig sind. Sind sie seriell korreliert, wie es in einer Zeitreihe der Fall sein kann, sinkt die Varianz langsamer, als die Quadratwurzelregel nahelegt.
 - Diese langsamere Varianzsenkung gilt, wenn die Teststatistik der Stichprobenmittelwert ist, aber nicht allgemein.
+- Erreichen viele simulierte Renditepfade mit denselben ersten Momenten, aber ohne die seriellen Korrelationen, mindestens die Backtest-Rendite der Momentum-Strategie, erfasst sie kein echtes Momentum und keine serielle Korrelation, sondern profitiert von Mittelwert und Form der Verteilung.
+- Bei der TU-Strategie erreichen 1.166 von 10.000 solchen Pfaden die beobachtete Durchschnittsrendite, deshalb hat die Form der Verteilung mit dem Erfolg zu tun.
+- Anti-Serienkorrelation der Renditen ist handelbar und gleichbedeutend mit Mean Reversion der Preise. Die Mean Reversion der Renditen selbst lässt sich nicht handeln.
+- Preisänderungen haben oft serielle Korrelation: die ADF-Null lässt sich häufig erst mit Lag k gleich 1 verwerfen, mit k gleich 0 dagegen nicht.
+- Querschnitts-Mean-Reversion bedeutet, dass die kurzfristigen relativen Renditen seriell antikorreliert sind. Die relative Rendite ist die Rendite des Instruments minus die Rendite des Korbs.
+- Viele Futures-Renditen sind seriell korreliert, aber nur auf einer ziemlich langen Zeitskala.
+- Das passt zu BR, HG und TU, deren Rollrenditen laut Tabelle 5.1 betragsmäßig größer sind als ihre Spot-Renditen.
+- Für C gilt die Erklärung nicht, obwohl C die betragsmäßig größte Rollrendite gegenüber der durchschnittlichen Spot-Rendite hat.
+- Querschnittliches Momentum von Währungen lässt sich über serielle Korrelation des Weltwirtschafts- oder Zinswachstums erklären, das von Aktien über die langsame Diffusion, Analyse und Annahme neuer Information.
+- Beispiel 1.1 zeigt, dass eine Renditereihe ohne serielle Autokorrelationen, aber mit derselben Kurtosis wie die TU-Futures, in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie erzeugen kann.
 
 ## Funktionsweise
 

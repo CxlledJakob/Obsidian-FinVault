@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Short-Term Reversal
@@ -48,6 +48,15 @@ aktualisiert: 2026-10-30
 - Buy-on-Gap kauft Aktien, die vom Vortagestief zum Open um mehr als eine Standardabweichung der 90-Tage-Close-to-Close-Renditen gefallen sind, deren Open über dem 20-Tage-Schlussdurchschnitt liegt, nimmt davon die 10 schwächsten und liquidiert zum Schluss.
 - Die Begründung ist unverhältnismäßiger Panikverkauf zum Open, wenn die Index-Futures vorbörslich unten sind, und eine allmähliche Erholung über den Tag.
 - Querschnittlich folgt auf relative Unterperformance relative Überperformance und umgekehrt, gemessen als Rendite minus Durchschnitt des Universums.
+- Buy-on-Gap kauft nahe der Eröffnung die bis zu zehn Aktien mit dem stärksten Gap nach unten vom Tief des Vortags, sofern dieser Gap eine Standardabweichung der 90-Tage-Close-to-Close-Renditen überschreitet und der Open über dem 20-Tage-Durchschnitt liegt, und stellt zum Schluss glatt.
+- Vom 11. Mai 2006 bis 24. April 2012 sind annualisierte Rendite 8,7 Prozent und Sharpe Ratio 1,5. Die Begründung sind überproportionale Panikverkäufe zur Eröffnung, wenn die Index-Futures vorher unten sind, und die anschließende Erholung über den Tag.
+- Der 20-Tage-Durchschnitt ist ein Momentum-Filter: nur wenig gefallene Aktien, oft ohne negative Nachrichten, kehren eher um als stark gefallene. Eine Fassung ohne diese Regel litt ab 2009 unter abnehmenden Renditen.
+- Die reine Long-Fassung hat kleine Kapazität und erschwert das Risikomanagement. Das Short-Spiegelbild, Gap nach oben um eine Standardabweichung unter dem 20-Tage-Durchschnitt, erzielt 46 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,27, bei steilerem Drawdown und Leerverkaufsbeschränkung.
+- Signale für den Einstieg zur Eröffnung kommen aus Pre-Open-Kursen, etwa ARCA, nicht aus dem offiziellen Open. Die Abweichung ist Signalrauschen.
+- Nahe dem Schluss setzt das lineare Modell das Kapital jeder Indexaktie auf minus ihre Abweichung vom Durchschnitt, geteilt durch die Summe der absoluten Abweichungen, und hält das Bruttokapital bei 1 Dollar.
+- Auf dem S&P 500 vom 2. Januar 2007 bis 30. Dezember 2011 sind annualisierte Rendite 13,7 Prozent und Sharpe Ratio 1,3, 2008 sogar 30 Prozent und 2011 11 Prozent. Ab Anfang 2008 ist das echt out of sample, die Strategie wurde 2007 veröffentlicht.
+- Die Intraday-Fassung gewichtet mit der Rendite vom vorigen Schluss zur Eröffnung und schließt zum Schluss: 73 Prozent annualisierte Rendite und Sharpe Ratio 4,7, bei verdoppelten Transaktionskosten und demselben Signalrauschen.
+- Gewinne der querschnittlichen Umkehr entstehen nur aggregiert. Statt der relativen Rendite kann das Kurs-Gewinn-Verhältnis reihen, damit eine durch geänderte Gewinnschätzungen gedeckte Bewegung nicht geshortet wird.
 
 ## Risiken und Grenzen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Position Sizing
@@ -50,6 +50,19 @@ aktualisiert: 2026-10-30
 - Kein Trade, wenn dieses gesamte Risiko größer als 3 Prozent ist. Klein oder groß ändert daran nichts, solange die Regel befolgt wird.
 - Die Schönheit der objektiven maximalen Positionsgröße ist genau diese Unabhängigkeit vom Risiko je Einheit.
 - Eine kleinere Zeitebene senkt das Risiko je Kontrakt oft und erlaubt damit bei demselben Konto die Position, ohne die 3-Prozent-Grenze zu verletzen. Nicht immer, aber oft.
+- In der linearen Mean-Reversion ist die Stückzahl negativ proportional zur normalisierten Abweichung vom gleitenden Durchschnitt. Der Lookback ist die Halbwertszeit.
+- Bei einem Währungspaar USD.X ist der Marktwert einer Einheit gleich dem Kurs. Die Strategie setzt deshalb den Portfoliomarktwert von USD.CAD auf den negativen Z-Score. Ohne Obergrenze kann unbegrenzt Kapital nötig sein.
+- Beim Portfolio ist die Zahl der Einheitsportfolios proportional zum negativen Z-Score seines Preises. Die Stückzahlen je Bestandteil bestimmt der Johansen-Eigenvektor.
+- Linear heißt hier nur, dass die Zahl der gehaltenen Einheiten proportional zum Z-Score ist, nicht dass der Marktwert der Anlage proportional zum Z-Score ist.
+- In der einfachsten Form ist das maximale benötigte Kapital vorher unbekannt, und infinitesimale Stückzahlen lassen sich bei infinitesimalen Preisbewegungen nicht handeln.
+- numUnits ist das Vielfache des Einheitsportfolios und negativ, wenn dieses geshortet wird. Die Dollarposition je ETF ist dieses Vielfache mal Eigenvektor-Stückzahl mal Preis.
+- Die lineare Strategie kennt keine Obergrenze der Kapitalbindung, weil die Abweichung vom Mittel unbegrenzt sein kann, und sie verlangt fortlaufend infinitesimale Stückzahlen. Bollinger hält jederzeit null oder genau eine Einheit und macht die Kapitalzuteilung dadurch einfach.
+- Beim Scaling-in über die Bänder 1, 2, …, N wächst die Stückzahl mit der Abweichung. N wird auf Trainingsdaten optimiert.
+- Bei der Ratio GLD-USO haben Long- und Short-Seite dasselbe Dollarkapital. Die Position ist das Vielfache mal minus 1 und plus 1, nicht mal den Preisen. Beim Preisspread ist die Dollarposition je ETF Stückzahl mal Hedge-Gewicht mal Preis.
+- Im Vergleich von Schoenberg und Corwin reicht die Kaufkraft für zwei Kontrakte. All-in setzt beide auf einmal, average-in einen bei L1 und den zweiten bei L2.
+- Die Kelly-Allokation nach dem Eigenkapital des Gesamtportfolios lässt gute Strategien schlechte kurzfristig subventionieren; Kelly auf jede Strategie einzeln senkt den Hebel der zuletzt schlechten schnell.
+- Mathematisch ist die erste Lösung optimal, sofern erwartete Renditen und Volatilitäten unverändert bleiben.
+- Die Erfahrung des Autors bevorzugt die zweite Lösung, damit eine underperformende Strategie schnell eingeht, besonders nach einem schweren Drawdown.
 
 ## Funktionsweise
 
@@ -139,6 +152,10 @@ aktualisiert: 2026-10-30
 - Um mit Daytrading die Kosten zu decken, ist Größe nötig; zwei oder drei Future-Kontrakte lohnen die Zeit selbst bei hoher Trefferquote kaum.
 - Die maximale Positionsgröße soll ein Kapitalrisiko von nicht mehr als 3 Prozent des Kontos darstellen.
 - Jeder Trade soll mit mindestens zwei Einheiten eingegangen werden.
+- Im Währungspaar ist die Stückzahl des Einheitsportfolios der negative Z-Score. Die Marktwerte in USD sind diese Stückzahl mal Hedge Ratio mal Preis.
+- Die Tagesrendite teilt den Gewinn durch den gesamten Bruttomarktwert am Ende des Vortags.
+- Beim Kalenderspread werden die Marktwerte beider Beine gleich gehalten, wenn der Spread die Differenz der Log-Preise ist. Die Tagesrendite ist der Tagesgewinn geteilt durch 2, weil zwei Kontrakte gehalten werden.
+- Ein positiver Z-Score der Rollrendite dreht die anfängliche Stückzahl, long der ferne und short der nahe Kontrakt, im Vorzeichen um.
 
 ## Risiken und Grenzen
 

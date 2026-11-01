@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Momentumfortsetzung
@@ -37,6 +37,12 @@ aktualisiert: 2026-10-30
 - Die Momentumumkehren der niedrigeren Zeitebene in Richtung des Momentums der höheren Zeitebene sind wichtige Filter für ein Setup mit hoher Wahrscheinlichkeit.
 - Die höhere Zeitebene bestimmt die Handelsrichtung, in der diese Umkehren liegen müssen.
 - Abbildung 2.24 zeigt bärische Stochastic-Umkehren der kleineren Zeitebene während eines Bärentrends der größeren Zeitebene, also Umkehren in Richtung des größeren Bärentrends.
+- Die Wirkungsdauer kürzerfristigen nachrichtengetriebenen Momentums wird immer kürzer, je mehr Händler es aufgreifen.
+- Von Gewinnmeldungen getriebenes Momentum hielt früher mehrere Tage und hält inzwischen kaum bis zum Börsenschluss.
+- Es gibt keinen vorhersagbaren Zeitplan, nach dem die Haltedauer zu verkürzen ist.
+- Dreht das Momentum, wird die Gegenposition eröffnet; der Ausstieg aus der verlierenden Altposition wirkt dabei als Stop.
+- Momentum gedeiht an Black Swans und an hoher Kurtosis der Renditeverteilung, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
+- In Beispiel 1.1 erzeugt eine Reihe mit der Kurtosis der TU-Futures, aber ohne serielle Autokorrelation, in 12 Prozent der Ziehungen dieselben Renditen wie die TU-Momentum-Strategie.
 
 ## Funktionsweise
 

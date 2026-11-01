@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Diversifikation
@@ -43,6 +43,17 @@ aktualisiert: 2026-10-30
 - Die kleinen Gewinne der guten Paare wurden vollständig von den großen Verlusten der schlecht gelaufenen Paare überwogen.
 - Weil die meisten Futures und Währungen Momentum zeigen, erlauben Momentum-Strategien eine echte Risikostreuung über verschiedene Assetklassen und Länder.
 - Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
+- Theoretisch macht die große Zahl der Aktien Diversifikation leicht, wenn Paare aus einem Sektor wegen gemeinsamer ökonomischer Faktoren kointegrieren.
+- Ein Portfolio vieler Aktienpaare hilft nur, wenn die erwartete Out-of-Sample-Rendite des einzelnen Paares positiv ist. Der Autor hat das bei Aktienpaaren nicht gefunden: die kleinen Gewinne der guten Paare werden von den großen Verlusten der entgleisten Paare aufgezehrt.
+- Das SPY-Bestandteilportfolio ist mit etwa 98 Aktien breit gestreut. Müssen wenige Titel wegen einer Leerverkaufsbeschränkung entfallen, bleibt die Wirkung begrenzt.
+- Bei querschnittlicher Mean Reversion ist nicht jede einzelne Aktie profitabel, manche dienen als Hedge. Gewinne entstehen nur über alle Aktien zusammen.
+- Buy-on-Gap handelt an einem Tag nur wenige Aktien und hat deshalb keine große Kapazität. Die reine Long-Fassung erschwert zusätzlich das Risikomanagement.
+- Eine Variante kauft mehr Aktien, begrenzt aber die Zahl innerhalb desselben Sektors. Eine andere ist long die Aktien und short Aktienindex-Futures.
+- Weil die meisten Futures und Währungen Momentum zeigen, lassen sich Risiken wirklich über Assetklassen und Länder streuen.
+- Momentum-Strategien zusätzlich zu einem Portfolio aus Mean-Reversion-Strategien erzeugen höhere Sharpe Ratios und kleinere Drawdowns als jeder Typ für sich.
+- Die Kelly-Allokation über das Eigenkapital des Gesamtportfolios lässt gute Strategien schlechte kurzfristig subventionieren; Kelly auf jede Strategie einzeln enthebelt die zuletzt schlechten schnell.
+- Mathematisch ist die Gesamtallokation optimal, aber nur wenn die erwarteten Renditen und Volatilitäten unverändert bleiben, was nach einem schweren Drawdown zweifelhaft ist.
+- Die Erfahrung des Autors ist, dass die einzelne Anwendung praktischer ist, damit jede underperformende Strategie schnell eingeht.
 
 ## Funktionsweise
 

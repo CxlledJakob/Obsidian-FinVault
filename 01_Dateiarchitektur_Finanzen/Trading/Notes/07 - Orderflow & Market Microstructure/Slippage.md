@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Slippage
@@ -47,6 +47,9 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Market Orders auf beiden Seiten, nachdem das Signal von den NBBO-Preisen kam, können erheblichen Slippage erzeugen. Stattdessen gehen Limit Orders auf eine oder beide Seiten, mit kleinen Teilmengen, vorübergehend ungedeckten Positionen und aktiver Storno- und Neueinreichung.
+- Bei einer NBBO-Größe von oft nur 100 Aktien, wie bei AAPL, ist ein Backtest auf Trade- oder Quote-Preisen unrealistisch, außer die Strategie handelt nur 100 Stück oder setzt erhebliche Transaktionskosten an.
+- Die Backtests enthalten keine Transaktionskosten. In der Intraday-Long-Short-Variante verdoppeln sie sich gegenüber der Fassung mit einem Handel pro Tag.
 
 ## Beispiele
 

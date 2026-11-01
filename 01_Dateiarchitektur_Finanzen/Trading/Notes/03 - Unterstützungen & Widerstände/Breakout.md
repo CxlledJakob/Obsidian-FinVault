@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Breakout
@@ -67,6 +67,15 @@ aktualisiert: 2026-10-30
 - Über etwa ein Jahr machte das XAU mehrere Wochentiefs und danach Anstiege über mehrere Wochen, brach aber nie zu einem neuen Hoch aus. Die Strategie blieb dieselbe: long für einen möglichen bullischen Ausbruch positionieren.
 - Ein Bruch über 825,50 im Februar-2008-Goldfuture ist ein erster möglicher Long-Einstieg, auch wenn der Kurs vorher auf 808 bis 800 zurücklaufen kann, entsprechend 807 bis 797 in den kontinuierlichen Tagesdaten.
 - Solange Silber den ersten kleineren Widerstand bei 1485 nicht bricht, fehlt dem Aufwärtsschub zusätzliche Kraft; ein Ausbruch darüber würde Gold und Silber nach oben stärken.
+- Breakout-Momentum-Strategien liegen vor, wenn der Preis eine Handelsspanne überschreitet, und auf der kurzen Zeitskala führt das Auslösen von Stops oft zu solchen Strategien.
+- Ein Beispiel steigt zur Markteröffnung ein, ein anderes intraday an verschiedenen Unterstützungs- oder Widerstandsniveaus.
+- Die Opening-Gap-Strategie ist die zum Buy-on-Gap gegenläufige Momentum-Strategie: Futures oder Währungen werden bei einem Gap-up gekauft und bei einem Gap-down leerverkauft.
+- Die lange Pause über Nacht oder am Wochenende macht den Eröffnungspreis oft deutlich verschieden vom Schluss, sodass Stop-Orders auf verschiedenen Preisen bei der Eröffnung zugleich ausgelöst werden und eine Kaskade auch weiter entfernte Stops treffen kann.
+- Alternativ können wesentliche Ereignisse über Nacht das Gap-Momentum auslösen.
+- Auf den Dow-Jones-STOXX-50-Index-Futures FSTX an der Eurex liefert die Strategie vom 16. Juli 2004 bis 17. Mai 2012 eine APR von 13 Prozent und eine Sharpe Ratio von 1,4.
+- Long, wenn das Open über dem Vortageshoch mal (1 plus 0,1 mal der um einen Tag verschobenen 90-Tage-Standardabweichung der Close-to-Close-Renditen) liegt; Short spiegelbildlich unter dem Vortagestief. Die Position ist plus 1 oder minus 1, die Rendite ist Position mal (Open minus Close) geteilt durch Open.
+- Dieselbe Strategie auf GBPUSD, mit Close um 17:00 Uhr ET und Open um 5:00 Uhr ET zur Londoner Eröffnung, ergibt vom 23. Juli 2007 bis 20. Februar 2012 eine APR von 7,2 Prozent und eine Sharpe Ratio von 1,3.
+- Die meisten Devisenmärkte sind von Freitag 17:00 Uhr bis Sonntag 17:00 Uhr geschlossen; dieses Wochenend-Gap ist ein natürliches Gap für die Strategie.
 
 ## Funktionsweise
 

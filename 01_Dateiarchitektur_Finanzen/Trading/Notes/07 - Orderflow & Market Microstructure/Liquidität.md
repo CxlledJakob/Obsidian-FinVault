@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Liquidität
@@ -65,6 +65,15 @@ aktualisiert: 2026-10-30
 - Wie ein unvorsichtiger Höhenarbeiter oder Testpilot nicht lange genug leben muss, um einen Lohn einschließlich Gefahrenzulage zu kassieren, kann ein unvorsichtiger Sucher von Risikoprämien nicht lange genug im Spiel bleiben, um sie einzusammeln.
 - Aktien- und Anleihemärkte geben den Eigentümern einen schnellen Weg, ihre Position an andere Anleger zu verkaufen.
 - Die Liquidität von Aktien und Anleihen macht sie für die ersten Anleger attraktiv und erleichtert es den Unternehmen dadurch, Fremdkapital und Eigenkapital aufzunehmen.
+- Die Dezimalisierung am 9. April 2001 senkte die angezeigte Liquidität am besten Bid und Ask, neben den Bid-Ask-Spreads.
+- Die Finanzkrise 2008 ließ die durchschnittlichen Tagesumsätze anschließend um 50 Prozent einbrechen; Retail-Handel und der Besitz von Stammaktien gingen besonders zurück.
+- Die Regulation NMS im Juli 2007 trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei.
+- Gegenüber den zugehörigen Aktienindex-ETFs sind Währungen gewöhnlich liquider, besonders in den Größen am besten Bid und Ask, und die Transaktionskosten sind deshalb niedriger.
+- Gehandelt wird mindestens fünf Tage rund um die Uhr, von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET. ET ist entweder EDT oder EST, also GMT minus 4 oder GMT minus 5.
+- Aktien unter dem Verkaufs- oder Kaufdruck von Publikumsfonds werden aus Liquiditätsgründen und ohne eigenes Verdienst im Kurs gedrückt oder gehoben.
+- Nachdem dieser Druck endet, mean-reverten die Kurse oft; Käufe der Titel mit dem stärksten Verkaufsdruck der Quartale t minus 4 bis t minus 1, und umgekehrt, erzielen weitere 7 Prozent annualisiert.
+- Orderflow kann Preismomentum auch auf der kürzesten Zeitskala zünden.
+- Die Slippage der Fonds-Druck-Strategie ist voraussichtlich erheblich, weil die Holdings-Information zum Quartalsende verzögert eintrifft.
 
 ## Funktionsweise
 
@@ -76,6 +85,7 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Unter normalen Marktbedingungen erzeugen Market Maker informierte Prognosen mit niedrigem Cross-Entropy-Verlust, während sie Position Takern Liquidität bereitstellen.
+- Der Rückgang von Spreads und angezeigter Liquidität senkte die Profitabilität vieler Statistical-Arbitrage-Strategien und erhöhte die vieler Hochfrequenzstrategien.
 
 ## Regeln und Kriterien
 

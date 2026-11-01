@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Verlustaversion
@@ -29,6 +29,9 @@ aktualisiert: 2026-10-30
 - Werden dieselben Wahlmöglichkeiten als mögliche Gewinne gerahmt, wählen sie die Option, die am ehesten einen Gewinn bringt, auch wenn er unbedeutend ist.
 - Dieser Fehler heißt Dispositionseffekt und soll erklären, warum Gewinner schnell verkauft werden, selbst bei kleinem Gewinn, während Verlierer gehalten werden, selbst wenn der Verlust viel größer werden kann.
 - Die Prospect Theory erklärt in diesem Abschnitt außerdem, warum Anleger Spekulationen mit geringer Wahrscheinlichkeit überbewerten.
+- Für Anfänger ist Risikomanagement von Verlustaversion getrieben: sie mögen das Gefühl nicht, Geld zu verlieren.
+- Forschung legt nahe, dass der durchschnittliche Mensch ein Gewinnpotenzial von 2 Dollar braucht, um das Risiko auszugleichen, 1 Dollar zu verlieren; das kann erklären, warum eine Sharpe Ratio von 2 emotional so ansprechend ist, nach Kahneman 2011.
+- Diese Abneigung gegen Risiko ist für sich nicht rational. Das Ziel ist die Maximierung des langfristigen Eigenkapitalwachstums, und Risiko wird nur vermieden, soweit es dieses Ziel stört.
 
 ## Funktionsweise
 

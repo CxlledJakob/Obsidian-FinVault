@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Simple Moving Average
@@ -34,6 +34,12 @@ aktualisiert: 2026-10-30
 - Eine Kreuzung gleitender Durchschnitte allein taugt wenig, die wahrscheinliche Trendrichtung einer künftigen Periode zu erkennen; Preisumkehren fallen immer wieder nicht mit diesen Signalen zusammen.
 - Die langsame Linie der meisten Zwei-Linien-Momentum-Indikatoren ist gewöhnlich ein gleitender Durchschnitt der schnellen Linie, die gewöhnlich die Rohdaten ist.
 - Eine Momentum-Kreuzung ähnelt einer Kreuzung gleitender Durchschnitte, betrifft aber die Indikatorwerte und nicht die Preisdaten selbst.
+- In der linearen Mean-Reversion haben gleitender Durchschnitt und gleitende Standardabweichung einen Lookback gleich der Halbwertszeit. Bei 20 Tagen Halbwertszeit wäre ein Lookback von 5 Tagen unpassend; ein kleines Vielfaches der Halbwertszeit ist oft nahe optimal.
+- Der gleitende Durchschnitt wird trotz der Annahme eines festen Mittels benutzt, weil sich der Mittelwert durch Wirtschaft oder Unternehmensführung langsam ändern kann.
+- Bollinger-Mittel und Bollinger-Standardabweichung werden über einen Lookback berechnet, der frei optimiert oder gleich der Halbwertszeit der Mean Reversion gesetzt wird.
+- Ein kurzes gleitendes Fenster lässt den Durchschnitt sprunghaft springen, wenn der älteste Bar durch den neuesten ersetzt wird. Dieselbe Sprungstelle trifft die gleitende Standardabweichung und eine im Fenster geschätzte Hedge Ratio.
+- Der GLD-USO-Lookback für die dynamische Hedge Ratio und den Z-Score ist 20 Handelstage und mit Wissen im Nachhinein nahe optimal gewählt. Dieselbe Fensterlänge gilt für die Ratio USO/GLD; die ersten 20 Beobachtungen werden entfernt, damit das Testset mit den Spread-Strategien übereinstimmt.
+- Die VX-Kalenderspread-Strategie berechnet den gleitenden Durchschnitt des Verhältnisses Back zu Front mit einem Lookback von 15 Tagen, zusammen mit den Standardabweichungen über dasselbe Fenster.
 
 ## Funktionsweise
 
@@ -84,6 +90,13 @@ aktualisiert: 2026-10-30
 - Hsu und Kuan nennen als Thema komplexer linearer Regeln unter anderem alle Regeln, die auf einem gleitenden Durchschnitt des On-Balance Volume beruhen, neben allen Regeln auf Channel Breakouts.
 - Das Kreuz zweier gleitender Durchschnitte ist eines der fünf getesteten Trendfolge-Systeme, neben Channel-Breakout, zwei Momentum-Fassungen und MACD gegen die Signallinie.
 - Der gleitende Durchschnitt gehört zu den Zeitreihenoperatoren, zusammen mit gleitender Kanalnormalisierung, Ausbruchskanälen und gleitenden Steigungen.
+- Buy-on-Gap verlangt, dass der Eröffnungskurs über dem 20-Tage-Durchschnitt der Schlusskurse liegt. Im Code ist der Lookback 20 und der Durchschnitt um einen Tag verschoben.
+- Dieser Durchschnitt wirkt als Momentum-Filter: Titel über einem langfristigen Mittel ziehen Verkaufsdruck länger orientierter Long-only-Fonds an, und nur wenig gefallene Aktien kehren eher um.
+- Die Short-Variante verlangt einen Gap nach oben um eine Standardabweichung bei einem Open, der noch unter dem 20-Tage-Durchschnitt liegt.
+- Im SPY-Backtest sind gleitender Durchschnitt und gleitende Standardabweichung des Log-Marktwerts auf einen Lookback von 5 fixiert, mit dem Vorteil des Rückblicks.
+- Die beiden Währungsbeispiele nutzen einen Lookback von 20 Tagen für den gleitenden Durchschnitt. Auf AUD.CAD ist das Signal der Schluss minus diesem Durchschnitt.
+- Die Hedge Ratio im ungleichen Paar kommt nicht aus diesen 20 Tagen, sondern aus einem Johansen-Fenster von 250 Tagen. Die 20 Tage bleiben für Mittel und Standardabweichung.
+- Beim CL-Kalenderspread werden gleitender Durchschnitt und gleitende Standardabweichung der Rollrendite mit einem Lookback gleich der gerundeten Halbwertszeit berechnet, etwa 36 Tage.
 
 ## Regeln und Kriterien
 

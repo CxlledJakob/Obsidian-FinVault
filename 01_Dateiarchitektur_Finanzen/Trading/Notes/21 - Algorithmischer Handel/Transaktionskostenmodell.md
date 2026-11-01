@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Transaktionskostenmodell
@@ -82,6 +82,11 @@ aktualisiert: 2026-10-30
 - Ein Backtest einer Aktienpaar-Strategie auf Trade- oder Quote-Preisen ist unrealistisch, wenn nicht nur 100 Stück gehandelt werden oder erhebliche Transaktionskosten angesetzt werden.
 - Market Orders auf beiden Seiten, nachdem das Signal von den NBBO-Preisen kam, können erheblichen Slippage erzeugen.
 - In der Open-to-Close-Variante des linearen Long-Short verdoppeln sich die Transaktionskosten gegenüber einmal täglichem Handel, weil zweimal am Tag gehandelt wird; auch diese Kosten fehlen im Backtest.
+- Die Backtests dieses Buches setzen keine Transaktionskosten an. Die Kosten hängen empfindlich von der Ausführungsmethode und vom Aktienuniversum ab.
+- Ein Paar-Backtest auf Trade- oder Quote-Preisen ist unrealistisch, wenn die NBBO-Größe wie bei AAPL oft nur 100 Aktien beträgt, außer es werden nur 100 Stück gehandelt oder erhebliche Kosten angesetzt.
+- Market Orders auf beiden Beinen nach einem NBBO-Signal können erheblichen Slippage erzeugen. Die praktische Antwort sind Limit Orders mit Teilausführung und aktiver Nachsteuerung.
+- Die Intraday-Variante des linearen Long-Short-Modells verdoppelt die Transaktionskosten gegenüber einem Handel pro Tag. Diese Kosten stecken nicht in den berichteten Renditen.
+- MOO-, LOO-, MOC- und LOC-Fills liegen am Open oder Close der Primärbörse, der Backtest nutzt aber konsolidierte Eröffnungen und Schlüsse. Die tatsächlichen Renditen sind deshalb gewöhnlich niedriger.
 
 ## Beispiele
 

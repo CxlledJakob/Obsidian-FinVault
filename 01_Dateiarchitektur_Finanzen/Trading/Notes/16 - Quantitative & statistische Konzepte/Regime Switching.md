@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Regime Switching
@@ -48,6 +48,15 @@ aktualisiert: 2026-10-30
 - Widerspricht die Nachricht dem geglaubten Regime, unterreagieren sie aus dem Konservatismus-Bias. Hält die widersprechende Nachricht an, werden sie überzeugt, das Regime sei umgeschlagen, entweder von Mean Reversion zu Wachstum oder von Wachstum zu Mean Reversion.
 - Dann wechseln sie von dem Fehler, an der Vorannahme zu kleben und zu unterreagieren, zu dem Fehler der kleinen Zahlen und zum Überreagieren.
 - In der Illustration starten sie im Glauben an ein Mean-Reversion-Regime der Gewinne, unterreagieren auf die ersten beiden positiven Gewinnmeldungen und nehmen nach der dritten positiven Meldung ein Wachstumsregime an.
+- Die Prognosekraft eines Backtests setzt voraus, dass die statistischen Eigenschaften der Preisreihe unverändert bleiben; Wirtschaftsaussichten, das Management eines Unternehmens und die Marktstruktur ändern sich und entwerten diese Annahme oft.
+- Strategien, die vor einem Regimewechsel hervorragend liefen, können danach aufhören und umgekehrt.
+- Eine mean-reverting Preisreihe kann das Regime wechseln und für längere Zeit, vielleicht für immer, zum Trend werden; ein Stop-Loss verhindert dann katastrophale Verluste und gibt Zeit, die Strategie vor einem Verlust von 100 Prozent abzuschalten.
+- Solche Wendereihen erscheinen nicht im Katalog profitabler Mean-Reversion-Strategien, weil gescheiterte Backtests nicht aufgenommen wurden.
+- Subjektives Urteil bleibt nötig, weil die statistischen Eigenschaften finanzieller Zeitreihen nicht stationär sind und Wissenschaft eigentlich nur mit stationären Statistiken umgehen kann.
+- Stationär heißt in diesem Schlusskapitel, dass die Wahrscheinlichkeitsverteilung der Preise über die Zeit unverändert bleibt, und das ist ein anderer Sinn als die Stationarität der Zeitreihe in Kapitel 2.
+- Weicht der Live-Handel vom Backtest ab, ist die Ursache oft ein Regimewechsel der Marktstruktur durch staatliche Regulierung oder makroökonomische Änderungen und nicht ein Fallstrick des Backtests.
+- Fondsmanager behalten auch bei einer algorithmischen Strategie die Aufgabe, zu beurteilen, ob die Modelle nach diesem Wechsel noch gültig sind.
+- Das Paar GLD gegen GDX ist ein Beispiel: die Kointegration endete 2008 und kehrte erst zurück, nachdem der hohe Rohölpreis als Eingabe aufgenommen wurde.
 
 ## Funktionsweise
 
@@ -69,6 +78,7 @@ aktualisiert: 2026-10-30
 - Reihen, die von Mean Reversion zu Momentum wechseln, fehlen im Katalog profitabler Mean-Reversion-Strategien, weil deren Backtests gescheitert wären.
 - Ein Stop-Loss ist nach einem solchen Wechsel wirksam gegen katastrophale Verluste und gibt Zeit, die Strategie vor einem Verlust von 100 Prozent abzuschalten.
 - Er verbessert die Performance, wenn die Preise nach dem Wechsel trendfolgen, und senkt sie, solange Mean Reversion bestehen bleibt.
+- Ein Backtest auf Daten vor einem solchen Wechsel kann wertlos sein, und ein Backtest auf jüngeren Daten ist nicht aussagekräftiger, sobald ein künftiger Wechsel eintritt.
 
 ## Beispiele
 
@@ -77,6 +87,7 @@ aktualisiert: 2026-10-30
 - Dieselbe Krise leitete einen mehrjährigen Bärenmarkt der Momentum-Strategien ein, behandelt in Kapitel 6.
 - Die Regulation NMS der SEC, umgesetzt im Juli 2007, trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei, nach Arnuk und Saluzzi 2012.
 - Die alte Uptick-Regel für Leerverkäufe wurde im Juni 2007 aufgehoben, die Alternative Uptick Rule 2010 wieder eingeführt.
+- Genannte Wechsel sind die Dezimalisierung am 9. April 2001, der Volumeneinbruch und der Momentum-Bärenmarkt nach der Krise 2008, die Regulation NMS im Juli 2007 sowie die Abschaffung der alten Uptick-Regel im Juni 2007 und ihre Wiedereinführung 2010.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Tail Risk
@@ -24,6 +24,17 @@ aktualisiert: 2026-10-30
 - Monte-Carlo-Simulationen auf simulierten statt historischen Daten schätzen das Tail Risk einer Strategie.
 - Dieselben Simulationen prüfen die statistische Signifikanz eines Backtests.
 - Das Risikomanagement bezieht schwarze Schwäne ein und mildert damit die Kelly-Formel, zusammen mit Constant Proportion Portfolio Insurance und Stop-Losses.
+- Je häufiger Black-Swan-Ereignisse auftreten, desto wahrscheinlicher profitiert eine Momentum-Strategie.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist der Markt für Momentum-Strategien.
+- Beispiel 1.1 erzeugt mit der Kurtosis der TU-Futures und ohne serielle Autokorrelation in 12 Prozent der Ziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Momentum kann in Risiken gedeihen, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
+- Das Abwärtspotenzial einer Mean-Reversion-Strategie kann unbegrenzt sein, das einer einzelnen Momentum-Position ist durch Zeitausstieg oder Stop begrenzt.
+- Momentum-Modelle haben nicht dasselbe Tail Risk wie Mean-Reversion-Modelle, weil ein fortlaufend aktualisiertes Momentum-Signal als faktischer Stop-Loss wirkt.
+- Ein Stop-Loss über dem maximalen Intraday-Drawdown des Backtests lässt die Backtest-Performance unverändert und kann ein künftiges Black-Swan-Ereignis am Weg in den Ruin hindern.
+- Die Pearson-Simulation erfasst nur die ersten vier Momente; die wahre Verteilung kann unendliche höhere Momente haben wie die Pareto-Levy-Verteilung.
+- Bei Hebel 31 wird die Wachstumsrate minus 1, weil die schlechteste Periodenrendite von minus 0,0331 jeden Hebel über 30,2 in den Totalverlust dieser Periode führt.
+- Der simulierte maximale Drawdown kann so selten sein, dass er in einer Million Jahren kaum eintritt; das ist eine beliebte Entschuldigung von Fondsmanagern nach einem Verlust.
+- Ein plötzlich stark negativer Orderflow eines riskanten Assets, etwa Aktien, Rohstoffe oder riskante Währungen, und ein positiver Orderflow bei US-Treasuries, USD, JPY oder CHF kann ein kurzfristiger führender Indikator des Tail-Risikos sein, bevor die Information den Preis weiter bewegt.
 
 ## Funktionsweise
 

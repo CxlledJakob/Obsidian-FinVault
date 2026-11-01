@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Erwartungswert
@@ -140,6 +140,20 @@ aktualisiert: 2026-10-30
 - Die Bedingung dafür, dass der Mittelwert einer Stichprobe sich dem Mittelwert der Elternpopulation annähert, ist, dass der Mittelwert in der Elternpopulation endlich ist.
 - Das Gesetz der großen Zahlen bezeichnet die Konvergenz zwischen einem Stichprobenmittel und einem Populationsmittel.
 - Eine relative Häufigkeit ist dasselbe wie ein Mittelwert, wenn das Eintreten eines Ereignisses den Wert 1 und das Nichteintreten den Wert 0 erhält.
+- Ein Backtest berechnet typischerweise eine erwartete Rendite und weitere statistische Leistungsmaße, deren statistische Signifikanz zu prüfen ist.
+- Die Nullhypothese setzt die wahre durchschnittliche Tagesrendite auf einem unendlichen Datensatz auf null.
+- Ist der Anteil der simulierten Preisreihen mit mindestens der Backtest-Rendite nicht klein, kann die Durchschnittsrendite der Strategie bloß von den Marktrenditen stammen.
+- Die erwartete Lösung der Ornstein-Uhlenbeck-Gleichung ist E(y(t)) = y0 exp(λt) minus (μ/λ) mal (1 minus exp(λt)).
+- Bei negativem λ fällt der erwartete Preis exponentiell auf den Wert minus μ/λ, und die Halbwertszeit dieses Abfalls ist minus log(2)/λ.
+- Das Ziel des Traders ist, ob die erwartete Rendite oder die Sharpe Ratio einer Mean-Reversion-Strategie gut genug ist.
+- g(f) mittelt log(1 plus f mal R) über eine Zufallsstichprobe der ungehebelten Rendite je Bar der Strategie, nicht der Marktpreise. Üblich sind Tagesbars, die Bar kann aber beliebig lang oder kurz sein.
+- Das Pearson-System nimmt Mittelwert, Standardabweichung, Schiefe und Kurtosis und modelliert R als eine von sieben analytischen Verteilungen, darunter Gauß, Beta, Gamma und Student-t.
+- Die empirische Verteilung kann höhere Momente haben, die das System nicht erfasst, oder unendliche höhere Momente wie bei der Pareto-Levy-Verteilung.
+- Im Beispiel sind 100.000 Zufallsrenditen gezogen; pearsrnd liefert den Typ 4, also keine Standardverteilung wie die Student-t.
+- Ist R gaußisch, ist g(f) gleich f mal m minus f zum Quadrat mal m zum Quadrat geteilt durch 2.
+- Liegt die Hebelobergrenze weit unter dem Kelly-Hebel und sind die unabhängigen Wachstumsraten sehr verschieden, ist es oft wachstumsmaximal, die ganze Kaufkraft in die Strategie mit der höchsten mittleren Überschussrendite zu legen, statt alle Hebel proportional zu skalieren.
+- Im Zahlenbeispiel fällt der Erwartungswert der annualisierten Wachstumsrate bei proportionaler Kürzung auf den Bruttohebel 2 von 2,1 auf 0,82 und steigt auf 0,96, wenn nur die zweite Strategie mit Hebel 2 gehalten wird.
+- Die Erfahrung des Autors ist, dass Kelly auf jede Strategie einzeln praktischer ist als die Allokation über alle Strategien, sodass eine underperformende Strategie schnell eingeht, auch wenn die Mathematik die Gesamtallokation bei unveränderten erwarteten Renditen und Volatilitäten als optimal ausweist.
 
 ## Funktionsweise
 

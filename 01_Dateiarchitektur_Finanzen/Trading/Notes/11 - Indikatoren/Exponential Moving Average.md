@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Exponential Moving Average
@@ -23,6 +23,8 @@ aktualisiert: 2026-10-30
 
 - Die Mittellinie der Bollinger Bands ist ein Exponential Moving Average.
 - Dieser Durchschnitt gilt als wahrer Wert oder Mean.
+- Ein exponentieller gleitender Durchschnitt gewichtet neue Daten stärker und braucht keinen harten Cutoff. Es ist aber nicht klar, warum gerade der exponentielle Abfall der Gewichte optimal sein soll.
+- Dieselbe Unschärfe gilt, wenn Mittel, Standardabweichung oder Hedge Ratio mit einem exponentiell gewichteten Schema statt mit einem harten Lookback geschätzt werden. Der Kalman-Filter vermeidet die willkürliche Wahl dieses Schemas.
 
 ## Funktionsweise
 

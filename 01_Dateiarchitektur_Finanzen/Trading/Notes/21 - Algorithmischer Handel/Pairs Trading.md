@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Pairs Trading
@@ -44,6 +44,30 @@ aktualisiert: 2026-10-30
 - Der Paartrade erzielt einen Gewinn, egal wie die Divergenz korrigiert wird: Ford fällt, GM steigt, oder eine Kombination aus beidem tritt ein.
 - In dieser üblichen Anwendung sagt das Error-Correction-Modell das Verhalten des Spreads zwischen den kointegrierten Reihen vorher.
 - Fosback wich davon ab und nutzte das aus dem Error-Correction-Modell abgeleitete Maß als Indikator für eine dritte Variable, den S&P 500, statt für den Spread selbst.
+- Fundamentale Überlegungen können erklären, warum ein zuvor sehr profitables ETF-Paar vorübergehend aus der Kointegration gerät, und dieselben Überlegungen können eine verbesserte Fassung der Strategie liefern.
+- CADF prüft nur ein Paar, Johansen beliebig viele Reihen. ETFs sind ein ergiebiges Feld für solche Paare.
+- EWA und EWC werden geprüft, weil Kanada und Australien rohstoffbasierte Volkswirtschaften sind. Mit EWC als abhängiger und EWA als unabhängiger Variable verwirft CADF die Null auf 95 Prozent, t-Statistik etwa minus 3,64 gegen minus 3,359. Das Residuum sieht stationär aus, das Streudiagramm liegt auf einer Geraden.
+- Die CADF-Hedge-Ratio hängt davon ab, welche Reihe die unabhängige ist, und ist nicht der Kehrwert der Gegenrichtung. Oft ist nur eine Richtung stationär. Bei EWA und EWC findet Johansen zwei unabhängige Beziehungen und ist dabei reihenfolgeunabhängig.
+- IGE, ein ETF aus Rohstoffaktien, ergibt mit EWA und EWC nach dem Text drei kointegrierende Beziehungen auf 95 Prozent. Der stärkste Eigenvektor hat die Halbwertszeit 23 Tage.
+- GDX kointegriert mit GLD, weil der Wert der Goldbergbauunternehmen stark vom Goldwert abhängt. Anfang 2008 lief das Paar auseinander, weil hohe Energiepreise die Goldförderung ungewöhnlich teuer machten; der Grund blieb verständlich.
+- EWA kointegriert mit EWC, weil die kanadische und die australische Wirtschaft von Rohstoffen dominiert werden.
+- Diese fundamentale Geschichte unterscheidet Paare von vielen Momentum-Strategien, die nur darauf setzen, dass andere Anleger langsamer auf Nachrichten reagieren. Holen diese auf, kann die Strategie ohne Erklärung aufhören.
+- Der Preis eines Einheitsportfolios ist sein Marktwert. Mit nur einer Long- und einer Short-Position heißt es Spread; die mathematische Form steht in Kapitel 3.
+- Der Portfoliopreis ist die gewichtete Summe der Bestandteilspreise, und die Gewichte sind die Stückzahlen. Für zwei Aktien ist der übliche Spread y1 minus h y2, mit positivem h.
+- Logpreisspreads sind gerechtfertigt, wenn die Logpreise kointegrieren, verlangen aber ständiges Rebalancing, weil die Gewichte dann Kapitalgewichte sind. Preisspreads sind einfacher. Beide sind vertretbar, wenn Preis und Logpreis kointegrieren.
+- Die Ratio y1/y2 ist nur stationär, wenn die Hedge Ratios gleichen Betrag haben. Für nicht wirklich kointegrierte Paare kann sie eine dynamische Hedge Ratio ersetzen. Bei GLD und USO ist der adaptive Preisspread dennoch klar besser: etwa 10,9 Prozent APR und Sharpe Ratio 0,59 gegen eine negative APR der Ratio. Der Logpreisspread liegt bei 9 Prozent und 0,5, vor Rebalancing-Kosten.
+- GLD und USO sind nicht kointegriert. Manche Händler erwarten trotzdem, dass Öl über die Inflation Gold mitzieht.
+- EUR.GBP ist die Ratio EUR.USD/GBP.USD. Für MXN.NOK kann die Ratio USD.NOK/USD.MXN wirksamer sein als der Spread, obwohl die beiden Dollarpaare gehandelt werden und der P&L dann in zwei Währungen anfällt.
+- EWA gegen EWC mit Kalman-Filter erreicht eine Sharpe Ratio von 2,4 und eine APR von 26,2 Prozent.
+- Mean-revertierende Paare von Futures verschiedener Basiswerte sind schwer zu finden.
+- Der naheliegende Kandidat ist der Energiekomplex CL, Brent BZ, Benzin RB und Heizöl HO, alle an der NYMEX.
+- Der fertige Crack Spread long drei CL, short zwei RB und short ein HO ist vom 20. Mai 2002 bis zum 4. Mai 2012 im ADF-Test nicht mean-reverting.
+- CL gegen BZ im Verhältnis 1:1 ist trotz ähnlicher Basiswerte weit von stationär entfernt.
+- Ein Paar, das sich stationär machen lässt, ist long 0,3906 Front-Kontrakte VX und long ein Front-Kontrakt ES.
+- Rohstoffwährungen als Gruppe bieten viele Gelegenheiten zur Kointegration.
+- Bei zwei Währungs-Cross-Rates hängen die Renditeformeln davon ab, ob die Kurse dieselbe Notierungswährung, dieselbe Basiswährung oder keine von beiden haben.
+- Das ETF-Paar GLD gegen GDX hörte 2008 auf zu kointegrieren.
+- Die Hypothese dazu war der hohe Rohölpreis; nachdem der Ölpreis als Eingabevariable ergänzt wurde, funktionierte das Kointegrationsmodell wieder.
 
 ## Funktionsweise
 
@@ -66,9 +90,17 @@ aktualisiert: 2026-10-30
 - Der Crack Spread ist long drei CL, short zwei RB und short ein HO, weil drei Barrel CL ungefähr zwei Barrel Benzin und ein Barrel Heizöl ergeben, was nicht für jede Raffinerie gilt.
 - Ein Portfolio long 0,3906 VX und long ein ES soll stationär sein; die Hedge Ratio stammt aus ES mal 50 gleich minus 0,3906 mal VX mal 1.000 plus 77.150 Dollar.
 - Als die Strategie den Backtest unterschritt, wurde ein fundamentaler Grund gesucht und quantitativ geprüft, statt blind weitere Regeln und Indikatoren zu ergänzen.
+- Beim Kreuzkurs AUD.ZAR ist AUD die Basiswährung und ZAR die Kurswährung. Ein Kurs von 9,58 bedeutet, dass 9,58 Rand einen Australischen Dollar kaufen. Der Kauf von 100.000 AUD.ZAR kauft 100.000 AUD und verkauft zum Beispielkurs 958.000 ZAR.
+- Kaum ein Broker stellt AUD.ZAR. Synthetisch kauft man X Einheiten einer liquiden Basis gegen ZAR und verkauft X Einheiten derselben Basis gegen AUD, etwa mit USD oder EUR. Der Kreuzkurs ist exakt das Verhältnis dieser beiden Quotes.
+- Der live realisierte Gewinn fällt in beiden Währungen an. Ohne regelmäßigen Umtausch in die Heimatwährung weicht ein großer aufgelaufener Bestand spürbar vom Backtest ab, der in dieser Heimatwährung rechnet.
+- Manchmal ist es besser, die Währungen ungleich zu gewichten und AUD.USD gegen CAD.USD getrennt zu handeln statt den fertigen AUD.CAD. Die Johansen-Hedge-Ratio ist dann nicht eins.
+- Damit der Eigenvektor Kapitalgewichte sind, brauchen beide Reihen dieselbe Kurswährung. Eine Einheit einer Währung gegen USD ist so viele Dollar wert wie der Kurs, ihre Rendite ist die einfache Kursänderung geteilt durch den Kurs.
+- Eine Einheit USD gegen eine Kurswährung ist exakt einen Dollar wert. Für einen echten Kreuzkurs ist die verwendete Rendite die Differenz der Log-Kurse. Dieselben Formeln gelten, wenn die Heimatwährung EUR statt USD ist.
+- Zwei völlig verschiedene Kreuzkurse lassen sich gegeneinander handeln. Die Tagesrendite in der Heimatwährung folgt derselben Portfoliogleichung, mit der Log-Rendite jedes Kreuzkurses.
 
 ## Voraussetzungen
 
+- Ein Anbieter von Intraday-Historien für Kalenderspreads, Quotes und Trades, ist cqgdatafactory.com.
 
 ## Anwendung im Trading
 
@@ -90,6 +122,17 @@ aktualisiert: 2026-10-30
 - Ein Schlusskurs-Backtest von BZ gegen CL vor dem 5. September 2001 wäre falsch, weil BZ bis dahin in London an der Intercontinental Petroleum Exchange und CL an der NYMEX mit anderer Schlusszeit gehandelt wurde.
 - Futures-Preise sind oft mit einem Faktor von Punkten in US-Dollar umzurechnen, bei VX mal 1.000 und bei ES mal 50.
 - Der Crack Spread muss auf preisadjustierten und nicht auf renditeadjustierten fortlaufenden Kontrakten getestet werden, sonst springt der Preisspread an den Rolls.
+- Beim Backtest eines Intermarket-Pair-Trades in Futures müssen die Schlusskurse beider Märkte gleichzeitig entstehen.
+- Settlement-Preise garantieren bei gleichem Underlying gleichzeitige Preise für den Futures-Spread; letzte Trades können zeitlich auseinanderliegen, einen unrealistisch großen Spread und im Backtest überhöhte Gewinne erzeugen, wenn der Spread später auf den kleineren richtigen Wert zurückkehrt.
+- Ein Intraday-Spread illiquider Futures darf nicht aus den Last-Preisen der Beine eines Bars gebildet werden; nötig sind Bid und Ask beider Kontrakte oder die börsen-native Spreadsreihe, sonst ist die Rendite aufgebläht.
+- Kontrakte an verschiedenen Börsen und ein Future gegen einen ETF haben oft verschiedene Schlusszeiten, deshalb ist der Spread aus den Schlusskursen falsch; statt GC mit Settlement um 13:30 Uhr ET gegen GDX lassen sich GLD und GDX handeln, beide mit Schluss um 16:00 Uhr ET auf Arca.
+- Signale aus der Preisdifferenz zweier Kontrakte verlangen die Preis-Rückanpassung der fortlaufenden Reihe, Signale aus dem Preisverhältnis die Rendite-Rückanpassung.
+- Bei Kalenderspreads ist die Rückanpassung besonders wichtig, weil der Spread klein gegen ein Bein ist und ein Rollover-Fehler leicht ein falsches Signal auslöst, im Backtest und live.
+- Für Währungspaare ist das Verhältnis oft ein besserer Indikator als der Spread.
+- Wer ein Paar Basis gegen Kurs über Nacht hält, also bis oder über 17:00 Uhr ET, erhält oder zahlt die Zinsdifferenz aus Basiszins minus Kurswährungszins. Ist der Zins der Kurswährung höher, ist das ein Sollzins.
+- Wegen der Abwicklung an T+2 wird dieser Rollover mit eins plus der Zahl geschlossener Tage multipliziert, wenn T+3 für eine der Währungen Wochenende oder Feiertag ist. Haltung über Mittwoch 17:00 Uhr ET verdreifacht den Tagessatz.
+- Bei USD.CAD und USD.MXN gilt T+1. Die Verdreifachung trifft dann die Haltung über Donnerstag 17:00 Uhr ET.
+- In der Überschussrendite wird der Rollover als log(1 + Basiszins) minus log(1 + Kurswährungszins) zur Log-Preisänderung addiert. Die einfachen Formeln ohne diesen Term sind bei kurzen Strategien meist eine kleine Auslassung.
 
 ## Risiken und Grenzen
 
@@ -114,6 +157,17 @@ aktualisiert: 2026-10-30
 - Die Gleichungen ohne Rollover-Zinsen sind nicht streng korrekt; bei der kurzfristigen Strategie ist die Wirkung meist klein.
 - Der ADF-Test auf dem Crack Spread vom 20. Mai 2002 bis zum 4. Mai 2012 zeigt keine Mean Reversion, und die lineare Mean-Reversion-Strategie darauf hat negative Renditen.
 - Die Suche nach mean-reverting Intermarket-Futures-Spreads bleibt bis zum VX-ES-Spread ohne Erfolg.
+- Fehlerhafte Live-Quotes sind beim Paar- und beim sonstigen Arbitragehandel besonders gefährlich, weil die Signale auf Differenzen von Quotes beruhen.
+- Die Differenz zweier Quotes ist gewöhnlich viel kleiner als die Quotes selbst, deshalb erzeugt ein kleiner Quotefehler einen viel größeren prozentualen Fehler im Spread.
+- Hat X einen wahren Bid von 100 Dollar und Y einen wahren Ask von 105 Dollar, ist der Spread von 5 Dollar zu klein für eine Market Order, die X kauft und Y verkauft. Zeigt Y fälschlich einen Ask von 106 Dollar, wird der Spread 6 Dollar, 20 Prozent mehr, und kann die Order fälschlich auslösen.
+- Strategien auf Spreads sind gegen kleine Datenfehler besonders empfindlich, im Backtest wie im Live-Handel.
+- Einzelne Aktien sind auf Tagesschlüssen fast nie stationär. Selbst Exxon gegen Chevron oder Citibank gegen Bank of America kointegrieren out of sample selten, und dieselbe Branche garantiert nichts, Beispiel AAPL gegen BBRY.
+- Ein einzelnes Paar bleibt nur profitabel, wenn man die Firmen fundamental versteht und aussteigt, bevor schlechte Nachrichten einer Seite öffentlich werden.
+- Viele Paare retten das Ergebnis nicht, solange die erwartete Out-of-Sample-Rendite eines einzelnen Paares nicht positiv ist. Die kleinen Gewinne der guten Paare wurden von den großen Verlusten der schlechten aufgezehrt.
+- Besonders gefährlich ist der Short einer schwer leihbaren Aktie. Springt der Kurs auf unerwartete gute Nachrichten und rufen die Verleiher die Stücke zurück, muss die Position zum schlechtesten Zeitpunkt mit großem Verlust eingedeckt und das Long-Bein verkauft werden. Das ist der Short Squeeze.
+- Weil die Margen sanken, müssen Paare intraday eröffnet und geschlossen werden. Die NBBO-Größen sind dabei sehr klein geworden, durch Dark Pools, Iceberg-Orders, Child-Orders, häufig ersetzte Hochfrequenzorders und zurückhaltende Market Maker.
+- Bei AAPL ist eine NBBO-Größe von nur 100 Aktien nicht ungewöhnlich. Ein Backtest auf Trades oder Quotes ist dann unrealistisch, außer bei nur 100 Stück oder mit erheblichen Transaktionskosten.
+- Market Orders auf beiden Seiten nach einem NBBO-Signal können erheblichen Slippage erleiden. Nötig sind Limit Orders auf einer oder beiden Seiten, vorübergehend kleine ungedeckte Positionen und die aktive Verwaltung von Stornos und Neueinstellungen.
 
 ## Beispiele
 
@@ -135,6 +189,15 @@ aktualisiert: 2026-10-30
 - Das ETF-Paar GLD gegen GDX hörte 2008 auf zu kointegrieren.
 - Die Hypothese schrieb das dem hohen Rohölpreis zu.
 - Mit dem Ölpreis als zusätzlicher Inputvariable funktionierte das Kointegrationsmodell wieder.
+- Beispiele für mean-revertierende Strategien umfassen ETF-Paare und -Tripletts sowie ETFs gegen ihre Bestandteilaktien.
+- GLD gegen GDX kointegrierte vom 23. Mai 2006 bis 14. Juli 2008 mit 99 Prozent und verlor die Kointegration vom 15. Juli 2008 bis 9. April 2012. Am 14. Juli 2008 stand WTI bei etwa 145 Dollar je Barrel, und teures Öl verteuert die Goldförderung.
+- Das Triplett aus GLD, GDX und USO kointegriert über 2006 bis 2012 mit 99 Prozent für eine Beziehung. Wer das Triplett scheut, sollte GLD gegen GDX aussetzen, sobald der Ölpreis eine Schwelle überschreitet.
+- USO hält Oil-Futures und nicht das Öl selbst. XLE kann mit dem Spot kointegrieren und mit USO dennoch nicht. Das trifft jeden Rohstoff-Futures-Fonds gegen einen Produzentenfonds.
+- EWA gegen EWC kointegrierte im November 2012 noch. Mit der Verbreitung von ETFs auf nahezu denselben Sektor nehmen die Paar-Gelegenheiten stetig zu.
+- An einem typischen Tag liegen die NBBO-Größen von EWC um 5.000 Aktien.
+- Die Dezimalisierung verengte die Spreads drastisch und senkte die Market-Making-Gewinne der Paarhändler (Serge, 2008).
+- AUD.USD gegen CAD.USD mit ungleicher Hedge Ratio erzielt 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6. Der fertige AUD.CAD mit Rollover nur 6,2 Prozent und 0,54, ohne Rollover 6,7 Prozent und 0,58, bei fast 5 Prozent annualisiertem durchschnittlichem Rollover.
+- Die Rollrendite kann verhindern, dass eine Produzenten-ETF mit dem Future kointegriert, obwohl sie mit dem Spot kointegriert.
 
 ## Unterschiedliche Quellenpositionen
 

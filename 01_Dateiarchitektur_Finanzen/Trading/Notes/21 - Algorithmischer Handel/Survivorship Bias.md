@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Survivorship Bias
@@ -25,6 +25,9 @@ aktualisiert: 2026-10-30
 - Survivorship Bias wirkte in der Behauptung, ein Stop-Loss senke immer die Performance von Mean-Reversion-Strategien.
 - Reihen, die von Mean Reversion zu Momentum wechseln, erscheinen nicht im Katalog, weil gescheiterte Backtests nicht aufgenommen wurden.
 - Jede erfolgreich gebacktestete Mean-Reversion-Strategie trägt diesen Bias und zeigt bei aufgezwungenem Stop-Loss niedrigere Performance.
+- Genauer gilt: ein Stop-Loss senkt die Performance von Mean-Reversion-Strategien, solange die Preise mean-reverting bleiben, und verbessert sie, wenn die Preise das Regime wechseln und zu trenden beginnen.
+- Die Behauptung, ein Stop-Loss senke immer die Performance, entstand, weil der Katalog nur Strategien enthält, die im Backtest mean-reverting geblieben sind; Wendereihen zum Momentum fehlen, da gescheiterte Backtests nicht aufgenommen wurden.
+- Ein Stop über dem maximalen Intraday-Drawdown des Backtests hätte im Testzeitraum nie ausgelöst, die durch den Bias geprägte Backtest-Performance also nicht verändert, und kann ein späteres Black-Swan-Ereignis trotzdem am Ruin hindern.
 
 ## Funktionsweise
 
@@ -56,6 +59,11 @@ aktualisiert: 2026-10-30
 - Die Hoffnung ist, dass die Ergebnisse zumindest für das letzte Jahr oder die letzten zwei nicht zu unrealistisch sind.
 - Ein Neu-Backtest auf biasfreien Daten muss beachten, dass der gewählte Index, typischerweise der S&P 500, seine Zusammensetzung über die Historie ändert; nötig ist eine Datenbank der historischen täglichen Indexzusammensetzungen.
 - Das im Buy-on-Gap-Backtest verwendete Universum ist der S&P 500, aber eines mit Survivorship Bias.
+- Survivorship Bias gehört zu den Backtest-Fallstricken, die Live-Handelsergebnisse deutlich von den Backtests abweichen lassen.
+- Survivorship Bias ist für mean-revertierende Long-only-Aktienstrategien gefährlicher als für Long-Short oder Short-only: er bläht den Long-only-Backtest, der tief kauft und hoch verkauft, und drückt den Short-only-Backtest, weil die auf null gelaufenen Titel fehlen.
+- Bei mean-revertierenden Long-Short-Strategien wirken die Effekte entgegengesetzt, die Aufblähung der Long-Seite überwiegt aber meist die Drückung der Short-Seite, die Gefahr ist kleiner, aber nicht beseitigt.
+- Die Aktien-Backtests dieses Kapitels verwenden Daten mit Survivorship Bias, weil biasfreie Daten umständlicher und teurer zu beschaffen sind.
+- Ein Nachbau auf biasfreien Daten muss die wechselnde Zusammensetzung des Index abbilden, typisch des S&P 500, und braucht die historischen täglichen Indexzusammensetzungen.
 
 ## Beispiele
 
@@ -64,6 +72,8 @@ aktualisiert: 2026-10-30
 - Eine einfache Buy-low-sell-high-Strategie kauft zu Jahresbeginn die zehn am niedrigsten bepreisten Aktien und hält sie ein Jahr. Der Backtest für 2001 zeigt 388 Prozent Rendite.
 - Enthält die Datenbank nur Aktien, die bis heute überlebt haben, wählt die Strategie wahrscheinlich genau die glücklichen Überlebenden, die Anfang 2001 sehr billig waren. Mit diesem Rückblick sind 388 Prozent erreichbar.
 - Enthält die Datenbank delistete Aktien, wählt die Strategie wahrscheinlich diese Titel, mit einem Verlust von fast 100 Prozent. Dieser Verlust wäre die realisierte Rendite gewesen, hätte man die Strategie 2001 gehandelt. Die 388 Prozent sind eine aufgeblähte Backtest-Rendite, die sich nie realisieren lässt.
+- Kauft ein Modell die Aktie mit dem größten Vortagesverlust und hält sie für immer, führt das live oft in den Bankrott und zu 100 Prozent Verlust; ohne delistete Titel kauft der Backtest nur spätere Überlebende und kann exzellent aussehen, obwohl das Überleben live nicht vorhersehbar war.
+- Eine Strategie, die zu Jahresbeginn die 10 billigsten Aktien kauft und ein Jahr hält, zeigt für 2001 einen Backtest von 388 Prozent; ohne delistete Titel sind das die glücklichen Überlebenden, mit ihnen entstünde fast 100 Prozent Verlust, und die 388 Prozent sind nie realisierbar.
 
 ## Unterschiedliche Quellenpositionen
 

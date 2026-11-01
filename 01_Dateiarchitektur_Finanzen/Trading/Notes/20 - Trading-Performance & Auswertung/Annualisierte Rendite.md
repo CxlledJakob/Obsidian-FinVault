@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Annualisierte Rendite
@@ -50,6 +50,28 @@ aktualisiert: 2026-10-30
 - Tabelle 9.1 listet die mittlere Rendite auf trendbereinigten S&P-Daten; die erste und höchste ausgewiesene Rendite ist 0,102501 für die Regel E-12-28-10-30.
 - Die zweite in Tabelle 9.1 genannte Rendite ist 0,102395 für die Regel D-8-4-10-60.
 - Die ersten in Tabelle 9.1 genannten Grenzen des 80-Prozent-Konfidenzintervalls sind −0,02932 und 0,23527, neben der Rendite 0,102501 der Regel E-12-28-10-30.
+- Die lineare Mean-Reversion auf dem stationären Portfolio aus EWA, EWC und IGE erreicht eine APR von 12,6 Prozent. Die Kurve der kumulierten Renditen ist Abbildung 2.7.
+- Eine kurze Zeitskala erhöht die Zahl der Trades pro Jahr und übersetzt sich letztlich in eine höhere zusammengesetzte Rendite der Strategie.
+- Die lineare Mean-Reversion-Strategie auf dem 12-Monats-Kalenderspread von CL erzielt vom 2. Januar 2008 bis zum 13. August 2012 eine ungehebelte annualisierte Rendite von 8,3 Prozent bei einer Sharpe Ratio von 1,3.
+- Die lineare Mean-Reversion-Strategie auf dem VX-Kalenderspread mit dem Verhältnis Back zu Front und 15 Tagen Lookback erzielt vom 27. Oktober 2008 bis zum 23. April 2012 eine annualisierte Rendite von 17,7 Prozent bei einer Sharpe Ratio von 1,5.
+- Dieselbe VX-Kalenderspread-Strategie schnitt vor Oktober 2008 deutlich schlechter ab.
+- Die Bollinger-Band-ähnliche Mean-Reversion-Strategie auf dem Portfolio aus ES und VX erzielt auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 eine annualisierte Rendite von 12,3 Prozent bei einer Sharpe Ratio von 1,4.
+- Die TU-Momentum-Strategie erzielt vom 1. Juni 2004 bis zum 11. Mai 2012 eine annualisierte Rendite von 1,7 Prozent bei einer Sharpe Ratio von 1, gerechnet auf den Nominalwert von etwa 200.000 Dollar; die Margin beträgt nur etwa 400 Dollar.
+- Die auf die verzögerte Rollrendite umgestellte TU-Strategie mit einer Schwelle von annualisiert 3 Prozent erzielt vom 2. Januar 2009 bis zum 13. August 2012 eine annualisierte Rendite von 2,5 Prozent bei einer Sharpe Ratio von 2,1.
+- Tabelle 6.2: BR mit Lookback 100 und Haltedauer 10 erzielt 17,7 Prozent annualisiert bei einer Sharpe Ratio von 1,09; HG mit 40 und 40 erzielt 18,0 Prozent bei 1,05; TU mit 250 und 25 erzielt 1,7 Prozent bei 1,04.
+- Die Kombination aus Mean Reversion und Momentum auf CL erzielt 12 Prozent annualisiert bei einer Sharpe Ratio von 1,1.
+- Long GLD und short GC erzielen vom 3. August 2007 bis zum 2. August 2010 1,9 Prozent annualisiert; die Finanzierungskosten von GLD liegen nahe bei diesen 1,9 Prozent, die Überschussrendite ist daher nahe null.
+- Die Rollrendite der Gold-Futures beträgt von Dezember 1982 bis Mai 2004 minus 4,9 Prozent annualisiert.
+- Die Arbitrage short USO und long XLE in Contango, und umgekehrt in Backwardation, erzielt vom 26. April 2006 bis zum 9. April 2012 16 Prozent annualisiert bei einer Sharpe Ratio von etwa 1.
+- Die VX-ES-Rollrendite-Strategie erzielt vom 29. Juli 2010 bis zum 7. Mai 2012 6,9 Prozent annualisiert bei einer Sharpe Ratio von 1; dieser Zeitraum wurde nicht zur Bestimmung der Hedge Ratio verwendet.
+- Die querschnittliche Futures-Momentum-Strategie erzielt vom 1. Juni 2005 bis zum 31. Dezember 2007 18 Prozent annualisiert bei einer Sharpe Ratio von 1,37 und vom 2. Januar 2008 bis zum 31. Dezember 2009 minus 33 Prozent.
+- Beispiel 6.2 auf US-Aktien erzielt vom 15. Mai 2007 bis zum 31. Dezember 2007 37 Prozent annualisiert bei einer Sharpe Ratio von 4,1 und vom 2. Januar 2008 bis zum 31. Dezember 2009 minus 30 Prozent.
+- Daniel und Moskowitz finden für dieselbe Aktienstrategie von 1947 bis 2007 eine annualisierte Durchschnittsrendite von 16,7 Prozent und eine Sharpe Ratio von 0,83.
+- Hafez und Xie erzielen mit Portfolios nach RavenPack-Sentimentänderung vor Transaktionskosten 52 bis 156 Prozent annualisiert und Sharpe Ratios von 3,9 bis 5,3, je nach Zahl der Aktien.
+- Das PRESSURE-Portfolio erzielt vor Kosten etwa 17 Prozent annualisiert, das Front-Running der Fonds weitere 17 Prozent, die anschließende Mean Reversion weitere 7 Prozent, und alle drei zusammen etwa 41 Prozent vor Kosten.
+- Der S&P Diversified Trends Indicator hat von Januar 1988 bis Dezember 2010 eine Sharpe Ratio von 1,3; der S&P 500 hat im selben Zeitraum nach dem Autor eine Sharpe Ratio von 0,61.
+- Die Rollrendite von ES beträgt etwa 1 Prozent annualisiert und ist unbedeutend; die Rollrendite von VX kann bis minus 50 Prozent annualisiert betragen.
+- Das lineare Mean-Reversion-Modell für S&P-500-Aktien in Kapitel 4 hat bei einer Haltedauer von weniger als einem Tag eine Sharpe Ratio von 4,7.
 
 ## Funktionsweise
 
@@ -124,6 +146,25 @@ aktualisiert: 2026-10-30
 - Eine Leistungskennzahl, auf die ein Backtest verdichtet wird, ist die annualisierte Durchschnittsrendite.
 - Nach den Langfristratings von Hulbert's Financial Digest vom Juli 2005 erzielte The Elliott Wave Financial Forecast mit Long- und Short-Signalen annualisierte Renditen von +1,1 Prozent über 5 Jahre, −28,2 Prozent über 10 Jahre, −25,9 Prozent über 15 Jahre und −18,2 Prozent über die Lebensdauer des Dienstes seit dem 31.12.1984.
 - Für dieselben Zeiträume gibt Hulbert für den Dow Jones Wilshire 5000 mit reinvestierten Dividenden −1,3 Prozent über 5 Jahre, +10 Prozent über 10 Jahre und +10,7 Prozent über 15 Jahre an.
+- Der adaptive Preisspread von USO gegen GLD, Lookback 20 Handelstage, erreicht mit linearer Mean-Reversion etwa 10,9 Prozent APR, obwohl GLD und USO nicht kointegriert sind.
+- Dieselbe Strategie auf dem Logpreisspread erreicht 9 Prozent APR, noch vor den zusätzlichen Transaktionskosten des täglichen Rebalancings.
+- Die Ratio USO/GLD als Signal der linearen Strategie hat eine negative APR.
+- Bollinger-Bänder auf dem GLD-USO-Preisspread mit entryZscore 1 und exitZscore 0 erreichen 17,8 Prozent APR.
+- Der Kalman-Filter auf EWA und EWC erreicht 26,2 Prozent APR.
+- Die Backtests dieser Prototypstrategien enthalten keine Transaktionskosten.
+- Buy-on-Gap auf Aktien des S&P 500 erzielt vom 11. Mai 2006 bis 24. April 2012 eine annualisierte Rendite von 8,7 Prozent bei einer Sharpe Ratio von 1,5.
+- Das Short-Spiegelbild, Aktien die um eine Standardabweichung nach oben gappen und unter dem 20-Tage-Durchschnitt liegen, erzielt über denselben Zeitraum 46 Prozent annualisierte Rendite bei einer Sharpe Ratio von 1,27, mit steilerem Drawdown.
+- Die Arbitrage eines Teilportfolios der SPY-Bestandteile gegen SPY erzielt vom 2. Januar 2008 bis 9. April 2012 eine annualisierte Rendite von 4,5 Prozent bei einer Sharpe Ratio von 1,3.
+- Das lineare Long-Short-Modell auf dem S&P 500 erzielt vom 2. Januar 2007 bis 30. Dezember 2011 eine annualisierte Rendite von 13,7 Prozent bei einer Sharpe Ratio von 1,3. Auf einem Universum kleinerer Kapitalisierung sind die Renditen gewöhnlich höher.
+- Dieselbe Strategie erreichte 2008, im Jahr der Lehman-Pleite, eine annualisierte Rendite von 30 Prozent und 2011, im Jahr der Herabstufung der USA und der griechischen Zahlungsausfälle, 11 Prozent.
+- Die Intraday-Variante, Gewichte aus der Rendite vom vorigen Schluss zur Eröffnung und Glattstellung zum Schluss, erzielt über denselben Zeitraum 73 Prozent annualisierte Rendite bei einer Sharpe Ratio von 4,7. Transaktionskosten sind darin nicht enthalten.
+- Das Paar AUD.USD gegen CAD.USD mit Johansen-Hedge-Ratio erzielt nach Ausschluss der ersten 250 Trainingstage vom 18. Dezember 2009 bis 26. April 2012 eine annualisierte Rendite von 11 Prozent bei einer Sharpe Ratio von 1,6.
+- Dieselbe lineare Mean Reversion auf dem fertigen Paar AUD.CAD einschließlich Übernacht-Rollover erzielt 6,2 Prozent bei einer Sharpe Ratio von 0,54. Ohne Rollover steigen die Werte nur auf 6,7 Prozent und 0,58, obwohl der annualisierte durchschnittliche Rollover fast 5 Prozent ausmacht.
+- Die lineare Mean Reversion auf dem 12-Monats-Kalenderspread von CL erzielt ungehebelt vom 2. Januar 2008 bis 13. August 2012 eine annualisierte Rendite von 8,3 Prozent bei einer Sharpe Ratio von 1,3.
+- Im konstanten Renditemodell betragen die annualisierten Durchschnitte von Spot-Rendite und Rollrendite: brasilianischer Real −2,7 und 10,8 Prozent, Mais 2,8 und −12,8 Prozent, WTI-Rohöl 7,3 und −7,1 Prozent, Kupfer 5,0 und 7,7 Prozent, zweijährige US-Note −0,0 und 3,2 Prozent.
+- Bei Real, Mais und der zweijährigen Note ist der Betrag der Rollrendite viel größer als der der Spot-Rendite. Die Rollrendite von CL in dieser Schätzung läuft vom 22. November 2004 bis 13. August 2012.
+- Erb und Harvey berechnen für Heizöl von Dezember 1982 bis Mai 2004 eine annualisierte Rollrendite von 4,6 Prozent gegen eine Spot-Rendite von 0,93 Prozent.
+- Die durchschnittliche Rollrendite des VX-Futures ist annualisiert −50 Prozent, und etwa drei Viertel der Zeit lag Contango vor (Simon und Campasano, 2012).
 
 ## Unterschiedliche Quellenpositionen
 

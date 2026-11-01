@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Cross-Sectional Momentum
@@ -45,6 +45,19 @@ aktualisiert: 2026-10-30
 - Jegadeesh und Titman (1993) zeigen, dass Preismomentum über die vergangenen sechs bis zwölf Monate anhält: Die stärksten Aktien über 6, 7, 8 bis hin zu 12 Monaten schlagen tendenziell in den folgenden 6 bis 12 Monaten.
 - Ihre simulierte Strategie ist long im obersten Dezil der Rendite der vorangegangenen sechs Monate, short im untersten Dezil und wird sechs Monate gehalten; sie erzielt 10 Prozent annualisiert.
 - Angesichts dieser Evidenz räumte Eugene Fama ein, dass vergangene Aktienrenditen künftige Aktienrenditen vorhersagen können.
+- Ein dritter Weg, Rollrenditen zu extrahieren, kauft ein Portfolio von Futures in Backwardation und shortet zugleich ein Portfolio in Contango, in der Hoffnung, dass sich die Spot-Renditen aufheben.
+- Diese Hoffnung ist nicht unvernünftig, wenn die Spotpreise von Rohstoffen positiv mit Wirtschaftswachstum oder anderen makroökonomischen Indizes korrelieren.
+- Die vereinfachte Strategie von Daniel und Moskowitz rangiert täglich die 12-Monats-Rendite von 52 physischen Rohstoffen und hält den Future mit der höchsten Rendite 25 Handelstage long und den mit der niedrigsten short.
+- Vom 1. Juni 2005 bis zum 31. Dezember 2007 beträgt die annualisierte Rendite 18 Prozent bei einer Sharpe Ratio von 1,37; vom 2. Januar 2008 bis zum 31. Dezember 2009 beträgt sie minus 33 Prozent, danach erholt sich die Leistung.
+- Dieselbe Strategie funktionierte laut Daniel und Moskowitz für Weltaktienindizes, Währungen, internationale Aktien und US-Aktien.
+- Bei US-Aktien wird das oberste Dezil der um 12 Monate verzögerten Renditen einen Monat gekauft und das unterste Dezil leerverkauft.
+- Beispiel 6.2 setzt Lookback 252, Haltedauer 25 und die obersten sowie untersten 50 Titel des S&P 500; vom 15. Mai 2007 bis zum 31. Dezember 2007 ergeben sich 37 Prozent annualisiert bei einer Sharpe Ratio von 4,1, vom 2. Januar 2008 bis zum 31. Dezember 2009 minus 30 Prozent.
+- Daniel und Moskowitz finden von 1947 bis 2007 eine annualisierte Durchschnittsrendite von 16,7 Prozent und eine Sharpe Ratio von 0,83; nach 2009 stabilisiert sich die Rendite, das frühere Hoch ist noch nicht wieder erreicht.
+- Die Strategie ist fast ein Spiegelbild des linearen Long-Short-Mean-Reversion-Aktienmodells von Khandani und Lo, aber mit viel längerem Lookback und längerer Haltedauer.
+- Ein Faktormodell auf Futures kann BIP-Wachstum oder Inflation mit der Rendite jedes Futures korrelieren oder eine Hauptkomponentenanalyse verwenden.
+- Hafez und Xie finden mit dem RavenPack Sentiment Index, dass long positive und short negative Sentimentänderung vor Kosten 52 bis 156 Prozent annualisiert und Sharpe Ratios von 3,9 bis 5,3 bringt, je nach Portfoliogröße.
+- Die Ansteckung erzwungener Verkäufe und Käufe unter Publikumsfonds trägt zum Momentum der gemeinsam gehaltenen Aktien bei.
+- Die Finanzkrise 2008 bis 2009 ruinierte diese Momentum-Strategie ebenso wie den S&P DTI.
 
 ## Funktionsweise
 

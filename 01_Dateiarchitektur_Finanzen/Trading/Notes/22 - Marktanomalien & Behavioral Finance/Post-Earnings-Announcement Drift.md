@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Post-Earnings-Announcement Drift
@@ -31,6 +31,14 @@ aktualisiert: 2026-10-30
 - Die Strategie kauft zur Eröffnung, wenn die Rendite sehr positiv ist, und leerverkauft, wenn sie sehr negativ ist, und schließt am selben Tag.
 - Sie braucht weder die Deutung der Meldung als gut oder schlecht noch den Vergleich mit den Analystenerwartungen; der Markt zeigt das über die Rendite.
 - Overnight-Halten bringt keine zusätzlichen Gewinne, weil die Overnight-Renditen im Mittel negativ sind.
+- Für ein Universum von S&P-500-Aktien beträgt die APR vom 3. Januar 2011 bis 24. April 2012 6,7 Prozent und die Sharpe Ratio 1,5.
+- Die Rendite wird durch 30 geteilt, die maximale Zahl von Positionen an einem Tag in diesem Backtest; das enthält einen gewissen Look-ahead-Bias, der begrenzt bleibt, weil die tägliche Höchstzahl der Meldungen recht vorhersagbar ist.
+- Weil die Strategie intraday ist, lässt sie sich mindestens vierfach hebeln, was eine annualisierte Durchschnittsrendite nahe 27 Prozent ergibt.
+- Viele veröffentlichte Ergebnisse von vor zehn oder zwanzig Jahren zeigten, dass der Drift länger als einen Tag dauerte; das kann ein Beispiel dafür sein, dass die Dauer durch größere Bekanntheit kürzer geworden ist.
+- Ob eine noch kürzere Haltedauer bessere Renditen bringt, bleibt zu testen.
+- Ein rein technisches Modell derselben Art zieht aus Fusionen und Übernahmen eine APR von etwa 3 Prozent.
+- Hafez fand entgegen der üblichen Annahme, dass der Kurs des Übernahmeziels nach der ersten Ankündigung stärker fällt als der des Käufers.
+- Die Meldungszeiten für etwa ein Jahr lassen sich für ein durch allsyms gegebenes Universum von earnings.com holen; prevDate und todayDate stehen im Format yyyymmdd, und nur Meldungen nach dem vorigen Schluss und vor der heutigen Eröffnung werden als Auslöser gesetzt.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Time Stop
@@ -34,6 +34,7 @@ aktualisiert: 2026-10-30
 - Alle bisher besprochenen Momentum-Strategien verwenden nur zeitbasierte Ausstiege.
 - Ein Stop-Loss kann zusätzlich oder stattdessen die Ausstiegsbedingung sein.
 - Durch den zeitbasierten Ausstieg oder einen Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt.
+- Durch den zeitbasierten Ausstieg ist der Verlust einer einzelnen Momentum-Position begrenzt; der kumulierte Verlust vieler aufeinanderfolgender Verlustpositionen ist damit nicht ausgeschlossen.
 
 ## Funktionsweise
 

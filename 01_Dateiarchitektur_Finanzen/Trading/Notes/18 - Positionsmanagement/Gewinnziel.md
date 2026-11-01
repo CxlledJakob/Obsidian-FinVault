@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Gewinnziel
@@ -73,6 +73,8 @@ aktualisiert: 2026-10-30
 - Das minimale Gewinnziel der ersten Einheit kann das 50-Prozent-Retracement des vorangehenden Rückgangs sein.
 - Die Hälfte einer Position kann an einem kleineren Retracement geschlossen werden, die zweite Einheit für ein weiter entferntes Ziel bleiben.
 - Ein relativ kleiner Gewinn auf einer Einheit wird schnell mitgenommen, damit der Zwei-Einheiten-Trade auch bei einem Fehlschlag der größeren These netto vorn liegen kann.
+- Das Aufwärtspotenzial einer Momentum-Strategie ist unbegrenzt, solange keine willkürliche Gewinnobergrenze gesetzt wird; eine solche Obergrenze ist unratsam.
+- Das Aufwärtspotenzial einer Mean-Reversion-Strategie ist durch den Mean begrenzt, zu dem die Preise zurückkehren.
 
 ## Funktionsweise
 

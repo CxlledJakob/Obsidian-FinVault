@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Holding Period
@@ -42,6 +42,18 @@ aktualisiert: 2026-10-30
 - Alle bisher besprochenen Momentum-Strategien verwenden nur solche zeitbasierten Ausstiege.
 - Die Schulter-Kopf-Schulter-Signale auf den echten Aktienkursen verlieren im Schnitt etwa 0,25 Prozent über eine Haltedauer von 10 Tagen.
 - Dieselbe Haltedauer von 10 Tagen ergibt bei den Mustern in den Pseudo-Aktiendaten einen durchschnittlichen Verlust von 0,03 Prozent.
+- Für nicht überlappende Renditepaare verlangt der Text, bei längerem Lookback um die Haltedauer vorzurücken und bei längerer Haltedauer um den Lookback.
+- Der abgedruckte Code schreitet dagegen um den Lookback vor, wenn der Lookback mindestens so groß wie die Haltedauer ist, und sonst um die Haltedauer.
+- Die besten Kompromisspaare für TU sind (60, 10), (60, 25), (250, 10), (250, 25), (250, 60) und (250, 120); aus Handelssicht wird darunter die kürzestmögliche Haltedauer bevorzugt, weil sie die besten Sharpe Ratios erzeugt.
+- Beim Vorzeichentest sind die besten Paare (60, 10), (250, 10) und (250, 25).
+- Die Arbitrage, die die Rollrendite über den Basiswert extrahiert, hat voraussichtlich kürzere Haltedauer und geringeres Risiko als Buy-and-Hold, weil der verrauschte Spot nicht über lange Zeit ausgemittelt werden muss.
+- Die VX-ES-Rollrendite-Strategie von Simon und Campasano hält die Position einen Tag.
+- Tägliches Rebalancing macht die Signale eines Momentum-Portfolios nicht unabhängiger, wenn Lookback und Haltedauer lang sind; wenige unabhängige Signale senken die Sharpe Ratio.
+- Die querschnittliche Momentum-Strategie auf dem S&P-500-Universum hält 25 Tage, das lineare Mean-Reversion-Modell auf demselben Universum weniger als einen Tag.
+- Faktoren außer möglicherweise der Hauptkomponente ändern sich langsam, deshalb werden die Haltedauern so lang wie bei den querschnittlichen Modellen dieses Abschnitts.
+- Die Dauer, über die kürzerfristiges nachrichtengetriebenes Momentum wirkt, wird immer kürzer, je mehr Händler es aufgreifen.
+- Wird Momentum als langsame Diffusion von Information verstanden, endet es früher, wenn mehr Händler die Information schneller und früher lernen.
+- Die Haltedauer muss deshalb womöglich ständig verkürzt werden, und es gibt dafür keinen vorhersagbaren Zeitplan.
 
 ## Funktionsweise
 

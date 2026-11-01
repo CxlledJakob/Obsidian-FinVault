@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Kointegration
@@ -57,6 +57,49 @@ aktualisiert: 2026-10-30
 - Bevor ein Johansen-Test auf den vier Kontrakten CL, BZ, RB und HO läuft, wird zuerst der Crack Spread geprüft, dessen ADF vom 20. Mai 2002 bis zum 4. Mai 2012 keine Mean Reversion zeigt.
 - ETFs mit Rohstoffproduzenten kointegrieren oft mit dem Spotpreis dieser Rohstoffe, weil die Rohstoffe einen wesentlichen Teil ihrer Assets ausmachen, und dienen deshalb als Proxy des Spotpreises, um die Rollrendite zu extrahieren.
 - Die Kointegration zwischen VX und ES wurde in Kapitel 5 für eine profitable Mean-Reversion-Strategie verwendet; hier wird daraus keine Mean-Reversion-, sondern eine Momentum-Strategie gebaut.
+- Neben der mechanischen Anwendung von CADF- und Johansen-Test auf ein Portfolio wird ein intuitives Verständnis angestrebt, was diese Tests wirklich prüfen, samt der einfachen mathematischen Gleichungen dahinter.
+- An öffentlichen Börsen gehandelte einzelne Preisreihen sind selten stationär. Stationäre Portfolios lassen sich herstellen, indem zwei oder mehr nicht mean-revertierende Reihen linear kombiniert werden.
+- Der CADF-Test eignet sich nur für ein Paar, der Johansen-Test für beliebig viele Reihen.
+- Kointegration bedeutet nicht, dass jede Linearkombination stationär ist. Die Hedge Ratios müssen erst bestimmt werden.
+- Die CADF-Hedge-Ratio hängt von der Reihenfolge ab und ist nicht der genaue Kehrwert der vertauschten Regression. Oft ist nur eine Ordnung stationär; gewählt wird die negativste t-Statistik. Für EWA und EWC findet Johansen dagegen zwei Beziehungen.
+- EWA und EWC werden geprüft, weil die kanadische und die australische Wirtschaft rohstoffbasiert sind. Das Streudiagramm fällt auf eine Gerade, und das Residuum EWC minus Hedge-Ratio mal EWA sieht stationär aus. CADF verwirft die Null auf 95 Prozent, etwa minus 3,64 gegen minus 3,359.
+- Zwei kointegrierende Beziehungen bei nur zwei Reihen sind möglich, weil die beiden Hedge Ratios nicht notwendig Kehrwerte sind und zwei unabhängige stationäre Portfolios bilden. Johansen ist reihenfolgeunabhängig und liefert alle Beziehungen in einem Lauf.
+- Mit IGE, einem ETF aus Rohstoffaktien, schließt der Text auf drei Beziehungen mit 95 Prozent Sicherheit. Die Eigenwerte sind 0,0112, 0,0087 und 0,0030. Der erste Eigenvektor minus 1,0460, 0,7600, 0,2233 hat die kürzeste Halbwertszeit, 23 Tage gegen etwa 115 Tage bei USD.CAD.
+- ETFs sind ein ergiebiges Feld für kointegrierende Reihen und damit für Pair Trading. yport, der Nettomarktwert, ist die Summe aus Eigenvektor-Stückzahl mal Preis über alle ETFs und tritt an die Stelle der Einzelreihe in der Halbwertszeitregression.
+- Der Johansen-Eigenvektor mit dem größten Eigenwert ist derjenige mit der kürzesten Halbwertszeit und wird als Hedge-Ratio-Vektor des stationären Portfolios benutzt.
+- GLD und USO sind nicht kointegriert, obwohl die Vermutung lautet, steigendes Öl hebe über die Inflation auch Gold. Der Unterschied zwischen Kassaöl und den Futures, aus denen USO besteht, wird hier übergangen und in Kapitel 5 nachgeholt. Kurzfristige Mean Reversion kann trotzdem handelbar sein.
+- Echte Kointegration ist ein Ideal, das wenige reale Preisreihen erreichen. Für ein wirklich kointegrierendes Paar genügen OLS oder Johansen auf langer Historie; sonst wird die Hedge Ratio dynamisch nachgeführt.
+- Logpreis-Kointegration bedeutet, dass eine Linearkombination der Logpreise stationär ist. Ihre ersten Differenzen sind näherungsweise die Renditen eines Portfolios mit konstanten Kapitalgewichten, inklusive einer impliziten Kasse.
+- Die Preisratio ist nur stationär, wenn die Hedge Ratios gleichen Betrag haben. Sind Preise und Logpreise kointegrierend, lassen sich beide Spreads theoretisch rechtfertigen; der Preisspread ist einfacher, weil er kein ständiges Rebalancing verlangt.
+- EWA und EWC mit dynamischem Kalman-β erreichen eine APR von 26,2 Prozent und eine Sharpe Ratio von 2,4.
+- Tägliche Preise einzelner Aktien erfüllen die Stationaritätsdefinition aus Kapitel 2 fast nie. Ein geometrischer Random Walk beschreibt sie: einmal weggelaufen, kehren sie selten zum Start zurück. Intraday- und saisonale Mean Reversion sind spätere Sonderfälle.
+- Selbst Paare wie Exxon gegen Chevron oder Citibank gegen Bank of America kointegrieren out of sample selten. In einem gewählten Fenster findet man kointegrierende Paare leicht, im folgenden Fenster verlieren sie die Kointegration ebenso leicht.
+- Das Schicksal einer Firma ändert sich durch Management und Wettbewerb schnell. Dieselbe Branche garantiert nicht dasselbe Schicksal, Beispiel AAPL gegen BBRY.
+- EWA und EWC, genannt 2009, kointegrierten im November 2012 noch, weil sich die Fundamentaldaten eines Aktienkorbs langsamer ändern als die einer Firma. Mit mehr ETFs auf nahezu denselben Sektor nehmen die Paar-Gelegenheiten zu.
+- GLD gegen GDX kointegriert im Johansen-Test vom 23. Mai 2006 bis 14. Juli 2008 mit 99 Prozent und verliert die Kointegration vom 15. Juli 2008 bis 9. April 2012.
+- Am 14. Juli 2008 erreichte WTI etwa 145 Dollar je Barrel. Teures Öl verteuert die Goldförderung, die Gewinne der Minen sinken, und ihre Aktien bleiben hinter dem Goldpreis zurück.
+- Mit dem Ölfonds USO kointegriert das Triplett über 2006 bis 2012. Der Johansen-Test zeigt mit 99 Prozent genau eine kointegrierende Beziehung.
+- USO hält kein Öl, sondern Oil-Futures. Selbst wenn XLE mit dem Spot kointegriert, muss es das nicht mit USO. Das gilt für jeden Rohstoff-Futures-Fonds gegen einen Produzentenfonds.
+- Im Trainingsjahr 2007 kointegrieren 98 S&P-500-Aktien im Johansen-Test einzeln mit mindestens 90 Prozent mit SPY.
+- Das gleichgewichtete Long-only-Portfolio muss erneut gegen SPY getestet werden, weil gleiche Kapitalgewichte die Kointegration nicht garantieren, selbst wenn jede Aktie einzeln mit SPY kointegriert. Auf Log-Preisen liegt die Wahrscheinlichkeit über 95 Prozent.
+- Die Trace-Statistik für höchstens null kointegrierende Relationen ist 15,869, über dem 95-Prozent-Wert 15,494 und unter dem 99-Prozent-Wert 19,935. Die Eigenwert-Statistik 9,671 bleibt unter dem 90-Prozent-Wert 12,297.
+- Die Johansen-Implementierung, die der Autor kennt, nimmt höchstens 12 Symbole (LeSage, 1998).
+- Die meisten Währungs- oder Future-Paare kointegrieren nicht, und die meisten Portfolios daraus zeigen keine querschnittliche Mean Reversion. Gelegenheiten bleiben begrenzt, sind aber nicht verschwunden, etwa bei Future-Kalenderspreads.
+- Für den Test müssen die Reihen so aufbereitet sein, dass ein Punkt in beiden Instrumenten denselben Dollarwert hat. AUD gegen CAD wird deshalb als AUD.USD gegen CAD.USD getestet.
+- Währungen mit ähnlichen Fundamentaldaten sind die Kandidaten, analog zu Länder-ETFs. Weil Australien und Südafrika große Mineneinnahmen haben, ist neben AUD gegen CAD auch AUD gegen ZAR ein Kandidat. Der Markt nennt solche Währungen, darunter die norwegische Krone, Rohstoffwährungen.
+- Kalenderspreads mean-reverten im Allgemeinen nicht, obwohl beide Beine denselben Basiswert abbilden, weil die Rollrendite das Signal vom Spot abkoppelt.
+- Der 12-Monats-Log-Kalenderspread von CL ist im ADF-Test mit 99 Prozent stationär, bei einer Halbwertszeit von etwa 36 Tagen.
+- Gleichung F(t, T) = S(t) mal exp(γ(t − T)) gilt nur für einen Future, dessen Basiswert gehandelt wird. VIX ist keiner, die Log-Preise von VX gegen die Restlaufzeit liegen nicht auf einer Geraden, und die Formeln von Dupoyet, Daigler und Chen (2011) erklären die Mean Reversion der VX-Kalenderspreads nicht.
+- Für einzelne Märkte mean-reverten nur Kalenderspreads bestimmter Monate und bestimmter Abstände. Diesen Details geht der Text nicht nach.
+- Eine Produzenten-ETF kointegriert oft mit dem Spot und wegen der Rollrendite nicht mit dem Future.
+- Mean-revertierende Intermarket-Futures-Spreads, also Paare von Futures verschiedener Basiswerte, sind schwer zu finden.
+- Der naheliegende Kandidat vor einem Johansen-Test ist der Energiekomplex aus CL, BZ, RB und HO an der NYMEX.
+- Eine lineare Regression oder ein Johansen-Test auf der Mischung der Regime 2004 bis Mai 2008 und August 2008 bis 2012 wäre ein Fehler.
+- Ein Portfolio long 0,3906 Kontrakte VX und long einen Kontrakt ES soll stationär sein.
+- Findet sich ein Instrument, etwa ein ETF oder ein anderer Future, das mit dem Spotpreis oder der Spotrendite eines Rohstoffs kointegriert oder korreliert, lässt sich die Rollrendite des Rohstoff-Futures extrahieren, indem dieses Instrument in Backwardation geshortet und in Contango gekauft wird.
+- Das ETF-Paar GLD gegen GDX hörte 2008 auf zu kointegrieren.
+- Die dazu gebildete Hypothese betraf den hohen Rohölpreis; nachdem der Ölpreis als Eingabe ergänzt wurde, funktionierte das Kointegrationsmodell wieder.
+- Dieser Vorgang, einen fundamentalen Grund zu suchen und quantitativ zu prüfen, wird dem blinden Ergänzen weiterer Regeln vorgezogen, wenn eine Strategie den Backtest underperformt.
 
 ## Funktionsweise
 
@@ -103,6 +146,8 @@ aktualisiert: 2026-10-30
 - Das Verhältnis y1/y2 ist nur stationär, wenn die Hedge Ratios betragsgleich sind; das ist ein Sonderfall und nicht die normale Erwartung.
 - Für ein wirklich kointegrierendes Paar genügen möglichst lange Historie und eine einmalige OLS- oder Johansen-Schätzung.
 - Für Paare, die nicht wirklich kointegrieren, braucht der Spread oft eine dynamische Hedge Ratio; das Verhältnis als Signal erspart das.
+- Für ein mean-revertierendes Portfolio mit fester Stückzahl je Bestandteil während des Trades kommen die Hedge Ratios aus den Preisreihen, für feste Marktwerte je Bestandteil aus den Log-Preisreihen.
+- Der hier beschriebene Kalman-Filter sucht nicht die Hedge Ratio zweier kointegrierender Preisreihen, sondern Mittel und Streuung einer einzelnen mean-revertierenden Reihe.
 
 ## Risiken und Grenzen
 

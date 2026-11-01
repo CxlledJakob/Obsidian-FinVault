@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Unit Root
@@ -31,6 +31,13 @@ aktualisiert: 2026-10-30
 - Im Null-Lag-Modell auf Logpreisen ist Beta gleich 0 der Unit-Root-Zustand: das System ist nichtstationär und verhält sich als Martingal.
 - Der gewöhnliche ADF-Test ist der Spezialfall von SADF, bei dem die minimale Fensterlänge gleich Endpunkt minus 1 ist.
 - SADF testet auf der ADF-Regression mit Konstante und Lag-Differenzen die Null Beta kleiner oder gleich 0 gegen die Alternative Beta größer als 0.
+- Für USD.CAD wird die Unit-Root-Null nicht verworfen: ADF-Statistik minus 1,840744, kritischer 10-Prozent-Wert minus 2,594, AR(1)-Schätzung 0,994120. λ ist negativ, ein Trend liegt damit nicht vor.
+- Der Drift β wird null gesetzt, der Offset μ nicht, weil der Mittelwert selten null ist und ein konstanter Drift klein gegen die täglichen Schwankungen ist. Oft ist Lag 1 nötig, damit die Null verworfen werden kann.
+- Der CADF-Test auf EWC gegen EWA verwirft die Unit Root des Spreads auf 95 Prozent: t-Statistik minus 3,64346635 gegen minus 3,359, AR(1)-Schätzung minus 0,020411.
+- Im Vektorfall ist Λ gleich 0 der Zustand ohne Kointegration, analog zur univariaten Unit Root λ gleich 0.
+- Ein ADF-Test auf dem Verhältnis Back zu Front von VX zeigt Stationarität mit 99 Prozent Wahrscheinlichkeit.
+- Ein ADF-Test auf dem Crack Spread vom 20. Mai 2002 bis zum 4. Mai 2012 zeigt keine Mean Reversion.
+- Ein ADF-Test auf CL gegen BZ im Verhältnis 1:1 zeigt, dass der Spread weit von stationär entfernt ist.
 
 ## Funktionsweise
 
@@ -60,6 +67,9 @@ aktualisiert: 2026-10-30
 - Der augmentierte Dickey-Fuller-Test weist den VIX mit 99 Prozent Sicherheit als stationär aus.
 - Der ADF-Test weist die back-adjustierten Front-Month-Kurse von VX als definitiv nicht mean-reverting aus.
 - Der ADF-Test des 12-Monats-Log-Kalender-Spreads von CL findet Stationarität mit 99 Prozent Wahrscheinlichkeit und eine Halbwertszeit von 36 Tagen.
+- Ein ADF-Test zeigt den VIX mit 99 Prozent Sicherheit als stationär. Derselbe Test zeigt, dass die back-adjustierten Frontmonatskurse von VX definitiv nicht mean-reverten.
+- Der 12-Monats-Log-Kalenderspread von CL ist im ADF-Test mit 99 Prozent stationär, bei einer Halbwertszeit von etwa 36 Tagen.
+- Die Halbwertszeit kommt aus der Regression der Änderung der Rollrendite auf ihren verzögerten Wert und ist minus log(2) geteilt durch den Steigungskoeffizienten.
 
 ## Unterschiedliche Quellenpositionen
 

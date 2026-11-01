@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Hurst-Exponent
@@ -24,6 +24,13 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Auf den Tageskursen von USD.CAD um 17:00 Uhr ET liefert genhurst(log(y), 2) den Hurst-Exponenten 0,49 und deutet damit nur auf schwache Mean Reversion.
+- Wegen der endlichen Stichprobe ist die statistische Signifikanz eines geschätzten H nötig, bevor die Null H gleich 0,5 verworfen wird. Für USD.CAD liefert vratiotest h gleich 0 und pValue gleich 0,367281, die Random-Walk-Null wird also nicht verworfen.
+- Für den Zwei-Jahres-Treasury-Future TU beträgt der Hurst-Exponent 0,44.
+- Der Variance-Ratio-Test verwirft für TU die Hypothese eines Random Walk nicht.
+- Der Widerspruch zu den positiven Lag-Korrelationen löst sich dadurch, dass die Reihe auf verschiedenen Zeitrahmen Momentum und Mean Reversion zeigt.
+- Der Variance-Ratio-Test kann die einzelnen Zeitrahmen nicht prüfen, in denen die Korrelationen stärker als im Durchschnitt sind.
+- Hurst-Exponent und Variance-Ratio-Test werden mit genhurst und vratiotest berechnet, der Korrelationskoeffizient mit corrcoef.
 
 ## Funktionsweise
 

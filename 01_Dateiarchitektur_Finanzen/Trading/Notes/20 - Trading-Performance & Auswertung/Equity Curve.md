@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Equity Curve
@@ -21,6 +21,8 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Abbildung 6.7 zeigt den S&P DTI Index; zum Zeitpunkt des Schreibens beträgt der Drawdown seit dem 5. Dezember 2008 minus 25,9 Prozent.
+- Die kumulierten Renditen der querschnittlichen Futures-Strategie in Abbildung 6.5 erholen sich nach dem Einbruch 2008 bis 2009; die Aktienkurve in Abbildung 6.6 stabilisiert sich nach 2009, ohne das frühere Hoch wieder zu erreichen.
 
 ## Funktionsweise
 

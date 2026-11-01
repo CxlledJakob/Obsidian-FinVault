@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Stop Hunt
@@ -34,6 +34,10 @@ aktualisiert: 2026-10-30
 - Das kurzfristige Momentum entsteht, weil viele Stop-Orders auf oder nahe Unterstützung und Widerstand liegen.
 - Die Key Points fassen Stop Hunting als Strategie, die Stop-Orders an typischerweise runden Zahlen nahe dem aktuellen Marktpreis auslöst.
 - Auch die ungleichmäßige Verteilung von Stop-Orders kann auf der kürzesten Skala Momentum erzeugen.
+- Unterschreitet der Preis eine Unterstützung, werden die dort liegenden Sell-Stop-Orders ausgelöst und treiben den Preis weiter nach unten; beim Widerstand ist es symmetrisch.
+- High-Frequency-Händler können großen Verkaufsdruck künstlich erzeugen, indem sie große Verkaufsorders legen, sobald der Preis nah genug an der Unterstützung ist, um den nächsten Tick nach unten zu treiben.
+- Sobald die Stops ausgelöst sind und Abwärtsmomentum läuft, decken sie die Short-Position mit schnellem Gewinn.
+- Beim Opening Gap können Stop-Orders auf verschiedenen Preisen bei der Eröffnung zugleich ausgelöst werden, und eine Kaskade trifft auch weiter vom Open entfernte Stops.
 
 ## Funktionsweise
 

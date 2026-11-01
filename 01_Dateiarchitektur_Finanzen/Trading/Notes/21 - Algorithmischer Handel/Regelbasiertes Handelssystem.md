@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Regelbasiertes Handelssystem
@@ -152,6 +152,16 @@ aktualisiert: 2026-10-30
 - Der Glossartext formuliert den Satz „You can't buy success.“.
 - Nach Kenntnis des Autors ist kein verkauftes Handelssystem im Echtzeithandel über die Zeit durchgehend profitabel gewesen.
 - Statt ein System zu kaufen, sollen die Systemkosten und das Handelskonto an eine Wohltätigkeitsorganisation der eigenen Wahl gegeben werden.
+- Die lineare Mean-Reversion-Regel wird auf den 12-Monats-Kalenderspread von CL und auf VX-Kalenderspreads angewendet.
+- Beim VX-Spread nutzt die Regel das Verhältnis Back zu Front und einen Lookback von 15 Tagen für Durchschnitt und Standardabweichung.
+- Die ES-VX-Regel shortet das aus der Preisregression gebaute Portfolio, sobald der Wert um eine Residual-Standardabweichung des Trainingssets abweicht.
+- Eine weitere Regel auf VX gegen ES stützt sich nicht auf die Mean Reversion dieses Spreads und wird als Momentum-Strategie im nächsten Kapitel behandelt.
+- Die beschriebenen Strategien sind Illustrationen von Technik und Prinzip, keine Rezepte und keine schrittweise Implementierung, und sie sind nicht garantiert frei von den Fallstricken aus Kapitel 1.
+- Der Prozess bildet eine Hypothese als quantitatives Modell ab und prüft sie an neuen, ungesehenen Daten; scheitert sie, werden Gründe gesucht und das Modell angepasst, statt blind Regeln zu häufen.
+- Einfache lineare Regeln werden bevorzugt, sobald die Marktunvollkommenheit verstanden ist, etwa Regression zum Mittel, Rollrenditen oder das Schluss-Rebalancing gehebelter ETFs.
+- Trotz des regelbasierten Anspruchs bleibt subjektives Urteil nötig, etwa ob vor einem großen Ereignis der Hebel gesenkt oder das Modell abgeschaltet wird und ob Kelly über das Gesamtportfolio oder je Strategie gilt.
+- Dass Urteil nötig bleibt, macht Regeln nicht nutzlos: Kahneman zufolge sind Experten Algorithmen in unsicheren Bereichen einheitlich unterlegen, und der Finanzmarkt sei hoffentlich keine Ausnahme.
+- Auch eine automatische Strategie verlangt weiter die Beurteilung, ob die Modelle nach einem Regimewechsel noch gültig sind.
 
 ## Funktionsweise
 
@@ -222,6 +232,12 @@ aktualisiert: 2026-10-30
 - Für MACD oder einen anderen bekannten Indikator wird zuerst die Aktivität bestimmt, die eine Momentumänderung darstellt, also Kreuzung von schneller und langsamer Linie, höherer oder tieferer Histogrammbalken oder ein Stoß über oder unter eine Overbought- oder Oversold-Linie, und danach werden die vier Lagen der höheren Zeitebene in Regeln gefasst.
 - Die Mindestbedingungen, die auf beiden Zeitebenen erfüllt sein müssen, um einen Trade zu erwägen, sind der erste Teil eines Tradingplans mit einem Vorteil bei der Setup-Erkennung.
 - Die in diesem Buch empfohlenen Einstiegsstrategien sind vollständig objektiv, sobald die Trade-Bedingungen erfüllt sind.
+- Das ungleiche Währungssystem schätzt jeden Tag die Hedge Ratio aus den Log-Preisen der vorangehenden 250 Tage mit dem Johansen-Test, bildet über 20 Tage Mittel und Standardabweichung des Portfoliomarktwerts und setzt die Stückzahl auf den negativen Z-Score.
+- Es handelt AUD.USD gegen CAD.USD und nicht den Kreuzkurs, weil die Hedge Ratio nicht eins ist. Die berichtete Leistung nach den ersten 250 Tagen ist 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6.
+- Das einfache System auf AUD.CAD setzt die Position auf das negative Vorzeichen der Abweichung vom 20-Tage-Durchschnitt und addiert den Übernacht-Rollover zur Log-Rendite, mit Verdreifachung mittwochs für AUD und donnerstags für CAD.
+- Der Kalenderspread von CL hält den fernen Zwölfmonatskontrakt long und den nahen short, solange der Z-Score der Rollrendite nicht positiv ist, andernfalls umgekehrt, über 61 Handelstage und mit Roll zehn Tage vor Verfall.
+- Lookback ist die gerundete Halbwertszeit der Rollrendite, etwa 36 Tage. Die ungehebelt Rendite teilt den Gewinn durch zwei. Vom 2. Januar 2008 bis 13. August 2012 sind annualisierte Rendite 8,3 Prozent und Sharpe Ratio 1,3.
+- Dieselbe Kontraktregel ist nicht auf VX übertragbar über die Gleichung für gehandelte Basiswerte, weil VIX nicht gehandelt wird und die vorgeschlagenen Alternativformeln die Mean Reversion der VX-Spreads nicht erklären.
 
 ## Risiken und Grenzen
 
