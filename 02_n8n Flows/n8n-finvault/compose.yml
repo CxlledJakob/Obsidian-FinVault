@@ -18,6 +18,7 @@ services:
       TZ: "Europe/Berlin"
       GENERIC_TIMEZONE: "Europe/Berlin"
       N8N_RESTRICT_FILE_ACCESS_TO: "/vault/Finanzen/Trading"
+      NODE_FUNCTION_ALLOW_BUILTIN: "fs,path"   # Code-Nodes dürfen Dateien im Vault lesen/schreiben (Status-Baustein)
       NODES_EXCLUDE: "[]"                   # aktiviert "Execute Command" (nur für mkdir neuer Ticker-Ordner)
       N8N_SECURE_COOKIE: "false"            # nur lokal über http://localhost
       N8N_DIAGNOSTICS_ENABLED: "false"
