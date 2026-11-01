@@ -67,8 +67,7 @@ Laut Analyst läuft Welle 2 als Korrektur mit drei Wellen abwärts.
 - Bestätigte Unterstützung bei 207 $ als möglicher Einstieg mit niedrigem Risiko
 
 ## Risiken und Unsicherheiten
-- []</uncertainties_and_risks>
-<parameter name="upcoming_events">[]
+- Nicht genannt
 
 ## Fehlende Informationen
 - Ungültigkeitsmarke für das Welle-2-Szenario
