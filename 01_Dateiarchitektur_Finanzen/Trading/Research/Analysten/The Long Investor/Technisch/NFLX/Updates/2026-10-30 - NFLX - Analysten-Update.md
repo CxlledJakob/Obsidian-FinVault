@@ -20,10 +20,12 @@ konzepte:
   - "Moving-Average-Struktur"
 importiert_am: 2026-11-01T09:45:06.383Z
 verarbeitung:
-  workflow: "FinVault Patreon → Vault v0.5"
+  workflow: "FinVault Patreon → Vault v0.5 (migriert v0.7)"
   prompt_version: "analyst-extraction-v4"
   modell: "claude-haiku-5-5"
   kosten_cent: 0.1945
+nachfolger: ""
+status_datei: "[[NFLX - Aktueller Stand]]"
 ---
 # 2026-10-30 – NFLX – Analysten-Update
 
@@ -71,8 +73,9 @@ Nicht genannt
 - Zeithorizont
 
 ## Verknüpfungen
-- **Theorie:** [[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|Unterstützungen & Widerstände]] · [[Trading/Notes/02 - Trendanalyse/Moving-Average-Struktur|Moving-Average-Struktur]]
+- **Status:** [[NFLX - Aktueller Stand]]
 - **Vorgänger:** [[2026-09-04 - NFLX - Analysten-Update]]
+- **Nachfolger:** keiner
 - **Erwähnte Ticker:** keine
 
 ## Originalbeitrag

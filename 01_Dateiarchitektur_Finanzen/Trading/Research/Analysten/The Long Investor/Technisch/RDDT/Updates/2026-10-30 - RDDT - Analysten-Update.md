@@ -23,10 +23,12 @@ konzepte:
   - "Trendwende"
 importiert_am: 2026-11-01T09:45:06.373Z
 verarbeitung:
-  workflow: "FinVault Patreon → Vault v0.5"
+  workflow: "FinVault Patreon → Vault v0.5 (migriert v0.7)"
   prompt_version: "analyst-extraction-v4"
   modell: "claude-haiku-5-5"
   kosten_cent: 0.1829
+nachfolger: ""
+status_datei: "[[RDDT - Aktueller Stand]]"
 ---
 # 2026-10-30 – RDDT – Analysten-Update
 
@@ -73,8 +75,9 @@ Nicht genannt
 - Zeithorizont fehlt
 
 ## Verknüpfungen
-- **Theorie:** [[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|Unterstützungen & Widerstände]] · [[Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement|Fibonacci-Retracement]] · [[Trading/Notes/01 - Marktstruktur & Price Action/Higher High|Higher High]] · [[Trading/Notes/01 - Marktstruktur & Price Action/Higher Low|Higher Low]] · [[Trading/Notes/01 - Marktstruktur & Price Action/Trendwende|Trendwende]]
-- **Vorgänger:** keiner (erstes Update zu diesem Ticker)
+- **Status:** [[RDDT - Aktueller Stand]]
+- **Vorgänger:** keiner
+- **Nachfolger:** keiner
 - **Erwähnte Ticker:** keine
 
 ## Originalbeitrag
