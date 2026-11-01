@@ -33,10 +33,12 @@ konzepte:
   - "Simple Moving Average"
 importiert_am: 2026-10-31T00:50:22.782Z
 verarbeitung:
-  workflow: "FinVault Patreon → Vault v0.5"
+  workflow: "FinVault Patreon → Vault v0.5 (migriert v0.7)"
   prompt_version: "analyst-extraction-v4"
   modell: "claude-haiku-5-5"
   kosten_cent: 0.2298
+nachfolger: ""
+status_datei: "[[NBIS - Aktueller Stand]]"
 ---
 # 2026-10-30 – NBIS – Analysten-Update
 
@@ -90,8 +92,9 @@ Welle 3 oben am 1.618 Fib bei 281 $ getoppt; Welle 4 läuft laut Analyst Richtun
 - Konkretes Kursziel für Bull Case über Welle 5 hinaus nicht genannt
 
 ## Verknüpfungen
-- **Theorie:** [[Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen|Elliott-Wellen]] · [[Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement|Fibonacci-Retracement]] · [[Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion|Fibonacci-Projektion]] · [[Trading/Notes/10 - Elliott-Wellen/Welle 3|Welle 3]] · [[Trading/Notes/10 - Elliott-Wellen/Welle 4|Welle 4]] · [[Trading/Notes/10 - Elliott-Wellen/Welle 5|Welle 5]] · [[Trading/Notes/10 - Elliott-Wellen/Impulsregeln|Impulsregeln]] · [[Trading/Notes/11 - Indikatoren/Simple Moving Average|Simple Moving Average]]
-- **Vorgänger:** keiner (erstes Update zu diesem Ticker)
+- **Status:** [[NBIS - Aktueller Stand]]
+- **Vorgänger:** keiner
+- **Nachfolger:** keiner
 - **Erwähnte Ticker:** AMZN, INTC, MSFT, CRWV, IREN
 
 ## Originalbeitrag

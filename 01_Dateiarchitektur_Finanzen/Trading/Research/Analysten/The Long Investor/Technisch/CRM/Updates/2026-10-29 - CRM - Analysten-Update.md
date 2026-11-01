@@ -24,10 +24,12 @@ konzepte:
   - "Unterstützungen & Widerstände"
 importiert_am: 2026-11-01T09:52:18.933Z
 verarbeitung:
-  workflow: "FinVault Patreon → Vault v0.5"
+  workflow: "FinVault Patreon → Vault v0.5 (migriert v0.7)"
   prompt_version: "analyst-extraction-v4"
   modell: "claude-haiku-5-5"
   kosten_cent: 0.2107
+nachfolger: ""
+status_datei: "[[CRM - Aktueller Stand]]"
 ---
 # 2026-10-29 – CRM – Analysten-Update
 
@@ -75,8 +77,9 @@ Laut Analyst läuft Welle 2 als Korrektur mit drei Wellen abwärts.
 - Bedingungen für die Bestätigung der Unterstützung bei 207 $
 
 ## Verknüpfungen
-- **Theorie:** [[Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen|Elliott-Wellen]] · [[Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement|Fibonacci-Retracement]] · [[Trading/Notes/10 - Elliott-Wellen/Welle 2|Welle 2]] · [[Trading/Notes/10 - Elliott-Wellen/Welle 3|Welle 3]] · [[Trading/Notes/10 - Elliott-Wellen/ABC-Korrektur|ABC-Korrektur]] · [[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|Unterstützungen & Widerstände]]
-- **Vorgänger:** keiner (erstes Update zu diesem Ticker)
+- **Status:** [[CRM - Aktueller Stand]]
+- **Vorgänger:** keiner
+- **Nachfolger:** keiner
 - **Erwähnte Ticker:** keine
 
 ## Originalbeitrag
