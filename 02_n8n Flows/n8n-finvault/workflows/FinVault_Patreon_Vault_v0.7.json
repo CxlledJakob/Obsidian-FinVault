@@ -247,6 +247,7 @@
     },
     {
       "parameters": {
+        "executeOnce": false,
         "command": "=mkdir -p \"{{ $json.target_dir }}\""
       },
       "id": "a1b2c3d4-0014-4000-8000-000000000014",
