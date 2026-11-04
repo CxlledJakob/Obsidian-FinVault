@@ -4,6 +4,25 @@ Stand: 4. November 2026
 
 Alex macht die Flows. Jakob macht das Brain und die App. Die JSON-Datei ist die Übergabe: Alex schreibt sie, Jakob zeichnet sie auf den Chart.
 
+## Branches
+
+Zwei Arbeitsbranches und `main`.
+
+- `jakob/features` für Jakob
+- `alex/wissensgeruest` für Alex
+- `main` ist der gemeinsame Stand nach dem Merge
+
+Am 4. November 2026 gelöscht. Der Inhalt steckte schon in `main`, `jakob/features` und `alex/wissensgeruest`. Nichts musste noch gemergt werden.
+
+- `cursor/fragment-zuordnen-markets-in-profile-0507`
+- `cursor/note-update-helper-4b4a`
+
+Vor jedem Merge hier eine Zeile unter „Letzte Änderung“ ergänzen. Der andere sieht dann im Diff, was dazugekommen ist.
+
+## Letzte Änderung
+
+- 4. November 2026, Jakob: die zwei Cursor-Branches gelöscht. Aufgabenliste angelegt.
+
 ## Schon erledigt
 
 - Der Flow auf `main` liest Patreon-Mails, schreibt das Markdown und speichert die Bilder.
