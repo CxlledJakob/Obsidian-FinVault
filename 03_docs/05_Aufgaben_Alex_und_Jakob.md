@@ -23,6 +23,7 @@ Vor jedem Merge hier eine Zeile unter „Letzte Änderung“ ergänzen. Der ande
 
 - 4. November 2026, Jakob: die zwei Cursor-Branches gelöscht. Aufgabenliste angelegt.
 - 4. November 2026, Jakob: Standard für die Chart-JSON ist `Trading/Templates/chart-template.json`. Moving Averages kommen nicht in die Datei.
+- 4. November 2026, Jakob: die Chart-JSON von `03_docs` nach `Trading/Templates` verschoben.
 
 ## Schon erledigt
 
