@@ -22,7 +22,7 @@ Vor jedem Merge hier eine Zeile unter „Letzte Änderung“ ergänzen. Der ande
 ## Letzte Änderung
 
 - 4. November 2026, Jakob: die zwei Cursor-Branches gelöscht. Aufgabenliste angelegt.
-- 4. November 2026, Jakob: Standard für die Chart-JSON ist `03_docs/chart-template.json`. Moving Averages kommen nicht in die Datei.
+- 4. November 2026, Jakob: Standard für die Chart-JSON ist `Trading/Templates/chart-template.json`. Moving Averages kommen nicht in die Datei.
 
 ## Schon erledigt
 
@@ -75,5 +75,5 @@ Felder, die Alex schreibt und Jakob liest:
 3. Die Zeichnung auf den eigenen Chart legen. Linien und Zonen normal. Wellenpunkte nur bei `snapped`. `hint` gestrichelt. Ziele als Linie nach rechts, ohne Enddatum.
 4. 50er und 200er aus den eigenen Kursdaten rechnen.
 5. In FinVault nur drei Seiten zeigen: Dashboard, Watchlist, Charts. Darüber der Schalter zur Research-Plattform.
-6. Zum Bauen `03_docs/chart-template.json` nehmen. Nicht auf den laufenden Flow warten.
+6. Zum Bauen `Trading/Templates/chart-template.json` nehmen. Nicht auf den laufenden Flow warten.
 7. Am Brain weiter die Bücher und die Notizstruktur. Strategien erst, wenn die Abfrage durch die Notizen steht.
