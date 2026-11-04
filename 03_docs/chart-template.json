@@ -1,0 +1,86 @@
+{
+  "schema": "finvault.chart-template/0.1",
+  "id": "the-long-investor-uber-2026-11-04-1w",
+  "analyst": "The Long Investor",
+  "ticker": "UBER",
+  "timeframe": "1W",
+  "published_at": "2026-11-04T16:15:00+01:00",
+  "points": [
+    {
+      "id": "w1",
+      "label": "1",
+      "price": 64.0,
+      "attach": "pivot",
+      "side": "high",
+      "when": { "status": "hint", "hint": "2021-06-01", "bar_time": null }
+    },
+    {
+      "id": "w2",
+      "label": "2",
+      "price": null,
+      "attach": "pivot",
+      "side": "low",
+      "when": { "status": "hint", "hint": "2023-02-01", "bar_time": null }
+    },
+    {
+      "id": "w3",
+      "label": "3",
+      "price": 100.0,
+      "attach": "pivot",
+      "side": "high",
+      "when": { "status": "hint", "hint": "2025-09-01", "bar_time": null }
+    },
+    {
+      "id": "w4",
+      "label": "4",
+      "price": 64.0,
+      "attach": "pivot",
+      "side": "low",
+      "when": { "status": "hint", "hint": "2026-11-01", "bar_time": null }
+    },
+    {
+      "id": "w5",
+      "label": "5",
+      "price": 151.04,
+      "attach": "target",
+      "side": null,
+      "when": { "status": "open", "hint": null, "bar_time": null }
+    }
+  ],
+  "drawings": [
+    {
+      "type": "hline",
+      "role": "invalidation",
+      "price": 64.0,
+      "from_point": "w1",
+      "extend": "right",
+      "label": "INVALIDATION LINE"
+    },
+    {
+      "type": "hline",
+      "role": "bull-case",
+      "price": 70.9,
+      "extend": "right",
+      "label": "BULL CASE"
+    },
+    {
+      "type": "fib",
+      "kind": "retracement",
+      "extend": "right",
+      "levels": [
+        { "ratio": 0.382, "price": 70.9 },
+        { "ratio": 0.5, "price": 61.22 },
+        { "ratio": 0.618, "price": 51.55 }
+      ]
+    },
+    {
+      "type": "fib",
+      "kind": "extension",
+      "extend": "right",
+      "levels": [
+        { "ratio": 1.618, "price": 100.79 },
+        { "ratio": 2.618, "price": 151.04 }
+      ]
+    }
+  ]
+}

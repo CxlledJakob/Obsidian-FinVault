@@ -22,6 +22,7 @@ Vor jedem Merge hier eine Zeile unter „Letzte Änderung“ ergänzen. Der ande
 ## Letzte Änderung
 
 - 4. November 2026, Jakob: die zwei Cursor-Branches gelöscht. Aufgabenliste angelegt.
+- 4. November 2026, Jakob: Standard für die Chart-JSON ist `03_docs/chart-template.json`. Moving Averages kommen nicht in die Datei.
 
 ## Schon erledigt
 
@@ -50,9 +51,9 @@ Einmalig, damit der bestehende Flow auf Jakobs Rechner läuft. Alex hat das auf 
 Felder, die Alex schreibt und Jakob liest:
 
 - `ticker`, `timeframe`, `analyst`, `published_at`
-- Punkt: `label`, `price`, `attach` (`pivot`, `level`, `target`), `when.status` (`hint`, `snapped`, `open`), `when.bar_time`
-- Zeichnung: `hline`, `zone`, `fib`, `trendline`, `indicator`
-- `indicator` nur als Name, Periode und Timeframe. Die Kurve zeichnet die App.
+- Punkt: `label`, `price`, `attach` (`pivot`, `target`), `side` (`high`, `low`), `when.status` (`hint`, `snapped`, `open`), `when.hint`, `when.bar_time`
+- Zeichnung: `hline`, `fib`, `zone`, `trendline`
+- Moving Averages stehen nicht in der JSON. Die App rechnet 50 und 200 selbst.
 
 ## Alex
 
@@ -74,5 +75,5 @@ Felder, die Alex schreibt und Jakob liest:
 3. Die Zeichnung auf den eigenen Chart legen. Linien und Zonen normal. Wellenpunkte nur bei `snapped`. `hint` gestrichelt. Ziele als Linie nach rechts, ohne Enddatum.
 4. 50er und 200er aus den eigenen Kursdaten rechnen.
 5. In FinVault nur drei Seiten zeigen: Dashboard, Watchlist, Charts. Darüber der Schalter zur Research-Plattform.
-6. Zum Bauen die UBER-JSON aus dem Chat nehmen. Nicht auf den laufenden Flow warten.
+6. Zum Bauen `03_docs/chart-template.json` nehmen. Nicht auf den laufenden Flow warten.
 7. Am Brain weiter die Bücher und die Notizstruktur. Strategien erst, wenn die Abfrage durch die Notizen steht.
