@@ -1,0 +1,278 @@
+{
+  "schema": "status-v1",
+  "ticker": "DELL",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/Technisch/DELL",
+  "stand": {
+    "datum": "2026-11-03",
+    "update": "2026-11-03 - DELL - Analysten-Update"
+  },
+  "next_id": 7,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 393,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.382 Fib, Beginn Buy Zone (Kurs zum Schlusskurs Montag)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 331,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.5 Fib, steigende 200 WMA (Bereich, den der Analyst am engsten beobachtet)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "unterstuetzung",
+      "wert": 269,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib, tiefstes Level",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "widerstand",
+      "wert": 592.82,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "4.618 Fib, Welle-5-Spitze (Dort lag das SELL-Label)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "zone",
+      "wert": 393,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone ab 0.382 Fib",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      }
+    },
+    {
+      "id": "M6",
+      "art": "kursziel",
+      "wert": 180,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Bull Case, große blaue Linie",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht DELL nach einer Welle-5-Spitze am 4.618 Fib bei 592,82 USD in einer Korrektur. Den Bereich um 393 USD (0.382 Fib) betrachtet er als Beginn einer Kaufzone, die Unterstützung bei 331 USD (0.5 Fib und steigende 200 WMA) beobachtet er besonders genau. Die Kursrückgänge begründet er mit Speicherkostenthemen, Intel-Aussagen und hohen Lagerbeständen.",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet nach der Welle 5 am 4.618 Fib eine ABC-Korrektur, in deren Verlauf der Kurs im Bereich 393 USD oder 331 USD einen Boden bildet. Als Ziel des Bull Case nennt er 180 USD.",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Ein Rückgang unter 331 USD mit Tests bei 269 USD wäre laut Analyst die tiefere Stufe. Ohne ABC-Korrektur sieht der Analyst keine Überschreitung von 592,82 USD.",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Konsolidierung in der Buy Zone (ab 393 USD) abwarten, bevor nachgekauft wird\n- Bestätigung der Unterstützung bei 331 USD\n- Quartalszahlen am Dienstag, 24. November nach Börsenschluss",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Welle 5 hat am 4.618 Fib bei 592,82 USD ihren Hochpunkt gebildet, anschließend läuft eine Korrektur als Welle A. Das Ende von Welle A sieht der Analyst laut Update bei 0.38 Fib.",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Nach dem Welle-5-Hoch bei 592,82 USD befindet sich DELL in einer Abwärtskorrektur mit vier Verlusttagen in Folge. Der Kurs schloss am Montag bei 393 USD und testete dabei den 0.38 Fib, den der Analyst typischerweise als Ende von Welle A betrachtet.",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA (steigend): nahe 331 USD, zusammen mit dem 0.5 Fib als Bereich, den der Analyst am engsten beobachtet",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.382 Fib bei 393 USD: Beginn der Buy Zone\n- 0.5 Fib bei 331 USD: zusammen mit der steigenden 200 WMA wichtigste Unterstützung laut Analyst\n- 0.618 Fib bei 269 USD: tiefstes Level\n- 4.618 Fib bei 592,82 USD: Welle-5-Spitze, Widerstand\n- 0.38 Fib: Ende Welle A laut Analyst (Kurs testete diesen Bereich)",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Konsolidierung in der Buy Zone bei 393 USD\n- Bestätigung der Unterstützung bei 331 USD\n- Quartalszahlen am 24. November nach Börsenschluss",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Speicherknappheit und Speicherpreise belasten den Umsatz; der CEO erwartet die Knappheit möglicherweise über etwa 4 Jahre\n- Hohe Lagerbestände von 21,3 Mrd. USD (gegenüber 7,2 Mrd. USD ein Jahr zuvor)\n- Quartalsguidance von 49 Mrd. USD Umsatz und 6,50 USD EPS liegt unter dem Vorquartal (7,04 USD EPS)\n- Downgrade wegen Enterprise-AI-Timing (Kurs -11 % am 14. Okt.)\n- Intel erwartet 12 % weniger PC-Auslieferungen wegen Speicherpreisen (30. Okt.)\n- Invalidierungsniveau nicht genannt\n- Zeithorizont nicht genannt\n- Begründung des Bull-Case-Ziels 180 USD nicht genannt",
+      "stand": {
+        "datum": "2026-11-03",
+        "update": "2026-11-03 - DELL - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-03",
+      "update": "2026-11-03 - DELL - Analysten-Update",
+      "nachtrag": false,
+      "neu": 6,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 10,
+      "verarbeitet_am": "2026-11-04T20:14:15.612Z",
+      "kosten_cent": 0.1461
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fundamentalanalyse",
+      "ziel": "Trading/Notes/23 - Fundamentalanalyse/23 - Fundamentalanalyse"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Umsatzwachstum",
+      "ziel": "Trading/Notes/25 - Unternehmenskennzahlen/Umsatzwachstum"
+    },
+    {
+      "begriff": "Gewinn je Aktie",
+      "ziel": "Trading/Notes/25 - Unternehmenskennzahlen/Gewinn je Aktie"
+    },
+    {
+      "begriff": "Gewinnwachstum",
+      "ziel": "Trading/Notes/25 - Unternehmenskennzahlen/Gewinnwachstum"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-03",
+    "update": "2026-11-03 - DELL - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-04T20:14:15.613Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.1",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1461
+  }
+}
