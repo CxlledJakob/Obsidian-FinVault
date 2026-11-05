@@ -1,7 +1,7 @@
 {
   "hinweis": "Die Grenzen gelten für Cursor und Claude gemeinsam. Branch und Modell stehen getrennt unter cursor und claude. Das Skript erkennt die Anwendung selbst: Claude setzt CLAUDECODE, Cursor setzt CURSOR_AGENT. Override nur wenn nötig: FINVAULT_APP=cursor oder FINVAULT_APP=claude. Beide Regelordner bleiben im Repo. .cursor/rules nicht löschen, .claude nicht löschen.",
   "grenzen": {
-    "strenge": "locker",
+    "strenge": "mittel",
     "max_begriffe_pro_fragment": 25,
     "fragmente_pro_shard_zuordnung": 4,
     "max_neue_punkte_pro_fragment": 20,
