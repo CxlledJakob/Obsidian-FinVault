@@ -81,6 +81,10 @@ aktualisiert: 2026-11-05
 - Über die von Grove et al. gesichteten Arbeiten lag die mittlere Genauigkeit der menschlichen Teilnehmer bei 66,5 Prozent und die mittlere Hit Ratio der quantitativen Modelle bei 73,2 Prozent.
 - Goldbergs Regel auf zehn MMPI-Scores traf die Diagnose neurotisch oder psychotisch außer Stichprobe zu rund 70 Prozent und schlug selbst den besten Psychologen, auch wenn diesem die Regelvorhersage vorlag.
 - Die Regel von Leli und Filskov erkannte 83 Prozent neuer Fälle. Unerfahrene Kliniker lagen bei 63 Prozent, erfahrene bei 58 Prozent. Mit der Modellausgabe stiegen die Quoten auf 68 und 75 Prozent und blieben unter dem Modell. Die erfahrenen waren ohne Modell schlechter als die unerfahrenen.
+- Trefferquote und Profit Factor beschreiben die Performance einer Strategie am einfachsten; es gibt keine eindeutige Kombination beider, die zum Erfolg führt.
+- Trendhandel akzeptiert eine relativ niedrige Trefferquote für einen relativ hohen Profit Factor.
+- Sind die Indikatoren tatsächlich prädiktiv, hat kurzfristiger Handel eine höhere Trefferquote.
+- Auch bei relativ hoher Trefferquote und hohem Profit Factor streuen die Equity-Kurven einer Strategie erheblich.
 
 ## Funktionsweise
 
@@ -124,6 +128,7 @@ aktualisiert: 2026-11-05
 - Der Anteil richtiger Calls beträgt 0,57 im Kurs-Gewinn-Länderkorb.
 - Der Anteil richtiger Calls beträgt 0,67 im Momentum-Länderkorb.
 - Die erneut ausgewiesene Dividendenrendite trifft in 59 Prozent der Calls.
+- In der Monte-Carlo-Tabelle wird ein Trade als Gewinner gewertet, wenn eine gleichverteilte Zufallszahl unter der Trefferquote liegt; 55 Prozent Gewinntrades gelten mit einem Profit Factor von 1,5 als repräsentativ für ein gutes System.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -150,5 +155,6 @@ aktualisiert: 2026-11-05
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 400–419 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-022-p400-p419|S. 400–419]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 419–438 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-023-p419-p438|S. 419–438]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

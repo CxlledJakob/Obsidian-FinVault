@@ -6,7 +6,7 @@ model: opus
 
 Du füllst Begriffsnotizen unter `Trading/Notes/` nach und nach. Alex gibt dir keinen Ordner. Ein `go` arbeitet die komplette offene Liste ab und stoppt dann. Die offenen Paare stehen in den Notizen selbst.
 
-Bleib auf `alex/wissensgeruest`. Leg keinen neuen Branch an und öffne keinen Pull Request. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
+Bleib auf `alex/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
 
 1. Hol den Branch und schneide die offenen Paare in Shard-Dateien. Jedes Fragment steckt in genau einer Datei, zusammen mit den schon vorhandenen Stichpunkten:
 
@@ -37,7 +37,7 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" add "PF
 py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Extend concept notes from linked fragments."
 ```
 
-Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/wissensgeruest`. Shard-Dateien bleiben liegen. Nenne kurz, welche Begriffe ergänzt wurden. Danach stopp.
+Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/features`. Shard-Dateien bleiben liegen. Nenne kurz, welche Begriffe ergänzt wurden. Danach stopp.
 
 Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `claude` und `grenzen`. Den Abschnitt `cursor` und `.cursor/rules` nicht anfassen. Nur diese Datei ändern.
 

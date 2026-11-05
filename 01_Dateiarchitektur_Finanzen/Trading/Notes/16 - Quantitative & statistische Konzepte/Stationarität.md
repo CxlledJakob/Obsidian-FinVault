@@ -311,6 +311,8 @@ aktualisiert: 2026-11-05
 - Auch eine Reihe, die auf kurzer Frist mean-reverting wirkt, muss nicht im strengen Sinn stationär sein; gleitender Durchschnitt, gleitende Standardabweichung oder ein Verhältnis passen die Schwellen dann an das wandernde Niveau an.
 - Diese Annahme wird oft entwertet: die Wirtschaftsaussichten eines Landes, das Management eines Unternehmens und die Struktur eines Finanzmarkts ändern sich.
 - Komponentenweises Differenzieren eines kointegrierten Systems überdifferenziert und erzeugt Unit Roots im MA-Matrixpolynom.
+- Fourier-Transformationen setzen voraus, dass die Daten über die Stichprobe stationär sind, also unveränderliche Eigenschaften haben; flüchtige Marktzyklen, die kommen, gehen und ihre Periode ändern, verletzen diese Voraussetzung.
+- Eine längere Datenstichprobe verbessert die Auflösung der Fourier-Analyse, verschärft aber die Probleme mit der Stationarität.
 
 ## Beispiele
 
@@ -409,5 +411,6 @@ aktualisiert: 2026-11-05
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 647–666 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-035-p647-p666|S. 647–666]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 666–685 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-036-p666-p685|S. 666–685]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 685–704 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-037-p685-p704|S. 685–704]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 121–140 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-011-p121-p140|S. 121–140]]
 
 ## Verwandte Themen

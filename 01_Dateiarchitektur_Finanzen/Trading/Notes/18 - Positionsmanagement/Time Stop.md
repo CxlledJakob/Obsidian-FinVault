@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Time Stop
@@ -58,6 +58,11 @@ aktualisiert: 2026-11-01
 - In der Konfiguration [0,1,1] endet die Position nach einer Anzahl Bars, sofern nicht vorher der Stop greift.
 - In der Konfiguration [1,0,1] wird bis zu einem Gewinn oder bis zum Überschreiten der maximalen Haltedauer gehalten, ohne Rücksicht auf zwischenzeitliche Buchverluste.
 - In der Konfiguration [1,1,0] ist die vertikale Barriere aus, Gewinn wird mitgenommen, solange kein Stop greift, und die Haltedauer ist nicht begrenzt.
+- Swing-Trades brauchen einen Sicherheitsventil-Ausstieg (Safety Valve), weil sie in Erwartung eines Preiswendepunkts eingegangen werden.
+- Das Sicherheitsventil kann entweder auf der Zeit im Trade oder auf einem Preisausbruch beruhen.
+- Ein zeitbasiertes Sicherheitsventil muss die Periodizität des gehandelten Zyklus berücksichtigen. Ein Monatszyklus besteht meist aus 10 Bars aufwärts und 10 Bars abwärts, die erwartete Haltedauer ist also etwa 10 Bars; ist man nach etwa der Hälfte nicht im Gewinn, sollte man wahrscheinlich mit Verlust aussteigen.
+- Aggressiver ist eine Quick-out-Regel: Ist der Trade in den ersten ein oder zwei Bars nicht profitabel, wird ausgestiegen und auf eine bessere Gelegenheit gewartet.
+- Für das Sicherheitsventil eines Verlusttrades gibt es zwei Optionen: Ausstieg nach Preis oder nach Zeit im Trade.
 
 ## Risiken und Grenzen
 
@@ -79,5 +84,7 @@ aktualisiert: 2026-11-01
 - Advances in Financial Machine Learning.pdf, S. 191–210 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-011-p191-p210|S. 191–210]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 170–172 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-012-p170-p172|S. 170–172]]
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 235–239 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-017-p235-p239|S. 235–239]]
 
 ## Verwandte Themen

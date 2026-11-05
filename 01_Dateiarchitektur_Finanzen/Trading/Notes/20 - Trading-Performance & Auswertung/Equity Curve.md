@@ -32,6 +32,8 @@ aktualisiert: 2026-11-05
 
 ## Anwendung im Trading
 
+- Wer per Zufallszahl und Trefferquote über Gewinn oder Verlust jedes Trades entscheidet, die Auszahlung zuweist und die Trades summiert, erhält realistische Erwartungen an das Equity-Wachstum des Systems.
+- In der Tabellenkalkulation werden Spalte C (kumulierter Gewinn) und Spalte E (kumulierter Durchschnittsgewinn) als Linien geplottet; jedes Drücken von F9 erzeugt eine neue zufällige Equity-Kurve über 500 Trades.
 
 ## Regeln und Kriterien
 
@@ -39,6 +41,7 @@ aktualisiert: 2026-11-05
 ## Risiken und Grenzen
 
 - Die gezeigte Kurve enthält keine Transaktionskosten, benutzt den In-Sample-Lookback aus der Halbwertszeit und begrenzt den Portfoliomarktwert nicht.
+- Eine Strategie an ihrer historischen Equity-Kurve zu beurteilen, kann zu unberechtigter Begeisterung oder, seltener, zum Verwerfen einer guten Strategie führen, weil die Equity-Kurven bei gegebenem Profit Factor und gegebener Trefferquote stark streuen.
 
 ## Beispiele
 
@@ -58,6 +61,7 @@ aktualisiert: 2026-11-05
 - Die US-CAGR seit 1988 beträgt 13,7 Prozent für Value und 14,0 Prozent für hohes Prognosewachstum, bei einer Standardabweichung von 17,7 Prozent gegen 25,1 Prozent.
 - Abbildung 26.10 zeigt die globalen Portfolios, niedriges KGV neben hohem prognostiziertem Gewinnwachstum, mit 15,4 Prozent CAGR gegen 10,2 Prozent CAGR.
 - Abbildung 26.1 zeigt die Rohrenditen der globalen Value-Strategie.
+- Die konventionelle Stochastic-Regel auf S&P-Futures vom 17.09.2003 bis 25.04.2013 ergibt eine nicht profitable Equity-Kurve (Abbildung 17.1), die Antizipationsregel eine allgemein profitable (Abbildung 17.2).
 
 ## Unterschiedliche Quellenpositionen
 
@@ -76,5 +80,6 @@ aktualisiert: 2026-11-05
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 324–343 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-018-p324-p343|S. 324–343]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

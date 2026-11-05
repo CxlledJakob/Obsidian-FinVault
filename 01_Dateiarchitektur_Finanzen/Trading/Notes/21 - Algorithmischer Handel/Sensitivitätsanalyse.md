@@ -42,6 +42,8 @@ aktualisiert: 2026-11-05
 - Die zeitnäheren Signale der kürzeren Periode haben den Preis vieler falscher Momentumumkehren, die der fortgesetzte Trend innerhalb kurzer Zeit wieder zurücknimmt.
 - Eine zu kurze Lookback-Periode erzeugt zu viele Momentum-Whipsaws.
 - Die primäre Einstellung jedes Indikators ist die Lookback-Periode, also die Zahl der Bars, die in die Momentumberechnung eingehen.
+- Die Optimierung sollte eine Sensitivitätsanalyse enthalten: Jeder Parameter wird für sich variiert und die Performance über seinen gesamten Bereich betrachtet. Ohne sanften Gipfel, also ohne Wirksamkeit über einen Bereich von Einstellungen, ist die Strategie garantiert nicht robust.
+- In der Monte-Carlo-Tabelle lässt sich durch Ändern von Trefferquote und Profit Factor die Empfindlichkeit des Erfolgs gegenüber diesen Grundparametern beurteilen.
 
 ## Voraussetzungen
 
@@ -80,5 +82,6 @@ aktualisiert: 2026-11-05
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 286–305 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-016-p286-p305|S. 286–305]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 343–362 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-019-p343-p362|S. 343–362]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

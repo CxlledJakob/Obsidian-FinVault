@@ -22,6 +22,7 @@ aktualisiert: 2026-11-05
 - In-sample sind die Gelegenheiten von 1 bis I, und out of sample sind die späteren Gelegenheiten von I plus 1 bis J.
 - Der Out-of-Sample-Test prüft, ob das Portfolio mit minimaler Varianz in der Stichprobe auch außer Stichprobe die geringste Varianz hat.
 - Out-of-Sample-Daten sind Daten, die nicht für das Backtesten der Regel verwendet wurden.
+- Out-of-Sample-Testen heißt, die Strategie auf dasselbe Symbol über einen anderen Zeitraum oder auf mehrere andere Symbole anzuwenden, ohne die Parameter zu ändern.
 
 ## Kernaussagen
 
@@ -198,6 +199,9 @@ aktualisiert: 2026-11-05
 - Schwache Leistung auf einem festen Out-of-Sample-Satz kann Pech sein; dann kommt Cross-Validation mit mehreren Trainings- und Prüfmengen infrage.
 - Der abschließende echte Out-of-Sample-Test ist ein Walk-Forward, als Paper-Trading oder besser mit echtem Geld bei minimalem Hebel.
 - Die meisten Trader sind zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Werts erzeugt.
+- Out-of-Sample-Tests sind der letzte allgemeine Aspekt der Strategieentwicklung, der nicht übersehen werden darf.
+- Wer für den Out-of-Sample-Test neu optimiert, betrügt nur sich selbst und wird im realen Handel enttäuscht.
+- Sind die Out-of-Sample-Ergebnisse zufriedenstellend, ist die Strategie robust und kann mit größerem Vertrauen gehandelt werden.
 
 ## Risiken und Grenzen
 
@@ -277,5 +281,6 @@ aktualisiert: 2026-11-05
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 248–267 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-014-p248-p267|S. 248–267]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 267–286 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-015-p267-p286|S. 267–286]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 286–305 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-016-p286-p305|S. 286–305]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

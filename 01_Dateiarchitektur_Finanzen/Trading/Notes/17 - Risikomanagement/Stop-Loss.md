@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Stop-Loss
@@ -126,6 +126,7 @@ aktualisiert: 2026-11-01
 - Ein rationaler Marktteilnehmer eröffnet keine Position, deren erwartetes Ergebnis ein Verlust ist.
 - Weil Devisen von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET nahezu durchgehend gehandelt werden, lassen sich Stop-Losses dort sinnvoll einsetzen.
 - Stop-Losses mildern zusammen mit der Erfahrung aus schwarzen Schwänen und mit Constant Proportion Portfolio Insurance die Anwendung der Kelly-Formel im Risikomanagement.
+- Ehlers entwickelt die Strategie ohne Stop-Loss, untersucht danach die Maximum Adverse Excursions und fügt eine Stop-Regel ein, die nur die maximalen Verluste begrenzt, ohne die Gewinntrades stark zu stören.
 
 ## Regeln und Kriterien
 
@@ -187,6 +188,11 @@ aktualisiert: 2026-11-01
 - Beim Swing-Breakout liegt der initiale Schutz-Stop-Loss einen Tick unter beziehungsweise über dem Swing-Hoch oder Swing-Tief, das vor dem Einstieg entstanden ist.
 - Bei der Momentum-Reversal-Strategie liegt der initiale Schutzstop nach Ausführung einen Tick unter dem Swing-Tief oder über dem Swing-Hoch vor dem Einstieg.
 - Ein Handelssystem bestimmt mit vollständig objektiven Regeln auch den genauen Stop-Loss-Preis.
+- Laut Ehlers sollten Stop-Loss-Techniken nur eingesetzt werden, um große Verluste zu begrenzen.
+- Stop-Loss-Regeln sollten sparsam eingesetzt und nicht so eingebettet werden, dass der Stop fester Bestandteil der Strategie ist; die Hälfte des Namens ist Verlust.
+- Stop-Loss-Techniken sollten nur dazu dienen, große Verluste zu begrenzen.
+- Ehlers' Regel setzt den Stop als Prozentsatz des Einstiegspreises: Long wird am nächsten Open verkauft, wenn Close < (1 − PctLoss/100) · EntryPrice; Short wird am nächsten Open eingedeckt, wenn Close > (1 + PctLoss/100) · EntryPrice.
+- PctLoss kann je Symbol unterschiedlich gesetzt werden; für die meisten Aktien funktionieren 2 bis 5 Prozent, bei Futures sollte der Wert wegen des Hebels etwas kleiner sein.
 
 ## Risiken und Grenzen
 
@@ -205,6 +211,8 @@ aktualisiert: 2026-11-01
 - Ein weiter Stop, nur um der Position Raum zu geben, und weiteres Aufstocken bei Gegenlauf enden in einem großen Verlust oder darin, dass der Broker die Position schließt, wenn das Margin-Kapital aufgebraucht ist.
 - Bei Mean-Reversion-Strategien lassen sich die üblichen Stop-Losses logisch nicht einsetzen. Das Risikomanagement ist deshalb besonders wichtig und besonders schwierig; warum das so ist und welche Techniken passen, behandelt Kapitel 8.
 - Der seltene Verlust fällt oft beim maximalen Hebel nach einer ungebrochenen Erfolgsserie und ist dann sehr schmerzhaft oder katastrophal, weil die hohe Stetigkeit zuvor zu Überkonfidenz geführt hat (Dever, 2011).
+- Ist der Stop-Loss fest eingebaut und integraler Teil der Strategie, zerstört er nach Ehlers' Erfahrung ihre Robustheit.
+- Für den Ausstieg aus Verlusttrades bei antizipierten Swing-Trades hält Ehlers einen Stop-Loss nicht für wirksam, weil er so eng gesetzt werden müsste, dass man aus Trades herausgeworfen wird, die am Ende profitabel geworden wären.
 
 ## Beispiele
 
@@ -300,5 +308,7 @@ aktualisiert: 2026-11-01
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 235–239 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-017-p235-p239|S. 235–239]]
 
 ## Verwandte Themen

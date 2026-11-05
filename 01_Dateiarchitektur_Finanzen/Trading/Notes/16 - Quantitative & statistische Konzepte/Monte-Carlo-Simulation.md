@@ -124,6 +124,9 @@ aktualisiert: 2026-11-05
 - Montier baut ein künstliches Universum aus 100 Fondsmanagern, jeder mit einem wahren Alpha von 3 Prozent und einem Tracking Error von 6 Prozent, und trifft sie mit zufälligen Schocks über 50 Jahre.
 - Nach 50 Jahren zeigt der beste Manager ein Alpha von 5,2 Prozent und der schlechteste eines von 1 Prozent. In der Kapitelankündigung sind dieselben Enden auf 5 und 1 Prozent gerundet.
 - An den Jahresrenditen ist kaum zu erkennen, wer der gute und wer der schlechte Manager ist, obwohl jeder per Konstruktion dasselbe wahre Alpha von 3 Prozent hat.
+- Laut Ehlers ist die Monte-Carlo-Analyse der beste und verlässlichste Weg, die Performance einer Handelsstrategie zu beurteilen.
+- Die Monte-Carlo-Analyse ist nach Ehlers der beste und verlässlichste Weg, die Performance einer Handelsstrategie zu beurteilen, sofern man programmieren kann; die Rechnungen sind relativ einfach.
+- Zufall lässt sich nur in dem Sinn einführen, dass Gewinn oder Verlust je Trade über Trefferquote und Zufallszahl bestimmt und die Auszahlung zugewiesen wird; Gewinnen oder Verlieren an sich ist kein zufälliges Ereignis.
 
 ## Funktionsweise
 
@@ -202,6 +205,10 @@ aktualisiert: 2026-11-05
 - Im univariaten stochastischen Volatilitätsmodell wird vn+1 aus N(0, σ²v,j) gezogen und die logarithmierte Varianz als ln ht = α0,j + α1,j ln ht−1 + vt mit Var(vt) = σ²v,j fortgeschrieben.
 - Anschließend wird εn+1 aus N(0,1) gezogen, an+1 = √hn+1 εn+1 gesetzt und die Rendite aus rt = β0,j + β1,j x1t + … + βp,j xpt + at berechnet; beide Schritte werden für die Horizonte 2 bis ℓ wiederholt.
 - Die erklärenden Variablen xjt müssen im Prognosezeitraum vorliegen oder sich der Reihe nach prognostizieren lassen.
+- In der Tabellenkalkulation stehen in B1 die Trefferquote (Startwert 55) und in B2 der Profit Factor (Startwert 1,5); beide Werte gelten als repräsentativ für ein gutes System.
+- In A5 erzeugt =RAND() eine gleichverteilte Zufallszahl zwischen 0 und 1. B5 enthält =IF(A4<$B$1/100,$B$2,−1): Liegt die Zufallszahl innerhalb der Gewinnwahrscheinlichkeit, erhält der Trade den Profit Factor als Auszahlung, sonst −1.
+- Spalte C kumuliert die Trade-Gewinne, Spalte D zählt die Trades, Spalte E enthält =D5*(($B$2+1)*$B$1/100 −1) als kumulierten Durchschnittsgewinn; die Zeilen werden bis Zeile 504 kopiert, was 500 Trades ergibt.
+- Mit F9 wird neu berechnet und eine neue zufällige Equity-Kurve erzeugt; durch Ändern von B1 und B2 lässt sich der Einfluss der Grundparameter auf den Erfolg beurteilen.
 
 ## Voraussetzungen
 
@@ -314,5 +321,7 @@ aktualisiert: 2026-11-05
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 666–685 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-036-p666-p685|S. 666–685]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 685–704 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-037-p685-p704|S. 685–704]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 191–210 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-011-p191-p210|S. 191–210]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 235–239 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-017-p235-p239|S. 235–239]]
 
 ## Verwandte Themen

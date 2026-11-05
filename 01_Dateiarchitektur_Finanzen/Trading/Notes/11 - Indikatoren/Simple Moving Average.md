@@ -40,6 +40,21 @@ aktualisiert: 2026-11-05
 - Ein kurzes gleitendes Fenster lässt den Durchschnitt sprunghaft springen, wenn der älteste Bar durch den neuesten ersetzt wird. Dieselbe Sprungstelle trifft die gleitende Standardabweichung und eine im Fenster geschätzte Hedge Ratio.
 - Der GLD-USO-Lookback für die dynamische Hedge Ratio und den Z-Score ist 20 Handelstage und mit Wissen im Nachhinein nahe optimal gewählt. Dieselbe Fensterlänge gilt für die Ratio USO/GLD; die ersten 20 Beobachtungen werden entfernt, damit das Testset mit den Spread-Strategien übereinstimmt.
 - Die VX-Kalenderspread-Strategie berechnet den gleitenden Durchschnitt des Verhältnisses Back zu Front mit einem Lookback von 15 Tagen, zusammen mit den Standardabweichungen über dasselbe Fenster.
+- SMA-Filter sind ein Spezialfall der Moving-Average-Filter, bei dem alle Filterkoeffizienten denselben Wert haben.
+- Moving-Average-Filter sind nichtrekursive Filter, auch Finite-Impulse-Response-Filter (FIR), Tapped-Delay-Line-Filter oder Transversalfilter genannt.
+- Der SMA ist ein Tiefpassfilter: Niedrige Frequenzen nahe null passieren fast ungedämpft, höhere Frequenzen werden geblockt.
+- Die Transferfunktion eines Vier-Bar-SMA ist ein Polynom dritten Grades mit einer reellen und zwei komplementären imaginären Nullstellen.
+- Der Vier-Bar-SMA hat eine Nullstelle genau bei der Nyquist-Frequenz von 0,5 Zyklen pro Bar (Periode von zwei Bars) und löscht diese höchstmögliche Frequenz vollständig aus.
+- Der Vier-Bar-SMA hat eine zweite Nullstelle bei der Frequenz 0,25, was einer Periode von vier Bars entspricht.
+- Ein SMA ist eine Kleinste-Quadrate-Bestanpassung an die Daten: Minimiert man die Summe der quadrierten Abweichungen von einer Geraden, ist der Achsenabschnitt b genau der Durchschnitt der Datenpunkte, zumindest wenn der Lag des Filters außer Acht bleibt.
+- Ein N-Bar-SMA hat bei allen Frequenzen einen Lag von (N − 1) / 2 Bars.
+- Die kritische Periode eines SMA ist näherungsweise doppelt so lang wie seine Länge.
+- Der Vorteil gleitender Durchschnitte ist, dass sie sehr einfach zu berechnen sind; ihr Nachteil ist, dass sie für den Preis des Lags nur wenig glätten.
+- Die Impulsantwort eines SMA ist endlich, weil der Filter nur Output liefert, solange der Impuls im Fenster liegt; der SMA ist daher ein Spezialfall eines Finite-Impulse-Response-Filters (FIR).
+- Werden beim SMA mit geradem Grad das erste und letzte Element halbiert, ist eine doppelte Nullstelle der Transferfunktion bei der Nyquist-Frequenz garantiert; ein fünfelementiger SMA hat dann die Koeffizienten [0.5 1 1 1 0.5] / 4.
+- Der fünfelementige modifizierte SMA behält die Nullstelle bei der Vier-Bar-Periode und erhöht die minimale Dämpfung zwischen den beiden Nullstellen auf −20 dB, also 10 Prozent der Input-Amplitude.
+- Diese bessere Filterung kostet nur einen halben Bar zusätzliche Verzögerung, weil der Filter von vier auf fünf Elemente wächst.
+- Ein fünf-Bar-SMA hat eine Cutoff-Periode von etwa 10 Bars und zwei Bars Lag; ein SuperSmoother mit 10 Bars Cutoff hat höchstens etwa 1,5 Bars Lag, und der Unterschied wächst bei längeren Cutoff-Perioden.
 
 ## Funktionsweise
 
@@ -76,6 +91,20 @@ aktualisiert: 2026-11-05
 - Das Graham-und-Dodd-Verhältnis teilt den aktuellen Kurs durch den zehnjährigen Durchschnitt der ausgewiesenen Gewinne.
 - Ein einfacher gleitender Durchschnitt der Vergangenheit wird einer aufwendigen Trendschätzung vorgezogen. Graham hatte keine verlässlichen Aktienwertberechnungen gesehen, die über einfache Arithmetik oder die elementarste Algebra hinausgingen.
 - Fehlt eine volle Gewinnhistorie, wird der Durchschnitt auf dem längsten verfügbaren Zeitraum gerechnet.
+- Der Output eines Vier-Bar-SMA ist ein Viertel des jüngsten Preises plus je ein Viertel der um einen, zwei und drei Bars verzögerten Werte; die Transferfunktion lautet Output/Input = 1/4 + Z^−1/4 + Z^−2/4 + Z^−3/4.
+- Die Werte 1/4 heißen Filterkoeffizienten; sie summieren sich zu 1, sodass das Verhältnis von Output zu Input bei konstantem Input 1 ist.
+- Für einen N-Bar-SMA lautet die Transferfunktion im Frequenzbereich H(f) = Sin(πNf) / (N * Sin(πf)), wobei f die Frequenz relativ zur Abtastfrequenz ist.
+- Als nichtrekursiver Filter mit symmetrischen Koeffizienten hat ein SMA bei allen Frequenzen dieselbe Verzögerung, und zwar genau den halben Grad des Transfer-Polynoms.
+- Beim SMA sind alle Koeffizienten gleich eins geteilt durch die Zahl der Elemente; rückt die Zeit um einen Bar vor, fällt der Anteil des ältesten Werts weg und der Anteil des neuesten kommt hinzu.
+- Der SMA lässt sich auch als Fenster sehen, das über einen festen Datenstrom geschoben wird; nur die Werte im Fenster werden gemittelt.
+- Die kritische Periode ist die Frequenz, bei der die Output-Leistung halb so groß ist wie die Input-Leistung, also die Output-Amplitude 0,707 beträgt.
+- Die erste Nullstelle der Transferfunktion liegt bei f = 1 / N; weitere Nullstellen liegen dort, wo das Argument im Zähler ein ganzzahliges Vielfaches von π ist.
+- Das erste Maximum im Sperrbereich hat eine Dämpfung von etwa 2 / (3π) oder −13,3 dB, das nächste von 2 / (5π) oder −17,8 dB.
+- Der vierelementige SMA [1 1 1 1] / 4 hat eine kritische Frequenz von etwa 0,1 Zyklen pro Bar, was einer Zyklusperiode von 10 Bars entspricht.
+- Zwischen der Zwei-Bar- und der Vier-Bar-Periode steigt die Dämpfung des vierelementigen SMA auf etwa −12 dB, die Output-Amplitude beträgt dann etwa 25 Prozent der Input-Amplitude.
+- Der sechselementige SMA [1 1 1 1 1 1] / 6 eliminiert Zwei-, Drei- und Fünf-Bar-Perioden vollständig; seine kritische Periode liegt bei 13,7 Bars.
+- Beim sechselementigen SMA ändert sich die Dämpfung zwischen den Nullstellen gegenüber dem vierelementigen nicht nach der Nummer der Nebenkeule und steigt von Keule zu Keule nur leicht.
+- Ein symmetrisch gewichteter Filter [1 2 2 1] / 6 eliminiert statt Zwei- und Vier-Bar- die Zwei- und Drei-Bar-Perioden und dämpft zwischen den Nullstellen mit mindestens −25 dB, hat aber eine kürzere kritische Periode von 7,4 Bars.
 
 ## Voraussetzungen
 
@@ -101,6 +130,7 @@ aktualisiert: 2026-11-05
 - Die beiden Währungsbeispiele nutzen einen Lookback von 20 Tagen für den gleitenden Durchschnitt. Auf AUD.CAD ist das Signal der Schluss minus diesem Durchschnitt.
 - Die Hedge Ratio im ungleichen Paar kommt nicht aus diesen 20 Tagen, sondern aus einem Johansen-Fenster von 250 Tagen. Die 20 Tage bleiben für Mittel und Standardabweichung.
 - Beim CL-Kalenderspread werden gleitender Durchschnitt und gleitende Standardabweichung der Rollrendite mit einem Lookback gleich der gerundeten Halbwertszeit berechnet, etwa 36 Tage.
+- Ehlers empfiehlt die Fensterberechnung, weil die schrittweise Berechnung fehlschlägt, wenn die Länge des Durchschnitts über den Datensatz variiert, etwa bei Anpassung an Volatilität oder an eine gemessene Zyklusperiode.
 
 ## Regeln und Kriterien
 
@@ -137,6 +167,9 @@ aktualisiert: 2026-11-05
 - Auch die Auktionsrichtung des Tages bleibt unberücksichtigt, wodurch die Information stark in die Irre führen kann.
 - Auf jedes Beispiel, wie ein solcher Trendindikator den Trend definiert, zeigt der Autor zwei, in denen er schnell versagte, und auf jedes nachträgliche Beispiel mindestens zwei, in denen die Trendumkehr nicht rechtzeitig erkannt wurde.
 - Für sich kann ein gleitender Durchschnitt Teil eines umfassenden Tradingplans sein, identifiziert aber allein nicht die wahrscheinliche künftige Trendrichtung.
+- Der Preis für die Glättung durch den SMA ist die Verzögerung (Lag) in der Transferfunktion.
+- Die Dämpfung im Sperrbereich des SMA ist nicht erheblich.
+- Ein Weighted Moving Average dämpft schlechter als der entsprechende SMA.
 
 ## Beispiele
 
@@ -183,5 +216,10 @@ aktualisiert: 2026-11-05
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 343–362 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-019-p343-p362|S. 343–362]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 12–25 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-002-p012-p025|S. 12–25]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 26–34 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-003-p026-p034|S. 26–34]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 35–47 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-004-p035-p047|S. 35–47]]
 
 ## Verwandte Themen
+
+- Während der SMA eine Kleinste-Quadrate-Anpassung an eine Gerade ist, gibt es nichtrekursive Filter, die eine Kleinste-Quadrate-Anpassung an eine quadratische Funktion sind und so Krümmung in den Daten zulassen.

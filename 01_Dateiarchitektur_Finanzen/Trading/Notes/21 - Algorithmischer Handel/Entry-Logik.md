@@ -63,10 +63,18 @@ aktualisiert: 2026-11-05
 - Für nicht wirklich kointegrierte Paare kann das Preisverhältnis als Einstiegssignal die dynamische Hedge Ratio ersetzen.
 - Beim MACD ohne Overbought- und Oversold-Zonen gilt ein kürzerer Bar von unterhalb der Signallinie als bullische Umkehr der höheren Zeitebene. Ein längerer Bar von oberhalb der Signallinie ist die bullische Umkehr der kleineren Zeitebene.
 - Die Buy-Stop-Order des Swing Entry kann nach den regulären Handelszeiten gelegt werden. Wird sie ausgeführt, setzt eine Kontingenz sofort den Sell-Stop. Wird sie nicht ausgeführt, wird am Abend geprüft, ob die Bedingungen für den nächsten Tag noch stehen.
+- Beim konventionellen Stochastic hat der Roofing-Filter etwa zwei Bars Lag, die Stochastic-Berechnung kaum Lag und der glättende SuperSmoother weitere zwei Bars, zusammen vier Bars. Das Signal kommt etwa drei Bars nach dem Wendepunkt, der Einstieg erst am Folgetag, also etwa 8 Bars zu spät bei einer 10-Bar-Bewegung.
+- Mit der Antizipationsregel bleiben die vier Bars Rechen-Lag und ein Bar Einstiegsverzögerung, der Netto-Lag gegenüber dem echten Wendepunkt beträgt nur zwei Bars; das Timing ist damit etwa richtig.
+- Eine amplitudenkorrigierte Kosinuswelle lässt sich als Cosine = (Period / 2π) · (BP − BP[1]) aus der Bandpass-Ausgabe berechnen, wenn die Periode bekannt oder geschätzt ist.
+- Die Sinuswelle kreuzt unter null, wenn die Kosinuswelle im Tal ist, und über null, wenn sie am Gipfel ist; deshalb lassen sich Kauf- und Verkaufssignale aus den Nulldurchgängen der Sinuswelle bilden.
+- Eine Triggerlinie, die der Kosinuswelle um einen oder zwei Bars nachläuft, ist etwas konservativer, gibt aber einen Teil des mühsam reduzierten Lags zurück.
+- Einige Whipsaw-Trades lassen sich vermeiden, wenn die Nulldurchgänge der Sinuswelle nur dann als Einstieg gelten, wenn die Kosinuswelle sie durch Kreuzen mit sich selbst, um einen Bar verzögert, bestätigt.
 
 ## Voraussetzungen
 
 - Es wird angenommen, dass alle vom Verfahren benötigten Marktinformationen bekannt und öffentlich verfügbar sind, wenn das Verfahren die Empfehlung erzeugt.
+- Ein- und Ausstiegsregeln sollten prädiktiv sein. Die meisten regelbasierten Strategien beruhen auf Indikatoren, Setups oder Mustern, die von historischen Daten abhängen und eher dokumentieren, was geschehen ist; einen prädiktiven Indikator zu finden ist wohl der schwierigste Teil.
+- Indikatoren für Swing-Signale müssen einen Nullmittelwert haben; dazu ist der Roofing-Filter oder ein Äquivalent nötig, um die Verzerrung durch spektrale Dilatation zu beseitigen.
 
 ## Anwendung im Trading
 
@@ -159,6 +167,11 @@ aktualisiert: 2026-11-05
 - Gilt für die Zielabweichung des Logpreisspreads vom Mittel das Doppelte dieser Abweichung größer als die Kosten η, wird eine Aktie der ersten Reihe gekauft und γ Aktien der zweiten Reihe geshortet, sobald der Spread gleich Mittel minus Zielabweichung ist.
 - Der Einstiegszeitpunkt lässt sich bestimmen, solange die Zielabweichung gegenüber der Standardabweichung des Spreads nicht zu groß ist.
 - Ist die Zielabweichung negativ, wird eine Aktie der ersten Reihe geshortet und γ Aktien der zweiten Reihe gekauft; der Nettogewinn ist dann minus das Doppelte der Zielabweichung minus η.
+- Die Antizipationsregel für den Stochastic lautet: long gehen, wenn der Oszillator unter 20 Prozent kreuzt, und in eine Short-Position drehen, wenn er über 80 Prozent kreuzt. Sie liefert das Signal nominal drei Bars vor dem Wendepunkt des Indikators.
+- Die konventionelle Regel wartet auf Bestätigung: long erst, wenn der Stochastic über 20 Prozent kreuzt, short erst, wenn er unter 80 Prozent kreuzt.
+- Ein führendes Long-Signal entsteht, wenn eine Kosinuswelle über sich selbst, um ein oder zwei Bars verzögert, kreuzt; ein führendes Short-Signal, wenn sie darunter kreuzt.
+- Weniger konservativ ist ein Long-Signal, wenn die Sinuswelle unter null kreuzt, und ein Short-Signal, wenn sie über null kreuzt.
+- Swing-Einstiegssignale zeigen bei Always-in-the-Market-Strategien Positionsumkehrungen an.
 
 ## Risiken und Grenzen
 
@@ -171,6 +184,8 @@ aktualisiert: 2026-11-05
 - Beim EUR/USD entstand die bullische Wochen-MACD-Umkehr in der Woche zum 20. Oktober. Drei Tagesbars später drehte der Tages-MACD bullisch. Am Folgetag wurde einen Tick über dem Hoch des Vortags gekauft, mit Stop einen Tick unter dem Swing-Tief vor der bullischen Umkehr.
 - Im 5-Minuten-Daytrade lag der Swing-Entry-Short unter 1356,25 und wurde am nächsten Bar ausgeführt, mit Buy-Stop einen Tick über dem Swing-Hoch bei 1362,75.
 - Im GLD-USO-Vergleich arbeitet der adaptive Preisspread deutlich besser als die Ratio, obwohl das Paar nicht wirklich kointegriert ist und die Ratio dann eine dynamische Hedge Ratio ersparen kann.
+- Bei einem Monatszyklus wird die Stochastic-Länge auf 10 gesetzt, weil er etwa 10 Tage auf und 10 Tage ab hat. Die konventionelle Regel mit dem Zwei-Pol-Stochastic ergibt auf 10 Jahren S&P-Futures-Daten eine sehr schlechte Equity-Kurve, die Antizipationsregel eine allgemein profitable.
+- Die Antizipationsregel gilt für die meisten Oszillatoren, etwa den Bandpassfilter und den Zwei-Pol-RSI. Mit dem Zwei-Pol-Stochastic ist sie kein vollständiges System: Die 10-Bar-Periode dient nur der Demonstration, kann je Symbol optimiert werden, und Stop-Loss-Werte wurden nicht verwendet.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -199,5 +214,6 @@ aktualisiert: 2026-11-05
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Stochastic Oscillator
@@ -25,6 +25,7 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Ehlers behandelt Interpretation und Nutzung des Stochastic mit vorgeschaltetem Roofing Filter nicht und überlässt es dem Leser zu untersuchen, wie Standardindikatoren durch den vorgeschalteten Roofing Filter verbessert werden können.
 
 ## Funktionsweise
 
@@ -52,6 +53,15 @@ aktualisiert: 2026-10-30
 - Bei einem Zweilinien-Indikator wie dem Stochastic müssen schnelle und langsame Linie beide in der Zone liegen, damit er als overbought oder oversold gilt.
 - Ein Stochastic hängt in der Overbought-Zone, wenn der Trend bullisch ist, macht relativ flache Momentumkorrekturen und erreicht auf Preiskorrekturen oft nicht die Oversold-Zone.
 - Die Trendneigung größeren Grades beeinflusst, wie der Stochastic zykliert.
+- Im weiten Sinn wirkt der klassische Stochastic als einpoliger Filter, weil der Zähler seiner Berechnung nur einen einzigen Differenzterm enthält.
+- Ehlers berechnet den Stochastic über eine 20-Bar-Rückschau wie den Standard, verwendet zur Glättung jedoch einen SuperSmoother statt gleitender Durchschnitte.
+- Beim modifizierten Stochastic geht ein Roofing Filter voraus, der die zyklischen Komponenten auf Perioden von 10 bis 48 Bars begrenzt; dadurch wird der Indikator dramatisch verändert.
+- Im Code des modifizierten Stochastic werden Höchst- und Tiefstwert des gefilterten Signals über die Länge ermittelt, Stoc = (Filt − LowestC) / (HighestC − LowestC) berechnet und mit einem SuperSmoother zu MyStochastic geglättet.
+- Der adaptive Stochastic nutzt die Variable Filt statt der Schlusskurse, damit nur die vom Roofing-Filter durchgelassenen Frequenzkomponenten eingehen.
+- Zuerst werden höchster und tiefster Filt-Wert über die aktuelle dominante Zyklusperiode bestimmt; Stoc = (Filt − LowestC) / (HighestC − LowestC) ist der ungefilterte Wert des adaptiven Stochastic.
+- Statt Zähler und Nenner getrennt zu mitteln, glättet Ehlers das Verhältnis Stoc mit dem SuperSmoother-Filter.
+- Der SwamiCharts Stochastic berechnet für jeden Lookback von 5 bis 48 auf der Ausgabe des Roofing-Filters das Verhältnis (Filt − LowestC) / (HighestC − LowestC), wobei HighestC und LowestC Maximum und Minimum des gefilterten Werts über den Lookback sind.
+- Der SwamiCharts Stochastic wird für jeden Lookback mit einem 10-Bar-SuperSmoother geglättet, auf 0 bis 1 begrenzt und als Heatmap in Ampelfarben dargestellt.
 
 ## Voraussetzungen
 
@@ -63,15 +73,24 @@ aktualisiert: 2026-10-30
 - Die Fallstudie nutzt den Operator für zwei Arten von Regeln: Extreme und Übergänge sowie Divergenzen.
 - Dieser Text verwendet den Ausdruck Kanalnormierung statt Lanes Ausdruck, weil er beschreibt, was der Operator tut. Die meisten Schriften der technischen Analyse verwenden weiter den Ausdruck Stochastics.
 - Die bärische Stochastic-Umkehr der höheren Zeitebene eröffnet das Setup. Ausgeführt wird erst, wenn die kleinere Zeitebene ebenfalls bärisch dreht und der Preis das verlangte Bar- oder Swing-Tief nimmt.
+- Für die inverse Fisher-Transformation des adaptiven Stochastic wird Value1 = 2 · (AdaptiveStochastic − 0,5) mit dem Faktor 3 verstärkt. Die Triggerlinie ist der um einen Bar verzögerte, auf 90 Prozent gedämpfte Wert.
+- Kreuzt die inverse Fisher-Linie des adaptiven Stochastic über die Triggerlinie, wird gekauft; kreuzt sie darunter, wird short gegangen oder die Long-Position geschlossen. Die Kreuzungen liefern klare Kauf- und Verkaufspunkte.
 
 ## Regeln und Kriterien
 
 - Für den Stochastic gelten dieselben vier Dual-Time-Frame-Regeln wie für den DTosc, weil auch er Overbought- und Oversold-Zonen hat.
 - Im Chartbeispiel liegen die Zonen bei 75 Prozent Overbought und 25 Prozent Oversold.
+- Höchster und tiefster Schluss über die dominante Zyklusperiode sind nur sicher gefunden, wenn die gesamte Periode durchsucht wird; der adaptive Stochastic verwendet daher die volle dominante Zyklusperiode als Beobachtungsbereich.
+- Der adaptive Stochastic hat Referenzlinien bei 30 und 70 Prozent; sie lassen sich leicht auf 20/80 Prozent oder andere passende Werte ändern.
+- Die konventionelle Stochastic-Regel wartet auf Bestätigung: long, wenn der Oszillator über 20 Prozent kreuzt, Umkehr in short, wenn er unter 80 Prozent kreuzt.
+- Die Antizipationsregel lautet: long, wenn der Oszillator unter 20 Prozent kreuzt, Umkehr in short, wenn er über 80 Prozent kreuzt.
 
 ## Risiken und Grenzen
 
 - Es gibt keinen magischen oder mystischen Stochastic für Momentum-Handel; ein angeblich geheimer narrensicherer Indikator ist wahrscheinlich schon einer aus dem Chartprogramm.
+- Ein Stochastic bleibt in einem Aufwärtstrend auch bei relativ kurzer Rückschau nahe seiner Obergrenze, weil größere und längere zyklische Komponenten in den Daten vorhanden sind (Spectral Dilation).
+- Im Aufwärtstrend liegt der aktuelle Kurs tendenziell im oberen Bereich der Spanne aus Höchst- und Tiefstwert der Rückschau.
+- Da der Stochastic die relative Position in einem Kanal misst, liegt er in Trends nahe der oberen oder unteren Grenze, hat kurzfristig keinen Nullmittelwert und eignet sich daher nicht für die Fisher-Transformation.
 
 ## Beispiele
 
@@ -86,9 +105,14 @@ aktualisiert: 2026-10-30
 - Für diesen Tages-Short musste das Wochenmomentum bärisch oder bullisch overbought sein.
 - Am letzten Wochenbar hatte der wöchentliche Stochastic eine bärische Umkehr gemacht und damit das Swing-Entry-Short-Setup auf den Tagesdaten eröffnet, in der Woche zum 19. Oktober.
 - Erst am 31. Oktober machte IBM eine bärische Stochastic-Umkehr auf Tagesbasis. Der Kurs hatte das 50-Prozent-Retracement am 100-Prozent-Zeitretracement berührt, sieben Handelstage abwärts und sieben aufwärts.
+- Auf Dollar General (DG) über etwa ein Jahr zeigt der adaptive Stochastic die relativen trendbereinigten Preise über die Länge der dominanten Zyklusperiode genau an und hat viele Eigenschaften mit dem adaptiven RSI gemeinsam (Abbildung 11.2).
+- Bei einem Monatszyklus wird die Stochastic-Länge auf 10 gesetzt, weil er etwa 10 Tage auf und 10 Tage ab hat. Auf 10 Jahren S&P-Futures ergibt die konventionelle Regel mit dem Zwei-Pol-Stochastic sehr schlechte Ergebnisse, weil Einstiege etwa 8 Bars zu spät bei einer 10-Bar-Bewegung kommen; die Antizipationsregel ist allgemein profitabel.
 
 ## Unterschiedliche Quellenpositionen
 
+- Im direkten Vergleich der adaptiven Indikatoren hat der Bandpassfilter mehr hochfrequente Komponenten, während RSI, Stochastic und CCI im groben Sinn ziemlich dasselbe anzeigen (Abbildung 11.5).
+- Ein konventioneller RSI und ein konventioneller Stochastic scheinen auf demselben Chart verschiedene Informationen zu geben; laut Ehlers liegt das teils an fehlender Kompensation der spektralen Dilatation, im Kontext zeigen beide fast dasselbe.
+- Gegenüber dem SwamiCharts RSI zeigt der SwamiCharts Stochastic kurzfristige Abschwünge lebhafter und bei längeren Lookbacks viel weniger Gelb; er legt sich bei den Marktsignalen also weniger unentschieden fest.
 
 ## Eigene Erkenntnisse
 
@@ -103,5 +127,10 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 61–62 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-005-p061-p062|S. 61–62]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 153–172 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-012-p153-p172|S. 153–172]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 84–96 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-008-p084-p096|S. 84–96]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 140–159 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-012-p140-p159|S. 140–159]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 159–178 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-013-p159-p178|S. 159–178]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 197–216 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-015-p197-p216|S. 197–216]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

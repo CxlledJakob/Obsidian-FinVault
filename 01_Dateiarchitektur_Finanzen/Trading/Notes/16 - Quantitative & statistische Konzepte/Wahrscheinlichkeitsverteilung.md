@@ -368,6 +368,10 @@ aktualisiert: 2026-11-05
 - Tyszka und Zielonka (2002) legten drei einander ausschließende und erschöpfende Ausgänge so fest, dass jeder ungefähr die Wahrscheinlichkeit 0,33 hatte.
 - Die Kalibrierungskurve trägt die genannte Wahrscheinlichkeit gegen die tatsächliche Häufigkeit ab. Perfekte Kalibrierung ist die 45-Grad-Linie.
 - Bei Torngren und Montgomery (2004) hätte ein Münzwurf sowohl die Laien als auch die professionellen Investoren bei der Wahl der outperformenden Aktie geschlagen.
+- Ein verbreiteter Irrtum ist, dass die Wahrscheinlichkeitsverteilung technischer Indikatoren normal, also gaußförmig, sei; das ist nicht so, wie man an einer ausreichenden Datenmenge selbst prüfen kann.
+- Die Fisher-Transformation formt einen Indikator mit nominalem Nullmittelwert zwischen −1 und +1 so um, dass er annähernd normalverteilt ist. Ihre nichtlineare Vergrößerung nahe dem Betrag 1 erzeugt die langen Enden der Ausgangsverteilung.
+- Einen auf die Normalverteilung skalierten Indikator zu plotten, hat einen großen Vorteil für die Interpretation, weil die Werte direkt Standardabweichungen und Wahrscheinlichkeiten entsprechen.
+- Indikatoren sind nach Ehlers im Grunde Darstellungen eines statistischen Prozesses.
 
 ## Funktionsweise
 
@@ -545,5 +549,6 @@ aktualisiert: 2026-11-05
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 115–134 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-007-p115-p134|S. 115–134]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 134–153 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-008-p134-p153|S. 134–153]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 197–216 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-015-p197-p216|S. 197–216]]
 
 ## Verwandte Themen

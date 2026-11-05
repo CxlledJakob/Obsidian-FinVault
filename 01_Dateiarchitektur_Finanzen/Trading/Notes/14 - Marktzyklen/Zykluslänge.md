@@ -47,6 +47,14 @@ aktualisiert: 2026-11-05
 - Die Varianz der Zyklusinnovation wird mit (1 minus δ²) skaliert. Bei δ gleich 1 verschwindet diese Innovationsvarianz.
 - GetSsfStsm lässt bis zu zehn solcher Zykluskomponenten zu. Jede Komponente wird durch σε, die Frequenz λc und den Dämpfungsfaktor δ beschrieben.
 - Die Saisonperiode s ist davon getrennt: s ist die Zahl der Saisons im Jahr in der Saisonkomponente γt.
+- Nach Ehlers ist ein 10-Bar-Zyklus etwa die kürzeste für das Trading nützliche Zyklusperiode, und Zyklusperioden länger als 48 Bars können oft als Trends betrachtet werden.
+- Der Zyklusgehalt von Kursdaten schwingt weitgehend wie eine Sinuswelle mit variabler Amplitude und variabler Periodizität.
+- Die dominante Zyklusperiode lässt sich schätzen, indem man die Zahl der Bars zwischen Nulldurchgängen des Bandpassausgangs zählt.
+- Marktzyklen sind evaneszent: Sie kommen und gehen und ändern ihre Periodizität über die Zeit.
+- Der Lag-Abstand zwischen aufeinanderfolgenden roten (oder grünen) Balken in der Autokorrelations-Heatmap mit drei Bars Mittelung ergibt die Periodizität der Welle, bei einer 20-Bar-Sinuswelle genau 20 Bars.
+- Marktzyklen sind flüchtig: Sie kommen und gehen und ändern ihre Periodizität.
+- Trader können mit einer Zyklusperiode von 20 Balken etwas anfangen, die gleichwertige Frequenz von 0,05 Zyklen pro Balken hat dagegen keine besondere Bedeutung; deshalb rechnet Ehlers die DFT in Perioden statt in Frequenzen.
+- Die kürzeste messbare Zyklusperiode ist zwei Balken, weil das Nyquist-Kriterium mindestens zwei Abtastwerte pro Zyklus verlangt.
 
 ## Funktionsweise
 
@@ -58,12 +66,25 @@ aktualisiert: 2026-11-05
 - Der Dynamic-Time-Projection-Report bündelt Zeitretracement, Alternate Time Projection und High-High- sowie Low-Low-Projektionen. Die Bars sind die künftigen Zeiten mit den meisten Treffern.
 - Die mittlere Länge der stochastischen Zyklen eines AR(2) mit komplexem Wurzelpaar ist k gleich 2π geteilt durch den Arkuskosinus von phi1 geteilt durch (2 mal der Wurzel aus minus phi2), wobei der Arkuskosinus im Bogenmaß steht.
 - Mit den komplexen Lösungen a plus oder minus b i gilt k gleich 2π geteilt durch den Arkuskosinus von a geteilt durch die Wurzel aus a zum Quadrat plus b zum Quadrat.
+- In den Codes der adaptiven Indikatoren wird der gemessene dominante Zyklus auf mindestens 10 und höchstens 48 Balken begrenzt.
+- Beim Even Better Sinewave setzt der Duration-Parameter die kritische Periode des Hochpasses und steuert damit die maximale Länge einer angezeigten Position; der Hochpass beginnt, zyklische Komponenten länger als die Duration zu dämpfen.
+- Der einpolige Hochpass gleicht die Amplitude aller Zykluskomponenten an, die wegen Spectral Dilation bei längeren Wellenlängen sonst größer wären.
+- Eine kürzere Duration macht den Indikator empfindlicher für kürzere Wellenlängen; Abbildung 12.3 zeigt die Einstellung 20 Balken.
+- Ändert sich der Phasenwinkel des analytischen Signals um 18 Grad pro Bar, muss die dominante Zyklusperiode 20 Bars betragen, weil das 360 Grad über 20 Bars ergibt.
+- Die Phase-Accumulation-Methode verwendet immer Daten aus einem vollen Zyklus. Vorteil: Der Lag der Messung skaliert direkt mit der Zyklusperiode, kurze Perioden werden mit weniger Lag gemessen als lange.
+- Bei der Phase Accumulation ist die Mittelungsperiode mit der Zyklusperiode variabel; längere Mittelung senkt das Rauschen gegenüber dem Signal. Daraus folgert der Text, dass kürzere Zyklusperioden notwendigerweise ein höheres Signal-Rausch-Verhältnis am Ausgang haben.
+- Mit der Homodyne-Methode lässt sich die momentane Zyklusperiode im Prinzip aus nur zwei aufeinanderfolgenden Samples bestimmen.
+- Im Dual-Differentiator-Code wird die gemessene Periode auf 8 bis 48 Bars begrenzt.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Wird die Zykluslänge in Bars angegeben, gilt die Spektraldarstellung gleichermaßen für Intraday-, Tages- und Wochendaten.
+- Schöpft der adaptive RSI den Bereich 0 bis 1 nicht voll aus, kann sein Lookback auf weniger als die Hälfte des gemessenen dominanten Zyklus verkürzt werden.
+- Statt einen Indikator an die gemessene Zyklusperiode anzupassen, betrachten SwamiCharts ihn über einen Bereich von Lookback-Perioden und sehen die kurzfristige Bewegung im Kontext der längerfristigen Ergebnisse, gewissermaßen als Fuzzy Logic.
+- Bei der Homodyne-Methode wird die Periode als 6,28318 / |Im / Re| berechnet und auf 10 bis 48 Bars begrenzt.
 
 ## Regeln und Kriterien
 
@@ -78,9 +99,13 @@ aktualisiert: 2026-11-05
 - Ob der nächste Hoch- oder Tiefpunkt den Rhythmus fortsetzt, bleibt unsicher. Er kann früher oder später liegen. Trotzdem ist die Entstehung im Band hochwahrscheinlich, weil das Band auf dem jüngsten Rhythmus beruht.
 - Ausreißer-Spannen dürfen bei der Bestimmung der Zyklusspannen ausgelassen werden.
 - Beim Time Band im Aufwärtstrend dürfen Ausreißer beim Messen der L-L- oder L-H-Spannen ausgeschlossen werden.
+- Die kürzeste mögliche Periode (Nyquist-Frequenz) hat nur zwei Samples pro Periode; selbst bei vier Bars pro Periode bleibt zu wenig Zeit, das Signal zu erhalten und den Trade umzusetzen.
+- Erst bei acht Samples pro Zyklus kommt schnelles Trading in Betracht, weil nach dem Signal mehrere Bars Folgebewegung bleiben; idealerweise würde man höchstens alle vier Bars handeln, also eine halbe kürzeste nutzbare Zyklusperiode.
+- Ehlers begrenzt die für Trading nutzbaren Zykluslängen per Roofing Filter auf 10 bis 48 Bars, weil längere Wellen als 48 Bars vermutlich keinen Nutzen für zyklisches Trading haben.
 
 ## Risiken und Grenzen
 
+- Bei einer Fourier-Analyse über 64 Balken liegen die zulässigen Perioden bei 64, 32, 21,3 und 16 Balken usw.; zwischen 16 und 21,3 Balken ergibt sich nur eine Auflösung von 5 Balken, 31 Prozent relativ zum 16-Balken-Zyklus.
 
 ## Beispiele
 
@@ -97,6 +122,8 @@ aktualisiert: 2026-11-05
 - Die direkte Rechnung k gleich 2π geteilt durch den Arkuskosinus von 1,590253 geteilt durch 1,913308 ergibt 10,65638.
 - Die mittlere Dauer der Kontraktionsphasen beträgt etwa drei Quartale und die der Expansionsphasen etwa 3 Jahre; 10,62 Quartale sind der Kompromiss aus diesen beiden getrennten Dauern.
 - Dieses periodische Merkmal der Zykluslänge ist bei Wachstumsraten nationaler Volkswirtschaften üblich, auch bei vielen OECD-Ländern.
+- Als Testdaten dient eine Chirp-Sinuswelle, deren Periode kontinuierlich von 10 auf 60 Bars steigt; ein auf 20 Bars abgestimmter Bandpassfilter dämpft sowohl kürzere als auch längere Perioden.
+- In Excel: Spalte A zählt von 1 bis 1.000, Zelle B1 enthält = 60 + 5 * Sin(6.28318 * (0.1 − 0.000075 * a1)) und wird bis B1000 kopiert; die Phasenänderungsrate 0,1 − 0,000075 * Counter lässt die Periode von 10 auf 60 laufen, während der Zähler von 100 auf 1.000 steigt.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -111,5 +138,12 @@ aktualisiert: 2026-11-05
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 58–77 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-004-p058-p077|S. 58–77]]
 - Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 609–628 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-033-p609-p628|S. 609–628]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 55–70 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-006-p055-p070|S. 55–70]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 97–116 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-009-p097-p116|S. 97–116]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 121–140 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-011-p121-p140|S. 121–140]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 140–159 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-012-p140-p159|S. 140–159]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 159–178 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-013-p159-p178|S. 159–178]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 178–197 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-014-p178-p197|S. 178–197]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 197–216 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-015-p197-p216|S. 197–216]]
 
 ## Verwandte Themen

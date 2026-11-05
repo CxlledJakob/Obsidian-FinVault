@@ -35,6 +35,8 @@ aktualisiert: 2026-11-05
 - Die Nachbildung mit Standard-Earnings-Yield und Rendite auf die Aktiva liefert eine ähnliche Größenordnung und lässt die Little-Book-Befunde robust erscheinen.
 - Die US-Dezilreihenfolge ist nicht monoton wie bei Greenblatt. Das kleinere Universum von rund 750 Titeln und einzelne Titel in einem Jahr schränken die glatte Dezilgeschichte ein.
 - Ähnliche Renditen in Europa seit 1995, Value-Rückkäufe mit 5 % p.a. Überschuss und Growth-Emittenten mit 5 % p.a. Underperformance, stützen den US-Befund von Bali, Demirtas und Hovakimian und sprechen gegen einen reinen statistischen Zufall der europäischen Horizontverlängerung.
+- Eine einfache Strategie mit wenigen Parametern ist eher über mehrere Symbole und mehrere Zeitebenen robust.
+- Ein fest eingebauter Stop-Loss zerstört nach Ehlers' Erfahrung die Robustheit einer Strategie; nur als Schutz vor extrem großen Verlusten eingesetzt, bleibt die Robustheit der Kernstrategie erhalten.
 
 ## Funktionsweise
 
@@ -47,6 +49,9 @@ aktualisiert: 2026-11-05
 
 ## Regeln und Kriterien
 
+- Eine Faustregel verlangt mindestens 30 Trades pro Parameter der Strategie, bei vier Parametern also mindestens 120 Trades; Ehlers hält diese Zahl für eher zu niedrig.
+- Liefert die Optimierung keinen sanften Gipfel über einen Bereich von Parametereinstellungen, ist die Strategie garantiert nicht robust.
+- Bringt der Out-of-Sample-Test ohne Parameteränderung zufriedenstellende Ergebnisse, ist die Strategie robust.
 
 ## Risiken und Grenzen
 
@@ -65,5 +70,6 @@ aktualisiert: 2026-11-05
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 324–343 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-018-p324-p343|S. 324–343]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 343–362 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-019-p343-p362|S. 343–362]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 362–381 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-020-p362-p381|S. 362–381]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen

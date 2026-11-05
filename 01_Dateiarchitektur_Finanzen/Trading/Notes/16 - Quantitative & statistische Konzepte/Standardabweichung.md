@@ -165,6 +165,8 @@ aktualisiert: 2026-11-05
 - Die Standardabweichung der realen Zehnjahresrenditen sinkt mit günstigerem KGV: 5,4 Prozentpunkte im Bereich 32 bis 20, 5,0 bei 20 bis 16, 4,0 bei 16 bis 13,5 und 3,0 bei 13,5 bis 4.
 - Die historische Standardabweichung der realen Anleiherenditen beträgt 4 Prozent.
 - In den dismal years lagen die Standardabweichungen bei 12,6 für Value und Momentum, 12,8 für nur Value, 5,5 für nur Momentum und 14,7 für Buy-and-hold. Das taktische Modell lief mit deutlich geringerer Volatilität als der Aktienmarkt.
+- Der Root Mean Square (RMS) der Preise um ihren gleitenden Durchschnitt ist gleichbedeutend mit der Standardabweichung.
+- Beim CCI setzt der Skalierungsfaktor 0,015 die Werte +100 und −100 als Näherungen für plus und minus eine Standardabweichung, falls die Daten gaußverteilt wären; diese Annahme ist nach Ehlers nicht gut.
 
 ## Funktionsweise
 
@@ -195,6 +197,7 @@ aktualisiert: 2026-11-05
 
 - Der Zentrale Grenzwertsatz setzt eine endliche Standardabweichung der Elternpopulation voraus, neben einem endlichen Mittelwert und unabhängigen Ziehungen aus derselben Population.
 - Für die betreffende Grenzwertaussage hat die Population einen endlichen Mittelwert und eine endliche Standardabweichung.
+- Sind Indikatordaten nicht normalverteilt, beruht die Berechnung einer Standardabweichung auf einer falschen Prämisse.
 
 ## Anwendung im Trading
 
@@ -209,6 +212,10 @@ aktualisiert: 2026-11-05
 - Der Z-Score des Währungspaars teilt die Abweichung des Portfoliomarktwerts von seinem 20-Tage-Mittel durch die Standardabweichung desselben Fensters.
 - Die Sharpe Ratio teilt die mittlere Überschussrendite durch die Standardabweichung der Überschussrenditen, passend annualisiert.
 - Beim Kalenderspread ist die Standardabweichung die gleitende Standardabweichung der Rollrendite über die Halbwertszeit von etwa 36 Tagen.
+- Der adaptive CCI auf Dollar General überschreitet plus oder minus eine Standardabweichung nur gelegentlich.
+- Ein Fisher-transformierter Indikator wird in Standardabweichungen geplottet: −1 entspricht minus einer Standardabweichung mit 32 Prozent Chance auf tiefere Preise, −2 nur 8 Prozent, −3 nur 2 Prozent.
+- Ein auf 0,999 begrenzter Fisher-Input entspricht einem Output in der Größenordnung von drei Standardabweichungen.
+- Beim fisherisierten adaptiven RSI werden die Niveaus plus und minus zwei Standardabweichungen im Display gezeigt; der Verstärkungsfaktor wurde so gewählt, dass der Indikator die Zwei-Sigma-Punkte selten überschreitet.
 
 ## Regeln und Kriterien
 
@@ -383,6 +390,8 @@ aktualisiert: 2026-11-05
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 457–476 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-025-p457-p476|S. 457–476]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 609–628 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-033-p609-p628|S. 609–628]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 140–159 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-012-p140-p159|S. 140–159]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 197–216 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-015-p197-p216|S. 197–216]]
 
 ## Verwandte Themen
 

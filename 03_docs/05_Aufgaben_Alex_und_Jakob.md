@@ -1,6 +1,6 @@
 # Aufgaben Alex und Jakob
 
-Stand: 4. November 2026
+Stand: 5. November 2026
 
 Alex macht die Flows. Jakob macht das Brain und die App. Die JSON-Datei ist die Übergabe: Alex schreibt sie, Jakob zeichnet sie auf den Chart.
 
@@ -9,7 +9,7 @@ Alex macht die Flows. Jakob macht das Brain und die App. Die JSON-Datei ist die 
 Zwei Arbeitsbranches und `main`.
 
 - `jakob/features` für Jakob
-- `alex/wissensgeruest` für Alex
+- `alex/features` für Alex
 - `main` ist der gemeinsame Stand nach dem Merge
 
 Am 4. November 2026 gelöscht. Der Inhalt steckte schon in `main`, `jakob/features` und `alex/wissensgeruest`. Nichts musste noch gemergt werden.
@@ -21,6 +21,7 @@ Vor jedem Merge hier eine Zeile unter „Letzte Änderung“ ergänzen. Der ande
 
 ## Letzte Änderung
 
+- 5. November 2026, Alex: Claude-Arbeitsbranch heißt jetzt `alex/features` statt `alex/wissensgeruest` (parameter.json, apply_update.py).
 - 4. November 2026, Jakob: die zwei Cursor-Branches gelöscht. Aufgabenliste angelegt.
 - 4. November 2026, Jakob: Standard für die Chart-JSON ist `Trading/Templates/chart-template.json`. Moving Averages kommen nicht in die Datei.
 - 4. November 2026, Jakob: die Chart-JSON von `03_docs` nach `Trading/Templates` verschoben.

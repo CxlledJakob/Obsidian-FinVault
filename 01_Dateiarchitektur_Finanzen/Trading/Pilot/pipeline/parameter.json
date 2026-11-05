@@ -17,7 +17,7 @@
     "ergaenzung_modell": "grok-4.7-high"
   },
   "claude": {
-    "branch": "alex/wissensgeruest",
+    "branch": "alex/features",
     "zuordnung_modell": "sonnet",
     "ergaenzung_modell": "opus"
   }

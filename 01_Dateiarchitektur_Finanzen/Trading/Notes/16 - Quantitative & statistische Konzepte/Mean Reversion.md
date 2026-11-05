@@ -271,6 +271,8 @@ aktualisiert: 2026-11-05
 - Spot- und Rollrenditen von Futures werden stark betont; mehrere Futures-Strategien folgen aus einem einfachen mathematischen Modell der Futures-Preise, und Backwardation und Contango werden grafisch und mathematisch gezeigt.
 - Eine praktische Umsetzung einer linearen Handelsstrategie sind Bollinger-Bänder mit Scaling-in.
 - Den erwarteten Preis eines Instruments aus dem letzten Trade, Preis und Größe, nachzuführen, leistet der Kalman-Filter.
+- Ehlers hält es für den besten Weg, einen Oszillator zu handeln, den Wendepunkt zu antizipieren und sich auf die statistische Rückkehr zum Mittel als prädiktiv zu verlassen; sein Aufsatz dazu erhielt 2008 den Runner-Up des Charles H. Dow Award der Market Technicians Association.
+- Ein Swing-Trade erwartet eine Rückkehr zum Mittel, die Preise schwanken also in einem Kanal. Bleibt die erwartete Umkehr aus, kommt es wahrscheinlich zu einem Kanalausbruch, der als preisbasierter Ausstieg dienen kann.
 
 ## Regeln und Kriterien
 
@@ -467,6 +469,7 @@ aktualisiert: 2026-11-05
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 381–400 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-021-p381-p400|S. 381–400]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 552–571 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-030-p552-p571|S. 552–571]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 590–609 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-032-p590-p609|S. 590–609]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen
 

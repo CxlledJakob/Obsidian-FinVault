@@ -141,6 +141,7 @@ aktualisiert: 2026-11-05
 - Chan und Kot (2002) zeigen am US-Markt von 1965 bis 2002, dass von vier Kombinationen aus lang- und kurzfristigem Momentum die Gruppe kurzfristiger Gewinner und langfristiger Verlierer am besten abschneidet.
 - Thaler und DeBondt (1985): Frühere Gewinneraktien werden künftige Verlierer, und frühere Verlierer werden künftige Gewinner.
 - Analysten kaufen eher Aktien, die über die vergangenen drei Jahre und in den letzten zwölf Monaten gut gelaufen sind, und lassen diese Trendumkehr aus.
+- Hohe Korrelation der gefalteten Preissegmente besteht nur an großen Marktwendepunkten; deshalb eignet sich die Konvolution, um eine große Umkehr eindeutig zu erkennen.
 
 ## Funktionsweise
 
@@ -165,6 +166,15 @@ aktualisiert: 2026-11-05
 - Zeitretracements und Alternate Time Projections arbeiten zusammen und engen die breite Zone auf ein konkretes Zeitziel für den Abschluss einer Korrektur ein. Eine relativ enge Spanne aus diesen Projektionen plus dem jüngsten Zyklus ist ein Umkehrzeitpunkt hoher Wahrscheinlichkeit.
 - Dieselbe logische Folge wird für alle Marktbedingungen benutzt, nicht nur für einfache ABC-Korrekturen, und manchmal bis auf zwei oder drei Bars verengt.
 - Der Dynamic-Time-Projection-Report bündelt die Zeitfaktoren zu den Zeiten mit den meisten Treffern. Ein solches Ziel lässt sich für jede Musterstruktur bilden, einschließlich Welle C und Welle 5.
+- Ein Decycler-Oszillator entsteht, indem man den Ausgang eines Hochpassfilters mit kürzerer Cutoff-Periode vom Ausgang eines Hochpassfilters mit längerer Cutoff-Periode abzieht. Sehr lange Zykluskomponenten und der statische Anteil werden entfernt, kürzere Zykluskomponenten durch Auslöschung ebenfalls, und die Trendlinie erscheint als Oszillator.
+- Der Decycler dient als „Instantaneous Trend Line“ mit sehr geringer Verzögerung: Die längsten Zykluskomponenten werden weniger als fünf Bars verzögert, bei einem 20-Bar-Zyklus beträgt die Verzögerung etwa 1,5 Bars.
+- Die Konvolution wird für einen Bereich von Rückschauperioden berechnet; die vertikale Achse ist die Rückschauperiode, der Indikatorwert wird in Farben umgesetzt, und es entsteht eine mit den Preisdaten zeitsynchrone Heatmap.
+- In der Heatmap erscheinen die Punkte hoher Korrelation als Plumes, die genau auf die großen Marktumkehrungen zurückzeigen; die Umkehrpunkte liegen am unteren Rand des Teilcharts, und lange Plumes kennzeichnen große Wendepunkte.
+- Unter Berücksichtigung der Trendrichtung erscheinen Markthochs als rote Plumes (Umkehr nach unten) und Markttiefs als grüne Plumes (Umkehr nach oben).
+- Als Konvolutionsindikator geplottet erscheint der Punkt hoher Korrelation als Spitze, um die halbe Rückschauperiode verzögert. Kurze Rückschau liefert relativ aktuelle, aber viele Spitzen; lange Rückschau berichtet alte Geschichte und beseitigt kurzfristige Unterbrechungen.
+- Vor der Berechnung steht ein Roofing-Filter gegen Spectral Dilation: Zweipol-Hochpass auf die längste Periode und SuperSmoother auf die kürzeste Periode, Standardwerte 40 und 80 Balken.
+- Die 40-Balken-Periode des SuperSmoothers wurde gewählt, um alle außer den großen Wendepunkten auszublenden; weil Marktdaten fraktal sind und längere Zyklen größere Schwünge haben, sollen falsche Anzeigen kleiner Wendepunkte vermieden werden.
+- Die kürzeste Periode kann gesenkt werden, um die Rechenverzögerung zu verringern, allerdings um den Preis zusätzlicher Darstellungsartefakte am unteren Rand der Anzeige.
 
 ## Voraussetzungen
 
@@ -180,6 +190,13 @@ aktualisiert: 2026-11-05
 - Momentum, Preis und Zeit werden genutzt, um zu bestimmen, ob der Markt eine Korrektur abschließen und ein Long-Setup bilden kann, deutlich bevor er ein Schwunghoch nimmt.
 - Kapitel 4 behandelt das Preisziel hoher Wahrscheinlichkeit, an dem ein ABC und andere Korrekturen abgeschlossen werden.
 - Die Aufgabe ist, Bedingungen mit wahrscheinlich hohem Ergebnis im Voraus zu erkennen und vorbereitet zu sein. Wird der Trade ausgeführt und verfehlt, bleibt der Verlust akzeptabel und Teil des Geschäfts.
+- Nach Ehlers zeigt ein Decycler-Oszillator die Übergänge zwischen Aufwärts- und Abwärtstrends an seinen Nulldurchgängen.
+- Alternativ lassen sich die Steigungswechsel des Decycler-Oszillators leichter erkennen als die Steigungswechsel des ursprünglichen Decyclers.
+- Die optimalen Cutoff-Perioden für den Decycler-Oszillator lassen sich nach Ehlers leicht durch Experimentieren finden; im Beispiel liegt die Cutoff-Periode bei 30 Bars und die längere Cutoff-Periode des Oszillators bei 60 Bars.
+- Der Convolution-Indikator findet Preisumkehrpunkte über die höchste Korrelation der Daten beim Falten in der Zeitdimension um die Lookback-Periode.
+- Die großen Preisumkehrungen erscheinen im Convolution-Indikator als Fahnen, die zeitlich zurück auf den Zeitpunkt der Umkehr zeigen.
+- Hochs und Tiefs lassen sich farblich unterscheiden, indem die Farbwerte über die Preissteigung vergeben werden.
+- Beim Hilbert-Transformer-Indikator ist der prognostizierte Wendepunkt nach oben das Kreuzen der imaginären über die reelle Komponente, nach unten das Kreuzen darunter.
 
 ## Regeln und Kriterien
 
@@ -240,6 +257,7 @@ aktualisiert: 2026-11-05
 - Nicht jede Umkehr trifft alle vier Faktoren Zeit, Preis, Muster und Momentum, aber viele tun es.
 - Die Strategie kennzeichnet enge und maximale Zeitziele, an denen eine Umkehr wahrscheinlich, aber nicht sicher ist. Nicht jedes Hoch und Tief entsteht am projizierten Ziel.
 - Ein neues Hoch jenseits des 100-Prozent-Zeitretracements macht die bis hier gelernte Strategie für dieses Hoch wenig brauchbar, wie im IBM, dessen endgültiges Korrekturhoch am 26. Dezember abseits der Faktoren lag.
+- Ein vorhergesagter Wendepunkt kann statt eines Swing-Wendepunkts der Beginn eines neuen Trends sein. Man kann den Trade in prognostizierter Richtung eingehen und schnell aussteigen, wenn der Even Better Sinewave Indicator nicht bestätigt.
 
 ## Beispiele
 
@@ -280,6 +298,7 @@ aktualisiert: 2026-11-05
 - Ist ein Fünf-Wellen-Anstieg der IBM bis Oktober 2007 abgeschlossen, sollte ein Rückgang von mindestens mehreren Monaten folgen. Dann werden Longs beendet oder Shorts eröffnet.
 - Nimmt IBM ein Swing-Tief, stehen die Chancen, dass das Wave-5-Hoch fertig ist und der Bärentrend Wochen oder Monate weiterläuft. Mindestens wird ein korrektiver Rückgang erwartet, der in Zeit und Preis größer ist als jeder seit dem Tief im Oktober 2006.
 - Zwei frühere bärische Umkehren auf 15 Minuten, eine knapp über Oversold und eine in Oversold, waren nicht die Stelle für den Daytrade. Erst Overbought plus bärische 5-Minuten-Umkehr setzte den Short.
+- Bei Dollar General (DG) treffen im Rest des Jahres 2011 die fünf roten und sechs grünen Plumes die großen Marktumkehrungen genau (Abbildung 13.4).
 
 ## Unterschiedliche Quellenpositionen
 
@@ -323,6 +342,9 @@ aktualisiert: 2026-11-05
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 144–152 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-011-p144-p152|S. 144–152]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 153–172 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-012-p153-p172|S. 153–172]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 48–54 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-005-p048-p054|S. 48–54]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 159–178 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-013-p159-p178|S. 159–178]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 178–197 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-014-p178-p197|S. 178–197]]
 
 ## Verwandte Themen
 

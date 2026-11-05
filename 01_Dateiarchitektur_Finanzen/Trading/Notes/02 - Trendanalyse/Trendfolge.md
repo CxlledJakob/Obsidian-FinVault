@@ -91,6 +91,9 @@ aktualisiert: 2026-11-05
 - Die lange Dauer der Dollar-Aufwertung zog sämtliche trendfolgenden Momentum-Spieler in den Trade.
 - Die hohe Korrelation der Hedgefonds-Strategien wird damit erklärt, dass sie entweder Beta oder Momentum mitreiten oder Volatilität verkaufen.
 - Jedes Aktienmarktminus und jeder Anstieg der Volatilität trifft dann alle Stile gleichzeitig.
+- Trendfolge bedeutet meist, eine Einstiegsgelegenheit zu identifizieren und schnell auszusteigen, wenn sich der Trend nicht entwickelt. Man kann mit wenigen Trades viel Geld verdienen, hat aber unterwegs viele Verlusttrades.
+- Alternativ kann ein Trendtrader eine Position durch Widrigkeiten halten, um langfristig zu profitieren; das bedeutet meist, große Drawdowns zu akzeptieren.
+- Ehlers meint, Trendhandel funktioniere, weil der Gesamtmarkt unbegrenzt ist und durch Wirtschaftswachstum und Inflation einen Aufwärtsdrall hat.
 
 ## Funktionsweise
 
@@ -161,6 +164,7 @@ aktualisiert: 2026-11-05
 - Nach John Murphy ist die Grundannahme der technischen Analyse, dass alles, was den Preis fundamental, politisch, psychologisch oder sonst beeinflussen kann, tatsächlich im Preis dieses Marktes abgebildet ist; aus einer so vagen Aussage lassen sich kaum testbare Vorhersagen gewinnen.
 - Wäre diese Annahme wahr, enthielte der Preis keine prognostische Information: ein Muster, das bei 50 Dollar einen Gang auf 60 Dollar impliziert, wäre beim Auftreten des Musters schon im Preis enthalten und damit als Prognose entwertet.
 - Dieselbe Annahme, Preise bildeten alle verfügbare Information vollständig ab, trägt die EMH, die die Wirksamkeit der technischen Analyse bestreitet; die technische Analyse kann nicht auf derselben Prämisse stehen wie ihr Gegner.
+- Ehlers behauptet, es gebe keine prädiktiven Indikatoren für Trends; deshalb passt dieser Handelsstil nicht zu seinem bevorzugten Vorgehen. Prädiktive Indikatoren eignen sich eher für kurzfristige Prozesse wie Swing- oder Momentum-Handel.
 
 ## Eigene Erkenntnisse
 
@@ -188,6 +192,7 @@ aktualisiert: 2026-11-05
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 457–476 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-025-p457-p476|S. 457–476]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 609–628 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-033-p609-p628|S. 609–628]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 216–235 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-016-p216-p235|S. 216–235]]
 
 ## Verwandte Themen
 

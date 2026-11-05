@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Hurst-Trendpersistenz
@@ -35,12 +35,17 @@ aktualisiert: 2026-11-01
 
 ## Anwendung im Trading
 
+- Nach Ehlers kann der Hurst-Koeffizient relativ zur gewählten Eingangslänge Trendmodus (größer als 0,5) und Zyklusmodus (kleiner als 0,5) im Markt abgrenzen.
+- Auf Tagesdaten von Dollar General (DG) wird der längerfristige Trend mit Eingangslänge 200 durch einen Hurst-Koeffizienten über 0,5 angezeigt, während er mit Eingangslänge 30 zwischen Persistenz und Antipersistenz schwankt.
+- Zyklusperioden kürzer als der Eingabeparameter des Hurst-Indikators erscheinen als antipersistent, längere Zyklusperioden als persistent.
 
 ## Regeln und Kriterien
 
 
 ## Risiken und Grenzen
 
+- Nach Ehlers hat der Hurst-Koeffizient keinen prognostischen Wert und daher keinen direkten Nutzen im Trading.
+- Das Bild des Hurst-Koeffizienten hängt kritisch von der Datenlänge ab, mit der er berechnet wird.
 
 ## Beispiele
 
@@ -54,5 +59,6 @@ aktualisiert: 2026-11-01
 ## Quellen und Fundstellen
 
 - Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 71–83 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-007-p071-p083|S. 71–83]]
 
 ## Verwandte Themen

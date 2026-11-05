@@ -60,7 +60,7 @@ CURSOR_MODELS = frozenset(
 CLAUDE_MODELS = frozenset({"sonnet", "opus"})
 PROFILES = {
     "cursor": ("jakob/features", "grok-4.7-medium", "grok-4.7-high", CURSOR_MODELS),
-    "claude": ("alex/wissensgeruest", "sonnet", "opus", CLAUDE_MODELS),
+    "claude": ("alex/features", "sonnet", "opus", CLAUDE_MODELS),
 }
 STRENGE_TEXT = {
     "streng": (
@@ -129,7 +129,7 @@ def detect_runtime(env: dict | None = None, branch: str = "") -> str:
         return "claude"
     if source.get("CURSOR_AGENT"):
         return "cursor"
-    if branch == "alex/wissensgeruest":
+    if branch == "alex/features":
         return "claude"
     if branch == "jakob/features":
         return "cursor"
@@ -1365,7 +1365,7 @@ def self_test() -> int:
         raise SystemExit("Claude wurde nicht erkannt")
     if detect_runtime({"CURSOR_AGENT": "1"}) != "cursor":
         raise SystemExit("Cursor wurde nicht erkannt")
-    if detect_runtime({}, "alex/wissensgeruest") != "claude":
+    if detect_runtime({}, "alex/features") != "claude":
         raise SystemExit("Branch alex wurde nicht erkannt")
     if detect_runtime({}, "jakob/features") != "cursor":
         raise SystemExit("Branch jakob wurde nicht erkannt")
@@ -1379,7 +1379,7 @@ def self_test() -> int:
     claude = load_lauf({"CLAUDECODE": "1"})
     if cursor.app != "cursor" or cursor.branch != "jakob/features" or cursor.zuordnung_modell != "grok-4.7-medium":
         raise SystemExit(f"Cursor-Profil falsch: {cursor}")
-    if claude.app != "claude" or claude.branch != "alex/wissensgeruest" or claude.ergaenzung_modell != "opus":
+    if claude.app != "claude" or claude.branch != "alex/features" or claude.ergaenzung_modell != "opus":
         raise SystemExit(f"Claude-Profil falsch: {claude}")
     kept, extra = limit_names(["A", " A", "B", "", "C"], 2)
     if kept != ["A", "B"] or extra != 1:
