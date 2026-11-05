@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Trefferquote
@@ -49,6 +49,12 @@ aktualisiert: 2026-10-30
 - Wer gut im Handel wird, hat etwa 30 bis 40 Prozent Gewinntrades.
 - Deshalb müssen die Verluste relativ klein und die Gewinne relativ groß sein. Einen anderen Weg nennt der Text nicht.
 - Wer gut im Trading wird, hat etwa 30 bis 40 Prozent Gewinntrades.
+- Ein Richtungsmaß zählt Treffer und Fehler der Prognose von Auf- und Abwärtsbewegungen in einer 2×2-Tabelle; größere Werte auf der Diagonale, m11 für getroffene Anstiege und m22 für getroffene Rückgänge, bedeuten bessere Prognosen.
+- Für das 8–4–1-Netz mit Heaviside-Ausgabe gilt eine Prognose als Anstieg, wenn die prognostizierte Wahrscheinlichkeit mindestens 0,5 ist; die Erfolgsquote dieser Regel beträgt 0,58.
+- Diese Erfolgsquote schwankt von Schätzung zu Schätzung erheblich, und das Netz verwendet 49 Parameter.
+- In der Tabelle für 24 Monate von Januar 1998 bis Dezember 1999 stehen 12 Treffer und 2 Fehler in der Zeile prognostizierter Anstieg sowie 8 Fehler und 2 Treffer in der Zeile prognostizierter Rückgang.
+- Die χ²-Statistik dieser Tabelle ist 0,137 mit p = 0,71; das Netz schlägt eine Zufallswahl damit nicht signifikant.
+- Über 500 Schätzläufe desselben Netzes sind Mittel und Median der Zahl der Richtungsfehler 11,28 und 11, bei einem Maximum von 18 und einem Minimum von 4.
 
 ## Funktionsweise
 

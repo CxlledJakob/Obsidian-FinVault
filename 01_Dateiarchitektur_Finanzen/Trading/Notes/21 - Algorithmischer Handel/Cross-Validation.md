@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Cross-Validation
@@ -69,6 +69,14 @@ aktualisiert: 2026-11-01
 - Für k größer als 1 verallgemeinert die kombinatorische purged Cross-Validation die gewöhnliche Cross-Validation.
 - Eine maximale Drawdown-Dauer von zwei Jahren macht es unwahrscheinlich, dass die Strategie eine Cross-Validation besteht. Das gilt für das Beispiel mit 30 Prozent annualisierter Rendite und einer Sharpe Ratio von 0,3.
 - Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios sind gute Praktiken gegen Data-Snooping-Bias. Maßgeblicher als alle drei ist der Walk-Forward-Test.
+- Bei der Bandbreitenwahl der Kernregression lässt das Leave-one-out-Verfahren eine Beobachtung (x_j, y_j) aus, glättet an x_j mit den übrigen T−1 Punkten und minimiert CV(h), das mittlere gewichtete Quadrat der Prognosefehler über alle j.
+- Die Gewichte dieses ausgelassenen Glätters summieren sich zu T−1. Eine nichtnegative Gewichtsfunktion W mit Summe T kann Randpunkte herabgewichten, weil sie weniger Nachbarn haben.
+- Beim Training eines neuronalen Netzes werden die Daten in zwei nicht überlappende Teilstichproben geteilt. Die erste schätzt die Parameter eines gegebenen Netzes, die zweite misst die Prognosegenauigkeit. Gewählt wird das Netz mit der besseren Prognose. Das ist Kreuzvalidierung zur Modellwahl.
+- Beim Trainieren eines neuronalen Netzes werden die Daten in zwei nicht überlappende Teilstichproben geteilt: die erste schätzt die Parameter eines gegebenen Netzes, die zweite berechnet Prognosen und deren Genauigkeit, und das Netz mit der besseren Prognoseleistung wird gewählt.
+- Tsay bezeichnet genau diesen Vergleich der Prognoseleistung als die Idee der Kreuzvalidierung, wie sie in der statistischen Modellwahl verbreitet ist; daneben stehen weitere Modellwahlverfahren zur Verfügung.
+- Für die monatlichen prozentualen IBM-Logrenditen einschließlich Dividenden dient Januar 1926 bis Dezember 1997 mit 864 Beobachtungen der Modellierung und dienen 1998 und 1999 der Prognosebewertung.
+- Der mittlere quadratische Prognosefehler der Ein-Schritt-Prognosen beträgt 91,85, wenn durchgehend das Stichprobenmittel der ersten Teilstichprobe verwendet wird, 91,70 für das AR(1) und 91,74 für das 3–2–1-Netz, also im Wesentlichen derselbe Wert wie beim AR(1).
+- Mit den voreingestellten Startgewichten von nnet in S-Plus schwankt der Out-of-Sample-MSE eines 3–2–1-Netzes für diese IBM-Reihe zwischen 89,46 und 93,65; ändert sich die Zahl der Knoten in der verborgenen Schicht, wird die Spanne noch größer.
 
 ## Funktionsweise
 
@@ -159,6 +167,7 @@ aktualisiert: 2026-11-01
 - Weil das Trainingsset dem Testset nicht nachläuft, ist Leakage möglich, und Purging sowie Embargo aus Kapitel 7 sollen verhindern, dass Testinformation ins Training gelangt.
 - Ein Nachteil des Walk-Forward ist, dass er sich leicht überfitten lässt, weil es ohne Zufallsziehung nur einen Testpfad gibt, der wiederholt werden kann, bis ein falsch positives Ergebnis erscheint.
 - Wie bei der gewöhnlichen Cross-Validation ist etwas Zufall nötig, um dieses Performance-Targeting zu vermeiden, ohne Beispiele in den Test zu lassen, die mit dem Trainingsset korreliert sind.
+- Die Schätzergebnisse des Feed-forward-Netzes variieren, sodass die in der zweiten Teilstichprobe gemessene Prognosegenauigkeit von den Startgewichten und von der Knotenzahl abhängt.
 
 ## Beispiele
 

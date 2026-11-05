@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Diversifikation
@@ -54,14 +54,25 @@ aktualisiert: 2026-11-01
 - Die Kelly-Allokation über das Eigenkapital des Gesamtportfolios lässt gute Strategien schlechte kurzfristig subventionieren; Kelly auf jede Strategie einzeln enthebelt die zuletzt schlechten schnell.
 - Mathematisch ist die Gesamtallokation optimal, aber nur wenn die erwarteten Renditen und Volatilitäten unverändert bleiben, was nach einem schweren Drawdown zweifelhaft ist.
 - Die Erfahrung des Autors ist, dass die einzelne Anwendung praktischer ist, damit jede underperformende Strategie schnell eingeht.
+- Bei zufälligen Sprüngen wird der Markt unvollständig, und die üblichen Hedge-Argumente reichen zur Optionsbewertung nicht.
+- Ist die Zahl der verfügbaren Titel sehr groß, ist das Risiko plötzlicher Sprünge diversifizierbar; der Markt zahlt dann über den risikofreien Zins hinaus keine Risikoprämie für das Tragen dieses Risikos.
+- Unter dieser Diversifizierbarkeit lässt sich eine Optionspreisformel ableiten, die nicht von der Risikoeinstellung abhängt.
+- Alternativ kann man zu einem gegebenen Satz von Risikoprämien ein risikoneutrales Maß P* wählen und den Preis darunter berechnen.
+- Der Value at Risk erfüllt die Subadditivität nicht: das Risikomaß zweier Portfolios nach dem Zusammenlegen muss nicht kleiner oder gleich der Summe der Risikomaße vor dem Zusammenlegen sein.
+- Die Kovarianzstruktur eines Renditevektors ist für die Portfolioauswahl wichtig. Die Hauptkomponentenanalyse erklärt diese Struktur durch wenige Linearkombinationen und senkt damit die Dimension.
+- Ein Eigenwert null der Kovarianz- oder Korrelationsmatrix bedeutet eine exakte lineare Beziehung zwischen den Komponenten. Ist der kleinste Eigenwert null, ist die zugehörige Hauptkomponente konstant, und der Zufallsvektor enthält nur k−1 zufällige Größen.
+- Für fünf monatliche Aktienrenditen von IBM, Hewlett-Packard, Intel, J.P. Morgan Chase und Bank of America erklären die ersten beiden Hauptkomponenten der Korrelationsmatrix etwa 74 Prozent der Gesamtvariabilität. Die erste ist eine ungefähr gleich gewichtete Marktkomponente, die zweite der Unterschied zwischen Technologie und Finanzwerten.
 
 ## Funktionsweise
 
 - Hierarchical Risk Parity arbeitet in drei Stufen: Baum-Clustering, Quasi-Diagonalisierung und rekursive Bisektion.
 - Hierarchical Risk Parity konvergiert günstigstenfalls in deterministischer logarithmischer Zeit und schlechtestenfalls in deterministischer linearer Zeit.
+- RiskMetrics bildet den VaR zweier Positionen als Wurzel aus VaR1 zum Quadrat plus VaR2 zum Quadrat plus 2 mal ρ12 mal VaR1 mal VaR2, wobei ρ12 der Kreuzkorrelationskoeffizient der beiden Renditen ist.
+- Für m Instrumente ist der Gesamt-VaR die Wurzel aus der Summe der quadrierten Einzel-VaR plus der Summe 2 mal ρij mal VaRi mal VaRj über alle Paare i < j.
 
 ## Voraussetzungen
 
+- Die Formel für den gemeinsamen VaR setzt voraus, dass die Logrenditen der beteiligten Anlagen gemeinsam multivariat normalverteilt sind mit Mittelwert null und Kovarianzmatrix Σ t+1.
 
 ## Anwendung im Trading
 

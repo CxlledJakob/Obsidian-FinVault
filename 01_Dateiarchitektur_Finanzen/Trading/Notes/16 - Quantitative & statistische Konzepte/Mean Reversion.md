@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Mean Reversion
@@ -32,6 +32,7 @@ aktualisiert: 2026-11-01
 - Mean-Reversion-Regeln beruhen auf dem Konzept, dass eine Datenreihe zu ihrem Mittelwert zurückkehren soll, wenn sie gegenüber den jüngeren Werten extrem hohe oder extrem niedrige Werte erreicht.
 - Echte Mean Reversion bedeutet, dass Strähnen kürzer dauern als in Random Walks, also dass positive und negative Ergebnisse häufiger wechseln, als es bei Random Walks der Fall ist.
 - Mean-Reversion-Regeln beruhen darauf, dass eine Datenreihe zu ihrem Mittelwert zurückkehren soll, wenn sie gegenüber den jüngeren Werten extrem hoch oder extrem tief liegt.
+- Dass die Mehrschritt-Punktprognose eines stationären AR(p) mit wachsendem Horizont gegen den unbedingten Erwartungswert der Reihe konvergiert, heißt in der Finanzliteratur Mean Reversion.
 
 ## Kernaussagen
 
@@ -188,6 +189,19 @@ aktualisiert: 2026-11-01
 - Für die Mean-Reversion-Strategie aus Beispiel 5.1 beträgt der Kelly-Hebel, gerechnet aus den Tagesrenditen des Testsets, 18,4.
 - Die Regression zum Mittel ist eine der grundlegenden Marktunvollkommenheiten, aus denen sich eine einfache lineare Strategie ableiten lässt, neben den Rollrenditen bei Futures und dem nötigen Rebalancing gehebelter ETFs zum Handelsschluss.
 - Ist die Unvollkommenheit verstanden, ist eine Strategie dazu leicht zu konstruieren; beliebige Zusatzregeln sind unnötig, wenn ein einfaches Modell die Unvollkommenheit ausnutzt.
+- Unter einem Random-Walk-Modell für logarithmierte Aktienkurse ist der Kurs nicht prognostizierbar und nicht mean-reverting.
+- Die Punktprognose eines Random Walk bleibt für jeden Horizont der Wert am Prognoseursprung, deshalb kehrt der Prozess nicht zum Mittel zurück.
+- Die Moving-Average-Darstellung einer stationären Reihe zeigt die Mean Reversion: weil die ψ-Gewichte gegen null gehen, läuft die l-Schritt-Prognose gegen den Mittelwert µ, und langfristig wird erwartet, dass die Renditereihe ihren Mittelwert erreicht.
+- Die Geschwindigkeit, mit der diese Prognose gegen µ läuft, ist die Geschwindigkeit der Mean Reversion.
+- Beim Random Walk ist jedes ψ-Gewicht gleich 1, der vergangene Schock wirkt dauerhaft, und die Prognosevarianz läuft nicht gegen eine endliche unbedingte Varianz.
+- Weil die l-Schritt-Prognose der bedingte Erwartungswert von r(h plus l) am Ursprung h ist, bedeutet die Konvergenz gegen µ, dass die Reihe langfristig ihren Mittelwert erreicht.
+- Die lokal geglättete bedingte Änderung des wöchentlichen 3-Monats-Treasury-Bill-Satzes ist positiv, wenn der Satz klein ist, und negativ, wenn er groß ist. Das entspricht der Erwartung, dass ein hoher Zins eher fällt und ein niedriger eher steigt.
+- Die Schätzung von μ(x_{t−1}) ist im Groben null. Auf feiner Skala zeigt sich das Vorzeichenmuster.
+- Die Daten sind der wöchentliche Sekundärmarktzinssatz der 3-Monats-Treasury-Bill von 1970 bis 1997, 1461 Beobachtungen der Federal Reserve Bank of St. Louis. y_t = x_t − x_{t−1} ist die Änderung.
+- Dieselbe Reihe dient in der Literatur als Beispiel für die Schätzung stochastischer Diffusionsgleichungen aus diskret beobachteten Daten. Das einfache Modell ist y_t = μ(x_{t−1}) dt + σ(x_{t−1}) dw_t.
+- Haben zwei Aktien ähnliche Risikofaktoren, ist die Linearkombination wt = p1t − γ p2t der Logpreise Unit-Root-stationär und deshalb mean-reverting.
+- In der Fehlerkorrektur der beiden Logrenditen messen α1 und α2 die Wirkung der vergangenen Abweichung wt−1 − μw auf die beiden Renditen; in der Praxis sollen α1 und α2 entgegengesetzte Vorzeichen haben und damit die Rückkehr zum Gleichgewicht anzeigen.
+- Pairs Trading handelt die Schwankungen des Spreads um seinen Gleichgewichtswert μw, weil der Spread mean-reverting ist. Der Auflösungszeitpunkt tritt wegen dieser Mean Reversion ein.
 
 ## Funktionsweise
 
@@ -216,6 +230,11 @@ aktualisiert: 2026-11-01
 - Ein Kurs über einem langfristigen gleitenden Durchschnitt zieht Verkaufsdruck größerer Akteure wie Long-only-Fonds an, deren Horizont länger ist; dieser Liquiditätsbedarf kann den Abwärtsdruck übertreiben, und Preisbewegungen aus Liquiditätsbedarf kehren eher zurück als Bewegungen aus einer Verschiebung der Fundamentaldaten.
 - Querschnittlich wird Unterperformance von Überperformance erwartet und umgekehrt; Gewinne werden nicht von jeder einzelnen Aktie erwartet, weil manche an manchen Tagen als Hedges dienen, sondern nur aggregiert.
 - Die Ornstein-Uhlenbeck-Formel lautet dy(t) gleich (λy(t−1) plus μ)dt plus dε: die Preisänderung im nächsten Zeitabschnitt ist proportional zur Differenz aus mittlerem Preis und aktuellem Preis.
+- Die Geschwindigkeit der Mean Reversion eines AR(1) misst die Halbwertszeit l gleich dem natürlichen Logarithmus von 0,5, geteilt durch den natürlichen Logarithmus des Betrags von phi1.
+- Für die mittelwertbereinigte Reihe xt gleich rt minus E(rt) ist die l-Schritt-Prognose phi1 hoch l mal dem Wert am Ursprung; die Halbwertszeit ist der Horizont, an dem diese Prognose auf die Hälfte des Ausgangswerts gefallen ist, also phi1 hoch l gleich 1/2.
+- Bei einem MA(1) dauert die Rückkehr zum Mittel nur eine Periode: ab dem zweiten Schritt liegen die Prognosen auf dem unbedingten Mittel, für jeden Prognoseursprung.
+- Bei einem MA(2) erreichen die Mehrschrittprognosen den Mittelwert nach zwei Schritten, bei einem MA(q) nach den ersten q Schritten.
+- Mit dem Horizont nähert sich zugleich die Varianz des Prognosefehlers der unbedingten Varianz von rt.
 
 ## Voraussetzungen
 
@@ -368,6 +387,8 @@ aktualisiert: 2026-11-01
 - Gleichung 5.7 gilt nur für einen Future, dessen Basiswert ein gehandeltes Asset ist; der VIX ist keines, und die Logpreise der VX-Futures gegen die Restlaufzeit fallen nicht auf eine Gerade.
 - Die Monte-Carlo-Rechnung zum Hebel verwendet die Mean-Reversion-Strategie aus Beispiel 5.1: Kelly 18,4, Monte-Carlo-Optimum 19, historisch 18,4, schlechteste Periodenrendite minus 0,0331.
 - Beispiel 4.2 zeigt eine lineare mean-revertierende Strategie zwischen einem ETF und seinen Bestandteilaktien.
+- Der angepasste BHP-VALE-Spread wechselt im Fenster vom 1. Juli 2002 bis zum 31. März 2006 mehrfach zwischen der unteren Grenze Mittel minus 0,045 und der oberen Grenze Mittel plus 0,045. Der Mittelwert beträgt 1,81.
+- Die Ladung der BHP-Logrendite auf die Abweichung vom Spreadmittel ist negativ, die Ladung der VALE-Logrendite positiv: −0,067 und 0,026. Das entspricht der erwarteten Rückkehr zum Gleichgewicht.
 
 ## Unterschiedliche Quellenpositionen
 

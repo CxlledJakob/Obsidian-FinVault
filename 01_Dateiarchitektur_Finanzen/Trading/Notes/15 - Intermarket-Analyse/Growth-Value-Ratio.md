@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/15 - Intermarket-Analyse/15 - Intermarket-Analyse|15 - Intermarket-Analyse]]"
 weitere_hauptthemen: []
 unterthema: "Relative Märkte"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Growth-Value-Ratio
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Fundamentale Faktormodelle nutzen unter anderem die Stilklassifikation Growth oder Value, um gemeinsame Faktoren der Überschussrenditen zu bilden.
+- Bei Fama und French ist HML, high minus low, die relative Performance von Value- gegenüber Growth-Aktien. Value-Aktien sind die mit hohem Verhältnis von Buchkapital zu Marktkapital.
+- Die Faktorrealisation zu einem Fundamental entsteht, indem die Assets nach dem Fundamental sortiert werden und ein Hedgeportfolio im obersten Quintil long und im untersten Quintil short ist; beim obersten Quintil steht im Text in Klammern 1/3. Die beobachtete Rendite dieses Portfolios ist die Faktorrealisation.
 
 ## Funktionsweise
 

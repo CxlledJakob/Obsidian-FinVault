@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Volatilitätsregime
@@ -41,6 +41,15 @@ aktualisiert: 2026-11-01
 - Eine lineare Regression oder ein Johansen-Test auf der Mischung der Regime 2004 bis Mai 2008 und August 2008 bis 2012 wäre ein Fehler; geschätzt wird nur das zweite Regime.
 - Die Regressionskoeffizienten werden nur auf den ersten 500 Tagen nach August 2008 geschätzt.
 - Die ES-VX-Mean-Reversion-Strategie war um die Herabstufung der US-Bonität durch Standard & Poor's besonders profitabel.
+- Die Apple-Logpreis-Range scheint von 2000 bis 2001 volatiler zu werden, nach 2002 auf ein stabiles Niveau zu fallen und am Reihenende wieder etwas zu steigen.
+- Ein Zwei-Regime-TWACD trennt die tägliche Range am 70. Perzentil 0,04753: unterhalb folgt die Innovation einer Weibull-Verteilung mit Form 2,2756, oberhalb mit Form 2,7119.
+- Der Hauptunterschied der beiden Regime liegt im Formparameter der Weibull-Verteilung; die Durationgleichung ψi = 0,0013 + 0,1539 xi−1 + 0,8131 ψi−1 ist beiden Regimes gemeinsam.
+- Die Umstellung auf das Dezimalsystem senkt die Volatilität von Apple, weil die erwartete tägliche Range vor der Intervention höher ist und γ̂ = 0,0011 positiv und auf dem 1-Prozent-Niveau signifikant ist.
+- Für Asset-Renditen betrachtet der Text Markov-Switching-Modelle mit Volatilitätswechsel, hier zwei Zustände mit unterschiedlichen Risikoprämien und unterschiedlicher GARCH-Dynamik.
+- McCulloch und Tsay (1994b) behandeln den Fall, in dem die Volatilität innerhalb jedes Zustands über die Zeit konstant ist.
+- Im GE-Beispiel von 1926 bis 1999 erscheinen die Differenzen der Posterior-Mittel der Volatilitätsparameter zwischen den Zuständen unsignifikant, die Posterior-Verteilungen zeigen aber unterschiedliche Merkmale.
+- Der Persistenzparameter αi1 + αi2 von Zustand 1 erreicht häufig die Grenze 1,0, der von Zustand 2 nicht; die erwarteten Dauern der beiden Volatilitätszustände liegen bei etwa 11 und 9 Monaten.
+- Das einfache GARCH-M erzeugt eine glattere Volatilitätsreihe mit niedrigeren geschätzten Volatilitäten als das zweistufige Markov-Switching-GARCH-M; beide Reihen folgen dem Muster der quadrierten Logrenditen.
 
 ## Funktionsweise
 
@@ -61,6 +70,9 @@ aktualisiert: 2026-11-01
 
 ## Beispiele
 
+- Die Posterior-Mittel lauten in Zustand 1 α10 = 2,070, α11 = 0,844 und α12 = 0,033, in Zustand 2 α20 = 2,740, α21 = 0,869 und α22 = 0,068.
+- Die Differenzen der Posterior-Mittel sind α20 − α10 = 0,670 bei Standardfehler 1,608, α21 − α11 = 0,026 bei 0,050 und α22 − α12 = −0,064 bei 0,043.
+- Für die monatlichen S&P-500-Logrenditen von 1962 bis 2004 liegen die geschätzten Volatilitätsreihen des stochastischen Volatilitätsmodells mit und ohne Leverage-Effekt sehr nah beieinander.
 
 ## Unterschiedliche Quellenpositionen
 

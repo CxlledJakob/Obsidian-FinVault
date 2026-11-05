@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/13 - Volatilität/13 - Volatilität|13 - Volatilität]]"
 weitere_hauptthemen: []
 unterthema: "Optionsvolatilität"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Volatilitätsrisikoprämie
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die implizite Volatilität einer Anlagerendite liegt erfahrungsgemäß über der Volatilität aus einem GARCH-artigen Modell.
+- Als Gründe nennt der Text eine Risikoprämie für Volatilität oder die Art, wie Tagesrenditen berechnet werden.
 
 ## Funktionsweise
 

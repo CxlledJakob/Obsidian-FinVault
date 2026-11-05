@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Volatilitätsindex
@@ -57,6 +57,9 @@ aktualisiert: 2026-11-01
 - In der europäischen Schuldenkrise 2011 reagierte der MXN besonders empfindlich auf schlechte Nachrichten, obwohl die mexikanische Wirtschaft gesund blieb; Kommentatoren sahen ihn als Stellvertreter für riskante Assets insgesamt.
 - Auf kurzen Skalen ist eine plötzliche große Orderflow-Änderung ein führender Indikator: negativ bei Aktien, Rohstoffen und riskanten Währungen, positiv bei US-Treasuries, USD, JPY oder CHF, bevor die Information sich weiter verbreitet.
 - Weil Paniken selten sind, ist der Test dieser Indikatoren anfällig für Data-Snooping-Bias, und kein Finanzindikator sagt natürliche Katastrophen voraus; der höherfrequente Orderflow könnte der nützlichste sein.
+- Der Volatilitätsindex eines Marktes ist selbst zu einem Finanzinstrument geworden.
+- Der von der Chicago Board Options Exchange erstellte VIX wird seit dem 26. März 2004 als Future gehandelt.
+- Der VIX der CBOE ist eine implizite Volatilität.
 
 ## Funktionsweise
 
@@ -95,6 +98,7 @@ aktualisiert: 2026-11-01
 - Lag der VIX des Vortags über 35, einer üblichen Schwelle für hoch riskante Phasen, betrug die annualisierte Durchschnittsrendite dieses Tages 17,2 Prozent bei einer Sharpe Ratio von 1,4; die Strategie profitiert also von diesem sogenannten Risiko.
 - Die FSTX-Opening-Gap-Strategie hatte vom 16. Juli 2004 bis 17. Mai 2012 etwa 13 Prozent annualisierte Durchschnittsrendite und eine Sharpe Ratio von 1,4.
 - Bei einem VIX des Vortags über 35 fallen diese Werte auf 2,6 Prozent und eine Sharpe Ratio von 0,16; der VIX sagt hier, am Folgetag nicht zu handeln.
+- Die im Kapitel genannte weltweite Finanzkrise ging mit einem starken Anstieg der Marktvolatilität einher, unter anderem des Volatilitätsindex VIX der Chicago Board Options Exchange, und mit starken Rückgängen der Marktindizes.
 
 ## Unterschiedliche Quellenpositionen
 

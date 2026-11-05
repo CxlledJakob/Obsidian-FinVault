@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Aggressive Sellers
@@ -26,6 +26,13 @@ aktualisiert: 2026-10-30
 - VS ist das Volumen der verkaufsinitiierten Trades, also das Volumen, das gegen das Bid gehandelt wird.
 - Im Roll-Modell ist die Aggressorseite bt ein Element von {−1, 1}.
 - Mehrere Studien, darunter Aitken und Frino (1996), finden für die Tick Rule eine hohe Klassifikationsgenauigkeit.
+- Im Modell von Roll (1984) bedeutet I_t = −1 eine verkäuferinitiierte Transaktion und tritt mit Wahrscheinlichkeit 0,5 ein; I_t = 1 ist die käuferinitiierte Gegenseite, ebenfalls mit Wahrscheinlichkeit 0,5.
+- Mit diesem Indikator gilt P_t = P*_t − S/2 bei einer verkäuferinitiierten Transaktion.
+- Ändert sich der fundamentale Wert nicht und lag der vorherige Preis auf dem niedrigeren Bid, ist die nächste beobachtete Preisänderung entweder 0 oder +S.
+- E(I_t) = 0 und Var(I_t) = 1, und die Folge {I_t} ist unabhängig.
+- IBS_{i−v} = −1 markiert eine Transaktion unterhalb des Mittels aus Ask und Bid, also die verkäuferinitiierte Seite der geltenden Quote.
+- Im Zerlegungsmodell ist D_i = −1 die Richtung eines Preisrückgangs, sofern A_i = 1 eine Preisänderung anzeigt.
+- Die Wahrscheinlichkeit eines Preisanstiegs bei eingetretener Änderung fällt auf 0,085, wenn die vorherige Änderung ebenfalls ein Anstieg war, und steigt auf 0,904, wenn die vorherige Änderung ein Rückgang war.
 
 ## Funktionsweise
 

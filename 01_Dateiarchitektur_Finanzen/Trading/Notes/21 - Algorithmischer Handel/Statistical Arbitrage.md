@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Statistical Arbitrage
@@ -63,6 +63,11 @@ aktualisiert: 2026-11-01
 - Kalenderspreads sind die Stelle, an der Mean Reversion bei Futures die Ausnahme ist. Der 12-Monats-Spread von CL ist im ADF-Test mit 99 Prozent stationär, hat eine Halbwertszeit von etwa 36 Tagen und erzielt ungehebelt 8,3 Prozent annualisierte Rendite bei einer Sharpe Ratio von 1,3.
 - Im Allgemeinen mean-reverten Kalenderspreads nicht, weil die Rollrendite das Signal vom gemeinsamen Spot abkoppelt.
 - Als weitere Ausnahme nennt der Text den Spread aus Volatilitäts-Future und Aktienindex-Future.
+- Das Cost-of-Carry-Modell setzt den Logpreis des Indexfutures minus den Logpreis der Kassaindexaktien gleich (risikoloser Zins minus Dividendenrendite) mal Restlaufzeit plus z∗t. z∗t muss Unit-Root-stationär sein, sonst bestehen anhaltende Arbitragemöglichkeiten.
+- Die Arbitrage kauft den Index und verkauft den Indexfuture, oder umgekehrt, sobald die Logpreise um mehr als die Cost of Carry bis zur Fälligkeit auseinanderlaufen. Unter schwacher Stationarität von z∗t wird das Geschäft erst profitabel, wenn der Betrag von z∗t eine durch Transaktionskosten und weitere ökonomische und Risikofaktoren bestimmte Schwelle überschreitet.
+- Future und Kasse gelten als einheitswurzelbehaftet, nach Anpassung um Zins und Dividendenrendite aber als kointegriert mit Vektor (1, −1). Die Renditen werden deshalb in Fehlerkorrekturform modelliert. Arbitragegeschäfte verändern die Marktdynamik, sodass das Renditemodell je nach An- oder Abwesenheit von Arbitrage wechselt.
+- Das multivariate Schwellenmodell hat drei Regime, Schwellenvariable zt−1 = 100 z∗t−1 und Schwellen γ1 < 0 < γ2. Arbitrage tritt nur in Regime 1 und 3 auf. Im mittleren Regime wirken normale Marktkräfte, die Logpreise verhalten sich ungefähr wie ein Random Walk, und der Fehlerkorrekturkoeffizient soll insignifikant sein. Das ist Schwellenkointegration nach Balke und Fomby (1997).
+- Der in diesem Kapitel behandelte Pairs-Handel ist die statistische Arbitrage, die Kointegration und Fehlerkorrektur nutzt: gekauft wird die relativ billige, verkauft die relativ teure Aktie, ohne dass der wahre Preis bekannt sein muss.
 
 ## Voraussetzungen
 
@@ -105,6 +110,7 @@ aktualisiert: 2026-11-01
 - Beim Handel von Paaren oder anderen Arbitrage-Strategien sind fehlerhafte Bid- und Ask-Quotes besonders gefährlich, weil die Signale auf kleinen Quote-Differenzen beruhen und ein kleiner Fehler den Spread prozentual stark verfälscht.
 - Im Beispiel steigt ein wahrer Spread von 5 Dollar durch einen um 1 Dollar falschen Ask auf 6 Dollar, also um 20 Prozent, und kann eine fehlerhafte Order zum Kauf von X und Verkauf von Y auslösen.
 - Die Backtests lassen Transaktionskosten weg, weil sie von Ausführung und Universum abhängen, und sie nutzen Aktien mit Survivorship Bias sowie konsolidierte statt primärer Eröffnungen und Schlüsse, sodass MOO- und MOC-Fills schlechter ausfallen als berichtet.
+- Eine realistischere Demonstration der statistischen Arbitrage würde den Handel außerhalb der Schätzstichprobe ausführen. Das Beispiel zeigt innerhalb der Stichprobe die Durchführbarkeit und empfiehlt, kointegrierte Paare über ähnliche Risikofaktoren und Finanzierungstheorie auszuwählen.
 
 ## Beispiele
 
@@ -115,6 +121,11 @@ aktualisiert: 2026-11-01
 - GC wird um 13:30 Uhr ET festgestellt, GLD um 16:00 Uhr ET; die Signale kommen allein aus den GC-Schlusskursen, deshalb ist die Asynchronität hier folgenlos.
 - XLE gegen USO erzielt vom 26. April 2006 bis zum 9. April 2012 eine annualisierte Rendite von 16 Prozent bei einer Sharpe Ratio von etwa 1.
 - AUD.USD gegen CAD.USD mit Johansen-Gewichten erzielt 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6. AUD.CAD mit Rollover erzielt 6,2 Prozent und 0,54.
+- Die Nokia-Aktie in Helsinki und ihr ADR in New York müssen sich gemeinsam bewegen, sonst besteht Arbitrage. Bei einer Unit Root im Aktienkurs sind die beiden Preisreihen kointegriert, praktisch nach Transaktionskosten und Wechselkursrisiko.
+- Die Daten sind die Intraday-Transaktionen des S&P 500 im Mai 1993 und des Juni-Futures an der Chicago Mercantile Exchange. Forbes, Kalb und Kofman (1999) bilden daraus eine minütliche bivariate Preisreihe mit 7060 Beobachtungen. Zehn Extremwerte, fünf je Seite, werden durch den Mittelwert der beiden Nachbarn ersetzt; das qualitative Ergebnis bleibt, die bedingte Heteroskedastizität kann sich ändern und wird nicht modelliert.
+- Bei angenommenem p = 8, Verzögerung d aus {1, 2, 3, 4}, γ1 im Intervall von −0,15 bis −0,02 und γ2 im Intervall von 0,025 bis 0,145 wählt das AIC auf einem Gitter mit 300 Punkten je Intervall die Schwellenvariable zt−1 mit γ̂1 = −0,0226 und γ̂2 = 0,0377. Die drei Regime enthalten 2234, 2410 und 2408 Punkte.
+- Die t-Verhältnisse des Fehlerkorrekturterms im mittleren Regime sind auf dem 5-Prozent-Niveau insignifikant. Auf die Kasserendite ist zt−1 in Regime 1 mit Koeffizient 0,00097 und t-Verhältnis 10,47 sowie in Regime 3 mit 0,00086 und t-Verhältnis 9,75 signifikant, im mittleren Regime mit 0,00012 und t-Verhältnis 0,86 nicht. Für weitere Indexarbitrage wird Dwyer, Locke und Yu (1996) genannt.
+- Im BHP-VALE-Beispiel vom 1. Juli 2002 bis zum 31. März 2006 ist der Logreturn jedes Pairs-Geschäfts 0,09, wenn die Zielabweichung 0,045 beträgt und bis zur gegenüberliegenden Grenze gehalten wird. Der Spread kreuzt die Grenzen mehrfach.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Bid
@@ -26,6 +26,12 @@ aktualisiert: 2026-11-01
 - Niedrige Preise werden fast immer gegen das Bid gematcht.
 - Das gegen das Bid gehandelte Volumen, also die verkaufsinitiierten Trades, wird VS genannt.
 - Das Break-even-Bid der Market Maker ist der erwartete Preis abzüglich (μ αt δt) / (ε + μ αt δt) mal (E[St] − SB).
+- Market Maker kaufen zum Bid-Preis P_b; für das Publikum ist P_b der Verkaufspreis.
+- Im Roll-Modell ist eine Transaktion mit I_t = −1 zum Preis P*_t − S/2 die Bid-Seite des Spreads S = P_a − P_b.
+- War der zuvor beobachtete Preis das Bid, ist die nächste beobachtete Preisänderung entweder 0 oder +S, sofern sich der fundamentale Wert nicht ändert.
+- Der Bid-Preis P^b_j bildet zusammen mit dem Ask P^a_j das Mittel, an dem der Indikator IBS eine Transaktion als über, auf oder unter der Quote klassifiziert.
+- Der in Ticks gemessene Spread zwischen Ask und Bid zum vorherigen Trade beeinflusst im Ordered Probit die bedingte Varianz der latenten Preisänderung.
+- Für IBM 1988 liegt der mittlere Spread bei 1,9470 Ticks.
 
 ## Funktionsweise
 

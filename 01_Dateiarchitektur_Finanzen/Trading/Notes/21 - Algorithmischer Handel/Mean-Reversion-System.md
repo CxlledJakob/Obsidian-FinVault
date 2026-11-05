@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Mean-Reversion-System
@@ -77,6 +77,8 @@ aktualisiert: 2026-11-01
 - Die übliche lineare Mean-Reversion-Strategie auf VX benutzt das Ratio Back zu Front als Signal und einen Lookback von 15 Tagen für den gleitenden Durchschnitt und die Standardabweichungen.
 - Die Bollinger-Band-ähnliche Strategie auf ES und VX shortet das Portfolio, sobald dessen Wert um eine Standardabweichung der Residuen aus dem Trainingsset abweicht.
 - Das Trainingsset für diese Regression sind die ersten 500 Tage nach August 2008, und die Standardabweichung der Residuen beträgt 2.047 Dollar.
+- Das Pairs-System handelt die Oszillation des stationären Spreads wt um seinen Mittelwert μw: Einstieg bei einer hinreichend großen Abweichung, Auflösung, wenn das Gleichgewicht wiederhergestellt ist.
+- Die Parameter γ, μw, α1 und α2 der Fehlerkorrektur lassen sich per Maximum Likelihood oder kleinste Quadrate schätzen. Die Rendite des Portfolios aus einer Aktie long und γ Aktien short ist der Zuwachs des Spreads und unabhängig von μw.
 
 ## Voraussetzungen
 
@@ -152,6 +154,10 @@ aktualisiert: 2026-11-01
 - Gehalten wird ein Paar 61 Handelstage, gerollt wird zehn Tage vor Verfall des nahen Kontrakts, und die Fälligkeiten liegen ein Jahr auseinander. Bei positivem Z-Score drehen die Vorzeichen von long fern und short nah.
 - Die ungehebelt Tagesrendite teilt den Gewinn durch 2, weil zwei Kontrakte gehalten werden. Vom 2. Januar 2008 bis 13. August 2012 sind annualisierte Rendite 8,3 Prozent und Sharpe Ratio 1,3.
 - Dieselbe lineare Regel auf VX-Kalenderspreads lässt sich mit der Gleichung für gehandelte Basiswerte nicht begründen: VIX wird nicht gehandelt, die Log-Preise gegen die Restlaufzeit liegen nicht auf einer Geraden, und die Formeln von Dupoyet, Daigler und Chen (2011) erklären die Mean Reversion nicht.
+- Sei η die Kosten eines Pairs-Geschäfts und die Zielabweichung so gewählt, dass ihr Doppeltes größer als η ist. Dann wird eine Aktie 1 gekauft und γ Aktien 2 geshortet, wenn wt gleich μw minus der Zielabweichung ist, und aufgelöst, wenn wt gleich μw plus der Zielabweichung ist. Der Nettogewinn ist das Doppelte der Zielabweichung minus η.
+- Alternativ wird bei Rückkehr auf μw aufgelöst, sofern die Zielabweichung größer als η ist. Der Nettogewinn ist dann die Zielabweichung minus η, bei mehr Transaktionen und kürzerer Haltedauer.
+- Für BHP und VALE wird die Zielabweichung auf 0,045 gesetzt, etwas größer als ein Standardfehler des Spreads von 0,044. Unter Normalität liegt die Wahrscheinlichkeit einer solchen Abweichung vom Mittel bei etwa 30 Prozent.
+- Der Logreturn jedes so definierten Pairs-Geschäfts ist das Doppelte von 0,045, also 0,09. Die Handelsgrenzen sind der Mittelwert 1,81 sowie 1,81 plus und minus 0,045; γ̂ beträgt 0,718.
 
 ## Risiken und Grenzen
 
@@ -179,6 +185,8 @@ aktualisiert: 2026-11-01
 - Das Aufwärtspotenzial ist auf das Mittel gedeckelt, zu dem die Preise zurückkehren, das Abwärtspotenzial kann unbegrenzt sein.
 - Der Aufstieg von Dark Pools und Hochfrequenzhandel hat den Handel mancher Mean-Reversion-Strategien in den letzten Jahren erheblich erschwert.
 - Datenfehler blähen die Backtests von Mean-Reversion-Strategien auf, die von Momentum-Strategien dagegen nicht.
+- Ob die Abweichung groß genug für einen Gewinn ist, hängt von Handelskosten, Grenzzinssätzen und den Bid-Ask-Spreads der beiden Aktien ab. Die Schwelle η hängt voraussichtlich von Gebühren und Bid-Ask-Spreads ab.
+- Eine realistischere Prüfung würde den Handel außerhalb der Schätzstichprobe ausführen. Das Beispiel zeigt innerhalb der Stichprobe nur, dass Pairs Trading durchführbar ist.
 
 ## Beispiele
 

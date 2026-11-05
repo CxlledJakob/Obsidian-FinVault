@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/13 - Volatilität/13 - Volatilität|13 - Volatilität]]"
 weitere_hauptthemen: []
 unterthema: "Optionsvolatilität"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Volatility Smile
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Das Volatility Smile ist die konvexe Funktion zwischen der impliziten Volatilität und dem Ausübungspreis einer Option.
 
 ## Kernaussagen
 
+- Aus dem Geld und im Geld liegende Optionen haben tendenziell höhere implizite Volatilitäten als am Geld liegende Optionen, besonders an den Devisenmärkten; bei Aktienoptionen ist das Smile weniger ausgeprägt.
+- Empirische Studien finden, dass das Diffusionsmodell auf Basis der Brownschen Bewegung das Volatility Smile der impliziten Volatilitäten nicht erklärt (Bakshi, Cao und Chen 1997).
+- Jump-Diffusion-Modelle und Modelle mit stochastischer Volatilität wurden vorgeschlagen, um diese Lücke zu schließen (Merton 1976, Duffie 1995).
+- Das einfache Sprungdiffusionsmodell von Kou (2002), geometrische Brownsche Bewegung plus Sprünge mit Poisson-Intensität und doppelt exponentialverteilter Sprunggröße, kann das Volatility Smile nachbilden und liefert analytische Preise für viele Optionen.
 
 ## Funktionsweise
 

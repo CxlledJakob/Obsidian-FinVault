@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Korrelation
@@ -26,6 +26,11 @@ aktualisiert: 2026-11-01
 - Eine illusorische Korrelation ist die falsche Wahrnehmung einer Beziehung zwischen zwei Variablen und ein erhebliches Problem für subjektive Praktiker der technischen Analyse.
 - Zwei Variablen sind korreliert, wenn der Prädiktor das Ergebnis, also die abhängige Variable, vorhersagen kann.
 - Das Gütemaß zum Vergleich der Prognoseverfahren ist der Korrelationskoeffizient zwischen prognostiziertem und tatsächlichem Ergebnis. Er reicht von 0, wertlose Prognosen, bis 1,0, vollkommene prognostische Treffgenauigkeit.
+- Der Korrelationskoeffizient zweier Zufallsvariablen ist Cov(X, Y) geteilt durch die Wurzel aus Var(X) mal Var(Y), vorausgesetzt die Varianzen existieren. Er misst die Stärke der linearen Abhängigkeit.
+- Es gilt −1 ≤ ρx,y ≤ 1 und ρx,y = ρy,x. Die Variablen heißen unkorreliert, wenn ρx,y = 0.
+- Die Korrelation zweier Reihen wird konsistent durch die Stichprobenkorrelation geschätzt: Zähler ist die Summe der Produkte der Abweichungen vom jeweiligen Stichprobenmittel, Nenner die Wurzel aus dem Produkt der beiden Summen quadrierter Abweichungen.
+- Die gleichzeitige Kreuzkorrelation ist ρij(0) gleich Cov(rit, rjt) geteilt durch das Produkt der Standardabweichungen; es gilt ρij(0) gleich ρji(0), minus 1 ≤ ρij(0) ≤ 1 und ρii(0) gleich 1, sodass ρ0 symmetrisch mit Einsen auf der Diagonale ist.
+- Die Lag-ℓ-Kreuzkorrelation ist ρij(ℓ) gleich Cov(rit, rj,t minus ℓ) geteilt durch das Produkt der Standardabweichungen von rit und rjt.
 
 ## Kernaussagen
 
@@ -109,6 +114,70 @@ aktualisiert: 2026-11-01
 - Für die Extraktion der Rollrendite genügt ein Instrument mit hoher Korrelation oder Antikorrelation zur Spotrendite; ein exakter Nachbau des Spots ist nicht nötig, und für VIX erfüllt SPY das.
 - Die Rollrendite von ES beträgt etwa 1 Prozent annualisiert, deshalb hat ES fast dieselben Renditen wie der Basiswert.
 - Die Hoffnung des querschnittlichen Futures-Portfolios ist, dass die Spotpreise positiv mit Wirtschaftswachstum oder anderen Makroindizes korrelieren und sich die Spot-Renditen daher aufheben.
+- In der linearen Zeitreihenanalyse stehen die Korrelationen der interessierenden Variable mit ihren Vergangenheitswerten im Mittelpunkt; sie heißen serielle Korrelationen oder Autokorrelationen.
+- Ist die lineare Abhängigkeit zwischen rt und den eigenen Vergangenheitswerten rt−i von Interesse, wird die Korrelation zur Autokorrelation verallgemeinert; der Korrelationskoeffizient zwischen rt und rt−l heißt Lag-l-Autokorrelation.
+- Für eine schwach stationäre lineare Reihe mit Gewichten ψi, ψ0 gleich 1, gilt ρl gleich der Summe ψi mal ψ(i plus l) geteilt durch 1 plus die Summe der ψi zum Quadrat ab i gleich 1.
+- Bei einer schwach stationären Reihe geht ρl mit wachsendem l gegen null, weil die ψ-Gewichte gegen null gehen; die lineare Abhängigkeit der aktuellen Rendite von einer weit zurückliegenden Rendite verschwindet damit für großes l.
+- Die wöchentliche einjährige und die dreijährige US-Treasury-Constant-Maturity-Rendite von 2467 Beobachtungen, 5. Januar 1962 bis 10. April 2009, sind hoch korreliert.
+- Das Bestimmtheitsmaß von 96,5 Prozent und der Koeffizient 0,930 der Niveauregression sind irreführend, weil die Residuen starke serielle Korrelationen zeigen.
+- Die Änderungen bleiben stark linear abhängig: c3t gleich 0,792 mal c1t plus et, residuale Standardabweichung 0,0690, Bestimmtheitsmaß 82,5 Prozent, Standardfehler des Koeffizienten 0,0073.
+- Mit MA(1)-Fehler lautet die Beziehung r3t gleich r3,t minus 1 plus 0,794 mal (r1t minus r1,t minus 1) plus at plus 0,182 mal at minus 1; die Zinsen sind gleichzeitig und seriell korreliert.
+- Das Bestimmtheitsmaß steigt durch den MA(1)-Fehler nur von 82,5 auf 83,1 Prozent, weil der MA-Koeffizient 0,1823 numerisch klein ist, obwohl er statistisch hoch signifikant ist.
+- Nichtsynchroner Handel kann zwischen zwei unabhängigen Aktien eine signifikante Lag-1-Kreuzkorrelation erzeugen: die häufiger gehandelte Aktie zeigt eine Nachricht nahe dem Schluss noch am selben Tag, die seltener gehandelte erst am nächsten Tag und scheint deshalb nachzulaufen.
+- In einem Portfolio aus beiden Aktien wird aus dieser Kreuzkorrelation eine signifikante Lag-1-Autokorrelation der Portfoliorendite.
+- Sind die Auftragsindikatoren zweier Wertpapiere kontemporär positiv korreliert, können ihre Bid-Ask-Spreads negative Lag-1-Kreuzkorrelationen einführen.
+- Die Wirkung nichtsynchronen Handels auf die Rendite eines einzelnen Papiers entspricht in der Zeitreihenliteratur einer zufälligen zeitlichen Aggregation, wobei die Handelswahrscheinlichkeit π den Aggregationsmechanismus steuert.
+- Im k-dimensionalen Ito-Prozess ist ρij die Korrelation der Wiener-Zuwächse dwit und dwjt und zugleich die Korrelation der zugehörigen standardnormalverteilten ϵi und ϵj.
+- Im Grenzwert Δt gegen 0 gilt (Δxit)(Δxjt) → σi(xt) σj(xt) ρij dt und (Δxit)² → σi²(xt) dt.
+- Im Sprungdiffusionsmodell von Kou sind der Poisson-Prozess nt, der Wiener-Prozess wt und die Sprunggrößen Ji unabhängig, sodass zwischen diesen Zufallsquellen kein Zusammenhang besteht.
+- Im RiskMetrics-Ansatz für mehrere Positionen ist ρ12 der Kreuzkorrelationskoeffizient der beiden Renditen, also die Kovarianz geteilt durch die Wurzel aus dem Produkt der beiden Varianzen.
+- Der Gesamt-VaR zweier Positionen ist die Wurzel aus VaR1 zum Quadrat plus VaR2 zum Quadrat plus 2 mal ρ12 mal VaR1 mal VaR2.
+- Bei m Instrumenten gehen zusätzlich alle Paarterme 2 mal ρij mal VaRi mal VaRj ein.
+- Für i ungleich j gilt im Allgemeinen ρij(ℓ) ungleich ρji(ℓ), weil die beiden Koeffizienten verschiedene lineare Beziehungen messen; Γℓ und ρℓ sind dann nicht symmetrisch.
+- Aus der schwachen Stationarität folgt Γij(ℓ) gleich Γji(minus ℓ), also Γℓ gleich der Transponierten von Γ mit Index minus ℓ und ρℓ gleich der Transponierten von ρ mit Index minus ℓ. Anders als univariat ist ρℓ ungleich ρ mit Index minus ℓ; praktisch genügen die Matrizen für ℓ ≥ 0.
+- Die Diagonale ρii(ℓ) ist die Lag-ℓ-Autokorrelation von rit. Für ℓ größer als 0 misst das Nebendiagonalelement ρij(ℓ) die lineare Abhängigkeit von rit vom vergangenen rj,t minus ℓ.
+- Zwei Komponenten haben keine lineare Beziehung, wenn ρij(ℓ) und ρji(ℓ) für alle ℓ ≥ 0 null sind. Sie sind gleichzeitig korreliert, wenn ρij(0) ungleich 0 ist. Sie sind entkoppelt, wenn beide Kreuzkorrelationen für alle ℓ größer als 0 null sind.
+- Die Beziehung ist unidirektional von rit nach rjt, wenn ρij(ℓ) für alle ℓ größer als 0 null ist, aber ρji(v) für ein v größer als 0 ungleich 0 ist. Feedback liegt vor, wenn es in beiden Richtungen mindestens einen positiven Lag mit Kreuzkorrelation ungleich 0 gibt.
+- Diese Bedingungen sind hinreichend. Aussagekräftiger ist ein multivariates Modell, das serielle Korrelationen und Kreuzkorrelationen gleichzeitig erfasst.
+- Die geschätzte Kreuzkorrelationsmatrix ist konsistent, in endlichen Stichproben aber verzerrt. Bei Assetrenditen ist ihre endliche Verteilung wegen bedingter Heteroskedastizität und hoher Kurtosis kompliziert; oft genügt eine grobe Näherung der Varianz von ρ-Dach ij(ℓ).
+- Das Nebendiagonalelement σ12 der Innovations-Kovarianzmatrix zeigt die gleichzeitige lineare Beziehung. Ist σ12 gleich 0, gibt es keine gleichzeitige lineare Beziehung zwischen den Komponenten.
+- Gleichzeitige Korrelationen lassen sich nicht zur Prognose verwenden. Deshalb wird in der Zeitreihenanalyse meist die reduzierte Form genutzt, neben der einfacheren Schätzung.
+- Für ℓ größer als 0 misst ρij(ℓ) die lineare Abhängigkeit von rit von rj,t minus ℓ. Die fünf hinreichenden Fälle sind: keine lineare Beziehung, nur gleichzeitige Korrelation, Entkopplung, unidirektionale Beziehung und Feedback.
+- Die Komponenten von at sind oft korreliert; die Elemente der Impulsantwortmatrizen ψi lassen sich dann nicht unmittelbar als isolierte Schocks deuten. Die Cholesky-Transformation bt gleich L hoch minus 1 mal at macht die Komponenten unkorreliert.
+- Eine Schwäche dieser Orthogonalisierung ist die Abhängigkeit von der Reihenfolge der Komponenten. b1t bleibt gleich a1t und wird nicht transformiert. Andere Reihenfolgen können andere Impulsantworten liefern.
+- Im VMA ist die gleichzeitige Korrelation zwischen den rit dieselbe wie zwischen den ait.
+- Im kointegrierten Beispiel sind die transformierten Reihen y1t und y2t entkoppelt; ihre gleichzeitige Korrelation ist die der Schocks b1t und b2t.
+- Die Stichprobenkorrelation zwischen einer Unit-Root-nichtstationären und einer stationären Reihe konvergiert mit der Stichprobengröße gegen null.
+- Im Johansen-Test sind die Größen λ̂i die quadrierten kanonischen Korrelationen zwischen den Residuen der beiden multivariaten Regressionen von Δxt und xt−1 auf den deterministischen Term und die verzögerten Differenzen; sie sind zugleich die partiellen kanonischen Korrelationen zwischen Δxt und xt−1.
+- Im bivariaten Normalmodell ist der Korrelationskoeffizient ρ = σ12 / (σ1 σ2) mit σi = Wurzel aus σii, und die Determinante der Kovarianzmatrix ist σ11 σ22 (1 − ρ²).
+- Für eine Zerlegung des multivariat normalverteilten Vektors gilt Σ12 = 0 genau dann, wenn die beiden Blöcke unabhängig sind.
+- Die Hauptkomponentenanalyse lässt sich auf die Kovarianzmatrix oder auf die Korrelationsmatrix anwenden. Die Korrelationsmatrix ist die Kovarianzmatrix des standardisierten Vektors r∗ = S hoch −1 r, wobei S die Diagonale der Standardabweichungen ist.
+- Bei der Korrelationsmatrix ist die Spur gleich k, und der vom i-ten Hauptkomponenten erklärte Varianzanteil ist λi / k.
+- Ein Eigenwert null der Korrelationsmatrix zeigt eine exakte lineare Beziehung zwischen den Renditekomponenten an.
+- Bei den monatlichen Logrenditen von IBM, Hewlett-Packard, Intel, J.P. Morgan Chase und Bank of America, Januar 1990 bis Dezember 2008, erklären die ersten zwei Hauptkomponenten der Stichproben-Korrelationsmatrix etwa 74 Prozent der Gesamtvariabilität. Die erste ist eine ungefähr gleich gewichtete Linearkombination und steht für die allgemeine Marktbewegung.
+- Die zweite Hauptkomponente dieser Korrelationsmatrix hat den Eigenwert 1,072 und den Eigenvektor (0,341, 0,356, 0,385, minus 0,469, minus 0,623)′. Sie bildet den Unterschied zwischen Technologie- und Finanzdienstleistungswerten ab.
+- Die Eigenwerte der Korrelationsmatrix sind 2,607, 1,072, 0,569, 0,451 und 0,301 mit kumulierten Varianzanteilen 0,522, 0,736, 0,850, 0,940 und 1,000. Die der Kovarianzmatrix sind 284,17, 112,93, 57,43, 46,81 und 29,87 mit kumulierten Anteilen 0,535, 0,748, 0,856, 0,944 und 1,000. Die Kovarianzmatrix liefert ähnliche Komponentendeutungen.
+- Bei vielen Renditereihen liegt die Korrelationsmatrix der Residuen eines linearen Modells sehr nahe an der Korrelationsmatrix der Originaldaten, sodass der Effekt dynamischer Abhängigkeit auf die Faktorenanalyse vernachlässigbar ist.
+- Bei den monatlichen Logrenditen der US-Anleihenindizes verändert ein VARMA(2,1) die gleichzeitige Korrelationsmatrix kaum. Die Korrelation von 30- und 20-jährigem Index bleibt 0,98, die von 30- und 1-jährigem Index geht von 0,63 auf 0,66.
+- Die aus einem statistischen Dreifaktorenmodell zurückgerechneten Korrelationen von zehn monatlichen Überschussrenditen liegen näher an den Stichprobenkorrelationen als die Korrelationen des industriellen Faktormodells.
+- Im univariaten Ansatz für Cisco und Intel, Tagesrenditen vom 2. Januar 1991 bis 31. Dezember 1999, wird ρ durch die Stichprobenkorrelation geschätzt. Sie beträgt 0,473.
+- Im bivariaten diagonalen GARCH(1,1) wird die Korrelation als zeitlich konstant angenommen und gemeinsam mit den übrigen Parametern geschätzt. Der Schätzwert ist 0,475.
+- Im Cholesky-Modell mit zeitvariabler Korrelation ist die Ein-Schritt-Prognose von ρ am Ursprung t gleich 2275 gleich 0,345, bei σ̂21 gleich 1,791, σ̂²1 gleich 4,252 und σ̂²2 gleich 6,348.
+- Die Korrelation des Faktormodells ist ρt gleich exp(qt) geteilt durch (1 plus exp(qt)), mit qt gleich minus 2,098 plus 4,120 mal ρt minus 1 plus 0,078 mal dem standardisierten Kreuzprodukt a1,t minus 1 mal a2,t minus 1. Die Standardfehler der drei Koeffizienten sind 0,025, 0,038 und 0,015.
+- Die Korrelationsgleichungen des Faktormodells und des Modells mit zeitvariabler Korrelation in den Gleichungen (10.26) und (10.27) sind im Wesentlichen dieselben.
+- Sind Gibbs-Parameter hoch korreliert, sollen sie gemeinsam gezogen werden; im Dreiparameterbeispiel über f(θ1, θ2 | θ3, X, M) und f3(θ3 | θ1, θ2, X, M).
+- Alle Parameter univariaten bedingten Verteilungen zu unterwerfen ist oft ineffizient; die Wirkung der Parameterkorrelation auf die Konvergenzrate behandeln Liu, Wong und Kong (1994).
+- Die drei bivariaten Modelle unterscheiden sich bei den bedingten Korrelationen der monatlichen IBM- und S&P-500-Logrenditen, 1962 bis 2009, erheblich.
+- GARCH mit Cholesky-Zerlegung: die Korrelationen sind relativ glatt und stets positiv, Mittel 0,59, Standardabweichung 0,07, Spanne (0,411, 0,849).
+- BEKK(1,1): Mittel 0,59, Standardabweichung 0,13, Spanne (−0,020, 0,877), mit kleinen negativen Werten um 1993.
+- Stochastische Volatilität: Mittel 0,60, Standardabweichung 0,14, Spanne (−0,161, 0,839); die Korrelation schwankt von Monat zu Monat stark, und negative Werte treten in mehreren isolierten Perioden auf, weil q21,t den Schock ut enthält.
+- ρ ist die Korrelation zwischen εt und ηt; die Kovarianzmatrix von (εt, ηt) hat Einsen auf der (1,1)-Stelle, ρ ση auf der Nebendiagonale und σ²η in der (2,2)-Stelle.
+- Über die Cholesky-Zerlegung ist b1t = a1t und b2t = a2t − q21,t b1t, und b2t sowie q21,t sind Residuum und Kleinste-Quadrate-Koeffizient der Regression a2t = q21,t a1t + b2t.
+- Die bedingte Kovarianzmatrix von at wird durch {g11,t, g22,t} und q21,t parametrisiert, mit gii,t = Var(bit | Ft−1) und b1t orthogonal zu b2t.
+- Streudiagramme der Posteriormittel von ρ21,t aus zwei Gibbs-Läufen, 500+2000 gegen 500+1000 Iterationen, liegen nahe an der Geraden y = x.
+- Die Quadrattransformation in Gleichung (12.42) erhält die Korrelation zwischen ηt und εt nicht, falls diese Korrelation existiert.
+- Im zweiten stochastischen Volatilitätsmodell bezeichnet die Korrelation ρ zwischen den Störtermen den Leverage-Effekt; im ersten Modell sind {εt} und {ηt} unabhängig, die Korrelation ist also null.
+- Für die monatlichen S&P-500-Logrenditen von Januar 1962 bis November 2004 ist das Posterior-Mittel von ρ gleich −0,3892 bei Standardfehler 0,0292, etwa −0,39 und nahe dem in der Literatur üblichen Wert.
 
 ## Funktionsweise
 
@@ -130,9 +199,23 @@ aktualisiert: 2026-11-01
 - Für die aktuelle Preisänderung und jede frühere Änderung, beginnend beim Lag 1 und dann Lag 2 und so fort, wird ein eigener Korrelationskoeffizient berechnet.
 - In einer zufälligen Reihe fallen diese Korrelationen typischerweise sehr schnell mit dem Lag-Intervall.
 - Ist die Zeitreihe der Preisänderungen linear nichtzufällig, weichen einige der Korrelationskoeffizienten signifikant vom Korrelationsmuster einer Zufallsfolge ab.
+- Der Stichprobenkorrelationskoeffizient ist die Summe (xt − x̄)(yt − ȳ) geteilt durch die Wurzel aus dem Produkt der beiden Abweichungsquadratsummen, mit x̄ und ȳ als Stichprobenmitteln.
+- Bei einer schwach stationären Reihe wird die Korrelation zur Autokorrelation verallgemeinert: die Korrelation von rt mit rt−ℓ hängt nur von ℓ ab.
+- Die Stichproben-Kreuzkorrelation ist ρ-Dach ℓ gleich D-Dach hoch minus 1 mal Γ-Dach ℓ mal D-Dach hoch minus 1 für ℓ ≥ 0, mit D-Dach als Diagonalmatrix der Stichproben-Standardabweichungen.
+- In der Notation von Tiao und Box steht Plus bei einem Koeffizienten von mindestens 2 durch Wurzel aus T, Minus bei höchstens minus 2 durch Wurzel aus T und ein Punkt dazwischen. Unter weißem Rauschen ist 1 durch Wurzel aus T der asymptotische 5-Prozent-kritische Wert.
+- Die bedingte Kovarianz lässt sich schreiben als Dt mal ρt mal Dt. ρt ist die bedingte Korrelationsmatrix, symmetrisch mit Einsen auf der Diagonale, und Dt enthält die bedingten Standardabweichungen. Die zeitliche Entwicklung hängt damit nur von den bedingten Varianzen und den Korrelationen unterhalb der Diagonale ab.
+- Über die Cholesky-Zerlegung ist die Korrelation ρ21,t gleich q21,t mal der Wurzel aus σ11,t, geteilt durch die Wurzel aus σ22,t. Sie ist zeitvariabel, sobald q21,t ungleich null ist. Selbst bei konstantem q21,t gleich c ungleich null bleibt sie zeitvariabel, solange das Varianzverhältnis σ11,t zu σ22,t nicht konstant ist. Das unterscheidet die Cholesky-Reparametrisierung von der direkten Modellierung der Korrelation.
+- Im Constant-Correlation-Modell von Bollerslev (1990) ist die eine Korrelation ein zeitlich fester Parameter mit Betrag kleiner als 1. Die Mehrschritt-Prognose der Kovarianz ist diese geschätzte Korrelation mal der Wurzel aus dem Produkt der prognostizierten bedingten Varianzen.
+- Für eine Korrelation, die positiv ist und in [0, 1] liegt, setzt das zeitvariable GARCH ρt gleich exp(qt) durch (1 plus exp(qt)). qt hängt von der vorherigen Korrelation und vom standardisierten Kreuzprodukt der vorherigen Schocks ab. Sind die beiden Steigungskoeffizienten null, bleibt die Korrelation konstant. Bei negativer Korrelation kann die Gleichung ein Minuszeichen erhalten.
+- Bei unbekanntem Vorzeichen bildet die Fisher-Transformation qt gleich ln von (1 plus ρ) durch (1 minus ρ) die Korrelation auf die ganze Zahlengerade ab, mit der Umkehrung ρ gleich (exp(qt) minus 1) durch (exp(qt) plus 1).
+- Tse und Tsui lassen die bedingte Korrelationsmatrix zu einer festen Matrix ρ, zur vorherigen Korrelationsmatrix und zur Stichprobenkorrelation der letzten m Schocks schrumpfen. Die Gewichte sind 1 minus θ1 minus θ2, θ1 und θ2, mit θ1 plus θ2 kleiner als 1.
+- Engle modelliert eine Hilfsmatrix Qt als Schrumpfung zur unbedingten Kovarianz der standardisierten Innovationen plus einem äußeren Produkt der vorherigen standardisierten Innovationen plus der vorherigen Qt, und normiert Qt zeilen- und spaltenweise zu einer Korrelationsmatrix.
+- Weil θ1 und θ2 bei Tse-Tsui und bei Engle Skalare sind, haben alle bedingten Korrelationen dieselbe Dynamik. Bei großer Dimension ist das schwer zu rechtfertigen.
+- Über die Cholesky-Zerlegung ist die bedingte Korrelation q21,t mal der Wurzel aus g11,t, geteilt durch die Wurzel aus g22,t plus q21,t zum Quadrat mal g11,t.
 
 ## Voraussetzungen
 
+- Sind X und Y beide normalverteilt, gilt ρx,y = 0 genau dann, wenn X und Y unabhängig sind.
 
 ## Anwendung im Trading
 
@@ -158,6 +241,7 @@ aktualisiert: 2026-11-01
 - Von den untersuchten Plänen teilweiser Verstärkung erzeugt zufällige Verstärkung die Gewohnheiten, die der Löschung am stärksten widerstehen, obwohl das Verhalten mit der Belohnung nicht wirklich verbunden ist.
 - Zufällige Verstärkung ist die Belohnung bei einer illusorischen Korrelation der technischen Analyse: Ab und zu folgt auf das Signal durch Zufall das erwartete Ergebnis, und behavioristische Befunde sagen eine extrem löschungsresistente Überzeugung voraus.
 - Aberglaube und zwanghaftes Spielen, zwei Gewohnheiten auf illusorischen Korrelationen, gelten als extrem schwer heilbar.
+- Korrelationen direkt zu modellieren macht die Likelihood ab drei Dimensionen kompliziert und erzwingt eine beschränkte Maximierung, damit die Kovarianz positiv definit bleibt.
 
 ## Beispiele
 
@@ -181,6 +265,32 @@ aktualisiert: 2026-11-01
 - Die Intuition erkennt den Zusammenhang von bangladeschischer Butter und S&P 500 als scheinbar; hätte die höchstkorrelierte Reihe eine plausible Verbindung, würde die Intuition nicht warnen.
 - Die neun Felder sind Studienerfolg von Graduierten, Lebenserwartung von Krebspatienten, Änderungen von Aktienkursen, psychische Krankheit anhand von Persönlichkeitstests, Noten und Einstellungen in einem Psychologieseminar, Firmenpleiten anhand von Finanzkennzahlen, studentische Bewertungen der Lehrqualität, Leistung von Lebensversicherungsverkäufern und IQ anhand von Rorschach-Tests.
 - Russo und Schoemaker fassen zehn Studien zum Vergleich intuitiver Expertenprognosen mit objektiven linearen Modellen zusammen. Die mittlere Korrelation betrug 0,33 für das Expertenurteil und 0,64 für das objektive Modell.
+- Die monatlichen Logrenditen von IBM und S&P 500, Januar 1926 bis Dezember 2008, 996 Beobachtungen in Prozent inklusive Dividenden, haben die gleichzeitige Stichprobenkorrelation 0,65, signifikant zum Niveau 5 Prozent. Die Kreuzkorrelationen bei Lag 1 sind schwach, falls überhaupt vorhanden.
+- Signifikante Kreuzkorrelationen der monatlichen IBM- und S&P-500-Logrenditen erscheinen zum ungefähren 5-Prozent-Niveau vor allem bei den Lags 1 und 3.
+- Die IBM-Monatsrenditen hängen schwach von vorherigen S&P-500-Renditen ab; das folgt aus der Signifikanz des Elements (1, 2) der Kreuzkorrelationsmatrizen bei Lag 1, Lag 2 und Lag 5.
+- Die dynamische Beziehung der beiden Monatsreihen ist schwach, ihre gleichzeitige Korrelation ist aber statistisch signifikant.
+- Die gleichzeitige Korrelation der beiden Innovationsreihen im vereinfachten VAR(5) ist 24 geteilt durch die Wurzel aus 48 mal 30, also 0,63, nahe an der Stichprobenkorrelation von 0,65 zwischen den Renditen.
+- Die fünf monatlichen Anleiherenditen von 1942 bis 1999 haben hohe gleichzeitige Korrelationen, und die Korrelationen langer Laufzeiten sind höher als die kurzer. Paare mit der 30-jährigen Reihe: 0,98 zur 20-jährigen, 0,92 zur 10-jährigen, 0,85 zur 5-jährigen und 0,63 zur 1-jährigen. Die 5-jährige und die 1-jährige korrelieren mit 0,82.
+- Die meisten signifikanten Kreuzkorrelationen der fünf Anleihen liegen bei Lag 1, und die fünf Reihen erscheinen miteinander korreliert. Bei Lag 2 ist in der vereinfachten Matrix nur die Autokorrelation der 1-Jahres-Reihe markiert.
+- Die beiden logarithmierten US-Monatssätze sind stark gleichzeitig korreliert. Der Koeffizient ist 2,5 geteilt durch die Wurzel aus 3,58 mal 2,19, also 0,893. Die Kovarianzmatrix der Schocks, mal 10 hoch 3, hat die Einträge 3,58 und 2,50 sowie 2,50 und 2,19.
+- Das VAR(1) für IBM und S&P 500 hat Bestimmtheitsmaße 0,0101 und 0,0075, adjustiert 0,0081 und 0,0055. Die dynamische Abhängigkeit ist schwach, und die Impulsantworten klingen schnell ab.
+- Die Fehler-Kovarianzmatrix der bedingten Likelihood des vereinfachten VAR(5) ist 48,328570 auf der IBM-Varianz, 30,027406 auf der S&P-Varianz und 24,361464 auf der Kovarianz.
+- Die Stichproben-Autokorrelationsfunktion der geschätzten BHP-VALE-Spreadresiduen fällt exponentiell und stützt die Stationarität des Spreads.
+- Im Marktmodell für 13 monatliche Überschussrenditen bleiben große Residuenkorrelationen, darunter 0,45 zwischen Caterpillar und Alcoa und 0,48 zwischen General Motors und Ford. Die Residuenkovarianz wird durch 168 − 2 geteilt.
+- Die vom Zwei-Faktor-Modell mit CPI- und Beschäftigungsüberraschung implizierte Korrelationsmatrix der 13 Überschussrenditen liegt sehr nahe an der Einheitsmatrix. Die Korrelation der Residuen dieses Modells liegt nahe an der Korrelation der ursprünglichen Überschussrenditen.
+- Im BARRA-Branchenmodell sind die modellbasierten Korrelationen innerhalb einer Branche größer als die Stichprobenkorrelationen. Zwischen Caterpillar und Procter & Gamble beträgt die Stichprobenkorrelation nur 0,1, die Korrelation aus dem angepassten Modell 0,6.
+- Für die Korrelationsmatrix der fünf Monatsrenditen von IBM, Hewlett-Packard, Intel, J.P. Morgan Chase und Bank of America sind die Eigenwerte 2,607, 1,072, 0,569, 0,451 und 0,301, die Anteile 0,522, 0,214, 0,114, 0,090 und 0,060 und die kumulierten Anteile 0,522, 0,736, 0,850, 0,940 und 1. Der Text rundet den ersten Eigenwert auf 2,608 und den gemeinsamen Anteil der ersten beiden Komponenten auf etwa 74 Prozent; die Tabelle weist für diese beiden 0,736 aus.
+- Der erste Eigenvektor der Korrelationsmatrix ist ungefähr (0,428, 0,460, 0,451, 0,479, 0,416)′ und wird als Marktkomponente gelesen. Der zweite ist ungefähr (0,341, 0,356, 0,385, −0,469, −0,623)′ und trennt Technologie von Finanzwerten.
+- Für die Tageslogrenditen von Hang Seng und Nikkei 225 schätzt das diagonale Constant-Correlation-GARCH(1,1) die Korrelation auf 0,668. Die Volatilitäten der beiden Märkte sind nicht dynamisch gekoppelt, aber zeitgleich korreliert.
+- Für die monatlichen Logrenditen von IBM und dem S&P 500, Januar 1926 bis Dezember 1999, ist die konstante Korrelation 0,614 bei einem Standardfehler von 0,020. Die Volatilitäten zeigen eine Feedback-Beziehung.
+- Im DVEC(1,1) für die monatlichen Renditen von Pfizer und Merck, Januar 1965 bis Dezember 2008, liegen die zeitvariablen Korrelationen zwischen 0,37 und 0,83. Im BEKK(1,1) derselben Reihe wirken die Korrelationen volatiler.
+- Die Stichprobenkorrelation der monatlichen Logrenditen von IBM und dem S&P 500, gerechnet in einem Fenster von 120 Monaten, verändert sich von 1926 bis 1999 und fällt in den jüngeren Jahren. Eine über etwa 70 Jahre konstante Korrelation ist schwer zu halten, weil der S&P 500 ein gewichtetes Mittel ist und sich der Rang der IBM-Marktkapitalisierung verändert hat.
+- Im logistischen Modell schwankt die angepasste Korrelation und wird in den jüngeren Jahren kleiner, im Einklang mit dem gleitenden Fenster. Ihr Mittel ist 0,612 gegenüber dem konstanten Schätzwert 0,614. Die Log-Likelihood verbessert sich von minus 3691,21 auf minus 3679,64. Die Ein-Schritt-Prognose der Korrelation am Ursprung 888 ist 0,545, gegenüber 0,614 im konstanten Modell.
+- Die Cholesky-Korrelation derselben Reihe ist glatter, fällt ebenfalls und liegt in den jüngeren Jahren unter den anderen Modellen. Die Ein-Schritt-Prognose am Ursprung 888 hat die Korrelation 0,203. Die Likelihood von etwa minus 3672 ist mit dem logistischen Modell vergleichbar. Der AR-Koeffizient von q21,t ist 0,9915.
+- Die Stichprobenkorrelationen der Tageslogrenditen, 2. Januar 1991 bis 31. Dezember 1999, sind 0,52 zwischen S&P 500 und Cisco, 0,50 zwischen S&P 500 und Intel und 0,47 zwischen Cisco und Intel.
+- In diesem dreidimensionalen Modell steigt die Korrelation zweier Renditereihen, wenn die Renditen volatil sind. Das stimmt mit dem Befund überein, dass die Korrelation internationaler Aktienmarktindizes in einer Finanzkrise zunimmt. Die Größen qij,t haben hohe AR(1)-Koeffizienten: 0,790 schon im bivariaten Cisco-Modell und 0,824, 0,973 und 0,981 im dreidimensionalen Modell.
+- Im Vier-Asset-DCC von Euro, Yen, IBM und Dell, Januar 1999 bis Dezember 2004, sind die Korrelationen des Modells glatter als die einer rollierenden Schätzung mit 69 Tagen.
+- Ohne Leverage liegen die übrigen Posterior-Mittel nahe bei denen mit Leverage: σo 0,0775 gegen 0,0764, α −0,0613 gegen −0,0616 und ση 2,5827 gegen 2,5639; die beiden geschätzten Volatilitätsreihen sind sehr nah beieinander.
 
 ## Unterschiedliche Quellenpositionen
 

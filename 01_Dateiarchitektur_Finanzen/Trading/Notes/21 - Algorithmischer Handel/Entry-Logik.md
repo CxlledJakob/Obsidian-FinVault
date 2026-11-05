@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Entry-Logik
@@ -156,6 +156,9 @@ aktualisiert: 2026-11-01
 - Die Hedge Ratio ist nicht eins, deshalb lässt sich das Paar nicht als einzelner Kreuzkurs AUD.CAD eröffnen.
 - Auf dem fertigen AUD.CAD ist die Position das negative Vorzeichen von Schluss minus gleitendem 20-Tage-Durchschnitt, nicht ein vollständiger Z-Score, und sie wird über 17:00 Uhr ET gehalten.
 - Beim CL-Kalenderspread wird zunächst der ferne Kontrakt long und der nahe short gehalten. Ist der Z-Score der Rollrendite positiv, drehen alle Vorzeichen. Ist der Z-Score nicht endlich, wird die Position auf null gesetzt.
+- Gilt für die Zielabweichung des Logpreisspreads vom Mittel das Doppelte dieser Abweichung größer als die Kosten η, wird eine Aktie der ersten Reihe gekauft und γ Aktien der zweiten Reihe geshortet, sobald der Spread gleich Mittel minus Zielabweichung ist.
+- Der Einstiegszeitpunkt lässt sich bestimmen, solange die Zielabweichung gegenüber der Standardabweichung des Spreads nicht zu groß ist.
+- Ist die Zielabweichung negativ, wird eine Aktie der ersten Reihe geshortet und γ Aktien der zweiten Reihe gekauft; der Nettogewinn ist dann minus das Doppelte der Zielabweichung minus η.
 
 ## Risiken und Grenzen
 

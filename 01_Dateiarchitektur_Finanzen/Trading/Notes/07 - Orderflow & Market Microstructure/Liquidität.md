@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Liquidität
@@ -74,6 +74,12 @@ aktualisiert: 2026-11-01
 - Nachdem dieser Druck endet, mean-reverten die Kurse oft; Käufe der Titel mit dem stärksten Verkaufsdruck der Quartale t minus 4 bis t minus 1, und umgekehrt, erzielen weitere 7 Prozent annualisiert.
 - Orderflow kann Preismomentum auch auf der kürzesten Zeitskala zünden.
 - Die Slippage der Fonds-Druck-Strategie ist voraussichtlich erheblich, weil die Holdings-Information zum Quartalsende verzögert eintrifft.
+- Market Maker stellen Marktliquidität bereit, indem sie bereitstehen, zu kaufen oder zu verkaufen, wann immer das Publikum kaufen oder verkaufen will.
+- Liquidität meint die Fähigkeit, beträchtliche Mengen eines Wertpapiers schnell, anonym und mit geringem Preiseinfluss zu kaufen oder zu verkaufen.
+- Als Gegenleistung für diese Liquidität erhalten die Market Maker vom Börsenplatz das Monopol, unterschiedliche Preise für Käufe und Verkäufe zu stellen; der Bid-Ask-Spread ist ihre primäre Vergütung.
+- In einem auftragsgetriebenen Markt, etwa der Taiwan Stock Exchange, können Hochfrequenzdaten die Orderdynamik und die Frage untersuchen, wer die Marktliquidität bereitstellt.
+- Cho, Russell, Tiao und Tsay (2003) verwenden 5-Minuten-Renditen von mehr als 340 an der Taiwan Stock Exchange gehandelten Aktien und finden signifikante Evidenz für Magneteffekte in Richtung der oberen Preisgrenze.
+- Im Minutendaten-Schwellenmodell für den S&P 500 im Mai 1993 sind vergangene Logrenditen des Indexfutures informativer als vergangene Logrenditen der Kasse, gemessen an der größeren Zahl signifikanter t-Verhältnisse, und der Text führt das darauf zurück, dass Futures im Allgemeinen liquider sind.
 
 ## Funktionsweise
 

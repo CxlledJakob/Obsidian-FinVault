@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/15 - Intermarket-Analyse/15 - Intermarket-Analyse|15 - Intermarket-Analyse]]"
 weitere_hauptthemen: []
 unterthema: "Relative Märkte"
@@ -10,22 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Small-Cap-Large-Cap-Ratio
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- SMB, small minus big, ist bei Fama und French die Performance kleiner Aktien relativ zu großen Aktien. Sortiert wird nach dem Marktkapital, market equity.
 
 ## Kernaussagen
 
 
 ## Funktionsweise
 
+- Die Faktorrealisation ist die Rendite eines Hedgeportfolios auf diesem Fundamental: long im obersten Quintil der sortierten Assets, im Text mit der Klammer 1/3 versehen, und short im untersten Quintil. Die Betas der einzelnen Assets werden danach mit einer Zeitreihenregression auf die beobachteten Faktorrealisationen geschätzt.
 
 ## Voraussetzungen
 

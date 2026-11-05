@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Zykluslänge
@@ -42,6 +42,11 @@ aktualisiert: 2026-10-30
 - Setzt sich der jüngere Zeitzyklus-Rhythmus fort, wird angenommen, dass das nächste Hoch im Time Band, also in der Überlappung, entsteht.
 - Im Abwärtstrend ist das Time Band die Überlappung der jüngeren Tief-zu-Tief- und Hoch-zu-Tief-Zeitspannen.
 - Für die Zeitanalyse werden andere Ratios verwendet als für die Kursanalyse, und die Anwendung hängt davon ab, ob der Markt einen Trend oder eine Korrektur ausbildet.
+- Die Frequenz des Zyklus im strukturellen Komponentenmodell ist λc gleich 2π geteilt durch q, wobei q die Periode ist.
+- Der Dämpfungsfaktor δ liegt im Intervall (0, 1]. Bei δ gleich 1 ist der Zyklus eine deterministische Sinus-Cosinus-Welle ohne Dämpfung.
+- Die Varianz der Zyklusinnovation wird mit (1 minus δ²) skaliert. Bei δ gleich 1 verschwindet diese Innovationsvarianz.
+- GetSsfStsm lässt bis zu zehn solcher Zykluskomponenten zu. Jede Komponente wird durch σε, die Frequenz λc und den Dämpfungsfaktor δ beschrieben.
+- Die Saisonperiode s ist davon getrennt: s ist die Zahl der Saisons im Jahr in der Saisonkomponente γt.
 
 ## Funktionsweise
 
@@ -51,6 +56,8 @@ aktualisiert: 2026-10-30
 - Für ein Hoch werden dieselben Hoch-Pivots zweimal gezählt: als High-High-Abstände und als Low-to-High-Abstände der Anstiege zwischen diesen Hochs.
 - Das Menü trägt Markt und Zeitebene ein und getrennte Spannen für Bull High, Bull Low, Bear High und Bear Low, weil die Zeitrhythmen oft verschieden sind.
 - Der Dynamic-Time-Projection-Report bündelt Zeitretracement, Alternate Time Projection und High-High- sowie Low-Low-Projektionen. Die Bars sind die künftigen Zeiten mit den meisten Treffern.
+- Die mittlere Länge der stochastischen Zyklen eines AR(2) mit komplexem Wurzelpaar ist k gleich 2π geteilt durch den Arkuskosinus von phi1 geteilt durch (2 mal der Wurzel aus minus phi2), wobei der Arkuskosinus im Bogenmaß steht.
+- Mit den komplexen Lösungen a plus oder minus b i gilt k gleich 2π geteilt durch den Arkuskosinus von a geteilt durch die Wurzel aus a zum Quadrat plus b zum Quadrat.
 
 ## Voraussetzungen
 
@@ -86,6 +93,10 @@ aktualisiert: 2026-10-30
 - Im Menü stehen für dieses Beispiel 5 bis 13 Low-to-High und 13 bis 18 High-to-High. Das Band vom 10. bis 12. Oktober liegt unten im Indikator und in der Overbought-Zone.
 - Im EUR/USD auf 60 Minuten lagen die High-High-Wiederholungen bei 22 bis 27 Bars. 57 Bars, etwa das Doppelte, wurden gestrichen. Low-to-High war 7 bis 16. Das Band lief vom 20:00-Bar am 24. Januar bis 0:00 Uhr am 25. Januar, mit einem erwarteten Hoch von mindestens 10 bis 18 Bars. Ein Ausreißer mit 43-Bar-Rückgang zählt nicht mit.
 - Der höchste Dynamic-Time-Projection-Treffer für Welle C war der 18. Dezember, für ein Wave-5-Tief der späte Nachmittag des 26. November.
+- Für die saisonbereinigte vierteljährliche Wachstumsrate des realen US-Bruttosozialprodukts von 1947.II bis 1991.I beträgt diese mittlere Zykluslänge ungefähr 10,62 Quartale, etwa 3 Jahre.
+- Die direkte Rechnung k gleich 2π geteilt durch den Arkuskosinus von 1,590253 geteilt durch 1,913308 ergibt 10,65638.
+- Die mittlere Dauer der Kontraktionsphasen beträgt etwa drei Quartale und die der Expansionsphasen etwa 3 Jahre; 10,62 Quartale sind der Kompromiss aus diesen beiden getrennten Dauern.
+- Dieses periodische Merkmal der Zykluslänge ist bei Wachstumsraten nationaler Volkswirtschaften üblich, auch bei vielen OECD-Ländern.
 
 ## Unterschiedliche Quellenpositionen
 

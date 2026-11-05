@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Stress Test
@@ -35,6 +35,7 @@ aktualisiert: 2026-11-01
 
 ## Regeln und Kriterien
 
+- Für die VaR-Berechnung nennt der Text als interessierende Wahrscheinlichkeit p = 0,01 im Risikomanagement und p = 0,001 im Stresstest.
 
 ## Risiken und Grenzen
 

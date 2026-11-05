@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/24 - Makroökonomie/24 - Makroökonomie|24 - Makroökonomie]]"
 weitere_hauptthemen: []
 unterthema: "Wachstum und Inflation"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Inflation
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Makroökonomische Faktormodelle beschreiben das gemeinsame Verhalten von Assetrenditen mit beobachtbaren Größen, darunter die Inflationsrate, neben BIP-Wachstum, Zinssätzen und der Arbeitslosenquote.
 
 ## Funktionsweise
 
@@ -41,6 +40,8 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Als Inflationsreihe dient der Verbraucherpreisindex für alle städtischen Konsumenten, alle Posten, Index 1982 bis 1984 gleich 100, saisonbereinigt von Januar 1975 bis Dezember 2003. Die Wachstumsrate ist die erste Differenz der logarithmierten Reihe und wird in Prozent gemessen.
+- Die Überraschung des CPI-Wachstums ist das Residuum eines per BIC gewählten VAR(3) zusammen mit dem Wachstum der Zivilbeschäftigung ab 16 Jahren. Im Zwei-Faktor-Modell von 1990 bis 2003 sind alle 13 monatlichen Aktien-Überschussrenditen negativ mit dieser CPI-Überraschung verbunden, die R² bleiben aber niedrig und die erklärende Kraft gering.
 
 ## Unterschiedliche Quellenpositionen
 

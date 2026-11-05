@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Structural Break
@@ -47,6 +47,16 @@ aktualisiert: 2026-11-01
 - Das ETF-Paar GLD gegen GDX verlor 2008 die Kointegration; die ergänzte Hypothese war der hohe Rohölpreis, und mit dem Ölpreis als zusätzlicher Eingabe arbeitete das Modell wieder.
 - Abweichungen des Live-Handels vom Backtest werden oft als Strukturbruch der Marktstruktur durch Regulierung oder Makroökonomie erklärt und nicht als Backtest-Fallstrick.
 - Auch eine algorithmische Strategie verlangt danach die Beurteilung, ob das Modell nach dem Bruch noch gültig ist.
+- Tsay (1989) überführt das SETAR der Alternative in ein Problem des Modellwechsels, indem die Autoregression nach der Schwellengröße x_{t−d} geordnet wird und die Schwelle r1 als Änderungspunkt dient.
+- Unterhalb von r1 gelten die Koeffizienten des ersten Regimes, ab r1 die des zweiten; die geordnete Autoregression ändert die Abhängigkeit von den eigenen Verzögerungen nicht, sie stellt sie nur im Schwellenraum statt im Zeitraum dar.
+- Unter der Null eines linearen AR(p) gibt es in dieser geordneten Autoregression keinen Modellwechsel, und die standardisierten Vorhersageresiduen bleiben ohne Zusammenhang mit den Regressoren.
+- Der TAR-F-Test prüft genau diesen ausbleibenden Modellwechsel und braucht dafür weder den Wert der Schwelle noch die Zahl der Regime.
+- Hochfrequente Finanzdaten werden oft von äußeren Ereignissen beeinflusst, etwa einer Zinsänderung des Offenmarktausschusses der US-Notenbank oder einem Sprung des Ölpreises; ACD-Anwendungen stehen dann vor Interventionen von außen.
+- Die Wirkung solcher externen Ereignisse lässt sich mit der Interventionsanalyse von Box und Tiao (1975) erfassen.
+- Für die Apple-Range ist der Interventionszeitpunkt der 26. Januar 2001, t0 = 522, der letzte Handelstag vor der Umstellung der Tickgröße; die Indikatorvariable ist 1 für i ≤ t0 und 0 sonst.
+- Das Dauer-Modell mit Intervention lautet ψi = α0 + γ I(t0)i + α1 xi−1 + β1 ψi−1; γ ist der Rückgang der erwarteten Duration durch die Dezimalisierung der Aktienkurse.
+- Die Schätzung γ̂ = 0,0011 bei Standardfehler 0,0003 ist auf dem 1-Prozent-Niveau signifikant und positiv, sodass die Dezimalisierung den erwarteten Wert der täglichen Range senkt.
+- Im Interventionsmodell folgen die Innovationen W(2,2835) unterhalb und W(2,7322) oberhalb der Schwelle 0,04753, mit Standardfehlern 0,0413 und 0,0780.
 
 ## Funktionsweise
 

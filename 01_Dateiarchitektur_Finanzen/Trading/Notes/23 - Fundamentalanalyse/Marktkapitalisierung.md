@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Marktkapitalisierung
@@ -28,6 +28,9 @@ aktualisiert: 2026-10-30
 - Fama und French führen die Marktkapitalisierung als Risikofaktor ein: Firmen mit niedriger Marktkapitalisierung seien fundamental riskanter und müssten höhere Durchschnittsrenditen bieten, große Kapitalisierungen seien sicherer und erzielten niedrigere Durchschnittsrenditen.
 - Der Faktor wurde erst hinzugefügt, nachdem die Marktkapitalisierung schon Überschussrenditen erzeugt hatte.
 - Wäre die Größe ein legitimer Risikofaktor, müsste eine darauf gestützte Strategie weiterhin eine Risikoprämie verdienen. Das Verschwinden der Überschussrendite von Small-Cap-Aktien in den letzten 15 Jahren ist damit ein Problem.
+- Fundamentale Faktormodelle konstruieren gemeinsame Faktoren aus titelspezifischen Merkmalen, darunter der Marktkapitalisierung, neben Buchwert, Branche und Stil.
+- Bei Fama und French ist SMB, small minus big, die Performance kleiner gegenüber großen Aktien. Die Größe wird nach dem Marktkapital, market equity, sortiert. Die Rendite des zugehörigen Hedgeportfolios ist die Faktorrealisation von SMB.
+- Der in den jüngeren Jahren fallende Trend der Korrelation zwischen den monatlichen Logrenditen von IBM und dem S&P 500 wird damit erklärt, dass sich der Rang der Marktkapitalisierung von IBM unter den großen US-Industrieunternehmen verändert hat.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Pairs Trading
@@ -21,6 +21,7 @@ aktualisiert: 2026-11-01
 - Pairs Trading ist die übliche Kointegration zweier Preisreihen: ein Asset long und das andere gleichzeitig short, mit passender Kapitalzuteilung.
 - Der Begriff der Kointegration lässt sich leicht auf drei oder mehr Assets erweitern.
 - Aktien-Pair-Trading ist die erste algorithmische Mean-Reversion-Strategie, die institutionelle Händler erfanden, nach dem Bericht von Gerry Bamberger bei Morgan Stanley (Patterson, 2010).
+- Pairs Trading wird hier als marktneutrale Strategie behandelt, und zwar in der Form der statistischen Arbitrage, die Kointegration und Fehlerkorrektur nutzt. Weiterführend genannt werden Vidyamurthy (2004) und Pole (2007).
 
 ## Kernaussagen
 
@@ -97,6 +98,13 @@ aktualisiert: 2026-11-01
 - Damit der Eigenvektor Kapitalgewichte sind, brauchen beide Reihen dieselbe Kurswährung. Eine Einheit einer Währung gegen USD ist so viele Dollar wert wie der Kurs, ihre Rendite ist die einfache Kursänderung geteilt durch den Kurs.
 - Eine Einheit USD gegen eine Kurswährung ist exakt einen Dollar wert. Für einen echten Kreuzkurs ist die verwendete Rendite die Differenz der Log-Kurse. Dieselben Formeln gelten, wenn die Heimatwährung EUR statt USD ist.
 - Zwei völlig verschiedene Kreuzkurse lassen sich gegeneinander handeln. Die Tagesrendite in der Heimatwährung folgt derselben Portfoliogleichung, mit der Log-Rendite jedes Kreuzkurses.
+- Der Leitgedanke ist, unterbewertete Aktien zu kaufen und überbewertete zu verkaufen. Weil der wahre Preis schwer zu bestimmen ist, setzt Pairs Trading auf relative Preise: Nach der Arbitrage-Pricing-Theorie müssen zwei Aktien mit ähnlichen Eigenschaften ungefähr denselben Preis haben. Weichen die beobachteten Preise ab, ist voraussichtlich eine Aktie zu teuer und die andere zu billig; verkauft wird die teurere, gekauft die billigere, in der Erwartung, dass die Fehlbewertung sich korrigiert. Entscheidend ist die Gleichheit der beobachteten Preise, nicht ihr Niveau.
+- Die geeignet skalierte Lücke zwischen den beiden beobachteten Preisen heißt Spread. Je größer der Spread, desto größer die Fehlbewertung und das Gewinnpotenzial.
+- Mit pit = ln(Pit) wird angenommen, dass der Logpreis einem Random Walk pit = pi,t−1 + rit mit unkorrelierten Renditeinnovationen folgt. Ähnliche Risikofaktoren erzeugen nach der Arbitrage-Pricing-Theorie ähnliche Renditen, eine gemeinsame Komponente und Kointegration: wt = p1t − γ p2t ist Unit-Root-stationär und mean-reverting und heißt Spread der beiden Logpreise.
+- Die Fehlerkorrektur setzt die Logrenditen gleich α mal (wt−1 − μw) plus Innovation. wt−1 − μw ist die Abweichung vom langfristigen Gleichgewicht. α1 und α2 sollen entgegengesetzte Vorzeichen haben. γ, μw, α1 und α2 werden per Maximum Likelihood oder kleinste Quadrate geschätzt.
+- Ein Portfolio long eine Aktie 1 und short γ Aktien 2 hat über das Intervall i die Rendite rp,t+i = wt+i − wt. Diese Rendite hängt nicht vom Mittelwert von wt ab.
+- Ein einfacher Weg zu prüfen, ob zwei Aktien für Pairs Trading taugen, ist die Kointegration ihrer Logpreise über die Regression p1t = β0 + β1 p2t + wt und die anschließende Stationaritätsprüfung der Residuen.
+- Paare sollen ähnliche Risikofaktoren haben. Die Auswahl soll sich von der Finanzierungstheorie leiten lassen.
 
 ## Voraussetzungen
 
@@ -133,6 +141,9 @@ aktualisiert: 2026-11-01
 - Wegen der Abwicklung an T+2 wird dieser Rollover mit eins plus der Zahl geschlossener Tage multipliziert, wenn T+3 für eine der Währungen Wochenende oder Feiertag ist. Haltung über Mittwoch 17:00 Uhr ET verdreifacht den Tagessatz.
 - Bei USD.CAD und USD.MXN gilt T+1. Die Verdreifachung trifft dann die Haltung über Donnerstag 17:00 Uhr ET.
 - In der Überschussrendite wird der Rollover als log(1 + Basiszins) minus log(1 + Kurswährungszins) zur Log-Preisänderung addiert. Die einfachen Formeln ohne diesen Term sind bei kurzen Strategien meist eine kleine Auslassung.
+- Gehandelt werden die Schwankungen des Spreads um μw. Die nötige Abweichung hängt von Handelskosten, Grenzzinssätzen und den Bid-Ask-Spreads ab. Ist η die Kostengröße und die Zielabweichung so groß, dass ihr Doppeltes η übersteigt, wird bei Spread gleich Mittel minus Zielabweichung eine Aktie 1 gekauft und γ Aktien 2 geshortet und bei Spread gleich Mittel plus Zielabweichung aufgelöst.
+- Der Einstieg ist identifizierbar, solange die Zielabweichung gegenüber der Standardabweichung von wt nicht zu groß ist. Der Ausstieg tritt wegen der Mean Reversion ein. Der Portfoliologreturn ist dann das Doppelte der Zielabweichung, der Nettogewinn dieses Doppelte minus η.
+- Eine Alternative löst auf, sobald der Spread auf μw zurück ist, sofern die Zielabweichung größer als η ist. Der Nettogewinn ist die Zielabweichung minus η, bei mehr Transaktionen, höheren Kosten und kürzerer Haltedauer. Ist die Zielabweichung negativ, wird Aktie 1 geshortet und γ Aktien 2 gekauft; der Nettogewinn ist minus das Doppelte der Zielabweichung minus η. η ist die Handelsschwelle.
 
 ## Risiken und Grenzen
 
@@ -168,6 +179,7 @@ aktualisiert: 2026-11-01
 - Weil die Margen sanken, müssen Paare intraday eröffnet und geschlossen werden. Die NBBO-Größen sind dabei sehr klein geworden, durch Dark Pools, Iceberg-Orders, Child-Orders, häufig ersetzte Hochfrequenzorders und zurückhaltende Market Maker.
 - Bei AAPL ist eine NBBO-Größe von nur 100 Aktien nicht ungewöhnlich. Ein Backtest auf Trades oder Quotes ist dann unrealistisch, außer bei nur 100 Stück oder mit erheblichen Transaktionskosten.
 - Market Orders auf beiden Seiten nach einem NBBO-Signal können erheblichen Slippage erleiden. Nötig sind Limit Orders auf einer oder beiden Seiten, vorübergehend kleine ungedeckte Positionen und die aktive Verwaltung von Stornos und Neueinstellungen.
+- Eine realistischere Demonstration würde den Handel außerhalb der Stichprobe umsetzen. Das Beispiel zeigt nur, dass Pairs Trading durchführbar ist.
 
 ## Beispiele
 
@@ -198,6 +210,13 @@ aktualisiert: 2026-11-01
 - Die Dezimalisierung verengte die Spreads drastisch und senkte die Market-Making-Gewinne der Paarhändler (Serge, 2008).
 - AUD.USD gegen CAD.USD mit ungleicher Hedge Ratio erzielt 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6. Der fertige AUD.CAD mit Rollover nur 6,2 Prozent und 0,54, ohne Rollover 6,7 Prozent und 0,58, bei fast 5 Prozent annualisiertem durchschnittlichem Rollover.
 - Die Rollrendite kann verhindern, dass eine Produzenten-ETF mit dem Future kointegriert, obwohl sie mit dem Spot kointegriert.
+- Das Beispiel nimmt BHP Billiton, Australien, Naturressourcen mit Geschäft in Australien, Amerika und dem südlichen Afrika, und Vale S.A., Brasilien, Metalle und Bergbau, Tickers BHP und VALE, beide an der New York Stock Exchange. Beide gehören zur Naturressourcenbranche und haben ähnliche Risikofaktoren. Verwendet werden adjustierte Tagesschlusskurse von Yahoo Finance vom 1. Juli 2002 bis zum 31. März 2006.
+- Die Kleinste-Quadrate-Regression der Logpreise lautet p1t = 1,823 + 0,717 p2t + ŵt mit σw = 0,044, wobei p1t der Logpreis von BHP und p2t der von VALE ist.
+- BHP Billiton und Vale, adjustierte Tagesschlusskurse vom 1. Juli 2002 bis zum 31. März 2006, gehören beide zu Naturressourcen und teilen ähnliche Risikofaktoren. Die Logpreise zeigen ein gemeinsames Bewegungsmuster.
+- Die Kleinste-Quadrate-Schätzung lautet Intercept 1,822648 und Steigung 0,716664, Residualstandardfehler 0,04421 bei 944 Freiheitsgraden, R² 0,9899. Die Residuen haben Mittel null, bleiben in einer festen Spanne, ihre Autokorrelation fällt exponentiell, und ein AR(2) ist stationär. Der Augmented-Dickey-Fuller-Test ergibt −6,04 bei einem p-Wert von 0,01.
+- Der Johansen-Test mit restricted constant bestätigt einen Kointegrationsvektor: Trace 47,7400 und Maximum-Eigenvalue 39,965 für Rang 0, beide über den 1-Prozent-Werten 24,600 und 20,200; für Rang 1 liegt die Trace-Statistik 7,7748 unter 9,240.
+- Die Maximum-Likelihood-Fehlerkorrektur liefert γ̂ = 0,718, Spreadmittel 1,81 und Ladungen −0,067 sowie 0,026. α1 ist negativ, α2 positiv. Die Innovationsstandardfehler sind 0,0193 und 0,0224. Das Ergebnis liegt nahe an den Kleinste-Quadrate-Werten 1,823 und 0,717.
+- Als Zielabweichung wird 0,045 gewählt, knapp über einem Standardfehler von 0,044. Unter Normalität ist die Wahrscheinlichkeit einer solchen Abweichung etwa 30 Prozent. Der Spread kreuzt die Grenzen Mittel plus und minus 0,045 mehrfach, sodass viele Gelegenheiten entstehen. Der Logreturn je Geschäft ist 0,09.
 
 ## Unterschiedliche Quellenpositionen
 

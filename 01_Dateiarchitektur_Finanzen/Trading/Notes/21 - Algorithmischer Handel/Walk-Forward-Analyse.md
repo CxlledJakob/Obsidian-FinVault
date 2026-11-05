@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Walk-Forward-Analyse
@@ -57,6 +57,10 @@ aktualisiert: 2026-11-01
 - Das so geprüfte Muster sind Aktien, die über die vorangegangenen zwei Wochen bei fallendem Volumen scharf gefallen sind und über die folgende Woche systematisch zu steigen neigen.
 - Der Walk-Forward-Test ist der abschließende echte Out-of-Sample-Test, nachdem sich Data-Snooping-Bias trotz aller Vorsicht einschleicht.
 - Out-of-Sample-Tests, Cross-Validation und hohe Sharpe Ratios mindern Data-Snooping-Bias, nichts davon ist aber so endgültig wie der Walk-Forward-Test.
+- In manchen Studien wird ein rollierendes Prognoseverfahren verwendet: sobald der Prognoseursprung vorrückt, wandert ein neuer Datenpunkt aus der Prognoseteilstichprobe in die Schätzteilstichprobe.
+- Für die US-Arbeitslosenquote beginnen Montgomery et al. (1998) bei T = 83, dem zweiten Quartal 1968, dem in der Literatur üblichen Ursprung zum Vergleich ökonometrischer Modelle.
+- Jeder Schritt schätzt das lineare Modell, das TAR und das Markov-Switching-Modell mit den Daten von 1948.I bis einschließlich des Ursprungs, bildet Prognosen über 1 bis 5 Quartale und rückt den Ursprung um ein Quartal vor, bis alle Daten verwendet sind.
+- Die Prognosen der nichtlinearen Modelle werden mit dem parametrischen Bootstrap berechnet; verglichen werden der MSE und der mittlere Prognosefehler, insgesamt und getrennt nach Kontraktion und Expansion am Ursprung.
 
 ## Funktionsweise
 

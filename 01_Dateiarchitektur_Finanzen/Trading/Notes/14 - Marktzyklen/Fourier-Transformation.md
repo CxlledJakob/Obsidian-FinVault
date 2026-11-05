@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Fourier-Transformation
@@ -22,6 +22,15 @@ aktualisiert: 2026-10-30
 ## Kernaussagen
 
 - Die nicht-uniforme Fast-Fourier-Transformation ist nützlich, um stark unregelmäßige Zeitreihen zu analysieren.
+- Die Spektraldichte f von omega eines fraktional differenzierten Prozesses ist die Fourier-Transformierte seiner Autokorrelationsfunktion.
+- Für minus 0,5 kleiner d kleiner 0,5 erfüllt sie f von omega ungefähr omega hoch minus 2d, wenn omega gegen 0 geht; omega liegt im Intervall von 0 bis 2 pi.
+- Das Bispektrum einer Zeitreihe ist die Fourier-Transformierte ihrer Momente dritter Ordnung.
+- Für eine stationäre Reihe x_t ist das Moment dritter Ordnung c(u, v) = g Σ_{k=−∞}^{∞} ψ_k ψ_{k+u} ψ_{k+v}, mit g = E(a³_t), ψ_0 = 1 und ψ_k = 0 für k < 0.
+- Die Fourier-Transformierte lautet b_3(w1, w2) = [g / (4π²)] Γ[−(w1+w2)] Γ(w1) Γ(w2), und die Spektraldichte ist p(w) = (σ²_a / 2π) |Γ(w)|².
+- Daraus folgt, dass das normierte Bispektrum b(w1, w2) = |b_3(w1, w2)|² / [p(w1) p(w2) p(w1+w2)] für eine lineare Reihe über alle Frequenzen konstant ist.
+- Für eine lineare gaußsche Reihe ist E(a³_t) = g = 0, sodass das Bispektrum bei allen Frequenzen (w1, w2) null ist.
+- Der Bispektraltest schätzt b(w1, w2) auf einem geeignet gewählten Gitter und prüft die Konstanz mit einer Statistik ähnlich Hotellings T²; er testet damit Linearität und Gaußheit.
+- Begrenzte Erfahrung zeigt, dass der Test bei großem Stichprobenumfang eine brauchbare Power hat; Details geben Priestley (1988), Subba Rao und Gabr (1984) und Hinich (1982).
 
 ## Funktionsweise
 

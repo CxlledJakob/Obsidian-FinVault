@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Annualisierte Rendite
@@ -19,6 +19,9 @@ aktualisiert: 2026-11-01
 ## Kurzdefinition
 
 - Die annualisierte Rendite ist der zeitgewichtete durchschnittliche Jahresertrag einschließlich Dividenden, Kupons und Kosten.
+- Ist das Zeitintervall einer Rendite nicht angegeben, wird bei Diskussion und Vergleich implizit ein Jahr angenommen.
+- Wurde das Asset k Jahre gehalten, ist die annualisierte Durchschnittsrendite das geometrische Mittel der k Einperioden-Bruttorenditen minus eins: das Produkt von (1 + Rt−j) für j von 0 bis k−1, erhoben zu 1/k, minus 1.
+- Dieselbe annualisierte Rendite ist exp[(1/k) mal der Summe von ln(1 + Rt−j) über j von 0 bis k−1] minus 1.
 
 ## Kernaussagen
 
@@ -85,11 +88,15 @@ aktualisiert: 2026-11-01
 - Zuflüsse werden am Tagesbeginn angesetzt und Abflüsse am Tagesende.
 - Das Produkt aus eins plus Teilperiodenrendite ist der Endwert eines über die ganze Laufzeit investierten Dollars.
 - Die annualisierte Rendite rechnet diesen Wachstumsfaktor auf die Jahre zwischen der ersten und der letzten Teilperiode um.
+- Die k-Perioden-Bruttorendite 1 + Rt[k] = Pt/Pt−k ist das Produkt der k Einperioden-Bruttorenditen und heißt Compound Return; die k-Perioden-Nettorendite ist (Pt − Pt−k)/Pt−k.
+- Die stetig verzinste Mehrperiodenrendite ist die Summe der stetig verzinsten Einperiodenrenditen: rt[k] = rt + rt−1 + … + rt−k+1.
+- Weil das arithmetische Mittel leichter zu rechnen ist und Einperiodenrenditen klein sind, nähert eine Taylor-Entwicklung erster Ordnung die annualisierte Rendite durch (1/k) mal der Summe der Rt−j an; die Genauigkeit dieser Näherung reicht in manchen Anwendungen nicht.
 
 ## Voraussetzungen
 
 - Externe Cashflows sind Vermögen, das dem Portfolio zufließt oder es verlässt.
 - Dividenden und Zinszahlungen gelten nicht als externe Cashflows.
+- Die Annualisierungsformel wird zunächst für ein Asset ohne Dividende angesetzt. Zahlt das Asset zwischen t−1 und t die Dividende Dt, die nicht in Pt enthalten ist, lauten die einfache Nettorendite Rt = (Pt + Dt)/Pt−1 − 1 und die stetig verzinste Rendite rt = ln(Pt + Dt) − ln(Pt−1).
 
 ## Anwendung im Trading
 
@@ -165,6 +172,10 @@ aktualisiert: 2026-11-01
 - Bei Real, Mais und der zweijährigen Note ist der Betrag der Rollrendite viel größer als der der Spot-Rendite. Die Rollrendite von CL in dieser Schätzung läuft vom 22. November 2004 bis 13. August 2012.
 - Erb und Harvey berechnen für Heizöl von Dezember 1982 bis Mai 2004 eine annualisierte Rollrendite von 4,6 Prozent gegen eine Spot-Rendite von 0,93 Prozent.
 - Die durchschnittliche Rollrendite des VX-Futures ist annualisiert −50 Prozent, und etwa drei Viertel der Zeit lag Contango vor (Simon und Campasano, 2012).
+- Ist die monatliche Logrendite 4,46 Prozent, beträgt die zugehörige monatliche einfache Rendite 100[exp(4,46/100) − 1] = 4,56 Prozent. Die monatlichen Logrenditen 4,46 Prozent, −7,34 Prozent und 10,77 Prozent ergeben die Quartalslogrendite (4,46 − 7,34 + 10,77) Prozent = 7,89 Prozent.
+- Die durchschnittliche jährliche einfache Bruttorendite des CRSP-Value-Weighted-Index ist das Produkt der 996 monatlichen Bruttofaktoren (1 plus Rt) von 1926 bis 2008, potenziert mit 12/996, minus 1, ungefähr 0,093, also etwa 9,3 Prozent pro Jahr.
+- Das Produkt der monatlichen Bruttofaktoren beträgt 1592,953, und 1592,953 hoch (12/996) minus 1 ergibt 0,0929.
+- Ein Dollar zu Beginn von 1926 wäre Ende 2008 etwa 1593 Dollar wert.
 
 ## Unterschiedliche Quellenpositionen
 

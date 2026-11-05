@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Regelbasiertes Handelssystem
@@ -238,6 +238,8 @@ aktualisiert: 2026-11-01
 - Der Kalenderspread von CL hält den fernen Zwölfmonatskontrakt long und den nahen short, solange der Z-Score der Rollrendite nicht positiv ist, andernfalls umgekehrt, über 61 Handelstage und mit Roll zehn Tage vor Verfall.
 - Lookback ist die gerundete Halbwertszeit der Rollrendite, etwa 36 Tage. Die ungehebelt Rendite teilt den Gewinn durch zwei. Vom 2. Januar 2008 bis 13. August 2012 sind annualisierte Rendite 8,3 Prozent und Sharpe Ratio 1,3.
 - Dieselbe Kontraktregel ist nicht auf VX übertragbar über die Gleichung für gehandelte Basiswerte, weil VIX nicht gehandelt wird und die vorgeschlagenen Alternativformeln die Mean Reversion der VX-Spreads nicht erklären.
+- Die dargestellte Pairs-Regel kauft eine Aktie 1 und shortet γ Aktien 2, wenn der Spread wt gleich μw minus einer Zielabweichung ist, und löst auf, wenn der Spread μw plus dieser Zielabweichung erreicht, vorausgesetzt das Doppelte der Zielabweichung übersteigt die Kosten η.
+- Eine zweite Regel löst bereits bei wt = μw auf, wenn die Zielabweichung größer als η ist. Bei negativer Zielabweichung werden die Seiten getauscht: eine Aktie 1 short und γ Aktien 2 long. η hängt von Gebühren und Bid-Ask-Spreads ab.
 
 ## Risiken und Grenzen
 
@@ -290,6 +292,7 @@ aktualisiert: 2026-11-01
 - Nichtlineare Kombinationen lassen sich mit autonomen Lernsystemen erzeugen, darunter neuronale Netze, Entscheidungsbäume und ihre Ensembles, multiple Regressionssplines, Kernelregression, polynomiale Netze, genetische Programmierung und Support-Vector-Machines.
 - Diese Systeme synthetisieren per induktiver Verallgemeinerung eine komplexe nichtlineare Regel, indem sie aus einer großen Menge historischer Beispiele lernen; jedes Beispiel ist ein Fall mit Indikatorwerten zu einem Datum und dem Wert der vorherzusagenden Ergebnisvariable.
 - Komplexe nichtlineare Regeln ließen sich auf zwei Wegen ableiten: die Regeln in binärer Form als Kandidateneingaben vorlegen oder die von den Regeln verwendeten Indikatoren vorlegen.
+- Für BHP gegen VALE wird die Pairs-Regel mit γ̂ = 0,718, Spreadmittel 1,81 und Zielabweichung 0,045 kalibriert. Die Grenzen sind 1,81 plus und minus 0,045, der Logreturn je abgeschlossenes Geschäft ist 0,09, und die Wahl von 0,045 liegt knapp über dem Standardfehler 0,044 des Spreads.
 
 ## Unterschiedliche Quellenpositionen
 

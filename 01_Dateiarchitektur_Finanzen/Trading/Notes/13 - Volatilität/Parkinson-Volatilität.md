@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Parkinson-Volatilität
@@ -28,6 +28,13 @@ aktualisiert: 2026-10-30
 - Das Volatilitätsfeature σHL lässt sich robust aus den beobachteten Hoch- und Tiefkursen schätzen.
 - Als Nebenprodukt des Corwin-Schultz-Modells lässt sich die Becker-Parkinson-Volatilität aus denselben Hoch-Tief-Größen ableiten.
 - In den finalen Corwin-Schultz-Gleichungen für den Spread erscheint die Volatilität nicht mehr, weil sie durch ihren Hoch-Tief-Schätzer ersetzt wurde.
+- Der Parkinson-Schätzer mit f = 0 lautet σ̂²_{2,t} = (H_t − L_t)² / (4 ln 2) ≈ 0,3607 (H_t − L_t)².
+- Garman und Klass (1980) finden für diesen Schätzer unter einem einfachen Diffusionsmodell ohne Drift einen Effizienzfaktor von etwa 5,2 gegenüber dem Schluss-zu-Schluss-Schätzer (C_t − C_{t−1})².
+- Weil Aktienkurse nur zu diskreten Zeitpunkten beobachtet werden, liegt das beobachtete Tageshoch tendenziell unter dem wahren Hoch und das Tagestief über dem wahren Tief. Die beobachtete Spanne unterschätzt die wahre Spanne und kann die Volatilität unterschätzen.
+- Diese Verzerrung hängt von der Handelsfrequenz und der Tickgröße ab und sollte bei intensiv gehandelten Aktien vernachlässigbar sein.
+- Die tägliche Spanne der Logpreise wird in der Literatur als robuste Alternative zur Volatilitätsmodellierung verwendet (Chou 2005).
+- Für Apple vom 4. Januar 1999 bis 20. November 2007, 2235 Beobachtungen, betragen Mittelwert, Standardabweichung, Minimum und Maximum der Logpreis-Range 0,0407, 0,0218, 0,0068 und 0,1468.
+- Die zwei 2:1-Splits von Apple am 21. Juni 2000 und am 28. Februar 2005 erfordern keine Anpassung, weil die tägliche Spanne der Logpreise verwendet wird.
 
 ## Funktionsweise
 

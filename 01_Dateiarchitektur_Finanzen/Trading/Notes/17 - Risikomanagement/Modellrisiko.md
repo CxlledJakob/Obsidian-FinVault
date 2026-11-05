@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Modellrisiko
@@ -38,6 +38,21 @@ aktualisiert: 2026-11-01
 - Hat das Modell frühere Stressphasen im Backtest überstanden, wird der Hebel vor einer kommenden Krise nicht gesenkt; konservativer wird schon in guten Zeiten gehebelt, weil die unbekannten Unbekannten schaden und das Modell davor nicht abgeschaltet werden kann.
 - Underperformance gegenüber dem Backtest soll auf einen fundamentalen Grund zurückgeführt und quantitativ geprüft werden, wie beim Paar GLD gegen GDX, das 2008 die Kointegration verlor und nach Aufnahme des Rohölpreises wieder funktionierte.
 - Kelly auf jede Strategie einzeln ist nach der Erfahrung praktischer als die mathematisch optimale Gesamtallokation, sobald ein schwerer Drawdown die Annahme unveränderter erwarteter Renditen und Volatilitäten infrage stellt.
+- Der VaR ist eine Punktschätzung des möglichen Verlusts, enthält Unsicherheit und neigt dazu, den tatsächlichen Verlust zu unterschätzen, wenn ein Extremereignis eintritt.
+- Die meisten VaR-Verfahren ignorieren die Parameterunsicherheit, weil die prädiktive Verteilung schwer zu erhalten ist, obwohl sie die Parameterunsicherheit eines korrekt spezifizierten Modells berücksichtigen würde.
+- Zwei Anlagen können denselben VaR haben und dennoch unterschiedliche Verluste erleiden, sobald der VaR überschritten wird.
+- Die Wurzel-der-Zeit-Regel von RiskMetrics wird ungültig, wenn die Annahme eines Mittelwerts null oder das spezielle IGARCH(1,1) ohne Drift nicht gilt.
+- Schwere Ränder der Renditen führen dazu, dass die Normalannahme den VaR oft unterschätzt.
+- Die VaR-Verfahren liefern für dieselbe IBM-Position deutlich verschiedene Beträge, weil die Schätzung des Schwanzes einer Verteilung erhebliche Unsicherheit enthält. Einen wahren VaR zum Genauigkeitsvergleich gibt es nicht; der Text empfiehlt, mehrere Verfahren zu rechnen, um die Spanne zu sehen.
+- Der klassische Extremwert-VaR hängt von der Blocklänge n ab. Ein großes n stützt die Grenzverteilung, lässt bei festem Stichprobenumfang aber weniger Blöcke für die Schätzung von Skala, Lage und Form. Die Stabilität des resultierenden VaR soll geprüft werden.
+- Für die täglichen IBM-Logrenditen unterschätzt die klassische Extremwerttheorie den VaR gegenüber dem empirischen Quantil bei 5 und 1 Prozent. Bei 9190 Beobachtungen können diese empirischen Quantile als vorsichtige Untergrenzen gelten; bei 0,1 Prozent ist das empirische Quantil dafür nicht mehr verlässlich.
+- Die Schwelle im Peaks-over-Thresholds-Ansatz ist auch eine finanzielle Entscheidung: Institute mit verschiedener Risikotoleranz können für dieselbe Position verschiedene Schwellen wählen.
+- Das homogene zweidimensionale Poisson-Modell für die IBM-Überschreitungen bei 2,5 Prozent besteht die Modellprüfung nicht und braucht eine Verfeinerung.
+- Der eine gemeinsame Faktor der IBM- und S&P-500-Monatsrenditen erklärt nur etwa 82,5 Prozent der verallgemeinerten Varianz. Das Volatilitätsmodell (10.39) erfasst die bedingte Heteroskedastizität vor allem bei höheren Lags nicht ausreichend.
+- Die zweistufige Schätzung, die die Volatilität des Faktors zuerst schätzt und danach als gegeben behandelt, ist einfach, aber nicht notwendig effizient.
+- Multivariate gaußsche Innovationen können die Kurtosis der Asset-Renditen verfehlen.
+- Allein aus den beobachteten yt ist die Wahl zwischen einem ARIMA-Modell und einem linearen Zustandsraummodell nicht entscheidend.
+- Für dieselbe Cisco-Intel-Position liegen die drei 5-Prozent-VaR etwa 1.100 Dollar auseinander: das univariate Modell am niedrigsten, das Modell mit konstanter Korrelation am höchsten.
 
 ## Funktionsweise
 
@@ -69,9 +84,20 @@ aktualisiert: 2026-11-01
 - Unknown Unknowns lassen sich nicht dadurch vermeiden, dass die Modelle vorher abgeschaltet werden.
 - Urteil bleibt nötig, macht quantitative Regeln aber nicht nutzlos; Kahneman zufolge sind Experten Algorithmen überall dort unterlegen, wo erhebliche Unsicherheit besteht, und der Finanzmarkt ist hoffentlich keine Ausnahme.
 - Die Wissenschaft hat ein berechtigtes Interesse, den Bestand des Wissens vor Verfälschungen und abwegigen Überzeugungen zu schützen. Die Beweislast für neues Wissen liegt bei dem, der es behauptet, analog zur Unschuldsvermutung, bei der der Staat die Schuld über jeden vernünftigen Zweifel hinaus beweisen muss.
+- Wird der Extremalindex einer stationären Renditereihe übersehen, besteht die Gefahr, den VaR zu unterschätzen.
+- Das homogene Poisson-Modell aus Beispiel 7.8 scheint den VaR der IBM-Long-Position zu unterschätzen, verglichen mit dem inhomogenen Modell, dessen Parameter sich mit den Marktbedingungen ändern.
+- Der Blockschätzer des Extremalindex kann empfindlich auf die Wahl der Schwelle und der Blockgröße k reagieren.
+- Die Kleinste-Quadrate-Schätzung makroökonomischer Faktormodelle erzwingt nicht, dass die spezifischen Faktoren unkorreliert sind, und ist deshalb im Allgemeinen nicht effizient. Ob die Nebendiagonalen der residualen Kovarianz nahe null liegen, prüft die Angemessenheit.
+- Im Marktmodell der 13 Aktien bleiben residuale Kreuzkorrelationen von 0,45 zwischen Caterpillar und Alcoa und von 0,48 zwischen General Motors und Ford. Die Annahme unkorrelierter spezifischer Faktoren trifft nicht zu.
+- Das Zwei-Faktor-Modell mit Überraschungen von CPI-Wachstum und Beschäftigung ab 16 Jahren hat durchgängig niedrige R² und eine Korrelationsmatrix nahe der Einheitsmatrix. Die beiden makroökonomischen Variablen erklären die Überschussrenditen der 13 Aktien nur schwach, und die Residuenkorrelation bleibt nahe an der Korrelation der ursprünglichen Überschussrenditen.
+- Im BARRA-Branchenmodell überzeichnet die modellbasierte Korrelation den Stichprobenzusammenhang innerhalb der Branche: Caterpillar gegen Procter & Gamble hat in der Stichprobe 0,1 und im Modell 0,6.
+- Die Zahl der Faktoren ist in fundamentalen Modellen missverständlich, weil sich mehrere Fundamentals zu einem neuen Merkmal verbinden lassen und das lineare Modell dann als Einfaktormodell erscheinen kann. In statistischen Faktormodellen ist die Faktorzahl klarer bestimmt.
+- Die Gewichte des globalen Minimum-Varianz-Portfolios aus der faktormodellimplizierten Kovarianz und aus der Stichprobenkovarianz weichen beim Chicago Tribune deutlich ab, 0,1400 gegen 0,0168.
 
 ## Beispiele
 
+- In Beispiel 6.8 steigt der europäische Call bei hinzugefügten Sprüngen und sonst festen Parametern von 3,49 auf 3,92 Dollar, und der zugehörige Put liegt bei 3,31 Dollar, ebenfalls höher als ohne Sprünge; in der Anwendung führt der Sprungprozess oft zu einer anderen Schätzung der Volatilität σ.
+- Für die negativen täglichen IBM-Logrenditen steigt das 1-Prozent-VaR bei n gleich 63 und θ-Dach gleich 0,823 auf 3,2714, gegenüber 3,0497 in Beispiel 7.6 ohne Extremalindex.
 
 ## Unterschiedliche Quellenpositionen
 

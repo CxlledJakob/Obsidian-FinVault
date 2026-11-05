@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Hedging
@@ -83,6 +83,16 @@ aktualisiert: 2026-11-01
 - Damit die Hedge Ratio das Verhältnis der Kontraktzahlen trifft, werden die VX-Preise mit 1.000 und die ES-Preise mit 50 multipliziert.
 - Die lineare Beziehung lautet ES mal 50 gleich minus 0,3906 mal VX mal 1.000 plus 77.150 Dollar, wobei ES und VX die jeweiligen Futures-Settlement-Preise sind.
 - Ein Portfolio, das 0,3906 Kontrakte VX long und einen Kontrakt ES long hält, soll stationär sein.
+- Ein Portfolio, das den Wiener-Prozess eliminiert, ist short im Derivat und long ∂Gt/∂Pt Aktien; sein Wert ist Vt = −Gt + (∂Gt/∂Pt) Pt.
+- Die Änderung dieses Portfolios in einem kleinen Intervall Δt enthält den Wiener-Prozess nicht mehr und beträgt [−∂Gt/∂t − (1/2) ∂²Gt/∂Pt² σ² Pt²] Δt.
+- Unter Arbitragefreiheit muss das Portfolio im Intervall Δt dieselbe Rendite verdienen wie andere kurzfristige risikofreie Titel, also ΔVt = r Vt Δt; sonst besteht eine Arbitragemöglichkeit.
+- Daraus folgt die Black-Scholes-Differenzialgleichung ∂Gt/∂t + r Pt ∂Gt/∂Pt + (1/2) σ² Pt² ∂²Gt/∂Pt² = r Gt.
+- Φ(h+) = ∂Gt/∂Pt ist die Zahl der Aktien im Portfolio ohne Unsicherheit und heißt Delta des Hedges.
+- In der Callformel ist Pt Φ(h+) der in der Aktie angelegte Betrag und K exp[−r(T − t)] Φ(h−) der aufgenommene Betrag; der Bondanteil ist Bt = −K exp[−r(T − t)] Φ(h−), mit ct = Pt Φ(h+) + Bt.
+- Die Put-Call-Parität lautet pt − ct = K exp[−r(T − t)] − Pt; ein europäischer Call plus K exp[−r(T − t)] in bar und ein europäischer Put plus eine Aktie haben bei Verfall beide die Auszahlung max(PT, K) und deshalb heute denselben Wert.
+- Bei zufälligen Sprüngen ist der Markt unvollständig, und ein vollkommener Hedge von Optionen existiert nicht.
+- Im Fama-French-Ansatz wird für ein gegebenes Fundamental, zum Beispiel das Verhältnis von Buchwert zu Marktwert, ein Hedgeportfolio gebildet: long im obersten Quintil der sortierten Assets, im Text mit der Klammer 1/3, und short im untersten Quintil. Die Rendite dieses Portfolios zur Zeit t ist die beobachtete Faktorrealisation. Das Verfahren wird für jedes Fundamental wiederholt.
+- Im Einfaktor-BARRA-Modell ist die geschätzte Faktorrealisation die Rendite des Portfolios, das ein Halb ω′ D ω unter ω′β = 1 minimiert. Summieren sich die Gewichte zu eins, heißt es Factor-Mimicking-Portfolio. Bei mehreren Faktoren wird dasselbe je Faktor angewendet.
 
 ## Voraussetzungen
 
@@ -126,6 +136,8 @@ aktualisiert: 2026-11-01
 - Der Johansen-Eigenvektor ist nur als Kapitalgewichte lesbar, wenn beide Reihen dieselbe Kurswährung haben. Sonst hat eine Punktbewegung nicht denselben Wert, und der Test ist bedeutungslos. Deshalb werden AUD.USD und CAD.USD verwendet.
 - Die Hedge Ratio ist hier nicht eins, das Paar ist also kein fertiger Kreuzkurs AUD.CAD. Live wird der Kauf einer Einheit CAD.USD zum Verkauf von 1/y Einheiten USD.CAD.
 - Ein Kalenderspread ist long einen Future und short einen anderen auf denselben Basiswert mit anderer Fälligkeit. Bei gleichen Marktwerten ist der Spread die Differenz der Log-Preise, und sein Log-Marktwert ist γ mal (T1 − T2).
+- Der Preis eines europäischen Calls auf eine dividendenlose Aktie erfüllt ct ≥ max(Pt − K exp[−r(T − t)], 0).
+- Der Preis des zugehörigen europäischen Puts erfüllt pt ≥ max{K exp[−r(T − t)] − Pt, 0}.
 
 ## Risiken und Grenzen
 
@@ -138,6 +150,8 @@ aktualisiert: 2026-11-01
 - Für GLD und USO arbeitet der Preis-Spread mit adaptiver Hedge Ratio deutlich besser als das Verhältnis.
 - Bei δ gleich 0,0001 schwankt die Kalman-Steigung zwischen EWC und EWA um 1, und im weiteren Code tritt diese Steigung an die Stelle der Hedge Ratio.
 - EUR.GBP ist selbst ein Verhältnis, weil es EUR.USD geteilt durch GBP.USD entspricht.
+- Ein Forward auf eine dividendenlose Aktie, Gt = Pt − K exp[−r(T − t)], erfüllt die Black-Scholes-Differenzialgleichung, weil die Ableitungen ∂Gt/∂t = −r K exp[−r(T − t)], ∂Gt/∂Pt = 1 und ∂²Gt/∂Pt² = 0 die Gleichung identisch machen.
+- Bei Pt = 30 Dollar, K = 28 Dollar, r = 6 Prozent und Restlaufzeit 0,5 liegt die Untergrenze des Calls bei etwa 2,83 Dollar; ein Call zu 2,50 Dollar wird gekauft und die Aktie geshortet, der Zufluss 27,50 Dollar wächst in sechs Monaten auf 28,34 Dollar, und der Mindestgewinn bei Ausübung ist 0,34 Dollar.
 
 ## Unterschiedliche Quellenpositionen
 

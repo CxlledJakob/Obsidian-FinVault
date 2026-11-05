@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Regime Switching
@@ -57,9 +57,56 @@ aktualisiert: 2026-11-01
 - Weicht der Live-Handel vom Backtest ab, ist die Ursache oft ein Regimewechsel der Marktstruktur durch staatliche Regulierung oder makroökonomische Änderungen und nicht ein Fallstrick des Backtests.
 - Fondsmanager behalten auch bei einer algorithmischen Strategie die Aufgabe, zu beurteilen, ob die Modelle nach diesem Wechsel noch gültig sind.
 - Das Paar GLD gegen GDX ist ein Beispiel: die Kointegration endete 2008 und kehrte erst zurück, nachdem der hohe Rohölpreis als Eingabe aufgenommen wurde.
+- Das TAR-Modell nähert die bedingte Mittelgleichung durch stückweise lineare Modelle im Schwellenraum, nicht im Zeitraum.
+- Ein k-Regime-SETAR mit Schwellenvariable x_{t−d} setzt in Regime j ein eigenes AR an, solange γ_{j−1} ≤ x_{t−d} < γ_j, mit −∞ = γ_0 < ⋯ < γ_k = ∞.
+- Die Verzögerung d ist der Delay-Parameter, die γ_j sind die Schwellen. Die AR-Modelle der Regime müssen sich unterscheiden, sonst lässt sich die Regimezahl verringern. Für k > 1 ist das SETAR nichtlinear.
+- Die Innovationen der Regime sind untereinander unabhängig und jeweils iid mit Mittel 0 und Varianz σ²_j.
+- Ein offenes TAR ersetzt die Schwellenvariable durch ein z_t, das bezüglich F_{t−1} messbar, stationär und auf einer kompakten Menge stetig verteilt ist und dessen z_{t−d} zur Zeit t bekannt ist.
+- Für das Zwei-Regime-AR(1) mit Koeffizient −1,5 bei x_{t−1} < 0 und 0,5 sonst, a_t iid N(0,1), ist der Prozess geometrisch ergodisch und stationär, obwohl −1,5 explosiv ist.
+- Notwendig und hinreichend für die geometrische Ergodizität dieses Modells ist φ^{(1)}_1 < 1, φ^{(2)}_1 < 1 und φ^{(1)}_1 φ^{(2)}_1 < 1 (Petruccelli und Woolford, 1984; Chen und Tsay, 1991).
+- Die simulierte Reihe ist asymmetrisch und nicht zeitumkehrbar. Negative Werte springen wegen des Koeffizienten −1,5 schnell ins Positive, positive Werte brauchen mehrere Schritte, bis sie negativ werden. Regime 2 enthält mehr Beobachtungen und zeigt große Aufwärtssprünge, sobald die Reihe negativ wird.
+- Trotz fehlender Konstanten ist E(x_t) ein gewichtetes Mittel der bedingten Regimemittel und nicht null. Das Gewicht ist die stationäre Wahrscheinlichkeit des Regimes. Der Mittelwert null verlangt von null verschiedene Konstanten in einigen Regimes.
+- Für die Änderung der US-Arbeitslosenquote ist die Abhängigkeit stärker, wenn die Monatsänderung über 0,1 Prozent liegt: 460 Beobachtungen im unteren und 262 im oberen Regime.
+- Schwellenmodelle bilden in der Finanzanwendung die asymmetrische Volatilitätsreaktion auf positive und negative Renditen ab.
+- Ein Einwand gegen SETAR ist, dass die bedingte Mittelgleichung an den Schwellen unstetig ist. STAR-Modelle setzen einen glatten Übergang dagegen (Chan und Tong, 1986; Teräsvirta, 1994).
+- Ein Zwei-Regime-STAR(p) gewichtet zwei lineare AR-Gleichungen mit einer glatten Funktion F. Praktisch ist F logistisch, exponentiell oder eine Verteilungsfunktion. Lage und Skala des Übergangs sind c und s, die Verzögerung ist d, und 0 ≤ F ≤ 1.
+- Eine Voraussetzung der Stationarität ist, dass alle Nullstellen beider AR-Polynome außerhalb des Einheitskreises liegen. Der bedingte Mittelwert ist differenzierbar. Die Übergangsparameter sind schwer zu schätzen, ihre t-Ratios liegen empirisch oft um 1.
+- Das MSA von Hamilton (1989) lässt eine verborgene Markov-Kette den bedingten Mittelwert umschalten. Der Wechsel ist stochastisch. Beim SETAR ist er deterministisch über eine beobachtete Verzögerung festgelegt.
+- Die Prognose eines MSA ist immer eine Mischung der Zustandsprognosen. Die eines SETAR stammt aus einem Regime, solange x_{t−d} bekannt ist, und mischt erst, wenn der Horizont d übersteigt.
+- Man ist im MSA nie sicher, welcher Zustand vorliegt. Bei großer Stichprobe helfen Filter. Die erwartete Verweildauer in Zustand i ist 1/w_i.
+- Für das reale US-GNP entsprechen die zwei Zustände Expansion und Kontraktion mit mittleren Wachstumsraten 0,965 und −1,288 und erwarteten Dauern von etwa 11,31 und 3,69 Quartalen.
+- Im AR(2)–TAR–GARCH der täglichen IBM-Renditen hängt auch das Gewicht von σ²_{t−1} vom Vorzeichen des vorherigen Schocks ab. Diese Asymmetrie ist stärker als im GJR-Modell.
+- McCulloch und Tsay (1993) machen die Übergangswahrscheinlichkeiten zu logistischen oder Probit-Funktionen von Variablen, die bei t−1 bekannt sind. Mehr als zwei Zustände sind möglich, der Rechenaufwand steigt schnell.
+- Die Alternative eines Schwellen-Tests ist hier ein Zwei-Regime-SETAR mit Schwellenvariable x_{t−d}: unterhalb von r1 gilt ein AR(p) mit Koeffizienten φ^{(1)}, ab r1 ein zweites AR(p) mit φ^{(2)}.
+- Tsays TAR-F-Test hängt nicht davon ab, dass die Zahl der Regime unter der Alternative bekannt ist.
+- Für die Änderung der US-Arbeitslosenquote trennt das TAR die Regime an Δx_{t−2} = 0,1: bei Δx_{t−2} ≤ 0,1 liegt ein nahezu AR(1) mit insignifikantem Lag 2, sonst ein AR(2) mit positiver Konstante und komplexen charakteristischen Wurzeln.
+- Die Innovationen der beiden TAR-Regime haben die Stichprobenvarianzen 0,76 und 0,165.
+- Das Markov-Switching-Modell hat zwei latente Zustände mit bedingten Mitteln −0,10 und 0,31; Zustand 1 sind Expansionen, Zustand 2 Kontraktionen.
+- Die Übergangswahrscheinlichkeit von Expansion zu Kontraktion ist 0,084 mit Standardfehler 0,060, die von Kontraktion zu Expansion 0,126 mit Standardfehler 0,053.
+- In der Kontraktion hat die Arbeitslosenquote einen Aufwärtstrend und ein AR(2) mit komplexen Wurzeln, ähnlich dem zweiten TAR-Regime; in der Expansion ist der Trend leicht fallend und die Autoregression deutlich schwächer.
+- Die Stichprobenvarianzen der Zustandsinnovationen sind 0,031 in der Expansion und 0,192 in der Kontraktion.
+- Die Prognoseleistung von linearem Modell, TAR und Markov-Switching für die US-Arbeitslosenquote wechselt mit dem Regime am Ursprung: in Kontraktionen führen die nichtlinearen Modelle, in Expansionen das lineare Modell.
+- Ein Übungsmodell für monatliche Logrenditen schaltet die bedingte Varianz: in Zustand 1 gilt 0,10 a²_{t−1} + 0,93 σ²_{t−1}, in Zustand 2 gilt 4,24 + 0,10 a²_{t−1} + 0,78 σ²_{t−1}.
+- Die Übergänge dieses Varianzmodells sind P(s_t = 2 | s_{t−1} = 1) = 0,15 und P(s_t = 1 | s_{t−1} = 2) = 0,05.
+- Am Ursprung t = 100 sind a_100 = 6,0 und σ²_100 = 50,0; einmal ist s_100 = 2 mit Wahrscheinlichkeit 1,0, einmal nur mit Wahrscheinlichkeit 0,8, und daraus wird jeweils die Ein-Schritt-Volatilitätsprognose gefragt.
+- Das Markov-Switching-Modell ist ein ökonometrisches Modell, bei dem MCMC-Methoden gegenüber der traditionellen Likelihood-Methode viele Vorteile haben.
+- McCulloch und Tsay (1994b) schätzen per Gibbs ein Markov-Switching-Modell mit in jedem Zustand zeitkonstanter Volatilität für die saisonbereinigte quartalsweise Wachstumsrate des realen US-Bruttosozialprodukts; die Dynamik der Wachstumsrate unterscheidet sich signifikant zwischen Kontraktion und Expansion.
+- Für Asset-Renditen betrachtet der Text den Wechsel der Volatilität: Modell (12.55) ist ein Markov-Switching-GARCH-M mit zwei Zuständen, unterschiedlichen Risikoprämien und unterschiedlicher GARCH-Dynamik.
+- In Zustand i gilt rt = βi√ht + √ht εt und ht = αi0 + αi1 ht−1 + αi2 a²t−1; die Übergänge sind P(st = 2 | st−1 = 1) = e1 und P(st = 1 | st−1 = 2) = e2 mit 0 < ei < 1, und ein kleines ei bedeutet Verharren im Zustand i mit erwarteter Dauer 1/ei.
+- Zur Identifizierbarkeit gilt β2 > β1, sodass Zustand 2 die höhere Risikoprämie trägt; die Beschränkung dient nur der eindeutigen Beschriftung der Zustände.
+- Weil die Rendite von der Volatilität abhängt, ist sie seriell korreliert; künftige Zustände sind unbekannt, die Prognose ist eine Mischung über Zustandskonfigurationen, und die Punktprognose hat oft hohe Unsicherheit.
 
 ## Funktionsweise
 
+- Das Schwellen-Dauer-Modell für die IBM-Intraday-Dauern hat zwei Regime; die Schwellenvariable ist die verzögerte adjustierte Dauer xi−1, der geschätzte Schwellenwert ist 3,79.
+- Unterhalb von 3,79 gilt ψi = 0,020 + 0,257 xi−1 + 0,847 ψi−1 mit ϵi ∼ w(0,901), oberhalb ψi = 1,808 + 0,027 xi−1 + 0,501 ψi−1 mit ϵi ∼ w(0,845); die Regime enthalten 2503 und 1030 Beobachtungen.
+- Die Standardfehler betragen im ersten Regime 0,043, 0,041, 0,024 und 0,014 und im zweiten 0,526, 0,020, 0,147 und 0,020.
+- Das verfeinerte Modell ohne insignifikante Parameter lautet ψi = 0,225 xi−1 + 0,867 ψi−1 mit ϵi ∼ w(0,902), falls xi−1 ≤ 3,79, und ψi = 1,618 + 0,614 ψi−1 mit ϵi ∼ w(0,846) sonst; alle Schätzungen sind hochsignifikant.
+- Als Phasen starken und schwachen Handels gelesen, unterscheidet das Schwellenmodell die Handelsdynamik von IBM auch nach Bereinigung des Tagesmusters.
+- Für die Apple-Logpreis-Range wird ein TWACD(2;1,1) mit Verzögerung d = 1 und regimeweise verschiedenem Weibull-Formparameter geschätzt; Voranalysen zeigen den Hauptunterschied der Regime in diesem Formparameter.
+- Der Schwellenwert 0,04753 ist das 70. Perzentil und wird unter den Perzentilen 60, 65, …, 95 gewählt, weil er die Log-Likelihood maximiert; die Schwellenvariable ist xi−1.
+- Die gemeinsame Durationgleichung lautet ψi = 0,0013 + 0,1539 xi−1 + 0,8131 ψi−1, Standardfehler 0,0003, 0,0164 und 0,0215; ϵi folgt W(2,2756) bei xi−1 ≤ 0,04753 und W(2,7119) sonst, Standardfehler 0,0394 und 0,0717.
+- Bei derselben Schwelle 0,04753 betragen die Log-Likelihood-Werte für d = 2 und d = 3 6,069×10³ und 6,070×10³ und liegen unter dem Wert bei d = 1.
 
 ## Voraussetzungen
 
@@ -70,6 +117,7 @@ aktualisiert: 2026-11-01
 
 ## Regeln und Kriterien
 
+- Sind die GARCH-Koeffizienten in beiden Zuständen gleich, gilt überall dasselbe GARCH-Modell; ersetzt man βi√ht durch βi, entsteht ein einfaches Markov-Switching-GARCH-Modell.
 
 ## Risiken und Grenzen
 
@@ -88,6 +136,12 @@ aktualisiert: 2026-11-01
 - Die Regulation NMS der SEC, umgesetzt im Juli 2007, trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei, nach Arnuk und Saluzzi 2012.
 - Die alte Uptick-Regel für Leerverkäufe wurde im Juni 2007 aufgehoben, die Alternative Uptick Rule 2010 wieder eingeführt.
 - Genannte Wechsel sind die Dezimalisierung am 9. April 2001, der Volumeneinbruch und der Momentum-Bärenmarkt nach der Krise 2008, die Regulation NMS im Juli 2007 sowie die Abschaffung der alten Uptick-Regel im Juni 2007 und ihre Wiedereinführung 2010.
+- Bei den monatlichen GE-Logrenditen von Januar 1926 bis Dezember 1999, 888 Beobachtungen in Prozent, betragen die erwarteten Zustandsdauern etwa 11 und 9 Monate; die Posterior-Mittel sind e1 = 0,089 und e2 = 0,112.
+- Die Differenz der Risikoprämien β2 − β1 hat das Posterior-Mittel 0,135 bei Standardfehler 0,063 und ist auf dem 5-Prozent-Niveau signifikant; die Posterior-Mittel sind β1 = 0,111 und β2 = 0,247.
+- Die Differenzen der Posterior-Mittel der Volatilitätsparameter erscheinen unsignifikant, die Posterior-Verteilungen unterscheiden sich aber: der Persistenzparameter αi1 + αi2 von Zustand 1 erreicht die Grenze 1,0 häufig, der von Zustand 2 nicht.
+- Zustand 1 hat die Posterior-Mittel α10 = 2,070, α11 = 0,844 und α12 = 0,033, Zustand 2 α20 = 2,740, α21 = 0,869 und α22 = 0,068, jeweils aus den letzten 2000 von 5000 plus 2000 Gibbs-Iterationen.
+- Die angepassten Volatilitäten des einfachen GARCH-M und des Markov-Switching-GARCH-M folgen beide den quadrierten Logrenditen; das einfache GARCH-M ist glatter und liefert niedrigere geschätzte Volatilitäten.
+- Die Priors sind β1 ~ N(0,3, 0,09), β2 ~ N(1,3, 0,09) und ei ~ Beta(5, 95); Abbildung 12.14(b) zeigt die Posterior-Wahrscheinlichkeit für Zustand 2.
 
 ## Unterschiedliche Quellenpositionen
 

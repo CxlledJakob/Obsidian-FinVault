@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Overfitting
@@ -132,6 +132,9 @@ aktualisiert: 2026-11-01
 - Den Lookback als kleines Vielfaches der Halbwertszeit zu wählen, vermeidet die Brute-Force-Optimierung eines freien Parameters anhand der Performance der Handelsstrategie.
 - Underperformt eine Strategie den Backtest, sollen nicht blind weitere Regeln und Indikatoren ergänzt werden in der Hoffnung, die Leistung stelle sich wieder ein; gesucht wird ein fundamentaler Grund, der dann quantitativ geprüft wird.
 - Einfache lineare Strategien werden betont, weil eine verstandene Marktunvollkommenheit durch ein einfaches Modell ausgenutzt werden kann und beliebige Zusatzregeln unnötig sind.
+- Nichtparametrische Methoden sind stark datenabhängig und können leicht zu Overfitting führen.
+- Geht die Bandbreite h des Nadaraya-Watson-Schätzers mit Epanechnikov-Kern gegen null, reproduziert der Glätter die beobachteten Punkte. Geht h gegen unendlich, entsteht die überglättete Kurve des Stichprobenmittels.
+- Ist h sehr klein, konzentrieren sich die Gewichte auf wenige Nachbarn jedes x_t. Ist h sehr groß, verteilen sie sich über eine weite Nachbarschaft. Die Wahl von h ist damit das zentrale Bandbreitenproblem der Kernregression.
 
 ## Funktionsweise
 
@@ -210,6 +213,7 @@ aktualisiert: 2026-11-01
 - Die Beispiel-Backtests optimieren Parameter und messen die Leistung oft auf denselben In-Sample-Daten und blähen die Ergebnisse damit auf.
 - Eine nichtlineare Extrapolation passt die historischen Preise besser, garantiert aber keine bessere Prognose künftiger Werte.
 - Wer ein Modell so lange nachjustiert, bis In-Sample und Out-of-Sample beide gut aussehen, hat die Out-of-Sample-Daten in Trainingsdaten verwandelt.
+- Die Auswahl eines ARMA(p, q) über AIC oder BIC für alle Ordnungen von 0 bis zu vorgegebenen Obergrenzen P und Q verlangt Maximum-Likelihood-Schätzungen vieler Modelle und kann in manchen Fällen auf Overfitting in der Schätzung stoßen.
 
 ## Beispiele
 

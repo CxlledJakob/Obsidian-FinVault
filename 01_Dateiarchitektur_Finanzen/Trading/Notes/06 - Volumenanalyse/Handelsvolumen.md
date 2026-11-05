@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Handelsvolumen
@@ -109,6 +109,12 @@ aktualisiert: 2026-11-01
 - Für On-Balance Volume, Negative Volume und Positive Volume wurde das NYSE-Volumen mit der Richtung oder der prozentualen Änderung des S&P-500-Schlusses verknüpft.
 - Liegt der vorausschauende Horizont bei 3 bis 12 Monaten, verstärkt hohes Volumen den Effekt des Preismomentums.
 - Auf Sicht von 3 Jahren sind Aktien mit hohem Momentum und niedrigem Volumen auf der Oberseite beständiger, während Aktien mit negativem Momentum und hohem Volumen auf der Unterseite beständig bleiben.
+- Im Dezember 1999 wurden allein 134.120 IBM-Intraday-Trades gezählt, etwa sechsmal so viele wie in der Vergleichsstichprobe 1990/91; der Anteil der Trades mit Dauer null verdoppelte sich auf 22,98 Prozent.
+- Am 3. Dezember 1999 gab es zweimal 42 Transaktionen innerhalb einer gegebenen Sekunde.
+- Von 133.475 in den regulären Stunden erfassten IBM-Trades im Dezember 1999 hatten 61.149 keine Preisänderung, etwa 45,8 Prozent und damit deutlich weniger als von November 1990 bis Januar 1991.
+- Boeing hatte am 1. Dezember 2008 in den regulären Handelsstunden 43.894 Transaktionen.
+- Im ADS-Modell für IBM ist das durch 1000 geteilte Volumen des vorherigen Trades statistisch nicht signifikant.
+- Die tägliche Zahl der Transaktionen und der zeitliche Abstand zwischen den Trades stehen bei IBM im Dezember 1999 in einem inversen Verhältnis.
 
 ## Funktionsweise
 

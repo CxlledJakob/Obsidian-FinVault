@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Compound Annual Growth Rate
@@ -18,6 +18,8 @@ aktualisiert: 2026-11-01
 
 ## Kurzdefinition
 
+- Die k-Perioden-Bruttorendite ist das Produkt der k Einperioden-Bruttorenditen und heißt Compound Return; die k-Perioden-Nettorendite ist (Pt − Pt−k)/Pt−k.
+- Die annualisierte Durchschnittsrendite über k Jahre ist das geometrische Mittel dieser k Einperioden-Bruttorenditen minus eins, also das Produkt hoch 1/k minus 1, gleich exp[(1/k) Summe ln(1 + Rt−j)] minus 1.
 
 ## Kernaussagen
 
@@ -43,6 +45,8 @@ aktualisiert: 2026-11-01
 - Bei risikofreiem Zins null ist der Erwartungswert der Wachstumsrate g(f) der Durchschnitt von log(1 plus f mal R).
 - Ist R gaußisch, lässt sich dieses g(f) analytisch reduzieren, und das Maximum aus der Ableitung nach f gleich null reproduziert die Kelly-Formel.
 - Bei optimalen Hebeln und risikofreiem Zins null ist die annualisierte zusammengesetzte Wachstumsrate g gleich F transponiert mal C mal F, geteilt durch 2.
+- Bei stetiger Verzinsung ist der Nettowert A = C exp(r × n), wobei r der Jahreszins, C das Anfangskapital und n die Zahl der Jahre ist. Der Barwert ist C = A exp(−r × n).
+- Die Näherung der annualisierten Rendite durch das arithmetische Mittel der Einperiodenrenditen kann in manchen Anwendungen zu ungenau sein.
 
 ## Voraussetzungen
 
@@ -67,6 +71,11 @@ aktualisiert: 2026-11-01
 - Bei Hebel 31 ist die Wachstumsrate minus 1, also Ruin.
 - Die historische Optimierung derselben Strategie ergibt ebenfalls den Hebel 18,4.
 - Nach 100.000 Tagen liegen CPPI und die Alternative bei D gleich 0,5 in einer Simulation bei 0,002484 gegen 0,002525 Wachstumsrate pro Tag.
+- Bei 10 Prozent Jahreszins und 1 Dollar Startkapital beträgt der Wert nach einem Jahr 1,10000 bei jährlicher, 1,10250 bei halbjährlicher, 1,10381 bei vierteljährlicher, 1,10471 bei monatlicher, 1,10506 bei wöchentlicher und 1,10516 bei täglicher Zinszahlung.
+- Bei stetiger Verzinsung nähert sich derselbe Wert exp(0,1); der Text nennt 1,1052, Tabelle 1.1 weist für unendlich viele Zahlungen 1,10517 aus. Die Periodenzinsen der Tabelle sind 0,1, 0,05, 0,025, 0,0083, 0,1/52 und 0,1/365.
+- Die zusammengesetzte jährliche einfache Bruttorendite des CRSP-Value-Weighted-Index über 996 Monate von 1926 bis 2008 ist das Produkt aller monatlichen Faktoren (1 plus Rt), potenziert mit 12/996, minus 1, ungefähr 0,093.
+- Das Produkt der Bruttofaktoren beträgt 1592,953, und diese Zahl hoch (12/996) minus 1 ergibt 0,0929, also etwa 9,3 Prozent pro Jahr.
+- Ein Dollar zu Beginn von 1926 wäre Ende 2008 etwa 1593 Dollar wert.
 
 ## Unterschiedliche Quellenpositionen
 

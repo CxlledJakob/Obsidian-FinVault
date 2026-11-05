@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Panik
@@ -19,6 +19,7 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Panikverkauf ist extremes Volumen weit über dem Durchschnitt, bei dem einzelne Kaufkerzen den Markt nicht bremsen.
+- Der Indikator x2t für Panikverkäufe ist genau dann 1, wenn die mittelwertbereinigte IBM-Logrendite des Vortags höchstens minus 2,5 Prozent beträgt; er soll mögliches Panikverkaufen nach einem Tagesverlust von 2,5 Prozent oder mehr erfassen.
 
 ## Kernaussagen
 
@@ -42,6 +43,7 @@ aktualisiert: 2026-10-30
 
 ## Anwendung im Trading
 
+- Die Analyse betrachtet eine Long-Position und eine Schwelle von 2,5 Prozent: eine Überschreitung liegt vor, wenn der Tageskurs um mehr als 2,5 Prozent fällt.
 
 ## Regeln und Kriterien
 
@@ -52,6 +54,7 @@ aktualisiert: 2026-10-30
 ## Beispiele
 
 - Der GLD eröffnete am nächsten Tag erneut mit einer Abwärtslücke, auf dem dreifachen Volumen der Eröffnung des Vortags, und setzte den bärischen Ton dramatisch fort.
+- Im inhomogenen Poisson-Modell der täglichen IBM-Logrenditen von 1962 bis 1998 ist der Panikverkaufsindikator x2t für Lage, Skala und Form der Intensität nicht signifikant; auch der Indikator für Oktober, November und Dezember ist für alle drei Parameter nicht signifikant.
 
 ## Unterschiedliche Quellenpositionen
 

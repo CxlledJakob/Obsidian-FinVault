@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Volatilitätsrisiko
@@ -31,6 +31,14 @@ aktualisiert: 2026-10-30
 - Roll zeigte außerdem, dass Bewegungen einzelner Aktien oft nicht mit Unternehmensnachrichten verbunden sind.
 - Behavioral Finance bietet knappe Erklärungen der überschüssigen Marktvolatilität wie auch der Überschussrenditen von Strategien auf veralteter Information.
 - Das Capital Asset Pricing Model verwendet nur einen Risikofaktor, die Volatilität einer Aktie relativ zum Marktindex. Fama und French ersetzen es durch ein Modell mit drei Risikofaktoren.
+- Die Rendite eines Wertpapiers kann von seiner Volatilität abhängen; das GARCH-M-Modell setzt dafür eine Risikoprämie in die Mittelgleichung, M steht für GARCH in the mean.
+- Ein einfaches GARCH(1,1)-M lautet rt gleich mü plus c mal sigma t quadrat plus at, mit derselben Varianzgleichung wie ein GARCH(1,1); c heißt Risikoprämienparameter.
+- Ein positives c bedeutet, dass die Rendite positiv mit ihrer Volatilität zusammenhängt. Andere Formen sind c mal sigma t und c mal dem Logarithmus der bedingten Varianz.
+- Für die monatlichen S&P-500-Überschussrenditen von Januar 1926 bis Dezember 1991 lautet die Schätzung rt gleich 0,0055 plus 1,09 mal sigma t quadrat plus at und sigma t quadrat gleich 0,0000876 plus 0,123 mal a, t minus 1, quadrat plus 0,849 mal sigma, t minus 1, quadrat.
+- Die Standardfehler der beiden Mittelparameter sind 0,0023 und 0,818, die der Varianzparameter 0,0000251, 0,0205 und 0,0196; die Risikoprämie ist positiv, aber auf dem 5-Prozent-Niveau nicht signifikant.
+- In S-Plus heißen die drei Prämienspezifikationen var.in.mean, sd.in.mean und logvar.in.mean.
+- In Nelsons EGARCH für die täglichen CRSP-Überschussrenditen steht die bedingte Varianz ebenfalls als Regressor in der Mittelgleichung; die geschätzte Risikoprämie c ist minus 3,361 mit Standardfehler 2,026, negativ und statistisch insignifikant.
+- Die serielle Abhängigkeit der bedingten Varianz schreibt über die Risikoprämie serielle Korrelationen in die Renditereihe.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Value-Anomalie
@@ -31,6 +31,9 @@ aktualisiert: 2026-10-30
 - Die Risikofaktoren wurden erst nach dem Befund der Überschussrenditen eingeführt. Hätten Fama und French Kurs-Buchwert und Marktkapitalisierung vorhergesagt, bevor die Überschussrenditen entdeckt waren, wäre das eine andere, bestätigende Geschichte für die Effizienzmarkthypothese gewesen.
 - Wäre ein niedriger Kurs relativ zum Buchwert ein Signal höheren Ausfallrisikos, müssten Value-Strategien, der Kauf niedriger Kurs-Buchwert-Aktien, in schlechten Wirtschaftszeiten unterdurchschnittliche Renditen bringen.
 - Eine Studie von 1994 findet keine Evidenz, dass Value-Strategien schlechter abschneiden, wenn die Wirtschaft leidet. Die empirische Evidenz widerspricht dieser Vorhersage.
+- Fama und French (1992) verwenden als drittes Fundamental HML, high minus low: die Performance von Value-Aktien gegenüber Growth-Aktien. Value-Aktien haben ein hohes Verhältnis von Buchkapital zu Marktkapital.
+- Die drei Fundamentals Marktüberschussrendite, SMB und HML erklären nach den Autoren hohe Prozentsätze der Variabilität der Überschussrenditen. Die Faktorrealisation von HML ist die Rendite eines Hedgeportfolios, long im obersten und short im untersten Quintil der nach dem Fundamental sortierten Assets; die Klammer beim obersten Quintil lautet 1/3.
+- Nach den beobachteten Faktorrealisationen werden die Betas jedes Assets mit einer Zeitreihenregression geschätzt.
 
 ## Funktionsweise
 

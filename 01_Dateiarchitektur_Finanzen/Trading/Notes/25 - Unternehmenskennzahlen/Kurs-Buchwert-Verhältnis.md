@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Kurs-Buchwert-Verhältnis
@@ -34,6 +34,9 @@ aktualisiert: 2026-10-30
 - Die neuen Risikofaktoren wurden erst eingeführt, nachdem Kurs-Buchwert und Marktkapitalisierung schon Überschussrenditen erzeugt hatten, und nicht vorhergesagt, bevor diese Variablen entdeckt worden waren.
 - Begründet wird das Modell damit, ein niedriger Kurs relativ zum Buchwert signalisiere Unternehmen mit höherem Ausfallrisiko. Daraus folgt die Vorhersage, Value-Strategien schnitten in schlechten Wirtschaftszeiten unterdurchschnittlich ab.
 - Eine Studie von 1994 findet keine Evidenz, dass Value-Strategien schlechter abschneiden, wenn die Wirtschaft leidet.
+- Fundamentale Faktormodelle verwenden beobachtbare titelspezifische Größen, darunter den Buchwert, neben Branchenzugehörigkeit, Marktkapitalisierung und der Stilklassifikation Growth oder Value.
+- Fama und French (1992) sortieren die Assets nach einem Fundamental, zum Beispiel dem Verhältnis von Buchwert zu Marktwert, und bilden ein Hedgeportfolio long im obersten Quintil und short im untersten Quintil; beim obersten Quintil steht im Text in Klammern 1/3. Die Portfoliorendite ist die Faktorrealisation, danach werden die Betas je Asset mit einer Zeitreihenregression geschätzt.
+- Value-Aktien werden über ein hohes Verhältnis von Buchkapital zu Marktkapital definiert, Growth-Aktien bilden die Gegenseite von HML, high minus low. Zusammen mit der Marktüberschussrendite und SMB erklärt HML nach den Autoren hohe Anteile der Variabilität der Überschussrenditen.
 
 ## Funktionsweise
 

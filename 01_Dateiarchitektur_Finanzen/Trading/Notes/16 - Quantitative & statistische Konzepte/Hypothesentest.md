@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Hypothesentest
@@ -26,6 +26,7 @@ aktualisiert: 2026-11-01
 - Eine falsifizierbare Prognose ist hinreichend bestimmt, sodass Fehler klar erkannt werden können. Bei einem Signal einer objektiven Regel steht fest, ob es Geld verdient oder verloren hat.
 - Prognosen einer stetigen Zielvariablen, etwa in einem Regressionsmodell, werden typischerweise mit einer Verlustfunktion bewertet, zum Beispiel dem quadratischen oder dem absoluten Fehler, wobei der Fehler gleich Prognose minus Istwert ist.
 - Eine notwendige Bedingung ist erforderlich, erzeugt die Wirkung aber nicht allein: Fehlt X, tritt Y nicht ein, doch das Vorliegen von X sichert Y nicht. Eine hinreichende Bedingung erzeugt die Wirkung: Wenn W, dann Y.
+- Die multivariate Portmanteau-Statistik Qk(m) prüft die Null, dass die ersten m Kreuzkorrelationsmatrizen ρ1 bis ρm alle null sind, gegen die Alternative, dass mindestens eine davon ungleich null ist.
 
 ## Kernaussagen
 
@@ -226,6 +227,97 @@ aktualisiert: 2026-11-01
 - Das Paar GLD gegen GDX hörte 2008 auf zu kointegrieren; die Hypothese betraf den hohen Rohölpreis, und nach Aufnahme des Ölpreises in die Eingaben funktionierte das Kointegrationsmodell wieder.
 - Underperformt eine Strategie den Backtest, soll dieser fundamentale Grund quantitativ geprüft werden, statt blind weitere Regeln und Indikatoren zu ergänzen und auf eine Verbesserung zu hoffen.
 - Die Strategien des Buches sind Illustrationen der Prinzipien, keine garantierten Rezepte, und sollen out-of-sample geprüft werden.
+- In R ist die ausgewiesene Kurtosis die Exzess-Kurtosis, für die IBM-Reihe 9,91636. In S-Plus ist die Kurtosis die gewöhnliche Kurtosis ohne Abzug von 3, für dieselbe Reihe 12,92.
+- Zur Prüfung serieller Restkorrelation empfiehlt der Text die Ljung-Box-Statistik statt Durbin-Watson, weil Durbin-Watson nur Lag 1 betrachtet und Abhängigkeit gerade bei Saisonalität auf höheren Lags sitzen kann.
+- Die Durbin-Watson-Statistik ist die Summe der quadrierten Änderungen der Residuen ab t gleich 2, geteilt durch die Summe der quadrierten Residuen, und näherungsweise 2 mal (1 minus der Lag-1-Autokorrelation).
+- Serielle Korrelation oder bedingte Heteroskedastizität macht die übliche Kovarianzmatrix inkonsistent und bläht die t-Quotienten auf; im Beispiel der Zinsänderungen sinkt der t-Quotient von 107,91 auf 48,44 beim White-Schätzer und auf 39,92 beim Newey-West-Schätzer.
+- Für die Regression der Dreijahres- auf die Einjahresänderung beträgt die Durbin-Watson-Statistik 1,6456 und die Ljung-Box-Statistik 230,0477 bei einem p-Wert von 0.
+- Mit zusätzlichen Lags der eigenen und der erklärenden Änderung steigt Durbin-Watson auf 1,9865, die Ljung-Box-Statistik bleibt mit 131,6048 und p-Wert 0 signifikant.
+- Der Jarque-Bera-Test der Residuen dieser Änderungsregression beträgt 1644,6146 mit p-Wert 0 und mit den beiden Lags 1620,5090 mit p-Wert 0.
+- Sofern eine Übung nichts anderes vorgibt, sind Schlüsse auf dem 5-Prozent-Niveau zu ziehen.
+- Die Null der Ljung-Box-Prüfung auf ARCH-Effekte ist, dass die ersten m Lags der Autokorrelation der quadrierten Residuen null sind (McLeod und Li 1983).
+- Die Null von Engles Lagrange-Multiplikator-Test ist alpha 1 bis alpha m gleich null in der Regression der quadrierten Residuen auf Konstante und m Lags; die Prüfgröße ist asymptotisch chi-quadrat mit m Freiheitsgraden.
+- Abgelehnt wird, wenn die F-Statistik das obere Quantil der chi-quadrat-Verteilung überschreitet oder ihr p-Wert unter dem Fehler 1. Art liegt.
+- Bei den Intel-Monatsrenditen wird keine serielle Korrelation der Renditen gefunden, Q(12) gleich 18,2635 mit p-Wert 0,1079, aber die ARCH-Null wird verworfen: LM-Statistik 53,6197 mit p-Wert 0 und Ljung-Box der Quadrate 89,8509 mit p-Wert 5,274e-14.
+- Im ARCH(3) für Intel sind die Koeffizienten der Lags 2 und 3 auf dem 5-Prozent-Niveau nicht signifikant, p-Werte 0,109638 und 0,384628, und werden verworfen.
+- Das verbleibende gaußsche ARCH(1) gilt auf dem 5-Prozent-Niveau als angemessen, weil Q(10) der standardisierten Residuen den p-Wert 0,24 und Q(10) der Quadrate den p-Wert 0,14 hat; der LM-Test auf den standardisierten Residuen mit Lag 10 hat die Statistik 14,7481 und den p-Wert 0,1415.
+- Unter Student-t-Innovationen bleibt die Mittelgleichung auf dem 5-Prozent-Niveau angemessen, Q(12) gleich 14,88 mit p-Wert 0,25, die Volatilitätsgleichung wird auf dem 1-Prozent-Niveau verworfen, Q(12) gleich 35,42 mit p-Wert 0,0004.
+- Im gemeinsam geschätzten AR(3)-GARCH(1,1) der S&P-500-Überschussrenditen sind alle drei AR-Koeffizienten auf dem 5-Prozent-Niveau insignifikant und werden gestrichen.
+- Die Risikoprämie c gleich 1,09 im GARCH(1,1)-M hat den Standardfehler 0,818 und ist auf dem 5-Prozent-Niveau nicht signifikant.
+- Die geschätzten 7,02 Freiheitsgrade der Student-t, Standardfehler 1,78, führen nicht zur Ablehnung der vorgegebenen 5 Freiheitsgrade auf dem 5-Prozent-Niveau.
+- Die Ljung-Box-Statistik der standardisierten S&P-Residuen des GARCH(1,1) ist Q(12) gleich 11,99 mit p-Wert 0,45 und Q(24) gleich 28,52 mit p-Wert 0,24; für die Quadrate lauten die Werte 13,11 (0,36) und 26,45 (0,33).
+- Unter Student-t mit 5 Freiheitsgraden ist Q(10) der standardisierten Residuen 11,38 mit p-Wert 0,33 und Q(10) der Quadrate 10,48 mit p-Wert 0,40.
+- In Nelsons EGARCH für die täglichen CRSP-Überschussrenditen ist die geschätzte Risikoprämie negativ und statistisch insignifikant.
+- Bei den Intel-Daten lehnen Jarque-Bera und Shapiro-Wilk die Normalität der standardisierten Residuen ab: für das ARCH(1) ist Jarque-Bera 137,919 mit p-Wert 0 und Shapiro-Wilk 0,9679255 mit p-Wert 4,025172e-08, für das GARCH(1,1) Jarque-Bera 165,574 mit p-Wert 0 und Shapiro-Wilk 0,9712087 mit p-Wert 1,626824e-07.
+- Im AR(1)–EGARCH(1,1) der monatlichen IBM-Logrenditen 1926 bis 1997 sind alle Parameterschätzungen auf dem 5-Prozent-Niveau signifikant.
+- Der Leverage-Koeffizient im EGARCH(1,1) mit GED für IBM bis 2003 ist negativ und auf dem 5-Prozent-Niveau signifikant, t-Ratio −2,094.
+- Der Kreuzproduktterm im zweilagigen CHARMA für die monatlichen S&P-500-Überschussrenditen hat eine t-Ratio von −1,63 und ist auf dem 10-Prozent-Niveau marginal signifikant. Nach Erweiterung auf drei Lags sind alle Schätzungen auf dem 5-Prozent-Niveau signifikant.
+- Der Sommereffekt auf die IBM-Aktienvolatilität ist auf dem 1-Prozent-Niveau signifikant: der Koeffizient −5,154 unterscheidet sich von null mit p = 0,0067. Die zusätzlichen Sommerkoeffizienten α_{10} und β_{10} waren auf dem 10-Prozent-Niveau nicht signifikant und wurden entfernt.
+- Der Beitrag der um einen Monat verzögerten IBM-Rendite zur Volatilität des S&P 500 ist auf dem 1-Prozent-Niveau signifikant: der p-Wert des Tests γ = 0 beträgt 0,0039.
+- Die Ljung-Box-Statistik der standardisierten Residuen prüft serielle Korrelation, die der quadrierten standardisierten Residuen prüft verbleibende bedingte Heteroskedastizität. Die Zahl in Klammern ist der p-Wert. Für die gezeigten GARCH- und EGARCH-Anpassungen sind diese Statistiken auf dem 5-Prozent-Niveau nicht signifikant, das Modell gilt dann als angemessen.
+- Die Exzess-Kurtosis eines GARCH(1,1) mit normalen Innovationen existiert nur, wenn 1 − 2α₁² − (α₁ + β₁)² > 0 ist. Das vierte Moment von σ²_t verlangt zusätzlich 1 − α₁²(K_ε + 2) − (α₁ + β₁)² > 0.
+- Für ein ARCH(1) existiert die gaußsche Exzess-Kurtosis nur, wenn 1 > 3α₁². Für Student-t-Innovationen mit v Freiheitsgraden muss 1 − 2α₁²(v − 1)/(v − 4) − (α₁ + β₁)² > 0 sein.
+- Im AR(2)–GARCH(1,1) der täglichen IBM-Logrenditen 1962 bis 2003 sind alle Schätzungen auf dem 5-Prozent-Niveau signifikant. Die p-Werte der Ljung-Box-Statistik beruhen auf einer χ²-Verteilung mit m−1 Freiheitsgraden, weil ein AR(2)-Koeffizient geschätzt wurde.
+- Im ARIMA der differenzierten US-Arbeitslosenquote sind alle Schätzungen außer dem AR(2)-Koeffizienten auf dem 5-Prozent-Niveau signifikant. Dessen t-Ratio beträgt −1,66. Q(12) = 12,3 hat p = 0,056, Q(24) = 25,5 hat p = 0,11.
+- Im bilinearen Modell der monatlichen CRSP-Renditen unterscheiden sich alle sechs Schätzungen auf dem 5-Prozent-Niveau von null.
+- Die quadrierten Residuen des AR(3)–ARCH(3) für dieselbe CRSP-Reihe ergeben Q(10) = 19,78 mit p = 0,031.
+- Beim TGARCH der täglichen IBM-Renditen sind alle Schätzungen außer der Konstante der Mittelgleichung signifikant. Für die standardisierten Residuen gilt Q(10) = 2,47 (0,98) und Q(20) = 25,90 (0,13).
+- Im AR(2)–TAR–GARCH(1,1) für die täglichen IBM-Logrenditen sind alle Schätzungen auf dem üblichen 1-Prozent-Niveau von null verschieden.
+- Das TGARCH von Kapitel 3 besteht die Prüfung der quadrierten standardisierten Residuen nicht: Q(10) = 97,07 und Q(20) = 170,3, beide mit p = 0,00. Das TAR-GARCH besteht sie: Q(10) = 13,54 (0,20) und Q(20) = 19,56 (0,49).
+- Die Standardfehler der Übergangsparameter c und s eines STAR-Modells sind empirisch oft groß und ergeben t-Ratios um 1,0 (Teräsvirta, 1994). Diese Unsicherheit erschwert die Interpretation des geschätzten Modells.
+- Chen, Liu und Tsay (1995) betrachten Teststatistiken für die Additivitätsannahme nichtlinearer additiver autoregressiver Modelle.
+- Im STAR für die monatlichen 3M-Renditen bleiben die Parameterschätzungen der Varianzgleichung statistisch signifikant. Die Standardfehler sind 0,0002, 0,074, 0,043, 0,0004 und 0,080, der der Mittelkonstante ist 0,002. Der Skalenparameter 1000 der logistischen Funktion wird a priori festgesetzt, um die Schätzung zu vereinfachen.
+- Weil Nichtlinearität auf viele Arten auftreten kann, gibt es keinen einzelnen Test, der die anderen beim Erkennen von Nichtlinearität dominiert.
+- Nichtparametrische Verfahren in diesem Abschnitt sind die Ljung-Box-Statistik quadrierter Residuen, der Bispektraltest und der BDS-Test von Brock, Dechert und Scheinkman (1987).
+- Parametrische Verfahren sind der RESET-Test von Ramsey (1969), die F-Tests von Tsay (1986, 1989) sowie Lagrange-Multiplikator- und Likelihood-Quotienten-Tests, die von einer konkreten parametrischen Funktion abhängen.
+- Der BDS-Test zielt auf die iid-Annahme und nicht nur auf Momente zweiter oder dritter Ordnung: bei iid gilt für die k-Historien C_k(δ) = [C_1(δ)]^k, und die Statistik D_k(δ, T) ist in der Grenze standardnormal.
+- Vor dem BDS-Test ist lineare Abhängigkeit zu entfernen; der Test kann auf die Wahl von δ und k empfindlich sein, besonders bei großem k.
+- Der Likelihood-Quotienten-Test auf ein SETAR-Modell hat unter der linearen Null einen störenden Parameter, weil die Schwelle r1 für einen linearen AR-Prozess nicht definiert ist; die asymptotische Verteilung weicht deshalb vom üblichen Likelihood-Quotienten ab.
+- Übliche Teststatistik ist l_max = sup_{v<r1<u} l(r1) mit vorgegebenen Schranken v und u; kritische Werte werden oft simuliert und hängen von v und u ab. Andrews und Ploberger betrachten auch den Durchschnitt von l(r1) über [v, u].
+- Der TAR-F-Test von Tsay (1989) ordnet die Autoregression nach der Schwellengröße x_{t−d} und macht die Schwelle so zum Änderungspunkt, ohne die dynamische Abhängigkeit von x_{t−i} zu verändern.
+- Der TAR-F-Test braucht weder die Schwelle r1 noch die Zahl der Regime unter der Alternative; er ist aber weniger trennscharf als der Likelihood-Quotienten-Test, wenn das wahre Modell ein Zwei-Regime-SETAR mit bekannter Innovationenverteilung ist.
+- Im Ordered Probit für 206.794 IBM-Trades von 1988 sind alle t-Werte groß bis auf einen; bei diesem Stichprobenumfang sind hohe t-Werte nicht überraschend, und die Schätzungen gelten als hoch signifikant.
+- Der einzige kleine t-Wert ist 0,26 für den Koeffizienten 0,01 bei β7.
+- Die Lag-1-Autokorrelation −0,389 der Richtungsreihe ist bei 59.837 Beobachtungen hoch signifikant.
+- Im ADS-Modell sind das verzögerte Volumen, die verzögerte Dauer und der geltende Bid-Ask-Spread statistisch nicht signifikant und werden verworfen.
+- Methoden der Datenbereinigung bei Hochfrequenzdaten müssen bei der Inferenz berücksichtigt werden.
+- Alle t-Ratios der WACD(1,1)-Schätzungen für die IBM-Dauern sind größer als 4,2 und damit auf dem 1-Prozent-Niveau signifikant; die Standardfehler von 0,169, 0,064 und 0,885 sind 0,039, 0,010 und 0,018, der von α̂ = 0,879 ist 0,012.
+- Alle Schätzungen des GACD(1,1) für dieselben Daten sind auf dem 1-Prozent-Niveau signifikant; die Standardfehler von 0,141, 0,063 und 0,897 sind 0,041, 0,010 und 0,019, die von κ̂ = 4,248 und α̂ = 0,395 sind 1,046 und 0,053.
+- Der Ori-F-Test auf den normalisierten Innovationen des WACD(1,1), bezogen auf ein AR(4), zeigt keine quadratische Nichtlinearität (Teststatistik 0,343, p = 0,969); TAR-F(1), TAR-F(2) und TAR-F(3) haben die Statistiken 3,288, 3,142 und 3,128 mit p-Werten 0,006, 0,008 und 0,008, TAR-F(4) hat 0,297 mit p = 0,915.
+- Dieselben Tests auf den Innovationen des Zwei-Regime-Schwellen-WACD finden keine Nichtlinearität: Ori-F 0,163 (p = 0,998), TAR-F(1) 0,746 (p = 0,589), TAR-F(2) 1,899 (p = 0,091), TAR-F(3) 1,752 (p = 0,119), TAR-F(4) 0,270 (p = 0,929); die Klammer der TAR-F-Tests bezeichnet die Zeitverzögerung.
+- Das konstante Glied des EACD(1,1) für die tägliche Apple-Range, 0,0007 mit Standardfehler 0,0005, ist auf dem üblichen 5-Prozent-Niveau statistisch nicht signifikant; EACD schneidet hier etwas schlechter ab als WACD und GACD.
+- Unter Regularitätsbedingungen sind die bedingten Maximum-Likelihood-Schätzer asymptotisch normal; ist ein Dauer-Modell spezifiziert, kann Simulation endliche Referenzverteilungen liefern.
+- In der Eintagesstichprobe von 194 Preisänderungen tragen viele Koeffizienten des PCD-Modells wenig Information; über 63 Tage mit mehr als 19.000 Beobachtungen werden viele Schätzungen signifikant.
+- Für die IBM-Tagesrenditen 1998 ist Q(10) = 4,9 gegenüber einer Chi-Quadrat-Verteilung mit 10 Freiheitsgraden hoch insignifikant.
+- Für die Cisco-Tagesrenditen 2007 ist Q(12) = 12,30 mit p-Wert 0,42.
+- Die Normalannahme der IBM-Tagesrenditen 1998 ist zweifelhaft: die Schiefe beträgt −0,464 mit asymptotischem Standardfehler 0,153, die Exzess-Kurtosis 2,396 mit asymptotischem Standardfehler 0,306.
+- Die Unabhängigkeitsannahme täglicher Logrenditen wird oft durch statistische Tests verworfen; der VaR aus der klassischen Extremwerttheorie kann deshalb unzureichend sein.
+- Ein Test auf γ = 0 prüft, ob die erklärenden Variablen zum Formparameter des inhomogenen Extremwertmodells beitragen; analog lässt sich der Beitrag zu Skala und Lage prüfen.
+- H(m) ist die Null, dass der Rang der Fehlerkorrekturmatrix Π gleich m ist; unter H(0) ist Π gleich null und es gibt keine Kointegration. Die Hypothesen sind verschachtelt von H(0) bis H(k).
+- Die Angemessenheit eines m-Faktor-Modells wird mit einem modifizierten Likelihood-Ratio-Test geprüft. LR(m) ist unter der Null von genau m Faktoren asymptotisch chi-quadrat-verteilt mit einem halben mal [(k minus m) zum Quadrat minus k minus m] Freiheitsgraden.
+- Für zehn monatliche Überschussrenditen, Januar 1990 bis Dezember 2003, ist LR(2) gleich 72,96. Gegen die asymptotische Chi-Quadrat-Verteilung mit 26 Freiheitsgraden liegt der p-Wert nahe null, das Zweifaktorenmodell wird verworfen.
+- Dasselbe Beispiel hält ein Dreifaktorenmodell auf dem 5-Prozent-Niveau für vertretbar: Die Chi-Quadrat-Statistik ist 26,48 bei 18 Freiheitsgraden, der p-Wert ist 0,0892.
+- Bei den fünf monatlichen Aktienlogrenditen von IBM, Hewlett-Packard, Intel, J.P. Morgan Chase und Bank of America sind die Portmanteau-Statistiken Q5(1) gleich 39,99, Q5(5) gleich 160,60 und Q5(10) gleich 293,04. Gegen Chi-Quadrat mit 25, 125 und 250 Freiheitsgraden sind die p-Werte 0,029, 0,017 und 0,032. Die serielle Abhängigkeit ist auf dem 1-Prozent-Niveau nicht signifikant.
+- Der Test von Connor und Korajczyk (1993) prüft, ob die Querschnittsvarianz des spezifischen Fehlers beim Übergang von m zu m plus 1 signifikant sinkt. Im Beispiel von 40 Aktien und 36 Monaten wählt er bei Signifikanzniveau 0,05 genau einen Faktor.
+- In den univariaten GARCH(1,1)-Modellen für Hang Seng und Nikkei 225, Tageslogrenditen 2006 bis 2008, sind alle Parameterschätzungen auf dem 5-Prozent-Niveau signifikant außer der Konstante der Nikkei-Mittelgleichung. Die Ljung-Box-Statistiken der standardisierten Residuen und ihrer Quadrate zeigen keine Modellunzulänglichkeit.
+- Im DVEC(1,1) für Pfizer und Merck ist A(1,1) auf dem 5-Prozent-Niveau nicht signifikant, der p-Wert beträgt 0,05597. Alle übrigen ausgegebenen Parameterschätzungen sind auf diesem Niveau signifikant. Die Ljung-Box-Tests der standardisierten Residuen verwerfen das Modell nicht.
+- Beim BEKK(1,1) für Pfizer und Merck sind drei Parameterschätzungen auf dem 5-Prozent-Niveau insignifikant. Die auf den einzelnen Residuenreihen beruhenden Prüfungen zeigen keine Modellunzulänglichkeit.
+- Das diagonale Constant-Correlation-Modell für Hongkong und Japan besteht Q2(4) gleich 17,29 mit p gleich 0,37 und Q2(12) gleich 48,21 mit p gleich 0,46, Chi-Quadrat mit 16 und 48 Freiheitsgraden.
+- Das Constant-Correlation-GARCH(1,1) für IBM und den S&P 500 hat auf dem 5-Prozent-Niveau weder serielle Korrelation noch bedingte Heteroskedastizität in den standardisierten Residuen. Q2(4) ist 16,77 mit p gleich 0,21 und Q2(8) ist 32,40 mit p gleich 0,30, bei 13 und 29 Freiheitsgraden nach Abzug der drei verzögerten Prädiktoren in der Mittelgleichung.
+- Tse (2000) schlägt eine Lagrange-Multiplikator-Statistik vor, um konstante Korrelationskoeffizienten in einem multivariaten GARCH zu testen.
+- Im Vier-Asset-DCC wird das endgültig restringierte Modell mit 9 Parametern vom Likelihood-Ratio-Test gegenüber dem vollen Modell nicht verworfen.
+- Der Likelihood-Ratio-Test auf Hebeleffekte, Vergleich des restringierten Modells mit Likelihood minus 9176,62 und des Hebelmodells mit Likelihood minus 9169,04, ergibt 15,16. Bei einer Chi-Quadrat-Verteilung mit 2 Freiheitsgraden ist der p-Wert 0,0005.
+- Alle Parameterschätzungen des Cholesky-GARCH für IBM und den S&P 500 sind auf dem 1-Prozent-Niveau signifikant. Die drei Parameter der logistischen Korrelationsgleichung sind hochsignifikant, die Standardfehler sind 0,050, 0,090 und 0,019.
+- Für die vier Tagesrenditen von Euro, Yen, IBM und Dell ist die multivariate Ljung-Box-Statistik Q(3) gleich 59,12 mit p gleich 0,13 und Q(5) gleich 106,44 mit p gleich 0,03. Die standardisierten Residuen des vollen DCC-Modells haben Q(10) gleich 167,79 mit p gleich 0,32 und für die Quadrate Q(10) gleich 110,19 mit p gleich 1,00. Das endgültige restringierte Modell hat Q(10) gleich 168,50 mit p gleich 0,31 und für die Quadrate 111,75 mit p gleich 1,00.
+- Die Tageslogrenditen von S&P 500, Cisco und Intel haben Q3(1) gleich 26,20, Q3(4) gleich 79,73 und Q3(8) gleich 123,68, p-Werte nahe null gegen Chi-Quadrat mit 9, 36 und 72 Freiheitsgraden. Nach der Modellanpassung ist Q3(4) der standardisierten Residuen 34,48 mit p gleich 0,31 und Q3(8) gleich 60,42 mit p gleich 0,70, bei 31 und 67 Freiheitsgraden nach Abzug der Mittelgleichungsparameter.
+- Im univariaten GARCH des S&P 500 ist Q(10) der standardisierten Residuen 7,38 mit p gleich 0,69 und Q(10) der Quadrate 3,14 mit p gleich 0,98. Alle Parameterschätzungen des gaußschen GARCH für den gemeinsamen IBM-S&P-500-Faktor sind auf dem 1-Prozent-Niveau hochsignifikant, und die Ljung-Box-Tests finden keine verbliebene Abhängigkeit.
+- Im univariaten GARCH des gemeinsamen Faktors der IBM- und S&P-500-Monatsrenditen sind alle Parameterschätzungen auf dem 1-Prozent-Niveau hoch signifikant. Die Ljung-Box-Statistiken der standardisierten Residuen und ihrer Quadrate zeigen keine Modellunzulänglichkeit.
+- Für das anschließende Faktor-Volatilitätsmodell sind Q2(4) gleich 15,37 bei einem p-Wert von 0,29 und Q2(8) gleich 34,24 bei einem p-Wert von 0,23 für die standardisierten Residuen. Für die Quadrate sind Q-Stern-2(4) gleich 20,25 bei einem p-Wert von 0,09 und Q-Stern-2(8) gleich 61,95 bei einem p-Wert von 0,0004.
+- In der VaR-Illustration für Cisco und Intel sind sämtliche Schätzungen auf dem 5-Prozent-Niveau statistisch signifikant, und die Modelle gelten nach den Ljung-Box-Statistiken der standardisierten Residuen und ihrer Quadrate als angemessen. Standardfehler werden dort nicht berichtet.
+- Das ARIMA(0,1,1) der Alcoa-Reihe hat für die Residuen Q(12) gleich 12,4 bei einem p-Wert von 0,33 und für die quadrierten Residuen Q(12) gleich 8,2 bei einem p-Wert von 0,77.
+- Die standardisierten Ein-Schritt-Prognosefehler des lokalen Trendmodells für die Alcoa-Log-RV haben Q(25) gleich 23,37 bei einem p-Wert von 0,56.
+- Der LM-Test auf ARCH-Effekte derselben standardisierten Fehler über 25 Lags hat die Statistik 18,48 bei einem p-Wert von 0,82. Das Modell gilt nach dieser Residualanalyse als angemessen.
+- Mit einer Gibbs-Stichprobe lässt sich H0: θ1 = θ2 gegen Ha: θ1 ungleich θ2 prüfen, indem für θ = θ1 − θ2 Punktschätzer und Varianz aus den Ziehungen gebildet und die übliche t-Ratio t = θ̂/σ̂ verwendet wird.
 
 ## Funktionsweise
 
@@ -270,6 +362,16 @@ aktualisiert: 2026-11-01
 - Ein zweiter Weg erzeugt per Monte Carlo viele Preisreihen derselben Länge und derselben ersten Momente, schickt die Strategie darüber und nimmt als p den Anteil mit mindestens der Backtest-Durchschnittsrendite.
 - Ein dritter Weg nach Lo, Mamaysky und Wang 2000 erzeugt zufällig verteilte Trade-Mengen mit derselben Zahl von Long- und Short-Einstiegen und derselben mittleren Haltedauer auf der echten Preisreihe und misst den Anteil mit mindestens der Backtest-Durchschnittsrendite.
 - Die drei Verteilungen vergleichen die Strategie mit verschiedenen Zufalls-Benchmarks und können verschiedene Antworten geben.
+- Die Verteilungsfunktion wird im Buch benutzt, um den p-Wert einer Teststatistik zu berechnen.
+- Zu einer Wahrscheinlichkeit p ist das 100p-te Quantil die kleinste reelle Zahl xp mit p ≤ F(xp), also xp = inf{x | p ≤ F(x)}.
+- Qk(m) gleich T zum Quadrat mal der Summe von ℓ gleich 1 bis m von [1/(T minus ℓ)] mal der Spur von Γ-Dach′ℓ mal Γ-Dach0 hoch minus 1 mal Γ-Dachℓ mal Γ-Dach0 hoch minus 1. Unter der Null und Regularitätsbedingungen ist die Verteilung asymptotisch Chi-Quadrat mit k zum Quadrat mal m Freiheitsgraden.
+- Die Statistik von Li und McLeod (1981) ist asymptotisch äquivalent zu Qk(m); sie summiert die quadratischen Formen der vektorisierten Kreuzkorrelationen und addiert k zum Quadrat mal m mal (m plus 1) geteilt durch 2T.
+- Die Ordnungsstatistik M(i) prüft Φi gleich 0 gegen Φi ungleich 0, also VAR(i) gegen VAR(i minus 1). M(i) gleich minus [(T minus k minus i minus 3)/2] mal ln des Verhältnisses der Determinanten von Σ-Dach i zu Σ-Dach i minus 1, asymptotisch Chi-Quadrat mit k zum Quadrat Freiheitsgraden (Tiao und Box 1981).
+- Für i gleich 1 lautet der Vorfaktor (T minus k minus 5)/2 statt (T minus k minus i minus 3)/2. Die Residual-Kovarianz Σ-Dach i teilt die Summe der äußeren Produkte der OLS-Residuen durch T minus 2i minus 1.
+- Für die Residuen eines angepassten VAR(p) ist Qk(m) asymptotisch Chi-Quadrat mit k zum Quadrat mal m minus g Freiheitsgraden, wobei g die Zahl der geschätzten Parameter in den AR-Koeffizientenmatrizen ist (Lütkepohl 2005).
+- Die Trace-Statistik von Johansen (1988) ist LRtr(m) = −(T − p) mal die Summe von ln(1 − λ̂i) für i = m+1 bis k und testet Rang m gegen einen höheren Rang. Ist der Rang wirklich m, sind die Eigenwerte λ̂i für i > m klein und die Statistik klein.
+- Die Maximum-Eigenvalue-Statistik LRmax(m) = −(T − p) ln(1 − λ̂m+1) testet in einem sequenziellen Verfahren Rang m gegen Rang m+1.
+- Die Eigenwerte stammen aus |λ S11 − S10 S00 hoch −1 S01| = 0 und sind absteigend geordnet; die zugehörigen Eigenvektoren sind so normiert, dass e′ S11 e die Einheitsmatrix ist. Die λ̂i sind die quadrierten kanonischen Korrelationen der um deterministischen Term und verzögerte Differenzen bereinigten Reihen.
 
 ## Voraussetzungen
 
@@ -278,6 +380,8 @@ aktualisiert: 2026-11-01
 - Die Nullhypothese wird aus wissenschaftlicher Skepsis als wahr angenommen. Behauptungen sind leicht, echte Entdeckungen schwer, und die Beweislast liegt bei dem, der neues Wissen behauptet.
 - Ein weiterer Grund für den Vorrang der Nullhypothese ist die Einfachheit, Occams Rasiermesser. Erklärt mehr als eine Hypothese dasselbe Phänomen, ist die einfachere eher richtig, weil sie Daten seltener zufällig trifft. Die Nullhypothese erklärt vergangenen Erfolg als Glück, die Alternativhypothese durch ein wiederkehrendes Muster mit Vorhersagekraft.
 - Immer wenn der Backtest größer als null ausfällt, begünstigt die Stichprobe tatsächlich die Alternativhypothese. Der Test verlangt aber zwingende Evidenz, nicht bloß vernünftige, bevor die angenommene Wahrheit der Nullhypothese aufgegeben wird.
+- Unter der Normalannahme lässt sich der Likelihood-Quotient für den Rang von Π über die kanonische Korrelationsanalyse der bereinigten Reihen bilden.
+- Die Grenzverteilungen der Kointegrationstests hängen von der Spezifikation der deterministischen Funktion μt ab. Die fünf im Text unterschiedenen Fälle sind μt = 0, restricted constant μt = α c0, freies μ0, restricted trend μt = μ0 + α c1 t und ein unrestringierter linearer Trend μt = μ0 + μ1 t.
 
 ## Anwendung im Trading
 
@@ -315,6 +419,39 @@ aktualisiert: 2026-11-01
 - Kritische Werte der mit der Wurzel der Tage multiplizierten täglichen Sharpe Ratio sind 1,282 bei p gleich 0,10, 1,645 bei 0,05, 2,326 bei 0,01 und 3,091 bei 0,001.
 - Eine hohe Sharpe Ratio macht die Verwerfung der Null leicht, im Einklang mit der Überzeugung, dass solche Strategien statistisch signifikanter sind.
 - Eine erwartete APR von 10 Prozent, signifikant innerhalb von 1 Prozent, bedeutet bei randomisierten Einstiegstagen, dass nur eine von 100 Permutationen eine APR von mindestens 10 Prozent erreicht.
+- Unter Normalität sind die Stichprobenschiefe und die Exzess-Kurtosis asymptotisch normal mit Mittelwert null und Varianzen 6/T beziehungsweise 24/T; das wird mit Snedecor und Cochran (1980, S. 78) belegt und dient dem Normalitätstest von Asset-Renditen.
+- Der Schiefetest prüft H0: S(r) = 0 gegen Ha: S(r) ≠ 0 mit t = Stichprobenschiefe geteilt durch die Wurzel aus 6/T. Verworfen wird zum Niveau α, wenn der Betrag von t das obere 100(α/2)-Quantil der Standardnormalverteilung übersteigt oder der p-Wert kleiner als α ist.
+- Der Test der Exzess-Kurtosis prüft H0: K(r) − 3 = 0 gegen Ha: K(r) − 3 ≠ 0 mit t = (Stichprobenkurtosis − 3) geteilt durch die Wurzel aus 24/T, asymptotisch standardnormal, und verwirft H0 genau dann, wenn der p-Wert kleiner als α ist.
+- Die Jarque-Bera-Statistik ist das Quadrat der Stichprobenschiefe geteilt durch 6/T plus das Quadrat von (Stichprobenkurtosis − 3) geteilt durch 24/T. Sie ist asymptotisch chi-quadrat mit 2 Freiheitsgraden; die Normalität von rt wird verworfen, wenn ihr p-Wert unter dem Signifikanzniveau liegt.
+- Für eine iid-Folge mit endlichem zweiten Moment ist die Lag-ℓ-Stichprobenautokorrelation asymptotisch normal mit Mittelwert null und Varianz 1/T. Der Test H0: ρ1 = 0 verwendet Wurzel(T) mal ρ̂1 und lehnt ab, wenn der p-Wert klein ist, etwa unter 0,05.
+- Der Test einer einzelnen Autokorrelation prüft H0: ρl gleich 0 gegen die zweiseitige Alternative mit der t-Ratio aus der Stichprobenautokorrelation geteilt durch die Wurzel von (1 plus 2 mal Summe der ersten l minus 1 quadrierten Stichprobenautokorrelationen) geteilt durch T.
+- Ist {rt} eine stationäre Gauß-Reihe mit Autokorrelationen null jenseits Lag l, ist diese t-Ratio asymptotisch standardnormal; H0 wird verworfen, wenn ihr Betrag das Quantil Z von α/2 der Standardnormalverteilung übersteigt.
+- Für H0: ρ1 gleich 0 gegen die zweiseitige Alternative ist die übliche t-Ratio die Wurzel aus T mal der Lag-1-Stichprobenautokorrelation; verworfen wird bei großem Betrag oder kleinem p-Wert, etwa unter 0,05.
+- Box und Pierce sowie Ljung und Box prüfen gemeinsam H0: ρ1 bis ρm gleich 0 gegen die Alternative, dass mindestens eine dieser Autokorrelationen ungleich null ist.
+- Q(m) von Ljung und Box verwirft die Null, wenn es größer ist als das (1 minus α)-Quantil der Chi-Quadrat-Verteilung mit m Freiheitsgraden oder wenn der p-Wert höchstens gleich dem Signifikanzniveau α ist.
+- Für die Residuen eines AR(p) folgt Q(m) asymptotisch einer Chi-Quadrat-Verteilung mit m minus g Freiheitsgraden, wobei g die Zahl der verwendeten AR-Koeffizienten ist.
+- Ein angepasstes Modell, das unzureichend ist, muss nachgebessert werden: nicht signifikant von null verschiedene AR-Koeffizienten werden gestrichen, und zusätzliche serielle Korrelation in der Residuen-ACF wird durch eine Erweiterung des Modells aufgenommen.
+- Für ein korrekt spezifiziertes ARMA folgt Q(m) der Residuen asymptotisch chi-quadrat mit m minus g Freiheitsgraden, wobei g die Zahl der angepassten AR- oder MA-Koeffizienten ist.
+- Die meisten Pakete passen diese Freiheitsgrade bei der Ljung-Box-Statistik auf Residuen nicht an, was verständlich ist, solange m höchstens gleich g ist.
+- Der Einheitswurzeltest für den Logpreis prüft H0: phi1 gleich 1 gegen Ha: phi1 kleiner als 1, entweder ohne oder mit Konstante; die Statistik ist die t-Ratio des Kleinste-Quadrate-Schätzers von phi1 unter der Null.
+- Die Dickey-Fuller-Statistik ist (phi-Dach 1 minus 1) geteilt durch die Standardabweichung von phi-Dach 1 und konvergiert, wenn der Fehler weißes Rauschen mit endlichen Momenten der Ordnung etwas über 2 ist, gegen eine Funktion der standardisierten Brownschen Bewegung.
+- Ist die Konstante null, wird aber trotzdem die Gleichung mit Konstante geschätzt, konvergiert die t-Ratio für phi1 gleich 1 gegen eine andere nichtstandardisierte Grenzverteilung; kritische Werte werden simuliert, siehe Fuller (1976, Kapitel 8).
+- Ist die Konstante ungleich null und wird die Gleichung mit Konstante verwendet, ist die t-Ratio für phi1 gleich 1 asymptotisch normal, doch dafür braucht es große Stichproben.
+- Der erweiterte Dickey-Fuller-Test prüft in einem AR(p) H0: β gleich 1 gegen Ha: β kleiner als 1; die Statistik ist (β-Dach minus 1) geteilt durch die Standardabweichung von β-Dach in der Regression auf eine deterministische Funktion ct, auf β mal xt−1 und auf die verzögerten Differenzen.
+- Gleichwertig lässt sich H0: βc gleich 0 gegen Ha: βc kleiner als 0 prüfen, mit βc gleich β minus 1; ct kann null, eine Konstante oder ω0 plus ω1 mal t sein.
+- Der RESET-Test für ein lineares AR(p) bildet aus der Quadratsumme SSR0 des AR und SSR1 einer Regression der Residuen auf X_{t−1} und die Potenzen M_{t−1} = (x̂²_t, …, x̂^{s+1}_t) die Statistik F = [(SSR0−SSR1)/g] / [SSR1/(T−p−g)] mit g = s+p+1; unter Linearität und Normalität ist sie F-verteilt mit g und T−p−g Freiheitsgraden.
+- Weil die Potenzen x̂^k_t stark mit X_{t−1} und untereinander korreliert sind, werden in dieser Regression oft Hauptkomponenten von M_{t−1} verwendet, die nicht kollinear mit X_{t−1} sind.
+- Keenan (1985) benutzt nur x̂²_t, entfernt zuerst dessen lineare Abhängigkeit von X_{t−1} und testet danach α = 0 in der Regression des AR-Residuums auf dieses bereinigte Quadrat.
+- Der Ori-F-Test von Tsay (1986) setzt M_{t−1} = vech(X_{t−1} X′_{t−1}) mit Dimension p(p+1)/2 und prüft α = 0 in x_t = X′_{t−1} φ + M′_{t−1} α + e_t; unter linearem AR(p) folgt die partielle F-Statistik einer F-Verteilung mit g und T−p−g−1 Freiheitsgraden.
+- Luukkonen, Saikkonen und Teräsvirta (1988) erweitern M_{t−1} um die kubischen Terme x³_{t−i} für i = 1, …, p.
+- Im TAR-F-Test werden die ersten m geordneten Beobachtungen geschätzt, m zum Beispiel 30, die standardisierten Vorhersageresiduen rekursiv gebildet und auf die Regressoren regressiert; unter linearem AR(p) hat die F-Statistik eine Grenzverteilung mit p+1 und T−d−m−p Freiheitsgraden.
+- Unter der linearen Null liegt im geordneten AR kein Modellwechsel, und die standardisierten Vorhersageresiduen liegen nahe bei iid mit Mittel 0 und Varianz 1, also ohne Korrelation mit den Regressoren x_{(m+j)+d−i}.
+- Die Modellprüfung des Poisson-Modells verlangt, dass die Stichproben-Autokorrelationen von zti und wti innerhalb der asymptotischen Grenzen von zwei Standardfehlern liegen und die QQ-Plots der transformierten Reihen zur Standard-Exponentialverteilung passen.
+- Im inhomogenen IBM-Modell mit Schwelle 2,5 Prozent sind der Vierteljahresindikator und der Panikverkaufsindikator für alle drei Intensitätsparameter nicht signifikant, während der Jahrestrend für alle drei und das qualitative Volatilitätsmaß für Skala und Form signifikant sind.
+- Bei 4 Freiheitsgraden sind die Chi-Quadrat-Kritischen 9,5 zum Niveau 5 Prozent und 13,3 zum Niveau 1 Prozent.
+- OLS- und Maximum-Likelihood-Schätzer eines spezifizierten VAR sind asymptotisch äquivalent und unter Regularitätsbedingungen asymptotisch normal (Reinsel 1993).
+- Qk(m) gilt auch für die Residuen eines VARMA-Modells. Die asymptotische Chi-Quadrat-Verteilung hat k zum Quadrat mal m minus g Freiheitsgrade, wobei g die Zahl der geschätzten Parameter in den AR- und den MA-Koeffizientenmatrizen ist.
+- Die Chi-Quadrat-Kritischen bei 4 Freiheitsgraden, wie sie die SCA-Ordnungsbestimmung für das bivariate System ausweist, sind 9,5 zum Niveau 5 Prozent und 13,3 zum Niveau 1 Prozent.
 
 ## Risiken und Grenzen
 
@@ -336,6 +473,7 @@ aktualisiert: 2026-11-01
 - Die frühen Fassungen beider Verfahren verlieren nach Hansen an Power, wenn Regeln mit erwarteter Rendite unter null im Universum liegen; Masters zeigte, dass das bei extrem großer Varianz einer solchen Regel die Power drastisch senken kann, in wahrscheinlicheren Fällen der technischen Analyse aber beide einigermaßen widerstandsfähig bleiben.
 - Die Änderung von Romano und Wolf senkt die Wahrscheinlichkeit eines Fehlers zweiter Art und wurde in die Versionen der Fallstudie von Teil 2 übernommen.
 - Wären die Preisänderungen normalverteilt, wäre die Unsicherheit bei 10 Beobachtungen zehnmal so groß wie bei 1.000 Beobachtungen, und sie kann noch viel größer sein, wenn die Änderungen nicht normalverteilt sind.
+- Wegen der Unit Roots ist die asymptotische Verteilung von Trace- und Maximum-Eigenvalue-Statistik eine Funktion von Standard-Brownschen Bewegungen. Die kritischen Werte werden durch Simulation bestimmt.
 
 ## Beispiele
 
@@ -393,6 +531,64 @@ aktualisiert: 2026-11-01
 - Im zweiten Test haben 1.166 von 10.000 simulierten TU-Renditepfaden mit demselben Mittelwert, derselben Standardabweichung, Schiefe und Kurtosis, aber ohne die Korrelationen, eine mindestens so hohe Strategierendite; die Null lässt sich nur mit 88 Prozent verwerfen.
 - Im dritten Test der TU-Strategie gibt es unter 100.000 Permutationen der Long- und Short-Einstiegstage keine einzige Durchschnittsrendite auf oder über der beobachteten; der Text nennt diesen dritten Test für die Strategie viel schwächer.
 - Auch wenn die Verwerfung der Null kein sehr befriedigender Signifikanzschätzer ist, kann das Scheitern der Verwerfung Einsichten anregen: Beispiel 1.1 zeigt, dass jede zufällige Renditeverteilung mit hoher Kurtosis Momentum-Strategien begünstigen kann.
+- Für die täglichen einfachen IBM-Renditen ist die Schiefestatistik t = 0,0614 / Wurzel(6/9845) = 0,0614 / 0,0247 = 2,49. Der p-Wert liegt bei etwa 0,013, die täglichen einfachen IBM-Renditen sind auf dem 5-Prozent-Niveau signifikant rechtsschief.
+- Der t-Test, dass der Mittelwert der prozentualen IBM-Logrenditen null ist, ergibt t = 1,5126, df = 9844 und p = 0,1304. Die Null wird auf dem 5-Prozent- und auf dem 10-Prozent-Niveau nicht verworfen; das 95-Prozent-Intervall läuft von −0,007641473 bis 0,059290531.
+- Der Jarque-Bera-Test der prozentualen IBM-Logrenditen liefert in R X-squared = 60921,9343 und einen asymptotischen p-Wert kleiner als 2,2e-16. Die Normalität der Logrendite wird verworfen.
+- In S-Plus lautet derselbe Jarque-Bera-Test: Teststatistik 60921,93, p-Wert 0,00, unter der Null chi-quadrat mit 2 Freiheitsgraden, 9845 Beobachtungen, Nullhypothese normalverteilte Daten.
+- Der Schiefetest der prozentualen täglichen einfachen IBM-Renditen ergibt in R t = 2,487093 und p = 0,01287919, in S-Plus t = 2,487851 und p = 0,01285177.
+- Die gemeinsamen Ljung-Box-Tests der monatlichen IBM-Renditen von 1926 bis 2008 verwerfen die Null keiner signifikanten seriellen Korrelation nicht; beim wertgewichteten CRSP-Index liegen alle vier p-Werte von Q(5) und Q(10) für einfache und logarithmierte Renditen unter 0,0001.
+- Beim wertgewichteten Index ist außer dem Lag-2-Koeffizienten des AR(3) rt gleich 0,0091 plus 0,116 rt−1 minus 0,019 rt−2 minus 0,104 rt−3 jeder Parameter auf dem 1-Prozent-Niveau signifikant; die Standardfehler sind 0,002, 0,032, 0,032 und 0,032.
+- Die R-Ausgabe des Ljung-Box-Tests auf den IBM-Einfachrenditen mit Lag 5 liefert X-squared gleich 3,3682 bei 5 Freiheitsgraden und p-Wert 0,6434, auf den Logrenditen X-squared gleich 3,5236 und p-Wert 0,6198.
+- Für die Residuen des AR(3) der monatlichen wertgewichteten Einfachrenditen ist Q(12) gleich 16,35 mit p-Wert 0,060 bei 9 Freiheitsgraden; die Null keiner residuellen seriellen Korrelation in den ersten 12 Lags wird auf dem 5-Prozent-Niveau knapp nicht verworfen. R rechnet mit 12 Freiheitsgraden und erhält X-squared gleich 16,3525 sowie p-Wert 0,1756.
+- Weil der Lag-2-Koeffizient auf dem 5-Prozent-Niveau nicht signifikant ist, lautet das verfeinerte Modell rt gleich 0,0088 plus 0,114 rt−1 minus 0,106 rt−3 plus at mit Residualstandardabweichung 0,0536; alle Schätzer sind auf dem 1-Prozent-Niveau signifikant, und Q(12) gleich 16,83 hat bei 10 Freiheitsgraden den p-Wert 0,078.
+- In S-Plus hat der Lag-2-Koeffizient minus 0,0188 den t-Wert minus 0,5894 und den p-Wert 0,5557, während Intercept, Lag 1 und Lag 3 die p-Werte 0,0000, 0,0003 und 0,0011 haben.
+- Dieselbe S-Plus-Ausgabe nennt für die Residuen eine Jarque-Bera-Statistik von 1656,3928 mit p-Wert 0,0000 und eine Ljung-Box-Statistik von 50,1279 mit p-Wert 0,0087; der separate Autokorrelationstest bei Lag 12 liefert 16,5668 mit p-Wert 0,1666 bei 12 Freiheitsgraden, und der p-Wert bei 9 Freiheitsgraden für 16,57 beträgt 0,05589128.
+- Beim bedingt geschätzten MA(9) des gleichgewichteten Index ist Q(12) gleich 17,5 mit p-Wert 0,041 bei 9 Freiheitsgraden und 0,132 bei 12 Freiheitsgraden; die exakte Likelihood liefert Q(12) gleich 17,6 mit p-Werten 0,040 und 0,128. Das Modell ist nur knapp angemessen.
+- Für die Logreihe des vierteljährlichen US-BIP von 1947.I bis 2008.IV wird die Einheitswurzel nicht verworfen: die ADF-Statistik mit p gleich 10 ist minus 1,701 mit p-Wert 0,4297, und β-Dach gleich 0,9992.
+- In R beträgt dieselbe Dickey-Fuller-Statistik minus 1,6109 mit p-Wert 0,4569.
+- Für den Logarithmus des S&P 500 vom 3. Januar 1950 bis 16. April 2008, 14462 Beobachtungen, mit Konstante und linearem Trend und p gleich 15 ist die ADF-Statistik minus 1,998 mit p-Wert 0,602; die Einheitswurzel wird auf keinem üblichen Signifikanzniveau verworfen.
+- Die Konstante dieses S&P-Tests ist statistisch signifikant, der Zeittrend auf dem üblichen 5-Prozent-Niveau nicht und auf dem 10-Prozent-Niveau schon; in S-Plus hat der Zeitkoeffizient 0,0020 den p-Wert 0,0642 und die Konstante 0,0019 den p-Wert 0,0168.
+- In R ist die Dickey-Fuller-Statistik des S&P 500 bei 2 Lags und Typ mit Trend minus 2,0179 mit p-Wert 0,5708, bei 15 Lags minus 1,9946 mit p-Wert 0,5807.
+- Der Einstichprobentest auf Mittel null der monatlichen 3M-Logrenditen hat die t-Ratio 4,44 und einen p-Wert nahe 0.
+- In der Januar-Regression des CRSP-Decile-1-Index hat der Januarkoeffizient 0,125251 den Standardfehler 0,011546 und den t-Wert 10,848 mit p-Wert unter 2e-16; der Achsenabschnitt 0,002864 hat den p-Wert 0,391.
+- Die Ljung-Box-Statistik der Residuen des Airline-Modells für die Loggewinne von Johnson & Johnson ist Q(12) gleich 10,0 mit p-Wert 0,44.
+- Für fünf Reihen, darunter iid N(0,1) und iid Student-t mit 6 Freiheitsgraden bei je 500 Beobachtungen sowie AR-Residuen der monatlichen CRSP- und IBM-Logrenditen 1926–1997 mit 864 Beobachtungen, sind BDS- und F-Tests auf dem 5-Prozent-Niveau für die simulierten Reihen insignifikant.
+- Dieselben BDS-Tests mit δ = σ̂_a und δ = 1,5 σ̂_a sowie k = 2, …, 5 sind für die drei Finanzreihen hoch signifikant; die F-Tests sind für die Indexrenditen signifikant und zeigen für die IBM-Logrenditen keine Nichtlinearität.
+- Damit bestätigen die Tests, dass die simulierten Reihen linear sind, und legen nahe, dass die Aktienrenditen nichtlinear sind.
+- Für die Änderung der US-Arbeitslosenquote verwerfen Ori-F, der LST-Test und die TAR-Tests mit Verzögerung 1 bis 4 auf einem AR(5) die Linearität; die p-Werte liegen zwischen 0,0002 und 0,0500.
+- Das IGARCH(1,1) ohne Drift für die täglichen IBM-Logrenditen wird von den Q-Statistiken verworfen; Q(10) der quadrierten standardisierten Residuen beträgt 56,19 und ist hochsignifikant.
+- Die Hill-Schätzer des Formparameters der täglichen IBM-Logrenditen von 1962 bis 1998 liegen bei etwa 0,30 und unterscheiden sich auf dem asymptotischen 5-Prozent-Niveau signifikant von null; die Normalannahme wird verworfen, die Fréchet-Familie angezeigt.
+- Die Maximum-Likelihood-Formparameter der positiven Extreme bleiben signifikant von null verschieden, sind aber betragsmäßig kleiner und weniger stabil als die der negativen Extreme, die ab Blocklänge 63 etwa bei 0,33 liegen.
+- Für das homogene Poisson-Modell der negativen IBM-Renditen bei Schwelle 2,5 Prozent liegen serielle Korrelationen der Dauer- und Exzessgrößen außerhalb der asymptotischen Schranken von zwei Standardfehlern, und der QQ-Plot der Dauern weicht von der Standardexponentialgeraden ab.
+- Das homogene Modell mit Schwelle 2,5 Prozent wird verworfen, weil zti und wti signifikante serielle Korrelationen zeigen und der QQ-Plot von zti von der Ursprungsgeraden mit Steigung 1 abweicht; das inhomogene Modell besteht diese Prüfungen.
+- Für IBM und S&P 500, 996 Monate, sind Q2(1) gleich 9,81, Q2(5) gleich 47,06 und Q2(10) gleich 71,65 mit p-Werten 0,044, 0,001 und 0,002 bei 4, 20 und 40 Freiheitsgraden. Die Null keiner Auto- und Kreuzkorrelation wird zum Niveau 5 Prozent verworfen.
+- Für die fünf Anleiherenditen ist Q5(5) gleich 1065,63 und hoch signifikant gegen Chi-Quadrat mit 125 Freiheitsgraden.
+- Die M(i)-Werte für die Ordnungen 1 bis 6 sind 10,76, 13,41, 10,34, 7,78, 12,07 und 1,93. Zum Niveau 5 Prozent sind die Lags 1, 3 und 5 marginal signifikant; bei i gleich 2 ist 13,41 zum Niveau 1 Prozent nur knapp über 13,3. M(i) und AIC sprechen für ein VAR(5).
+- Das vereinfachte VAR(5) hat sechs AR-Parameter. Q2(4) gleich 16,64 und Q2(8) gleich 31,55 sind damit Chi-Quadrat mit 10 und 26 Freiheitsgraden, p-Werte 0,083 und 0,208, und das Modell ist zum Niveau 5 Prozent angemessen.
+- In diesem Beispiel wird die Lag-4-Matrix wegen schwacher serieller Abhängigkeit weggelassen. Im Allgemeinen sollen alle fünf Lags verwendet werden, wenn M(i) und AIC ein VAR(5) anzeigen.
+- Die Residuen des vereinfachten VMA(5) haben Q2(4) gleich 16,00 und Q2(8) gleich 29,46. Gegen Chi-Quadrat mit 10 und 26 Freiheitsgraden sind die p-Werte 0,10 und 0,291; zum Niveau 5 Prozent ist das Modell angemessen.
+- Im VAR(1) sind nach den t-Statistiken nur die gelagten S&P-500-Renditen informativ: 2,8612 in der IBM-Gleichung und 2,4637 in der S&P-Gleichung. Die gelagten IBM-Koeffizienten haben t-Statistiken minus 0,7728 und minus 0,6855.
+- M(i) und AIC zeigen für die beiden logarithmierten US-Monatssätze ein VAR(4) an. Verwendet wird ein VARMA(2,1), weil beide Modelle ähnlich gut passen. Nach dem Streichen insignifikanter Parameter wurde neu geschätzt.
+- AIC wählt für IBM und S&P 500 ein VAR(5), BIC ein VAR(1). Die BIC-Werte steigen von 12325,41 bei Ordnung 1 auf 12510,91 bei Ordnung 10; das AIC-Minimum unter den Ordnungen 1 bis 10 liegt bei Ordnung 5 mit 12283,91.
+- Augmented-Dickey-Fuller-Tests auf den einzelnen wöchentlichen Reihen des 3- und des 6-Monats-Treasury-Bill-Zinses verwerfen die Unit Root nicht: die Statistiken sind −2,34 und −2,33, der p-Wert liegt bei einem AR(3) etwa bei 0,16.
+- Für die beiden Treasury-Bill-Zinsen im VAR(3) mit restricted constant ist H(0) auf dem 1-Prozent-Niveau verworfen: Eigenwert 0,0322, Trace 83,2712 gegen die kritischen Werte 19,96 (5 Prozent) und 24,60 (1 Prozent), Maximum-Eigenvalue 77,7776 gegen 15,67 und 20,20. H(1) ist nicht verworfen: Eigenwert 0,0023, Trace und Maximum-Eigenvalue jeweils 5,4936 gegen 9,24 und 12,97.
+- Im mittleren Regime des Schwellenmodells für S&P-500-Future und Kasse sind die t-Verhältnisse des Fehlerkorrekturkoeffizienten auf dem 5-Prozent-Niveau insignifikant.
+- Ein Augmented-Dickey-Fuller-Test auf den Kleinste-Quadrate-Residuen des BHP-VALE-Spreads mit einem AR(2) liefert die Statistik −6,04 und einen p-Wert von 0,01. Die Unit-Root-Hypothese wird verworfen.
+- Für die beiden Logpreise wird in der Prosa per Informationskriterium ein VAR(1) angesetzt. Kointegrationstests mit restricted und mit unrestringierter Konstante liefern ähnliche Ergebnisse; berichtet wird die restricted constant.
+- Unter restricted constant ist H(0) auf dem 1-Prozent-Niveau verworfen: Eigenwert 0,0415, Trace-Statistik 47,7400 gegen 19,960 (5 Prozent) und 24,600 (1 Prozent), Maximum-Eigenvalue 39,965 gegen 15,670 und 20,200. H(1) ist nicht verworfen: Eigenwert 0,0082, Trace 7,7748 gegen 9,240 und 12,970.
+- Die urca-Trace-Statistik für r = 0 beträgt 47,77 bei kritischen Werten 17,85, 19,96 und 24,60 auf dem 10-, 5- und 1-Prozent-Niveau. Für r ≤ 1 beträgt sie 7,78 bei kritischen Werten 7,52, 9,24 und 12,97, liegt also über dem 10-Prozent-Wert und unter dem 5-Prozent-Wert. Die Maximum-Eigenvalue-Statistik für r = 0 beträgt 40,00 gegen 13,75, 15,67 und 20,20.
+- Die Jarque-Bera-Statistik der Residuen des GM-Marktmodells beträgt 2,5348 bei einem p-Wert von 0,2816.
+- Die Ljung-Box-Statistik derselben Residuen beträgt 24,2132 bei einem p-Wert von 0,3362.
+- Der t-Wert des Marktbetas im GM-Modell beträgt 7,1962 bei einem p-Wert von 0,0000, der t-Wert des Achsenabschnitts 0,3145 bei einem p-Wert von 0,7535.
+- Q(12) = 11,4 für die Residuen des AR(3) der wöchentlichen Dreijahreszinsänderungen ist auf dem 5-Prozent-Niveau insignifikant.
+- Die residuelle Autokorrelationsfunktion des AR(2)-Fehler-Modells der Zinsregression ist an den Lags 4 und 6 nur marginal signifikant.
+- Die Standardfehler der klassischen Zinsregression betragen 0,0075, 0,0201 und 0,0201; die AR(3)-Standardfehler betragen 0,041, 0,042 und 0,041.
+- Im Gauß-GARCH(1,1) der monatlichen S&P-500-Logrenditen sind alle t-Ratios größer als 2,56.
+- Die Ljung-Box-Statistiken Q(12) = 10,04 mit p-Wert 0,61 für die standardisierten Residuen und 6,14 mit p-Wert 0,91 für die quadrierten Residuen zeigen keine Modellunzulänglichkeit.
+- Beim GARCH-M der monatlichen GE-Logrenditen von 1926 bis 1999 sind alle Parameterschätzungen hoch signifikant; die p-Werte liegen unter 0,0006.
+- Die Ljung-Box-Statistiken der standardisierten Residuen und der quadrierten Reihe geben bei diesem GARCH-M keinen Hinweis auf Modellunzulänglichkeit.
+- Im Markov-Switching-GARCH-M ist die Differenz der Risikoprämien β2 − β1 auf dem 5-Prozent-Niveau statistisch signifikant, mit Posterior-Mittel 0,135 und Standardfehler 0,063.
+- Die Differenzen der Posterior-Mittel der Volatilitätsparameter zwischen den beiden Zuständen erscheinen unsignifikant: α20 − α10 = 0,670 bei Standardfehler 1,608, α21 − α11 = 0,026 bei 0,050 und α22 − α12 = −0,064 bei 0,043; auch e2 − e1 = 0,023 bei Standardfehler 0,019.
 
 ## Unterschiedliche Quellenpositionen
 

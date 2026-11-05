@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Holding Period
@@ -54,6 +54,7 @@ aktualisiert: 2026-11-01
 - Die Dauer, über die kürzerfristiges nachrichtengetriebenes Momentum wirkt, wird immer kürzer, je mehr Händler es aufgreifen.
 - Wird Momentum als langsame Diffusion von Information verstanden, endet es früher, wenn mehr Händler die Information schneller und früher lernen.
 - Die Haltedauer muss deshalb womöglich ständig verkürzt werden, und es gibt dafür keinen vorhersagbaren Zeitplan.
+- Die Auflösung des Pairs-Geschäfts schon bei Rückkehr des Spreads auf den Mittelwert verkürzt die Haltedauer des Portfolios und kann zugleich mehr Transaktionen und höhere Handelskosten erzeugen.
 
 ## Funktionsweise
 

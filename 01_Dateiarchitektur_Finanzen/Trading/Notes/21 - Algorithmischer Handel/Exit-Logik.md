@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Exit-Logik
@@ -119,6 +119,9 @@ aktualisiert: 2026-11-01
 - Die Fälligkeiten von nahem und fernem Kontrakt liegen ein Jahr auseinander.
 - Fehlt ein Z-Score, ist die Position null. Ein positiver Z-Score dreht die Ausgangslage long fern und short nah um.
 - Im Devisenhandel sind Stop-Losses brauchbar, weil von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET durchgehend gehandelt wird. Ist ein Markt lange geschlossen, sind Stops nutzlos, weil er zur Wiedereröffnung gappen kann.
+- Die Long-Short-Position wird aufgelöst, wenn der Spread die gegenüberliegende Grenze Mittel plus Zielabweichung erreicht; der Logreturn des Portfolios ist dann das Doppelte der Zielabweichung, der Nettogewinn dieses Doppelte minus η, und er ist positiv, wenn das Doppelte der Zielabweichung die Kosten übersteigt.
+- Der Auflösungszeitpunkt tritt ein, weil der Spread mean-reverting ist.
+- Ist die Zielabweichung größer als η, kann schon bei Rückkehr des Spreads auf den Mittelwert μw aufgelöst werden; der Nettogewinn ist dann die Zielabweichung minus η.
 
 ## Risiken und Grenzen
 

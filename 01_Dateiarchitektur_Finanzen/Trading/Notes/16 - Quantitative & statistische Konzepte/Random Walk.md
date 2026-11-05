@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Random Walk
@@ -21,6 +21,9 @@ aktualisiert: 2026-11-01
 - Im Chow-Typ-Dickey-Fuller-Test ist die Nullhypothese, dass die Reihe einem Random Walk folgt, also Rho gleich 1 ist.
 - Im Roll-Modell folgt der Mid-Price einem Random Walk ohne Drift, mt = mt−1 + ut.
 - Ein Random Walk ist definitionsgemäß frei von echten Trends, Mustern oder ausnutzbarer Ordnung jeder Art.
+- Eine Fassung der Random-Walk-Hypothese besagt, dass die bedingte Verteilung F(rit | ri,t−1, …, ri1) gleich der Randverteilung F(rit) ist. Die Renditen sind dann zeitlich unabhängig und deshalb nicht prognostizierbar.
+- Eine Reihe {pt} ist ein Random Walk, wenn pt gleich pt−1 plus at gilt, mit reellem Startwert p0 und weißem Rauschen {at}.
+- Der Random Walk mit Drift lautet pt gleich µ plus pt−1 plus at, wobei µ der Erwartungswert von pt minus pt−1 ist und {at} weißes Rauschen mit Mittel null ist; µ heißt Drift und ist der Zeittrend des Logpreises.
 
 ## Kernaussagen
 
@@ -150,6 +153,42 @@ aktualisiert: 2026-11-01
 - Die Korrelationstests zeigen trotzdem Momentum auf bestimmten Zeitrahmen; der Variance-Ratio-Test kann diese Zeitrahmen, in denen die Korrelationen überdurchschnittlich sind, nicht prüfen.
 - Dieselbe Reihe zeigt auf verschiedenen Zeitrahmen Momentum und Mean Reversion.
 - Hurst-Exponent und Variance-Ratio-Test sollen gemeinsam die Null eines Random Walk ausschließen, wenn langfristiges Trendverhalten ohne festes Zeitfenster geprüft wird.
+- Unterschiedliche Verteilungsannahmen führen in der Finanztheorie zu unterschiedlichen Theorien; die genannte Random-Walk-Fassung ist dafür das Beispiel des Buches.
+- Kapitel 2 behandelt unter den linearen Modellen auch Unit-Root-Nichtstationarität.
+- Ist pt der Logpreis einer Aktie, kann p0 der Logpreis beim Börsengang sein.
+- Ist at symmetrisch um null verteilt, hat pt bedingt auf pt−1 eine Chance von 50 zu 50, zu steigen oder zu fallen.
+- Als AR(1) gelesen hat der Random Walk den Koeffizienten 1 und erfüllt die Bedingung schwacher Stationarität nicht; er ist unit-root-nichtstationär und das bekannteste Beispiel einer solchen Reihe.
+- Der Random Walk ist ein verbreitetes statistisches Modell für logarithmierte Aktienkurse; unter ihm ist der Kurs nicht prognostizierbar und nicht mean-reverting.
+- Die l-Schritt-Prognose ist für jeden Horizont l größer als 0 der Wert am Prognoseursprung und hat keinen praktischen Wert.
+- Die Moving-Average-Darstellung ist pt gleich der Summe aller Schocks at plus at−1 plus at−2 und so weiter; jedes ψ-Gewicht ist 1, vergangene Schocks klingen nicht ab und wirken ökonomisch dauerhaft, und die Reihe behält alle vergangenen Schocks im Gedächtnis.
+- Die Varianz des l-Schritt-Prognosefehlers ist l mal σa zum Quadrat und divergiert mit dem Horizont; die Länge einer Intervallprognose geht gegen unendlich, und die unbedingte Varianz von pt ist unbeschränkt, sodass pt für hinreichend großes t theoretisch jeden reellen Wert annehmen kann.
+- Für den Logpreis einer einzelnen Aktie ist diese unbeschränkte Spannweite plausibel; negative Logpreise von Marktindizes sind sehr selten, sodass die Angemessenheit eines Random Walk für Indizes fraglich ist.
+- Mit Startwert p0 gilt pt gleich t mal µ plus p0 plus der Summe der Schocks bis t; die bedingte Standardabweichung Wurzel aus t mal σa wächst langsamer als der bedingte Erwartungswert.
+- Ein positiver Drift lässt den Logpreis gegen unendlich laufen, ein negativer gegen minus unendlich.
+- Die Stichprobenautokorrelationen einer Random-Walk-Reihe gehen mit wachsender Stichprobe gegen 1.
+- Der Benchmark für die IBM-Monatsprognosen 1998 und 1999 setzt das Stichprobenmittel als Ein-Schritt-Prognose und entspricht der Annahme, dass der monatliche Logpreis einem Random Walk mit Drift folgt.
+- Der mittlere quadratische Prognosefehler dieses Random-Walk-Benchmarks ist 91,85, der des AR(1) 91,70 und der des 3–2–1-Netzes 91,74.
+- Im direktionalen Simulationsvergleich mit 500 Läufen prognostiziert der Random Walk mit Drift eine Aufwärtsbewegung, wenn 1,19 + ε_t ≥ 0 ist; 1,19 ist die mittlere monatliche IBM-Logrendite von Januar 1926 bis Dezember 1997, und ε_t ist iid N(0, 1).
+- Dieser Random Walk hat im Mittel 10,53 Richtungsfehler, das 8–4–1-Netz 11,28; das Netz schlägt den Random Walk mit Drift nicht.
+- Die Kontingenztabelle des Netzes hat χ² = 0,137 und p = 0,71 und schlägt damit auch einen Random Walk mit gleichen Wahrscheinlichkeiten für Auf- und Abwärtsbewegungen nicht signifikant.
+- In der realistischeren Fassung des Roll-Modells folgt der fundamentale Preis einem Random Walk: ΔP*_t = ε_t ist iid mit Mittel null und Varianz σ² und unabhängig vom Auftragsindikator.
+- Dann ist Var(ΔP_t) = σ² + S²/2, die Autokovarianzen bleiben gegenüber dem Fall ohne fundamentalen Random Walk unverändert, und ρ1(ΔP_t) = (−S²/4) / (S²/2 + σ²) ≤ 0.
+- Der negative Lag-1-Effekt des Spreads bleibt erhalten, solange S = P_a − P_b > 0 ist, sein Betrag wird aber durch die Varianz des Random Walk verkleinert.
+- Nichtsynchroner Handel kann beobachtete Renditen seriell abhängig machen, obwohl die wahren stetigen Renditen iid sind, also der Logpreis einem Random Walk mit Drift μ folgt.
+- RiskMetrics modelliert den Logpreis als Random-Walk-IGARCH: pt minus pt minus 1 = at, wobei at = σt εt ein IGARCH(1,1) ohne Drift ist.
+- Für dieses Modell ist die k-Perioden-Logrendite bedingt normal mit Mittelwert null, und ihre bedingte Varianz wächst proportional zum Horizont k.
+- Für das Pairs-Trading-Modell wird angenommen, dass der Logpreis Unit-Root-nichtstationär ist und einem Random Walk pit = pi,t−1 + rit folgt, wobei die Renditen eine Folge unkorrelierter Innovationen bilden.
+- Im mittleren Regime des Schwellenmodells für Indexfuture und Kasse bestimmen normale Marktkräfte die Dynamik, die beiden Logpreise verhalten sich ungefähr wie ein Random Walk und sind frei von Arbitrageeffekten und von der Kointegrationsbeschränkung. Der Fehlerkorrekturkoeffizient dieses Regimes soll insignifikant sein.
+- Im lokalen Trendmodell ist der latente Zustand μt ein reiner Random Walk mit Startwert μ1: μt plus 1 gleich μt plus ηt, ηt normal mit Mittel null und Varianz σ²η.
+- Die Beobachtung ist dieser Random Walk plus Messrauschen, yt gleich μt plus et. Ohne Messfehler, σe gleich 0, fällt yt mit dem Random Walk zusammen und ist ein ARIMA(0,1,0).
+- Für die realisierte Volatilität ist μt die nicht direkt beobachtete Logvolatilität und entwickelt sich nach diesem Random-Walk-Modell. yt ist ihr Logarithmus, gebaut aus Hochfrequenzdaten und mit Mikrostrukturrauschen behaftet.
+- Im CAPM mit zeitvariablen Koeffizienten folgen Achsenabschnitt und Steigung Random Walks: αt plus 1 gleich αt plus ηt und βt plus 1 gleich βt plus εt, mit unabhängigen gaußschen Innovationen der Varianzen σ²η und σ²ε.
+- Die diffuse Initialisierung des lokalen Trendmodells behandelt das latente Random-Walk-Niveau bei unendlicher Startvarianz so, dass μ2|1 gleich der ersten Beobachtung y1 wird und die Varianz Σ2|1 gleich σ²e plus σ²η ist.
+- Ist die Varianz der Steigungsinnovation σς gleich 0, folgt das Trendniveau μt einem Random Walk mit Drift β1.
+- Sind σς und ση beide null, ist μt kein Random Walk, sondern ein linearer deterministischer Trend.
+- Die übliche Trendkomponente setzt μt plus 1 gleich μt plus βt plus ηt und lässt die Steigung selbst als Random Walk laufen, βt gleich βt minus 1 plus ςt.
+- Die lokale Trendkomponente im Komponentenmodell erfüllt µt+1 = µt + ηt mit ηt ∼ N(0, σ²η).
+- Aufgabe 11.2 schätzt das lokale Trendmodell der Gleichungen (11.1) und (11.2) für die Logarithmen der realisierten Alcoa-Volatilität und fragt nach den Schätzungen von σe und ση.
 
 ## Funktionsweise
 
@@ -198,6 +237,9 @@ aktualisiert: 2026-11-01
 - Ein Test, der echte von zufälligen Preisdaten unterscheidet, würde die Prognosekraft der objektiven Elliott-Wave-Signale nicht belegen. Nach Prechter wird ein getrennter Test dieser Behauptung ebenfalls durchgeführt.
 - Scheitern hieße, dass künstlich erzeugte Zufallscharts von echten Preischarts nicht unterscheidbar sind und dass Elliott-Wave-Signale keine Gewinne erzeugen, die Zufallssignalen überlegen sind.
 - Selbst wenn Elliott-Wave-Signale für sich genommen nutzlos sind, haben sie sich in einem multivariaten Modell durch Synergien mit anderen Indikatoren als wertvoll erwiesen.
+- Die kleinen, aber statistisch signifikanten positiven Mittel der Logrenditen des wert- und des gleichgewichteten CRSP-Index passen zu einem Random Walk mit positivem Drift für den Logpreis.
+- Die monatlichen Logrenditen von 3M von Februar 1946 bis Dezember 2008 folgen rt gleich 0,0103 plus at mit Residualstandardabweichung 0,0637, weil keine signifikante serielle Korrelation vorliegt; 0,0103 ist der Stichprobenmittelwert mit Standardfehler 0,0023.
+- Setzt man den Logpreis vom Januar 1946 auf null, ist der kumulierte Logpreis die Summe der Logrenditen und der mittelwertbereinigte kumulierte Logpreis die Summe der um 0,0103 bereinigten Schocks; die Gerade 0,0103 mal t plus 1946 ist die Steigung dieses Drift.
 
 ## Unterschiedliche Quellenpositionen
 

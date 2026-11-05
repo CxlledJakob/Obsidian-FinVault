@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Ask
@@ -32,6 +32,14 @@ aktualisiert: 2026-11-01
 - Ob eine Transaktion am Bid oder am Ask stattfand, lässt sich für Aktien und Futures aus jedem Tick bestimmen, also aus Änderungen von Best Bid, Ask sowie Transaktionspreis und -größe.
 - Eine Transaktion am Ask zählt als positiver Orderflow, eine am Bid als negativer.
 - Ist die Bid-Size viel größer als die Ask-Size, wird ein Tick nach oben erwartet, und umgekehrt.
+- Market Maker verkaufen zum höheren Ask-Preis P_a; für das Publikum ist P_a der Kaufpreis und der Bid-Preis P_b der Verkaufspreis.
+- Die Differenz P_a − P_b heißt Bid-Ask-Spread und ist die primäre Vergütung der Market Maker; typischerweise beträgt sie ein oder zwei Cent.
+- Im Roll-Modell nimmt der beobachtete Preis den Wert P_a oder P_b an, wenn der fundamentale Wert gleich (P_a + P_b)/2 gesetzt wird.
+- War der zuvor beobachtete Preis das Ask, ist die aktuelle Preisänderung entweder 0 oder −S.
+- Im Ordered-Probit-Modell von Hausman, Lo und MacKinlay sind P^a_j und P^b_j der Ask- und der Bid-Preis zum Zeitpunkt t_j.
+- Der geltende Bid-Ask-Spread zum Zeitpunkt t_{i−1}, gemessen in Ticks, heißt AB_{i−1} und geht in die bedingte Varianz des latenten Preisänderung ein.
+- Für die 206.794 IBM-Trades von 1988 betragen Mittelwert und Standardabweichung des Bid-Ask-Spreads 1,9470 und 1,4625 Ticks.
+- Die Verkleinerung der Tick-Größe von einem Achtel auf ein Sechzehntel Dollar soll den Bid-Ask-Spread verringern.
 
 ## Funktionsweise
 

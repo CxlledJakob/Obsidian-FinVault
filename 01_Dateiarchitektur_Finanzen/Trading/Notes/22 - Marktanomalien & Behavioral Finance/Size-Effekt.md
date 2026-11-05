@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Size-Effekt
@@ -29,6 +29,8 @@ aktualisiert: 2026-10-30
 - Marktkapitalisierung und Kurs-Buchwert wurden als Risikofaktoren erst eingeführt, nachdem sie schon Überschussrenditen erzeugt hatten.
 - Die Risikogeschichte sagt vorher, dass auch Small-Cap-Strategien in schlechten Wirtschaftszeiten unterdurchschnittlich abschneiden, wenn angeschlagene Firmen am ehesten leiden.
 - Wäre die Größe ein legitimer Risikofaktor, müsste die Prämie fortbestehen. Das Verschwinden der Überschussrendite von Small-Cap-Aktien in den letzten 15 Jahren ist damit ein Problem für diese Deutung.
+- Bei Fama und French ist einer der drei erklärenden Fundamentals SMB, small minus big: die Performance kleiner Aktien gegenüber großen Aktien. Die Größe wird nach dem Marktkapital sortiert.
+- Die Faktorrealisation entsteht als Rendite eines Hedgeportfolios, das nach dem Fundamental sortiert, im obersten Quintil long und im untersten Quintil short ist. Für SMB ist das die beobachtete Rendite des Size-Portfolios. Zusammen mit Marktüberschussrendite und HML erklären die drei Fundamentals nach den Autoren hohe Anteile der Variabilität der Überschussrenditen.
 
 ## Funktionsweise
 

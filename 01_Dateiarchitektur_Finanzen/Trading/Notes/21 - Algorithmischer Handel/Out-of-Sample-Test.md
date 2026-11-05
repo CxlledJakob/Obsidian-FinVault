@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Out-of-Sample-Test
@@ -133,6 +133,18 @@ aktualisiert: 2026-11-01
 - Die Regressionskoeffizienten für ES gegen VX werden nur auf den ersten 500 Tagen nach August 2008 geschätzt, damit die Statistiken anschließend das Handelsmodell bauen.
 - Die gemeldete Leistung gilt für das Testset vom 29. Juli 2010 bis zum 8. Mai 2012: 12,3 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,4.
 - Dieses Testfenster liegt nach dem Trainingsfenster, aus dem Residual-Standardabweichung und Hedge Ratio stammen.
+- Die verfügbaren Daten werden in eine Schätz- und eine Prognoseteilstichprobe geteilt: die erste baut das nichtlineare Modell, die zweite bewertet seine Prognoseleistung.
+- In manchen Studien wandert beim rollierenden Prognoseverfahren mit jedem neuen Ursprung ein Datenpunkt aus der Prognoseteilstichprobe in die Schätzteilstichprobe.
+- Es gibt kein allgemein akzeptiertes einzelnes Maß zum Modellvergleich; eine Nutzenfunktion, die am Ziel der Prognose hängt, kann den Vergleich besser fassen.
+- Das Richtungsmaß fasst Treffer und Fehler bei Auf- und Abwärtsbewegungen von x_{T+ℓ} in einer 2×2-Kontingenztabelle zusammen; große Werte von m11 und m22 bedeuten bessere Prognosen.
+- Die zugehörige χ²-Statistik ist unter milden Bedingungen asymptotisch chi-quadrat-verteilt mit einem Freiheitsgrad; ein großer Wert bedeutet, dass das Modell die zufällige Wahl schlägt.
+- Als Betragsmaße dienen MSE(ℓ), MAD(ℓ) und MAPE(ℓ) über die m verfügbaren ℓ-Schritt-Prognosen; gewählt wird oft das Modell mit dem kleinsten Wert auf dem gewählten Maß.
+- Verschiedene Horizonte ℓ können verschiedene Modelle auswählen; die Maße haben weitere Grenzen im Modellvergleich, siehe Clements und Hendry (1993).
+- Das Verteilungsmaß setzt das Perzentil der Beobachtung in der bedingten prädiktiven Bootstrap-Verteilung an; bei angemessenem Modell sind diese Perzentile auf [0, 1] gleichverteilt und lassen sich mit der Kolmogorov-Smirnov-Statistik prüfen.
+- Im außerstichprobenartigen Vergleich für die US-Arbeitslosenquote verbessert das TAR das lineare Modell in Kontraktionen bei MSE und Verzerrung, während in Expansionen das lineare Modell beide nichtlinearen Modelle schlägt.
+- Der Beitrag der nichtlinearen Modelle liegt damit hauptsächlich in Kontraktionsphasen.
+- Für die monatlichen GE-Renditen von Januar 1926 bis Dezember 2008 sollen die letzten drei Jahre der Bewertung von Ein-Schritt-Prognosen dienen, einmal mit einem 3–2–1-Netz auf r_{t−1}, r_{t−2} und r_{t−3} und einmal mit einem 6–5–1-Netz, das zusätzlich die Vorzeichen dieser Lags für die Richtung verwendet.
+- Die Richtungsvariable ist 1, wenn die Rendite positiv ist, und sonst 0; bewertet wird jeweils der mittlere quadratische Prognosefehler.
 
 ## Funktionsweise
 
@@ -206,6 +218,10 @@ aktualisiert: 2026-11-01
 - Der Look-back von 5 für Mittel und Standardabweichung der SPY-Arbitrage ist mit dem Vorteil des Hindsight festgelegt.
 - Die annualisierte Rendite von 6,9 Prozent und die Sharpe Ratio von 1 der VX-ES-Rollrendite-Strategie gelten für den 29. Juli 2010 bis zum 7. Mai 2012, und dieser Zeitraum wurde nicht zur Bestimmung der Hedge Ratio verwendet.
 - Die Vier-Parameter-Regel verdiente im Testset 20 Prozent, die einfache Regel aus zwei gleitenden Durchschnitten 15 Prozent.
+- Für IBM 1998 und 1999 beträgt der mittlere quadratische Ein-Schritt-Prognosefehler 91,85 beim Mittelwert-Benchmark, 91,70 beim AR(1) und 91,74 beim 3–2–1-Netz; je nach Schätzung liegt der Netz-MSE zwischen 89,46 und 93,65.
+- Die 2×2-Tabelle des 8–4–1-Netzes über 24 Monate lautet 12 und 2 in der Zeile prognostiziertes Aufwärts sowie 8 und 2 in der Zeile prognostiziertes Abwärts; χ² = 0,137 mit p = 0,71.
+- Das Netz trifft Aufwärtsbewegungen gut und Abwärtsbewegungen schlecht und schlägt einen Random Walk mit gleichen Wahrscheinlichkeiten für Auf und Ab nicht signifikant.
+- Ab dem Ursprung 1968.II liegt der relative Fünf-Schritt-MSE des TAR-Modells der Arbeitslosenquote im Gesamtvergleich bei 1,03 und der des Markov-Switching-Modells bei 1,61, der MSE des linearen Benchmarks bei 1,54.
 
 ## Unterschiedliche Quellenpositionen
 
