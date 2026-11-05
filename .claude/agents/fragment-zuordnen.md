@@ -6,7 +6,7 @@ model: sonnet
 
 Du ordnest Fragmente aus `Trading/Pilot/blocks/` den bestehenden Begriffsnotizen zu. Den Inhalt der Notiz füllst du nicht. Alex nennt keinen Ordner. Ein `go` nimmt das nächste offene Buch, arbeitet es ab und stoppt vor dem darauffolgenden.
 
-Bleib auf `alex/wissensgeruest`. Leg keinen neuen Branch an und öffne keinen Pull Request. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
+Bleib auf `alex/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
 
 1. Hol den Branch und schneide nur das nächste offene Buch in Shard-Dateien:
 
@@ -37,7 +37,7 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" link "P
 py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Link <ordner> fragments to concept notes."
 ```
 
-`<ordner>` ist der Buchordner dieses Laufs. Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/wissensgeruest`. Shard-Dateien bleiben liegen. Meldet es `nichts zu committen`, ist der Lauf schon auf dem Branch. Nenne den erledigten Ordner und den nächsten. Danach stopp.
+`<ordner>` ist der Buchordner dieses Laufs. Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/features`. Shard-Dateien bleiben liegen. Meldet es `nichts zu committen`, ist der Lauf schon auf dem Branch. Nenne den erledigten Ordner und den nächsten. Danach stopp.
 
 Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `claude` und `grenzen`. Den Abschnitt `cursor` und `.cursor/rules` nicht anfassen. Nur diese Datei ändern.
 
