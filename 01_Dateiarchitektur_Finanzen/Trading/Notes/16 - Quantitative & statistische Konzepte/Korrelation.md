@@ -209,6 +209,10 @@ aktualisiert: 2026-11-05
 - Das Argument, ein Überoptimist und ein Pessimist höben sich auf, setzt unkorrelierte Fehler voraus, die nach Montier gerade nicht vorliegen.
 - Die Sichten einer Buch-zu-Preis-Strategie auf die einzelnen Aktien sind nicht unabhängig. Die Breite ist deshalb nicht die Zahl der Aktien, hier 800, auch wenn vierteljährlich neu gewichtet wird.
 - Eine Erkenntnis, die über viele Märkte wiederholt wird, erzeugt korrelierte Wetten statt strategischer Diversifikation. Bei LTCM war fast jede Strategie Konvergenz, von US-Treasuries bis zu dänischen Mortgage-Backed Securities.
+- Konvolution ist eine mathematische Operation auf zwei Funktionen, die eine dritte erzeugt; sie ähnelt der Kreuzkorrelation der beiden Eingangsfunktionen, mit einer Wendung. Ein alter Name ist Faltung, und gerade dieses Falten macht sie für das Trading nützlich.
+- Am idealisierten Markttief fallen die Preise linear bis zum Tief und steigen danach linear; faltet man die Preise am Tief, sind die beiden Preissegmente perfekt korreliert.
+- Die perfekte Korrelation tritt nur am idealisierten Tief auf; deshalb ist vor der Korrelationsberechnung eine Vorfilterung nötig, damit mit echten Daten eine relativ hohe Korrelation erreicht wird.
+- Wird mitten in einem laufenden Trend gefaltet, sind die beiden Preissegmente danach nicht korreliert; wird genau am Hoch gefaltet, sind sie exakt korreliert. Liegt das Hoch nicht am Faltpunkt, sinkt die Korrelation.
 
 ## Funktionsweise
 
@@ -245,6 +249,11 @@ aktualisiert: 2026-11-05
 - Über die Cholesky-Zerlegung ist die bedingte Korrelation q21,t mal der Wurzel aus g11,t, geteilt durch die Wurzel aus g22,t plus q21,t zum Quadrat mal g11,t.
 - Im EasyLanguage-Code von Ehlers wird die Pearson-Korrelation aus den über die Mittelungslänge M aufsummierten Werten X, Y, X·X, X·Y und Y·Y berechnet: Corr = (M·Sxy − Sx·Sy) / Wurzel((M·Sxx − Sx·Sx) · (M·Syy − Sy·Sy)), nur wenn das Produkt unter der Wurzel größer als null ist.
 - Die Korrelation von −1 bis +1 wird mit 0,5 · (Corr + 1) auf den Bereich 0 bis 1 umskaliert, etwa für die Farbdarstellung in einer Heatmap.
+- Bei gleich langen Segmenten tritt die Spitzenkorrelation bei der halben Rückschauperiode auf: Bei 13 Balken erscheint das Hoch mit 7 Balken Verzögerung, bei 39 Balken mit 19 Balken.
+- Wird ein Trend kurz unterbrochen und läuft weiter, entsteht eine hohe Korrelation bei der halben Rückschau, solange die Rückschau höchstens doppelt so lang ist wie der Abstand der Unterbrechung; bei längerer Rückschau geht das unkorrelierte Segment ein und senkt die Gesamtkorrelation.
+- Im Konvolutionsindikator wird eine Lehrbuch-Pearson-Korrelation für jede Rückschauperiode von 1 bis 48 berechnet; X ist der Basisdatenstrom, Y der zurückgefaltete Datenstrom, und X, Y, X·X, X·Y und Y·Y werden über die Rückschaulänge summiert.
+- Die Korrelationswerte von −1 bis +1 werden auf eine inverse Fisher-Transformation angewandt, um die Darstellung zu schärfen, und für die Darstellung auf 0 bis 1 umskaliert.
+- Ist die Preissteigung über die Rückschau positiv, ist der Farbton der Heatmap rot, ist sie negativ, grün; die Sättigung bestimmt jeweils der Korrelationswert.
 
 ## Voraussetzungen
 

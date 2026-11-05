@@ -24,6 +24,8 @@ aktualisiert: 2026-11-05
 - Ein Bandpassfilter nach den Gleichungen 5-1 und 5-2 zeigt die Amplitude der zyklischen Swings in den Eingangsdaten genau an.
 - Die Amplitude dieser Swings variiert zwischen Aktien, weil die Preise von Pennystocks bis über 100 Dollar je Aktie reichen; ein Pennystock kann wegen der viel kleineren Basis keinen so großen Swing haben wie ein Blue Chip.
 - Die Amplitude des Marktdatenspektrums ist nicht flach (Spectral Dilation), und Trader müssen das beim Einsatz von Filtern berücksichtigen.
+- Jährliche Zyklusschwankungen sind größer als monatliche, monatliche größer als tägliche und tägliche größer als stündliche (Spectral Dilation). Die Schwankungsgröße ist ungefähr linear proportional zur Zyklusperiode.
+- Es ist unrealistisch zu erwarten, dass ein relativ kurzer 12-Balken-Marktzyklus über eine Stichprobe von 64 Balken in Amplitude und Frequenz konstant bleibt.
 
 ## Funktionsweise
 
@@ -33,6 +35,8 @@ aktualisiert: 2026-11-05
 - Ohne Zurücksetzen klingt der Normierungsfaktor exponentiell ab: Bei Abklingfaktor K für den ersten Wert ist er K² für den nächsten und K³ für den dritten Wert.
 - Für theoretische Sinussignale ist die effektive Verstärkung der AGC der Abklingfaktor hoch die halbe Periode: Gain = K^(Period/2).
 - Im Code wird der Normierungsfaktor als Peak = 0,991 * Peak[1] fortgeschrieben, bei AbsValue(BP) > Peak auf AbsValue(BP) gesetzt, und bei Peak ungleich 0 ist Signal = BP / Peak.
+- In der DFT und im Kammfilter wird die Wellenamplitude jeder Periode durch die Periode geteilt, um Spectral Dilation zu kompensieren.
+- Eine automatische Verstärkungsregelung (AGC) mit schnellem Anstieg und langsamem Abklingen normiert die Spektralkomponenten und minimiert die Varianz der Spektralleistung über die Zeit; auf Leistungsbasis ist der Abklingfaktor 0,995 statt 0,991 auf Amplitudenbasis.
 
 ## Voraussetzungen
 

@@ -20,6 +20,7 @@ aktualisiert: 2026-11-05
 
 - Welles Wilder definierte den RSI als RSI = 100 − 100 / (1 + RS) mit RS = CU / CD; CU ist die Summe der positiven Schlusskursdifferenzen über die Beobachtungsperiode, CD die Summe der negativen Schlusskursdifferenzen, ausgedrückt als positive Zahl.
 - Nach Einsetzen und Vereinfachen ist der RSI der prozentuale Anteil der Summe der Aufwärts-Schlusskursdifferenzen an der Summe aller Schlusskursdifferenzen der Beobachtungsperiode: RSI = 100 · CU / (CU + CD).
+- Wilders ursprünglicher RSI ist RSI = 100 − 100 / (1 + RS), mit RS = Durchschnitt der Closes Up über 14 Tage geteilt durch Durchschnitt der Closes Down über 14 Tage.
 
 ## Kernaussagen
 
@@ -45,6 +46,12 @@ aktualisiert: 2026-11-05
 - Der modifizierte RSI nach Ehlers beginnt mit einem Roofing Filter aus zweipoligem 48-Bar-Hochpass und 10-Bar-SuperSmoother, danach folgt die übliche RSI-Berechnung über eine Länge von standardmäßig 10 Bars.
 - Im Code des modifizierten RSI wird ClosesUp durch die Summe aus ClosesUp und ClosesDn geteilt, optional mit einem SuperSmoother zu MyRSI geglättet und mit Referenzlinien bei 0,7 und 0,3 dargestellt.
 - Ohne den optionalen Glättungsfilter lässt sich der Lag des modifizierten RSI etwas verringern, allerdings wird der Indikator dadurch unregelmäßiger.
+- Closes Up: Liegt der heutige Schluss über dem gestrigen, wird die Differenz der Schlusskurse zum Durchschnitt addiert. Closes Down: Liegt er darunter, wird die positive Differenz addiert.
+- Mit CU und CD lässt sich der RSI zu 100 · CU / (CU + CD) vereinfachen. Verallgemeinert können CU und CD die Summen über ein beliebiges Intervall sein, und der Faktor 100 ist nur eine Skalierung.
+- Der RSI ist damit das Verhältnis der Summe der Closes Up zur Summe der Absolutwerte aller Schlusskursdifferenzen.
+- In einer idealen Welt mit Preisen als Sinuswelle der dominanten Zyklusperiode berührt der RSI gerade 1, wenn die Aufwärtshälfte des Zyklus summiert wird, und gerade 0 bei der Abwärtshälfte; die beste adaptive Summationslänge ist daher die Hälfte des gemessenen dominanten Zyklus.
+- Der adaptive RSI nutzt als Eingabe die Variable Filt statt der Schlusskurse, damit nur die vom Roofing-Filter durchgelassenen Frequenzkomponenten eingehen.
+- Statt Zähler und Nenner getrennt zu mitteln, glättet Ehlers das Verhältnis mit dem SuperSmoother-Filter; dessen Koeffizienten stammen aus der Messung des dominanten Zyklus im selben Code.
 
 ## Voraussetzungen
 
@@ -57,6 +64,7 @@ aktualisiert: 2026-11-05
 - Diese komplexere Regel hat vier optimierbare Parameter: die Spanne des kurzen gleitenden Durchschnitts, die Spanne des langen gleitenden Durchschnitts, rsi_max und rsi_min.
 - Im unterstellten Zahlenbeispiel verdient die Vier-Parameter-Regel 50 Prozent im Training gegenüber 30 Prozent der Zwei-Parameter-Regel und 20 Prozent im Test gegenüber 15 Prozent.
 - Schneidet eine komplexere Regel im Testsatz besser ab, ist die vernünftige Annahme, die zusätzliche Komplexität habe weitere systematische Aspekte des Marktverhaltens ausgenutzt.
+- Der aus einer Spektralschätzung gewonnene dominante Zyklus ändert sich mit der Zeit und kann genutzt werden, um Indikatoren wie den RSI automatisch abzustimmen.
 
 ## Regeln und Kriterien
 
@@ -64,10 +72,15 @@ aktualisiert: 2026-11-05
 - Eine große Zahl von Kombinationen dieser Parameter wird gegen die Trainingsdaten laufen gelassen.
 - Die einzige Variable des RSI ist die Beobachtungsperiode; für maximale Wirksamkeit soll sie die Hälfte der gemessenen Zyklusperiode betragen.
 - Ist die Beobachtungsperiode der halbe dominante Zyklus, entspricht bei einer reinen Sinuswelle die Summe der Aufwärtsschlüsse vom Tal bis zum Gipfel genau der Gesamtsumme, sodass der RSI 100 beträgt; in der folgenden Halbperiode gibt es keine Aufwärtsschlüsse und der RSI ist null.
+- Der adaptive RSI hat Referenzlinien bei 30 und 70 Prozent; sie lassen sich leicht auf 20/80 Prozent oder andere passende Werte ändern.
+- Der RSI ist über die halbe Periode des gemessenen dominanten Zyklus optimiert, um volle Ausschläge ohne Übersättigung zu erreichen.
 
 ## Risiken und Grenzen
 
 - Es gibt keinen magischen Indikator für Momentum-Handel; alle Momentum-Indikatoren stellen dieselben Zyklen dar und kehren etwa zur selben Zeit um.
+- Bei sehr langer Summationslänge sind die Closes Up etwa die Hälfte der absoluten Kursdifferenzen; der RSI pendelt dann um 0,5 und ist praktisch wertlos.
+- Bei sehr kurzer Summationslänge bleibt der RSI in Aufwärtstrends lange bei 1 und in Abwärtstrends lange bei 0 stecken.
+- Die übliche Länge von 14 Tagen wurde laut Ehlers' Broker verwendet, weil Wilder es so sagte; diese unbefriedigende Antwort war für Ehlers der Anlass, jahrzehntelang nach optimalen Indikatoreinstellungen zu suchen.
 
 ## Beispiele
 
@@ -77,9 +90,11 @@ aktualisiert: 2026-11-05
 - Am täglichen S&P 500 mit 21 Tagen roher DTosc-Lookback-Periode oszillierte der Indikator mit den Preisschwüngen, doch die meisten Momentumumkehren erreichten die Overbought- oder Oversold-Zone nicht.
 - Dieselbe Serie mit 8 Tagen roher Lookback-Periode machte die Momentumumkehren an Hochs und Tiefs tendenziell in den Overbought- und Oversold-Zonen und auf oder innerhalb von ein oder zwei Bars zum Preishoch oder -tief.
 - Mit 13 Tagen roher Lookback-Periode war der DTosc unter den drei geprüften Einstellungen die beste für diese Daten.
+- Auf Dollar General (DG) über etwa ein Jahr erreicht der adaptive RSI 0 oder 1 nur, wenn die Preise einen zyklischen Schwung über die halbe dominante Zyklusperiode hatten. Das geschieht relativ selten und zeigt, dass der Indikator richtig abgestimmt ist (Abbildung 11.1).
 
 ## Unterschiedliche Quellenpositionen
 
+- Im direkten Vergleich der adaptiven Indikatoren zeigen RSI, Stochastic und CCI im groben Sinn ziemlich dasselbe; ohne Indikator-Transformationen gibt es keinen zwingenden Grund, einen dem anderen vorzuziehen.
 
 ## Eigene Erkenntnisse
 

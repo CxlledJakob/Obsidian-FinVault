@@ -41,6 +41,14 @@ aktualisiert: 2026-11-05
 - Das Spektrum zeigt, dass Marktzyklen evaneszent sind: Sie kommen und gehen und ändern ihre Periodizität im Zeitverlauf.
 - Das Autokorrelationsperiodogramm hat die geringste Latenz aller Spektralschätzungen für Marktdaten.
 - Das Autokorrelationsperiodogramm schätzt automatisch die gesamte zyklische Leistung in den Daten als Funktion der Zeit.
+- Spectral Dilation: Jährliche Zyklusschwankungen sind größer als monatliche, monatliche größer als tägliche und tägliche größer als stündliche. Spectral Dilation ist ungefähr linear proportional zur Periode des betrachteten Zyklus.
+- Wird der dominante Zyklus über einen relativ kleinen Periodenbereich gesucht, kann Spectral Dilation ignoriert werden. Wird er aus Daten über mehrere Oktaven von Zyklusperioden extrahiert, muss die Dilation in der Berechnung kompensiert werden.
+- Spectral Dilation ist eine der Natur von Marktdaten innewohnende Eigenschaft; ihre Kompensation ist bei Zyklusmessungen über einen relativ großen Bereich zwingend.
+- Das Autokorrelationsperiodogramm braucht keine Spectral-Dilation-Kompensation, weil die relativen Amplituden der Spektralkomponenten aus Korrelationsverläufen stammen, die zwischen −1 und +1 begrenzt sind. Die Komponenten der DFT unterliegen dagegen der Spectral Dilation.
+- Marktspektren lassen sich mit einer Kammfilter-Schätzung bestimmen: Die Daten laufen in eine Bank von Bandpassfiltern, jeder auf eine andere Mittenperiode abgestimmt, mit überlappenden Durchlassbereichen; die relative Ausgangsleistung der Filter ist eine Schätzung des zyklischen Gehalts.
+- Die Kammfilter-Schätzung ist nach Ehlers der konzeptionell reinste und am leichtesten verständliche Ansatz der Spektralschätzung. Messauflösung und Einschwingverhalten werden über die Bandbreite jedes Filters gesteuert.
+- Kammfilter, DFT und Autokorrelationsperiodogramm liefern eine konsistente Schätzung des Spektralgehalts der Daten (Abbildung 10.2).
+- Ehlers hält das Autokorrelationsperiodogramm für überlegen: Es hat weniger Latenz, eine größere Spannweite der Amplitudenschwankungen, braucht keine historische Mittelung und keine Spectral-Dilation-Kompensation. Es ist die bevorzugte Methode für Spektralschätzungen von Marktdaten.
 
 ## Funktionsweise
 
@@ -54,6 +62,12 @@ aktualisiert: 2026-11-05
 - Eine automatische Verstärkungsregelung (AGC) mit schnellem Anstieg und langsamem Abklingen normiert die Spektralkomponenten: Ist die aktuelle Leistung größer als MaxPwr, wird MaxPwr sofort darauf gesetzt, sonst klingt MaxPwr laut Text auf 0,991 des Vorwerts ab; im Code steht der Faktor 0,995.
 - Die normierten Spektralwerte zwischen 0 und 1 werden in Farben umgesetzt: Über 0,5 mischen sich Rot und Grün, bei 1 ergibt sich Gelb, bei 0,5 Rot; unter 0,5 nimmt die Rotsättigung ab bis Schwarz bei 0.
 - Ein optionaler, auskommentierter Codeblock erhöht die visuelle Auflösung, indem die Spektralkomponenten potenziert werden; die Wahl des Exponenten ist willkürlich.
+- Im Kammfilter-Code sind Arrays und Plotroutinen für Bandpass-Perioden von 10 bis 48 Balken ausgelegt. Die Daten werden vorher mit Zweipol-Hochpass und SuperSmoother aufbereitet, sodass nur die interessierenden zyklischen Komponenten analysiert werden.
+- Die Wellenamplitude jedes Kanals wird durch seine Mittenperiode geteilt, quadriert, um die Ausgangsleistung zu erhalten, und über die Länge der Kanalperiode gemittelt.
+- Die AGC mit schnellem Anstieg und langsamem Abklingen wirkt im Zeitbereich als exponentieller Zerfall und im Frequenzbereich wie ein EMA. Ihr Frequenzabfall von etwa 6 dB pro Oktave muss kompensiert werden; die Division jeder Kanalamplitude durch die Kanalperiode liefert diese 6-dB-pro-Oktave-Kompensation.
+- Eine Oktave ist ein Frequenz- oder Periodenverhältnis von 2:1. Ein Faktor 2 in der Wellenamplitude ist ein Faktor 4 im Leistungsverhältnis, und ein Faktor 4 in der Leistung entspricht 6 dB.
+- Ein optionaler, auskommentierter Codeblock erhöht die visuelle Auflösung, indem die Spektralkomponenten mit einer höheren Potenz potenziert werden; die Wahl der Potenz ist beliebig.
+- Das Beispiel der Kammfilter-Schätzung für DG nutzt einen Durchlassbereich (Pass-Band) von 0,3 (Abbildung 10.1).
 
 ## Voraussetzungen
 

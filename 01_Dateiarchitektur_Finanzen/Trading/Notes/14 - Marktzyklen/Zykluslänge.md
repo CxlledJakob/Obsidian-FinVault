@@ -52,6 +52,9 @@ aktualisiert: 2026-11-05
 - Die dominante Zyklusperiode lässt sich schätzen, indem man die Zahl der Bars zwischen Nulldurchgängen des Bandpassausgangs zählt.
 - Marktzyklen sind evaneszent: Sie kommen und gehen und ändern ihre Periodizität über die Zeit.
 - Der Lag-Abstand zwischen aufeinanderfolgenden roten (oder grünen) Balken in der Autokorrelations-Heatmap mit drei Bars Mittelung ergibt die Periodizität der Welle, bei einer 20-Bar-Sinuswelle genau 20 Bars.
+- Marktzyklen sind flüchtig: Sie kommen und gehen und ändern ihre Periodizität.
+- Trader können mit einer Zyklusperiode von 20 Balken etwas anfangen, die gleichwertige Frequenz von 0,05 Zyklen pro Balken hat dagegen keine besondere Bedeutung; deshalb rechnet Ehlers die DFT in Perioden statt in Frequenzen.
+- Die kürzeste messbare Zyklusperiode ist zwei Balken, weil das Nyquist-Kriterium mindestens zwei Abtastwerte pro Zyklus verlangt.
 
 ## Funktionsweise
 
@@ -63,6 +66,10 @@ aktualisiert: 2026-11-05
 - Der Dynamic-Time-Projection-Report bündelt Zeitretracement, Alternate Time Projection und High-High- sowie Low-Low-Projektionen. Die Bars sind die künftigen Zeiten mit den meisten Treffern.
 - Die mittlere Länge der stochastischen Zyklen eines AR(2) mit komplexem Wurzelpaar ist k gleich 2π geteilt durch den Arkuskosinus von phi1 geteilt durch (2 mal der Wurzel aus minus phi2), wobei der Arkuskosinus im Bogenmaß steht.
 - Mit den komplexen Lösungen a plus oder minus b i gilt k gleich 2π geteilt durch den Arkuskosinus von a geteilt durch die Wurzel aus a zum Quadrat plus b zum Quadrat.
+- In den Codes der adaptiven Indikatoren wird der gemessene dominante Zyklus auf mindestens 10 und höchstens 48 Balken begrenzt.
+- Beim Even Better Sinewave setzt der Duration-Parameter die kritische Periode des Hochpasses und steuert damit die maximale Länge einer angezeigten Position; der Hochpass beginnt, zyklische Komponenten länger als die Duration zu dämpfen.
+- Der einpolige Hochpass gleicht die Amplitude aller Zykluskomponenten an, die wegen Spectral Dilation bei längeren Wellenlängen sonst größer wären.
+- Eine kürzere Duration macht den Indikator empfindlicher für kürzere Wellenlängen; Abbildung 12.3 zeigt die Einstellung 20 Balken.
 
 ## Voraussetzungen
 
@@ -90,6 +97,7 @@ aktualisiert: 2026-11-05
 
 ## Risiken und Grenzen
 
+- Bei einer Fourier-Analyse über 64 Balken liegen die zulässigen Perioden bei 64, 32, 21,3 und 16 Balken usw.; zwischen 16 und 21,3 Balken ergibt sich nur eine Auflösung von 5 Balken, 31 Prozent relativ zum 16-Balken-Zyklus.
 
 ## Beispiele
 

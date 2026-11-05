@@ -225,6 +225,12 @@ aktualisiert: 2026-11-05
 - Für die Autocorrelation Reversals werden die Bar-zu-Bar-Änderungen der Autokorrelationsfunktion über alle Lags summiert; ist die Summe groß, ist ein Wendepunkt identifiziert.
 - Im Code wird für jeden Lag von 3 bis 48 gezählt, ob die auf 0 bis 1 skalierte Korrelation zwischen vorigem und aktuellem Bar die Schwelle 0,5 kreuzt; ist diese Summe größer als 24, wird Reversal = 1 gesetzt.
 - Die Standardeingaben des Autocorrelation-Reversals-Indikators sind HPLength 48, LPLength 10 und AvgLength 3.
+- Die adaptiven Indikatoren von Ehlers (RSI, Stochastic, CCI, Bandpass) beginnen jeweils mit der Messung des dominanten Zyklus über das Autokorrelationsperiodogramm.
+- Im Code wird für jeden Lag von 0 bis 48 eine Pearson-Korrelation berechnet; die Mittelungslänge M ist AvgLength (Standard 3), und bei AvgLength = 0 wird M gleich dem Lag gesetzt.
+- Die Korrelation je Lag ist (M·Sxy − Sx·Sy) geteilt durch die Wurzel aus (M·Sxx − Sx²)·(M·Syy − Sy²) und wird nur berechnet, wenn dieses Produkt größer als 0 ist; X ist Filt zum Zeitpunkt count, Y ist Filt zum Zeitpunkt Lag plus count.
+- Für jede Periode von 10 bis 48 werden die Korrelationen der Lags 3 bis 48 mit Kosinus und Sinus der Periode multipliziert und summiert; die Summe der Quadrate beider Teile ergibt SqSum.
+- Das Spektrum wird geglättet als R = 0,2 · SqSum² + 0,8 · vorheriger R-Wert und auf die abklingende Maximalleistung normiert (Abklingfaktor 0,991 im RSI- und CCI-Code, 0,995 im Stochastic- und Bandpass-Code).
+- Der daraus per Schwerpunkt bestimmte dominante Zyklus wird im Code auf 10 bis 48 Balken begrenzt.
 
 ## Voraussetzungen
 

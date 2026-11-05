@@ -29,6 +29,13 @@ aktualisiert: 2026-11-05
 
 ## Funktionsweise
 
+- Ein Bandpassfilter erhält einen voreilenden Phasengang, wenn er auf eine kürzere Periode abgestimmt wird als die Periode des gemessenen Zyklus.
+- Im adaptiven Bandpass ist die Bandbreite 0,3, also 30 Prozent der abgestimmten Mittenperiode, die halbe Bandbreite damit 15 Prozent. Der Filter wird 10 Prozent zur kürzeren Periode hin vom dominanten Zyklus verstimmt, sodass die Daten noch in der Bandbreite liegen.
+- Diese Verstimmung ergibt eine Phasenvoreilung gegenüber dem dominanten Zyklus in der Größenordnung von 60 Grad, also einem Sechstel eines Zyklus. Bei einem 18-Balken-Zyklus ergibt sich ein Vorlauf von 3 Balken; das ist nicht groß, aber signifikant.
+- Die Triggerlinie des adaptiven Bandpasses ist 90 Prozent der Amplitude der Bandpasslinie, um einen Balken verzögert. Die Linienkreuzungen erfolgen nach dem Hoch des Bandpasses, aber die Phasenvoreilung sorgt für ein rechtzeitiges Signal.
+- Kein technischer Indikator ist vorhersagend, alle Signale verzögern; weil beobachtete Zyklen oft eine kurze Zeit weiterlaufen, kann man zyklische Schwünge auf eine Sinuswelle übertragen und deren Phase künstlich vorziehen, um einen vorhersagenden Indikator zu erhalten.
+- Im Code des adaptiven Bandpasses wird das Signal als BP geteilt durch einen mit 0,991 abklingenden Spitzenwert normiert; der Lead ist 1,3 · (Signal + Signal[1] − Signal[2] − Signal[3]) / 4 und wird über einen mit 0,93 abklingenden Spitzenwert auf 0,7 normiert.
+- Die Konvolution wird um vier Balken nach links verschoben, um den Indikator besser mit dem tatsächlichen Wendepunkt in Deckung zu bringen, weil für die kürzeste Berechnung eine endliche Datenmenge nötig ist; das ähnelt einem zentrierten gleitenden Durchschnitt.
 
 ## Voraussetzungen
 
@@ -41,9 +48,11 @@ aktualisiert: 2026-11-05
 
 ## Regeln und Kriterien
 
+- Signifikante Handelssignale verlangen zusätzlich, dass die Linienkreuzung oberhalb von +0,7 oder unterhalb von −0,7 der Referenzlinien erfolgt.
 
 ## Risiken und Grenzen
 
+- Adaptive gleitende Durchschnitte wie Kaufmans KAMA und Chandes VIDYA passen sich an Volatilitätsänderungen an; sie reagieren per Definition auf Preisänderungen und kommen damit zu spät.
 
 ## Beispiele
 

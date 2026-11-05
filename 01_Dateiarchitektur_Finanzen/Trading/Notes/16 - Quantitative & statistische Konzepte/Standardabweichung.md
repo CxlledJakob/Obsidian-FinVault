@@ -165,6 +165,8 @@ aktualisiert: 2026-11-05
 - Die Standardabweichung der realen Zehnjahresrenditen sinkt mit günstigerem KGV: 5,4 Prozentpunkte im Bereich 32 bis 20, 5,0 bei 20 bis 16, 4,0 bei 16 bis 13,5 und 3,0 bei 13,5 bis 4.
 - Die historische Standardabweichung der realen Anleiherenditen beträgt 4 Prozent.
 - In den dismal years lagen die Standardabweichungen bei 12,6 für Value und Momentum, 12,8 für nur Value, 5,5 für nur Momentum und 14,7 für Buy-and-hold. Das taktische Modell lief mit deutlich geringerer Volatilität als der Aktienmarkt.
+- Der Root Mean Square (RMS) der Preise um ihren gleitenden Durchschnitt ist gleichbedeutend mit der Standardabweichung.
+- Beim CCI setzt der Skalierungsfaktor 0,015 die Werte +100 und −100 als Näherungen für plus und minus eine Standardabweichung, falls die Daten gaußverteilt wären; diese Annahme ist nach Ehlers nicht gut.
 
 ## Funktionsweise
 
@@ -209,6 +211,7 @@ aktualisiert: 2026-11-05
 - Der Z-Score des Währungspaars teilt die Abweichung des Portfoliomarktwerts von seinem 20-Tage-Mittel durch die Standardabweichung desselben Fensters.
 - Die Sharpe Ratio teilt die mittlere Überschussrendite durch die Standardabweichung der Überschussrenditen, passend annualisiert.
 - Beim Kalenderspread ist die Standardabweichung die gleitende Standardabweichung der Rollrendite über die Halbwertszeit von etwa 36 Tagen.
+- Der adaptive CCI auf Dollar General überschreitet plus oder minus eine Standardabweichung nur gelegentlich.
 
 ## Regeln und Kriterien
 

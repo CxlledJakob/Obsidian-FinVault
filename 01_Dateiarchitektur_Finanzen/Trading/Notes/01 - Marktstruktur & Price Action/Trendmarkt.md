@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Trendmarkt
@@ -76,6 +76,12 @@ aktualisiert: 2026-10-30
 - Die Trades liegen in Richtung des Drives, möglichst nah am getesteten Extrem. Wer auf den Rücksetzer wartet, verpasst die Bewegung oft.
 - Ein laufendes Profil ab der Periode des möglichen Wechsels, etwa einem Tail oder Breakout, macht den Übergang in den One-Timeframe-Markt sichtbar.
 - Bei Auktionen, die das längere Timeframe treibt, wechseln anpassungsfähige Day-Trader vom rotationalen Handel zum Momentum-Handel.
+- Der Even Better Sinewave Indicator lässt über einen einpoligen Hochpass bewusst längerperiodische Trendkomponenten durch; nach Normierung auf die kurzfristige Leistung zeigen diese längeren Wellenanteile im Trend an, im Trade zu bleiben.
+- Der Even Better Sinewave Indicator funktioniert im Trendmodus außerordentlich gut; damit werden die spektakulären Fehlschläge der meisten Swing-Indikatoren gemildert, wenn der erwartete Wendepunkt ausbleibt.
+- Einzige Eingabe ist die erwartete maximale Trade-Dauer im Trend; der Standard von 40 Balken lässt etwa zwei Monate Haltedauer erwarten, weil der Hochpass Zyklen länger als 40 Balken zu dämpfen beginnt.
+- Eine längere Duration verlängert die angezeigte Long-Position im Aufwärtstrend und beseitigt einige kurzfristige Umkehrungen während des Trends; der Parameter wird an den eigenen Handelsstil angepasst.
+- Ein Ziel der technischen Analyse ist, eine große Umkehr eindeutig zu erkennen, um den Markt überwiegend in Richtung des folgenden Trends zu handeln; dafür eignet sich die Konvolution.
+- Unterbrechungen von Markttrends erscheinen in der Konvolutions-Heatmap als verkürzte, verkümmerte Plumes; bei DG signalisieren die verkürzten Plumes im Januar 2011, dass der Aufwärtstrend aus dem Herbst 2010 noch intakt ist.
 
 ## Regeln und Kriterien
 
@@ -147,6 +153,10 @@ aktualisiert: 2026-10-30
 - Der Markt verbringt typischerweise mehr Zeit in überlappenden Brackets als im Trend.
 - Trends enden, weil die Teilnehmer auf erkannte Muster handeln und sie damit aus dem Markt entfernen. Ein Markt ist kein unveränderliches physikalisches System.
 - In einem starken Trend ist die Richtung auch ohne Profil erkennbar.
+- Eine zyklische Vorhersage zu treffen, wenn die Daten in einem Trend sind, ist im Grunde zwecklos.
+- Der ursprüngliche Sinewave Indicator schwingt immer zwischen −1 und +1 und gibt daher keinen direkten Hinweis, wann der Markt im Trendmodus ist.
+- Eine längere Duration-Einstellung beim Even Better Sinewave bedeutet, dass man während des Trades zusätzliche Drawdowns durchsteht, dafür aber nicht aus einem profitablen Trendtrade geworfen wird.
+- Bei kürzerer Duration sind die kürzeren Trades empfindlicher für Ein- und Ausstiegstiming und für die Rechenverzögerung des Indikators.
 
 ## Beispiele
 

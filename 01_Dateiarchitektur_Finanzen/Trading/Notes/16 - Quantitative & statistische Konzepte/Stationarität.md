@@ -311,6 +311,8 @@ aktualisiert: 2026-11-05
 - Auch eine Reihe, die auf kurzer Frist mean-reverting wirkt, muss nicht im strengen Sinn stationär sein; gleitender Durchschnitt, gleitende Standardabweichung oder ein Verhältnis passen die Schwellen dann an das wandernde Niveau an.
 - Diese Annahme wird oft entwertet: die Wirtschaftsaussichten eines Landes, das Management eines Unternehmens und die Struktur eines Finanzmarkts ändern sich.
 - Komponentenweises Differenzieren eines kointegrierten Systems überdifferenziert und erzeugt Unit Roots im MA-Matrixpolynom.
+- Fourier-Transformationen setzen voraus, dass die Daten über die Stichprobe stationär sind, also unveränderliche Eigenschaften haben; flüchtige Marktzyklen, die kommen, gehen und ihre Periode ändern, verletzen diese Voraussetzung.
+- Eine längere Datenstichprobe verbessert die Auflösung der Fourier-Analyse, verschärft aber die Probleme mit der Stationarität.
 
 ## Beispiele
 

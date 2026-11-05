@@ -57,6 +57,9 @@ aktualisiert: 2026-11-05
 - Ehlers berechnet den Stochastic über eine 20-Bar-Rückschau wie den Standard, verwendet zur Glättung jedoch einen SuperSmoother statt gleitender Durchschnitte.
 - Beim modifizierten Stochastic geht ein Roofing Filter voraus, der die zyklischen Komponenten auf Perioden von 10 bis 48 Bars begrenzt; dadurch wird der Indikator dramatisch verändert.
 - Im Code des modifizierten Stochastic werden Höchst- und Tiefstwert des gefilterten Signals über die Länge ermittelt, Stoc = (Filt − LowestC) / (HighestC − LowestC) berechnet und mit einem SuperSmoother zu MyStochastic geglättet.
+- Der adaptive Stochastic nutzt die Variable Filt statt der Schlusskurse, damit nur die vom Roofing-Filter durchgelassenen Frequenzkomponenten eingehen.
+- Zuerst werden höchster und tiefster Filt-Wert über die aktuelle dominante Zyklusperiode bestimmt; Stoc = (Filt − LowestC) / (HighestC − LowestC) ist der ungefilterte Wert des adaptiven Stochastic.
+- Statt Zähler und Nenner getrennt zu mitteln, glättet Ehlers das Verhältnis Stoc mit dem SuperSmoother-Filter.
 
 ## Voraussetzungen
 
@@ -73,6 +76,8 @@ aktualisiert: 2026-11-05
 
 - Für den Stochastic gelten dieselben vier Dual-Time-Frame-Regeln wie für den DTosc, weil auch er Overbought- und Oversold-Zonen hat.
 - Im Chartbeispiel liegen die Zonen bei 75 Prozent Overbought und 25 Prozent Oversold.
+- Höchster und tiefster Schluss über die dominante Zyklusperiode sind nur sicher gefunden, wenn die gesamte Periode durchsucht wird; der adaptive Stochastic verwendet daher die volle dominante Zyklusperiode als Beobachtungsbereich.
+- Der adaptive Stochastic hat Referenzlinien bei 30 und 70 Prozent; sie lassen sich leicht auf 20/80 Prozent oder andere passende Werte ändern.
 
 ## Risiken und Grenzen
 
@@ -93,9 +98,11 @@ aktualisiert: 2026-11-05
 - Für diesen Tages-Short musste das Wochenmomentum bärisch oder bullisch overbought sein.
 - Am letzten Wochenbar hatte der wöchentliche Stochastic eine bärische Umkehr gemacht und damit das Swing-Entry-Short-Setup auf den Tagesdaten eröffnet, in der Woche zum 19. Oktober.
 - Erst am 31. Oktober machte IBM eine bärische Stochastic-Umkehr auf Tagesbasis. Der Kurs hatte das 50-Prozent-Retracement am 100-Prozent-Zeitretracement berührt, sieben Handelstage abwärts und sieben aufwärts.
+- Auf Dollar General (DG) über etwa ein Jahr zeigt der adaptive Stochastic die relativen trendbereinigten Preise über die Länge der dominanten Zyklusperiode genau an und hat viele Eigenschaften mit dem adaptiven RSI gemeinsam (Abbildung 11.2).
 
 ## Unterschiedliche Quellenpositionen
 
+- Im direkten Vergleich der adaptiven Indikatoren hat der Bandpassfilter mehr hochfrequente Komponenten, während RSI, Stochastic und CCI im groben Sinn ziemlich dasselbe anzeigen (Abbildung 11.5).
 
 ## Eigene Erkenntnisse
 

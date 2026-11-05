@@ -141,6 +141,7 @@ aktualisiert: 2026-11-05
 - Chan und Kot (2002) zeigen am US-Markt von 1965 bis 2002, dass von vier Kombinationen aus lang- und kurzfristigem Momentum die Gruppe kurzfristiger Gewinner und langfristiger Verlierer am besten abschneidet.
 - Thaler und DeBondt (1985): Frühere Gewinneraktien werden künftige Verlierer, und frühere Verlierer werden künftige Gewinner.
 - Analysten kaufen eher Aktien, die über die vergangenen drei Jahre und in den letzten zwölf Monaten gut gelaufen sind, und lassen diese Trendumkehr aus.
+- Hohe Korrelation der gefalteten Preissegmente besteht nur an großen Marktwendepunkten; deshalb eignet sich die Konvolution, um eine große Umkehr eindeutig zu erkennen.
 
 ## Funktionsweise
 
@@ -167,6 +168,13 @@ aktualisiert: 2026-11-05
 - Der Dynamic-Time-Projection-Report bündelt die Zeitfaktoren zu den Zeiten mit den meisten Treffern. Ein solches Ziel lässt sich für jede Musterstruktur bilden, einschließlich Welle C und Welle 5.
 - Ein Decycler-Oszillator entsteht, indem man den Ausgang eines Hochpassfilters mit kürzerer Cutoff-Periode vom Ausgang eines Hochpassfilters mit längerer Cutoff-Periode abzieht. Sehr lange Zykluskomponenten und der statische Anteil werden entfernt, kürzere Zykluskomponenten durch Auslöschung ebenfalls, und die Trendlinie erscheint als Oszillator.
 - Der Decycler dient als „Instantaneous Trend Line“ mit sehr geringer Verzögerung: Die längsten Zykluskomponenten werden weniger als fünf Bars verzögert, bei einem 20-Bar-Zyklus beträgt die Verzögerung etwa 1,5 Bars.
+- Die Konvolution wird für einen Bereich von Rückschauperioden berechnet; die vertikale Achse ist die Rückschauperiode, der Indikatorwert wird in Farben umgesetzt, und es entsteht eine mit den Preisdaten zeitsynchrone Heatmap.
+- In der Heatmap erscheinen die Punkte hoher Korrelation als Plumes, die genau auf die großen Marktumkehrungen zurückzeigen; die Umkehrpunkte liegen am unteren Rand des Teilcharts, und lange Plumes kennzeichnen große Wendepunkte.
+- Unter Berücksichtigung der Trendrichtung erscheinen Markthochs als rote Plumes (Umkehr nach unten) und Markttiefs als grüne Plumes (Umkehr nach oben).
+- Als Konvolutionsindikator geplottet erscheint der Punkt hoher Korrelation als Spitze, um die halbe Rückschauperiode verzögert. Kurze Rückschau liefert relativ aktuelle, aber viele Spitzen; lange Rückschau berichtet alte Geschichte und beseitigt kurzfristige Unterbrechungen.
+- Vor der Berechnung steht ein Roofing-Filter gegen Spectral Dilation: Zweipol-Hochpass auf die längste Periode und SuperSmoother auf die kürzeste Periode, Standardwerte 40 und 80 Balken.
+- Die 40-Balken-Periode des SuperSmoothers wurde gewählt, um alle außer den großen Wendepunkten auszublenden; weil Marktdaten fraktal sind und längere Zyklen größere Schwünge haben, sollen falsche Anzeigen kleiner Wendepunkte vermieden werden.
+- Die kürzeste Periode kann gesenkt werden, um die Rechenverzögerung zu verringern, allerdings um den Preis zusätzlicher Darstellungsartefakte am unteren Rand der Anzeige.
 
 ## Voraussetzungen
 
@@ -285,6 +293,7 @@ aktualisiert: 2026-11-05
 - Ist ein Fünf-Wellen-Anstieg der IBM bis Oktober 2007 abgeschlossen, sollte ein Rückgang von mindestens mehreren Monaten folgen. Dann werden Longs beendet oder Shorts eröffnet.
 - Nimmt IBM ein Swing-Tief, stehen die Chancen, dass das Wave-5-Hoch fertig ist und der Bärentrend Wochen oder Monate weiterläuft. Mindestens wird ein korrektiver Rückgang erwartet, der in Zeit und Preis größer ist als jeder seit dem Tief im Oktober 2006.
 - Zwei frühere bärische Umkehren auf 15 Minuten, eine knapp über Oversold und eine in Oversold, waren nicht die Stelle für den Daytrade. Erst Overbought plus bärische 5-Minuten-Umkehr setzte den Short.
+- Bei Dollar General (DG) treffen im Rest des Jahres 2011 die fünf roten und sechs grünen Plumes die großen Marktumkehrungen genau (Abbildung 13.4).
 
 ## Unterschiedliche Quellenpositionen
 

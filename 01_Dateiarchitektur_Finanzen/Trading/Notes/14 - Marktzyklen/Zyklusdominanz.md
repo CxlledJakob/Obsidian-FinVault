@@ -22,6 +22,8 @@ aktualisiert: 2026-11-05
 
 ## Kernaussagen
 
+- Die bevorzugte Methode zur Berechnung des dominanten Zyklus ist das Autokorrelationsperiodogramm.
+- Der Even Better Sinewave Indicator verzichtet vollständig auf Zyklusmessungen und stützt sich auf eine starke Normierung der Wellenform am Ausgang eines modifizierten Roofing-Filters.
 
 ## Funktionsweise
 
@@ -31,6 +33,9 @@ aktualisiert: 2026-11-05
 - Ehlers ermittelt den dominanten Zyklus aus der Spektralschätzung des Autokorrelationsperiodogramms mit einem Schwerpunkt-Algorithmus (Center of Gravity, CG).
 - Der CG-Algorithmus summiert die Y-Werte und unabhängig davon die Produkte X·Y; der Quotient aus zweiter und erster Summe ist die mittlere Position auf der X-Achse. Beim dominanten Zyklus sind die Y-Werte die Leistungen und die X-Werte die Perioden.
 - Im Code gehen nur Perioden von 10 bis 48 Bars ein, deren normierte Leistung mindestens 0,5 beträgt; der dominante Zyklus wird nur berechnet, wenn die Leistungssumme ungleich null ist.
+- Der dominante Zyklus wird aus der Spektralschätzung mit einem Schwerpunkt-Algorithmus (Center of Gravity, CG) gewonnen: Die Y-Werte und unabhängig davon die Produkte X mal Y werden summiert; die zweite Summe geteilt durch die erste ergibt die mittlere Position entlang der X-Achse.
+- Beim dominanten Zyklus sind die Y-Werte die Leistungen und die X-Werte die Perioden; der Algorithmus berechnet also die mittlere Periode, um die sich die Leistungen konzentrieren. Das ist der dominante Zyklus.
+- Im Code gehen nur Perioden mit normierter Leistung von mindestens 0,5 in die Schwerpunktberechnung ein.
 
 ## Voraussetzungen
 
@@ -39,6 +44,12 @@ aktualisiert: 2026-11-05
 
 - Der dominante Zyklus ändert sich mit der Zeit und kann zum automatischen Abstimmen anderer Indikatoren wie Bandpassfilter, CCI, RSI oder Stochastic genutzt werden.
 - Im Periodogramm für Dollar General verläuft der berechnete dominante Zyklus als blaue Linie ungefähr durch die Mitte der stärksten Spektralkomponenten.
+- Der dominante Zyklus ändert sich mit der Zeit und kann genutzt werden, um andere Indikatoren wie Bandpassfilter, Commodity Channel Index (CCI), Relative Strength Index (RSI) und Stochastic automatisch abzustimmen.
+- Ehlers verwendet im weiteren Buch das Autokorrelationsperiodogramm zur Berechnung des dominanten Zyklus.
+- Schlüsselparameter von Stochastic, RSI, CCI und Bandpassfilter ist die Rückschauperiode, die üblicherweise fest ist. Weil sich die gemessene Zyklusperiode ändert, ist es sinnvoll, diese Indikatoren an die gemessene Zyklusperiode anzupassen.
+- Beobachtete handelbare Marktzyklen halten meist eine kurze Zeit an; auf die gemessene Zyklusperiode abgestimmte Indikatoren sind deshalb für die aktuellen Bedingungen optimiert und können sogar vorhersagende Eigenschaften haben.
+- Der mit dem Autokorrelationsperiodogramm gemessene dominante Zyklus setzt die Rückschauperiode der Indikatoren dynamisch; die Indikatorcodes sind zudem so verändert, dass die Effekte der Spectral Dilation entfernt werden.
+- Abstimmung auf den dominanten Zyklus: RSI über die halbe Periode, Stochastic und CCI über die volle Periode, Bandpassfilter auf 90 Prozent der Periode.
 
 ## Regeln und Kriterien
 
@@ -46,6 +57,10 @@ aktualisiert: 2026-11-05
 - Bei Mittenperiode 20 und relativer Bandbreite 0,7 beträgt die Bandbreite 14, und der Durchlassbereich reicht von 13- bis 27-Bar-Perioden.
 - Ein Hochpassfilter, eine Oktave unter der Halbbandbreitenkante des Bandpassfilters abgestimmt, ist zwingend, damit der gefilterte Ausgang nominell mittelwertfrei ist; ohne Mittelwert null können die Nulldurchgänge erheblich fehlerhaft sein.
 - Weil die Messung von Nulldurchgang zu Nulldurchgang stark schwanken kann, begrenzt der Code die Änderung zwischen Messungen auf höchstens 25 Prozent.
+- Wird der dominante Zyklus über einen relativ kleinen Periodenbereich gesucht, kann Spectral Dilation ignoriert werden; wird er aus Daten mit mehreren Oktaven von Zyklusperioden extrahiert, muss sie kompensiert werden.
+- Ist die Länge ein Eingabeparameter eines Indikators, lässt sich der Indikator oft optimieren, indem die Länge auf die dominante Zyklusperiode oder einen Bruchteil davon abgestimmt wird.
+- Der Bandpassfilter wird optimiert, indem er auf 90 Prozent der gemessenen dominanten Zyklusperiode abgestimmt wird; das liefert etwa 60 Grad Phasenvoreilung.
+- Damit der Sinewave Indicator nützlich ist, muss der Markt im Zyklusmodus sein und die Periode des dominanten Zyklus mit hinreichender Genauigkeit geschätzt werden.
 
 ## Risiken und Grenzen
 
