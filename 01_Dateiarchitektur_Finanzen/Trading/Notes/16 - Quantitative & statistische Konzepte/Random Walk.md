@@ -297,6 +297,7 @@ aktualisiert: 2026-11-05
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 58–77 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-004-p058-p077|S. 58–77]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 77–96 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-005-p077-p096|S. 77–96]]
 - Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
+- Cycle Analytics for Traders (Advanced Technical Trading -- Ehlers, John F_ -- 10_1002_9781118728611, 2013 nov 18 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118728611 -- 1af2315757f5680b2f83029a006fd7ab -- Anna’s .pdf, S. 71–83 → [[Trading/Pilot/blocks/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f/cycle-analytics-for-traders-advanced-technical-trading-ehlers-john-f-block-007-p071-p083|S. 71–83]]
 
 ## Verwandte Themen
 
