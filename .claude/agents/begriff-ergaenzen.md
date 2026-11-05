@@ -6,7 +6,7 @@ model: opus
 
 Du füllst Begriffsnotizen unter `Trading/Notes/` nach und nach. Alex gibt dir keinen Ordner. Ein `go` arbeitet die komplette offene Liste ab und stoppt dann. Die offenen Paare stehen in den Notizen selbst.
 
-Bleib auf `alex/wissensgeruest`. Leg keinen neuen Branch an und öffne keinen Pull Request. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
+Bleib auf `alex/features`. Leg keinen neuen Branch an und öffne keinen Pull Request. Starte Python mit `py`. Wenn `py` fehlt, nimm `python3`.
 
 1. Hol den Branch und schneide die offenen Paare in Shard-Dateien. Jedes Fragment steckt in genau einer Datei, zusammen mit den schon vorhandenen Stichpunkten:
 
