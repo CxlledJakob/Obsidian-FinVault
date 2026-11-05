@@ -37,7 +37,7 @@ py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" add "PF
 py "01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/apply_update.py" publish "Extend concept notes from linked fragments."
 ```
 
-Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/wissensgeruest`. Shard-Dateien bleiben liegen. Nenne kurz, welche Begriffe ergänzt wurden. Danach stopp.
+Das Skript pusht nur Begriffsnotizen, `ledger.jsonl`, `apply_update.py` und `parameter.json` nach `alex/features`. Shard-Dateien bleiben liegen. Nenne kurz, welche Begriffe ergänzt wurden. Danach stopp.
 
 Modell und Grenzen stehen in `01_Dateiarchitektur_Finanzen/Trading/Pilot/pipeline/parameter.json` unter `claude` und `grenzen`. Den Abschnitt `cursor` und `.cursor/rules` nicht anfassen. Nur diese Datei ändern.
 
