@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/14 - Marktzyklen/14 - Marktzyklen|14 - Marktzyklen]]"
 weitere_hauptthemen: []
 unterthema: "Zyklische Analyse"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Zyklusdominanz
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -26,6 +24,9 @@ aktualisiert: 2026-10-26
 
 ## Funktionsweise
 
+- Der Bandpassfilter kann als relativ einfache Messung des dominanten Zyklus genutzt werden.
+- Ein Zyklus ist vollständig, wenn die Wellenform seit dem letzten Nulldurchgang zweimal die Null kreuzt; jeder Nulldurchgang markiert also eine halbe Zyklusperiode, und die dominante Zyklusperiode ist das Doppelte des Abstands zwischen aufeinanderfolgenden Nulldurchgängen.
+- Im Code wird bei jedem Nulldurchgang DC = 2 * counter gesetzt; DC wird nach oben auf 1,25 * DC[1] und nach unten auf 0,8 * DC[1] begrenzt, und DC wird nicht kleiner als 6.
 
 ## Voraussetzungen
 
@@ -35,9 +36,14 @@ aktualisiert: 2026-10-26
 
 ## Regeln und Kriterien
 
+- Für die Messung soll der Durchlassbereich des Bandpassfilters verbreitert werden, damit die Selektivität des Filters die Messung nicht verzerrt. Eine Eingangsbandbreite von 0,7 ergibt einen etwa oktavbreiten Durchlassbereich.
+- Bei Mittenperiode 20 und relativer Bandbreite 0,7 beträgt die Bandbreite 14, und der Durchlassbereich reicht von 13- bis 27-Bar-Perioden.
+- Ein Hochpassfilter, eine Oktave unter der Halbbandbreitenkante des Bandpassfilters abgestimmt, ist zwingend, damit der gefilterte Ausgang nominell mittelwertfrei ist; ohne Mittelwert null können die Nulldurchgänge erheblich fehlerhaft sein.
+- Weil die Messung von Nulldurchgang zu Nulldurchgang stark schwanken kann, begrenzt der Code die Änderung zwischen Messungen auf höchstens 25 Prozent.
 
 ## Risiken und Grenzen
 
+- Die Messung der dominanten Zyklusperiode über Nulldurchgänge der Bandpasswelle ist einfach, aber nicht unbedingt die genaueste Methode; genauere Verfahren untersuchen den gesamten Spektralgehalt der Daten.
 
 ## Beispiele
 

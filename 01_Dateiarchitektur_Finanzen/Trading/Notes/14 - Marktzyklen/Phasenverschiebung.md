@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/14 - Marktzyklen/14 - Marktzyklen|14 - Marktzyklen]]"
 weitere_hauptthemen: []
 unterthema: "Zyklische Analyse"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Phasenverschiebung
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Ist die Mittenperiode eines Bandpassfilters auf eine statische Sinuswelle mit derselben Periode abgestimmt, hat der Ausgang überhaupt keine Verzögerung.
+- Die Phasenverschiebung über die Bandbreite eines Bandpassfilters ist unvermeidbar.
+- Die Phasenverschiebung verdoppelt sich jedes Mal, wenn die Zahl der Pole in der Übertragungsfunktion verdoppelt wird. Deshalb soll im Trading der einfachste mögliche Filter genutzt werden, um Verzerrungen durch Phasenverschiebung zu minimieren.
+- Ein Bandpassfilter, der auf eine kürzere Periode als den dominanten Zyklus abgestimmt ist, liefert einen Ausgang, der dem Swing der Eingangsdaten vorausläuft.
+- Ein Bandpassfilter, der auf eine längere Periode als den dominanten Zyklus abgestimmt ist, liefert einen Ausgang, der dem Swing der Eingangsdaten hinterherläuft.
 
 ## Funktionsweise
 
@@ -32,6 +35,9 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Ein zweiter Hochpassfilter, seriell an den Ausgang des Bandpassfilters geschaltet und auf dessen hochfrequente kritische Frequenz abgestimmt, erzeugt eine vorauslaufende Wellenform, die dem Bandpassausgang ähnelt und eine Phasenvorlauf-Charakteristik hat.
+- Eine vorauslaufende Wellenform über die Änderungsrate des Bandpassausgangs wäre zu erratisch, um als Handelsindikator zu taugen.
+- Der vorauslaufende Trigger kreuzt den Bandpassausgang genau an den Hochs und Tiefs der Wellenform, außer wenn die Daten trenden.
 
 ## Regeln und Kriterien
 
@@ -41,6 +47,9 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Ein 20-Bar-Bandpassfilter mit 30 Prozent Bandbreite auf 20-Bar-Daten hat keine Verzögerung.
+- Wird der Bandpassfilter auf seine Halbleistungsperiode von 17 Bars abgestimmt, ist der 20-Bar-Datenzyklus länger als die abgestimmte Frequenz, und der Ausgang hat 65 Grad Verzögerung (Abstimmung 15 Prozent zu lang laut Abbildungstitel).
+- Wird der Bandpassfilter auf seine andere Halbleistungsperiode von 23 Bars abgestimmt, ist der 20-Bar-Datenzyklus kürzer als die abgestimmte Frequenz, und der Ausgang hat 65 Grad Vorlauf (Abstimmung 15 Prozent zu kurz laut Abbildungstitel).
 
 ## Unterschiedliche Quellenpositionen
 

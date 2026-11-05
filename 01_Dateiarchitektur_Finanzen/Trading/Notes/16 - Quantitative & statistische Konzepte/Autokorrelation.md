@@ -182,6 +182,11 @@ aktualisiert: 2026-11-05
 - Im Markov-Switching-GARCH-M-Modell (12.55) folgt aus der Abhängigkeit der Rendite von der Volatilität, dass die Rendite auch seriell korreliert ist und das Modell damit eine gewisse Vorhersagbarkeit der Rendite hat.
 - Die Zustände künftiger Renditen sind unbekannt, sodass eine Prognose dieses Modells eine Mischung über mögliche Zustandskonfigurationen ist und die Punktprognose oft hohe Unsicherheit hat.
 - Beim GARCH-M für die monatlichen Logrenditen von General Electric von 1926 bis 1999 geben die Ljung-Box-Statistiken der standardisierten Residuen und ihrer Quadrate keinen Hinweis auf Modellunzulänglichkeit.
+- Die Autokorrelationsfunktionen ökonomischer Zeitreihen wie Aktienkurse über Tage, Wochen oder Monate oder das Bruttosozialprodukt über Jahre fallen nicht exponentiell ab, wie sie es bei einem einfachen autoregressiven Prozess täten.
+- Stattdessen erreichen die Autokorrelationsfunktionen vieler ökonomischer Zeitreihen eine Asymptote ungleich null und bleiben dort über die gesamte Reihe, oft auf niedrigem Niveau. Das zeigt, dass weiter zurückliegende Ereignisse die aktuellen Preise weiter beeinflussen.
+- Weißes Rauschen hat keine Korrelation in der Zeit, und Random-Walk-Rauschen (Brownsche Bewegung) hat keine Korrelation zwischen den Inkrementen.
+- Rauschen in ökonomischen Daten wird meist als langfristige Abhängigkeit oder Long Memory untersucht; 1/F-Rauschen ist gleichbedeutend mit langfristiger Abhängigkeit.
+- Nach Ehlers lassen sich Märkte als Rauschen mit unterschiedlich starkem Langzeitgedächtnis beschreiben.
 
 ## Funktionsweise
 

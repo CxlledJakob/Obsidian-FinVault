@@ -165,6 +165,8 @@ aktualisiert: 2026-11-05
 - Zeitretracements und Alternate Time Projections arbeiten zusammen und engen die breite Zone auf ein konkretes Zeitziel für den Abschluss einer Korrektur ein. Eine relativ enge Spanne aus diesen Projektionen plus dem jüngsten Zyklus ist ein Umkehrzeitpunkt hoher Wahrscheinlichkeit.
 - Dieselbe logische Folge wird für alle Marktbedingungen benutzt, nicht nur für einfache ABC-Korrekturen, und manchmal bis auf zwei oder drei Bars verengt.
 - Der Dynamic-Time-Projection-Report bündelt die Zeitfaktoren zu den Zeiten mit den meisten Treffern. Ein solches Ziel lässt sich für jede Musterstruktur bilden, einschließlich Welle C und Welle 5.
+- Ein Decycler-Oszillator entsteht, indem man den Ausgang eines Hochpassfilters mit kürzerer Cutoff-Periode vom Ausgang eines Hochpassfilters mit längerer Cutoff-Periode abzieht. Sehr lange Zykluskomponenten und der statische Anteil werden entfernt, kürzere Zykluskomponenten durch Auslöschung ebenfalls, und die Trendlinie erscheint als Oszillator.
+- Der Decycler dient als „Instantaneous Trend Line“ mit sehr geringer Verzögerung: Die längsten Zykluskomponenten werden weniger als fünf Bars verzögert, bei einem 20-Bar-Zyklus beträgt die Verzögerung etwa 1,5 Bars.
 
 ## Voraussetzungen
 
@@ -180,6 +182,9 @@ aktualisiert: 2026-11-05
 - Momentum, Preis und Zeit werden genutzt, um zu bestimmen, ob der Markt eine Korrektur abschließen und ein Long-Setup bilden kann, deutlich bevor er ein Schwunghoch nimmt.
 - Kapitel 4 behandelt das Preisziel hoher Wahrscheinlichkeit, an dem ein ABC und andere Korrekturen abgeschlossen werden.
 - Die Aufgabe ist, Bedingungen mit wahrscheinlich hohem Ergebnis im Voraus zu erkennen und vorbereitet zu sein. Wird der Trade ausgeführt und verfehlt, bleibt der Verlust akzeptabel und Teil des Geschäfts.
+- Nach Ehlers zeigt ein Decycler-Oszillator die Übergänge zwischen Aufwärts- und Abwärtstrends an seinen Nulldurchgängen.
+- Alternativ lassen sich die Steigungswechsel des Decycler-Oszillators leichter erkennen als die Steigungswechsel des ursprünglichen Decyclers.
+- Die optimalen Cutoff-Perioden für den Decycler-Oszillator lassen sich nach Ehlers leicht durch Experimentieren finden; im Beispiel liegt die Cutoff-Periode bei 30 Bars und die längere Cutoff-Periode des Oszillators bei 60 Bars.
 
 ## Regeln und Kriterien
 

@@ -47,6 +47,9 @@ aktualisiert: 2026-11-05
 - Die Varianz der Zyklusinnovation wird mit (1 minus δ²) skaliert. Bei δ gleich 1 verschwindet diese Innovationsvarianz.
 - GetSsfStsm lässt bis zu zehn solcher Zykluskomponenten zu. Jede Komponente wird durch σε, die Frequenz λc und den Dämpfungsfaktor δ beschrieben.
 - Die Saisonperiode s ist davon getrennt: s ist die Zahl der Saisons im Jahr in der Saisonkomponente γt.
+- Nach Ehlers ist ein 10-Bar-Zyklus etwa die kürzeste für das Trading nützliche Zyklusperiode, und Zyklusperioden länger als 48 Bars können oft als Trends betrachtet werden.
+- Der Zyklusgehalt von Kursdaten schwingt weitgehend wie eine Sinuswelle mit variabler Amplitude und variabler Periodizität.
+- Die dominante Zyklusperiode lässt sich schätzen, indem man die Zahl der Bars zwischen Nulldurchgängen des Bandpassausgangs zählt.
 
 ## Funktionsweise
 
@@ -97,6 +100,8 @@ aktualisiert: 2026-11-05
 - Die direkte Rechnung k gleich 2π geteilt durch den Arkuskosinus von 1,590253 geteilt durch 1,913308 ergibt 10,65638.
 - Die mittlere Dauer der Kontraktionsphasen beträgt etwa drei Quartale und die der Expansionsphasen etwa 3 Jahre; 10,62 Quartale sind der Kompromiss aus diesen beiden getrennten Dauern.
 - Dieses periodische Merkmal der Zykluslänge ist bei Wachstumsraten nationaler Volkswirtschaften üblich, auch bei vielen OECD-Ländern.
+- Als Testdaten dient eine Chirp-Sinuswelle, deren Periode kontinuierlich von 10 auf 60 Bars steigt; ein auf 20 Bars abgestimmter Bandpassfilter dämpft sowohl kürzere als auch längere Perioden.
+- In Excel: Spalte A zählt von 1 bis 1.000, Zelle B1 enthält = 60 + 5 * Sin(6.28318 * (0.1 − 0.000075 * a1)) und wird bis B1000 kopiert; die Phasenänderungsrate 0,1 − 0,000075 * Counter lässt die Periode von 10 auf 60 laufen, während der Zähler von 100 auf 1.000 steigt.
 
 ## Unterschiedliche Quellenpositionen
 

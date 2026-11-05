@@ -194,6 +194,10 @@ aktualisiert: 2026-11-05
 - Bei Handzic (2001) ist die naive Prognose ein Random Walk: Die beste Schätzung der heutigen Produktionsquote ist der Absatz von gestern. Solche Modelle ignorieren den Kontext und schneiden gewöhnlich schlecht ab.
 - Ein RNE von 1 bedeutet Gleichstand mit diesem Random Walk. Ein Wert unter 1 ist eine Verbesserung gegenüber ihm.
 - Die Gruppe mit nur einem Informationshinweis verbesserte den Random Walk knapp. Die Gruppe mit allen drei Hinweisen unterbot den Random Walk und zugleich die informationsärmere Gruppe deutlich.
+- Aus der Aussage der Effizienzmarkthypothese, dass der Preis alle verfügbaren Informationen voll widerspiegelt, wurde abgeleitet, dass aufeinanderfolgende Preisänderungen unabhängig und meist auch identisch verteilt sind; beide Hypothesen zusammen bilden das Random-Walk-Modell.
+- Das Random-Walk-Modell verlangt zusätzlich, dass die Wahrscheinlichkeitsdichte für alle Zeiten gleich ist; Ehlers hält das Modell für klar fehlerhaft.
+- Random-Walk-Rauschen (Brownsche Bewegung) hat keine Korrelation zwischen den Inkrementen, und Brownsche Pfade lassen sich aus einer Funktion mit spektraler Dichte proportional zu 1/F^α erzeugen.
+- Ein Hurst-Koeffizient von 0,5 zeigt einen echten Random Walk (Brownsche Zeitreihe) an.
 
 ## Funktionsweise
 
@@ -205,12 +209,22 @@ aktualisiert: 2026-11-05
 - Der Hauptfehler dieser Kette ist die Missachtung der Stichprobengröße und damit des Gesetzes der großen Zahlen.
 - Auf Basis der Repräsentativität wird angenommen, ein zufälliger Prozess müsse Daten erzeugen, die zufällig aussehen; jede Abweichung von diesem Stereotyp wird als Zeichen eines nichtzufälligen Prozesses gelesen.
 - Aktiencharts entsprechen der intuitiven Vorstellung von Ordnung; ob eine prognostizierbare Struktur per Augenschein erkannt werden kann, ist damit nicht beantwortet, denn Märkte können teilweise nichtzufällig sein.
+- Ehlers unterstellt genug Marktteilnehmer für eine statistische Random-Walk-Analyse, mit zwei Einschränkungen: Preise können sich nur in einer Dimension auf oder ab bewegen, und die Zeit schreitet monoton voran.
+- Beim Drunkard’s Walk bewegt sich ein Betrunkener auf einem eindimensionalen Gitter regelmäßig verteilter Punkte und macht nach jedem Münzwurf einen Schritt nach rechts oder links; nach n Schritten kann er an einem von 2n + 1 Orten sein.
+- Lässt man Gitterabstand ΔL und Schrittzeit ΔT so gegen null gehen, dass (ΔL)²/ΔT gleich der Diffusionskonstante D bleibt, folgt die Verteilung der Auslenkung der Diffusionsgleichung.
+- Der einfache Drunkard’s Walk hat kein Analogon zu Momentum. Bewegt sich der Betrunkene mit Wahrscheinlichkeit p in dieselbe Richtung wie zuvor und mit 1 − p in die Gegenrichtung, ergibt sich im Grenzfall nicht die Diffusionsgleichung, sondern die Telegrafengleichung; p = 1/2 ist der gewöhnliche Drunkard’s Walk.
+- Die Telegrafengleichung beschreibt Diffusion in begrenzten Bereichen mit x² < c²t² und beschreibt harmonische Bewegung von P(x, t).
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Nach Ehlers ergibt gleich verteilte Schrittwahrscheinlichkeit den Trendmodus (Diffusionsgleichung), und eine verzerrte Wahrscheinlichkeit der Bewegungsrichtung ergibt den Zyklusmodus (Telegrafengleichung).
+- Fragen sich die Trader „Geht der Markt hoch oder runter?“, ist die Wahrscheinlichkeit etwa 50 zu 50 und es entsteht ein Trendmodus; lautet die Frage „Setzt sich der Trend fort?“, gilt die Telegrafengleichung und es entsteht ein Zyklusmodus.
+- Im Rauchfahnen-Bild entspricht die Verbreiterung der Fahne der abnehmenden Genauigkeit von Trendpreisprognosen weiter in der Zukunft.
+- Wie Flussmäander sind Marktzyklen kurzfristig kohärent, über längere Spannen aber zufällig; man kann diese kurzfristigen Zyklen messen und nutzen, wenn man weiß, dass sie längerfristig kommen und gehen.
+- Weil die DSP-Werkzeuge Zyklen analysieren, lässt sich ein Trendmodus nach Ehlers daran festmachen, dass der Zyklusmodus versagt; mit zwei Modi kann man die Handelsstrategie zwischen ihnen umschalten.
 
 ## Regeln und Kriterien
 
