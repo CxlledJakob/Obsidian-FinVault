@@ -1,0 +1,217 @@
+{
+  "schema": "status-v1",
+  "ticker": "NFLX",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/Technisch/NFLX",
+  "stand": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - NFLX - Analysten-Update"
+  },
+  "next_id": 5,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 61,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib / Unterstützung (Getestet, Käufer sollen eingestiegen sein)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "widerstand",
+      "wert": 83,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Bruch darüber erwartet)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "zone",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone (Grenzen nicht genannt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "kursziel",
+      "wert": 74,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (Nächstes Ziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht NFLX nach einem sauberen Test des 0.618 Fib bei 61 USD in einer klaren ABC-Korrektur. Der Kurs liegt bei 66 USD und notiert unter dem 200 WMA, aber in der Buy Zone. Als nächstes Ziel nennt der Analyst das 200 WMA bei 74 USD, darüber soll das 50 WMA bei 83 USD folgen.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet eine Rückeroberung des 200 WMA nach einigen Monaten unter diesem Niveau, ähnlich wie 2022, als der Kurs etwa fünf bis sechs Monate unter dem 200 WMA verblieb.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Rückeroberung des 200 WMA (74 USD) als Unterstützung\n- Bruch über das 50 WMA bei 83 USD",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Der Analyst sieht eine klare ABC-Korrektur.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Kurs liegt unter dem 200 WMA. Der Analyst hält es für selten, dass NFLX unter das 200 WMA fällt; der letzte vergleichbare Fall war 2022.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA bei 74 USD: vom Kurs verloren, Rückeroberung erwartet; nächstes Ziel des Analysten\n- 50 WMA bei 83 USD: Widerstand, Bruch darüber erwartet",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.618 Fib bei 61 USD: Unterstützung, laut Analyst sauber getestet, Käufer sollen eingestiegen sein",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Rückeroberung des 200 WMA (74 USD) als Unterstützung\n- Bruch über das 50 WMA bei 83 USD\n- Invalidierungsniveau nicht genannt\n- Zeithorizont nicht genannt",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Kein Invalidierungsniveau genannt\n- Kein Zeithorizont genannt\n- Grenzen der Buy Zone nicht genannt\n- Der Kurs liegt aktuell unter dem 200 WMA",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - NFLX - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-05",
+      "update": "2026-11-05 - NFLX - Analysten-Update",
+      "nachtrag": false,
+      "neu": 4,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-05T21:32:48.779Z",
+      "kosten_cent": 0.0994
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - NFLX - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-05T21:32:48.779Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.1",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.0994
+  }
+}

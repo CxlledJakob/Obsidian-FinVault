@@ -17,7 +17,7 @@ quell_url: "https://www.patreon.com/thelonginvestor/posts/nflx-168611206"
 gmail_message_id: "1a06d38d4273509e"
 inhalt_vollstaendig: true
 vorgaenger: ""
-nachfolger: "[[2026-10-30 - NFLX - Analysten-Update]]"
+nachfolger: "[[2026-11-05 - NFLX - Analysten-Update]]"
 importiert_am: 2026-09-04T17:39:38.332Z
 ---
 # 2026-09-04 - NFLX - Analysten-Update
