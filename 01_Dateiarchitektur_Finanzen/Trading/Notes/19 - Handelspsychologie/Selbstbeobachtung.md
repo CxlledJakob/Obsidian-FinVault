@@ -55,5 +55,8 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - Mind Over Markets_ Power Trading with Market Generated Information, Updated Edition.pdf, S. 297–314 → [[Trading/Pilot/blocks/mind-over-markets/mind-over-markets-block-019-p297-p314|S. 297–314]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 628–647 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-034-p628-p647|S. 628–647]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 647–666 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-035-p647-p666|S. 647–666]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 666–685 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-036-p666-p685|S. 666–685]]
 
 ## Verwandte Themen
