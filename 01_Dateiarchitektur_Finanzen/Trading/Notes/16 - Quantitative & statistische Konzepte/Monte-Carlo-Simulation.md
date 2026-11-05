@@ -124,6 +124,7 @@ aktualisiert: 2026-11-05
 - Montier baut ein künstliches Universum aus 100 Fondsmanagern, jeder mit einem wahren Alpha von 3 Prozent und einem Tracking Error von 6 Prozent, und trifft sie mit zufälligen Schocks über 50 Jahre.
 - Nach 50 Jahren zeigt der beste Manager ein Alpha von 5,2 Prozent und der schlechteste eines von 1 Prozent. In der Kapitelankündigung sind dieselben Enden auf 5 und 1 Prozent gerundet.
 - An den Jahresrenditen ist kaum zu erkennen, wer der gute und wer der schlechte Manager ist, obwohl jeder per Konstruktion dasselbe wahre Alpha von 3 Prozent hat.
+- Laut Ehlers ist die Monte-Carlo-Analyse der beste und verlässlichste Weg, die Performance einer Handelsstrategie zu beurteilen.
 
 ## Funktionsweise
 

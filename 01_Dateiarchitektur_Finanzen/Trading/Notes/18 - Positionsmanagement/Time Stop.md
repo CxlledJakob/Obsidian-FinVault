@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Time Stop
@@ -58,6 +58,8 @@ aktualisiert: 2026-11-01
 - In der Konfiguration [0,1,1] endet die Position nach einer Anzahl Bars, sofern nicht vorher der Stop greift.
 - In der Konfiguration [1,0,1] wird bis zu einem Gewinn oder bis zum Überschreiten der maximalen Haltedauer gehalten, ohne Rücksicht auf zwischenzeitliche Buchverluste.
 - In der Konfiguration [1,1,0] ist die vertikale Barriere aus, Gewinn wird mitgenommen, solange kein Stop greift, und die Haltedauer ist nicht begrenzt.
+- Swing-Trades brauchen einen Sicherheitsventil-Ausstieg (Safety Valve), weil sie in Erwartung eines Preiswendepunkts eingegangen werden.
+- Das Sicherheitsventil kann entweder auf der Zeit im Trade oder auf einem Preisausbruch beruhen.
 
 ## Risiken und Grenzen
 

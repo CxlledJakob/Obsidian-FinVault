@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Stop-Loss
@@ -187,6 +187,7 @@ aktualisiert: 2026-11-01
 - Beim Swing-Breakout liegt der initiale Schutz-Stop-Loss einen Tick unter beziehungsweise über dem Swing-Hoch oder Swing-Tief, das vor dem Einstieg entstanden ist.
 - Bei der Momentum-Reversal-Strategie liegt der initiale Schutzstop nach Ausführung einen Tick unter dem Swing-Tief oder über dem Swing-Hoch vor dem Einstieg.
 - Ein Handelssystem bestimmt mit vollständig objektiven Regeln auch den genauen Stop-Loss-Preis.
+- Laut Ehlers sollten Stop-Loss-Techniken nur eingesetzt werden, um große Verluste zu begrenzen.
 
 ## Risiken und Grenzen
 
