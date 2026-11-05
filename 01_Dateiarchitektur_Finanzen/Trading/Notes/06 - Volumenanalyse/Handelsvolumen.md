@@ -115,6 +115,8 @@ aktualisiert: 2026-11-05
 - Boeing hatte am 1. Dezember 2008 in den regulären Handelsstunden 43.894 Transaktionen.
 - Im ADS-Modell für IBM ist das durch 1000 geteilte Volumen des vorherigen Trades statistisch nicht signifikant.
 - Die tägliche Zahl der Transaktionen und der zeitliche Abstand zwischen den Trades stehen bei IBM im Dezember 1999 in einem inversen Verhältnis.
+- Ein Kennzeichen des Blasenendes ist der Zusammenbruch der Umsätze, das Zeichen verlorenen Glaubens an die Aktienkultur. Die laufenden Umsätze bleiben auf massiven, rekordhohen Niveaus.
+- Der verwendete Umsatz ist das gemeldete Volumen relativ zur durchschnittlichen Zahl gelisteter Aktien, danach trendbereinigt, um die zunehmende Gewohnheit herauszunehmen, dass Händler miteinander handeln. Selbst nach dieser Bereinigung bleiben die Umsätze auf Rekord.
 
 ## Funktionsweise
 
@@ -152,6 +154,8 @@ aktualisiert: 2026-11-05
 - Die CME bot früher mit Chart-EX ein ähnliches Bild für Futures an. Die Autorin hält dieses Angebot für eingestellt.
 - Auf einem Tick-Chart wird Trade Volume statt Tick Volume gewählt, sonst sind alle Säulen gleich hoch.
 - Richard Arms entwickelte Equivolume und veröffentlichte es 1994 in Volume Cycles in the Stock Market. Sein Satz dazu: trüge der Markt eine Armbanduhr, wäre sie in Aktien geteilt, nicht in Stunden.
+- Das Handelsvolumen kann ein Schlüsselindikator der Endphasen einer Blase sein.
+- Als Stimmungsindikator dient der trendbereinigte Umsatz der NYSE, gemeldetes Volumen geteilt durch die durchschnittliche Zahl gelisteter Aktien. Darüber wurde zuvor im Global Strategy Weekly vom 29. November 2001 geschrieben.
 
 ## Regeln und Kriterien
 
@@ -240,6 +244,11 @@ aktualisiert: 2026-11-05
 - Im GLD handelten einzelne Kerzen über 6 Millionen bei einem Durchschnitt um 500.000.
 - Der Wochenchart des Dow Jones ist die Zeitebene, die ein längerfristiger Investor für Aktien und die großen Indizes betrachtet.
 - Der ES E-Mini wird als der von großen Akteuren am stärksten manipulierte Index beschrieben. Das Beispiel ist ein Zehn-Minuten-Chart über eine Session zwischen dem Tag davor und dem Tag danach.
+- 2002 blieben die Handelsumsätze erstaunlich hoch. Das wurde als Zeichen gelesen, dass sich die Leute der Welt nach der Blase noch nicht vollständig angepasst hatten. Kapitulation und Revulsion fehlten.
+- Das Ende von Bärenmärkten fällt gewöhnlich mit einem Einbruch des Volumens zusammen. Ein solches Zeichen fehlte, der Umsatz blieb massiv hoch.
+- Das Volumen relativ zur Marktkapitalisierung blieb auf erstaunlich hohem Niveau, vergleichbar den späten 1920ern.
+- Im Labormarkt handelten die Diplom-Ökonomen zum richtigen Preis, aber die Umsätze lagen viel höher, als die Theorie erwarten ließe.
+- Bei den Undergraduates und bei den Geschäftsführern entstanden Blasen in demselben einfachen Markt. Die Executives trieben den Preis im Hoch auf 570 Prozent des Fundamentalwerts, die Undergraduates auf eine Lücke von 270 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 

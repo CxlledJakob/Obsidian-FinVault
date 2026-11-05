@@ -316,6 +316,29 @@ aktualisiert: 2026-11-05
 - Im Modell (12.55) ist die zustandsabhängige Risikoprämie βi√ht der von der Volatilität abhängige Bestandteil der Rendite; zur Identifizierbarkeit gilt β2 > β1, sodass Zustand 2 die höhere Risikoprämie trägt.
 - Beim einfachen GARCH-M der monatlichen GE-Logrenditen ist die Risikoprämie positiv und signifikant, mit rt = 0,182√ht + at und p-Werten aller Parameterschätzungen unter 0,0006.
 - Die MCMC-Punktprognosen von Rendite und Volatilität sind die Stichprobenmittel der in den letzten Gibbs-Iterationen simulierten Realisationen.
+- Programm A rettet 200 von 600 Menschen sicher. Programm B rettet mit einem Drittel Wahrscheinlichkeit 600 und mit zwei Dritteln niemanden und hat damit denselben Erwartungswert von 200 geretteten Leben. Ein sicherer Wert ist einem genau gleichen erwarteten Auszahlungsbetrag vorzuziehen, weil nur der sichere Wert garantiert ist.
+- 20 Prozent der Fondsmanager waren zwischen A und B oder zwischen C und D indifferent und rechnen das Risiko damit nicht ein. Programm C lässt 400 sicher sterben, Programm D lässt mit einem Drittel niemanden und mit zwei Dritteln 600 sterben, ebenfalls ein Erwartungswert von 400 Toten.
+- Im Zahlenspiel von 0 bis 100, dessen Ziel zwei Drittel des Durchschnitts ist, erfüllt nur null die Gleichung x gleich zwei Drittel mal x. Unter Rationalität und gemeinsamem Wissen ist null das einzige Nash-Gleichgewicht im Fixpunkt. Der Durchschnitt der 300 Manager war 30, zwei Drittel davon sind 20.
+- Markowitz berechnet die Gewichte aus erwarteter Rendite, erwartetem Risiko und der Korrelation, sodass das Portfolio die höchste Rendite für ein gegebenes Risiko hat.
+- Mittelwert-Varianz-Effizienz heißt, die Varianz der Portfoliorendite bei gegebener erwarteter Rendite zu minimieren und die erwartete Rendite bei gegebener Varianz zu maximieren.
+- Fama und French (2004): der Reiz des CAPM sind kraftvolle Vorhersagen darüber, wie Risiko zu messen ist und wie erwartete Rendite und Risiko zusammenhängen; die empirische Bilanz ist schlecht genug, diese Anwendung zu entwerten.
+- Empirisch ist der Zusammenhang flach bis invers: niedriges Beta geht mit höherer Rendite einher, hohes Beta mit niedrigerer.
+- Nach Blanchard und Watson (1982) ist der Preis die erwarteten Fundamentaldaten der nächsten Periode plus den erwarteten Preis, zu dem das Asset dann verkauft werden kann, jeweils bedingt auf die gesamte Information in t.
+- Eine Gleichgewichtslösung ist eine beliebige Blase, sofern der Blasenwert in t dem erwarteten diskontierten Blasenwert in t+1 entspricht, die Blase also mit dem Diskontsatz weiter steigt.
+- Bei rationalen stochastischen Blasen gibt es in jeder Periode eine Platzwahrscheinlichkeit; steigt sie, müssen die Preise noch schneller steigen, damit das Weiterreiten für das höhere Crashrisiko entschädigt wird.
+- Die jüngste SIA-Umfrage wies Erwartungen von Privatanlegern um etwa 10 % p.a. aus Aktien aus; die Lücke zwischen dieser irrationalen Erwartung und der rationalen Erwartung aus Montiers Modell blieb massiv.
+- Die erwartete Rendite ist gleich der Dividendenrendite plus dem Dividendenwachstum plus jeder Änderung der Bewertung.
+- Unter der Annahme, die Eigenkapitalrendite gleiche der geforderten Aktienrendite und den Kapitalkosten, ist die Earnings Yield k = e/p die erwartete reale Aktienrendite.
+- Die Dividendenrendite ist das Bewertungsmaß D/P, deshalb geht die Bewertung in die langfristig erwartete Rendite ein.
+- Philips (1999) zeigt, dass sich derselbe Zusammenhang über das Residual-Income-Modell oder die Earnings Yield schreiben lässt; die Darstellungen sind isomorph.
+- Weil langfristig über 50 Prozent der US-Aktien-Gesamtrendite aus der Dividendenrendite kamen und die aktuelle Dividendenrendite nur 1,7 Prozent beträgt, kann die Gesamtrenditegrafik die Renditen überzeichnen, die Anleger erwarten dürfen.
+- Beim Kauf im obersten einfachen KGV-Quartil liegt die empirische Wahrscheinlichkeit, über zehn Jahre 3 Prozent reale Jahresrendite zu erreichen, bei 50 Prozent.
+- Für die reale Preissteigerung über zehn Jahre in überbewerteten Märkten liegt die Chance auf mindestens 2,5 Prozent pro Jahr bei 30 Prozent.
+- Die erwartete Rendite von Rohstoff-Index-Futures ist die Summe aus Spot-Return, Roll-Return und Collateral-Return.
+- Im großzügigen Fall wächst der Spotpreis mit 3,5 Prozent realem Trend-BIP, die Rollrendite ist null und der Collateral-Return 4,5 Prozent; die Summe ist 8 Prozent pro Jahr.
+- Mit vorsichtigeren Annahmen fällt die erwartete Rendite leicht auf 6 Prozent pro Jahr, gegen ein geometrisches Mittel des GSCI seit 1970 von 11,8 Prozent und deutlich unter die letzten fünf Jahre.
+- Die Kapitelzusammenfassung setzt für die Zukunft eher 6 Prozent pro Jahr an statt der historisch erzielten 12 Prozent.
+- Prognosen fallen leichter, wenn die Aufgabe in Teile zerlegt wird; deshalb werden die drei Bestandteile getrennt angesetzt statt die Future-Rendite in einem Schritt.
 
 ## Funktionsweise
 
@@ -411,6 +434,14 @@ aktualisiert: 2026-11-05
 - Die Posteriormittel des univariaten SV-Modells sind µ = 0,409, α0 = 0,454, α1 = 0,837 und σ²v = 0,086.
 - Die Posteriormittel des bivariaten Modells für IBM und S&P 500 sind β01 = 0,53, β02 = 0,51, α10 = 0,75, α11 = 0,80, σ²1v = 0,07, α20 = 0,43, α21 = 0,81, σ²2v = 0,07, γ0 = 0,38 und σ²u = 0,07.
 - Der Startwert von µ ist das Stichprobenmittel der Logrenditen; die Startwerte von α und σ²v sind die Kleinste-Quadrate-Schätzung von ln(h0t) aus dem angepassten GARCH(1,1).
+- Im Investitionsspiel ist der erwartete Auszahlungsbetrag der Annahme 1,25 Dollar je Runde gegenüber 1 Dollar bei Verzicht. Wer in allen 20 Runden investiert, hat nur eine Chance von 13 Prozent, weniger zu verdienen, als wenn er die 20 Dollar einfach hält.
+- Blinkt ein Licht in 70 Prozent und das andere in 30 Prozent der Fälle, trifft Frequency Matching nur in 58 Prozent der Fälle, gerechnet als 0,7 mal 0,7 plus 0,3 mal 0,3. Immer das häufigere Licht zu wählen trifft in 70 Prozent der Fälle.
+- Im Übernahmespiel ist jedes positive Gebot ein negativer Erwartungswert. Bei 60 Dollar Angebot ist der bedingte Wert unter der alten Führung im Schnitt 30 Dollar und für den Käufer 45 Dollar, also 1,5 mal 30.
+- Alle Werte zwischen 0 und 100 Dollar sind gleich wahrscheinlich. Die richtige Offerte ist deshalb null, nicht die naive Spanne von 50 bis 75 Dollar, die den Auswahlmechanismus des Verkäufers ignoriert.
+- Bechara et al. (2004): Über 20 Runden des Münzwurfspiels zeigt sich kein Lernen. Hätten die Spieler gelernt, hätten sie in jeder Runde investiert, weil das optimal ist. Stattdessen investierten mit der Zeit immer weniger, sie wurden also schlechter.
+- Im Labormarkt von Caginalp et al. (2000) sind die Dividenden des gehandelten Assets unsicher, ihre Verteilung aber bekannt: Mit je Wahrscheinlichkeit 0,25 betragen die Auszahlungen 0, 8, 28 und 60.
+- Im Experiment von Ackert und Church (2001) ist der Erwartungswert je Periode 0,48 Dollar, in Periode 15 also 15 mal 0,48 gleich 7,20 Dollar, und er fällt danach je Periode um 0,48 Dollar.
+- Die standardisierten Auszahlungen 0,00, 0,16, 0,56 und 1,20 haben je die Wahrscheinlichkeit 0,25 und die Erwartungswerte 0,00, 0,04, 0,14 und 0,30, Summe 0,48.
 
 ## Unterschiedliche Quellenpositionen
 

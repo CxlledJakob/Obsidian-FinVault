@@ -129,6 +129,21 @@ aktualisiert: 2026-11-05
 - Der Spezialfall mit xt gleich 1 für alle t und skalarem β ist das ARMA(p, q) mit von null verschiedenem Mittelwert.
 - Der erweiterte Zustand stapelt den ARMA-Zustand von zt und den konstanten Koeffizienten β. Die Beobachtungszeile ist (1, 0, bis 0, x′t) der Länge m plus k, mit m gleich max(p, q plus 1).
 - GetSsfRegArma baut diese Form. Im Beispiel yt gleich β0 plus β1 xt plus zt, t von 1 bis 168, folgt zt einem ARMA(2,1) mit Koeffizienten 1,2 und minus 0,35 sowie MA-Koeffizient minus 0,25 in der Darstellung at minus 0,25 at minus 1.
+- Bei Handzic (2001) ist der optimale Fehler das Ergebnis einer Regressionsgleichung mit den drei Hinweisen Lufttemperatur, Sonnenschein und Besucherzahl. Ein ROE von 1 heißt, die Person verarbeitet die Information genau wie dieses Regressionsmodell. Ein Wert über 1 ist suboptimale Verarbeitung.
+- Die Gruppe mit drei Hinweisen verarbeitete die Information deutlich schlechter als die Gruppe mit einem Hinweis.
+- Die Entscheidungsgenauigkeit RNE setzt den absoluten Fehler der Person ins Verhältnis zum Fehler einer naiven Prognose. Ein RNE von 1 entspricht dieser naiven Prognose, ein Wert unter 1 ist eine Verbesserung.
+- Die drei Hinweise galten nach Gesprächen mit Eisverkäufern am Bondi Beach als gleich zuverlässig für die Nachfrage des nächsten Tages. Unter- und Überschätzung verursachten gleiche Kosten.
+- Eine Regression der aktuellen US-Lage auf neun frühere Blasen dient der Prognose des künftigen Aktienmarktpfads; die Zeitachse misst Monate, der Blasengipfel liegt bei Monat 60.
+- Das R² beträgt 0,93, das adjustierte R² 0,926; die US-Aktienblase folgte dem Muster früherer Blasen bisher außerordentlich eng.
+- Die Regression ist ökonometrisch problematisch, weil viele sehr ähnliche Blasen zugleich eingehen und Multikollinearität entsteht.
+- Die anschließende Regression des S&P 500 auf die erste Hauptkomponente, die archetypische Blase, und die daraus erzeugten Prognosen stützen das erste Ergebnis.
+- Auf Basis der vergangenen Blasen ist der Ausblick für den US-Aktienmarkt unangenehm.
+- Die zyklischen Prognosetests sind Einfaktorregressionen. Die Renditen werden verzögert, damit nur zum Prognosezeitpunkt bekannte Information eingeht; berichtet werden t-Statistik und adjustiertes R², fette Werte sind signifikant, und die t-Statistiken verwenden wo nötig Newey-West.
+- Auf Assetklassenebene bleiben die adjustierten R² meist bei 0,00. Ausnahmen sind das nachlaufende Gewinnwachstum mit 5 Prozent der US-Einjahres-Aktienrendite, der OECD-Frühindikator mit 2 Prozent der Dreimonats-Überrendite, die Zinskurve in den dismal years mit 15 Prozent und das Prognose-BIP in Japan nach der Blase mit 21 Prozent der Einjahres-Überrendite.
+- Für die relative Rendite von US-Grundstoff gegen Versorger erklären ISM und MCI über zwölf Monate 22 beziehungsweise 21 Prozent, trotz nachlaufender Daten und nur einer Faktorvariablen.
+- Von 36 solchen Regressionen auf US-Aktien und Überrenditen 1984–2003 war nur eine signifikant, und sie wird als Zufallsbefund des Data Minings behandelt.
+- Mulligan und Hastie (2005) schätzen mittlere Regressionsgewichte der fünf Geschichtsbausteine Kontext, Problem, Reaktion, Plan und Ergebnis, getrennt danach, ob die Firmengeschichte in Reihenfolge oder verwürfelt erzählt wurde. In der richtigen Reihenfolge springt das Gewicht des Ergebnisbausteins nach oben.
+- In der Bedingung mit Geschichtenreihenfolge stützten sich die Teilnehmer bei der Entscheidung vor allem auf den Ergebnisbaustein. Sie zerlegen die Geschichte nicht in ihre Teile und nutzen diese nicht unabhängig, selbst wo das rational wäre.
 
 ## Funktionsweise
 

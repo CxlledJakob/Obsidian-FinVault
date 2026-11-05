@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Backtesting
@@ -394,6 +394,8 @@ aktualisiert: 2026-11-01
 - Hat das Modell frühere Stressphasen im Backtest überstanden, gibt es nach der Erfahrung des Autors keinen Grund, den Hebel vor einer kommenden Krise zu senken.
 - Weicht der Live-Handel vom Backtest ab, liegt das oft nicht an Fallstricken beim Backtesten, sondern an einem grundlegenden Wandel der Marktstruktur, einem Regimewechsel durch staatliche Regulierung oder makroökonomische Änderungen.
 - Wenn eine Strategie den Backtest underperformt, soll nach einem fundamentalen Grund gesucht und dieser quantitativ geprüft werden, statt blind weitere Regeln und Indikatoren hinzuzufügen.
+- Der Backtest kommt zu dem Schluss, dass die meisten Bewertungskriterien von der Anpassung an die Sektorpeers profitieren, Preismomentum aber nicht.
+- Über die letzten zehn Jahre arbeitete der nicht adjustierte Ansatz im Allgemeinen besser, über 30 Jahre und in den zehn Jahren vor der Blase der sektorrelative; absolute und risikobereinigte Renditen waren für die meisten Bewertungskennzahlen und in den meisten Regionen höher, mit der Ausnahme Japan, und die Signifikanz verbesserte sich meist.
 
 ## Funktionsweise
 
@@ -413,6 +415,24 @@ aktualisiert: 2026-11-01
 - Tägliche Renditen meinen hier die von einer Regel auf nullzentrierten oder detrended Marktdaten verdienten Renditen.
 - Zufällig gepaart heißt, dass die historischen täglichen Preisänderungen des Marktes verwürfelt und dann jeweils zufällig mit einem Regelausgang von +1 oder −1 gepaart werden.
 - Die ausgewiesene Rendite ist der Tages-P&L geteilt durch den Bruttomarktwert, die Summe der Beträge der um einen Tag verzögerten Positionsmarktwerte.
+- Das Universum sind die MSCI-Indizes; die Aktien werden erst nach trailing PE und dann nach dem tatsächlich gemeldeten Gewinnwachstum der nächsten zwölf Monate gereiht, als wäre die Zukunft perfekt bekannt.
+- Jede Sortierung bildet Quintile mit 20 Prozent des Universums, sodass 25 Portfolios aus Kombinationen von KGV und geliefertem Gewinnwachstum entstehen, deren Performance über die nächsten zwölf Monate verfolgt wird.
+- Für den globalen Markt werden Gesamtrenditen relativ zum Durchschnitt der Aktien im Universum über 1975 bis 2004 gemessen; die Analyse wurde in Preisen und in Gesamtrenditen gerechnet, und die Ergebnisse waren gegenüber dieser Spezifikation invariant.
+- Portfolio (5, 5) ist der billigste Value-Korb mit dem niedrigsten erreichten Gewinnwachstum, Portfolio (1, 1) der teuerste Korb mit dem höchsten gelieferten Wachstum, und Portfolio (1, 5) der billigste Korb mit dem höchsten Gewinnwachstum; die Beschriftung geht erst über die Spalten und dann die Zeilen hinunter.
+- Für den Test der Analystenprognosen musste die Stichprobe verkürzt werden, weil die Prognosen nicht weit genug zurückreichen; der Beginn ist 1988, also 17 Jahre, und das KGV wird durch die prognostizierte Wachstumsrate ersetzt, die mit dem späteren Ergebnis verglichen wird.
+- Die einfache Strategie, niedrige einjährige Trailing-Kurs-Gewinn-Verhältnisse zu kaufen und hohe zu verkaufen, wird am MSCI World von 1980 bis 2005 mit einjähriger Haltedauer und jährlichem Rebalancing geprüft und erzeugt 11 % p.a.
+- Zu jedem Jahresbeginn werden Dezile gebildet und über die folgenden zwölf Monate gemessen. Negative Kurs-Gewinn-Verhältnisse und Graham-und-Dodd-Verhältnisse unter 1 werden ausgeschlossen; fehlt eine volle Gewinnhistorie, wird das Verhältnis auf dem längsten verfügbaren Zeitraum gerechnet.
+- Kosten werden in dieser Rechnung ignoriert und wegen des jährlichen Rebalancings als niedrig eingeschätzt.
+- Geprüft werden die USA, Europa ohne Großbritannien, Großbritannien und Japan von 1993 bis Ende 2005. Das Universum ist eine Kombination aus FTSE- und MSCI-Indizes, Renditen und Preise sind in Dollar gemessen, Versorger und Finanzwerte sind ausgeschlossen, und es wird nur jährlich rebalanciert.
+- Neben den Little-Book-Definitionen wird eine geläufigere Earnings Yield, im Text PE genannt, zusammen mit der Rendite auf die Aktiva gerechnet, und jede Variable wird einzeln geprüft, um zu sehen, ob die Earnings Yield das Ergebnis treibt oder die Rendite auf die Aktiva eine eigene Rolle hat.
+- Es werden nur Jahresrenditen berechnet. Das Monatsprofil kann aus Hedgefonds-Sicht weniger attraktiv sein.
+- Der Anlass des Tests anderer Märkte ist die Prüfung, ob der Screen außerhalb der USA robust ist.
+- Jeden Monat und je Region werden aus einem proprietären Universum inklusive toter Aktien zwei Long-Short-Quintilportfolios gebaut: einmal auf den rohen Kennzahlen, einmal relativ zum Median der Branche.
+- Beim rohen PE geht das Portfolio long die billigsten 20 Prozent und short die teuersten 20 Prozent; praktisch wird die Gewinnrendite benutzt, damit Aktien mit negativem Gewinn enthalten bleiben.
+- Der sektorrelative Wert ist die Kennzahl minus dem Branchenmedian, etwa eine Dividendenrendite von 4 Prozent gegen einen Median von 3 Prozent, also 1 Prozentpunkt.
+- Bewertungsdaten sind as reported von MSCI; gemessen wird die durchschnittliche ungewichtete Monatsperformance, monatlich rebalanciert, über die letzten 30 Jahre.
+- GICS existierte über einen großen Teil des Backtestzeitraums nicht; die heutigen Sektoren ähneln den früheren Beschreibungen, und die Ergebnisse ähneln Forschung mit einem ganz anderen Klassifikationssystem.
+- Interessante annualisierte Renditen sind die mit einer t-Statistik von mindestens 2,0; je Periode wird unter dieser Schwelle die bessere Rendite je Faktor und Region hervorgehoben.
 
 ## Voraussetzungen
 
@@ -646,6 +666,7 @@ aktualisiert: 2026-11-01
 - Beispiel 5.1 wählt ein festes Trainingsfenster von 250 Tagen, weil es im Rückblick besser abschnitt als 20 Tage für die Hedge Ratio. Die ersten 250 Tage zählen nicht zur Performance.
 - Trotz angenommener konstanter Rollrendite hängt die Regression vom gewählten Tag und vom verfügbaren Kontraktsatz ab, das geschätzte Gamma variiert also langsam.
 - Die Log-Preise von CL gegen die Restlaufzeit liegen für die fünf nächsten Kontrakte nahezu auf einer Geraden. Weiter entfernte Kontrakte tun das oft nicht, dort bricht die Gleichung F(t, T) = S(t) mal exp(γ(t − T)).
+- Die US-Dezile der Little-Book-Strategie steigen nicht so gleichmäßig monoton wie bei Greenblatt. Dessen Bild entsteht am Russell 3000; hier umfasst das Universum nur rund 750 Titel, sodass jeder Titel im gleich gewichteten Portfolio mehr wiegt. Die sehr starke Performance der Dezile 2 und 3 geht auf nur ein paar Titel in einem einzigen Jahr zurück.
 
 ## Beispiele
 
@@ -685,6 +706,12 @@ aktualisiert: 2026-11-01
 - Ist die beobachtete mittlere Rendite einer Regel 15 Prozent, könnte das 95-Prozent-Konfidenzintervall anzeigen, dass die wahre Rendite zwischen 5 und 25 Prozent liegt. Die Breite von 20 Prozentpunkten stammt aus derselben Stichprobenverteilung, die der Hypothesentest nutzt.
 - Die Vier-Parameter-Regel verdiente im Trainingsset 50 Prozent, ihre Zwei-Parameter-Vorgängerregel 30 Prozent.
 - Im Testset verdiente die Vier-Parameter-Regel 20 Prozent und die einfache Regel aus zwei gleitenden Durchschnitten 15 Prozent.
+- Der Backtest der Little-Book-Strategie von Greenblatt in den USA, in Europa ohne Großbritannien, in Großbritannien und in Japan von 1993 bis 2005 schlägt einen gleichgewichteten Aktienindex um 3,6 %, 8,8 %, 7,3 % und 10,8 %, jeweils mit niedrigerer Volatilität als der Markt; gegen kapitalisierungsgewichtete Indizes ist die Outperformance noch größer.
+- Im Schnitt schlägt diese Little-Book-Strategie die Märkte um rund 7 % p.a. zwischen 1993 und 2005 und das bei geringerem Risiko als der Markt.
+- Montier und Lapthorne backtesten vier Bewertungskennzahlen, PE, PC, PB und Dividendenrendite, dazu Size und eine gängige 6-Monats-Preismomentum-Strategie, jeweils absolut und sektorrelativ.
+- Dieser Backtest legt nahe, dass Value und Size auf sektoradjustierter Basis am besten funktionieren, Preismomentum dagegen nicht.
+- Über die letzten etwa zehn Jahre arbeitete ein nicht adjustierter Ansatz im Allgemeinen besser, wenn auch nicht immer; die Phase großer Sektorrotationsschwünge durch die TMT-Blase gilt als nicht repräsentativ.
+- Über einen 30-Jahres-Zeitraum und in den zehn Jahren vor Beginn der Blase hat ein sektorrelativer Ansatz einen marktweiten Ansatz im Allgemeinen übertroffen.
 
 ## Unterschiedliche Quellenpositionen
 

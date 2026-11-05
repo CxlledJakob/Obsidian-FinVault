@@ -162,6 +162,44 @@ aktualisiert: 2026-11-05
 - Trotz des regelbasierten Anspruchs bleibt subjektives Urteil nötig, etwa ob vor einem großen Ereignis der Hebel gesenkt oder das Modell abgeschaltet wird und ob Kelly über das Gesamtportfolio oder je Strategie gilt.
 - Dass Urteil nötig bleibt, macht Regeln nicht nutzlos: Kahneman zufolge sind Experten Algorithmen in unsicheren Bereichen einheitlich unterlegen, und der Finanzmarkt sei hoffentlich keine Ausnahme.
 - Auch eine automatische Strategie verlangt weiter die Beurteilung, ob die Modelle nach einem Regimewechsel noch gültig sind.
+- Grove et al. (2000) fanden in 136 Studien, dass 64 klar für das einfache Quant-Modell sprachen, 64 ungefähr gleich lagen und nur acht für das menschliche Urteil; in diesen acht hatten die Menschen mehr Information als das Modell.
+- Über diese Studien lag die durchschnittliche Trefferquote der Fachleute bei 66,5 Prozent und die der Quant-Modelle bei 73,2 Prozent.
+- Der Schlüssel der Modellleistung ist eine bekannte Fehlerrate, während die eigenen Fehlerraten unbekannt sind.
+- Die häufigste Antwort auf die Befunde ist, Quant als Input zu nutzen und das Modell bei Bedarf zu übersteuern; die Evidenz zeigt die Modelle eher als Decke denn als Boden für das Verhalten.
+- Leli und Filskov (1981): Eine einfache Regel erkannte 83 Prozent neuer Fälle; unerfahrene Profis lagen bei 63 Prozent, erfahrene bei 58 Prozent, und selbst mit der Modellausgabe nur bei 68 Prozent beziehungsweise 75 Prozent.
+- Chris Snijders untersuchte Einkaufsmanager in 300 Organisationen: Die Urteile von Profis sind bestenfalls dürftig und nicht besser als die weniger Erfahrener oder von Amateuren, und weder allgemeines noch spezifisches Humankapital beeinflusst die Leistung.
+- Eine einfache Formel schlägt bei Snijders den durchschnittlichen und den überdurchschnittlichen Manager, selbst wenn sie nur die halbe Information des Managers hat.
+- Ashenfelter et al. (1995) erklären mit einer Gleichung aus vier Faktoren, dem Alter des Jahrgangs, der Durchschnittstemperatur von April bis September, dem Regen im September und August und dem Regen von Oktober bis März, 83 Prozent der Preisvariation von Bordeaux-Weinen.
+- Junge Weine sind relativ zu Wetter und Preis alter Weine meist überteuert; mit der Reife konvergieren die Preise zur Gleichung, schlechte Jahrgänge sind jung zu teuer, und gute Jahrgänge können zu billig sein.
+- Dawes (1989) berichtet, dass die Interviewränge der University of Texas die späteren Medizinstudenten nicht trennten: DeVaul und Kollegen fanden zu keinem Zeitpunkt einen Unterschied, und 82 Prozent jeder Gruppe erhielten den MD.
+- LSV und Fuller & Thaler nutzen einen ausdrücklich quantitativen Prozess; mit nur einer Ausnahme haben ihre Fonds seit Auflegung sehr signifikantes positives Alpha geliefert.
+- Montier stellt klar, dass diese Fonds Quant-Überlegenheit nicht beweisen, weil dafür eine viel größere Stichprobe nötig wäre.
+- Meehl schreibt, keine Kontroverse der Sozialwissenschaft zeige eine so große und qualitativ vielfältige Studienlage so einheitlich in dieselbe Richtung, von Football-Ergebnissen bis zur Leberdiagnose, und kaum ein halbes Dutzend Studien zeige auch nur eine schwache Tendenz zugunsten des Klinikers.
+- Quant-Investing bleibt nach Montier voraussichtlich eine Randaktivität, weil die Furcht vor technologischer Arbeitslosigkeit, die Trägheit großer Häuser und die schwerere Verkäuflichkeit eines als Black Box gescholtenen Modells dagegen stehen.
+- Yaniv und Kleinberger (2000): Statt die eigene Schätzung und den Rat gleich zu gewichten, legten die Teilnehmer 71 Prozent Gewicht auf die eigene Antwort und in mehr als der Hälfte der Durchgänge 90 bis 100 Prozent.
+- In einigen Feldern sind Quant-Modelle akzeptierter geworden; Abbildung 22.5 zeigt die Zahl der US-Bundesstaaten, in denen die Bewährungsentscheidung ein quantitatives Prognoseinstrument einbezieht.
+- Es ist schwer, sich einzugestehen, dass eine einfache Regel einen leicht outperformen kann; alle meinen, Aktien oder Anlageklassen besser wählen zu können als eine Regel oder ein Modell, und die Evidenz stützt diese Sicht nicht.
+- Statt einer einfachen Regel, etwa die untersten 20 Prozent des MSCI-Universums nach dem KGV zu kaufen, verlassen sich Anleger lieber auf ihre Fähigkeiten der Aktienauswahl.
+- Graham: In 44 Jahren Wall Street hat er nie verlässliche Berechnungen von Aktienwerten gesehen, die über einfache Arithmetik oder die elementarste Algebra hinausgingen.
+- Höhere Analysis ist für Graham ein Warnsignal, dass Theorie an die Stelle von Erfahrung gesetzt wird und die Spekulation den trügerischen Anstrich von Anlage erhält.
+- Graham: Es braucht keinen Genius, um ein erfolgreicher Value-Analyst zu sein, sondern erstens leidlich gute Intelligenz, zweitens solide Arbeitsprinzipien und drittens und am wichtigsten Festigkeit des Charakters.
+- Psychologen finden, dass aktuelle Absichten bei der Vorhersage des eigenen künftigen Verhaltens massiv übergewichtet werden; die Wahrscheinlichkeit, eine angekündigte Value-Regel wirklich zu befolgen, liegt weit unter dem, was man glauben möchte.
+- Eine solche Value-Regel, der Kauf der 20 Prozent mit den niedrigsten KGV, hätte global 6 Prozent pro Jahr Outperformance geliefert und vermeidet die Abhängigkeit von Analystenprognosen.
+- Der Kauf der obersten 20 Prozent nach trailing PE hätte seit 1975 fast 6 Prozent pro Jahr Underperformance geliefert.
+- Es ist schwer einzugestehen, dass eine einfache Regel einen leicht schlägt; die Evidenz stützt die Ansicht nicht, man könne besser auswählen als die Regel.
+- Einfachen Regeln und Verfahren zu folgen ist kein großer Spaß, und wer den Spielinstinkt hat, zahlt dafür nach Keynes den entsprechenden Zoll.
+- Samuelson: Investieren sollte langweilig sein wie Farbe, die trocknet, oder Gras, das wächst.
+- Koehler und Poon (2006): Aktuelle Absichten wirken überstark auf die Vorhersage des Verhaltens, nicht auf das Verhalten; die Wahrscheinlichkeit, die angekündigte Regel wirklich zu befolgen, ist gering.
+- Value-Investieren ist das Eingeständnis der eigenen Grenzen und bietet durch den Kauf billiger Aktien eine Sicherheitsmarge gegen Fehler.
+- Die strategische Aktienquote wird an die Bewertung gekoppelt statt als feste Long-Run-Vorgabe der Treuhänder im Mandat festgeschrieben. Im obersten KGV-Quartil beträgt das varianzminimale Aktiengewicht 30 Prozent, im untersten 55 Prozent.
+- Das taktische Allokationsmodell, bezogen auf Global Equity Strategy vom 23. April 2003, erzeugte in den dismal years 1964 bis 1982 reale Renditen von 4,5 Prozent pro Jahr gegen kaum 1 Prozent bei Buy-and-hold und mit deutlich geringerer Volatilität.
+- Die Strategien der dismal years kaufen Aktien unter benannten Bedingungsgruppen: Value und Momentum unter I, II und III, nur Value unter I und II, nur Momentum unter I und III, Buy-and-hold unter I, II, III und IV.
+- Einfache statistische Modelle schlagen sogenannte Experten in so verschiedenen Feldern wie Baseball, Weinpreisen, medizinischer Diagnose, Hochschulzulassung und Rückfallprognose. Für Finanzmärkte gibt es keinen Grund, das anders zu erwarten.
+- Grove et al. sichteten über 130 Arbeiten. Nur acht sprachen für das menschliche Urteil, und in allen acht hatten die Menschen Information, die dem Modell fehlte. Bei gleicher Information waren die Modelle deutlich besser. Die mittlere Genauigkeit betrug 66,5 Prozent bei Menschen und 73,2 Prozent bei den Modellen.
+- Goldberg (1968) bildete aus zehn MMPI-Scores eine einfache Formel auf mehr als 1000 Patienten. Außer Stichprobe lag sie bei rund 70 Prozent und schlug erfahrene wie unerfahrene Kliniker, auch dann, wenn diese die Vorhersage der Regel als Eingabe bekamen.
+- Leli und Filskov (1981) erkannten mit einer einfachen Regel auf Standardtests 83 Prozent neuer Fälle. Unerfahrene lagen bei 63 Prozent, erfahrene bei 58 Prozent, mit Modellausgabe bei 68 und 75 Prozent. Die Verbesserung hing davon ab, wie stark das Modell genutzt wurde.
+- Das Modell ist eine Decke der Leistung und kein Boden, auf den geschickte Nutzer qualitativ aufsetzen. Montier fragt, ob Fondsmanager aus der Liste eines Quant-Modells, etwa zur Little-Book-Strategie, nur die Titel herauspicken, die sie mögen, so wie die Psychologen die Goldberg-Regel nur selektiv als Eingabe nutzten.
+- Über die Hälfte der US-Bundesstaaten nutzt ein quantitatives Modell bei Bewährungsentscheidungen für Verurteilte.
 
 ## Funktionsweise
 
@@ -200,6 +238,9 @@ aktualisiert: 2026-11-05
 - Bei stetigen Eingaben ist die Antwortfläche einer linearen Kombination eben, ohne Hügel und Täler, und die Steigung bezüglich jeder Eingabe bleibt über den ganzen Bereich dieser Eingabe konstant.
 - Die Steigung bezüglich der Eingabe X1 ist der Koeffizient a1, die bezüglich X2 der Koeffizient a2; a1 und a2 werden typischerweise per Regression aus Daten geschätzt und richten zusammen mit dem Achsenabschnitt a0 die Ebene so aus, dass sie die Datenpunkte am besten schneidet.
 - In einem nichtlinearen Modell ist der Wert Y nicht einfach eine gewichtete Summe der einzelnen Eingaben, und die Steigung der Antwortfläche bezüglich einer Eingabe Xi ist nicht über ihren ganzen Bereich konstant, sodass Hügel und Täler entstehen.
+- Die Little-Book-Strategie ist ein quantitatives Screening: zwei Ränge, Kapitalrendite und Earnings Yield, werden addiert, und es werden die 30 bestgereihten Titel gekauft, bei nur jährlichem Rebalancing.
+- Einem quantitativen Modell oder einem Satz Regeln zu folgen nimmt der Aktienanlage viel Aufregung, weil weder Firmen noch die Sell-Side getroffen werden müssen.
+- Keynes wird zitiert: das professionelle Anlagespiel sei unerträglich langweilig und übergenau für jeden, dem der Spieltrieb fehle; wer ihn habe, zahle den entsprechenden Zoll.
 
 ## Voraussetzungen
 
@@ -262,6 +303,7 @@ aktualisiert: 2026-11-05
 - Subjektive Analysten sind zudem stark darin beschränkt, das Informationsmuster einer Konfiguration aus mehreren Regeln richtig zu deuten.
 - Eine nichtlineare Kombination einfacher Regeln kann informativer sein als die summierte Information ihrer einzelnen Bestandteile.
 - Evidence-based Technical Analysis hat als wichtigste Grenze, dass kontrollierte Experimente nicht möglich sind. Technische Analyse ist zwangsläufig eine Beobachtungswissenschaft, die neues Wissen in der Historie suchen muss.
+- Quant bleibt Randaktivität, weil Anwender glauben, dem Modell etwas hinzufügen zu können, weil das Modell eine bekannte Fehlerrate hat und die eigene unbekannt bleibt, weil 18 von 20 um ihren Platz fürchten, weil ein zwanzigjähriger Prozess kaum verschrottet wird und weil Black-Box-Vorwürfe den Verkauf erschweren.
 
 ## Beispiele
 

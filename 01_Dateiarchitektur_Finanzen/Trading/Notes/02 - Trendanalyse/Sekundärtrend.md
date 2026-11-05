@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Sekundärtrend
@@ -25,6 +25,10 @@ aktualisiert: 2026-10-30
 - In seiner Zeit dauerte er 2 bis 3 Wochen. Auf elektronischen Intraday-Charts liegt die nähere Größe bei 2 bis 3 Tagen.
 - Ob der Ausbruch einen sekundären Trend hervorbringt, hängt von der Größe der Ursache in der Stauzone ab.
 - Eine zweite Stauzone innerhalb eines laufenden Trends, mit Pivot-Hoch auf oder unter dem vorherigen und ähnlichem Pivot-Tief, ist der Ort, an dem dieser Abschnitt pausiert oder endet.
+- Die sekundäre Reaktion ist bei Dow die mittlere der drei Komponenten, zwischen Primärtrend und täglichen Schwankungen, und entspricht einer zyklischen Bullenrally im säkularen Bärenmarkt.
+- Jede der drei Bärenphasen scheint von einer sekundären Reaktion geteilt, die oft fälschlich für den Beginn eines Bullenmarkts gehalten wird.
+- Hamilton: Sekundäre Rallys im Bärenmarkt sind plötzlich und schnell, und sekundäre Reaktionen holen gewöhnlich 40 bis 60 % der vorangegangenen Primärbewegung zurück.
+- Rhea maß für alle Sekundärbewegungen in Bärenmärkten ein mittleres Retracement von 55,8 % des vorangegangenen Primärrückgangs; 72,5 % rallyten zwischen einem Drittel und zwei Dritteln.
 
 ## Funktionsweise
 

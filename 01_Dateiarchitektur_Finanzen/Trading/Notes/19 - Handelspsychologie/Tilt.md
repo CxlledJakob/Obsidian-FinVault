@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/19 - Handelspsychologie/19 - Handelspsychologie|19 - Handelspsychologie]]"
 weitere_hauptthemen: []
 unterthema: "Emotionen"
@@ -10,19 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Tilt
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Unter emotionalem Distress verschieben sich Menschen zu Hochrisiko-Hochgewinn-Optionen, auch wenn diese objektiv schlecht sind, weil das Durchdenken ausfällt (Baumeister, 2003).
+- Wird das Selbstwertgefühl bedroht, verlieren Menschen die Fähigkeit zur Selbstregulation. Wer ein hohes Selbstbild hat, wird bei einem Schlag gegen den Stolz oft sehr aufgebracht, und der Drang, etwas Großes über sich zu beweisen, übersteuert die normale rationale Art.
+- Ein Fondsmanager nach einer spürbaren Underperformance gerät unter Druck, sich auf Hochrisiko-Hochgewinn-Optionen zu konzentrieren, um das Leistungsdefizit aufzuholen, fühlt sein Selbstwertgefühl bedroht und wird zunehmend kurzfristig. Das ist besonders ausgeprägt, wenn die Underperformance aus einer Contrarian-Position stammt.
+- Scheitert die Selbstregulation, werden sofortige Vergnügen statt verzögerter Belohnungen genommen. Die Ressource wirkt wie Kraft oder Energie und reicht nur für ein begrenztes Maß an Regulation.
+- Entscheidungen zehren dieselbe Ressource. Nach einer Reihe wichtiger Entscheidungen können die folgenden kostspielig oder töricht sein.
+- Nach zwischenmenschlicher Zurückweisung, die das Bedürfnis nach Zugehörigkeit vereitelt, werden irrationale und selbstschädigende Handlungen häufiger (Baumeister, 2003).
+- Jede Anstrengung der Selbstkontrolle verringert den Vorrat für die nächste. Wer den Impulsen zu Kurzfristigkeit und Herde widersteht, hat danach weniger Selbstkontrolle.
 
 ## Funktionsweise
 

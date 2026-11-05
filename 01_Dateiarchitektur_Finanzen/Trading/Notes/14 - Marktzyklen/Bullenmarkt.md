@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Bullenmarkt
@@ -32,6 +32,30 @@ aktualisiert: 2026-10-30
 - Was früher ein ziemlich regelmäßiger Zyklus war, muss in der jüngsten Marktaktivität nicht mehr sichtbar sein. Zyklen sind dynamisch, nicht statisch.
 - Die Zeitrhythmen von Bullen- und Bärenmärkten sind oft verschieden. Deshalb gibt es eigene Time-Band-Spalten für Bull High und Bull Low.
 - Ein Hoch im Time Band soll den Hochs vergleichbar sein, die in der Rohdatenperiode gemacht wurden. Es sagt nicht, dass das Hoch bedeutender wird als die jüngsten Hochs.
+- Graham stellt fest, dass echte Schnäppchenpapiere in Bullenmärkten wiederholt knapp geworden sind.
+- Graham meint, man hätte bestimmen können, ob das Marktniveau zu hoch oder zu niedrig war, indem man die Zahl der Papiere zählte, die unter dem Working-Capital-Wert notierten.
+- Sind solche Gelegenheiten praktisch verschwunden, zeigt die Erfahrung nach Graham, dass Anleger den Aktienmarkt hätten verlassen und bis zum Hals in US-Treasury-Bills gehen sollen.
+- Keynes warnt, dass die Ernüchterung auf einen überoptimistischen und überkauften Markt mit plötzlicher und sogar katastrophaler Wucht fallen sollte.
+- Montier verweist darauf, dass die Stimmung auf einer breiten Spanne von Maßen sehr hoch sei, vom eigenen Fear-and-Greed-Index bis zum Bull-Bear-Maß von Investors Intelligence.
+- Graham: Spekulanten prosperieren oft durch Unwissenheit; in einem tosenden Bullenmarkt ist Wissen überflüssig und Erfahrung ein Handicap.
+- Man hätte das Marktniveau als zu hoch oder zu niedrig bestimmen können, indem man die Zahl der Papiere unter dem Working-Capital-Wert zählte; sind sie praktisch verschwunden, hätten Anleger nach der Erfahrung bis zum Hals in US-Treasury-Bills gehen sollen.
+- Graham: Je weiter die Schwankungen des Marktes und je länger sie in eine Richtung anhalten, desto schwerer ist es, beim Umgang mit Stammaktien den Anlagegesichtspunkt zu bewahren.
+- Die Aufmerksamkeit wandert dann von der Anlagefrage, ob der Preis relativ zum Wert attraktiv oder unattraktiv ist, zur spekulativen Frage, ob der Markt nahe seinem Tief oder seinem Hoch steht.
+- Betrug und Schwindel treten am Hoch lang anhaltender Bullenmärkte auffällig häufig auf und scheinen stark prozyklisch. Betrug folgt Keynes' Gesetz, dass die Nachfrage ihr eigenes Angebot schafft, nicht Says Gesetz.
+- Euphorie ist die Phase, in der zur Investition für Produktion und Absatz die Spekulation auf steigende Preise tritt. Das ist Momentum-Handel oder die Greater-Fool-Theorie. Adam Smith nannte solche Entwicklungen Overtrading.
+- Die USA von 1991 bis 2002 werden auf das Blasenmuster gelegt und stehen 2002 am Anfang der vierten Phase, der finanziellen Notlage.
+- Bullenmärkte haben nie von derart hohen Bewertungen begonnen wie dem damaligen Niveau.
+- Neue Bullenmärkte entstehen gewöhnlich aus außergewöhnlich billigen Bewertungen, nicht aus den damals sichtbaren überteuerten.
+- Ob ein Bullen- oder ein Bärenmarkt vorliegt, weiß man erst im Rückblick; manche erklärten trotzdem die Geburt eines neuen Bullenmarkts.
+- Dow-Theorie und Elliott-Wellen benennen den Fehler, eine Bullenrally im Bärenmarkt mit der Hoffnung auf einen neuen Bullenmarkt zu verwechseln.
+- Bricht die Psychologie des langen Bullenmarkts endlich, wird der Realitätscheck umso schmerzhafter; der Verlust der Illusion ist ein nötiger Schritt zur Revulsion.
+- Rhea: Bullenmärkte beginnen nicht mit gewaltsamen Rallys.
+- Bullenmärkte beginnen gewöhnlich bei außergewöhnlich niedrigen, nicht hohen Bewertungen; der damalige US-Markt war keineswegs billig.
+- Anleger nach einer Blase verwechseln eine Bärenmarktrally mit dem Beginn eines neuen Bullenmarkts.
+- In moderner Sprache ist eine zyklische Bullenrally die sekundäre Reaktion innerhalb eines säkularen Bärenmarkts, des Primärtrends.
+- Aus dem US-Bullenmarkt der späten 1990er stammen zwei Mythen: höhere Aktienrückkäufe hätten die sinkenden Dividenden ausgeglichen, und Aktienoptionen glichen die Interessen des Managements mit denen der Aktionäre ab; Montier weist beides zurück.
+- In der Hochphase dieses Bullenmarkts wurde die Dividende zum Schimpfwort, weil bei scheinbar unbesiegbarem Gewinnwachstum nur den Langweiler die kleine Dividendenrendite kümmerte; als die Gewinne enttäuschten, kehrte die Aufmerksamkeit zurück, sichtbar an der Wiederbelebung des Value-Stils.
+- Im Bullenmarkt wurde verbreitet, Rückkäufe seien ein wesentlicher Teil der Anlegerrendite; die angekündigten Rückkäufe waren bedeutend, die tatsächlichen Nettorückkäufe dagegen verschwindend gering.
 
 ## Funktionsweise
 
@@ -57,6 +81,9 @@ aktualisiert: 2026-10-30
 
 - Der XAU machte von Mitte August bis Anfang November einen starken Bullentrend über 58 Handelstage, mit dem Hoch am 7. November 2007.
 - Im DJIA-Bullentrend dauerten die Rückgänge von den jüngsten Hochs von wenigen Tagen bis zu zwei Wochen. Das Hoch am 11. Oktober lag im Time Band vom 10. bis 12. Oktober.
+- Kräftige Insiderverkäufe prägten 2000/1. 2002 verkauften Insider noch viermal so viele Aktien, wie sie kauften.
+- 2002 gab es keine Kapitulation. Die meisten Strategen waren noch erstaunlich bullisch, und die Umsätze blieben sehr hoch.
+- Autoritative Segnung begleitet die historischen Blasen der Tabelle: staatliche und königliche Beteiligung bei der South Sea, Coolidge, Hoover, Mellon und Irving Fisher in den 1920ern, McGeorge Bundy bei den Konglomeraten, Nomuras Ruf nach 80.000 bis 1995 in Japan und Greenspans Anschluss an die New Era in den 1990ern.
 
 ## Unterschiedliche Quellenpositionen
 

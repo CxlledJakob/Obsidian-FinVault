@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/24 - Makroökonomie/24 - Makroökonomie|24 - Makroökonomie]]"
 weitere_hauptthemen: []
 unterthema: "Geldpolitik"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Neutraler Zins
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Auseinandersetzung um den neutralen Zins wird in der Rohstoffrechnung nicht geführt. Eine der meistgehörten Schätzungen ist 4,5 Prozent, und diese Größe wird illustrativ als Collateral-Return angesetzt.
+- Zusammen mit 3,5 Prozent Spotwachstum im Takt des realen Trend-BIP und einer Rollrendite von null ergibt das als günstigen Fall eine erwartete Rendite von 8 Prozent pro Jahr.
+- Mit vorsichtigeren Annahmen fällt dieselbe Summe leicht auf 6 Prozent pro Jahr.
 
 ## Funktionsweise
 

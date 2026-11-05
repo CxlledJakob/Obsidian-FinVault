@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Equity Curve
@@ -54,6 +54,10 @@ aktualisiert: 2026-11-01
 - Die kumulierte Rendite der querschnittlichen Futures-Momentum-Strategie in Abbildung 6.5 zeigt vom 1. Juni 2005 bis zum 31. Dezember 2007 eine annualisierte Rendite von 18 Prozent bei einer Sharpe Ratio von 1,37 und vom 2. Januar 2008 bis zum 31. Dezember 2009 eine annualisierte Rendite von minus 33 Prozent, danach eine Erholung.
 - Die kumulierte Rendite der querschnittlichen Aktien-Momentum-Strategie in Abbildung 6.6 zeigt vom 15. Mai 2007 bis zum 31. Dezember 2007 eine annualisierte Rendite von 37 Prozent bei einer Sharpe Ratio von 4,1 und vom 2. Januar 2008 bis zum 31. Dezember 2009 eine annualisierte Rendite von minus 30 Prozent; nach 2009 stabilisiert sie sich, ohne das frühere Hoch zu erreichen.
 - Der S&P DTI in Abbildung 6.7 hat zum Zeitpunkt des Textes seit dem 5. Dezember 2008 einen Drawdown von minus 25,9 Prozent.
+- Abbildung 26.9 zeigt den Zeitpfad der US-Value- und der US-Growth-Portfolios; der Einfluss der Blasenjahre wird daran sofort offensichtlich, und die beiden Portfolios haben sehr ähnliche Renditen erzeugt.
+- Die US-CAGR seit 1988 beträgt 13,7 Prozent für Value und 14,0 Prozent für hohes Prognosewachstum, bei einer Standardabweichung von 17,7 Prozent gegen 25,1 Prozent.
+- Abbildung 26.10 zeigt die globalen Portfolios, niedriges KGV neben hohem prognostiziertem Gewinnwachstum, mit 15,4 Prozent CAGR gegen 10,2 Prozent CAGR.
+- Abbildung 26.1 zeigt die Rohrenditen der globalen Value-Strategie.
 
 ## Unterschiedliche Quellenpositionen
 

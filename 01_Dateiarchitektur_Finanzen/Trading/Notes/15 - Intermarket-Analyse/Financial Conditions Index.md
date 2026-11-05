@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/15 - Intermarket-Analyse/15 - Intermarket-Analyse|15 - Intermarket-Analyse]]"
 weitere_hauptthemen: []
 unterthema: "Risikoindikatoren"
@@ -10,19 +10,20 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Financial Conditions Index
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Der DrKW Monetary Conditions Indicator, MCI, zeigte für US-Aktienrenditen und Überrenditen gegenüber Anleihen 1984–2003 keine Vorhersagekraft.
+- MCI, t-Statistik und adjustiertes R²: Aktien 1 Monat 1,07 und 0,00, 3 Monate 0,95 und 0,00, 12 Monate −0,41 und 0,00; Überrendite 1 Monat 0,48 und 0,00, 3 Monate 0,21 und 0,00, 12 Monate 0,28 und 0,00.
+- In der US-Sektorrotation erklärt der MCI die relative Zwölfmonatsrendite von Grundstoff gegen Versorger mit t = 4,3 und adjustiertem R² 0,21; über 1 Monat t = 2,5 und 0,02, über 3 Monate t = −0,46 und 0,00.
 
 ## Funktionsweise
 

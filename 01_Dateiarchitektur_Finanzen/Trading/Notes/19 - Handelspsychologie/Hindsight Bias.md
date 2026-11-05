@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Hindsight Bias
@@ -46,6 +46,23 @@ aktualisiert: 2026-10-30
 - Es ist leicht, ein Buch mit nachträglichen Trendbeispielen zu füllen; Trendlinien, gleitende Durchschnitte, Kanäle und Momentum-Indikatoren können den Trend auf historischen Daten zeigen.
 - Diese Techniken werden wiederholt als Trendindikatoren mit Wert für praktische Entscheidungen beworben, weil sich leicht viele Chartbeispiele finden lassen, die ihren Wert zu belegen scheinen.
 - Auf jedes nachträglich gut gewählte Beispiel findet der Autor schnell mindestens zwei Fälle, in denen der Trendindikator eine Trendumkehr nicht rechtzeitig erkannte.
+- Hindsight ist einer der dynamischen Erzeuger von Überkonfidenz. Wer glaubt, die Vergangenheit vorhersagen zu können, ist viel zu sicher, die Zukunft vorherzusagen.
+- In der Dotcom-Blase der späten 1990er führten die Worte, es sei eine Blase, bei Investoren zu körperlichen Drohungen. Dieselben Investoren sagen hinterher, sie hätten gewusst, dass es eine Blase war, und hätten trotzdem investiert. Das ist eine orwellsche Umschreibung der Geschichte.
+- Die Gefahr beim Lehren von Verhaltenspsychologie ist, dass man danach sagt, das sei interessant gewesen, man habe es aber die ganze Zeit gewusst.
+- Kennt man den Ausgang, meint man, ihn die ganze Zeit gewusst zu haben. Die orwellsche Umschreibung der Geschichte wird zur Norm, und Hindsight verdeckt vergangene Fehler.
+- Die bloße Warnung vor diesem Bias hat wenig Wirkung. Wirksamer ist, ausdrücklich alternative Ausgänge zu durchdenken. Schriftliche Aufzeichnungen der früheren Überzeugungen helfen zusätzlich.
+- Fischhoff (1975) ließ eine Gruppe Wahrscheinlichkeiten für vier Ausgänge des Gurkha-Feldzugs von 1814 schätzen, ohne den Ausgang zu nennen. Vier weitere Gruppen bekamen einen angeblich wahren Ausgang, drei davon einen falschen. Jede informierte Gruppe wies ihrem genannten Ausgang eine deutlich höhere Wahrscheinlichkeit zu.
+- Sobald der Ausgang bekannt war, lag die zugewiesene Wahrscheinlichkeit um 17 Prozentpunkte höher. Keine Gruppe konnte den nachträglichen Ausgang in ihrem Urteil ignorieren.
+- Slovic und Fischhoff (1977): Das beste Gegenmittel ist, ausdrücklich die Gegenfälle zu bedenken, also was nicht geschah und was einen anderen Ausgang hätte erzeugen können. Hindsight bleibt dann vorhanden, ist aber stark vermindert.
+- Die zweite Hürde beim Lernen aus eigenen Fehlern ist, im Rückblick nicht mehr trennen zu können, was man vorher glaubte und was man jetzt weiß.
+- Schriftliche Aufzeichnungen der Entscheidungen und ihrer Logik können diese Hürde eindämmen, verlangen aber Disziplin und die Bereitschaft, frühere Entscheidungen wieder zu prüfen. Die bloße Kenntnis der möglichen Probleme ist ein erster Schutz.
+- Graham warnt vor Hindsight Bias und Ex-post-Rechtfertigungen: In 44 Jahren Wall-Street-Erfahrung und Studium hat er nie verlässliche Berechnungen von Aktienwerten gesehen, die über einfache Arithmetik oder die elementarste Algebra hinausgingen.
+- Wird höhere Analysis hereingeholt, ist das nach Graham ein Warnsignal, dass der Operateur Theorie an die Stelle von Erfahrung setzt und der Spekulation meist den trügerischen Anstrich von Anlage gibt.
+- Graham: Die Anwendbarkeit der Geschichte erscheint fast immer nach dem Ereignis; wenn alles vorbei ist, kann man Kapitel und Vers zitieren, um zu zeigen, warum das Geschehene geschehen musste, weil es schon einmal geschehen war.
+- Wertpapieranalysten nahmen allgemein an, für die Aktienkurse sei ein neues Wertniveau etabliert, ganz verschieden von dem früher gewohnten.
+- Graham hält es für möglich, dass einzelne Aktien insgesamt mehr wert sind als früher, aber nicht dafür, dass sie so viel mehr wert sind, dass vergangene Niveaus und Verhaltensmuster verworfen werden können.
+- Graham: Kaum lässt sich sagen, dass die vergangenen sechs Jahre irgendetwas über Spekulation gelehrt haben, das nicht schon vorher bekannt war.
+- Ob ein Bullen- oder ein Bärenmarkt vorliegt, lässt sich erst im Rückblick feststellen.
 
 ## Funktionsweise
 
@@ -83,6 +100,8 @@ aktualisiert: 2026-10-30
 - Selbst wer vor dem Hindsight Bias gewarnt wird und ihn vermeiden soll, unterliegt ihm weiter.
 - Der Hindsight Bias scheint sich rationaler Kontrolle zu entziehen.
 - Man weiß nie, was auf der rechten Seite des Charts geschieht, der Seite ohne Balken; Entscheidungen gelten nur mit der Information bis zum letzten Preisbalken.
+- Bei der Auswahl von neun historischen Blasen besteht immer das Risiko eines Hindsight Bias, weil es selektive Episoden der Geschichte sind, und zusätzlich das Risiko der Repräsentativität, also der Beurteilung nach Ähnlichkeit statt nach statistischer Wahrscheinlichkeit.
+- Die Märkte wurden nach zwei Kriterien gewählt: ein frei gehandeltes Asset mit klarem Fall irrationaler Überschwänglichkeit und brauchbare Daten; das erste schloss Wohnimmobilien aus, das zweite berühmte Blasen wie die Tulpenmanie.
 
 ## Beispiele
 
@@ -103,6 +122,7 @@ aktualisiert: 2026-10-30
 - In einem Artikel über eine Momentum-Divergenz-Strategie gab es auf denselben Daten weitere identische Setups, die Verluste gebracht hätten und die der Autor einfach ignorierte.
 - Ganze Pläne auf Preis-Momentum-Divergenz mit gut gewählten Beispielen hat er nie Geld verdienen sehen; sie werden an naive Trader verkauft, die nicht selbst prüfen, wie nützlich oder nutzlos die Setups sind.
 - Systeme, die Einstellungen an historischen Daten optimieren und erstaunliche Ergebnisse behaupten, hält er für Unsinn in Handelspublikationen.
+- Wer die TMT-Blase der späten 1990er als Blase bezeichnete, galt als Trottel. Heute meint jeder, es gewusst zu haben, obwohl er damals voll investiert war.
 
 ## Unterschiedliche Quellenpositionen
 

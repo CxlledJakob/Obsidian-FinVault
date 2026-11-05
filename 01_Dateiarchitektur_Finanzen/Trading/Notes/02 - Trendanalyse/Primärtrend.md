@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Primärtrend
@@ -25,6 +25,10 @@ aktualisiert: 2026-10-30
 - In seiner Zeit dauerte ein primärer Trend 2 bis 3 Monate.
 - Auf elektronischen Intraday-Charts liegt die nähere Größe bei 2 bis 3 Wochen.
 - Ob sich ein primärer, ein sekundärer oder ein kleiner Trend entwickelt, entscheidet die Ursache in der vorangegangenen Stauzone.
+- Die Dow-Theorie setzt drei Komponenten: Primärtrend, sekundäre Reaktion und tägliche Schwankungen; ein säkularer Bärenmarkt ist dabei der Primärtrend, eine zyklische Bullenrally die sekundäre Reaktion.
+- Eine Reaktion, die 25 % oder sogar 100 % des verlorenen Bodens zurückholt, ist in der frühen Phase einer primären Bärenbewegung nicht ohne Vorbild.
+- Alle Rallys holten im Schnitt 49,5 % der letzten vorangegangenen Primärbewegung zurück.
+- Hamilton erwartete, dass sekundäre Reaktionen gewöhnlich 40 bis 60 % der Preisänderung der vorangegangenen Primärbewegung zurückholen.
 
 ## Funktionsweise
 

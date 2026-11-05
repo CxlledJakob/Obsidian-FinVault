@@ -149,6 +149,22 @@ aktualisiert: 2026-11-05
 - Die Volatilität in Abbildung 12.6 ist die bedingte Varianz prozentualer Logrenditen, die Volatilität in Abbildung 12.13 der bedingte Standardfehler der Logrenditen.
 - Bei MCMC-Prognosen können die Stichproben-Standardabweichungen der simulierten Rendite- und Volatilitätsstichproben als Varianzen der Prognosefehler verwendet werden.
 - Gegenüber der kürzeren Reihe in Beispiel 12.3 zeigen die für Januar 1962 bis November 2004 geschätzten S&P-500-Volatilitäten ähnliche Muster und dieselbe Größenordnung.
+- Das US-Value-Portfolio hat seit 1988 eine Standardabweichung der Renditen von 17,7 Prozent, das Portfolio mit hohem prognostiziertem Wachstum eine von 25,1 Prozent.
+- Die CAGRs liegen mit 13,7 Prozent für Value und 14,0 Prozent für das hohe Prognosewachstum fast gleich, sodass Value auf risikobereinigter Basis deutlich outperformt hätte.
+- Montier schließt daraus, dass die Value-Aktien in dieser Stichprobe nicht die riskanteren waren.
+- Die Abbildungen zeigen die rollierende Zwölfmonats-Standardabweichung der Long-Short-Renditen und der Long-only-Überschussrenditen.
+- Graham setzt Beta mit vergangener Preisvariabilität gleich und nicht mit Risiko.
+- Kein Long-only-Anleger, den der Autor getroffen hat, interessiert sich für die Standardabweichung nach oben; sie wird der Rendite zugeschlagen.
+- Die Branche misst Risiko über den Tracking Error und nicht über die Varianz der Renditen. Tracking Error ist die Schwankung der Differenz zwischen Fonds- und Indexrendite.
+- Die Fundamentalindizes hatten im Schnitt 53 Basispunkte weniger Volatilität als die MSCI-Vergleichsindizes.
+- Wenn Anleger negative Renditen sorgen, ist die Nutzung von Standardabweichung und Volatilität als Risikomaß falsch. Zu verwenden ist das Abwärtsrisiko.
+- Die Downside-Semivarianz ist die Standardabweichung, berechnet nur mit den negativen Renditen. Die Sortino Ratio setzt diese Größe an die Stelle der gewöhnlichen Standardabweichung.
+- In der Sortino-Formel ist Sigma d die Standardabweichung ausschließlich der negativen Überschussrenditen, im Zähler steht die Überschussrendite über den risikofreien Satz oder über die Mindestakzeptanzrendite.
+- Tabelle 49.2 zeigt Rendite und Standardabweichung der Rohstoffindizes 1991–2005 in Prozent: DJ-AIG 4,1 und 4,4, GSCI 5,7 und 6,3, CRB 3,1 und 2,9.
+- Der GSCI hat eine deutlich höhere Standardabweichung als DJ-AIG und CRB. Risikoadjustiert schneidet der CRB in dieser Stichprobe am besten ab, allein wegen des Zeitraums.
+- Die Standardabweichung der realen Zehnjahresrenditen sinkt mit günstigerem KGV: 5,4 Prozentpunkte im Bereich 32 bis 20, 5,0 bei 20 bis 16, 4,0 bei 16 bis 13,5 und 3,0 bei 13,5 bis 4.
+- Die historische Standardabweichung der realen Anleiherenditen beträgt 4 Prozent.
+- In den dismal years lagen die Standardabweichungen bei 12,6 für Value und Momentum, 12,8 für nur Value, 5,5 für nur Momentum und 14,7 für Buy-and-hold. Das taktische Modell lief mit deutlich geringerer Volatilität als der Aktienmarkt.
 
 ## Funktionsweise
 
@@ -281,6 +297,11 @@ aktualisiert: 2026-11-05
 - Die Standardabweichungen der bedingten Korrelationen sind 0,07 im GARCH mit Cholesky, 0,13 im BEKK und 0,14 im stochastischen Volatilitätsmodell.
 - Mit Leverage hat ρ das Posterior-Mittel −0,3892 und den Standardfehler 0,0292; ση hat das Mittel 2,5639 und den Standardfehler 0,3924.
 - Tabelle 12.5 gibt Posterior-Mittel und Posterior-Standardabweichungen des Markov-Switching-GARCH-M an: β1 hat Mittel 0,111 und Standardabweichung 0,043, β2 Mittel 0,247 und Standardabweichung 0,050.
+- Das monatliche Risiko der Länderkörbe, neben der Monatsrendite ausgewiesen, beträgt bei hoher Dividendenrendite 4,5, bei niedriger 4,4 und beim Markt 4,0.
+- Beim Kurs-Buchwert beträgt das monatliche Risiko 4,7 im teuren Tritile, 4,4 im billigen und 4,0 im Markt.
+- Die Abbildungen zeigen die Standardabweichung der Long-Short-Renditen und die Standardabweichung der Long-only-Überschussrenditen der Länderstrategien.
+- Monatliches Risiko der PE-Länderkörbe: teuer 4,4, mittel 4,4, billig 4,6, Markt 4,0.
+- Monatliches Risiko der Momentum-Länderkörbe: hoch 4,9, mittel 4,0, niedrig 4,6, Markt 4,2.
 
 ## Unterschiedliche Quellenpositionen
 

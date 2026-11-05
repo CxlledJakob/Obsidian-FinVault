@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Noise Trader Risk
@@ -36,6 +36,13 @@ aktualisiert: 2026-10-30
 - Markteffizienz ist danach ein eher besonderer Zustand und weniger wahrscheinlich als Zustände, in denen die Preise von rationalen Niveaus abweichen und sich dann systematisch und vorhersagbar auf diese Niveaus zubewegen.
 - Das erklärt, warum systematische Strategien auf veralteter Information Gewinn machen können.
 - Noise Trader handeln auf nicht informativen Signalen. Zusammen mit den Grenzen der Arbitrage können Wertpapierpreise deshalb über längere Zeit systematisch von rationalen Niveaus abweichen.
+- Manche sehen den Privatanleger als Quelle aller verhaltensbedingten Fehlbewertung. Montier hält diese Sicht für weit von der Wahrheit entfernt.
+- Arbeiten wie die von Jackson und Glushkov argumentieren überzeugend, dass die professionellen Investoren selbst die Noise Trader sein können.
+- Professionelle Investoren leiden ebenso wahrscheinlich unter Verhaltensverzerrungen wie andere. Soweit sie Experten ihres Feldes sind, können sie noch überkonfidenter und überoptimistischer sein als Laien.
+- Nur 5 Prozent wählten Zahlen über 67 und hatten die Frage entweder nicht verstanden oder handelten klar irrational. Ein Spieler schrieb 100 und nannte sich keinen rationalen Anleger, mit Amazon und EBAY als Lieblingsaktien.
+- Marktmacht ist hier die Zahl zusätzlicher Stimmen von 100, die das Ergebnis um 1 verschieben würde. Bei 1002 Antworten ist das 1002 geteilt durch (99 minus 26), also 13,7. Einzelne irrationale Extremantworten haben deshalb wenig Macht.
+- Selbst wenn alle Wahlen über 67 gestrichen werden, bleibt der Durchschnitt bei 23 und zwei Drittel bei 15,2, massiv über dem Nash-Gleichgewicht 0. Der Abstand zum rationalen Ergebnis verschwindet also nicht mit den offensichtlich irrationalen Spielern.
+- Sobald erkennbar ist, dass wenigstens ein Teil des Marktes nicht voll rational ist, wird das Problem immer komplexer. Die Annahme, jeder sei ein vollkommener Logiker und maximiere nur den eigenen Vorteil, trägt dann nicht mehr.
 
 ## Funktionsweise
 

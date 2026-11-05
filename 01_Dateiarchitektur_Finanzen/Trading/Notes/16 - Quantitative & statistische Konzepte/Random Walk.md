@@ -189,6 +189,11 @@ aktualisiert: 2026-11-05
 - Die übliche Trendkomponente setzt μt plus 1 gleich μt plus βt plus ηt und lässt die Steigung selbst als Random Walk laufen, βt gleich βt minus 1 plus ςt.
 - Die lokale Trendkomponente im Komponentenmodell erfüllt µt+1 = µt + ηt mit ηt ∼ N(0, σ²η).
 - Aufgabe 11.2 schätzt das lokale Trendmodell der Gleichungen (11.1) und (11.2) für die Logarithmen der realisierten Alcoa-Volatilität und fragt nach den Schätzungen von σe und ση.
+- Die Rechtfertigung fast zufälliger Marktbewegungen hat eine Teilindustrie von Rauscherzeugern hervorgebracht, die erklären, warum die Preise gestern um 2 Prozent gestiegen oder gefallen sind.
+- Cutler et al. (1989) finden, dass über die Hälfte der 50 größten Bewegungen des US-Aktienmarkts zwischen 1947 und 1987 in keiner Beziehung zu Fundamentaldaten steht. Die von der Presse genannten Ursachen sind meist nicht besonders wichtig.
+- Bei Handzic (2001) ist die naive Prognose ein Random Walk: Die beste Schätzung der heutigen Produktionsquote ist der Absatz von gestern. Solche Modelle ignorieren den Kontext und schneiden gewöhnlich schlecht ab.
+- Ein RNE von 1 bedeutet Gleichstand mit diesem Random Walk. Ein Wert unter 1 ist eine Verbesserung gegenüber ihm.
+- Die Gruppe mit nur einem Informationshinweis verbesserte den Random Walk knapp. Die Gruppe mit allen drei Hinweisen unterbot den Random Walk und zugleich die informationsärmere Gruppe deutlich.
 
 ## Funktionsweise
 
@@ -221,6 +226,8 @@ aktualisiert: 2026-11-05
 - Die Repräsentativitätsheuristik erzeugt ein falsches Stereotyp davon, wie Zufallsdaten aussehen sollten, nämlich formlos, ungeordnet und ohne jeden Trend; weicht eine Stichprobe davon ab, wird sie automatisch für das Produkt eines nichtzufälligen Prozesses gehalten.
 - Man erwartet, die Wirkung ähnele der Ursache: Ist der erzeugende Prozess zufällig, sollten die Daten zufällig aussehen, und jede Abweichung von diesem Bild gilt als Zeichen eines nichtzufälligen Prozesses.
 - Malkiel hält den Markt für zufällig; der Text teilt diese extreme Position nicht, stimmt aber zu, dass Menschen Ordnung in zufälligen Daten falsch wahrnehmen, und deshalb ist die visuelle Inspektion von Preischarts nicht vertrauenswürdig.
+- In einer zufälligen Lichtfolge mit festen Anteilen von 70 und 30 Prozent suchen Menschen ein Muster, selbst wenn ihnen gesagt wird, die Folge sei zufällig. Frequency Matching trifft nur in 58 Prozent der Fälle, immer das häufigere Licht zu wählen in 70 Prozent.
+- Ratten und Tauben wählen die optimale Strategie und schlagen damit die meisten Menschen. Wolford et al. (2000) führen das darauf zurück, dass Menschen auch in einer als zufällig bezeichneten Folge ein Muster vermuten und es entschlüsseln wollen.
 
 ## Beispiele
 

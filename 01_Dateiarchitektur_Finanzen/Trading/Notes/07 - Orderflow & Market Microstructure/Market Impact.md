@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Market Impact
@@ -47,6 +47,9 @@ aktualisiert: 2026-11-01
 - High-Frequency-Händler können nahe einer Unterstützung künstlichen Verkaufsdruck erzeugen, indem sie große Verkaufsorders legen, um den nächsten Tick nach unten zu treiben.
 - Große institutionelle Orders werden nicht mehr als ein Block ausgeführt, sondern in winzige Child Orders zerlegt und über den Tag sowie verschiedene Plätze ausgeführt.
 - Eine aktuellere Analyse des Intraday-Rebalancing stammt von Rodier, Haryanto, Shum und Hejazi, 2012.
+- Das CAPM setzt keine Transaktionskosten voraus, also weder Kommission noch Geld-Brief-Spanne, und dass jede Long- oder Short-Position in jeder Größe den Marktpreis nicht beeinflusst.
+- In beliebiger Größe zu handeln, ohne einen Fußabdruck im Markt zu hinterlassen, ist für ein großes Institut nur ein Wunsch und eine der zwei Schlüsselannahmen, an denen das CAPM scheitert.
+- Diese Preisannahme gehört zu den Annahmen, die der Realität offenkundig widersprechen.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Sharpe Ratio
@@ -100,6 +100,8 @@ aktualisiert: 2026-11-01
 - Dieselbe Strategie auf GBPUSD hat vom 23. Juli 2007 bis 20. Februar 2012 eine Sharpe Ratio von 1,3 bei 7,2 Prozent APR.
 - Die PEAD-Strategie auf S&P-500-Aktien hat vom 3. Januar 2011 bis 24. April 2012 eine Sharpe Ratio von 1,5 bei 6,7 Prozent APR.
 - Die DRN-Strategie hat vom 12. Oktober 2011 bis 25. Oktober 2012 eine Sharpe Ratio von 1,8 bei 15 Prozent APR.
+- In den dismal years betrug die Sharpe Ratio 0,20 für Value und Momentum, 0,14 für nur Value, 0,69 für nur Momentum und −0,01 für Buy-and-hold.
+- Die zugehörigen Standardabweichungen lagen bei 12,6, 12,8, 5,5 und 14,7. Reines Momentum verband die höchste Sharpe Ratio mit der niedrigsten Streuung.
 
 ## Funktionsweise
 
@@ -234,9 +236,18 @@ aktualisiert: 2026-11-01
 - Die Intraday-Variante dieses Modells hat über denselben Zeitraum eine Sharpe Ratio von 4,7 bei 73 Prozent annualisierter Rendite. Transaktionskosten sind nicht enthalten.
 - AUD.USD gegen CAD.USD hat eine Sharpe Ratio von 1,6 bei 11 Prozent annualisierter Rendite, vom 18. Dezember 2009 bis 26. April 2012.
 - Der ungehebelt CL-Kalenderspread hat eine Sharpe Ratio von 1,3 bei 8,3 Prozent annualisierter Rendite, vom 2. Januar 2008 bis 13. August 2012.
+- Die Differenz der Rendite je Risikoeinheit zwischen hohem und niedrigem Ländertritle beträgt long-short und long-only 0,13 und 0,10 bei der Dividendenrendite, 0,14 und 0,09 beim Kurs-Buchwert, 0,12 und 0,07 beim Kurs-Gewinn und 0,26 und 0,12 bei Momentum; alle Differenzen sind positiv.
+- Dividendenrendite monatlich, Rendite je Risiko: hohes Tritile 0,33, mittleres 0,23, niedriges 0,20, Markt 0,24.
+- Die risikobereinigten Faktor-Renditen über 30 Jahre liegen weltweit sektorrelativ gegen marktweit bei 1,05 gegen 0,83 für den Cashflow-Kurs, 0,76 gegen 0,70 für das PE, 0,73 gegen 0,66 für den Buchwert, 0,70 gegen 0,63 für die Dividendenrendite, 0,94 gegen 0,70 für Small gegen Large und 0,78 gegen 0,81 für 6-Monats-Momentum.
+- Momentum-Länder, Rendite je Risiko: hohes Tritile 0,34, mittleres 0,27, niedriges 0,08, Markt 0,23.
+- Kurs-Gewinn-Länder, Rendite je Risiko: teures Tritile 0,19, mittleres 0,24, billiges 0,33, Markt 0,24.
+- Die Fundamentalindizes haben eine höhere Rendite je Risiko als die kapitalisierungsgewichteten MSCI-Indizes, gezeigt für Welt, Australien, Frankreich, Deutschland, Hongkong, Italien, Japan, UK und USA, 1984 bis 2004.
 
 ## Unterschiedliche Quellenpositionen
 
+- Sorgen negative Renditen die Anleger, ist die Sharpe Ratio das falsche Performancemaß, weil sie die gewöhnliche Standardabweichung nutzt und Aufwärtsschwankung bestraft. Die Sortino Ratio teilt die Überschussrendite durch die Standardabweichung nur der negativen Überschussrenditen und bestraft Aufwärtsvolatilität nicht.
+- Für den US-Markt seit 1953 liegt die Sharpe Ratio bei etwa 0,34 und die Sortino Ratio bei 0,46. Die Chance eines absoluten Verlusts gegenüber Cash ist damit kleiner, als die Sharpe Ratio nahelegt.
+- Die rollierenden Fünfjahreswerte für den US-Aktienmarkt zeigen zu verschiedenen Zeiten eine höhere Sortino Ratio als Sharpe Ratio für alle, denen Underperformance gegenüber Cash wichtig ist.
 
 ## Eigene Erkenntnisse
 

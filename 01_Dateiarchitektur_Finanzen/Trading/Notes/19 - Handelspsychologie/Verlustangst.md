@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Verlustangst
@@ -36,6 +36,17 @@ aktualisiert: 2026-10-30
 - Es gibt keinen Grund, große Risiken zu nehmen, bevor der Handel erfolgreich gelernt ist.
 - Wer mit ungehebelten Trades kein Geld verdient, wird mit gehebelten keines verdienen und dort schnell ausgeräumt.
 - Daytrading wirkt anziehend, weil Gewinn oder Verlust schnell kommt und nichts über Nacht gehalten wird; die Erfolgschance ist trotzdem deutlich schlechter als bei Swing- oder Positionstrades, solange der Handel nicht gelernt ist.
+- Bechara et al. (2004) spielten ein Investmentspiel mit positivem Erwartungswert: Start 20 Dollar, Einsatz 1 Dollar, bei Kopf ist der Dollar verloren, bei Zahl kommen 2,50 Dollar hinzu, 20 Runden. Spieler mit Läsionen an Amygdala, orbitofrontalem Kortex und insulärem beziehungsweise somatosensorischem Kortex, die keine Angst mehr fühlen, investierten in 83,7 Prozent der Runden. Normale investierten in 62,7 Prozent, Patientenkontrollen in 60,7 Prozent.
+- Nach einem Verlust in der Vorrunde investierten normale Spieler nur noch in 46,9 Prozent der Runden, Spieler ohne Angstschaltung in 85,2 Prozent. Normale und Patientenkontrollen zogen sich vom Risiko zurück, sowohl nach einem Verlust als auch nach einem Gewinn.
+- Ein rationaler Spieler würde in diesem Spiel jede Runde spielen. Normale Spieler werden über die Runden weniger optimal, nicht optimaler.
+- Ohne Emotion können wir Risiko nicht spüren. Mit Emotion können wir die Angst, die Risiko erzeugt, nicht kontrollieren.
+- Angst läuft über zwei Bahnen (LeDoux). Die schnelle, grobe Low Road geht vom sensorischen Thalamus zur Amygdala, dem Angst- und Risikoszentrum des X-Systems, und löst den Sprung zurück aus. Die langsamere High Road geht zum sensorischen Kortex und prüft die Lage bewusst. Ein falsch positiver Alarm ist überlebensmäßig besser als ein falsch negativer.
+- Jeder hält sich vermutlich für weniger von Verlustaversion betroffen als alle anderen. Die Wirklichkeit, die Montier aus der Evidenz zieht, ist, dass wir alle der Verlustangst unterliegen.
+- Myopische Verlustaversion ist die Furcht vor kurzfristigen Verlusten. Fehlt die normale Verarbeitung von Furcht, sinken die Furcht vor kurzfristigen Verlusten und die Risikoaversion.
+- Nach einem Verlust von nur 1 Dollar investieren normale Spieler nur noch in 46,9 Prozent der Folgerunden, in der gemeinsamen Auswertung in 41 Prozent, Patientenkontrollen in 37 Prozent. Der Schmerz dieses einen Dollars versetzt sie in eine Art Abschaltmodus.
+- Spieler mit Schädigung der Furchtschaltkreise investieren nach Verlusten in 85,2 Prozent der Runden und sind gegen die Wirkung des Geldverlusts weitgehend immun. Süchtige investieren nach einem Verlust in 82 Prozent der Runden.
+- Der Kauf von Assets, die gefallen sind, löst Furcht aus, weil alle anderen sie verkaufen. Genau diese Furcht muss überwunden werden, wenn man antizyklisch investieren will.
+- Wo sich Risiko auszahlt, nehmen Menschen ohne Furcht mehr davon und schneiden besser ab. Im Leben treffen dieselben Gruppen schlechte Entscheidungen, weil blindes Risiko dort kein guter Weg ist; die Furcht wird beim Verlassen des Büros wieder gebraucht.
 
 ## Funktionsweise
 

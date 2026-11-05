@@ -34,6 +34,13 @@ aktualisiert: 2026-11-05
 - Die exponentiell gewichtete Glättung verlagert das Gewicht auf die jüngeren Innovationen und dient als Benchmark der multivariaten Volatilitätsschätzung. Für Hang Seng und Nikkei 225 ist der Glättungsparameter etwa 0,9305. Die resultierenden Volatilitätsreihen sind glatter als die univariaten GARCH(1,1)-Reihen, bei ähnlichem Muster.
 - Die rollierende Kovarianzschätzung im Beispiel von Euro, Yen, IBM und Dell benutzt ein Fenster von 69 Tagen, ungefähr die Zahl der Handelstage eines Quartals. Sie reagiert auf große Innovationen langsamer als das DCC-Modell: Anstieg und Abklingen der Modellvolatilität sind schneller.
 - Die Stichprobenkorrelation der monatlichen Logrenditen von IBM und dem S&P 500 wird mit einem gleitenden Fenster von 120 Beobachtungen, also 10 Jahren, von Januar 1926 bis Dezember 1999 berechnet. Sie verändert sich über die Zeit und fällt in den jüngeren Jahren.
+- Nach der Arbeit von Robert Shiller ist das Verhältnis der zehnjährigen Preisvolatilität zur zugrunde liegenden Fundamentalvolatilität um mehrere Größenordnungen größer als eins.
+- Über die letzten zehn Jahre waren die Preise 14-mal so volatil wie die zugrunde liegenden Fundamentaldaten, die Dividenden. Die Fixierung auf die Kurzfrist erzeugt damit zu viel Volatilität.
+- Diese übermäßige Volatilität setzt Fehlbewertungen und ist zugleich der Schmerz bei dem Versuch, sie auszunutzen.
+- Die Suche nach einem Informationsvorsprung auf Tages-, Wochen-, Monats- oder Quartalsbasis treibt Anlagen zu extremen Hochs und Tiefs, weil Anleger Signal und Rauschen nicht trennen. Dieselbe Volatilität ist das, was langfristige Anleger zu nutzen suchen.
+- Über den gemeinsamen Zeitraum 1991–2005 betragen Rendite und Standardabweichung: DJ-AIG 4,1 und 4,4 Prozent, GSCI 5,7 und 6,3, CRB 3,1 und 2,9.
+- Der GSCI ist deutlich volatiler als die beiden anderen Indizes. Risikoadjustiert ist der CRB in dieser Stichprobe der beste Index, allerdings allein als Funktion des Zeitraums.
+- Der GSCI ist zu 76 Prozent Energie, der DJ-AIG zu 33 Prozent und der CRB zu 18 Prozent; die höhere Volatilität des GSCI gehört zu dieser Energiekonzentration.
 
 ## Funktionsweise
 
@@ -58,6 +65,10 @@ aktualisiert: 2026-11-05
 
 ## Risiken und Grenzen
 
+- Zu viele Risikomodelle schreiben die jüngeren Marktbedingungen fort. In turbulenten Phasen sind historische Volatilität und historische Korrelation voraussichtlich schlechte Führer.
+- Die historische Volatilität des S&P 500 ist auf allen gezeigten Maßen gefallen, und das führt zu niedrigen VaR-Werten.
+- Die Volatilitäten könnten von den aktuellen Niveaus leicht auf das Dreifache steigen. Ändern sich die Volatilitäten zugleich mit den Korrelationen, was äußerst wahrscheinlich ist, ist die Unterschätzung des VaR aus den Korrelationen nur der Anfang.
+- Volatilität und Korrelationen, gemessen während ein gemeinsamer Trade aufgebaut wird, sind fast sicher zu niedrig.
 
 ## Beispiele
 

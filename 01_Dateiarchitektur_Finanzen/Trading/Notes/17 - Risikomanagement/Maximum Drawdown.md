@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Maximum Drawdown
@@ -102,6 +102,8 @@ aktualisiert: 2026-11-01
 - Erst die Senkung um den Faktor 7 auf etwa 2,7 bringt den Betrag auf etwa 0,5; die Zahlen sind an die genaue simulierte Reihe gebunden und nicht exakt reproduzierbar.
 - An den historischen Strategierenditen senkt der Faktor 1,5, also der Hebel 13, den maximalen Drawdown unter minus 0,49.
 - Bei CPPI mit erlaubtem Drawdown minus 0,5 bleibt der Betrag unter 0,5; die Alternative ohne Stop-Loss erreicht 0,9 selbst mit halbem Optimalhebel.
+- Die Peak-to-Trough-Darstellung des S&P 500 wird als Beleg für die Schwere dieses Bärenmarkts angeführt.
+- Bevor von Bewertungsstütze die Rede sein kann, sind mindestens 30 Prozent weitere Kursrückgänge wahrscheinlich nötig.
 
 ## Unterschiedliche Quellenpositionen
 

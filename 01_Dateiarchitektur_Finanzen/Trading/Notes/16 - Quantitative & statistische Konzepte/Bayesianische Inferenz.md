@@ -65,6 +65,15 @@ aktualisiert: 2026-11-05
 - Prognosen unter MCMC entstehen, indem das angepasste Modell in jeder Gibbs-Iteration Realisationen für den Prognosezeitraum erzeugt; Punktprognosen sind die Stichprobenmittel, und die Stichproben-Standardabweichungen dienen als Varianzen der Prognosefehler.
 - MCMC berücksichtigt in der Prognose die Parameterunsicherheit, während das GARCH-Modell die Parameter als fest gegeben behandelt, und liefert eine prädiktive Verteilung der Volatilität, die informativer ist als eine Punktprognose und die Quantile für Value at Risk liefern kann.
 - Die Recheneffizienz der Volatilitätsprognose lässt sich mit Importance Sampling erhöhen, siehe Gelman, Carlin, Stern und Rubin (2003).
+- Ward Edwards (1968): Menschen sind konservative Verarbeiter fehlbarer Information. Experimente vergleichen ihr Verhalten mit dem Satz von Bayes, der formal optimalen Regel, wie Meinungen auf neue Information hin zu revidieren sind.
+- Die Meinungsänderung ist sehr geordnet und gewöhnlich proportional zu den aus dem Satz von Bayes errechneten Zahlen, aber dem Betrag nach zu klein.
+- Eine brauchbare erste Näherung lautet, dass zwei bis fünf Beobachtungen nötig sind, um die Arbeit einer einzigen Beobachtung zu leisten, wenn ein Mensch seine Meinung ändern soll.
+- Ein echter Bayesianer hätte nach einem falschen Ausgang die zugewiesene Wahrscheinlichkeit stark gesenkt. Tetlocks Experten taten das nicht; ihre beurteilten Wahrscheinlichkeiten vor und nach dem widerlegten Ereignis blieben fast gleich.
+- Bei ungenauen Prognosen lagen beurteilte Prior, beurteilte Posterior und bayesianisch vorhergesagte Posterior bei: Sowjetunion 0,74, 0,70 und 0,49; Südafrika 0,72, 0,69 und 0,42; EWU 0,66, 0,68 und 0,45; Kanada 0,65, 0,67 und 0,39.
+- Bei zutreffenden Prognosen lagen dieselben drei Werte bei: Sowjetunion 0,69, 0,83 und 0,80; Südafrika 0,70, 0,77 und 0,82; EWU 0,71, 0,78 und 0,85; Kanada 0,68, 0,81 und 0,79.
+- Ward Edwards (1968) vergleicht menschliches Verhalten mit dem Satz von Bayes, der formal optimalen Regel, wie Meinungen anhand neuer Information zu revidieren sind.
+- Die Meinungsänderung ist sehr geordnet und gewöhnlich proportional zu den aus dem Satz von Bayes berechneten Zahlen, aber im Ausmaß unzureichend.
+- Eine brauchbare erste Näherung an die Daten: Es braucht irgendwo zwischen zwei und fünf Beobachtungen, um die Wirkung einer einzigen Beobachtung auf die Meinungsänderung zu leisten.
 
 ## Funktionsweise
 

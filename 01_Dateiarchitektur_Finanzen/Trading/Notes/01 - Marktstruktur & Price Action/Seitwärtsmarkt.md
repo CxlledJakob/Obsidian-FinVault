@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Seitwärtsmarkt
@@ -60,6 +60,10 @@ aktualisiert: 2026-10-30
 - Gehandelt wird immer auf der rechten Seite des Charts nach dem letzten Balken, der unbekannten Seite; für die Entscheidung steht nur die Information bis zum letzten Preisbalken.
 - Man kann nie im Voraus wissen, ob ein Markt eine Trading Range beginnen wird; versucht ein Lehrer besondere Strategien für Trading Ranges, soll man weglaufen, denn sie haben alle nur nachträglich funktioniert.
 - Weil Beginn und Ende nie im Voraus bekannt sind, hat dieser Ansatz keine Trading-Range-Strategie; nur akademische Autoren mit zweifelhafter Handelserfahrung haben eine.
+- In einem Trading-Range-Umfeld, in dem Aktien nicht mehr anleihengetrieben sind, wird der Konjunkturzyklus für das Timing der Aktienrenditen wichtiger als in einem anleihengetriebenen Markt.
+- Die dismal years der USA sind ein Seitwärtsmarkt über 17 Jahre, im Text 1964–1982 und in der Tabelle 1964–1981, und zugleich der Testfall für Niedriginflation.
+- Dort erklärt die Steigung der Zinskurve etwa 15 Prozent der Einjahres-Aktienrendite, t = −3,01; der ISM erklärt sie nicht nutzbar, t = −0,79 und adjustiertes R² 0,08.
+- Die These lautet, der Zyklus zähle in Trading-Range- und Niedriginflationsmärkten deutlich mehr; die dismal years bestätigen das für die Zinskurve.
 
 ## Funktionsweise
 

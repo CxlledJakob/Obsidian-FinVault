@@ -236,6 +236,11 @@ aktualisiert: 2026-11-05
 - Die Anfangsvolatilität h1 wird auf die Stichprobenvarianz von rt gesetzt.
 - Die Volatilität in Abbildung 12.6 ist die bedingte Varianz der prozentualen Logrenditen.
 - Im Prognosemodell der stochastischen Volatilität gilt Var(vt) = σ²v,j für die Innovation der logarithmierten Varianz, und die Renditestörung εt hat Varianz 1.
+- Ein Markowitz-Portfolio minimiert die Varianz der Portfoliorendite bei gegebener erwarteter Rendite und maximiert die erwartete Rendite bei gegebener Varianz.
+- Das CAPM setzt voraus, dass alle Anleger Aktien nur im Mittelwert-Varianz-Raum sehen und die Markowitz-Optimierung benutzen; diese Annahme muss strikt für alle gelten.
+- Institutionelle Long-only-Manager beschreiben Risiko nicht über die Varianz; die Streuung nach oben wird der Rendite zugeschlagen.
+- Tracking Error und die Varianz der Renditen sind verschiedene Größen: Tracking Error misst die Schwankung der Differenz zwischen Fonds- und Indexrendite.
+- Clarke et al. (2006): ein Minimum-Varianz-Portfolio erzeugte höhere Renditen bei niedrigerem Risiko als der Marktindex, entgegen der CAPM-Vorhersage, der kapitalisierungsgewichtete Index sei effizient.
 
 ## Funktionsweise
 

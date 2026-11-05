@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Renditekurven-Aktien-Beziehung
@@ -23,6 +23,9 @@ aktualisiert: 2026-10-30
 
 - Ein positiver Spread, also langfristige Sätze höher als kurzfristige Sätze, ist oft ein bullischer Indikator für künftige Änderungen der Aktienkurse, besonders bei Aktienindizes, die nicht inflationsbereinigt sind.
 - Nelson stellt das in The Investor's Guide to Economic Indicators (1987), Seite 129, so dar.
+- Die Steigung der Zinskurve wurde 1984–2003 als Frühindikator künftiger US-Aktienrenditen und Überrenditen getestet und zeigte keine Vorhersagekraft.
+- t-Statistik und adjustiertes R²: Aktien 1 Monat −0,64 und 0,00, 3 Monate −0,85 und 0,01, 12 Monate 0,55 und 0,00; Überrendite −1,03 und 0,00, −0,83 und 0,01, −0,79 und 0,01.
+- In den dismal years 1964–1981 war dieselbe Steigung, als Proxy für Wachstums- und Inflationserwartungen, signifikant und erklärte etwa 15 Prozent der Einjahres-Aktienrendite, t = −3,01.
 
 ## Funktionsweise
 

@@ -121,6 +121,9 @@ aktualisiert: 2026-11-05
 - Prognosen im MCMC-Rahmen entstehen, indem das in jeder Gibbs-Iteration angepasste Modell Realisationen für den Prognosezeitraum simuliert.
 - Von M + N Gibbs-Iterationen werden nur die letzten N für die Prognose verwendet; die Stichprobenmittel sind die Punktprognosen von Rendite und Volatilität, und die Stichproben-Standardabweichungen dienen als Varianzen der Prognosefehler.
 - Die Effizienz der Volatilitätsprognose lässt sich mit Importance Sampling steigern, siehe Gelman, Carlin, Stern und Rubin (2003).
+- Montier baut ein künstliches Universum aus 100 Fondsmanagern, jeder mit einem wahren Alpha von 3 Prozent und einem Tracking Error von 6 Prozent, und trifft sie mit zufälligen Schocks über 50 Jahre.
+- Nach 50 Jahren zeigt der beste Manager ein Alpha von 5,2 Prozent und der schlechteste eines von 1 Prozent. In der Kapitelankündigung sind dieselben Enden auf 5 und 1 Prozent gerundet.
+- An den Jahresrenditen ist kaum zu erkennen, wer der gute und wer der schlechte Manager ist, obwohl jeder per Konstruktion dasselbe wahre Alpha von 3 Prozent hat.
 
 ## Funktionsweise
 
@@ -227,6 +230,7 @@ aktualisiert: 2026-11-05
 - Verschiedene Nullhypothesen liefern verschiedene Signifikanzschätzungen, weil jede simulierte Verteilung die Strategie mit einem anderen Zufalls-Benchmark vergleicht.
 - Gibbs-Ausreißererkennung rechnet aufwendig, schätzt aber Parameter und Ausreißer gemeinsam; das traditionelle Verfahren trennt Schätzung und Erkennung, ist schneller und kann bei mehreren Ausreißern Scheintreffer liefern.
 - Ergebnis und Effizienz des Griddy Gibbs hängen von der gewählten Spanne für ht ab.
+- Hohes Alpha und eine hohe Information Ratio verhindern nicht, dass fast jeder dieser Manager irgendwann in den 50 Jahren von seinen Kunden gefeuert worden wäre.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Attention Effect
@@ -35,6 +35,10 @@ aktualisiert: 2026-10-30
 - Dieser Mechanismus kann erklären, wie ein Marktboom allein durch eine lebhafte anfängliche Preisbewegung ausgelöst wird, die die Aufmerksamkeit auf den Aktienmarkt lenkt.
 - Shillers Studien zeigen, dass Anlegern oft nicht einmal bewusst ist, dass eine dramatische Preisbewegung sie zum Handeln motiviert hat.
 - Schon eine leichte zufällige Störung in den Nachrichten oder im Marktverhalten kann eine Idee, die in den Köpfen geschlummert hat, zum Leben wecken und ihre Aufmerksamkeit verzehren.
+- Inattentional Blindness: Menschen bemerken Reize direkt vor den Augen nicht, wenn sie mit einer aufmerksamkeitsfordernden Aufgabe beschäftigt sind. Das Gehirn kann Information nur begrenzt verarbeiten.
+- Simons und Chabris (1999): Wer die Pässe des weißen Basketballteams zählte und Ungewöhnliches melden sollte, übersah zu 46 Prozent, dass ein Gorilla ins Bild lief, in die Kamera sah und sich auf die Brust schlug.
+- Anleger suchen den großen Auslöser und verpassen dabei die kumulative Wirkung kleiner Nachrichtenstücke. Die Presse nährt den Mythos, jede noch so kleine Marktbewegung habe eine rationale Erklärung.
+- Eher abgerufen wird lebhafte, stark publizierte oder jüngere Information. Das Gedächtnis ist ein mentaler Prozess, in den die Wahrheit nur einer von mehreren Inputs ist und nicht der hauptsächliche.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Prozessdisziplin
@@ -51,6 +51,47 @@ aktualisiert: 2026-11-01
 - Wer die Strategien des Buches anwendet, dem wird großer Erfolg zugetraut, ohne Versprechen oder Garantie; wer schon erfolgreich handelt, soll sie in den eigenen Plan aufnehmen, die Ergebnisse sollten sich verbessern, vielleicht dramatisch.
 - Die Leistung von Strategien mean-revertiert oft.
 - Mit genügend Entschlossenheit und mit Anpassungen lassen sich alle hier beschriebenen Strategien von einem unabhängigen Trader umsetzen, ohne siebenstelliges Brokerkonto und ohne fünfstellige Technikausgaben.
+- Die besten Value-Manager teilen sechs Züge, die aus ihrer Anlagephilosophie folgen: hoch konzentrierte Portfolios, kein Besessensein vom Rauschen, Bereitschaft Cash zu halten, lange Zeithorizonte, Akzeptanz schlechter Jahre und die Bereitschaft, Fonds für neues Geld zu schließen.
+- Sie halten unbeirrt an den Value-Prinzipien fest und sind nicht bereit, vom Weg Ben Grahams abzuweichen.
+- Nicht zu investieren ist ihr Default; sie kaufen erst, wenn sie von den Vorzügen überzeugt sind, dargestellt durch eine Sicherheitsmarge.
+- In der TMT-Blase sahen viele dieser Fonds große Rückgaben und blieben trotzdem bei ihrem erprobten Ansatz.
+- Eveillard sagte, er verliere lieber die Hälfte seiner Anteilseigner als die Hälfte des Geldes seiner Anteilseigner.
+- Viele dieser Fonds sind für neue Anlagen geschlossen, weil die Manager die Größe kennen, ab der sie ohne Probleme nicht mehr arbeiten können, und ein Gefühl von Treuhänderpflicht behalten.
+- Diese Manager beschäftigen keine Heerscharen von Analysten damit, den Gewinn je Aktie des nächsten Quartals zu prognostizieren; sie versuchen, die Bewertung und die zugehörigen Risiken zu verstehen.
+- Einfachen Regeln und Verfahren zu folgen macht keinen großen Spaß, im Gegensatz dazu, den Tag mit Firmentreffen und Gesprächen mit Sell-Side-Analysten zu füllen.
+- Keynes: Das Spiel der professionellen Anlage ist unerträglich langweilig und übergenau für jeden, der vom Spielinstinkt ganz frei ist; wer ihn hat, muss dieser Neigung den entsprechenden Zoll zahlen.
+- Samuelson: Investieren sollte langweilig sein und nicht aufregend, eher wie Farbe beim Trocknen oder Gras beim Wachsen zu beobachten; wer Spannung will, soll 800 Dollar nehmen und nach Las Vegas gehen.
+- Koehler und Poon (2006) ließen die Wahrscheinlichkeit einer Blutspende und die Stärke der aktuellen Absicht schätzen; im Schnitt lagen die Teilnehmer rund 30 Prozentpunkte zu optimistisch.
+- Die vorhergesagte Spendewahrscheinlichkeit stieg über die Stärke der aktuellen Absicht viel schneller als das tatsächliche Ergebnis, sodass aktuelle Absichten überstark auf die Vorhersage des Verhaltens wirken, nicht auf das Verhalten selbst.
+- So leicht es ist zu sagen, von jetzt an sei man Value-Investor, so gering ist die Wahrscheinlichkeit, dass es wirklich eintritt.
+- Value-Investieren ist das Eingeständnis der eigenen Grenzen: Billig zu kaufen gibt eine Sicherheitsmarge und vermeidet die Abhängigkeit von den Unwägbarkeiten der Analystenprognosen.
+- Descartes trennt Verstehen und Glauben: Die Idee wird verstanden und danach auf ihre Geltung geprüft. Zwei Axiome tragen das: Verstehen und Glauben sind getrennt und nacheinander geordnet, und der Mensch beherrscht nicht, was er versteht, ist aber frei, Ideen zu glauben oder zu verwerfen. Spinoza hält beides für einen Schritt. Um etwas zu verstehen, muss man es zuerst für wahr halten. Nur danach, und nur mit Aufwand, wird es geprüft, und nötigenfalls entsteht ein korrigierter Glaube. Die Evidenz stützt Spinoza.
+- Gilbert et al. (1990) unterbrachen die Verarbeitung angeblich hopischer Wortbedeutungen durch einen Ton. Die richtige Erkennung wahrer Sätze blieb fast gleich, 55 Prozent ohne Unterbrechung und 58 Prozent mit Unterbrechung. Die richtige Erkennung falscher Sätze fiel von 55 auf 35 Prozent. Falsche Sätze wurden ohne Unterbrechung in 21 Prozent der Fälle für wahr gehalten und mit Unterbrechung in 33 Prozent. Wahre Sätze wurden unterbrochen in 17 Prozent der Fälle für falsch gehalten.
+- Gilbert et al. (1993) ließen Tatberichte lesen, in denen falsche Sätze rot und wahre schwarz erschienen, und unterbrachen einen Teil der Leser durch die Suche nach der Ziffer 5 in einer zweiten Laufzeile. Die Erkennung falscher Sätze fiel von 69 auf 34 Prozent, die Verwechslung falscher Sätze mit wahren stieg von 23 auf 44 Prozent.
+- Wenn die falschen Sätze die Tat verschärften und die Verarbeitung unterbrochen wurde, lag die empfohlene Haft im Schnitt fast 60 Prozent höher als ohne Unterbrechung. Milderten die falschen Sätze die Tat, lag die unterbrochene Empfehlung nur rund 4 Prozent niedriger.
+- Petty et al. (1976) ließen eine Botschaft hören, die Studiengebühren sollten halbiert werden, bei starker oder schwacher Argumentation und bei hoher oder niedriger Ablenkung durch aufblitzende Kreuze. Bei schwacher Botschaft stimmten stark Abgelenkte viel stärker zu als wenig Abgelenkte. Bei starker Botschaft stimmten stark Abgelenkte weniger zu als wenig Abgelenkte. Ablenkung ist besonders nützlich, wenn die Argumente schlecht sind, weil die Zuhörer merken, dass argumentiert wurde, aber nicht, dass die Argumente nicht tragen.
+- Wir scheinen verdrahtet zu sein zu glauben. Angeblich kluge Leute übernehmen Mythen wie Aktien für die lange Frist oder Dividenden spielten keine Rolle. Weitere Kandidaten einer Liste von zwölf Mythen waren Rohstoffe für die Zukunft und die Bedeutung des Anleiheangebots. Begrenzte Aufmerksamkeit und Framing kommen als weitere Quellen dazu, Global Equity Strategy vom 16. September 2004.
+- Das bloße Wissen um die eigenen Verzerrungen genügt nicht, auch wenn es der erste Schritt ist. Statt auf Selbsteinsicht zu setzen, sollen Verhaltensregeln in einen Anlageprozess kodifiziert werden.
+- Die Rendite lässt sich nicht steuern. Zu steuern ist der Anlageprozess.
+- Minahan (2006) im Journal of Investing: Eine tragfähige Anlagephilosophie trennt Alpha von Rauschen. Outperformance wird wahrscheinlicher mit einer klaren These, was genau Alpha erzeugt, welche Markteigenschaft die Gelegenheit liefert und worin der eigene Wettbewerbsvorteil bei ihrer Ausnutzung besteht.
+- Gute Manager prüfen mit erheblichem Aufwand, ob die Performance aus der erfolgreichen Umsetzung der Alpha-These, aus einem Benchmark-Misfit oder aus Glück stammt.
+- In kompetitiven Kapitalmärkten werden Alpha-Quellen tendenziell wegarbitriert. Gute Manager überwachen, ob das geschieht, und haben einen Prozess, neue Quellen zu suchen, die ihren Wettbewerbsvorteil nutzen.
+- Sir John Templeton: Überlegene Performance ist unmöglich, ohne etwas anderes zu tun als die Mehrheit.
+- Ein konträrer oder wertorientierter Ansatz gilt als zumindest teilweise robust gegen die zuvor identifizierten Verhaltensverzerrungen.
+- Geduld ist für Value-Anleger eine Tugend und für Growth-Anleger ein Albtraum. Der Zeithorizont ist dafür entscheidend.
+- Value wirkt nach der hier angekündigten Evidenz am besten relativ zur Branche, in sogenannten sektorneutralen Strategien. Value und Momentum können zusätzlich die Länderauswahl stützen, eine Value-Variante von GTAA.
+- Nach der klassischen Finanztheorie ist Risiko die Preisvolatilität. Long-only-Manager kümmern sich nicht um Aufwärtsrisiko; es wird der Rendite zugeschlagen und gelobt. Preisvolatilität und Beta versagen als Risikomaße, und die Risikomanager wären treffender Risikomaniker.
+- Montier verwendet Alpha hier als den vom Fondsmanager geschaffenen Mehrwert und hält das Konzept für unbehaglich, weil es aus dem CAPM stammt, das er als betrügerisches Modell bezeichnet.
+- Die sieben Sünden des Fondsmanagements vom November 2005 waren eine Liste von Unterlassungen. Der hier gesuchte Prozess soll eine Liste von Geboten sein, die diese Fallstricke vermeidet.
+- Um nicht Geschichten zu glauben, wird der Value-Ansatz empirisch geprüft, darunter die Sicherheitsmarge, Greenblatts Little-Book-Strategie, Information aus der Außenfinanzierung und Graham-Dodd-KGVs.
+- Einfache quantitative Modelle schlagen Expertenurteile in sehr vielen Umgebungen. Wo Mensch und Modell dieselbe Information haben, ist das Modell deutlich besser. Die mittlere Genauigkeit lag bei 66,5 Prozent für Menschen und bei 73,2 Prozent für die Modelle (Grove et al.).
+- Das Modell ist in der Regel eine Leistungsdecke und kein Boden. Menschen übergewichten ihre eigene Meinung gegenüber dem Modell und ziehen Leistung ab, selbst wenn ihnen die Modellausgabe vorliegt.
+- Quant bleibt in der Finanzbranche Randerscheinung, obwohl es erfolgreich sein kann. Die Gründe sind Überkonfidenz, ein selbstwertdienlicher Bias, Trägheit und die schwere Verkäuflichkeit.
+- Der selbstwertdienliche Bias fragt, was aus der Branche würde, wenn 18 von 20 durch Computer ersetzt würden. Trägheit meint, dass eine große Fondsgesellschaft kaum den Prozess der letzten 20 Jahre verschrottet. Verkauft wird Quant schlecht, weil Black Box gesagt wird und Berater fragen, warum man jemanden beschäftigt, der nur die Kurbel des Modells dreht.
+- Über die Hälfte der US-Bundesstaaten nutzt ein quantitatives Modell bei Bewährungsentscheidungen. In der Finanzbranche ist ein quantitativer Weg weit von üblich entfernt. LSV und Fuller & Thaler, zwei ausdrücklich verhaltensbasierte Fonds, haben achtbare Outperformance, was kein schlüssiger Beweis, aber ein Schritt ist.
+- Ein Anlageprozess, der sagt, welche Aktien long zu gehen sind, sagt vermutlich auch, welche short zu gehen sind. Die Long-only-Beschränkung ist zu brechen, wenn die Short-Kosten unter dem zusätzlichen Prozent aus dem Short der sechs ertragsschwächsten Länder liegen.
+- Die Zukunft des Fondsmanagements ist teils rückwärtsgewandt, mit der Rückkehr zu Balanced Funds und weiten Mandaten, und teils umwälzend, mit dem Ende des passiven Investierens und der Benchmark. Das Ziel werden absolute Renditen sein.
+- Ein Value-Bias liefert eher eine vernünftige Sicherheitsmarge als der Versuch, den Stil zu rotieren. Stilrotation ist ohne perfekte Voraussicht, die allen Anlegern fehlt, nicht oft profitabel.
 
 ## Funktionsweise
 
@@ -99,6 +140,30 @@ aktualisiert: 2026-11-01
 - Ohne Geduld und Disziplin, auf die Hochwahrscheinlichkeitsbedingungen des Plans zu warten, ist man kein Trader.
 - Wer über die berechnete Größe hinausgeht, hat nicht die Disziplin für logische und solide Handelsentscheidungen und spielt etwas anderes als professionelles Trading.
 - Bei einer objektiven Einstiegsstrategie entfällt die Entscheidung über Einstiegspreis und anfänglichen Schutzstop, sobald die Hochwahrscheinlichkeitsbedingungen erkannt sind. Beide Preise setzen Marktposition und Einstiegsstrategie.
+- Montier stellt 15 Regeln auf, um die zehn häufigsten mentalen Fallstricke zu vermeiden. Sie sind leicht gesagt und schwer umzusetzen, ähnlich Neujahrsvorsätzen. Ein Anlageprozess mit guter mentaler Praxis verlangt, aus der Tageshektik zurückzutreten und die Befunde der Psychologie auf das eigene Verhalten anzuwenden.
+- Regel 1: Diese Verzerrungen gelten für einen selbst, für das Gegenüber und für jeden anderen.
+- Regel 2: Man weiß weniger, als man denkt.
+- Regel 3: Auf die Fakten achten, nicht auf die Geschichten.
+- Regel 4: Mehr Information ist nicht bessere Information.
+- Regel 5: Prüfen, ob eine Information hohe Stärke und geringes Gewicht hat oder geringe Stärke und hohes Gewicht.
+- Regel 6: Nach Information suchen, die der eigenen Ansicht widerspricht.
+- Regel 7: Misserfolge sind nicht nur Pech; Fehler werden untersucht, um die Leistung zu verbessern.
+- Regel 8: Man wusste es nicht die ganze Zeit, man glaubt es nur.
+- Regel 9: Gelingt das Entzerren nicht, wird neu verankert, Unwichtiges durch Relevantes ersetzt und ein sinnvoller Bewertungsrahmen gesetzt.
+- Regel 10: Nach statistischer Wahrscheinlichkeit urteilen, nicht nach dem Anschein.
+- Regel 11: Eigene Erfahrung nicht übergewichten.
+- Regel 12: Große, lebhafte, leicht erinnerbare Ereignisse sind weniger wahrscheinlich, als man denkt.
+- Regel 13: Information nicht zum Nennwert nehmen, sondern prüfen, wie sie präsentiert wurde.
+- Regel 14: Etwas nicht höher bewerten, nur weil man es besitzt.
+- Regel 15: Verlierer verkaufen und Gewinner laufen lassen.
+- Gegen die Empathielücke helfen einfache, nicht verhandelbare Handelsregeln, die vorab festliegen und automatisch ausgeführt werden, zum Beispiel Verkauf nach Gewinnwarnung oder nach verfehlter Gewinnzahl.
+- Eine formale Verkaufsdisziplin hat in jedem erfolgreichen Anlageprozess erstrangige Bedeutung, weil die Evidenz für Verlustaversion stark ist und jeder sich für weniger betroffen hält als die anderen.
+- Unbelieving nach Gilbert (1993) heißt, Überzeugungen analytisch zu prüfen und mit der Realität zu konfrontieren. Sehr wenig ist zum Nennwert zu nehmen. Die Evidenz soll zeigen, wie wahrscheinlich der Satz tatsächlich ist.
+- Exposure Control heißt, die Quellen falscher Überzeugungen zu meiden und damit Glauben zu vermeiden, statt jeden Satz einzeln zu prüfen. Die Strategie schließt auch manche wahren Überzeugungen aus, leidet aber nicht unter Überlastung, Druck oder Zeitnot.
+- Unbelieving ist riskant, weil es geistige Reserven braucht. Kognitive Last, Druck und Zeitdruck untergraben nach Gilbert et al. die Fähigkeit, falsche Überzeugungen zu verwerfen.
+- Eine Kombination beider Strategien ist wahrscheinlich optimal. Wer die Geltung eines Arguments wirklich prüfen will, meidet Ablenkung: Bildschirme aus, Telefon weitergeleitet, Lärmquellen abgeschnitten, auch Kollegen ignorieren. Droht Ablenkung, wartet man, bis Zeit und Aufwand da sind, oder man folgt der Ausschlussstrategie.
+- Beim Prüfen der Gültigkeit eines Arguments ist Ablenkung abzuschneiden: Bildschirme aus, Telefon umleiten, Lärmquellen weg. Ist Ablenkung wahrscheinlich, wird gewartet, bis Zeit und Aufwand da sind, oder es wird einer Ausschlussstrategie gefolgt.
+- Eine Kombination der Strategien ist voraussichtlich optimal. Die Strategie des Nicht-Glaubens leidet unter Überlastung, Druck und Zeitdruck.
 
 ## Risiken und Grenzen
 

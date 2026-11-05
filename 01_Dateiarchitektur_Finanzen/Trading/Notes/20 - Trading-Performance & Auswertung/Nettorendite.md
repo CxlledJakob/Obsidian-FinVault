@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Renditekennzahlen"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Nettorendite
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Statt Alpha, Beta und Tracking Error zu verfolgen, soll die gesamte Nettorendite für die Anleger bei einem akzeptablen Risiko geliefert werden.
+- Dieser Idee kam man in den frühen 2000er Jahren näher; der nächste Bärenmarkt wird als Anlass genannt, wieder auf die Gesamtrendite zu sehen.
 
 ## Funktionsweise
 

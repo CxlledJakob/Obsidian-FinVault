@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Chance-Risiko-Verhältnis
@@ -73,6 +73,9 @@ aktualisiert: 2026-11-01
 - Eine einzige Mean-Reversion-Position kann einen enormen Drawdown erzeugen.
 - Je häufiger Black-Swan-Ereignisse auftreten und je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis sind, desto eher profitiert eine Momentum-Strategie.
 - Momentum kann in Risiken gedeihen, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
+- Im Münzwurfspiel von Bechara et al. (2005) steht einem möglichen Verlust von 1 Dollar ein möglicher Gewinn von 2,50 Dollar gegenüber; der erwartete Auszahlungsbetrag der Wette ist 1,25 Dollar gegen 1 Dollar bei Verzicht, und wer in allen 20 Runden investiert, hat nur 13 Prozent Chance, unter den gehaltenen 20 Dollar zu landen.
+- Jeder Wurf ist unabhängig, der vorherige Ausgang dürfte die nächste Entscheidung also nicht ändern. Nach einem Verlust investieren normale Spieler trotzdem nur in 46,9 Prozent der Folgerunden; in der gemeinsamen Darstellung mit Shiv et al. sind es 41 Prozent bei den Normalen und 37 Prozent bei den Patientenkontrollen.
+- Ist Risiko belohnt, führen geringere myopische Verlustaversion und geringere Risikoaversion zu höheren Erträgen. Wird das Spiel so geändert, dass Risikonehmen ein schlechtes Ergebnis ist, schneiden Furchtläsionspatienten und Süchtige schlechter ab als Normale.
 
 ## Funktionsweise
 

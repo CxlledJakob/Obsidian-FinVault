@@ -50,6 +50,10 @@ aktualisiert: 2026-11-05
 - Dieser zweite Faktor ist der Laufzeiteffekt und zugleich der Kontrast zwischen langfristigen Anleihen, Laufzeit 10 Jahre oder länger, und kurzfristigen Anleihen.
 - Nach der Rotation sind die Ladungen des ersten Faktors proportional zur Restlaufzeit und die des zweiten umgekehrt proportional zur Restlaufzeit.
 - Ein VARMA(2,1) entfernt die serielle Abhängigkeit, verändert die gleichzeitige Korrelationsmatrix aber kaum. Die Korrelation zwischen 30- und 20-jährigem Index ist 0,98, zwischen 30- und 1-jährigem Index 0,63 vor und 0,66 nach dem VARMA. Die Faktorenanalyse wird deshalb direkt auf die Renditen angewendet.
+- In den Prognosetests 1984–2003 hat die Steigung der Zinsstrukturkurve keine Vorhersagekraft für US-Aktienrenditen oder die Überrendite gegenüber Anleihen; die adjustierten R² liegen bei 0,00 oder 0,01, die t-Werte zwischen −1,03 und 0,55.
+- Aktien: 1 Monat t = −0,64 und R² 0,00, 3 Monate −0,85 und 0,01, 12 Monate 0,55 und 0,00. Überrendite: −1,03 und 0,00, −0,83 und 0,01, −0,79 und 0,01.
+- In den dismal years 1964–1981 erklärt dieselbe Steigung, als Proxy für die Markterwartungen von Wachstum und Inflation, etwa 15 Prozent der Einjahres-Aktienrendite, t = −3,01.
+- Eine Verlängerung einzelner Variablen bis 1960 ändert den Befund fehlender Vorhersagekraft im Hauptzeitraum 1984–2003 nicht.
 
 ## Funktionsweise
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Tradingplan
@@ -191,6 +191,9 @@ aktualisiert: 2026-10-30
 - Immer mindestens zwei Einheiten: die kurzfristige mit objektivem Ausstieg, die der höheren Zeitebene nach der jeweiligen Marktlage.
 - Die Ausstiegsstrategie muss bestimmt sein, bevor der Trade eingegangen wird.
 - Auch wenn die Ausstiegsstrategie subjektiver ist und im Verlauf angepasst wird, sollen das Ziel des Trades und die allgemeinen Bedingungen für einen Ausstieg im Voraus festgelegt sein.
+- Lässt sich der künftige emotionale Zustand nicht simulieren, sind vorab festgelegte und automatisch umgesetzte Handlungsabläufe die Alternative zu einer Wahl in der Hitze des Moments.
+- Eine einfache Handelsregel ändert das Ergebnis der Empathielücke: Verfehlt die Aktie die Gewinnzahl, wird sofort verkauft, statt zu erklären, im nächsten Quartal werde alles gut. Dieselbe Logik gilt für eine Hausregel, nach einer Gewinnwarnung zu verkaufen.
+- Eine formale Verkaufsdisziplin gehört in jeden erfolgreichen Anlageprozess. Der Prozess selbst verlangt, aus der täglichen Markthektik zurückzutreten und psychologische Befunde auf das eigene Verhalten anzuwenden.
 
 ## Risiken und Grenzen
 

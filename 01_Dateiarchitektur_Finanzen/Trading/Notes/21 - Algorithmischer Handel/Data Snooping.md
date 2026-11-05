@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Data Snooping
@@ -217,6 +217,8 @@ aktualisiert: 2026-11-01
 - Historische Renditen bieten zu wenig Daten, um einen Hebel zu bestimmen, der für viele Realisationen gut funktioniert; die Monte-Carlo-Optimierung ist dafür angelegt.
 - Weil Finanzpaniken selten sind, ist es beim Entscheiden, ob ein führender Risikoindikator nützlich ist, leicht, einem Data-Snooping-Bias zu erliegen.
 - Kein Finanzindikator sagt natürliche und andere nichtfinanzielle Katastrophen voraus.
+- Von 36 Regressionen zyklischer Frühindikatoren auf US-Aktienrenditen und Überrenditen 1984–2003 war nur eine statistisch signifikant: der OECD-Frühindikator erklärte 2 Prozent der Dreimonatsvariation der Überrendite von Aktien gegenüber Anleihen, t = 1,7.
+- Bei einem Data-Mining dieses Umfangs gilt dieses eine Ergebnis als zufällig verdächtig.
 
 ## Funktionsweise
 

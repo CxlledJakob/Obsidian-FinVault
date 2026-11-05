@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/25 - Unternehmenskennzahlen/25 - Unternehmenskennzahlen|25 - Unternehmenskennzahlen]]"
 weitere_hauptthemen: []
 unterthema: "Bewertung"
@@ -10,19 +10,21 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Forward-KGV
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Nach Dukes et al. (2006) wählen fast 80 Prozent der Analysten das Forward-KGV als bevorzugte Bewertungsmethode; in der Abbildung nennen 77 Prozent ein KGV auf künftigen Gewinnen.
+- Dieses Forward-KGV stützt sich auf ein bis zwei Jahre, während eine Aktie theoretisch ein langfristiger Anspruch auf Assets ist.
+- Sebastian Lancetti verglich für den Stoxx 600, Dezember 1989 bis zur Gegenwart, monatlich neu gewichtet, Value-Dezile nach dem IBES-Durchschnitt der FY1-Prognose und nach dem trailing KGV. Dezil 1 ist billig, Dezil 10 ist teuer. Einen materiellen Unterschied gab es nicht.
+- Die Analystenprognosen fügten der Value-Strategie nichts hinzu und zogen auch nichts ab. Mit frei verfügbaren nachlaufenden Gewinnen wären Value-Anleger gleich gut bedient gewesen.
 
 ## Funktionsweise
 

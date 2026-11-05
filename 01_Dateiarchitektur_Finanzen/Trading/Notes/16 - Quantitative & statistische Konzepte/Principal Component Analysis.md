@@ -89,6 +89,9 @@ aktualisiert: 2026-11-05
 - Ein Eigenwert null bedeutet eine exakte lineare Beziehung. Ist λk = 0, ist die zugehörige Linearkombination konstant, und r enthält nur k−1 zufällige Größen. Deshalb dient die Hauptkomponentenanalyse der Dimensionsreduktion.
 - In der Anwendung werden Kovarianz und Korrelation unter Regularitätsbedingungen konsistent durch die Stichprobenmatrizen geschätzt, wenn die Renditen schwach stationär sind. Der Teiler ist T−1. Eigenwerte und Eigenvektoren der symmetrischen Stichprobenmatrix liefern die Komponenten. In R und S-Plus heißt der Grundbefehl princomp, in FinMetrics mfactor.
 - Ein Faktor-Volatilitätsmodell beginnt mit einer Hauptkomponentenanalyse der Schocks at gleich rt minus µt. Danach wird den ersten Komponenten, die einen hohen Anteil der Variabilität erklären, ein Volatilitätsmodell angepasst, und die Volatilität jeder einzelnen Reihe wird an diese Faktorvolatilitäten gekoppelt. Die Dimension sinkt, die Näherung der multivariaten Volatilität soll erhalten bleiben.
+- Die Hauptkomponentenanalyse zerlegt x Reihen in x minus 1 neue Reihen, die untereinander unkorreliert sind.
+- Aus neun ähnlichen Blasen werden so acht untereinander unverbundene Hauptkomponenten.
+- Benutzt wird nur die erste Hauptkomponente, das gemeinsame Kernmuster der neun Blasen; Abbildung 41.6 zeigt sie als archetypische Blase.
 
 ## Voraussetzungen
 
@@ -124,6 +127,8 @@ aktualisiert: 2026-11-05
 - Ein informelles Verfahren zur Wahl der Komponentenzahl ist der Scree-Plot, der die Eigenwerte vom größten zum kleinsten gegen ihren Index abträgt. Gesucht wird ein Knick. Abbildung 9.5(a) zeigt diesen Plot für die fünf Aktienrenditen.
 - Für die monatlichen Logrenditen von IBM und dem S&P 500 hat die Kovarianz der Innovationen die Eigenwerte 63,373 und 13,489. Der erste erklärt 82,2 Prozent der verallgemeinerten Varianz. Der zugehörige Faktor ist xt gleich 0,797 mal a1t plus 0,604 mal a2t.
 - Dieselbe Zerlegung direkt auf den Renditen liefert die Eigenwerte 63,625 und 13,513, im Wesentlichen dieselben Werte. Der erste Faktor erklärt etwa 82,5 Prozent und lautet xt gleich 0,796 mal r1t plus 0,605 mal r2t. Weil die serielle Abhängigkeit der Renditen schwach ist, ist der Effekt der bedingten Mittelgleichungen auf die Hauptkomponentenanalyse vernachlässigbar. Für die weitere Modellierung wird der renditebasierte Faktor verwendet.
+- Die neun Blasen mit Gipfeljahr sind South Sea 1720, UK 1840er mini 1837, UK 1840er maxi 1845, US 1929, Silber 1980, Gold 1980, Japan 1990, Thailand 1996 und Chinese Red Chips 1997.
+- Die Regression des S&P 500 auf diese erste Hauptkomponente und die daraus erzeugten Prognosen stützen das frühere Blasenmodell.
 
 ## Unterschiedliche Quellenpositionen
 

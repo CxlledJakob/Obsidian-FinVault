@@ -55,6 +55,9 @@ aktualisiert: 2026-11-05
 - Die MCMC-Methode erzeugt eine prädiktive Verteilung der interessierenden Volatilität; sie ist informativer als eine Punktprognose und kann die für die Value-at-Risk-Rechnung benötigten Quantile liefern.
 - MCMC ist für die Value-at-Risk-Rechnung nützlich, weil es einen natürlichen Weg bietet, prädiktive Verteilungen auszuwerten.
 - Neben der prädiktiven Verteilung berücksichtigt MCMC bei der Prognose die Parameterunsicherheit.
+- VaR-Modelle sind als Maß des eingegangenen Risikos allgegenwärtig, von Handelstischen der Investmentbanken über Hedgefonds bis zu Fondsgesellschaften. Ihre weite Nutzung droht positives Feedback-Trading auszulösen.
+- Zu viele VaR-Modelle unterstellen, die jüngere Geschichte setze sich fort. Einfache Rechnungen legen nahe, dass sie das wahre Risiko allein wegen unpassender Korrelationen um 20 bis 30 Prozent unterschätzen. Eine Verdopplung oder Verdreifachung der Volatilität darüber hinaus lässt ein Desaster erwarten.
+- Nach dem Basle-Abkommen gelten für interne VaR-Modelle ein Horizont von 10 Handelstagen oder zwei Kalenderwochen, 99 Prozent Konfidenz und ein Beobachtungsfenster von mindestens einem Jahr, aktualisiert mindestens einmal je Quartal. Das Fenster ist die Quelle der positiven Rückkopplung.
 
 ## Funktionsweise
 
@@ -74,6 +77,10 @@ aktualisiert: 2026-11-05
 - In der Parametrisierung mit GPD-Skala ψ(η) ist der VaR zum Quantil q = 1 minus p gleich η minus [ψ(η) / ξ] mal {1 minus [T / Nη mal (1 minus q)] hoch minus ξ}, mit Stichprobenumfang T und Nη Überschreitungen. Diese Form verwenden R und S-Plus.
 - Für stationäre Logrenditen ersetzt die Extremwertformel (7.51) den VaR aus (7.28): bei ξn ungleich 0 ist VaR gleich βn minus (αn/ξn) mal {1 minus [minus nθ ln(1 minus p)] hoch (minus ξn)}, bei ξn gleich 0 gleich βn minus αn mal ln[minus nθ ln(1 minus p)]. Dabei ist n die Länge der Teilperiode und θ der Extremalindex.
 - Erklärende Variablen machen die Parameter und damit den VaR anpassungsfähig an veränderte Marktbedingungen. Für den Effekt der Marktvolatilität auf den VaR werden zwei Maße verwendet: die Zahl großer Tage in den fünf vorangegangenen Handelstagen und die bedingte Standardabweichung eines gaußschen GARCH(1,1).
+- Fallen nachlaufende Volatilität und Korrelationen, bleibt Risikobudget frei, und die Positionen werden ausgeweitet. Die historische Volatilität des S&P 500 ist auf allen gezeigten Maßen gefallen und erzeugt niedrige VaR-Werte.
+- Der VaR-Teufelskreis: Volatilität und Korrelation steigen, Fonds stoßen an Limits und verkaufen, dadurch steigen Volatilität und Korrelationen weiter, weitere Fonds müssen verkaufen.
+- Für ein großes diversifiziertes Portfolio ist das Risiko proportional zur Wurzel der Korrelation. Mit mittlerer Aufwärts-Halbekorrelation 0,21 und Abwärtskorrelation 0,38 (1970 bis 2004) ist der VaR mit 1,35 zu multiplizieren und unterschätzt das wahre Risiko um 35 Prozent. Ab 1995, Mittel 0,30 gegen 0,44, sind es 21 Prozent, wenn der VaR auf Aufwärtskorrelationen beruht.
+- Ändern sich die Volatilitäten zugleich, was äußerst wahrscheinlich ist, ist diese Korrektur nur der Anfang. Die Volatilitäten könnten sich gegenüber den aktuellen Niveaus leicht verdreifachen. Die Unterschätzung des im Aktienmarkt eingegangenen Risikos ist potenziell massiv.
 
 ## Voraussetzungen
 
@@ -93,6 +100,11 @@ aktualisiert: 2026-11-05
 - Der klassische Extremwert-VaR für IBM liegt bei 5 und 1 Prozent unter dem empirischen Quantil und unter den GARCH-Werten. Bei 0,1 Prozent dreht sich das Verhältnis zur Normalannahme um. Bei 9190 Tagen können die empirischen 5- und 1-Prozent-Quantile als Untergrenzen gelten, bei 0,1 Prozent nicht mehr.
 - Für die betrachtete IBM-Reihe reagiert der VaR des neueren Ansatzes wenig auf die Schwelle. Der Text empfiehlt, das Stichprobenmittel zuerst zu entfernen. Gegenüber der klassischen Blockmethode ist das Ergebnis über die drei Schwellen stabiler.
 - Wird der Extremalindex übersehen, droht eine Unterschätzung des VaR. Das homogene Poisson-Modell aus Beispiel 7.8 scheint den VaR gegenüber dem inhomogenen Modell zu unterschätzen.
+- Viele Modelle behandeln Risiko als exogen. In Turbulenz ist es endogen. Ob der Teufelskreis entsteht, hängt von Hebel und Gleichförmigkeit der Positionen ab. Unterschiedliche Positionen lassen sich kreuzen, identische nicht.
+- Während alle denselben Trade aufbauen, sind die gemessenen Volatilitäten und Korrelationen fast sicher zu niedrig.
+- LTCM nutzte VaR als Risikokontrolle, ebenso die Bond-Arbitrage-Desks mit denselben Trades. Als die Modelle Gefahr zeigten, folgte die Rückkopplung und ein Notverkauf epischen Ausmaßes.
+- Investmentbanken sahen ihre VaR steigen, während sie schwindenden Marktrenditen nachjagten. Das ist beunruhigend, weil die VaR bei fallender Volatilität hätten sinken sollen.
+- Dynamisches Hedging und VaR verstärken Markttrends. Fehlt ein fundamentaler Auslöser und scheitert der gemeinsame Reflation-Trade nur, weil alle ihn halten, laufen die Systeme just am Ausgang hoch.
 
 ## Beispiele
 

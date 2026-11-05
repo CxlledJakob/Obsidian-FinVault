@@ -202,6 +202,13 @@ aktualisiert: 2026-11-05
 - Haben zwei Aktien ähnliche Risikofaktoren, ist die Linearkombination wt = p1t − γ p2t der Logpreise Unit-Root-stationär und deshalb mean-reverting.
 - In der Fehlerkorrektur der beiden Logrenditen messen α1 und α2 die Wirkung der vergangenen Abweichung wt−1 − μw auf die beiden Renditen; in der Praxis sollen α1 und α2 entgegengesetzte Vorzeichen haben und damit die Rückkehr zum Gleichgewicht anzeigen.
 - Pairs Trading handelt die Schwankungen des Spreads um seinen Gleichgewichtswert μw, weil der Spread mean-reverting ist. Der Auflösungszeitpunkt tritt wegen dieser Mean Reversion ein.
+- Gewinnwachstum ist über einen Zeitraum von fünf Jahren stark mean-revertierend, und die Basisrate dieser Rückkehr ist sehr hoch. Analysten verstehen das nicht und schreiben Firmen mit hohem Wachstum der letzten fünf Jahre weiterhin sehr hohes Wachstum für die nächsten fünf Jahre zu. Das Niedrigwachstumsportfolio erzeugt nahezu so viel langfristiges Gewinnwachstum wie das Hochwachstumsportfolio (Montier, 2002; Chan, Karceski und Lakonishok, 2003).
+- Manager, die in den drei Jahren vor der Einstellung fast 14 % Outperformance hatten, haben danach statistisch insignifikante Renditen. Aus Performancegründen entlassene Manager lagen in den drei Jahren davor rund 6 % zurück und outperformen in den drei Jahren danach um fast 5 %.
+- Growth-Aktien mit hohem historischem Gewinnwachstum haben nach der Portfoliobildung viel niedrigeres Wachstum: bei Growth-Emittenten im Wesentlichen null, bei Growth-Rückkäufern noch etwa 6 % p.a. Value-Rückkäufe mit schwacher Vergangenheit drehen operativ.
+- Kurzfristige und langfristige Performance werden als ziemlich unkorrelierte Größen beschrieben. Von den langfristig besten Fonds lagen auf Jahressicht 73 % einmal im untersten Dezil und auf Dreijahressicht einer von dreien.
+- In Japan nach der Blase überwiegen negative Koeffizienten der zyklischen Indikatoren, angezeigt durch negative t-Statistiken. Sie dienen als Proxy für Mean Reversion: Aktien gegenüber Anleihen kaufen, wenn das Wachstum einbricht.
+- Das passt zur Sicht, dass in Japan erst eine Krise die Politikreaktion auslöst und man in der dunkelsten Stunde kauft.
+- Die stärkste Ausprägung ist das Prognose-BIP für die Einjahres-Überrendite, t = −2,7 und adjustiertes R² 0,21, Stichprobe 1991–2003.
 
 ## Funktionsweise
 

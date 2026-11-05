@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/25 - Unternehmenskennzahlen/25 - Unternehmenskennzahlen|25 - Unternehmenskennzahlen]]"
 weitere_hauptthemen: []
 unterthema: "Gewinn und Rentabilität"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Nettomarge
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Abbildung 44.9 von John Hussman und William Hester setzt die Gewinnmarge, um fünf Jahre verzögert, gegen das Gewinnwachstum über fünf Jahre und dient dem Argument einer bevorstehenden Abschwächung der US-Gewinne.
+- Die Gewinnmargen, um fünf Jahre verzögert, werden dem Gewinnwachstum über fünf Jahre gegenübergestellt; von Tief zu Tief sind die US-Gewinne nie um mehr als 6 Prozent pro Jahr gewachsen, und der Stand liegt oben im Kanal, im Gebiet der Spitzengewinne.
 
 ## Funktionsweise
 

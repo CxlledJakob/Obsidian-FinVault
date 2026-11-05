@@ -178,6 +178,37 @@ aktualisiert: 2026-11-05
 - Die Quadrattransformation in Gleichung (12.42) erhält die Korrelation zwischen ηt und εt nicht, falls diese Korrelation existiert.
 - Im zweiten stochastischen Volatilitätsmodell bezeichnet die Korrelation ρ zwischen den Störtermen den Leverage-Effekt; im ersten Modell sind {εt} und {ηt} unabhängig, die Korrelation ist also null.
 - Für die monatlichen S&P-500-Logrenditen von Januar 1962 bis November 2004 ist das Posterior-Mittel von ρ gleich −0,3892 bei Standardfehler 0,0292, etwa −0,39 und nahe dem in der Literatur üblichen Wert.
+- Carroll et al. (1988): Das Ranking des Bewährungsausschusses korrelierte zu 6 Prozent mit Rückfälligkeit, ein Dreifaktorenmodell aus Art der Straftat, Zahl früherer Verurteilungen und Zahl der Verstöße gegen Gefängnisregeln zu 22 Prozent.
+- Von Oktober 1977 bis Mai 1987 wurden in Pennsylvania 1035 Verurteilte für Bewährung geprüft; 743 kamen vor den Ausschuss, und 85 Prozent von ihnen erhielten Bewährung.
+- Die Entscheidungen folgten bis auf eine der Empfehlung des Bewährungsspezialisten.
+- Von den auf Bewährung Entlassenen wurden 25 Prozent innerhalb eines Jahres wieder eingesperrt, flüchtig oder wegen einer weiteren Straftat verhaftet; der Ausschuss hatte keinen dieser Fälle vorhergesagt.
+- Korrelationen ändern sich über die Zeit: nach Goetzmann et al. lag die Korrelation UK gegen USA seit den 1870er Jahren zu verschiedenen Zeiten zwischen 0,08 und 0,51.
+- Eine Forschungsnotiz von Juni 1996 fand, dass Stilrenditen nicht einfach eine Funktion der Sektorrotation sind: Faktorportfolios innerhalb der Sektoren waren äquivalent und hoch korreliert mit marktweiten Faktorportfolios.
+- Langfristig bestimmen Bewertungen die Renditen; die offene Frage ist der nötige Zeithorizont, um das auszunutzen, nicht die laufende Korrelation zum US-Markt.
+- Die Long-Short-Betas der Länderstrategien sind im Allgemeinen negativ; beim Kurs-Gewinn beträgt das Long-Short-Beta minus 0,1 bei t minus 2,0, beim Momentum plus 0,1 bei t 2,0.
+- Die Vertreter von Portable Alpha sagen, die Strategie arbeite am besten, wenn Alpha und Beta unkorreliert sind, etwa japanisches Alpha auf ein S&P-500-Beta.
+- Portable Alpha ergibt nur Sinn, wenn das Alpha zu allen Elementen des schon bestehenden Portfolios unkorreliert ist; vorhandenes japanisches Beta macht dasselbe Problem wie ein überlappendes Long-Short.
+- Russell 1000 und S&P 500 können sich als zwei Large-Cap-Inlandsindizes stark überlappen, sodass Portable Alpha dieselbe Aktie long und short hält.
+- Für Aktienmärkte 1970 bis 2004 beträgt die mittlere Aufwärts-Aufwärts-Halbekorrelation 0,21 und die mittlere Abwärts-Abwärts-Korrelation 0,38. Die Aufwärtsphase steht als Näherung für ein Klima, in dem alle Märkte gemeinsam steigen; wickelt sich der Reflation-Trade ab, ist die Abwärtsphase der passendere Maßstab.
+- Bei einem großen diversifizierten Portfolio ist das Risiko proportional zur Wurzel der Korrelation. Zur Korrektur der asymmetrischen Korrelation ist der VaR mit der Wurzel aus 0,38 geteilt durch 0,21 zu multiplizieren, also mit 1,35. Eine zu optimistische Korrelation unterschätzt das wahre Risiko damit um 35 Prozent.
+- Für 1995 bis 2004 liegt die mittlere Aufwärts-Halbekorrelation bei 0,30 und die mittlere Abwärtskorrelation bei 0,44. Dieselbe Rechnung ergibt eine mögliche Unterschätzung des wahren Risikos um 21 Prozent, wenn der VaR auf Aufwärtskorrelationen beruht.
+- Die Halbekorrelationen unterscheiden Phasen, in denen beide Märkte steigen, beide fallen oder die Phase gemischt ist. Die Stichprobe der Paare USA, Deutschland, Japan und Großbritannien läuft von 1970 bis 2004 beziehungsweise von 1995 bis 2004.
+- Konfidenz ist keine Stellvertretergröße für Fähigkeit: Schlechte Denker waren genauso konfident wie gute, die vorgestellte Korrelation existiert nicht.
+- Die Regression der aktuellen Lage auf neun einander sehr ähnliche Blasen leidet unter Multikollinearität; die Hauptkomponentenanalyse umgeht das, indem sie untereinander unkorrelierte Reihen extrahiert.
+- Die Abweichung der US-Gewinne von ihrem Trend und die Serie der Nettorückkäufe sind leidlich korreliert.
+- Die vorgestellte Korrelation zwischen Konfidenz und Fähigkeit existiert nicht; je selbstsicherer ein Vortragender klingt, desto eher glaubt das Publikum die Botschaft, auch wenn sie logisch fehlerhaft ist.
+- Die mediane Korrelation zwischen Hedgefonds-Strategien liegt bei 0,56. Ohne Dedicated-Short-Fonds, die negativ zu Wetten auf steigende Märkte korrelieren sollten, steigt sie auf 0,65.
+- Mitte der 1990er Jahre lag diese mediane Korrelation bei etwa 10 Prozent und ist auf 65 Prozent gestiegen, den Höchststand der Reihe.
+- Strategien in Emerging-Market-Debt, Equity Long/Short und Global Macro erreichen diese Korrelation, weil sie dasselbe tun: Beta oder Momentum mitreiten oder Volatilität verkaufen.
+- Fällt der Aktienmarkt oder steigt die Volatilität, verlieren alle Hedgefonds-Stile.
+- Zwischen dem durchschnittlichen BIP-Wachstum und der durchschnittlichen Dollar-Aktienrendite von Schwellenländern, 1988 bis 2004, besteht der umgekehrte Zusammenhang zu dem, den viele Anleger erwarten: niedriges Wachstum geht mit hohen Renditen einher, hohes Wachstum mit niedrigen.
+- Zwischen den KGVs von 1995 und den Dollar-Aktienmarktrenditen der folgenden zehn Jahre besteht ein Zusammenhang, in dem die billigsten Schwellenländer die höchsten und die teuersten die niedrigsten Renditen haben.
+- Zwischen den BIP-Wachstumsraten von 1990 bis 1995 und den KGVs Ende 1995 besteht ein Zusammenhang, aber kein sehr starker. Er geht in die Richtung, dass für höheres Wachstum höhere Bewertungssätze gezahlt werden.
+- Eine statistische Gruppe schlägt Einzelpersonen nur, wenn die Fehler unkorreliert sind: Niemand darf von den Entscheidungen der anderen beeinflusst sein, und die eigene Trefferwahrscheinlichkeit muss unabhängig davon sein, dass alle anderen richtig liegen.
+- Menschen irren nach der Grundlage der Behavioral Finance im Allgemeinen auf ähnliche Weise. Ihre Fehler sind deshalb höchst unwahrscheinlich unkorreliert, und der Vorteil der statistischen Gruppe geht verloren.
+- Das Argument, ein Überoptimist und ein Pessimist höben sich auf, setzt unkorrelierte Fehler voraus, die nach Montier gerade nicht vorliegen.
+- Die Sichten einer Buch-zu-Preis-Strategie auf die einzelnen Aktien sind nicht unabhängig. Die Breite ist deshalb nicht die Zahl der Aktien, hier 800, auch wenn vierteljährlich neu gewichtet wird.
+- Eine Erkenntnis, die über viele Märkte wiederholt wird, erzeugt korrelierte Wetten statt strategischer Diversifikation. Bei LTCM war fast jede Strategie Konvergenz, von US-Treasuries bis zu dänischen Mortgage-Backed Securities.
 
 ## Funktionsweise
 
@@ -291,6 +322,9 @@ aktualisiert: 2026-11-05
 - In diesem dreidimensionalen Modell steigt die Korrelation zweier Renditereihen, wenn die Renditen volatil sind. Das stimmt mit dem Befund überein, dass die Korrelation internationaler Aktienmarktindizes in einer Finanzkrise zunimmt. Die Größen qij,t haben hohe AR(1)-Koeffizienten: 0,790 schon im bivariaten Cisco-Modell und 0,824, 0,973 und 0,981 im dreidimensionalen Modell.
 - Im Vier-Asset-DCC von Euro, Yen, IBM und Dell, Januar 1999 bis Dezember 2004, sind die Korrelationen des Modells glatter als die einer rollierenden Schätzung mit 69 Tagen.
 - Ohne Leverage liegen die übrigen Posterior-Mittel nahe bei denen mit Leverage: σo 0,0775 gegen 0,0764, α −0,0613 gegen −0,0616 und ση 2,5827 gegen 2,5639; die beiden geschätzten Volatilitätsreihen sind sehr nah beieinander.
+- 1970 bis 2004 betragen die Korrelationen USA/Deutschland gesamt 0,45, Abwärts 0,55, Aufwärts 0,18 und gemischt minus 0,62.
+- 1995 bis 2004 liegen die Aufwärts- und Abwärtskorrelationen bei USA/Deutschland 0,44 und 0,67, bei USA/Japan 0,31 und 0,24, bei USA/Großbritannien 0,36 und 0,58, bei Deutschland/Großbritannien 0,54 und 0,71, bei Deutschland/Japan 0,05 und 0,06 und bei Großbritannien/Japan 0,07 und 0,35.
+- Der Text schließt, Abwärtskorrelationen lägen stets über Aufwärtskorrelationen. In der Tabelle 1995 bis 2004 ist USA/Japan die Ausnahme: Aufwärts 0,31 gegen Abwärts 0,24.
 
 ## Unterschiedliche Quellenpositionen
 

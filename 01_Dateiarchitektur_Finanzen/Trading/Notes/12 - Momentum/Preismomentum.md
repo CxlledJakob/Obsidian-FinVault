@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Preismomentum
@@ -30,6 +30,7 @@ aktualisiert: 2026-11-01
 - Bullisches Momentum heißt, der Indikator ist positiv; bei zwei Linien liegt die schnelle über der langsamen.
 - Bärisches Momentum heißt, der Indikator ist negativ; bei zwei Linien liegt die schnelle unter der langsamen.
 - Bullisch überkauft heißt, der Indikator ist bullisch und beide Linien haben die überkaufte Zone erreicht; bärisch überverkauft heißt, er ist bärisch und beide Linien haben die überverkaufte Zone erreicht.
+- Euphorie ist der Zustand, in dem zur Investition für Produktion und Absatz die Spekulation auf steigende Preise tritt. Das ist Momentum-Handel oder die Greater-Fool-Theorie. Adam Smith sprach von Overtrading.
 
 ## Kernaussagen
 
@@ -181,6 +182,27 @@ aktualisiert: 2026-11-01
 - Ein fortlaufend aktualisiertes Momentum-Signal wirkt als faktischer Stop-Loss, und deshalb haben Momentum-Modelle nicht dasselbe Tail Risk wie Mean-Reversion-Modelle.
 - Die FSTX-Opening-Gap-Strategie hatte vom 16. Juli 2004 bis 17. Mai 2012 eine annualisierte Durchschnittsrendite von etwa 13 Prozent und eine Sharpe Ratio von 1,4; lag der VIX des Vortags über 35, fielen die annualisierte Tagesrendite auf 2,6 Prozent und die Sharpe Ratio auf 0,16, der VIX rät also, am Folgetag nicht zu handeln.
 - Der Stop-Loss ist bei Momentum ein natürlicher Bestandteil der Strategie, während er bei Mean Reversion die Backtest-Performance wegen Survivorship Bias meist senkt und vor allem ein künftiges Black-Swan-Ereignis abfangen soll.
+- Das langfristige Preismomentum in der Analystenauswertung ist die Preisrendite der vergangenen drei Jahre, verteilt über die Dezile der Konsensempfehlungen.
+- Die Favoriten haben außerdem in den letzten zwölf Monaten außergewöhnlich hohe Preisrenditen erzielt.
+- Chan und Kot (2002) kreuzen lang- und kurzfristiges Preismomentum. Am US-Markt 1965 bis 2002 ist die beste der vier Gruppen der kurzfristige Preisgewinner, der langfristig ein Preisverlierer war. Die Analysten bevorzugen langfristige Preisgewinner.
+- Hohes gegen niedriges Preismomentum bringt im europäischen Growth-PE-Quintil rund 12 Prozent p.a. und im Value-PE-Quintil rund 4 Prozent p.a., Sample 1990 bis 2006.
+- Der mediane Mehrertrag des Sechsmonats-Preismomentums liegt im Growth-Universum über 400 Basispunkten p.a. und im Value-Universum bei 130 Basispunkten p.a.
+- High-Momentum-Sektoren schlugen Low-Momentum-Sektoren und den Markt um rund 2 Prozent p.a., ein für Preismomentum ungewöhnlich niedriger und nur grenzwertig signifikanter Ertrag.
+- Auf Titelebene lieferte Long-Short-Preismomentum fast 10 Prozent p.a. seit 1926, auf Sektorebene 2,2 Prozent von 1926 bis 2005 und 1,3 Prozent von 1974 bis 2005.
+- Der sektoradjustierte Backtest einer 6-Monats-Preismomentum-Strategie arbeitet schlechter als bei Value und Size; Preismomentum funktioniert nicht am besten sektoradjustiert.
+- Das getestete Preismomentum ist eine 6-Monats-Strategie mit Ausführung, die um einen Monat verzögert ist, einmal absolut und einmal relativ zum Branchenmedian.
+- Auf Länderebene ist Momentum die Preisänderung der vorherigen zwölf Monate.
+- Weil der Preis selbst nicht von Branchenmix oder Rechnungslegung abhängt, überrascht es nicht, dass branchenrelatives Preismomentum höhere Signifikanz, aber niedrigere absolute Renditen liefert.
+- Der Schluss des Backtests: die meisten Bewertungskriterien gewinnen durch die Sektoranpassung, Preismomentum nicht.
+- Länder mit dem höchsten Zwölfmonats-Preismomentum schlagen die mit dem niedrigsten um 15,8 Prozent p.a. und den MSCI World long-only um 9,0 Prozent p.a.
+- Ein einseitiger Markt, getrieben von momentumbasierten zynischen Anlegern, schafft ein sehr riskantes Umfeld. Momentum- oder Trendfolgestrategien dominieren diese Phase.
+- Trotz fehlender fundamentaler Überzeugung in die Rally der letzten Jahre spielen viele den Markt weiter. Kurze Horizonte, Überkonfidenz, vor dem Hoch auszusteigen, und die Einseitigkeit lassen die Abwicklung viel schneller erwarten, als viele glauben.
+- Eine starke Implikation positiver Rückkopplung ist, dass eine moderate Bewegung außergewöhnlich unwahrscheinlich ist. Die Preise bewegen sich kaum oder sehr scharf.
+- Overtrading kann reine Spekulation, eine Überschätzung der erwarteten Renditen oder übermäßiges Gearing sein. Die US-Erfahrung von 1991 bis 2002 erfüllt alle drei Elemente.
+- Die massive Beliebtheit aggressiver Wachstumsfonds belegt das große rein spekulative Element im US-Aktienmarkt.
+- Jedes Versagen des Preismomentums kann nach Abreu und Brunnermeier einen sich selbst erfüllenden Abschwung an den Aktienmärkten auslösen.
+- Das einfache Preismomentum des S&P 500 über 3, 6 und 12 Monate war zuletzt stark (Abbildung 40.8).
+- Berkelaar und Kouwenberg (2000): Verlustaverse Anleger sind in guten Weltzuständen Momentum-Händler.
 
 ## Funktionsweise
 
@@ -213,6 +235,8 @@ aktualisiert: 2026-11-01
 - Eine längere Lookback-Periode ist weniger empfindlich für Preisänderungen und braucht eine längere Phase jüngster Momentumänderung, bis sie beeinflusst wird.
 - Der Vorteil der längeren Lookback-Periode sind weniger falsche Umkehren durch kurzfristige Momentumänderungen; der Nachteil ist ein möglicher Nachlauf, sodass der Preis mehrere Bars vor dem Indikator umgekehrt haben kann.
 - Momentumtrends wechseln von niedriger Volatilität mit relativ seltenen Umkehren zu hoher Volatilität mit relativ häufigen Umkehren, und kein System warnt vor der Art der künftigen Zyklen.
+- Der Momentum-Filter im Growth- und Value-Test nutzt das Preismomentum der vergangenen sechs Monate, um einen Monat verzögert, und teilt das PE-Quintil in drei Gruppen.
+- Auf Sektorebene wird Momentum als 12-Monats-Gesamtrendite gemessen und das Universum in Tritiles sortiert.
 
 ## Voraussetzungen
 
@@ -302,6 +326,12 @@ aktualisiert: 2026-11-01
 - Zum 17. April 2007 waren Wochen- und Tagesmomentum der November-Sojabohnen überverkauft, der Preis lag nicht weit über der Unterstützung des Regressionskanals.
 - Nach der 162-Prozent-APP im USD/CAD war das Tagesmomentum noch bärisch und nicht überverkauft, deshalb wurde die Fortsetzung für wahrscheinlich gehalten.
 - Am 30. Januar war der 13er Tages-DTosc bärisch überverkauft, passend zu einem möglichen Welle-5-von-5-Tief.
+- Länder nach dem Preismomentum 1976 bis 2003: das hohe Tritile hat Monatsrendite 1,7, Risiko 4,9 und Rendite je Risiko 0,34; das niedrige 0,4, 4,6 und 0,08; der Markt 0,9, 4,2 und 0,23.
+- Das Long-Short-Alpha beträgt 1,2 bei t 5,6, das Long-only-Alpha 0,81 bei t 4,8, und das Long-only-Beta liegt bei 1,0 mit t 24,1.
+- 67 Prozent der Calls sind richtig, der Informationskoeffizient beträgt 0,34 und die Information Ratio 1,19.
+- Die erste Abbildung je Strategie setzt 1975 100 Einheiten in das obere und das untere Tritile und verfolgt sie bei monatlichem Rebalancing.
+- Die lange Aufwertung des Dollar gegen den Yen seit 1995 zog sämtliche trendfolgenden Momentum-Spieler in den Yen-Carry. Die Umkehr explodierte in der Woche ab dem 5. Oktober 1998 mit einem Wochenverlust des Dollar von 15 Prozent gegen den Yen.
+- Portfolio Insurance, dynamisches Hedging und informelle Stop-Losses verstärkten den Crash von 1987, nach Shiller 1987 und 1989.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Entscheidungsjournal
@@ -21,6 +21,8 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Glück und Können trennt nur eine Matrix aus Entscheidung, Grund und Ergebnis. Richtiger Grund und gutes Ergebnis ist Können, wobei es auch Glück sein kann. Richtiger Grund und schlechtes Ergebnis ist Pech. Falscher Grund und gutes Ergebnis ist Glück. Falscher Grund und schlechtes Ergebnis ist ein Fehler.
+- Die Matrix setzt eine schriftliche Aufzeichnung der Entscheidungen und der Gründe voraus. Sonst bleibt unsichtbar, ob man aus dem richtigen Grund oder aus einem Scheingrund richtig lag.
 
 ## Funktionsweise
 
@@ -38,6 +40,13 @@ aktualisiert: 2026-10-30
 - Einflüsse, die schlechte Trades und irrationales Denken fördern, werden entfernt.
 - Ziele werden klar und knapp aufgeschrieben und über realistische kurzfristige Zwischenziele verfolgt. Von Zeit zu Zeit wird geprüft, ob sie noch den aktuellen Bedürfnissen entsprechen.
 - Führt eine fundamentale Quelle regelmäßig zu zu frühem Ausstieg und geringem Vertrauen, ist es oft besser, sich dieser Außenmeinung nicht auszusetzen.
+- Gegen Self-Attribution hilft ein schriftliches Protokoll der Entscheidungen und der Logik dahinter. Dieselben Aufzeichnungen früherer Überzeugungen helfen auch gegen den Hindsight Bias.
+- Die Entscheidungen werden in vier Felder gelegt. Gutes Ergebnis aus richtigem Grund ist Können, wobei es immer noch Glück sein kann. Gutes Ergebnis aus falschem Grund ist Glück: Das Ergebnis bleibt im Portfolio, aber man redet sich nicht ein, gewusst zu haben, was man tut.
+- Schlechtes Ergebnis aus falschem Grund ist ein Fehler, aus dem zu lernen ist. Schlechtes Ergebnis aus richtigem Grund ist Pech, das vorkommt.
+- Nur die Kreuzung aus Entscheidung, Grund und Ergebnis zeigt, wann Glück und wann wirkliches Können vorlag.
+- Gegen Hindsight wirkt die bloße Warnung wenig. Wirksamer ist, ausdrücklich die Gegenfälle zu durchdenken: was nicht eingetreten ist und was zu einem anderen Ausgang hätte führen können (Slovic und Fischhoff, 1977). Auch dann bleibt Hindsight, aber deutlich schwächer.
+- Ein Teil der Hürden beim Lernen lässt sich durch schriftliche Aufzeichnungen der Entscheidungen und der Logik dahinter eindämmen. Das verlangt Disziplin und die Bereitschaft, frühere Entscheidungen wieder zu prüfen.
+- Es braucht weit mehr Information über Fehler, als nötig sein sollte, bevor die Meinung sich ändert. Nach Ward Edwards (1968) sind zwei bis fünf Beobachtungen nötig, um die Arbeit einer einzigen Beobachtung zu leisten.
 
 ## Risiken und Grenzen
 

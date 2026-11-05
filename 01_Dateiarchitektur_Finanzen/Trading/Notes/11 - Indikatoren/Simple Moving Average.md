@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Simple Moving Average
@@ -72,6 +72,10 @@ aktualisiert: 2026-11-01
 - Die langsame Linie eines Indikators ist gewöhnlich nur ein gleitender Durchschnitt der schnellen Linie und reagiert langsamer auf Momentumänderungen.
 - Der MACD misst die Differenz zwischen zwei gleitenden Durchschnitten.
 - Ein Balken auf der anderen Seite der MACD-Mittellinie bedeutet, dass der schnellere gleitende Durchschnitt den langsameren nach oben oder unten gekreuzt hat.
+- Graham und Dodd bilden das zyklisch bereinigte Kurs-Gewinn-Verhältnis mit einem gleitenden Durchschnitt der Gewinne von mindestens fünf, vorzugsweise sieben oder zehn Jahren, nicht mit einer einzigen Trailing-Gewinnzahl.
+- Das Graham-und-Dodd-Verhältnis teilt den aktuellen Kurs durch den zehnjährigen Durchschnitt der ausgewiesenen Gewinne.
+- Ein einfacher gleitender Durchschnitt der Vergangenheit wird einer aufwendigen Trendschätzung vorgezogen. Graham hatte keine verlässlichen Aktienwertberechnungen gesehen, die über einfache Arithmetik oder die elementarste Algebra hinausgingen.
+- Fehlt eine volle Gewinnhistorie, wird der Durchschnitt auf dem längsten verfügbaren Zeitraum gerechnet.
 
 ## Voraussetzungen
 

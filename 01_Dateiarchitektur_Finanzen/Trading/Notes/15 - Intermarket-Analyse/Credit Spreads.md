@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Credit Spreads
@@ -33,6 +33,7 @@ aktualisiert: 2026-11-01
 - Der Kreditmarkt wird von großen Institutionen dominiert, die vermutlich informierter sind als Indikatoren des Aktienmarkts, in dessen Bewertung der Herdentrieb der Privatanleger eingeht.
 - Der TED Spread bleibt ein brauchbarer führender Risikoindikator trotz der Manipulation der LIBOR-Sätze durch Banken, die sie niedriger erscheinen ließen, nach Snider und Youle 2010; entscheidend ist der relative Wert über die Zeit, nicht der absolute.
 - Hochzinsanleihen, vertreten etwa durch den ETF HYG, haben zu verschiedenen Zeiten als Risikoindikator gedient und müssen darauf geprüft werden, ob sie führend sind.
+- Das Portfolio aus Value-Rückkäufen minus Growth-Emittenten ist bei hohem und bei niedrigem Default Premium positiv und ebenso bei einem Chicago National Activity Index unter null und über null. Value-Rückkäufe schlagen Growth-Emittenten also unabhängig von diesen wirtschaftlichen Zuständen.
 
 ## Funktionsweise
 
@@ -42,6 +43,8 @@ aktualisiert: 2026-11-01
 - Fallen die Renditen niedrigerer Qualität wie BAA schneller als die höherer Qualität wie AAA, wird das als Bereitschaft gelesen, für die höheren Renditen zusätzliches Ausfallrisiko zu übernehmen.
 - Ein steigender Trend des Quality Spread gilt als Signal, dass Anleger höhere Risiken für höhere Renditen eingehen, und der Spread soll in dieselbe Richtung wie die Aktien laufen.
 - Die inverse Trendregel TI-40-41 wendet den Channel-Breakout-Operator mit 41 Tagen Look-back auf Eingabereihe 40 an, den Quality Spread BAA minus AAA.
+- Als Maß für schlechte Weltzustände dient der Default Premium, der Spread niedrig eingestufter Unternehmensanleihen zu Staatspapieren. Ist er hoch, durchläuft die Wirtschaft wahrscheinlich einen Abschwung, und Value sollte nach der Effizienzmarktthese viel schlechter abschneiden als Growth.
+- Der zweite Proxy ist der Chicago National Activity Index. Liegt er unter null, wächst die Wirtschaft unter dem Trend, was ebenfalls ein schlechtes Ergebnis für Value-Aktien implizieren würde.
 
 ## Voraussetzungen
 

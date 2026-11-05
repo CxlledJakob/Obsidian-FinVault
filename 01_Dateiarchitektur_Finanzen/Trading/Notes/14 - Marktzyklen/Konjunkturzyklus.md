@@ -39,6 +39,23 @@ aktualisiert: 2026-11-05
 - In Expansionen schlägt das lineare Modell sowohl das TAR als auch das Markov-Switching-Modell.
 - Während der Kontraktionen sind staatliche Eingriffe und industrielle Umstrukturierung am wahrscheinlichsten und können die Nichtlinearität der Arbeitslosenquote erzeugen.
 - Diese Phasen wiegen für die Prognose besonders, weil ökonomische Prognosen in Kontraktionen mehr beachtet werden.
+- Graham und Dodd rieten 1934, das Kurs-Gewinn-Verhältnis mit einem Gewinnmittel von mindestens fünf, besser sieben oder zehn Jahren zyklisch zu bereinigen, damit der Konjunkturzyklus die Bewertung nicht hin- und herwirft.
+- Schreiben Anleger die Vergangenheit fort, sind sie im Boom zu optimistisch und im Abschwung zu pessimistisch; ein Gewinnmittel, das länger ist als der Geschäftszyklus, soll auf die wahre Ertragsfähigkeit lenken.
+- Der zehnjährige Durchschnitt der ausgewiesenen Gewinne dient dazu, vom Geschäftszyklus zu abstrahieren.
+- Graham hält fest, dass der Markt aus Maulwurfshügeln Berge mache, gewöhnliche Wechselfälle zu großen Rückschlägen übersteigere und dass schon mangelndes Interesse Kurse absurd tief drücken könne.
+- Anleger versuchen weiterhin, den Zyklus zu prognostizieren, statt ihn aus dem Kurs-Gewinn-Verhältnis herauszurechnen, obwohl die zyklische Bereinigung seit 1934 vorliegt.
+- Historisch hat der Konjunkturzyklus in den USA weder die absolute Aktienrendite noch die Überrendite von Aktien gegenüber Anleihen vorhergesagt; in Seitwärtsmärkten mit niedriger Inflation wird er deutlich wichtiger, und seine eigentliche Kraft liegt in der Sektorrotation.
+- Theoretisch beeinflusst der Zyklus die Gewinne und die Gewinne die Aktien; die Empirie 1984–2003 stützt das für die Assetklasse nicht.
+- A priori ist aus der vergangenen Wirtschaftsleistung wenig Vorhersagbarkeit zu erwarten, weil der Aktienmarkt als vorausschauend gilt. Der ISM als Wachstumsproxy hat auf 1, 3 und 12 Monaten adjustierte R² von 0,00.
+- Nachlaufendes Gewinnwachstum erklärt immerhin etwa 5 Prozent der Einjahres-Aktienrendite, t = 1,80, aber nichts Signifikantes bei der Überrendite; das spricht für adaptive Gewinnerwartungen.
+- Ohne Befund blieben Zinskurvensteigung, OECD-Frühindikator, Konsens-BIP, DrKW-MCI, prognostiziertes Gewinnwachstum und Earnings Momentum. Von 36 Regressionen war nur der OECD-Frühindikator bei der Dreimonats-Überrendite signifikant, R² 0,02, und das gilt als Data-Mining-Artefakt.
+- Eine Verlängerung einzelner Variablen zurück bis 1960 ändert diese Schlüsse nicht.
+- Japan 1984–2003 zeigt keinen zyklischen Einfluss. Nach der Blase erklären die Indikatoren bis zu 20 Prozent der Einjahresrenditen; negative Koeffizienten wirken als Mean-Reversion-Proxy, also Kauf von Aktien gegen Anleihen bei einbrechendem Wachstum.
+- Konsensprognosen des BIP erklären in Japan 1991–2003 die Einjahres-Überrendite mit t = −2,7 und adjustiertem R² 0,21, die Einjahres-Aktienrendite mit t = −2,1 und 0,14.
+- In den dismal years, einem Seitwärtsmarkt über 17 Jahre, im Text 1964–1982 und in der Tabelle 1964–1981, erklärt die Zinskurvensteigung 15 Prozent der Einjahres-Aktienrendite, t = −3,01; der ISM bleibt bei t = −0,79 und R² 0,08 ohne nutzbaren Befund.
+- Aus dem Zyklus allein folgt kein automatisches Übergewichten von Aktien gegenüber Anleihen. Innerhalb des Aktienmarkts erklären ISM und MCI je über 20 Prozent der relativen Einjahresrendite von US-Grundstoff gegen US-Versorger.
+- Für Japan nach der Blase wird beschrieben, dass der Markt aufhört, anleihengetrieben zu sein, und gewingetrieben wird; viele Rallys fielen mit Aufschwüngen zusammen. Gleichlaufende Indikatoren taugen wenig, weil die Regressionen die Renditen verzögern.
+- Wer US-Aktien wegen eines zyklischen Aufschwungs kauft, hat in der untersuchten Stichprobe keine Grundlage.
 
 ## Funktionsweise
 

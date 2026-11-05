@@ -55,6 +55,55 @@ aktualisiert: 2026-11-05
 - Wird Momentum als langsame Diffusion von Information verstanden, endet es früher, wenn mehr Händler die Information schneller und früher lernen.
 - Die Haltedauer muss deshalb womöglich ständig verkürzt werden, und es gibt dafür keinen vorhersagbaren Zeitplan.
 - Die Auflösung des Pairs-Geschäfts schon bei Rückkehr des Spreads auf den Mittelwert verkürzt die Haltedauer des Portfolios und kann zugleich mehr Transaktionen und höhere Handelskosten erzeugen.
+- Die durchschnittliche Haltedauer einer Aktie an der New York Stock Exchange beträgt 11 Monate.
+- Über diese 11 Monate ist die Rendite nur eine Funktion von Preisänderungen und hat mit innerem Wert oder diskontiertem Cashflow nichts zu tun; Montier nennt das Spekulation.
+- Weil viele Anleger Rauschen mit Nachrichten verwechseln und einander überlisten wollen, enden sie bei sehr kurzen Zeithorizonten und handeln infolgedessen zu viel.
+- Analysten verwenden in der Bewertung meist nur ein oder zwei Jahre als Input, obwohl eine Aktie theoretisch ein langfristiger Anspruch auf Assets ist.
+- Diese Kurzfristigkeit passt zur Schrumpfung der Haltedauern; die Analysten bedienen damit die Nachfrage ihrer Kunden.
+- Wer mit Dividenden-Diskontmodell oder Total Return bewertet, nutzt eher fünf Jahre und mehr. Das beliebteste Maß, das KGV auf künftigen Gewinnen, bleibt bei ein bis zwei Jahren.
+- Die durchschnittliche Aktienhaltedauer der untersuchten Value-Fonds liegt über 5 Jahren, das Maximum bei 17 Jahren und das kürzeste bei 3 Jahren.
+- Nach Morningstar hält die Mutual-Fund-Branche eine Aktie im Schnitt nur ein Jahr; bei diesem Horizont wird Investieren nach Montier zur Spekulation.
+- In den 1950er und 1960er Jahren lag die durchschnittliche Haltedauer an der NYSE bei 7 bis 8 Jahren; heute sind es 11 Monate.
+- Die durchschnittliche Umschlagrate der zehn Fonds in Tabelle 23.2 beträgt 17,6 Prozent.
+- Die niedrigste Umschlagrate in der Tabelle hat Tweedy Browne Global Value mit 6 Prozent, die höchste Mutual Beacon mit 35 Prozent.
+- Munger und Buffett: Ist der Kauf einer Stammaktie richtig gemacht, ist die Zeit zum Verkauf fast nie.
+- Long-only-Manager sind nach den Morningstar-Daten und den Daten von John Bogle am Schrumpfen der Haltedauer ebenso beteiligt wie Hedgefonds.
+- Die untersuchten Value-Investoren hatten eine durchschnittliche Haltedauer von 5 Jahren, die durchschnittliche Haltedauer einer Aktie an der New York Stock Exchange beträgt nur 11 Monate.
+- Keynes: Moderne Anleger konzentrieren sich zu sehr auf jährliche, vierteljährliche oder sogar monatliche Bewertungen dessen, was sie halten, und auf Kursgewinne und zu wenig auf die laufende Rendite und den inneren Wert.
+- Keynes hielt es für ein nützliches Heilmittel, den Kauf einer Anlage dauerhaft zu machen wie eine Ehe, außer aus Tod oder einem anderen schweren Grund, damit nur die langfristigen Aussichten zählen.
+- Graham: Unterbewertungen aus Vernachlässigung oder Vorurteil können unangenehm lange bestehen, und dasselbe gilt für überhöhte Preise.
+- Je häufiger ein Portfolio geprüft wird, desto wahrscheinlicher wird ein Verlust gesehen.
+- In einem konstruierten Universum, in dem alle Manager 3 Prozent Alpha und 6 Prozent Tracking Error haben und 50 Jahre laufen, zeigten rund 70 Prozent drei oder mehr Jahre Underperformance in Folge.
+- Goyal und Wahal (2005): Eingestellte Manager hatten in den drei Jahren vor der Einstellung fast 14 Prozent Outperformance und danach insignifikante Renditen; wegen Performance Entlassene hatten davor rund 6 Prozent underperformed und in den drei Jahren danach fast 5 Prozent outperformt.
+- Montier nennt das eine Lektion, die Zeithorizonte zu verlängern und die Risiken des Investierens dem Endkunden besser zu erklären.
+- Die durchschnittliche Haltedauer einer Aktie an der NYSE lag in den 1950ern und 1960ern bei 7 bis 8 Jahren und liegt heute bei 9 Monaten. Die Abbildung zeigt Bogle-Daten und NYSE-Daten.
+- Die durchschnittliche Haltedauer eines Publikumsfonds fiel von 16 Jahren in den 1950ern auf 4 Jahre.
+- Eine Gruppe vorbildlicher Value-Investoren hielt im Schnitt 5 Jahre, der durchschnittliche US-Publikumsfonds nur 1 Jahr.
+- Die billigsten 20 % des MSCI Europe haben seit 1991 im ersten Jahr rund 3 % Outperformance erzeugt; bei weiterem Halten steigt sie im Schnitt auf 32 % über fünf Jahre.
+- Bei den teuersten 20 % nach dem Kurs-Gewinn-Verhältnis fällt der Anteil der Titel mit Outperformance von 38 % im ersten Jahr auf 34 % nach fünf Jahren, und die Renditen werden mit der Zeit schlechter.
+- Im Value-Portfolio liefert nur etwa die Hälfte der Titel die Outperformance im ersten Jahr, nach fünf Jahren fast 60 %.
+- Die Haltedauer sinkt seit Jahrzehnten. Leichtere Information und immer kürzere Performancemessung werden als Gründe genannt; der Hedgefonds-Boom ist jünger und wird als Erklärung oft überschätzt, kann am Rand aber weitere Kurzfristspieler erzeugen und Long-only-Manager in denselben Wettbewerb ziehen.
+- Performancemessung innerhalb des Tages, die nicht an der normalen Varianz der gehaltenen Aktien skaliert ist, misst Rauschen.
+- Die Portfolios werden jeden Monat gebildet und dann über verschiedene Zeithorizonte laufen gelassen; überlappende Stichproben ändern die Ergebnisse nicht wesentlich.
+- Langfristig outperformanceende Value-Manager hielten im Schnitt fünf Jahre, Aktien an der NYSE elf Monate und der durchschnittliche US-Publikumsfonds etwas über ein Jahr.
+- Die Value-Überschussrendite der billigsten 20 Prozent des MSCI Europe nach trailing PE liegt nach zwölf Monaten bei rund 3 Prozent, nach zwei Jahren kumuliert bei 5,7 Prozent und in den Jahren 3 bis 5 bei 8 bis 10 Prozent p.a.
+- Die Value-Trefferquote steigt von 50 Prozent auf Einjahressicht auf 57 Prozent bei fünf Jahren, aber nicht massiv.
+- Im Growth-Portfolio sinkt der Anteil der Titel mit Marktrendite über dem Index, je länger der Horizont wird, weil das Risiko eines Earnings-Torpedos zunimmt.
+- Die Sektor-Tests sortieren jährlich in Tritiles und verfolgen das höchste und das niedrigste Tritile ein Jahr, dann wird der Vorgang wiederholt.
+- John Bogle (2005) stellt fest, dass die durchschnittliche Haltedauer von Anlegern in US-Publikumsfonds von mehr als 10 Jahren in den 1950ern auf rund 4 Jahre gefallen ist.
+- Die durchschnittliche Haltedauer einer Aktie an der NYSE lag Mitte der 1950er bei 7 bis 8 Jahren und liegt heute bei nur 11 Monaten.
+- Der Rückgang ist nicht bloß die Folge des Aufstiegs der Hedgefonds. Bogles Reihe zur Haltedauer professioneller Anleger aus einer ganz anderen Quelle folgt eng dem Verlauf der NYSE-Reihe.
+- So kurze Haltedauern haben nichts mit Investment zu tun. Sie sind reine Spekulation.
+- Keynes hält es für ein mögliches Heilmittel der Übel moderner Anlagemärkte, den Kauf dauerhaft und unauflöslich zu machen, wie eine Ehe, außer bei Tod oder einem anderen schwerwiegenden Grund, weil der Anleger dann nur noch die langfristigen Aussichten bedenken müsste.
+- Die Information Ratio hat eine Darstellung in der Zeit: Aus der Volatilität der Überschussrenditen folgt, wie lange gehalten werden muss, bis eine Strategie mit hoher Wahrscheinlichkeit die Überschussrendite zeigt.
+- US-Aktien gegenüber Cash haben eine Information Ratio von 0,37. Das entspricht 14 Jahren Haltedauer, bis Kunden zu 90 Prozent sicher eine Überschussrendite über Cash sehen.
+- Die Cheap-Country-Strategie braucht auf Basis der Ex-ante-Information-Ratio eine Haltedauer von sechs Jahren. Das taktische Allokationsmodell braucht sieben Jahre, um zu 90 Prozent sicher die Benchmark zu schlagen.
+- Die Langfristrendite enthält die Bewertungsänderung während der Haltedauer, neben Dividendenrendite und realem Dividendenwachstum. Die bewertungsabhängigen Realrenditen sind über zehn Jahre gemessen.
+- Quartalsweise Leistungsmessung bleibt bei diesen Horizonten Unsinn.
+- Bei Dasgupta et al. (2006) beträgt der Renditeunterschied zwischen den am stärksten verkauften und den am stärksten gekauften institutionellen Aktien über zwei Jahre 17 Prozent und über ein Jahr rund 9 Prozent.
+- Die sentimentabhängigen Überschussrenditen gegenüber Cash sind auf die nächsten zwölf Monate gerechnet: rund 13 Prozent bei sehr niedrigem Sentiment und 1,7 Prozent bei sehr hohem.
+- Baker und Wurgler (2006) sortieren die Renditen der nächsten zwölf Monate nach Sentiment und nach Merkmalen wie Größe, Alter, Renditevarianz, Profitabilität und Dividende.
+- Die Information Ratio übersetzt Strategie-Risiko in eine Haltedauer: US-Aktien gegenüber Cash brauchen 14 Jahre für 90 Prozent Sicherheit, billige Länder sechs Jahre und das taktische Modell sieben Jahre, jeweils auf Ex-ante-Basis für die beiden letzten.
 
 ## Funktionsweise
 
@@ -83,6 +132,7 @@ aktualisiert: 2026-11-05
 - Beim CL-Kalender-Spread beträgt die Haltedauer eines Kontraktpaars 3 Monate, also 61 Handelstage.
 - 10 Tage vor Verfall des aktuellen Near-Kontrakts wird auf das nächste Kontraktpaar gerollt, und die Verfälle von Near und Far liegen 1 Jahr auseinander.
 - Bei reinen Intraday-Positionen sind die Finanzierungskosten null.
+- Die Strategie niedriger gegen hoher Trailing-Kurs-Gewinn-Verhältnisse am MSCI World von 1980 bis 2005 wird mit einjähriger Haltedauer und jährlichem Rebalancing gemessen: die Dezile entstehen zu Jahresbeginn, die Performance über die folgenden zwölf Monate.
 
 ## Risiken und Grenzen
 
@@ -100,6 +150,7 @@ aktualisiert: 2026-11-05
 - Faktoren außer möglicherweise der Hauptkomponentenanalyse ändern langsam, deshalb sind die Haltedauern beim Rang nach Faktoren so lang wie bei den querschnittlichen Modellen dieses Abschnitts.
 - Das PRESSURE-Portfolio wird vierteljährlich angepasst, weil Holdings-Daten in der Regel nur vierteljährlich vorliegen.
 - Das lineare Mean-Reversion-Modell für S&P-500-Aktien hält weniger als einen Tag, die gegenläufige querschnittliche Momentum-Strategie 25 Tage.
+- Die übrigen Umschlagraten in Tabelle 23.2 sind Clipper 13 Prozent, FPA Capital 26 Prozent, First Eagle Global 12 Prozent, Oak Value 29 Prozent, Oakmark Select 16 Prozent, Longleaf Partners 17 Prozent, Legg Mason Value 13 Prozent und Tweedy Browne American Value 9 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 

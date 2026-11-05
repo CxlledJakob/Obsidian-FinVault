@@ -20,6 +20,7 @@ aktualisiert: 2026-11-05
 
 - Panikverkauf ist extremes Volumen weit über dem Durchschnitt, bei dem einzelne Kaufkerzen den Markt nicht bremsen.
 - Der Indikator x2t für Panikverkäufe ist genau dann 1, wenn die mittelwertbereinigte IBM-Logrendite des Vortags höchstens minus 2,5 Prozent beträgt; er soll mögliches Panikverkaufen nach einem Tagesverlust von 2,5 Prozent oder mehr erfassen.
+- Kapitulation, das Aufgeben des letzten Bullen, heißt im Kindleberger/Minsky-Modell degenerierte Panik. Revulsion ist nicht genau dasselbe und tritt häufig erst nach der Kapitulation ein: Die Menschen sind so gezeichnet, dass sie überhaupt nicht mehr teilnehmen.
 
 ## Kernaussagen
 
@@ -37,6 +38,8 @@ aktualisiert: 2026-11-05
 
 - Im Buying Climax werden die Preise rasch nach unten markiert, weitere Verkäufer herausgespült, und die Panikverkäufe halten an, bis die Verängstigten kapitulieren.
 - Dieser letzte Ausverkauf am Tief ist das Gegenstück zum letzten Kaufansturm am Hoch.
+- Degenerierte Panik endet, wenn die Preise so tief sind, dass Anleger zurückkehren, wenn Grenzen für Kursrückgänge den Handel abschneiden, oder wenn ein Lender of Last Resort eingreift.
+- Ein Handelsstopp kann Zeit zur Neubewertung geben, kann aber auch nur dazu führen, dass der Markt angesichts anhaltender Panik in Etappen fällt.
 
 ## Voraussetzungen
 
@@ -50,11 +53,16 @@ aktualisiert: 2026-11-05
 
 ## Risiken und Grenzen
 
+- Zu viele Anleger sind sicher, vor dem Gipfel aussteigen zu können; das Risiko ist ein Gedränge, in dem die Unglücklichen auf dem Weg zum Ausgang erdrückt werden.
+- Sieht jeder zugleich, dass der Earnings-Optimismus nachlässt, laufen voraussichtlich alle zugleich zum Ausgang; wenige kommen unbeschadet hinaus, andere werden im Ansturm erdrückt.
+- Keynes (1936, Kapitel 22): Fällt die Ernüchterung auf einen überoptimistischen und überkauften Markt, dann mit plötzlicher und katastrophaler Wucht.
+- Das Crashrisiko steigt schnell, verschärft durch extreme Überkonfidenz, Überoptimismus und Überkauftheit.
 
 ## Beispiele
 
 - Der GLD eröffnete am nächsten Tag erneut mit einer Abwärtslücke, auf dem dreifachen Volumen der Eröffnung des Vortags, und setzte den bärischen Ton dramatisch fort.
 - Im inhomogenen Poisson-Modell der täglichen IBM-Logrenditen von 1962 bis 1998 ist der Panikverkaufsindikator x2t für Lage, Skala und Form der Intensität nicht signifikant; auch der Indikator für Oktober, November und Dezember ist für alle drei Parameter nicht signifikant.
+- 2002 war keine Kapitulation zu sehen. Die meisten Strategen waren noch erstaunlich bullisch, und die Umsätze blieben sehr hoch. Die falschen Akteure des Bullenmarkthochs wurden gerade bloßgestellt, und eine starke Liquiditätspräferenz bestand bereits.
 
 ## Unterschiedliche Quellenpositionen
 

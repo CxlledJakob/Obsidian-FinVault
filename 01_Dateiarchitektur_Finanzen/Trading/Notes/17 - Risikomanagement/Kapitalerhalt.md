@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Kapitalerhalt
@@ -42,6 +42,22 @@ aktualisiert: 2026-10-30
 - 70 Prozent oder mehr der Trader, nach manchen Angaben eher 90 Prozent und mehr, verlieren den Großteil oder das ganze Handelskapital innerhalb von Monaten.
 - Broker berichten vertraulich, mehr als 95 Prozent ihrer Konten verlören Geld und würden innerhalb von sechs Monaten geschlossen; harte Statistiken dazu gibt es nicht, und der Anteil habe sich in den letzten Jahren wahrscheinlich nicht gebessert.
 - Neue Technik, Software und Echtzeitdaten haben nicht zu mehr erfolgreichen Tradern geführt.
+- Graham: Viele Jahre haben gelehrt, dass die Hauptverluste der Anleger aus dem Kauf von Wertpapieren niedriger Qualität in Zeiten günstiger Geschäftsbedingungen kommen.
+- Der Fortune-Korb „10 stocks to last the decade“ von 2000 lag noch rund 40 Prozent unter dem Zeitpunkt, zu dem Fortune den Kauf vorschlug; Montier nennt das einen dauerhaften Kapitalverlust im Sinne Grahams.
+- Von den zehn Titeln dieses Korbs hatte nur einer ein KGV unter dem 50-Fachen.
+- Eveillard, Manager des First Eagle Global Fund, sagte, er verliere lieber die Hälfte seiner Anteilseigner als die Hälfte des Geldes seiner Anteilseigner.
+- Absolute Verluste sind bei den untersuchten Fonds relativ selten: In den letzten zehn Jahren sahen nur zwei oder drei Jahre negative Renditen.
+- Viele der Fonds haben den Index in bis zu sieben der letzten zehn Jahre underperformed, trotz der in Tabelle 23.2 gezeigten Performance.
+- Graham: Eine Anlageoperation ist eine, die nach gründlicher Analyse Sicherheit des Kapitals und eine zufriedenstellende Rendite verspricht; Operationen, die diese Anforderungen nicht erfüllen, sind spekulativ.
+- Graham: Die Beobachtung über viele Jahre lehrt, dass die Hauptverluste der Anleger aus dem Kauf von Papieren niedriger Qualität in Zeiten günstiger Geschäftsbedingungen kommen.
+- Die Sicherheitsmarge bei Schnäppchenpapieren ist die Differenz zwischen Preis und geschätztem Wert und steht bereit, die Wirkung von Fehlrechnungen oder schlechterem als durchschnittlichem Glück aufzufangen.
+- Keynes: Ein Anleger, der die kurzfristigen Marktschwankungen ignorieren will, braucht größere Mittel zur Sicherheit und darf, wenn überhaupt, nicht in so großem Maßstab mit geliehenem Geld arbeiten.
+- Keynes: Alle Aktien schwanken so heftig, dass eine Safety-first-Politik, wenn sie erfolgreich ist, praktisch sicher zu Kapitalgewinnen führt, weil der Preis steigen muss, sobald Sicherheit, Güte und Billigkeit allgemein erkannt werden.
+- Eveillards Satz, lieber die Hälfte der Anteilseigner als die Hälfte ihres Geldes zu verlieren, nennt Montier in einer Welt, in der Manager oft nach dem verwalteten Vermögen bezahlt werden, einen ungewöhnlich ethischen Ansatz.
+- Ohne Marktindex-Benchmarks soll der Fokus auf der gesamten Nettorendite und auf akzeptablem Risiko liegen.
+- Keynes beschreibt die ideale Politik so, dass die Mittel einen ansehnlichen Zins erbringen und zugleich das Risiko einer wirklich schweren Entwertung des Kapitalwerts minimal ist.
+- Sir John Templetons erster Grundsatz lautet: Für alle langfristigen Anleger gibt es nur ein Ziel, die maximale reale Gesamtrendite nach Steuern.
+- Wirkliche Anleger sorgen sich um Verlust, um das, was Ben Graham einen dauerhaften Kapitalverlust nennt.
 
 ## Funktionsweise
 
@@ -62,6 +78,10 @@ aktualisiert: 2026-10-30
 - Die maximale Positionsgröße soll eine Kapitalbindung von nicht mehr als 3 Prozent des Kontos darstellen.
 - Die anfängliche Kapitalbindung je Einheit ist der Abstand zwischen Einstiegspreis und erstem Schutzstop.
 - ETFs und Fonds bilden die großen Märkte ab, darunter Aktienindizes, Anleihen, Gold, Währungen und einige Rohstoffe, sodass beim Lernen kleine Positionen genügen.
+- Kunden sollen Fondsmanager an einer genannten erforderlichen Nettorendite und an der Schwankung dieser Rendite messen, die sie zu akzeptieren bereit sind.
+- Ein Prüfstein lautet: Würde ich das mit eigenem Geld tun? Wenn nein, dann nicht mit dem Geld des Kunden. Den Tracking Error des eigenen Portfolios, so Montier, würde man nicht interessieren.
+- Keynes warnt: Wer kurzfristige Marktschwankungen ignorieren will, braucht größere Reserven zur Sicherheit und darf, wenn überhaupt, nicht in so großem Maßstab mit geliehenem Geld arbeiten.
+- Bob Kirby (1976) hält es für einen Schaden der Leistungsmessung, eine Vermögensverwaltung über zwei oder drei Jahre beurteilen zu wollen. Die Beurteilung brauche mindestens fünf, wahrscheinlich zehn Jahre oder mehr, und die Funktion sei nur teilweise quantitativ fassbar.
 
 ## Risiken und Grenzen
 
@@ -71,6 +91,8 @@ aktualisiert: 2026-10-30
 - Große Positionen mit der Aussicht auf große Gewinne können Verluste erzeugen, die sich sehr schwer aufholen lassen.
 - Wer alle üblichen Risikoregeln bricht, das Konto mit weitem Stop in eine vermeintlich große Bewegung legt und gegen den Lauf nachkauft, verliert groß oder wird vom Broker geschlossen, wenn die Margin aufgebraucht ist.
 - Wer im Google-Beispiel 73 statt höchstens 72 Aktien kauft, bricht eine unantastbare Regel des Kapitalerhalts. Selbst ein glücklicher Google-Trade endet dann nach dem Text schließlich mit dem Verlust des größten Teils oder des ganzen Kontos, weil die Disziplin für logische Handelsentscheidungen fehlt.
+- Graham war beunruhigt, dass institutionelle Vermögensverwaltung zum Rennen um die höchste Rendite in kürzester Zeit verkommen sei. Die Beteiligten versprächen Auf- und Abwärtsergebnisse, die praktisch nicht erreichbar seien.
+- Im Bärenmarkt der frühen 2000er kam man der Orientierung an absoluter Nettorendite näher. Drei Jahre zyklischer Bullenmarkt führten wieder zur Fixierung auf die relative Performance gegen einen Marktindex.
 
 ## Beispiele
 

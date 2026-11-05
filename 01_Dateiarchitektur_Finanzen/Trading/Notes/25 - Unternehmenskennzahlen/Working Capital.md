@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/25 - Unternehmenskennzahlen/25 - Unternehmenskennzahlen|25 - Unternehmenskennzahlen]]"
 weitere_hauptthemen: []
 unterthema: "Bilanz"
@@ -10,19 +10,19 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Working Capital
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Graham: Man hätte bestimmen können, ob das Marktniveau zu hoch oder zu niedrig war, indem man die Zahl der Papiere zählte, die unter dem Working-Capital-Wert notierten.
+- Sind solche Gelegenheiten praktisch verschwunden, zeigt die Erfahrung, dass Anleger den Aktienmarkt hätten verlassen und bis zum Hals in US-Treasury-Bills gehen sollen.
 
 ## Funktionsweise
 

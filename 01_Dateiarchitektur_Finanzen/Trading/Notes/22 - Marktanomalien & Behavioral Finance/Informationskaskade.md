@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Informationskaskade
@@ -38,6 +38,17 @@ aktualisiert: 2026-10-30
 - Die Ausbreitung von Geschichten wurde mit mathematischen Modellen untersucht, die denen der Epidemiologen für die Ausbreitung von Krankheit ähneln. Im Anlegerbereich sind sie weniger treffgenau, weil die Mutationsrate umlaufender Ideen weit höher ist als die von Organismen.
 - Die Modelle erklären dennoch, wie Geschichten so schnell um sich greifen. Eine neue Geschichte kann sich so schnell ausbreiten, weil sie nicht wirklich neu ist. Die Köpfe sind schon mit vertrauten Skripten besetzt, die einander widersprechen können, etwa dass der Markt nicht vorhersagbar ist und zugleich dass er es ist.
 - Die Skripte liegen untätig, ohne dass eine Seite gewählt werden müsste. Eine leichte zufällige Störung in den Nachrichten oder im Marktverhalten kann eine schlummernde Idee wecken, sodass sie die Aufmerksamkeit verzehrt.
+- Lee (1998): Information ist als private Signale über den Markt verteilt; jeder entscheidet aus dem eigenen Signal und der Geschichte früherer Entscheidungen, also den aktuellen Preisen.
+- Die Aggregation scheitert, weil Anleger die vergangene Preishistorie übergewichten, um öffentliche Information zu nutzen; Lee nennt diese Momentum-Lagen Informationskaskaden.
+- Solche Kaskaden sind von Natur aus fragil: Sie entstehen aus sehr wenig Information und aus dem Verhalten anderer statt aus Information selbst.
+- Während der Kaskade sammelt sich verborgene Information; ein kleiner Auslöser, etwa eine bekannte Aktie, die ihre Erwartungen verfehlt, kann eine große Verhaltensänderung auslösen, von Lee informationelle Lawine genannt.
+- Eine Informationsblase liegt vor, wenn der Fundamentalwert die gesamte allen Händlern verfügbare Information ist, die Preise diese Information aber nicht offenlegen.
+- Tabelle 40.1 nennt als Grundlage von Informationsblasen fehlende Aggregation, Framing, Illusion of Knowledge und Salienzeffekte.
+- In der Gruppendiskussion ist eine Kaskade eine Lage, in der die Handlung einer Person potenziell unabhängig von ihrer privaten Information und völlig abhängig von den beobachteten Handlungen oder Worten der anderen ist.
+- Mitglieder geben in Kaskaden ihre eigene Information auf und stimmen den anderen zu, weil sie glauben, die anderen wüssten mehr.
+- Kaskaden sind idiosynkratisch und stark pfadabhängig: Das Verhalten aus den Signalen nur der ersten wenigen Personen prägt die zahlreichen Folgenden drastisch.
+- Ist eine Meinung einmal geäußert, wird es zunehmend unwahrscheinlich, dass andere widersprechen, aus sozialem Druck und weil sie annehmen, der Sprecher habe mehr Information.
+- Kaskaden lassen sich im Labor leicht erzeugen (Anderson und Holt, 2004).
 
 ## Funktionsweise
 
@@ -61,6 +72,7 @@ aktualisiert: 2026-10-30
 - Die Kaskade abhängiger Wahlen, ausgelöst von der ersten Zufallswahl, kann ein Lokal erfolgreich machen und das andere scheitern lassen, selbst wenn das scheiternde das bessere Essen anbietet.
 - Ein anfängliches Zufallsereignis legt die Geschichte auf einen Pfad fest. Mit der Zeit steigt die Wahrscheinlichkeit, dass das eine Restaurant gedeiht, und die Wahrscheinlichkeit, dass das zweite scheitert.
 - Hätten viele Gäste unabhängig gewählt und beide Lokale probiert, hätten sie durch das Zusammenlegen ihrer Befunde das bessere Restaurant erkannt.
+- Bei Anderson und Holt enthält Topf A zwei rote und eine weiße Kugel, Topf B zwei weiße und eine rote. Gezogen wurde aus B. Spieler 1 und 2 hatten das private Signal a und wählten A; die Spieler 3 bis 6 hatten das Signal b und wählten trotzdem A, obwohl das private Signal in zwei von drei Fällen richtig gewesen wäre.
 
 ## Unterschiedliche Quellenpositionen
 

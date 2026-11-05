@@ -354,6 +354,20 @@ aktualisiert: 2026-11-05
 - Im stochastischen Volatilitätsmodell sind εt iid N(0,1) und ηt iid N(0, σ²η); der vom Renditeschock unabhängige Rest η*t ist normal mit Varianz σ²η(1 − ρ²).
 - MCMC erzeugt eine prädiktive Verteilung der Volatilität, die informativer ist als eine Punktprognose.
 - Der Zustand sj wird anhand seiner bedingten Posterior-Wahrscheinlichkeit mit einer Gleichverteilung auf dem Intervall [0, 1] gezogen.
+- Die Welt ist inhärent probabilistisch: Ursache und Wirkung sind nicht immer durchsichtig. Menschen akzeptieren das oft nicht und schreiben Ausgänge den eigenen Handlungen zu, auch wenn diese nichts damit zu tun haben.
+- Im Übernahmespiel sind alle Aktienwerte zwischen 0 und 100 Dollar gleich wahrscheinlich. Der bedingte Erwartungswert gegeben ein Gebot von 60 Dollar ist deshalb 30 Dollar, nicht die unbedingten 50 Dollar.
+- Die Konjunktion kann nicht wahrscheinlicher sein als eines ihrer Glieder. Linda, die in einer Bank arbeitet und in der Frauenbewegung aktiv ist, kann nicht wahrscheinlicher sein als Linda, die nur in einer Bank arbeitet (Tversky und Kahneman, 1983).
+- Fondsmanager schätzten den Anteil der Männer mit mindestens einem Herzinfarkt im Schnitt auf 12,5 Prozent und den Anteil der Männer über 55 mit mindestens einem Herzinfarkt auf 16 Prozent. 40 Prozent hatten für die engere Gruppe die höhere Schätzung.
+- Nach drei Köpfen ist der nächste Wurf einer fairen Münze weiterhin gleich wahrscheinlich, die Münze hat kein Gedächtnis. 81 Prozent hatten keine Präferenz, 12,5 Prozent wetteten auf die Umkehr, 6,5 Prozent auf eine Fortsetzung der Serie.
+- Programm B hat denselben Erwartungswert wie die sicheren 200 geretteten Leben, nämlich ein Drittel mal 600. Programm D hat denselben Erwartungswert wie die sicheren 400 Toten, nämlich zwei Drittel mal 600. 20 Prozent der Manager waren trotzdem indifferent und ließen das Risiko aus.
+- Beim Monty-Hall-Problem liegen hinter drei Türen zwei Ziegen und ein Auto. Nach der ersten Wahl öffnet der Moderator eine andere Tür mit einer Ziege und bietet den Wechsel auf die verbleibende Tür an. Die richtige Entscheidung ist der Wechsel.
+- Von den Teilnehmern blieben 47 Prozent bei der ersten Tür, 43 Prozent wechselten, und 11 Prozent hatten keine Präferenz.
+- Die zuerst gewählte Tür behält die Wahrscheinlichkeit 1/3. Die geöffnete Tür hat die Wahrscheinlichkeit null, also trägt die andere ungeöffnete Tür die Wahrscheinlichkeit 2/3. Der Beweis läuft über den Satz von Bayes.
+- Bleiben gewinnt nur, wenn die erste Wahl schon das Auto trifft, also in einem von drei Fällen. In den beiden anderen Spielverläufen gewinnt der Wechsel.
+- Der Moderator deckt nie das Auto auf. Das ist die versteckte Information in der Aufgabe.
+- Tyszka und Zielonka (2002) legten drei einander ausschließende und erschöpfende Ausgänge so fest, dass jeder ungefähr die Wahrscheinlichkeit 0,33 hatte.
+- Die Kalibrierungskurve trägt die genannte Wahrscheinlichkeit gegen die tatsächliche Häufigkeit ab. Perfekte Kalibrierung ist die 45-Grad-Linie.
+- Bei Torngren und Montgomery (2004) hätte ein Münzwurf sowohl die Laien als auch die professionellen Investoren bei der Wahl der outperformenden Aktie geschlagen.
 
 ## Funktionsweise
 
@@ -463,6 +477,7 @@ aktualisiert: 2026-11-05
 - Das geschätzte VAR(1) hat die Log-Likelihood minus 6193,988, AIC 12399,977, BIC 12429,393 und HQ 12411,159.
 - Die in den Beispielen angepassten EWMA-, DVEC-, BEKK- und Constant-Correlation-Modelle verwenden als bedingte Verteilung die Normalverteilung.
 - Im GE-Beispiel sind die Priors β1 ~ N(0,3, 0,09), β2 ~ N(1,3, 0,09) und ei ~ Beta(5, 95).
+- Im Experiment von Caginalp et al. (2000) ist die Verteilung der unsicheren Dividenden bekannt. Vier Ausgänge haben je die Wahrscheinlichkeit 0,25, mit Auszahlungen von 0, 8, 28 und 60.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Cross-Sectional Momentum
@@ -58,6 +58,18 @@ aktualisiert: 2026-11-01
 - Hafez und Xie finden mit dem RavenPack Sentiment Index, dass long positive und short negative Sentimentänderung vor Kosten 52 bis 156 Prozent annualisiert und Sharpe Ratios von 3,9 bis 5,3 bringt, je nach Portfoliogröße.
 - Die Ansteckung erzwungener Verkäufe und Käufe unter Publikumsfonds trägt zum Momentum der gemeinsam gehaltenen Aktien bei.
 - Die Finanzkrise 2008 bis 2009 ruinierte diese Momentum-Strategie ebenso wie den S&P DTI.
+- Chan und Kot (2002) bilden vier Portfolios aus dem Zusammenspiel von lang- und kurzfristigem Momentum. Die Daten decken den US-Markt von 1965 bis 2002. Am besten schneidet der kurzfristige Gewinner ab, der langfristig ein Verlierer war.
+- Über die Dezile der Analystenempfehlungen, Dezil 1 am meisten und Dezil 10 am wenigsten gemocht, bevorzugen die Analysten bei der Preisrendite der vergangenen drei Jahre die langfristigen Gewinner.
+- Momentum funktioniert weit besser in der Kombination aus kurzfristigen Gewinnern und langfristigen Verlierern. Die Analysten wählen im Querschnitt der Empfehlungen die gegenteilige Seite.
+- Asness et al. (1997) zeigen Parallelen der querschnittlichen Vorhersagbarkeit von Aktien und Ländern: billige Länder schlagen teure, und Länder mit der besten Zwölfmonatsperformance tendieren dazu, das fortzusetzen.
+- Momentum der Länder ist die Preisänderung der vorangegangenen zwölf Monate; Länder mit dem stärksten Anstieg bleiben im Folgemonat stark, Länder mit dem schwächsten Momentum bleiben schwach.
+- Das höchste Momentum-Tritile schlägt das niedrigste um 15,8 Prozent p.a. im Long-Short und den MSCI World im Long-only um 9,0 Prozent p.a., Sample Januar 1975 bis März 2003.
+- Die Rendite je Risikoeinheit ist bei Länder-Momentum mit 0,26 im Long-Short und 0,12 im Long-only höher als bei den Value-Maßen.
+- Sechsmonats-Preismomentum, Ausführung um einen Monat verzögert, arbeitet branchenrelativ noch, mit geringfügig höherer Signifikanz, ist aber weniger wirksam als marktweit, wo die absoluten Renditen höher sind.
+- Weltweit über 30 Jahre rentiert 6-Monats-Preismomentum sektorrelativ mit 8,0 Prozent p.a. bei t 4,3 und marktweit mit 9,3 Prozent bei t 4,5.
+- Indizes sind häufig kaum mehr als Momentum-Maße: Die besten Aktien werden aufgenommen, die schlechtesten gestrichen. Indexfonds sind deshalb ein wirksamer Weg, Momentum zu spielen.
+- Closet Indexer entpuppen sich als Momentum-Spieler, genau wie der Index, an den sie sich schmiegen. Ihre UMD-Ladung beträgt 0,07.
+- In den dismal years lieferte die reine Momentum-Strategie, Kaufbedingungen I und III, 12,2 Prozent geometrisch und 11,4 Prozent arithmetisch, bei einer Standardabweichung von 5,5, einer Sharpe Ratio von 0,69, einem Informationskoeffizienten von 0,21 und einer Information Ratio von 0,73. Buy-and-hold lag bei 7,5 Prozent geometrisch, Standardabweichung 14,7 und Sharpe Ratio −0,01.
 
 ## Funktionsweise
 
@@ -93,6 +105,10 @@ aktualisiert: 2026-11-01
 - Beispiel 6.2 erzielt vom 15. Mai 2007 bis zum 31. Dezember 2007 eine annualisierte Rendite von 37 Prozent bei einer Sharpe Ratio von 4,1; Daniel und Moskowitz finden von 1947 bis 2007 16,7 Prozent annualisiert bei einer Sharpe Ratio von 0,83.
 - Dieselbe Aktienstrategie erzielt vom 2. Januar 2008 bis zum 31. Dezember 2009 eine annualisierte Rendite von minus 30 Prozent; nach 2009 stabilisiert sich die Rendite, ohne das frühere Hoch zu erreichen.
 - Dieselbe Strategie funktionierte nach Daniel und Moskowitz für Welt-Aktienindizes, Währungen, internationale Aktien und US-Aktien.
+- Der Momentum-Länderkorb 1976 bis 2003 hat eine durchschnittliche Monatsrendite von 1,7 im hohen Tritile, 1,1 im mittleren, 0,4 im niedrigen und 0,9 im Markt.
+- Long-only-Alpha 0,81 bei t 4,8 und Beta 1,0 bei t 24,1; Long-Short-Alpha 1,2 bei t 5,6 und Beta 0,1 bei t 2,0.
+- Der t-Test der Mitteldifferenz beträgt 3,53, der t-Test des Long-Short-Portfolios 6,07.
+- Anteil richtiger Calls 0,67, Informationskoeffizient 0,34, Information Ratio 1,19.
 
 ## Unterschiedliche Quellenpositionen
 

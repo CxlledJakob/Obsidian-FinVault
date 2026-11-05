@@ -53,6 +53,31 @@ aktualisiert: 2026-11-05
 - Die asymptotische Hauptkomponentenanalyse von Connor und Korajczyk (1986, 1988) ist für kleines T und großes k gedacht. Für k gegen unendlich ist die Eigenanalyse ihrer T-mal-T-Matrix äquivalent zur statistischen Faktorenanalyse, und die Faktorschätzer sind die ersten m Eigenvektoren.
 - Connor und Korajczyk (1993) wählen m so, dass die Querschnittsvarianz des spezifischen Fehlers beim Schritt von m auf m plus 1 nicht signifikant sinkt. Bai und Ng (2002) minimieren eines der Informationskriterien Cp1(m) oder Cp2(m). Die beiden Kriterien können verschiedene Faktorzahlen liefern.
 - Bei 40 monatlichen einfachen Aktienrenditen, Januar 2001 bis Dezember 2003, mit k gleich 40 und T gleich 36, wählt Connor-Korajczyk einen Faktor und Bai-Ng sechs Faktoren, wobei Cp1 und Cp2 nicht übereinstimmen und der kleinere Wert genommen wird. Die sechs Faktoren erklären etwa 89,4 Prozent der Variabilität.
+- Value, Size und Momentum sind gut belegte Lieferanten von Überschussrenditen, können aber zu unangenehm großen Sektorwetten führen.
+- Branchenrelative Faktoren mindern diese Sektorwetten und umgehen Probleme unterschiedlicher Rechnungslegungsregime und Kapitalstrukturen.
+- Ein niedriges Kurs-Buchwert-Verhältnis kann wegen unterschiedlicher Kapitalanforderungen und Bilanzierungsregeln einen Geschäftstyp definieren statt eine Value-Chance.
+- Der Backtest findet, dass Value und Size sektoradjustiert am besten funktionieren, Preismomentum nicht.
+- Über die letzten etwa zehn Jahre, geprägt von großen Sektorrotationsschwüngen der TMT-Blase, arbeiteten absolute Bewertung, Momentum und Size im Allgemeinen besser unadjustiert; diese Phase gilt als nicht repräsentativ.
+- Über 30 Jahre und in den zehn Jahren vor der Blase hat der sektorrelative Ansatz den marktweiten im Allgemeinen übertroffen.
+- Viel Quant-Arbeit wählt Titel über absolute Bewertung und justiert Sektorwetten erst danach, typischerweise über eine Optimierung, obwohl die Research-Teams nach Sektoren organisiert sind.
+- Die meisten Value-Strategien profitieren vom sektorrelativen Ansatz, passend zu unterschiedlichen Rechnungslegungsregimen und Kapitalstrukturen; die Ergebnisse der Dividendenrendite sind gemischter.
+- Die Höhe der Dividendenrendite hängt weniger an der Branche als an der Ausschüttungsentscheidung des Managements und könnte stärker mit Sektorrotation zusammenhängen als die anderen Value-Strategien.
+- Branchenrelatives Preismomentum liefert höhere statistische Signifikanz, aber niedrigere absolute Renditen; das überrascht wenig, weil der Preis selbst nicht von Branchenzusammensetzung oder Rechnungslegung abhängt.
+- Für Cashflow-Kurs, Kurs-Gewinn und Kurs-Buchwert gibt es klare Vorteile der sektorrelativen Maße gegenüber den marktweiten; beim Preismomentum liegen die Ergebnisse nur knapp auf der sektorrelativen Seite, interessanter sind meist die höheren absoluten Renditen.
+- Die t-Statistiken sind beim sektorrelativen Ansatz im Allgemeinen höher, und die risikobereinigten Renditen der branchenadjustierten Maße sollten besser sein; einige risikobereinigte Renditen sind dürftig und sollen ignoriert werden.
+- Weltweit über 30 Jahre, annualisiert mit t-Statistik, liegen sektorrelativ gegen marktweit beim Cashflow-Kurs 10,5 (5,9) gegen 9,7 (4,7), beim Kurs-Gewinn 9,7 (4,3) gegen 9,4 (3,9), beim Kurs-Buchwert 8,8 (4,1) gegen 8,5 (3,7), bei der Dividendenrendite 8,7 (4,0) gegen 8,5 (3,5), bei Small gegen Large 8,2 (5,3) gegen 7,8 (3,9) und beim 6-Monats-Momentum 8,0 (4,3) gegen 9,3 (4,5).
+- Japan ist die Ausnahme, in der die nicht adjustierten Bewertungsmaße am besten arbeiteten.
+- Asness et al. (2000) und Cohen und Polk (1998) argumentieren, dass branchenrelative Faktoren bessere Renditen liefern und Maße wie das Kurs-Buchwert-Verhältnis stark von Rechnungslegungsstandards abhängen.
+- Eine Notiz vom Juni 1996 fand Faktorportfolios innerhalb der Sektoren äquivalent und hoch korreliert mit marktweiten Faktorportfolios, sodass Value- und Momentum-Überschussrenditen auch bei beschränkter Sektorposition bleiben.
+- Size arbeitet sektorrelativ, hat als alleinstehende Strategie aber niedrigere Renditen und müsste getimt werden; Small Size tendiert dazu, von einer niedrigen statt hohen Bewertungsbasis zu outperformen, und kann zugunsten sektorrelativer Bewertung ignoriert werden, weil billige Small Caps ohnehin auffallen.
+- Im CAPM benutzen alle Anleger die Markowitz-Optimierung, und daraus folgt ein einziger unterscheidender Faktor, Beta.
+- Die Faktoren der intertemporalen ICAPM sind unbestimmt, die Theorie bleibt hohl.
+- Fundamentalindizes sind passiv und schlagen trotzdem kapitalisierungsgewichtete Indizes; das zeigt, wie schwer Alpha und Beta zu trennen sind.
+- Hedgefonds gelten oft als Alpha-Maschinen, die Clone-Angriffe deuten sie aber großteils als Beta-Wetten: lässt sich die Performance mit einem Sechs-Faktoren-Modell nachbilden, bleibt wenig Alpha.
+- Das Alpha eines Fonds ändert sich stark mit dem Benchmark. Chan et al. (2006): Large-Cap-Growth von 0,28 bis 4,03 Prozent, Large-Cap-Value von minus 0,64 bis 1,09 Prozent.
+- Die Fondsgruppen werden auf Markt, SMB (small minus big), HML (hohes Buch-zu-Preis-Verhältnis minus niedriges) und UMD (up minus down) regressiert.
+- Diversifizierte Stockpicker laden mit SMB −0,18, HML 1,33 und UMD 0,05, also auf Large-Cap-Value. Konzentrierte Stockpicker laden mit SMB 1,67, HML −0,23 und UMD 0,15, also auf Small Caps mit leichtem, statistisch nicht bedeutsamem Growth-Bias.
+- Sektorwetten laden mit SMB 0,92, HML 0,14 und UMD 0,12. Closet Indexer laden mit SMB 0,17, HML 0,02 und UMD 0,07 und sind damit im Wesentlichen Momentum, im Einklang mit kapitalisierungsgewichteten Indizes.
 
 ## Funktionsweise
 

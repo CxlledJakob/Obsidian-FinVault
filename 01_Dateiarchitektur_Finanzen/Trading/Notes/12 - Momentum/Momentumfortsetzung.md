@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Momentumfortsetzung
@@ -43,6 +43,9 @@ aktualisiert: 2026-11-01
 - Dreht das Momentum, wird die Gegenposition eröffnet; der Ausstieg aus der verlierenden Altposition wirkt dabei als Stop.
 - Momentum gedeiht an Black Swans und an hoher Kurtosis der Renditeverteilung, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
 - In Beispiel 1.1 erzeugt eine Reihe mit der Kurtosis der TU-Futures, aber ohne serielle Autokorrelation, in 12 Prozent der Ziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Analysten bevorzugen Aktien, die in den letzten zwölf Monaten und über die vergangenen drei Jahre gut gelaufen sind, also die Fortsetzung beider Horizonte.
+- Die profitablere Kombination ist nach Chan und Kot (2002) die Umkehr des langen Horizonts: kurzfristige Gewinner, die langfristig Verlierer waren. Datenbasis ist der US-Markt von 1965 bis 2002.
+- Es gibt eine lange Forschung dazu, dass Momentum-Investing funktioniert. Ein reiner Screen dieser Fortsetzung ließe sich von einem Computer in einem Bruchteil der Zeit und der Kosten eines Analystenberichts erstellen.
 
 ## Funktionsweise
 

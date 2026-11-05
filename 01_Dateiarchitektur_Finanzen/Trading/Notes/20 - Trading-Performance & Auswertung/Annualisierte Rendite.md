@@ -75,6 +75,36 @@ aktualisiert: 2026-11-05
 - Der S&P Diversified Trends Indicator hat von Januar 1988 bis Dezember 2010 eine Sharpe Ratio von 1,3; der S&P 500 hat im selben Zeitraum nach dem Autor eine Sharpe Ratio von 0,61.
 - Die Rollrendite von ES beträgt etwa 1 Prozent annualisiert und ist unbedeutend; die Rollrendite von VX kann bis minus 50 Prozent annualisiert betragen.
 - Das lineare Mean-Reversion-Modell für S&P-500-Aktien in Kapitel 4 hat bei einer Haltedauer von weniger als einem Tag eine Sharpe Ratio von 4,7.
+- Könnte man die Firmen mit dem höchsten Gewinnwachstum der nächsten zwölf Monate wählen, hätte man den Markt seit 1975 um rund 7,5 Prozent pro Jahr geschlagen; der verteilungsgewichtete Perfect-Foresight-Wert im Text liegt bei 7,6 Prozent pro Jahr, der gleich gewichtete bei 11,3 Prozent pro Jahr.
+- Der gleich gewichtete Kauf der niedrigsten 20 Prozent der KGV im MSCI World lieferte im Schnitt 9,7 Prozent pro Jahr Outperformance; absolut gab es Verluste nur in 5 der 30 Jahre der Stichprobe 1975 bis 2004.
+- Gewichtet mit der tatsächlichen Verteilung lag die durchschnittliche Rohrendite dieser Low-PE-Strategie bei 20 Prozent pro Jahr und die Outperformance bei fast 6 Prozent pro Jahr.
+- Der Kauf der obersten 20 Prozent des MSCI World nach einfachem trailing PE hätte seit 1975 fast 6 Prozent pro Jahr Underperformance geliefert.
+- Eine Value-Strategie, definiert als Kauf der 20 Prozent des Marktes mit den niedrigsten KGV, hätte global 6 Prozent pro Jahr Outperformance geliefert.
+- Gleich gewichtet underperformte von 1988 bis 2004 der Kauf der 20 Prozent mit der höchsten prognostizierten Gewinnwachstumsrate um 2,5 Prozent pro Jahr, während die 20 Prozent mit den niedrigsten Wachstumserwartungen um 4 Prozent pro Jahr outperformten.
+- Die Aktien mit den niedrigsten Erwartungen und dem höchsten Ergebnis outperformten um fast 11 Prozent pro Jahr; die mit den höchsten Erwartungen und dem niedrigsten Ergebnis underperformten um fast 12 Prozent pro Jahr.
+- Hohes KGV und niedrigstes geliefertes Gewinnwachstum underperformten im Schnitt um 11,9 Prozent pro Jahr.
+- Seit 1988 hat das US-Value-Portfolio eine CAGR von 13,7 Prozent und das Portfolio mit hohem prognostiziertem Wachstum eine CAGR von 14,0 Prozent.
+- Global erzielt das Portfolio mit hohem prognostiziertem Gewinnwachstum 10,2 Prozent CAGR pro Jahr und das Low-PE-Portfolio 15,4 Prozent CAGR pro Jahr.
+- Mit der Treffverteilung der Analysten gewichtet liegt die Outperformance des Portfolios hoher Wachstumsprognosen bei 0,9 Prozent und die der niedrigen Prognosen ebenfalls bei 0,9 Prozent, statistisch nicht verschieden.
+- Die erwartete Rendite ist die Dividendenrendite plus das Dividendenwachstum plus jede Änderung der Bewertung.
+- Beim Kauf von US-Aktien im obersten Bewertungsquartil ist die mediane nominale Zehnjahresrendite historisch 5,7 Prozent pro Jahr, im untersten KGV-Quartil 15 Prozent pro Jahr.
+- Real beträgt die mediane Zehnjahresrendite im höchsten Bewertungsquartil 0,1 Prozent pro Jahr; die Chance auf mehr als 5 Prozent real liegt dann bei etwa eins zu drei.
+- Weil Dividenden die langfristige Rendite dominiert haben und die laufende Dividendenrendite sehr niedrig ist, ist die reale Preisänderung der passendere Maßstab; bei früher überbewerteten Märkten besteht nur eine Chance von 50 Prozent auf eine positive langfristige Preissteigerung.
+- Tabelle 46.2, einfache KGV-Spannen und geometrische nominale Zehnjahresrenditen 1926–1992 in Prozent, Mittel, Median, beste und schlechteste: 32,0–20,0 ergibt 6,3, 5,7, 18,8 und −4,9; 20,0–16,0 ergibt 10,9, 10,5, 19,5 und −2,9; 16,0–13,5 ergibt 14,0, 14,8, 20,1 und 0,8; 13,5–4,0 ergibt 13,7, 15,2, 21,4 und 1,5.
+- Seit 1975 wuchs die US-Marktkapitalisierung mit 13 Prozent CAGR und der Preisindex mit 10 Prozent CAGR.
+- Tabelle 46.3, reale Zehnjahresrenditen nach einfachem KGV 1926–1992 in Prozent, Mittel, Median, beste und schlechteste: 32,0–20,0 ergibt 2,3, 0,1, 15,5 und −4,3; 20,0–16,0 ergibt 7,3, 7,3, 16,3 und −2,0; 16,0–13,5 ergibt 10,4, 10,8, 17,9 und 1,6; 13,5–4,0 ergibt 9,7, 10,0, 19,0 und 1,9.
+- In Abbildung 46.1, nur für Märkte im obersten einfachen KGV-Quartil, liegt die Chance, über zehn Jahre 3 Prozent reale Jahresrendite zu erreichen, bei 50 Prozent.
+- Langfristig kamen über 50 Prozent der Gesamtrendite von US-Aktien aus der Dividendenrendite; sie liegt aktuell bei nur 1,7 Prozent, sodass die Gesamtrenditegrafik die erwartbaren Renditen überzeichnen kann.
+- Bei historisch überbewerteten Märkten besteht nur eine 30-Prozent-Chance auf 2,5 Prozent oder mehr reale Preissteigerung pro Jahr über zehn Jahre.
+- Dieselbe Rechnung mit Graham-und-Dodd-KGVs statt des einfachen KGV ändert die Ergebnisse nicht.
+- Langfristrenditen zerlegen sich in Dividendenrendite, reales Dividendenwachstum und die Bewertungsänderung über die Haltedauer. Die Dividendenrendite ist das Verhältnis D/P, der Kaufpunkt bestimmt die Gesamtrendite: Eine hohe Anfangsrendite erwarten lässt eine hohe Rendite, eine niedrige eine niedrige.
+- Die reale Gesamtrendite, die ein rationaler Anleger vom US-Markt erwarten kann, beträgt nur 3 Prozent: Dividendenrendite 1,7 Prozent plus langfristiges reales Dividendenwachstum 1,5 Prozent. Weitere Multiple-Ausweitung ist langfristig unrealistisch.
+- USA, reale Zehnjahresrendite nach dem Trailing-KGV der letzten zwölf Monate, as reported, in Prozent pro Jahr: KGV 32 bis 20 Mittel 2,3, Median 0,1, Standardabweichung 5,4; KGV 20 bis 16 Mittel und Median 7,3, Standardabweichung 5,0; KGV 16 bis 13,5 Mittel 10,4, Median 10,8, Standardabweichung 4,0; KGV 13,5 bis 4 Mittel 9,7, Median 10,0, Standardabweichung 3,0.
+- Das Trailing-KGV des S&P 500, zwölf Monate, as reported, liegt bei 30 und damit im obersten Quartil. Daraus folgen, wenn die Historie trägt, minimale Renditen über die nächsten zehn Jahre.
+- In den dismal years 1964 bis 1982 brachte Buy-and-hold kaum 1 Prozent pro Jahr reale Gesamtrendite. Das taktische Allokationsmodell brachte 4,5 Prozent real pro Jahr bei deutlich geringerer Volatilität als der Aktienmarkt.
+- Die sechs dividendenstärksten Länder im MSCI schlugen den MSCI World um 6 Prozent pro Jahr und die sechs dividendenärmsten Länder um 7 Prozent pro Jahr, jeweils 1975 bis 2003.
+- Der säkulare US-Bärenmarkt hat fünf Rallyes von über 20 Prozent hervorgebracht. Bei 3 Prozent Langfristrendite entspricht ein solcher Anstieg mehr als sechseinhalb Jahresrenditen.
+- Bei 3 Prozent realer Aktienrendite und 2 Prozent Inflation sind 50 Basispunkte Indexgebühr 10 Prozent der voraussichtlichen Gesamtrendite. In den späten 1990ern lieferten Aktien 20 Prozent pro Jahr, sodass diese Gebühr leicht vergessen wurde.
 
 ## Funktionsweise
 

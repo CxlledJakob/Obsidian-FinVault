@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Risikoadjustierte Kennzahlen"
@@ -10,22 +10,24 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Sortino Ratio
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
+- Die Sortino Ratio setzt die Überschussrendite ins Verhältnis zum Abwärtsrisiko und bestraft Aufwärtsvolatilität nicht. Sie ist der Sharpe Ratio ähnlich, nutzt aber die Downside-Semivarianz statt der gewöhnlichen Standardabweichung.
 
 ## Kernaussagen
 
 
 ## Funktionsweise
 
+- Die Formel lautet S gleich (R minus Rf) geteilt durch Sigma d. R ist die Fondsrendite, Rf der risikofreie Satz, Sigma d die Standardabweichung nur der negativen Überschussrenditen.
+- Die Downside-Semivarianz ist die Standardabweichung, berechnet allein mit den negativen Renditen. Das Maß erfasst Überschussrendite je Einheit Abwärtsrisiko.
+- Eine Variante ersetzt den risikofreien Satz durch die Mindestakzeptanzrendite und misst das Risiko als Unterschreitung dieser geforderten Rendite. Montier hält das für ein halbwegs brauchbares Maß des geschaffenen Mehrwerts.
 
 ## Voraussetzungen
 
@@ -41,6 +43,9 @@ aktualisiert: 2026-10-26
 
 ## Beispiele
 
+- Für den US-Markt seit 1953 liegt die Sharpe Ratio bei etwa 0,34 und die Sortino Ratio bei 0,46. Die Chance eines absoluten Verlusts gegenüber Cash ist kleiner, als die Sharpe Ratio nahelegt.
+- Die rollierenden Fünfjahres-Sharpe- und Sortino-Ratios des S&P 500 zeigen zu verschiedenen Zeiten einen höheren Sortino-Wert für alle, denen Underperformance gegenüber Cash wichtig ist.
+- Keine der beiden Varianten ist nach Montier höhere Mathematik, aber das Maß wird, soweit er sieht, nicht oft verwendet. Angesichts der Verlustaversion ergibt es deutlich mehr Sinn als die übliche Sharpe Ratio.
 
 ## Unterschiedliche Quellenpositionen
 

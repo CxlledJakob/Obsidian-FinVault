@@ -38,6 +38,21 @@ aktualisiert: 2026-11-05
 - Bei Hebel 31 ist die Wachstumsrate minus 1, weil die schlechteste Periodenrendite minus 0,0331 beträgt und jeder Hebel über 1 geteilt durch 0,0331 gleich 30,2 in dieser Periode zum Totalverlust führt.
 - In einer CPPI-Simulation über 100.000 Tage mit D gleich 0,5 ist die tägliche Wachstumsrate 0,002484 gegen 0,002525 beim Hebel f mal D auf dem Gesamtkonto.
 - Konstanter Hebel 5 auf 100.000 Dollar Eigenkapital verlangt einen Marktwert von 500.000 Dollar. Nach einem Tagesverlust von 10.000 Dollar müssen weitere 40.000 Dollar liquidiert werden, damit der Marktwert 5 mal 90.000 gleich 450.000 Dollar ist; nach einem Gewinn von 20.000 Dollar sind 80.000 Dollar zuzukaufen, weil der Zielwert 550.000 und der aktuelle Wert 470.000 Dollar ist.
+- Das US-Value-Portfolio und das Portfolio mit hohem prognostiziertem Wachstum haben seit 1988 sehr ähnliche Renditen erzeugt: Die CAGR des Value-Portfolios beträgt 13,7 Prozent, die des hohen Prognosewachstums 14,0 Prozent.
+- Global verdient das Portfolio mit hohem prognostiziertem Gewinnwachstum 10,2 Prozent CAGR pro Jahr, während das Low-PE-Portfolio 15,4 Prozent CAGR pro Jahr erzeugt.
+- Die Abbildungen 26.9 und 26.10 zeigen die US- beziehungsweise globalen Portfolios auf der Basis 1987 gleich 100.
+- Über die 1990er wuchsen die realen Dividenden nur mit 1,3 % CAGR, während die einbehaltene Gewinnrendite 2,4 % verlangt hätte.
+- Von Gipfel zu Gipfel, oder gleichwertig von Tal zu Tal, sind die logarithmierten US-Gewinne nie um mehr als 6 % pro Jahr gewachsen.
+- Bottom-up-Analysten erwarteten weiterhin 12 % Gewinnwachstum für das nächste Jahr und 12 % p.a. über die nächsten fünf Jahre.
+- Seit 1975 wuchs die US-Marktkapitalisierung mit 13 Prozent CAGR und der Preisindex mit 10 Prozent CAGR; die Differenz ist eine Verwässerung von 3 Prozent pro Jahr.
+- Nominales CAGR von Gewinn, Dividende und BIP liegt ohne Ausnahme beim Gewinn und bei der Dividende unter dem BIP, im Schnitt um 1 bis 2 Prozentpunkte pro Jahr; real um 1 bis 3 Prozentpunkte.
+- USA, CAGR Gewinn, Dividende, BIP: nominal 1970–2001 gleich 6,0, 5,1 und 7,5 Prozent, 1970–1998 gleich 7,0, 6,0 und 8,1; real 1970–2001 gleich 1,0, 0,2 und 3,1, 1970–1998 gleich 1,5, 0,6 und 3,2.
+- Vereinigtes Königreich: nominal 1970–2001 gleich 8,5, 8,0 und 10,2, 1970–1998 gleich 12,0, 10,9 und 13,4; real 1970–2001 gleich 0,9, 0,4 und 2,5, 1970–1998 gleich 1,7, 0,7 und 3,0.
+- Deutschland: nominal 1970–2001 gleich 5,8, 6,0 und 6,1, 1970–1998 gleich 5,3, 6,0 und 8,0; real 1970–2001 gleich 2,3, 2,5 und 2,7, 1970–1998 gleich 0,9, 1,6 und 3,5.
+- Frankreich ab 1972: nominal bis 2001 gleich 8,0, 7,9 und 8,5, bis 1998 gleich 6,9, 7,4 und 9,0; real bis 2001 gleich 2,0, 1,9 und 2,5, bis 1998 gleich 0,5, 0,9 und 2,5.
+- Das Ende der Stichprobe 1998 statt 2001, wegen der schwersten US-Gewinnrezession seit den 1930ern im Jahr 2001, ändert diese CAGR-Schlussfolgerung kaum.
+- Die Indexverwässerung, Wachstum des Verhältnisses von Marktkapitalisierung zu Preis 1970–2002, beträgt im Vereinigten Königreich 4,7 Prozent, in Deutschland 4,5, in Frankreich 8,7 und in Japan 3,2 Prozent.
+- Die mediane geometrische nominale Zehnjahresrendite beim Kauf im KGV-Quartil 32- bis 20-fach beträgt 5,7 Prozent pro Jahr, im Quartil 13,5- bis 4,0-fach 15 Prozent pro Jahr, Stichprobe 1926–1992.
 
 ## Funktionsweise
 
@@ -76,6 +91,10 @@ aktualisiert: 2026-11-05
 - Die zusammengesetzte jährliche einfache Bruttorendite des CRSP-Value-Weighted-Index über 996 Monate von 1926 bis 2008 ist das Produkt aller monatlichen Faktoren (1 plus Rt), potenziert mit 12/996, minus 1, ungefähr 0,093.
 - Das Produkt der Bruttofaktoren beträgt 1592,953, und diese Zahl hoch (12/996) minus 1 ergibt 0,0929, also etwa 9,3 Prozent pro Jahr.
 - Ein Dollar zu Beginn von 1926 wäre Ende 2008 etwa 1593 Dollar wert.
+- Tabelle 27.5 nennt unter der Überschrift 1980 bis 2005 die CAGR von Buy-and-hold des Marktes mit 6,6 % bei Risiko 17,9 und Rendite zu Risiko 0,37, von Buy-and-hold des Value-Index mit 7,8 %, 17,2 und 0,45, vom Long-only-Portfolio auf das zehnjährige Graham-und-Dodd-Kurs-Gewinn-Verhältnis mit 17,8 %, 23,1 und 0,77 und vom zugehörigen Long/Short-Portfolio mit 22,4 %, 16,7 und 1,34.
+- Der umgebende Text ordnet dieselben Renditen von 6,6 %, 7,8 %, 17,8 % und 22,4 % p.a. einer Anlage von 100 Dollar seit 1990 zu und nennt für das Long/Short-Portfolio den Zeitraum 1990 bis 2004.
+- Das Long-only-Portfolio hatte höheres Risiko als die Buy-and-hold-Strategien; wird das Risiko angeglichen, bleibt eine Rendite von 13,2 % p.a.
+- Das Long/Short-Portfolio lieferte die Mehrrendite mit weniger Risiko als die Buy-and-hold-Strategien.
 
 ## Unterschiedliche Quellenpositionen
 

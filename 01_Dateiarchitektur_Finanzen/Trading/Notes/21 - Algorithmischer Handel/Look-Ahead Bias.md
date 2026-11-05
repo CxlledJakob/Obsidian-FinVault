@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Look-Ahead Bias
@@ -50,6 +50,11 @@ aktualisiert: 2026-11-01
 - Im Backtest der linearen Mean-Reversion auf USD.CAD entsteht Look-ahead Bias, weil Halbwertszeit und damit Lookback auf denselben In-Sample-Daten bestimmt werden, auf denen die Strategie bewertet wird.
 - Die Backtests der Prototypstrategien benutzen teilweise dieselben Daten zur Parameteroptimierung, etwa für die beste Hedge Ratio, und für die Bewertung. Das ist Look-ahead Bias, hingenommen nur damit Darstellung und Code einfach bleiben, und soll vor dem Einsatz entfernt werden.
 - Der Lookback von 20 Handelstagen für GLD gegen USO und die Kalman-Parameter δ gleich 0,0001 und Ve gleich 0,001 sind mit Wissen im Nachhinein gesetzt.
+- Die erste Sortierung verwendet das tatsächlich gemeldete Gewinnwachstum der nächsten zwölf Monate, so als könnte man die Zukunft perfekt vorhersagen, und setzt damit eine Obergrenze, keine zum Entscheidungszeitpunkt öffentliche Information.
+- Getrennt davon wird das KGV durch die von Analysten prognostizierte Wachstumsrate ersetzt und die Prognose mit dem späteren Ergebnis verglichen.
+- Dieser Prognosetest beginnt 1988 und umfasst 17 Jahre, weil Analystenprognosen in der weiter zurückreichenden Historie fehlen.
+- In den Prognoseregressionen zum Konjunkturzyklus werden die Renditen verzögert, sodass sie nur die Information abbilden, die zum Zeitpunkt der erforderlichen Prognose verfügbar war.
+- Dieselbe Verzögerung gilt für die Sektorrotation: verwendet wird nur, was bei der Prognose schon bekannt war.
 
 ## Funktionsweise
 

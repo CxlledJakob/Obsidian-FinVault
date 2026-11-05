@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # FOMO
@@ -43,6 +43,9 @@ aktualisiert: 2026-10-30
 
 - Die Insider ziehen zusätzliche Nachfrage an, indem sie die Preise hin- und hersägen, während ängstliche Käufer eine goldene Gelegenheit zu verpassen glauben.
 - Das vermeintlich nächste Bein nach oben läuft in die Gegenrichtung, und diese Käufer bleiben auf dem Niveau gefangen.
+- Menschen spüren den Schmerz der Reue über kleine Fehler, ohne diese Fehler in einen Zusammenhang zu stellen. Wer diesen Schmerz vermeiden will, handelt auf Arten, die irrational wirken, solange der Reueschmerz nicht mitgerechnet wird.
+- Anleger sorgen sich deshalb mehr um das Risiko, den nächsten Anstieg zu verpassen, als darum, zu warten, bis Aktien billig sind.
+- Psychologie und der Vergleich mit der Peer Group erklären, warum Kunden bei Fair Value wieder einsteigen, obwohl sie wissen, dass Märkte billig und nicht nur fair sein sollten. Institutionelle warten auf ihre Fair-Value-Ziele, um zu kaufen.
 
 ## Voraussetzungen
 

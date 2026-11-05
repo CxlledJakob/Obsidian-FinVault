@@ -73,6 +73,18 @@ aktualisiert: 2026-11-05
 - Die Breite des 95-Prozent-Intervalls von μ1|1 hängt vom Startwert Σ1|0 ab.
 - Die gezeichneten Grenzen sind die Zustandsschätzung plus und minus 2 mal der Wurzel der zugehörigen Zustandsvarianz, für gefilterte und für geglättete Zustände, über 340 Tage.
 - Für die geglätteten unbeobachteten Komponenten der logarithmierten Quartalsgewinne von Johnson & Johnson werden punktweise 95-Prozent-Konfidenzbereiche als geglätteter Zustand plus oder minus zwei Standardabweichungen gezeichnet.
+- Werden zu einer Prognose 98-Prozent-Konfidenzintervalle abgefragt, sollte die wahre Antwort nur in 2 Prozent der Fälle außerhalb liegen; tatsächlich liegt sie in 30 bis 40 Prozent der Fälle außerhalb.
+- Im Test von Russo und Schoemaker (1989) geben die Teilnehmer zu zehn Fragen einen 90-Prozent-Konfidenzbereich an. Bei guter Kalibrierung liegt nur eine Antwort außerhalb der eigenen Grenzen.
+- Von über 1000 Teilnehmern bei Russo und Schoemaker hatten weniger als 1 Prozent neun oder mehr Antworten innerhalb ihrer Grenzen; die meisten verfehlten vier bis sieben Fragen.
+- Die Auflösungen des Tests sind: Martin Luther King starb mit 39 Jahren, der Nil ist 4187 Meilen lang, die OPEC hat 13 Mitglieder, das Alte Testament hat 39 Bücher, der Monddurchmesser beträgt 2160 Meilen, eine leere Boeing 747 wiegt 390000 Pfund, Mozart wurde 1756 geboren, die Tragzeit des asiatischen Elefanten beträgt 645 Tage, die Luftlinie London–Tokio beträgt 5959 Meilen, der tiefste bekannte Meerespunkt liegt bei 36198 Fuß.
+- Perfekte statistische Kalibrierung liegt auf der 45-Grad-Linie, wenn die genannte Wahrscheinlichkeit gegen die tatsächliche Häufigkeit steht.
+- Bei Plous (1991) lagen Ärzte, die zu 90 Prozent sicher waren, in weniger als 15 Prozent der Fälle richtig. Wettervorhersager liegen nahe an der perfekten Kalibrierung.
+- Bei guter Kalibrierung sollte etwa eine von zehn Antworten außerhalb der Grenzen liegen. Bei Glaser, Langer und Weber (2005) hatten professionelle Investoren einen Median von fast acht solchen Ausreißern von zehn, Studierende einen Median von sechs. Allgemeinwissen und Finanzfragen wurden zu einem Score von zehn gemittelt.
+- Tyszka und Zielonka (2002) bauten drei einander ausschließende und erschöpfende Ausgänge mit je etwa 0,33 Wahrscheinlichkeit. Gut kalibriert wäre eine Konfidenz von 33 Prozent. Analysten nannten im Schnitt knapp über 58 Prozent, Wettervorhersager knapp über 50 Prozent.
+- In derselben Studie lag nur etwa ein Drittel der Analysten richtig und etwa zwei Drittel der Wettervorhersager.
+- Bei Torngren und Montgomery (2004) lagen professionelle Aktienwähler, die zu 100 Prozent sicher waren, in weniger als 15 Prozent der Fälle richtig.
+- Graham und Harvey werten die Duke-CFO-Umfrage aus. Die Manager nennen zu ihren Renditeprognosen 80-Prozent-Konfidenzintervalle. Nur in 30,5 Prozent der Fälle lag die tatsächliche Rendite innerhalb dieser Intervalle.
+- Bei Davis et al. (1994) steigerte redundante Information die selbst berichtete Konfidenz der Gewinnprognose signifikant über die Basis aus drei Quartalen EPS, Nettoumsatz und Kurs. Nicht-redundante Information steigerte die Konfidenz noch einmal deutlich über die redundante Information. In allen drei Bedingungen war die Überkonfidenz massiv.
 
 ## Funktionsweise
 

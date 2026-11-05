@@ -52,6 +52,11 @@ aktualisiert: 2026-11-05
 - Der Zyklus ist eine gedämpfte Drehung mit Dämpfungsfaktor δ im Intervall (0, 1] und Frequenz λc gleich 2π geteilt durch q, q die Periode. Bei δ gleich 1 wird der Zyklus eine deterministische Sinus-Cosinus-Welle.
 - Die beiden Zyklusinnovationen sind gemeinsam normal mit Mittel null und Kovarianz σ²ε mal (1 minus δ²) mal der 2-mal-2-Einheitsmatrix. Die beiden Startwerte sind unabhängig normal mit Varianz σ²ε.
 - GetSsfStsm lässt bis zu zehn Zykluskomponenten zu, von Cycle0 bis Cycle9, jeweils mit σε, λc und δ. Für die Saison gibt es die Varianten seasonalDummy, seasonalTrig und SeasonalHS, jeweils mit σ und s.
+- Seit 1970 waren die durchschnittlichen Überschussrenditen gegenüber Cash über eine breite Palette von Aktienmärkten zwischen Mai und Oktober negativ.
+- Im Update für 1970 bis 2005 wären Anleger in den USA, in Großbritannien, in Deutschland und in Japan im Schnitt besser gefahren, von Mai bis Oktober Cash zu halten und nur von November bis April in Aktien investiert zu sein.
+- Jacobsen und Visaltanachoti (2006) finden mit US-Daten von 1927 bis 2005 in 12 von 17 Sektoren einen statistisch signifikanten Renditeunterschied zwischen Sommer und Winter.
+- Konsum- und Lebensmittelsektoren schlagen den Markt in den Sommermonaten. Gebrauchsgüter, Chemie, Bau und Maschinen schlagen ihn in den Wintermonaten. Die Kurzfassung nennt zusätzlich Basiskonsumgüter neben Lebensmitteln als Sommergewinner.
+- Eine Rotationsstrategie, die diesen Sommer-Winter-Unterschied ausnutzt, würde den Markt deutlich schlagen. Die meisten Anleger stellen solche saisonalen Befunde auf eine Stufe mit dem Lesen von Hühnerinnereien.
 
 ## Funktionsweise
 

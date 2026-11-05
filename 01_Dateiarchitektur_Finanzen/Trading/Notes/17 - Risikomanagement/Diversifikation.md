@@ -62,6 +62,53 @@ aktualisiert: 2026-11-05
 - Die Kovarianzstruktur eines Renditevektors ist für die Portfolioauswahl wichtig. Die Hauptkomponentenanalyse erklärt diese Struktur durch wenige Linearkombinationen und senkt damit die Dimension.
 - Ein Eigenwert null der Kovarianz- oder Korrelationsmatrix bedeutet eine exakte lineare Beziehung zwischen den Komponenten. Ist der kleinste Eigenwert null, ist die zugehörige Hauptkomponente konstant, und der Zufallsvektor enthält nur k−1 zufällige Größen.
 - Für fünf monatliche Aktienrenditen von IBM, Hewlett-Packard, Intel, J.P. Morgan Chase und Bank of America erklären die ersten beiden Hauptkomponenten der Korrelationsmatrix etwa 74 Prozent der Gesamtvariabilität. Die erste ist eine ungefähr gleich gewichtete Marktkomponente, die zweite der Unterschied zwischen Technologie und Finanzwerten.
+- Entgegen der klassischen Finanztheorie führen diese Value-Investoren hoch konzentrierte Portfolios; Tracking Error hat für sie wenig oder keine Bedeutung.
+- Über die zehn Fonds liegt die durchschnittliche Zahl der Unternehmen bei rund 35 und ohne die internationalen Fonds näher bei 20, während der durchschnittliche US-Inlands-Mutual-Fund rund 160 Aktien hält.
+- Im Schnitt liegen fast 40 Prozent der Assets in den Top-Ten-Positionen, in Tabelle 23.2 sind es 38,8 Prozent; über ein weites Fondsuniversum machen die Top Ten nur rund 10 Prozent der Assets aus.
+- Nicht zu investieren ist der Default dieser Manager: Sie brauchen einen Grund zum Kauf, nach Graham und Dodd eine Sicherheitsmarge.
+- Der durchschnittliche Fondsmanager sorgt sich mehr um Tracking Error und Benchmark-Risiko als um die beste Anlage für die Kunden; sein Default ist Eigentum, und er braucht einen guten Grund, eine Aktie nicht zu halten.
+- Keynes schrieb am 6. Februar 1942 an F. C. Scott, Safety-first als kleines Spiel in vielen Firmen, über die man kein Urteil habe, statt eines substanziellen Einsatzes dort, wo die Information ausreiche, sei eine Travestie der Anlagepolitik.
+- Loeb schreibt in The Battle for Investment Survival, Diversifikation sei das Eingeständnis, nicht zu wissen, was zu tun ist, und der Versuch, einen Durchschnitt zu treffen.
+- Die Konzentration dieser Fonds ist keine bewusste Wahl, sondern folgt aus der Disziplin, weil es schlicht nicht viele gute Value-Gelegenheiten gibt.
+- Das Brandes Institute (2004) findet, dass konzentrierte Portfolios für sich weder bessere Renditen noch bessere volatilitätsadjustierte Renditen liefern; die Konzentration der Value-Gruppe ist das Ergebnis eines Prozesses.
+- Die Untersuchung der besten Value-Investoren zeigte konzentrierte Portfolios als gemeinsamen Zug, und Keynes stimmt dem zu.
+- Keynes: Ein konzentriertes Portfolio ist nicht notwendig eine unausgewogene Position; die perfekte Strategie ist eine ausgewogene Lage, also eine Vielfalt von Risiken trotz großer Einzelpositionen und wenn möglich entgegengesetzter Risiken.
+- Montier vermutet, dass Keynes und Graham in der Praxis nicht uneins wären: Graham glaubte an Diversifikation, hätte aber wenig übrig für Positionen in großen Aktien, über die man nichts weiß.
+- Portfolios auf absoluten statt sektorrelativen Maßen verringern die Sektordiversifikation und können ziemlich große Sektorwetten erzeugen.
+- Sektorbeschränkungen, die erst nachträglich gesetzt werden, mindern das Exposure auf den jeweiligen Faktor und möglicherweise die künftigen Renditen.
+- Ein sektorrelativer Ansatz kann von Anfang an ein diversifizierteres Portfolio erlauben, ohne das Exposure auf den Faktor zu mindern.
+- Der Kauf eines Sektors mischt teure und billige beziehungsweise momentumstarke und momentumschwache Titel und verdünnt die Prämie; je feiner die Abstufung, desto besser.
+- Absolute Bewertung führt zu großen Sektorwetten, die langfristig profitabel sein können, aber anhaltende Underperformance erzeugen, wie bei Value-Managern in der TMT-Blase.
+- Ein Portfolio auf sektorrelativen statt marktweiten Maßen soll diversifizierter sein und dadurch vielleicht bessere risikobereinigte Renditen bieten.
+- Das sektorrelative Maß mindert die Sektorschiefe, diversifiziert die Branchenexposure aber nicht vollständig: liegt ein Sektor eng beieinander, fehlt er in Long- und Short-Portfolio.
+- Gegenüber dem Zwang, alle Sektoren abzubilden, erlaubt diese Methode ein breiteres Faktorexposure und erhofft bessere Renditen.
+- Beim unadjustierten globalen Kurs-Buchwert wiegt der Materialsektor im Long-Portfolio 12 Prozent und im Short-Portfolio 5 Prozent, also fast 7 Prozentpunkte Differenz; sektorrelativ sinkt diese Differenz auf fast null.
+- Einzelportfolios innerhalb jedes Sektors waren nicht optimal, weil viele Sektoren zu wenig liquide Titel hatten und Tritiles statt Dezile oder Quintile den Faktorabstand und das Alpha verkleinerten.
+- Die Betas der Long-Short-Länderportfolios sind im Allgemeinen negativ und deuten auf mögliche Diversifikationsgewinne.
+- Eine CAPM-Annahme lautet, Anleger steuerten Risiko durch Diversifikation.
+- Portable Alpha, das dieselbe Aktie zugleich long und short hält, ist hochgradig ineffizient, weil die Kosten des Short verschenkt werden.
+- Ein Minimum-Varianz-Portfolio und fundamental gewichtete Indizes erzeugen höhere Rendite bei niedrigerem Risiko als der kapitalisierungsgewichtete Index, entgegen der Behauptung, das Marktportfolio sei bereits effizient.
+- LTCM hielt sich 1998 über Märkte für gut diversifiziert. Geografische Diversifikation schützte nicht; nötig war Diversifikation über Strategien. Die Vorherrschaft der Convergence-Trades ließ die Firma bei anhaltender Divergenz an allen Trades zugleich bluten.
+- Sind die Positionen verschieden, lassen sich Assets kreuzen, und die Preisrückkopplung eines VaR-Kreises bleibt aus. Halten alle dieselben Positionen, fehlt dieser Ausgleich.
+- Portable Alpha ist nur sinnvoll, wenn das Alpha zu allen Elementen des bestehenden Portfolios unkorreliert ist. Sonst ist der Anleger long und short derselben Sache.
+- Die Wahl des Rohstoffindex verändert Rendite und Diversifikationsnutzen erheblich: der GSCI besteht zu 76 Prozent aus Energie, der CRB nur zu 18 Prozent, der DJ-AIG zu 33 Prozent.
+- Erb und Harvey (2005) zeigen für Dezember 1982 bis Mai 2004 eine Überschussrendite des GSCI von 4,5 Prozent pro Jahr; ein gleichgewichteter Buy-and-Hold-Index aus denselben Rohstoffen liefert nur 0,7 Prozent pro Jahr.
+- Bei einer medianen Korrelation der Hedgefonds-Strategien von 0,65 ohne Dedicated Shorts liefern Fonds von Hedgefonds keinen Diversifikationsnutzen und sind zusätzlich eine Kostenfalle.
+- Über 1991–2005 betragen Rendite und Risiko: DJ-AIG 4,1 und 4,4 Prozent, GSCI 5,7 und 6,3, CRB 3,1 und 2,9. Risikoadjustiert ist der CRB in dieser Stichprobe der beste Index, allein als Funktion des Zeitraums.
+- Jedes Portfolio lässt sich zerlegen in eine 100-Prozent-Position im Benchmark plus ein Long-Short-Portfolio mit Nettoanlage null. Das Long-Short-Portfolio sind alle aktiven Wetten. Die Active Share ist der Grad der Nichtüberlappung mit dem Benchmark: 100 Prozent bedeutet keinerlei Überlappung.
+- Active Share gleich ein Halb mal die Summe der Beträge der Gewichtsdifferenzen von Fonds und Index über alle Assets.
+- Hohe Active Share und niedriger Tracking Error kennzeichnen diversifizierte Stockpicker: viele Wetten, aber ein Portfolio, das groß genug ist, einzelne Sektorpositionen zu streuen. Niedrige Active Share und hoher Tracking Error sind konzentrierte sektorartige Wetten bei relativ passiver Aktienauswahl.
+- Rund die Hälfte der Active Share wird gegen andere Publikumsfonds aufgebaut. Weichen durchschnittliche und aggregierte Active Share voneinander ab, handeln die Fonds untereinander. Ein Portfolio aus Fonds kann die gesamte Active Share deshalb senken und stellt die übliche Core-Satellite-Sicht infrage.
+- Die wertgewichtete durchschnittliche Active Share fiel über die Stichprobe von 80 Prozent in den 1980ern auf 60 Prozent.
+- Active Share ist hoch persistent: Hohe Active Share in diesem Jahr bleibt im nächsten Jahr und darüber hinaus wahrscheinlich hoch. Der ideale Fonds verbindet hohe Active Share mit hoher vergangener Performance.
+- Fonds mit sehr hoher Active Share und guter vergangener Performance haben deutlich höheres künftiges Alpha als solche mit hoher Active Share und schlechter vergangener Performance. Diese Lücke ist in den Gruppen mit hoher Active Share viel größer als in denen mit niedriger. Es gibt danach eine Gruppe von Managern mit anhaltendem Stock-Picking-Können.
+- Bei Aktien, die auf 3 Prozent real bewertet sind, soll mit dem passiven Investieren auch der Core-Satellite-Ansatz verschwinden.
+- Breite Mandate erhöhen die Gelegenheiten, eine Erkenntnis anzuwenden, und gelten als voraussichtlich optimal.
+- Dieselbe Strategie in vielen Märkten anzuwenden kann sehr profitabel sein und ist dennoch nicht Diversifikation.
+- LTCM beruhte praktisch durchgängig auf Konvergenz, ob bei US-Treasuries oder dänischen Mortgage-Backed Securities, und wiederholte die Strategien immer wieder. Geografische Diversifikation war erreicht, strategische nicht.
+- Manager, die 800 US-Aktien nach Buch zu Preis reihen, Billige kaufen und Teure verkaufen und einmal je Quartal neu gewichten, wenden nur eine Erkenntnis an. Die Breite ist nicht 800, weil die Sichten nicht unabhängig sind, aber sie ist größer als vier, die Zahl der Neugewichtungen pro Jahr.
+- Core-Satellite-Strukturen und der Schub der Pensionsberater haben das Verschwinden der Balanced Funds beschleunigt, die strategische und taktische Allokation kombinierten. Diese Fonds hätten einen Teil der Rückkopplung der Blasen mildern können.
+- Statt endlos vieler Spezialisten mit je einer Gebühr wäre ein Manager mit einer Gebühr und der Freiheit vorzuziehen, überall dort anzulegen, wo die Gelegenheit liegt.
 
 ## Funktionsweise
 
@@ -82,6 +129,7 @@ aktualisiert: 2026-11-05
 
 ## Regeln und Kriterien
 
+- Die Gruppengrenzen von Cremers und Petajisto: konzentrierte Stockpicker Active Share über 80 Prozent und Tracking Error über 8 Prozent; diversifizierte Stockpicker Active Share über 80 Prozent und Tracking Error unter 8 Prozent; Sektorwetten Active Share unter 80 Prozent und Tracking Error über 6 Prozent; Closet Indexer Active Share unter 60 Prozent und Tracking Error unter 6 Prozent. Indexfonds haben effektiv Active Share null und sehr niedrigen Tracking Error.
 
 ## Risiken und Grenzen
 
@@ -90,6 +138,9 @@ aktualisiert: 2026-11-05
 - Die Standardabweichungen liegen dabei nahe beieinander, 0,4640 gegen 0,4486, CLA streicht aber einen großen Teil des Universums für eine kleine Risikoreduktion.
 - Das CLA-Portfolio ist trügerisch diversifiziert, weil Stress in den fünf größten Positionen stärker durchschlägt als bei Hierarchical Risk Parity.
 - Das Inverse-Varianz-Portfolio verteilt die Gewichte gleichmäßig, ignoriert die Korrelationsstruktur und ist dadurch anfällig für systemische Schocks.
+- Das Alpha eines Russell-1000-Managers auf das Beta des S&P 500 zu setzen, kann wegen der Überlappung zweier Large-Cap-Inlandindizes zugleich long und short dieselbe Aktie ergeben. Die Short-Kosten sind dann vollständig verschwendet.
+- Auch ein unkorreliert wirkendes japanisches Aktien-Alpha auf einem S&P-500-Beta erzeugt dasselbe Problem, sobald das Portfolio bereits japanisches Beta hält.
+- Bei einem großen diversifizierten Portfolio ist das Risiko proportional zur Wurzel der Korrelation. Steigt die maßgebliche Korrelation von der mittleren Aufwärts-Halbekorrelation 0,21 auf die Abwärtskorrelation 0,38, ist der VaR mit dem Faktor 1,35 zu multiplizieren; der Diversifikationsnutzen schrumpft im Abschwung.
 
 ## Beispiele
 
@@ -98,11 +149,18 @@ aktualisiert: 2026-11-05
 - Die Outperformance von Hierarchical Risk Parity außer Stichprobe wird bei größerem Universum, mehr Schocks, stärkerer Korrelation oder Rebalancing-Kosten noch deutlicher.
 - Das mit SPY gehandelte Aktienportfolio umfasst etwa 98 Titel; müssen wenige wegen der Short-Sale-Beschränkung entfernt werden, bleibt die Wirkung begrenzt.
 - Eine Variante des Buy-on-Gap kauft mehr Aktien, begrenzt aber die Zahl der Titel innerhalb desselben Sektors.
+- Der Fortune-Korb von zehn Aktien für das Jahrzehnt 2000, von dem nur eine ein KGV unter dem 50-Fachen hatte, lag zum Zeitpunkt des Textes noch rund 40 Prozent unter dem vorgeschlagenen Kauf und ist für Montier ein Beispiel dauerhaften Kapitalverlusts, nicht ein Beleg für Konzentration als Selbstzweck.
+- Startet der Manager mit 100 Millionen Dollar im S&P 500, verkauft die Hälfte und legt die 50 Millionen Dollar in die Aktien, die er mag, entsteht eine Active Share von 50 Prozent. Hält er nur 50 von 500 Aktien, liegt die Active Share bei 90 Prozent, also 10 Prozent Überlappung mit dem Index.
+- Der Fidelity Magellan wanderte von hoher Active Share zu einem Closet-Index-Fonds. Die Managerfolge Lynch, Smith, Vinik und Stansky zeigt, dass der Manager die Active Share trägt.
+- Benchmark ist der Index mit der niedrigsten Active Share, also der höchsten Überlappung, unter S&P 500, Barra-Value- und Growth-Indizes, Russell 2000 und Wiltshire 5000. Die Datenbasis sind inländische reine US-Aktienfonds seit 1980.
 
 ## Unterschiedliche Quellenpositionen
 
 - Kolanovic und Koautoren (2017) finden Hierarchical-Risk-Parity-Portfolios wirklich diversifiziert, mit mehr unkorrelierten Exposures und weniger extremen Gewichten und Risikoallokationen.
 - Raffinot (2017) findet Portfolios aus hierarchischem Clustering robust, wirklich diversifiziert und risikoadjustiert statistisch besser als gängige Optimierungsverfahren.
+- Keynes schreibt, Safety-first als kleines Spiel in vielen Firmen, über die man kein gutes Urteil habe, statt eines substanziellen Einsatzes dort, wo die Information ausreiche, sei eine Travestie der Anlagepolitik.
+- Graham argumentiert, eine Anlage könne in einer Gruppe von Papieren gerechtfertigt sein, die einzeln nicht sicher genug wäre, sodass Diversifikation nötig sein kann, um das Risiko der einzelnen Papiere auf das mit den Anforderungen der Anlage noch vereinbare Minimum zu senken.
+- Graham hält Diversifikation für einen integralen Teil aller Standardoperationen der Stammaktienanlage.
 
 ## Eigene Erkenntnisse
 

@@ -53,6 +53,18 @@ aktualisiert: 2026-11-05
 - Multivariate gaußsche Innovationen können die Kurtosis der Asset-Renditen verfehlen.
 - Allein aus den beobachteten yt ist die Wahl zwischen einem ARIMA-Modell und einem linearen Zustandsraummodell nicht entscheidend.
 - Für dieselbe Cisco-Intel-Position liegen die drei 5-Prozent-VaR etwa 1.100 Dollar auseinander: das univariate Modell am niedrigsten, das Modell mit konstanter Korrelation am höchsten.
+- Die Branche nimmt Theorie als Fakt, im Widerspruch zu einem wissenschaftlichen Vorgehen, das Modelle an der Empirie prüft; das CAPM ist das Beispiel.
+- Die meisten CAPM-Annahmen sind offenkundig abwegig. Die Schlüsselannahmen sind Handel in jeder Größe ohne Preiseinfluss und die universelle Nutzung der Markowitz-Optimierung.
+- Die Annahmen im Einzelnen: keine Transaktionskosten, beliebige Position ohne Preiseinfluss, keine Steuern und damit Indifferenz zwischen Dividende und Kursgewinn, Risikoaversion, gemeinsamer Zeithorizont, Aktien nur im Mittelwert-Varianz-Raum, Risikosteuerung durch Diversifikation, alle Assets inklusive Humankapital frei handelbar, Leihen und Verleihen zum risikofreien Satz.
+- Einige rationale Marktteilnehmer können den Markt nicht zur CAPM-Lösung schieben; strikt wahr sein muss, dass alle die Markowitz-Optimierung benutzen.
+- Selbst Markowitz allokiert nicht nach dem Optimierer, sondern 50 zu 50 in Anleihen und Aktien, um künftiges Bedauern zu minimieren.
+- Die Verteidigung, das CAPM lasse sich nicht wirklich testen, oder der Verweis auf eine ICAPM mit unbestimmten Faktoren, ist für Praktiker hohl.
+- Analysten rechnen Beta routinemäßig in die Kapitalkosten, obwohl die Evidenz Beta als sehr schlechtes Risikomaß ausweist; Fama und French (2004) sagen, die empirische Bilanz sei schlecht genug, die Anwendung zu entwerten.
+- Modigliani und Miller nahmen Mitte der 1950er effiziente Märkte an, bevor die Effizienzmarkthypothese formuliert war, und schlossen auf die Irrelevanz von Dividende und Kapitalstruktur.
+- Zu viele Risikomodelle schreiben die jüngeren Marktbedingungen fort. In Turbulenz sind historische Volatilität und Korrelation voraussichtlich schlechte Führer.
+- Der zentrale Fehler der meisten Risikomodelle ist die Annahme, Risiko sei exogen wie beim Roulette. In überfüllten Trades ist Risiko endogen wie beim Poker, die Handlungen der anderen sind entscheidend.
+- Strategisches Denken, also zu antizipieren, was die anderen tun, ist außergewöhnlich schwierig. Das zeigt Keynes' Schönheitswettbewerb, Global Equity Strategy vom 17. Februar 2004.
+- Einfache Rechnungen legen eine Unterschätzung des wahren Risikos durch VaR um 20 bis 30 Prozent allein wegen unpassender Korrelationen nahe. Mit der asymmetrischen Korrelation 1970 bis 2004 wird daraus ein Faktor 1,35 oder 35 Prozent, ab 1995 etwa 21 Prozent, bevor eine Verdopplung oder Verdreifachung der Volatilität hinzukommt.
 
 ## Funktionsweise
 
@@ -93,6 +105,10 @@ aktualisiert: 2026-11-05
 - Im BARRA-Branchenmodell überzeichnet die modellbasierte Korrelation den Stichprobenzusammenhang innerhalb der Branche: Caterpillar gegen Procter & Gamble hat in der Stichprobe 0,1 und im Modell 0,6.
 - Die Zahl der Faktoren ist in fundamentalen Modellen missverständlich, weil sich mehrere Fundamentals zu einem neuen Merkmal verbinden lassen und das lineare Modell dann als Einfaktormodell erscheinen kann. In statistischen Faktormodellen ist die Faktorzahl klarer bestimmt.
 - Die Gewichte des globalen Minimum-Varianz-Portfolios aus der faktormodellimplizierten Kovarianz und aus der Stichprobenkovarianz weichen beim Chicago Tribune deutlich ab, 0,1400 gegen 0,0168.
+- Interne VaR-Modelle nach dem Basle-Abkommen nutzen 10 Handelstage oder zwei Kalenderwochen, 99 Prozent Konfidenz und mindestens ein Jahr Historie mit Aktualisierung mindestens einmal je Quartal. Das Fortschreiben dieser Historie erzeugt positives Feedback.
+- Beta als Maß relativer Preisvolatilität ist empirisch zweifelhaft und funktioniert nach Montier nicht. Sorgen Anleger sich um negative Renditen, ist auch die Standardabweichung als Risikomaß falsch; zu verwenden ist Abwärtsrisiko.
+- Die Lehren wirksamen Risikomanagements scheinen nicht gelernt. Dynamisches Hedging und VaR verstärken Markttrends, statt sie zu bremsen.
+- Ohne CAPM misst die beta-adjustierte Rendite nichts und kann das Performancebild erheblich verzerren.
 
 ## Beispiele
 

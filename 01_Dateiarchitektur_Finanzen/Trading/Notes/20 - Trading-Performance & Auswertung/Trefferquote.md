@@ -55,6 +55,32 @@ aktualisiert: 2026-11-05
 - In der Tabelle für 24 Monate von Januar 1998 bis Dezember 1999 stehen 12 Treffer und 2 Fehler in der Zeile prognostizierter Anstieg sowie 8 Fehler und 2 Treffer in der Zeile prognostizierter Rückgang.
 - Die χ²-Statistik dieser Tabelle ist 0,137 mit p = 0,71; das Netz schlägt eine Zufallswahl damit nicht signifikant.
 - Über 500 Schätzläufe desselben Netzes sind Mittel und Median der Zahl der Richtungsfehler 11,28 und 11, bei einem Maximum von 18 und einem Minimum von 4.
+- Torngren und Montgomery (2004): Laien und professionelle Investoren sollten monatlich aus einem Paar bekannter Blue Chips die outperformende Aktie wählen, mit Name, Branche und Zwölfmonatsperformance. Beide Gruppen lagen schlechter als ein Münzwurf.
+- Die Studierenden waren rund 59 Prozent zuversichtlich, die Profis im Schnitt 65 Prozent. Bei angegebener Sicherheit von 100 Prozent lagen die Profis in weniger als 15 Prozent der Fälle richtig und deutlich hinter den Laien.
+- Tyszka und Zielonka: Nur etwa ein Drittel der Finanzanalysten traf den richtigen von drei etwa gleich wahrscheinlichen Ausgängen für den Indexstand in rund eineinhalb Monaten. Bei den Wettervorhersagern für die April-Temperatur waren es etwa zwei Drittel.
+- Bei Tetlock lagen Experten, die 80 Prozent oder mehr Konfidenz angaben, nur in etwa 45 Prozent der Fälle richtig. Über alle Prognosen waren sie kaum besser als ein Münzwurf.
+- Ärzte, die zu 90 Prozent sicher waren, lagen bei Plous (1991) in weniger als 15 Prozent der Fälle richtig.
+- Leli und Filskov (1981): Das Modell erkannte 83 Prozent neuer Fälle fortschreitender Hirnfunktionsstörung; unerfahrene Fachleute lagen bei 63 Prozent, erfahrene bei 58 Prozent.
+- Mit der Ausgabe des Modells stiegen die Trefferquoten der Unerfahrenen auf 68 Prozent und der Erfahrenen auf 75 Prozent, beide weiter signifikant unter dem Modell, und die Verbesserung hing vom Ausmaß der Modellnutzung ab.
+- Grove et al. (2000): Über 136 Studien lag die durchschnittliche Trefferquote der Fachleute bei 66,5 Prozent und die der Quant-Modelle bei 73,2 Prozent.
+- Von den 136 Studien sprachen 64 klar für das Modell, 64 lagen ungefähr gleich, und acht sprachen für den Menschen; in diesen acht hatten die Menschen mehr Information.
+- Von den in Pennsylvania auf Bewährung Entlassenen wurden 25 Prozent innerhalb eines Jahres wieder eingesperrt, flüchtig oder erneut verhaftet, und der Ausschuss hatte keinen dieser Fälle vorhergesagt.
+- An der University of Texas erhielten 82 Prozent jeder der beiden nach Interviewrang getrennten Gruppen den MD; Honors und die übrigen Stufen zeigten ebenfalls keinen Unterschied, sodass das Interview keine nützliche Funktion hatte.
+- Im einfachen Value-Screen auf trailing PE schlagen 50 Prozent der Aktien über ein Jahr den Markt; bei fünf Jahren steigt diese Trefferquote auf 57 Prozent, aber nicht massiv.
+- Piotroski (2000) findet, dass nur 42 Prozent der Value-Aktien auf Jahressicht den Markt schlagen.
+- Aus den 23 Prozent Big-Value-Aktien, die sich neu bewerten, folgt, dass nur rund ein Viertel der Type-II-Value-Aktien positive Überschussrenditen erzeugt.
+- Im Growth-Portfolio haben nur rund 38 Prozent eine über dem Markt liegende Rendite; erfolgreiches Growth-Investing ist das Treffen der Gewinner.
+- Die Growth-Trefferquote fällt mit längerem Horizont, weil das Risiko eines Earnings-Torpedos steigt.
+- Momentum hebt den Anteil outperformanceender Growth-Aktien auf Einjahressicht von 38 auf 41 Prozent.
+- Im Value-Universum steigt die Zwölfmonats-Trefferquote durch Momentum von 50 Prozent auf etwas über 55 Prozent.
+- Value-Investing lässt sich als Vermeiden von Verlierern beschreiben; ein Stop-Loss wird als mögliche Lösung genannt und nicht weiter untersucht.
+- Der Anteil richtiger Calls ist die Größe f im Informationskoeffizienten, definiert als 2 mal (f minus 0,5).
+- Der Informationskoeffizient ist 2 mal (f minus 0,5), wobei f der Anteil der richtigen Calls des Managers ist. Ein Informationskoeffizient von 0,035 entspricht etwa 51 Prozent richtigen Entscheidungen.
+- In den dismal years lagen die Informationskoeffizienten bei 0,07 für Value und Momentum, bei −0,02 für nur Value und bei 0,21 für nur Momentum.
+- Das Modell billiger Länder erzeugte einen Informationskoeffizienten von etwa 0,17, unabhängig davon, ob das untere Tritil oder der Markt die Vergleichsbasis war.
+- Über die von Grove et al. gesichteten Arbeiten lag die mittlere Genauigkeit der menschlichen Teilnehmer bei 66,5 Prozent und die mittlere Hit Ratio der quantitativen Modelle bei 73,2 Prozent.
+- Goldbergs Regel auf zehn MMPI-Scores traf die Diagnose neurotisch oder psychotisch außer Stichprobe zu rund 70 Prozent und schlug selbst den besten Psychologen, auch wenn diesem die Regelvorhersage vorlag.
+- Die Regel von Leli und Filskov erkannte 83 Prozent neuer Fälle. Unerfahrene Kliniker lagen bei 63 Prozent, erfahrene bei 58 Prozent. Mit der Modellausgabe stiegen die Quoten auf 68 und 75 Prozent und blieben unter dem Modell. Die erfahrenen waren ohne Modell schlechter als die unerfahrenen.
 
 ## Funktionsweise
 
@@ -89,6 +115,15 @@ aktualisiert: 2026-11-05
 - Bei 260 Wetten, Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 liefert eine Trefferwahrscheinlichkeit von 0,72 eine annualisierte Sharpe Ratio von 2.
 - Bei Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 liegt die kritische Trefferwahrscheinlichkeit für eine Sharpe Ratio von null bei zwei Dritteln.
 - Bei Verlustauszahlung minus 0,01 und Gewinnauszahlung 0,005 zehrt ein Rückgang der Trefferwahrscheinlichkeit von 0,7 auf 0,67 den erwarteten Gewinn auf.
+- Im Value-Portfolio der billigsten 20 % erzeugen nur etwa die Hälfte der Titel die Outperformance im ersten Jahr und fast 60 % nach fünf Jahren.
+- Im Portfolio der teuersten 20 % nach dem Kurs-Gewinn-Verhältnis schlagen im ersten Jahr nur 38 % der Titel den Markt und nach fünf Jahren 34 %.
+- Von den langfristig besten Fonds lagen auf Basis von Jahresdaten 73 % einmal im untersten Dezil und auf Dreijahressicht einer von dreien.
+- Das Portfolio aus Value-Rückkäufen minus Growth-Emittenten hatte nur in 6 von 30 Jahren eine negative Rendite.
+- Der Dividendenrendite-Länderkorb trifft in 59 Prozent der Calls, der Kurs-Buchwert-Länderkorb in 56 Prozent.
+- Beide Länder-Value-Strategien bestehen den t-Test auf unterschiedliche Mittel und den t-Test, dass die Long-Short-Rendite von null verschieden ist, Schwelle Betrag über 1,6 für 95 Prozent.
+- Der Anteil richtiger Calls beträgt 0,57 im Kurs-Gewinn-Länderkorb.
+- Der Anteil richtiger Calls beträgt 0,67 im Momentum-Länderkorb.
+- Die erneut ausgewiesene Dividendenrendite trifft in 59 Prozent der Calls.
 
 ## Unterschiedliche Quellenpositionen
 

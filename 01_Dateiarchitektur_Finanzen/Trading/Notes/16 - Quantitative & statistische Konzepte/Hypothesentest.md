@@ -318,6 +318,10 @@ aktualisiert: 2026-11-05
 - Die standardisierten Ein-Schritt-Prognosefehler des lokalen Trendmodells für die Alcoa-Log-RV haben Q(25) gleich 23,37 bei einem p-Wert von 0,56.
 - Der LM-Test auf ARCH-Effekte derselben standardisierten Fehler über 25 Lags hat die Statistik 18,48 bei einem p-Wert von 0,82. Das Modell gilt nach dieser Residualanalyse als angemessen.
 - Mit einer Gibbs-Stichprobe lässt sich H0: θ1 = θ2 gegen Ha: θ1 ungleich θ2 prüfen, indem für θ = θ1 − θ2 Punktschätzer und Varianz aus den Ziehungen gebildet und die übliche t-Ratio t = θ̂/σ̂ verwendet wird.
+- Wer Popper folgt, sucht Belege dafür, dass die Hypothese falsch ist, nicht nur Belege dafür, dass sie wahr ist.
+- Die t-Statistiken der Prognoseregressionen werden, wo angebracht, mit der Newey-West-Korrektur für Heteroskedastie und Autokorrelation berechnet; fette Schrift markiert statistische Signifikanz.
+- Von 36 Regressionen zyklischer Indikatoren war nur eine signifikant, der OECD-Frühindikator mit 2 Prozent erklärter Dreimonats-Überrendite, und gerade dieses Ergebnis wird wegen des Umfangs der Suche als zufällig verdächtig eingestuft.
+- Karl Pearson verlangte 1910 die Statistik auf den Tisch, statt den Einwand gelten zu lassen, andere Daten könnten etwas anderes zeigen.
 
 ## Funktionsweise
 
@@ -452,6 +456,12 @@ aktualisiert: 2026-11-05
 - OLS- und Maximum-Likelihood-Schätzer eines spezifizierten VAR sind asymptotisch äquivalent und unter Regularitätsbedingungen asymptotisch normal (Reinsel 1993).
 - Qk(m) gilt auch für die Residuen eines VARMA-Modells. Die asymptotische Chi-Quadrat-Verteilung hat k zum Quadrat mal m minus g Freiheitsgrade, wobei g die Zahl der geschätzten Parameter in den AR- und den MA-Koeffizientenmatrizen ist.
 - Die Chi-Quadrat-Kritischen bei 4 Freiheitsgraden, wie sie die SCA-Ordnungsbestimmung für das bivariate System ausweist, sind 9,5 zum Niveau 5 Prozent und 13,3 zum Niveau 1 Prozent.
+- Bei den Faktorvergleichen interessieren annualisierte Renditen mit einer t-Statistik von 2,0 oder darüber; erst dann wird die bessere Variante markiert.
+- Der t-Test auf die Differenz der Mittel gilt ab einem Betrag über 1,6 als hinreichend, mit 95 Prozent sicher zu sein, dass sich die Mittel unterscheiden.
+- Der t-Test des Long-Short-Portfolios prüft, ob die durchschnittliche Rendite von null verschieden ist; ein Betrag über 1,6 genügt für 95 Prozent Sicherheit.
+- Jede der Länderstrategien besteht beide Tests.
+- Ein Betrag der t-Statistik über 1,6 genügt, um mit 95 Prozent sicher zu sein, dass sich die Mittel von hohem und niedrigem Portfolio unterscheiden und dass die Long-Short-Rendite nicht null ist.
+- Alle Länderstrategien bestehen beide Tests, und die Alphas zeigen in allen Fällen starke statistische Signifikanz; die t-Tests stehen in Klammern neben Alpha und Beta.
 
 ## Risiken und Grenzen
 
@@ -589,6 +599,10 @@ aktualisiert: 2026-11-05
 - Die Ljung-Box-Statistiken der standardisierten Residuen und der quadrierten Reihe geben bei diesem GARCH-M keinen Hinweis auf Modellunzulänglichkeit.
 - Im Markov-Switching-GARCH-M ist die Differenz der Risikoprämien β2 − β1 auf dem 5-Prozent-Niveau statistisch signifikant, mit Posterior-Mittel 0,135 und Standardfehler 0,063.
 - Die Differenzen der Posterior-Mittel der Volatilitätsparameter zwischen den beiden Zuständen erscheinen unsignifikant: α20 − α10 = 0,670 bei Standardfehler 1,608, α21 − α11 = 0,026 bei 0,050 und α22 − α12 = −0,064 bei 0,043; auch e2 − e1 = 0,023 bei Standardfehler 0,019.
+- Dividendenrendite der Länder 1975 bis 2003: t-Test der Mitteldifferenz 1,83, t-Test des Long-Short-Portfolios 3,69.
+- Kurs-Buchwert der Länder: t-Test der Mitteldifferenz minus 1,59, t-Test des Long-Short-Portfolios minus 3,06.
+- Kurs-Gewinn der Länder 1975 bis 2003: t-Test der Mitteldifferenz minus 1,70, t-Test des Long-Short-Portfolios minus 3,31.
+- Momentum der Länder 1976 bis 2003: t-Test der Mitteldifferenz 3,53, t-Test des Long-Short-Portfolios 6,07.
 
 ## Unterschiedliche Quellenpositionen
 

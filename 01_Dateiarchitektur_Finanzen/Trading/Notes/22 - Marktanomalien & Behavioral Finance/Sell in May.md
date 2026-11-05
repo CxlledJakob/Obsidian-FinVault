@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/22 - Marktanomalien & Behavioral Finance/22 - Marktanomalien & Behavioral Finance|22 - Marktanomalien & Behavioral Finance]]"
 weitere_hauptthemen: []
 unterthema: "Kalendereffekte"
@@ -10,19 +10,22 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Sell in May
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Die Redensart Sell in May sieht im Schnitt wie ein guter Rat aus. Seit 1970 waren die durchschnittlichen Überschussrenditen gegenüber Cash über viele Aktienmärkte zwischen Mai und Oktober negativ.
+- Für 1970 bis 2005 lagen die durchschnittlichen Überschussrenditen der USA, Großbritanniens, Deutschlands und Japans von Mai bis Oktober unter denen von November bis April. Im Schnitt wäre Cash von Mai bis Oktober besser gewesen und Aktien nur von November bis April.
+- Jacobsen und Visaltanachoti (2006) finden mit US-Daten von 1927 bis 2005 in 12 von 17 Sektoren einen statistisch signifikanten Unterschied zwischen Sommer- und Winterrendite.
+- Konsum und Lebensmittel schlagen den Markt im Sommer, Gebrauchsgüter, Chemie, Bau und Maschinen im Winter. Eine Rotation, die das ausnutzt, schlägt den Markt deutlich.
+- Die meisten Anleger stellen diesen saisonalen Befund auf eine Stufe mit dem Lesen von Hühnerinnereien und akzeptieren zugleich die nachträglichen Ausreden für einen Verkaufstag.
 
 ## Funktionsweise
 

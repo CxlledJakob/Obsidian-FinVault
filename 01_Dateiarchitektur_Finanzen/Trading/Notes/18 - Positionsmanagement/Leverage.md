@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Leverage
@@ -19,6 +19,7 @@ aktualisiert: 2026-11-01
 ## Kurzdefinition
 
 - Leverage misst die Verschuldung, die nötig ist, um die berichtete Performance zu erreichen.
+- Finanzrisiko ist nach Frank Martin die oft katastrophale Abwärtsseite des übermäßigen Einsatzes von geliehenem Geld, um den Kauf von Assets zu finanzieren.
 
 ## Kernaussagen
 
@@ -72,6 +73,18 @@ aktualisiert: 2026-11-01
 - Im Beispiel sinkt die annualisierte Wachstumsrate bei proportionaler Kürzung auf den Bruttohebel 2 von 2,1 auf 0,82, während die Konzentration auf die zweite Strategie 0,96 ergibt.
 - Vor einer kommenden Krise den Hebel zu senken ist nach der Erfahrung unnötig, wenn das Modell frühere Stressphasen im Backtest überstanden hat; besser wird schon in guten Zeiten konservativer gehebelt.
 - Schaden tun die unbekannten Unbekannten, nicht die bekannten Unbekannten, und vor den unbekannten lässt sich das Modell nicht abschalten.
+- Das CAPM setzt voraus, dass Anleger zum risikofreien Satz unbegrenzt leihen und verleihen können.
+- Markowitz (2005): wird die Annahme unbegrenzter Kreditaufnahme gebrochen, ändern sich die Schlüsse drastisch, der kapitalisierungsgewichtete Markt ist nicht mehr das optimale Portfolio und Beta hängt nicht mehr linear an der Rendite.
+- Gefragt, wie er selbst allokiert, sagte Markowitz, er habe künftiges Bedauern minimieren wollen und seine Beiträge 50 zu 50 auf Anleihen und Aktien aufgeteilt, also nicht über den gehebelten Optimierer.
+- Übermäßige Verschuldung ist ein prominentes Merkmal der US-Erfahrung. Um die immer weiter steigenden EPS-Prognosen zu treffen oder zu schlagen, erhöht durch die Dominanz von Optionszuteilungen als Vergütung, trieben die Firmen den Verschuldungsgrad auf ehrfurchtsgebietende Niveaus.
+- Overtrading kann nach Kindleberger übermäßiges Gearing einschließen. Die USA zwischen 1991 und 2002 erfüllen neben reiner Spekulation und überschätzten Renditen auch dieses dritte Merkmal.
+- Überzogene Erwartungen veranlassen die Firmen, sich zu verschulden, um zu überinvestieren. Das kann im Bust eine deflationäre Schuldenspirale auslösen.
+- Manager verschulden die Firmen übermäßig, weil sie glauben, das schnellere Wachstum der neuen Ära werde die Rückzahlung leicht erzeugen. Die finanzielle Notlage ist der Realitätscheck dieser Überverschuldung.
+- Fisher sieht in der anfänglichen Überschuldung und der bald folgenden Deflation die zwei herausragenden Ursachen einer Depression. Der Schuldenüberhang ist die kritischste Gefahr, wenn die Blase platzt.
+- Zu viele der sogenannten Hedgefonds der letzten Jahre sind nichts anderes als gehebelte Long-Fonds.
+- Ein großer Teil der Hedgefonds ist nach Montier kaum mehr als gehebelte Long-Fonds, betrieben von früheren Tradern, die den Markt wetten, und nicht ein sorgfältig gebautes ausgeglichenes Long-Short-Portfolio.
+- Asness et al. (2001) finden für 1994 bis 2000 bei den meisten Stilgruppen negatives Alpha bei positivem Summen-Beta. Viele dieser Fonds dürften den Anlegern um die Ohren fliegen.
+- Das Netto-Margin-Debt hat das Niveau von 2000 erreicht. Insider verkauften zugleich im weitesten Abstand seit 1987, mit einem Verhältnis von Verkäufen zu Käufen von fast 11 zu 1 über das bisherige Jahr und 35 zu 1 im November.
 
 ## Funktionsweise
 
@@ -104,6 +117,7 @@ aktualisiert: 2026-11-01
 - Eine Messgröße ist das Verhältnis der durchschnittlichen Dollarpositionsgröße zum durchschnittlichen verwalteten Vermögen.
 - Bei mehreren Strategien und einem Fmax weit unter der Kelly-Summe ist oft die Konzentration auf die Strategie mit dem höchsten mittleren Excess Return besser als proportionales Skalieren.
 - Die Key Points nennen Half-Kelly für langfristiges Vermögenswachstum, Monte Carlo statt Kelly bei Fat Tails und CPPI, wenn ein Maximal-Drawdown eingehalten und die Wachstumsrate möglichst hoch sein soll.
+- Keynes warnt, ein Anleger, der kurzfristige Marktschwankungen ignorieren will, brauche größere Mittel zur Sicherheit und dürfe, wenn überhaupt, nicht in so großem Maßstab mit geliehenem Geld arbeiten.
 
 ## Risiken und Grenzen
 
@@ -120,6 +134,10 @@ aktualisiert: 2026-11-01
 - Unknown Unknowns schaden, nicht die Known Unknowns; die Modelle lassen sich nicht abschalten, bevor die Unknown Unknowns eintreten.
 - Große gehebelte Positionen mit weitem Stop können in Verlusten enden, die der Broker schließt, wenn die Margin aufgebraucht ist.
 - Die scheinbar hohe Stetigkeit einer Mean-Reversion-Strategie führt nach Dever (2011) oft zu übermäßigem Hebel. Der Zusammenbruch trifft dann häufig beim maximalen Hebel nach einer ungebrochenen Erfolgsserie, und der seltene Verlust ist sehr schmerzhaft oder katastrophal.
+- Ob ein VaR-Teufelskreis wahrscheinlich wird, hängt wesentlich vom Hebel und von der Gemeinsamkeit der Positionen ab.
+- Das Risiko des Fremdkapitals gilt als unter Profis weithin verstanden. Dass auch die Besten es gelegentlich vergessen, zeigt LTCM.
+- Experimentell wird eine Blase wahrscheinlicher, wenn Kauf auf Margin möglich ist.
+- In der Deflation stehen Firmen nach Keynes lang in realen Assets und kurz in nominalen Verbindlichkeiten. Die Position schließt sich nur durch Stilllegung der Produktion. Reichen die Cashflows nicht für die Zinsen, bleiben Preissenkung, Notverkauf oder Konkurs, und alle drei sind deflationär.
 
 ## Beispiele
 
@@ -129,6 +147,10 @@ aktualisiert: 2026-11-01
 - Im Monte-Carlo-Beispiel liegt das optimale f bei 19, nahe dem Kelly-Wert 18,4; ab 1 geteilt durch 0,0331 gleich 30,2 droht wegen der schlechtesten Rendite von minus 0,0331 der Ruin, und bei f gleich 31 ist die Wachstumsrate minus 1.
 - Für einen Drawdown von etwa 0,5 musste der Simulationshebel von 19,2 um den Faktor 7 auf etwa 2,7 sinken.
 - CPPI hebelt nur das Subkonto mit dem Anteil D mit dem Kelly-Hebel und lässt 1 minus D in Cash.
+- Abbildung 38.5 zeigt die gesamten Verbindlichkeiten relativ zum Unternehmens-BIP, die in den späten 1990ern hochschnellen.
+- Abbildung 38.2 zeigt den Umfang der Margin-Käufe als Prozentsatz des verfügbaren Haushaltseinkommens von 1980 bis 2002.
+- Die US-Blase der 1920er wurde unter anderem durch das Wachstum der Margin-Konten und der Broker-Loans getragen.
+- Abbildung 39.7 zeigt die Debt/Equity-Ratio der japanischen Unternehmen, Abbildung 39.8 die US-Unternehmensschulden im Verhältnis zum BIP, beide im Kontext der Schuldaufnahme unter dem Glauben an schnelleres Wachstum.
 
 ## Unterschiedliche Quellenpositionen
 

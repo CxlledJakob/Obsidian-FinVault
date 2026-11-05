@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Limits to Arbitrage
@@ -48,6 +48,33 @@ aktualisiert: 2026-10-30
 - Diese Schranken erklären, warum Preise auf neue Information manchmal unterreagieren und manchmal überreagieren. Zusammen mit Noise Tradern, die auf nicht informative Signale handeln, können Preise längere Zeit systematisch von rationalen Niveaus abweichen.
 - Die Arbitragegrenzen sagen Ineffizienzen voraus, aber allein nicht, unter welchen Umständen eher eine Unterreaktion als eine Überreaktion entsteht. Dafür werden die Grenzen der menschlichen Rationalität gebraucht.
 - Über die Grenzen der Arbitrage ist mehr bekannt als über die Irrationalität der Anleger, weil von Arbitrageuren Rationalität erwartet wird und die ökonomische Theorie rationales Verhalten fester im Griff hat.
+- Begrenzte Arbitrage ist nach Montier eines der Schlüsselelemente der Behavioral Finance, mit Verweis auf Shleifer (2000), und Keynes wie Graham waren sich dieser Fragen bewusst.
+- Keynes wird der Satz zugeschrieben, der Markt könne länger irrational bleiben, als man selbst solvent bleiben könne.
+- Graham: Die Anlagetheorie sollte anerkennen, dass sich die Vorzüge eines Papiers im Marktpreis nicht durch irgendeine automatische Reaktion zeigen, sondern durch die Köpfe und Entscheidungen von Käufern und Verkäufern.
+- Keynes: Ein Anleger, der die kurzfristigen Schwankungen ignorieren will, braucht größere Mittel zur Sicherheit und darf, wenn überhaupt, nicht in so großem Maßstab mit geliehenem Geld arbeiten.
+- Keynes räumt ein, dass es ernsthafte Personen gibt, die ungestört vom herrschenden Zeitvertreib weiter nach den besten echten Langfristerwartungen kaufen, und dass es einen gewaltigen Unterschied macht, ob sie das Spiel beeinflussen.
+- Er fügt hinzu, dass mehrere Faktoren das Vorherrschen solcher Personen in modernen Anlagemärkten gefährden.
+- Die Vorstellung, alle verkauften rechtzeitig an den anderen, ist für die Gemeinschaft nicht praktikabel; der Versuch kann Preise erheblich von einer vernünftigen Schätzung des inneren Werts ablenken und wird ein ernstes Hindernis für konstruktive Anlage.
+- Graham: Unterbewertungen aus Vernachlässigung oder Vorurteil können unangenehm lange anhalten, und dasselbe gilt für überhöhte Preise aus Übereifer oder künstlichen Anreizen.
+- Keynes teilt die Kritik von Fama (1998) nicht, dass sich die Verzerrungen gegenseitig aufheben; die Annahme gleicher Wahrscheinlichkeiten aus Unwissenheit führe zu Absurditäten.
+- Brunnermeier und Nagel (2003): Viele Hedgefonds ritten die Blase, statt als stabilisierende Arbitrageure zu wirken, und bauten Tech-Bestände vor dem Preiskollaps ab.
+- Abreu und Brunnermeier (2002, 2003): Rationale Arbitrageure beobachten die Blase, wissen aber nicht, ob andere dasselbe sehen; das ist ein Synchronisationsproblem, ein Einzelner kann die Blase nicht platzen lassen, und den Angriff zu koordinieren ist schwierig.
+- Kleine Nachrichten können überproportionale Preiswirkung haben, wenn sie als Synchronisationsereignis wirken; auch die Preise selbst können das sein.
+- Wegen asymmetrischer Haltekosten ist Shorten teurer als Long, deshalb hält Überbewertung länger an als Unterbewertung.
+- Scheitert ein Angriff, wird die Blase vorübergehend gestärkt.
+- Ist die Streuung der Meinungen oder Informationen sehr hoch, ist ein endogener Bruch über die Preise sehr unwahrscheinlich; ist die Streuung eng, wird ein endogener Auslöser immer wahrscheinlicher.
+- Rationale Angreifer müssen die behavioralen Get-even-itis-Anleger überwiegen; Privatanleger schoben rund 20 Mrd. Dollar im Monat in Aktienfonds.
+- Tirole (1982, 1985): Ein Asset mit endlicher Laufzeit kann keine rationale Blase tragen, weil vom bekannten Endwert rückwärts induziert wird; in der letzten Periode zahlt niemand mehr als den Endwert, deshalb sollten Anleihen keine rationalen Blasen haben.
+- Nahezu rationale Blasen umgehen diese Grenze, wenn Anleger überoptimistisch oder überkonfident glauben, vor den anderen auszusteigen, oder wenn ihr Horizont kürzer ist als der erwartete Platzzeitpunkt.
+- Das einzige Nash-Gleichgewicht des Beauty Contest ist 0, technisch der einzige Fixpunkt. Es wird nur erreicht, wenn alle rational sind und das voneinander wissen. Der beobachtete Durchschnitt von 26 liegt weit davon entfernt.
+- Fehlende Rückwärtsinduktion lässt Blasen bestehen, obwohl alle wissen, dass sie platzen müssen. Selbst wer den Crash vorhersieht, rechnet nicht bis heute zurück, sondern erwartet, dass andere ein paar Schritte davor verkaufen, und plant selbst den Verkauf gerade vor dem Massenausstieg.
+- Ob ernsthafte Anleger mit echter langfristiger Erwartung das Spiel der Kurzfristhändler in ihrem Einfluss überwiegen, macht für einen Anlagemarkt einen gewaltigen Unterschied. Mehrere Faktoren gefährden diese Vorherrschaft in modernen Märkten.
+- Keynes antwortet dem Einwand großer langfristiger Gewinne des unbeeindruckten Könners zuerst damit, dass es solche Leute gebe und ihr Überwiegen viel ausmache, und dann damit, dass ihre Vorherrschaft heute gefährdet sei, weil Investment auf echter langfristiger Erwartung kaum noch praktikabel ist.
+- Im Zwei-Personen-Spiel mit dem Faktor zwei Drittel ist 0 gegen jede Zahl des Gegners die beste Wahl. Wer 15 wählt und der andere 0, liegt zwei Drittel des Durchschnitts bei 5, und die 0 gewinnt. Das gilt für alle Zahlen. Dennoch wählten in der ersten Runde nur 12 Prozent erfahrener Teilnehmer die 0.
+- Ein spürbarer Teil der Spieler wählt 0 oder 1 und ist durch die eigene Rationalität oder durch den Curse of Knowledge verloren. Einer schrieb, seine Schätzung sei 0, aber wenn er recht habe, solle niemand gewinnen, denn rational zu sein zahle sich nicht aus.
+- Das Standardmodell der Spieltheorie sagt das Nash-Gleichgewicht 0 voraus. Camerers Cognitive Hierarchy mit durchschnittlich zwei Denkstufen sagte vor dem Ergebnis einen Mittelwert von 29,8 und zwei Drittel von 20 voraus, nah an den tatsächlichen 26 und 17,4.
+- Ein Mandant gewichtete 25 Prozent Naive bei 33, 50 Prozent Anspruchsvollere bei 20 und 25 Prozent am logischen Extrem bei 0 und kam auf einen gewichteten Durchschnitt von 19,4, ohne das Cognitive-Hierarchy-Modell zu kennen.
+- Grosskopf und Nagel schließen, dass sehr wenige Spieler unabhängig rational sind. Informationsrückmeldung kann die Leistung verbessern, aber die Spieler tasten sich durch Nachahmung und Anpassung zum Gleichgewicht, statt es aus eigener Kraft zu setzen.
 
 ## Funktionsweise
 
@@ -63,6 +90,14 @@ aktualisiert: 2026-10-30
 
 ## Risiken und Grenzen
 
+- Die Spreads zwischen höchstem und niedrigstem Dezil zeigen für die geprüften Value- und Qualitätskriterien theoretisch hohes Alpha, doch es wurden nur Jahresrenditen gerechnet. Das Monatsprofil kann aus Hedgefonds-Sicht weniger attraktiv sein.
+- Keines der Kriterien ist über alle Regionen klar besser als die übrigen. Die meisten sprechen trotzdem dafür, dass Value plus Qualität für Long/Short eine tragfähige Möglichkeit ist.
+- Längere Underperformance-Phasen und der Wunsch nach Gewinnen ohne Schmerz begrenzen, wer eine Value-Strategie tatsächlich durchhält. Schon ein Jahr Underperformance kann Anleger vertreiben, und manche Manager werden täglich gemessen.
+- Die übermäßige Preisvolatilität, die die Fehlbewertung erzeugt, macht es zugleich schmerzhaft, sie auszunutzen. Zeitarbitrage ist deshalb einfach und schwierig zugleich.
+- Die Ausnutzung verlangt, Endanleger und internes Management umzuerziehen. Solange kurzfristige Performance als Schleier nicht erkannt wird, bleibt der Zwang, kurzfristige Ziele zu treffen.
+- Selbst die langfristig besten Fonds haben tiefe Zwischenverluste. Das oberste Dezil liegt im schlechtesten Jahr im Schnitt 19,9 % hinter dem S&P 500, in einer Spanne von 6,5 % bis 37,6 %, und in den schlechtesten drei Jahren im Schnitt knapp 10 %, in einer Spanne von 1,2 % bis 20,4 %. Auf Jahressicht lagen 73 % einmal im untersten Dezil.
+- Hedgefonds verkürzen die Horizonte am Rand und können Long-only-Manager in denselben Kurzfristwettbewerb ziehen. Die Haltedauern sanken allerdings schon, bevor Hedgefonds groß wurden.
+- Ohne Skalierung an der normalen Varianz misst eine Performance innerhalb des Tages nur Rauschen, und schon wenige Tage Underperformance können interne Manager zu Fall bringen.
 
 ## Beispiele
 

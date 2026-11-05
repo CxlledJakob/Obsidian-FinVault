@@ -145,6 +145,18 @@ aktualisiert: 2026-11-05
 - Der Beitrag der nichtlinearen Modelle liegt damit hauptsächlich in Kontraktionsphasen.
 - Für die monatlichen GE-Renditen von Januar 1926 bis Dezember 2008 sollen die letzten drei Jahre der Bewertung von Ein-Schritt-Prognosen dienen, einmal mit einem 3–2–1-Netz auf r_{t−1}, r_{t−2} und r_{t−3} und einmal mit einem 6–5–1-Netz, das zusätzlich die Vorzeichen dieser Lags für die Richtung verwendet.
 - Die Richtungsvariable ist 1, wenn die Rendite positiv ist, und sonst 0; bewertet wird jeweils der mittlere quadratische Prognosefehler.
+- Leli und Filskov (1981) identifizierten mit einer einfachen Regel aus Standardtests der intellektuellen Funktion 83 Prozent neuer, also Out-of-Sample-Fälle fortschreitender Hirnfunktionsstörung.
+- Unerfahrene Fachleute erreichten mit denselben Daten 63 Prozent und erfahrene 58 Prozent; mit der Modellausgabe stiegen die Werte auf 68 Prozent beziehungsweise 75 Prozent und blieben unter der Trefferquote des Modells.
+- Die Verbesserung hing davon ab, in welchem Ausmaß das Modell benutzt wurde.
+- Die Preisdaten zu den Bordeaux-Jahrgängen stammen aus einer anderen Stichprobe als die ursprüngliche Schätzung der Gleichung von Ashenfelter et al. (1995) und sind damit ein Out-of-Sample-Test.
+- Grove et al. (2000) betrachteten 136 Studien einfacher Quant-Modelle gegen menschliches Urteil, von krimineller Rückfälligkeit über Berufswahl und Herzinfarktdiagnose bis zur akademischen Leistung.
+- Davon sprachen 64 klar für das Modell, 64 zeigten ungefähr dasselbe Ergebnis, und nur acht sprachen für das menschliche Urteil.
+- Allen acht Studien zugunsten des Menschen war gemeinsam, dass die Menschen mehr Information hatten als die Quant-Modelle; hätte das Modell dieselbe Information gehabt, hätte es sehr wahrscheinlich besser abgeschnitten.
+- Goldbergs einfache statistische Formel auf zehn MMPI-Scores war außer Stichprobe rund 70 Prozent genau und schlug selbst die besten klinischen Psychologen. Selbst als die Vorhersagen der Regel vorlagen, blieben die Psychologen hinter dem Modell zurück.
+- Die Regel von Leli und Filskov (1981) erkannte 83 Prozent der neuen, also außer Stichprobe liegenden Fälle von intellektuellem Defizit nach Hirnschädigung. Unerfahrene Kliniker lagen bei 63 Prozent, erfahrene bei 58 Prozent. Mit der Modellausgabe stiegen sie auf 68 und 75 Prozent und blieben beide deutlich unter dem Modell.
+- Grove et al. fanden in über 130 Arbeiten nur acht Studien, in denen menschliches Urteil die quantitativen Modelle schlug. In allen acht hatten die Menschen Information, die den Modellen fehlte. Bei demselben Informationsstand waren die Modelle deutlich besser.
+- Über das ganze Spektrum der Arbeiten lag die mittlere Treffergenauigkeit der Menschen bei 66,5 Prozent und die mittlere Hit Ratio der quantitativen Modelle bei 73,2 Prozent.
+- Selbst wenn die Menschen die Modellergebnisse als frei nutzbare Eingabe bekamen, unterperformten sie die Modelle. Das Modell ist eine Decke, von der die eigene Bearbeitung Leistung abzieht, und kein Boden, auf dem man aufbaut.
 
 ## Funktionsweise
 

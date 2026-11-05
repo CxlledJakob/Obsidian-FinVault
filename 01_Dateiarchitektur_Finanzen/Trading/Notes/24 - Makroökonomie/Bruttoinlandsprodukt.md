@@ -31,6 +31,32 @@ aktualisiert: 2026-11-05
 - Dieselbe Reihe untersuchen Tiao und Tsay (1994) sowie Potter (1995) mit TAR-Modellen, Hamilton (1989) und McCulloch und Tsay (1994) mit Markov-Switching.
 - Zustand 1, Posterior-Mittel und Standardfehler: Konstante 0,909 (0,202), AR-Koeffizienten 0,265 (0,113), 0,029 (0,126), −0,126 (0,103), −0,110 (0,109), Innovationsstandardabweichung 0,816 (0,125), Übergangswahrscheinlichkeit 0,118 (0,053).
 - Zustand 2: Konstante −0,420 (0,324), AR-Koeffizienten 0,216 (0,347), 0,628 (0,377), −0,073 (0,364), −0,097 (0,404), Innovationsstandardabweichung 1,017 (0,293), Übergangswahrscheinlichkeit 0,286 (0,064).
+- Anleger und Analysten nehmen regelmäßig an, das Wachstum von Gewinn je Aktie und Dividende je Aktie könne das BIP-Wachstum übertreffen; die Empirie weist das als Fehlschluss aus.
+- Als Gründe werden Rückkäufe, Auslandsgeschäft und Sektorunterschiede zwischen Index und Gesamtwirtschaft genannt; empirisch sind diese Faktoren irrelevant.
+- Das Gewinnwachstum je Aktie blieb dauerhaft hinter den NIPA-Gewinnen und dem BIP zurück, und die S&P-500-Gewinne wuchsen deutlich langsamer als NIPA-Gewinne und die Gesamtwirtschaft.
+- Nominal liegen Gewinn- und Dividendenwachstum je Aktie ohne Ausnahme unter dem BIP-Wachstum, im Schnitt um 1 bis 2 Prozentpunkte pro Jahr; real im Allgemeinen um 1 bis 3 Prozentpunkte.
+- USA, CAGR Gewinn, Dividende und BIP: nominal 1970–2001 gleich 6,0, 5,1 und 7,5 Prozent, 1970–1998 gleich 7,0, 6,0 und 8,1; real 1970–2001 gleich 1,0, 0,2 und 3,1, 1970–1998 gleich 1,5, 0,6 und 3,2.
+- Vereinigtes Königreich: nominal 1970–2001 gleich 8,5, 8,0 und 10,2 Prozent, 1970–1998 gleich 12,0, 10,9 und 13,4; real 1970–2001 gleich 0,9, 0,4 und 2,5, 1970–1998 gleich 1,7, 0,7 und 3,0.
+- Deutschland: nominal 1970–2001 gleich 5,8, 6,0 und 6,1 Prozent, 1970–1998 gleich 5,3, 6,0 und 8,0; real 1970–2001 gleich 2,3, 2,5 und 2,7, 1970–1998 gleich 0,9, 1,6 und 3,5.
+- Frankreich: nominal 1972–2001 gleich 8,0, 7,9 und 8,5 Prozent, 1972–1998 gleich 6,9, 7,4 und 9,0; real 1972–2001 gleich 2,0, 1,9 und 2,5, 1972–1998 gleich 0,5, 0,9 und 2,5.
+- 2001 war ein schlechtes Gewinnjahr, die USA erlitten die schlimmste Gewinnrezession seit den 1930ern; ein Stichprobenende 1998 ändert die Schlussfolgerung kaum.
+- Die Konsumbereiche stellen etwa 23 Prozent des S&P 500, 36 Prozent der NIPA-Gewinne und 28 Prozent des Volkseinkommens; Finanzwerte 20,6 Prozent des Index, 20 Prozent der NIPA-Gewinne und 18 Prozent des Volkseinkommens.
+- Der S&P 500 ist in Informationstechnologie um den Faktor 5,6 gegenüber der Gesamtwirtschaft übergewichtet, 13,9 Prozent im Index gegen 1,0 Prozent der NIPA-Gewinne und 2,5 Prozent der Wirtschaft; für Gesundheit, 14,6 Prozent des Index, fehlen die Vergleichsanteile.
+- Der S&P 500 erzielt rund 35 Prozent der Gewinne im Ausland, nach Herausnahme von sieben internationalen Titeln eher 25 bis 30 Prozent; bei den NIPA-Gewinnen sind es etwa 20 Prozent.
+- Theoretisch ist der Gewinn je Aktie nicht durch das BIP beschränkt; die Empirie kommt zu einem anderen Schluss.
+- Im Japan nach der Blase erklären Konsensprognosen des BIP über 20 Prozent der Variation der Einjahres-Überrendite von Aktien gegenüber Anleihen.
+- Prognose-BIP, Japan 1991–2003, Horizont, t-Statistik und adjustiertes R²: Aktien 1 Monat −1,8 und 0,01, 3 Monate −1,9 und 0,04, 12 Monate −2,1 und 0,14; Überrendite 1 Monat −2,0 und 0,02, 3 Monate −2,1 und 0,05, 12 Monate −2,7 und 0,21.
+- Für die USA 1984–2003 hat prognostiziertes BIP-Wachstum keine statistisch signifikante Vorhersagekraft; das höchste adjustierte R² ist 0,03 bei Aktien über 12 Monate, t = −1,3, die übrigen Horizonte für Aktien und Überrendite liegen bei 0,00.
+- Die überwiegend negativen Koeffizienten dienen als Proxy für Mean Reversion: Aktien gegenüber Anleihen kaufen, wenn das Wachstum einbricht. Das passt dazu, dass in Japan erst eine Krise die Politikreaktion auslöst.
+- Ein Modell mit nur dem Prognose-BIP verfehlt das volle Ausmaß der japanischen Bewegungen von Aktien gegen Anleihen, trifft die Einjahres-Überrendite aber teilweise.
+- Bei der US-Sektorrotation 1984–2003 hat prognostiziertes BIP über 12 Monate t = −1,97 und adjustiertes R² 0,05, über 1 Monat t = −1,79 und 0,02, über 3 Monate t = 0,82 und 0,00.
+- Langfristig sollte die marginale Nachfrage nach einem Rohstoff gegen das globale Wirtschaftswachstum tendieren; Preissteigerungen im Takt der Wirtschaftsaktivität dienen als langfristiger Maßstab.
+- Für die Vorausschau des Spotpreises wird großzügig angenommen, er wachse mit einem realen Trend-BIP von 3,5 Prozent.
+- Die aktuelle Vorliebe für Rohstoffe ersetzt implizit globales Wachstum durch chinesisches Wachstum.
+- Von 1988 bis 2004 lieferten Schwellenländer mit dem höchsten BIP-Wachstum die niedrigsten Dollar-Aktienrenditen und Länder mit dem niedrigsten BIP-Wachstum die höchsten, nach MSCI und DrKW. Anleger zahlen für die Hoffnung auf Wachstum zu viel.
+- In die am schnellsten wachsenden Schwellenaktiemärkte zu investieren war in der Vergangenheit eine sehr schlechte Strategie.
+- Zwischen den BIP-Wachstumsraten von 1990 bis 1995 und den KGVs Ende 1995 besteht kein sehr starker, aber ein vorhandener Zusammenhang. Er legt nahe, dass Anleger für Wachstum zu viel zahlen.
+- Auf lange Sicht sind Gewinne und Dividenden deutlich langsamer gewachsen als das nominale BIP. Im Schnitt wuchsen die Gewinne 1 bis 2 Prozentpunkte unter der nominalen BIP-Rate. Von Jahr zu Jahr besteht kein enger Zusammenhang. Montier verweist auf Global Equity Strategy vom 16. August 2002.
 
 ## Funktionsweise
 

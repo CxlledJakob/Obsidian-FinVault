@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-11-01
+aktualisiert: 2026-11-05
 ---
 
 # Rebalancing
@@ -71,6 +71,7 @@ aktualisiert: 2026-11-01
 - Ein vollständigerer Backtest der SPY-Arbitrage kann die Hedge Ratios dynamisch aktualisieren und dabei neue Bestandteilaktien wählen.
 - Ein RMZ-Portfolio mit konstantem Hebel 3 muss nach einem starken Fall Aktien verkaufen und nach einem Anstieg kaufen, besonders zum Marktschluss.
 - Die Teststrategie kauft DRN bei mehr als 2 Prozent Rendite vom Vortagesschluss bis 15 Minuten vor Schluss und verkauft bei weniger als minus 2 Prozent; der Exit liegt am Schluss.
+- Die Kurs-Gewinn-Dezile des MSCI-World-Tests von 1980 bis 2005 werden jährlich zu Jahresbeginn neu gebildet und ein Jahr gehalten. Die Kosten dieser Rechnung werden ignoriert und wegen des jährlichen Rebalancings als niedrig eingeschätzt.
 
 ## Risiken und Grenzen
 
