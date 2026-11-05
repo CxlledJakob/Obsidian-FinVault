@@ -1,0 +1,207 @@
+{
+  "schema": "status-v1",
+  "ticker": "ASML",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/Technisch/ASML",
+  "stand": {
+    "datum": "2026-11-02",
+    "update": "2026-11-02 - ASML - Analysten-Update"
+  },
+  "next_id": 4,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 1460,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.38 Fib (Bullen wollen Halten zur Vollendung Welle IV)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 1566,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Kurs steht direkt an der Linie)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "kursziel",
+      "wert": 2535,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave V Ziel: 2.618 Fib (Welle V nach Überwindung der Marken)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "ASML notiert laut Analyst bei 1.566 USD in einem Rücksetzer in Welle IV, rund 22 % unter dem Hoch von 2.000 USD Ende Juni. Der Kurs steht an der 50 WMA, knapp darunter liegt das 0.38 Fib bei 1.460 USD. Der Analyst sieht den Rücksetzer als gesunde Korrektur vor einer Welle V.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet den Abschluss von Welle IV am 0.38 Fib bei 1.460 USD. Danach erwartet er Welle V in Richtung des 2.618 Fib bei 2.535 USD.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Halten des 0.38 Fib bei 1.460 USD zur Vollendung von Welle IV (Bullen-Szenario)\n- Überwindung der Marken bei 1.566 USD (50 WMA) und Anstieg in Richtung 2.535 USD (Welle V)",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Welle IV läuft laut Analyst im wöchentlichen Chart. Welle V wird nach Abschluss von Welle IV erwartet.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der wöchentliche Chart befindet sich im Rücksetzer (Welle IV) nach dem Hoch von 2.000 USD Ende Juni. Das Update nennt keine explizite Trendbestätigung darüber hinaus.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 1.566 USD – 50 WMA: Kurs steht direkt an der Linie, vom Analysten als Unterstützung genannt\n- 960 USD – 200 WMA: weit unterhalb des aktuellen Kurses",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 1.460 USD – 0.38 Fib: Bullen wollen Halten zur Vollendung von Welle IV\n- 2.535 USD – 2.618 Fib: Kursziel für Welle V",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Halten des 0.38 Fib bei 1.460 USD zur Vollendung von Welle IV\n- Anschließender Anstieg zur Welle V in Richtung 2.535 USD",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Hohe Inflation und mögliche Fed-Zinserhöhung\n- KI-Finanzierungssorgen und steigende Kosten für Tech-Schulden\n- US-Exportbeschränkungen für Chipwerkzeuge nach China\n- Quartalszahlen leicht unter Markterwartung (Q3-Umsatz 11,66 Mrd. €, +55 %)\n- Keine Invalidierungsmarke für das Wave-IV-Szenario genannt\n- Kein Zeithorizont genannt\n- Verkaufsdruck in der Halbleiterbranche (u. a. Intel ca. -29 %, Halbleiterindex über -7 % an einem Tag)",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - ASML - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-02",
+      "update": "2026-11-02 - ASML - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-04T20:14:03.587Z",
+      "kosten_cent": 0.1246
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Fibonacci-Projektion",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    },
+    {
+      "begriff": "Korrekturbewegung",
+      "ziel": "Trading/Notes/01 - Marktstruktur & Price Action/Korrekturbewegung"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-02",
+    "update": "2026-11-02 - ASML - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-04T20:14:03.587Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.1",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1246
+  }
+}

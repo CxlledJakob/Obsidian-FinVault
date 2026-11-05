@@ -1,0 +1,314 @@
+{
+  "schema": "status-v1",
+  "ticker": "UBER",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/Technisch/UBER",
+  "stand": {
+    "datum": "2026-11-02",
+    "update": "2026-11-02 - UBER - Analysten-Update"
+  },
+  "next_id": 9,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 67.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (aktueller Kurs) (Laut Analyst Kurs auf 200 WMA)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 61.22,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.5 Fib (nächste Marke bei Verlust des 200 WMA)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "unterstuetzung",
+      "wert": 51.55,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (nächste Marke nach 0.5 Fib)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "widerstand",
+      "wert": 70.9,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.38 Fib (Bulls müssen zurück als Support)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "invalidation",
+      "wert": 64,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave-1-Hoch (Wave 4 darf Wave 1 nicht verletzen)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M6",
+      "art": "kursziel",
+      "wert": 70.9,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Bull Case (Rückeroberung 0.38 Fib als Support)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M7",
+      "art": "kursziel",
+      "wert": 100.79,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave-5-Ziel 1.618 Fib (Wave 5 Projektion)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    },
+    {
+      "id": "M8",
+      "art": "kursziel",
+      "wert": 151.04,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave-5-Ziel 2.618 Fib (Wave 5 Projektion)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht UBER bei 67,50 USD in einem Wave-4-Rücksetzer auf das 200 WMA, rund 28% unter dem Hoch. Die Wave-1-Hochmarke bei etwa 64 USD gilt als Invalidierung, der 0.38 Fib bei 70,90 USD als Bull-Case-Schwelle. Die Q3-Zahlen am 4. November vor Börseneröffnung werden als wesentlicher Auslöser für beide Richtungen genannt.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet einen Wave-4-Rücksetzer auf das 200 WMA mit anschließender Wave 5 nach Rückeroberung von 70,90 USD als Support.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Bei Verlust des 200 WMA erwartet der Analyst einen Rückgang zum 0.5 Fib bei 61,22 USD und zum 0.618 Fib bei 51,55 USD.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Rückeroberung von 70,90 USD (0.38 Fib) als Support (Bull Case)\n- Verlust des 200 WMA (aktuell 67,50 USD) mit Rückgang zum 0.5 Fib bei 61,22 USD\n- Wave-1-Hoch bei etwa 64 USD als Invalidierungsmarke\n- Ergebnis der Q3-Zahlen am 4. November vor Börseneröffnung",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "UBER befindet sich laut Analyst in Wave 4 innerhalb einer Elliott-Struktur, aktuell als Pullback auf das 200 WMA. Das Wave-1-Hoch bei etwa 64 USD bildet die Grenze, Wave 4 darf es nicht verletzen. Wave-5-Ziele sind 100,79 USD und 151,04 USD.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Kurs liegt laut Analyst in einem Rücksetzer, rund 28% unter dem Hoch, und testet das 200 WMA. Frühere Notierung war etwa 100 USD.",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA bei 67,50 USD (aktueller Kurs): zentrale Unterstützung, auf der sich laut Analyst der Kurs befindet",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.38 Fib bei 70,90 USD: Widerstand, Bulls müssen zurück als Support\n- 0.5 Fib bei 61,22 USD: nächste Unterstützung bei Verlust des 200 WMA\n- 0.618 Fib bei 51,55 USD: nächste Unterstützung nach dem 0.5 Fib\n- 1.618 Fib bei 100,79 USD: Wave-5-Ziel\n- 2.618 Fib bei 151,04 USD: Wave-5-Ziel",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Ergebnis der Q3-Zahlen am 4. November vor Börseneröffnung\n- Rückeroberung von 70,90 USD als Support\n- Nicht genannt: Zeithorizont\n- Nicht genannt: Bestätigungskriterium für Wave 4 neben dem Wave-1-Hoch",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Robotaxi-Konkurrenz durch Waymo (GOOG) und Tesla (TSLA); laut Beitrag hat Waymo den Phoenix-Deal im Juni beendet\n- Geplantes Investitionsprogramm über 10 Mrd. USD belastet laut Analyst das Asset-light-Modell\n- Schwächeres Fahrtenwachstum in Brasilien; August-Bericht mit Gewinnprognose unter Erwartungen\n- Quartalszahlen können in beide Richtungen wirken\n- Übernahmefantasie DASH/CART als Belastung\n- Nicht genannt: Zeithorizont",
+      "stand": {
+        "datum": "2026-11-02",
+        "update": "2026-11-02 - UBER - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-02",
+      "update": "2026-11-02 - UBER - Analysten-Update",
+      "nachtrag": false,
+      "neu": 8,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 10,
+      "verarbeitet_am": "2026-11-04T20:14:09.448Z",
+      "kosten_cent": 0.1436
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    },
+    {
+      "begriff": "Welle 4",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 4"
+    },
+    {
+      "begriff": "Welle 5",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 5"
+    },
+    {
+      "begriff": "Fibonacci-Projektion",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "Impulsregeln",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Impulsregeln"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-02",
+    "update": "2026-11-02 - UBER - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6",
+      "M7",
+      "M8"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-04T20:14:09.448Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.1",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1436
+  }
+}
