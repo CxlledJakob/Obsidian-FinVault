@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Random Walk
@@ -21,6 +21,9 @@ aktualisiert: 2026-10-30
 - Im Chow-Typ-Dickey-Fuller-Test ist die Nullhypothese, dass die Reihe einem Random Walk folgt, also Rho gleich 1 ist.
 - Im Roll-Modell folgt der Mid-Price einem Random Walk ohne Drift, mt = mt−1 + ut.
 - Ein Random Walk ist definitionsgemäß frei von echten Trends, Mustern oder ausnutzbarer Ordnung jeder Art.
+- Eine Fassung der Random-Walk-Hypothese besagt, dass die bedingte Verteilung F(rit | ri,t−1, …, ri1) gleich der Randverteilung F(rit) ist. Die Renditen sind dann zeitlich unabhängig und deshalb nicht prognostizierbar.
+- Eine Reihe {pt} ist ein Random Walk, wenn pt gleich pt−1 plus at gilt, mit reellem Startwert p0 und weißem Rauschen {at}.
+- Der Random Walk mit Drift lautet pt gleich µ plus pt−1 plus at, wobei µ der Erwartungswert von pt minus pt−1 ist und {at} weißes Rauschen mit Mittel null ist; µ heißt Drift und ist der Zeittrend des Logpreises.
 
 ## Kernaussagen
 
@@ -138,6 +141,59 @@ aktualisiert: 2026-10-30
 - Die starke Form ist nicht testbar, weil nicht zuverlässig feststellbar ist, wer was wusste und wann er es wusste. Die Aussagen derer, die auf Insiderinformation handeln, sind notorisch unzuverlässig.
 - Die schwache Form spricht typischerweise nur über vergangene Preise und vergangene Preisänderungen. Aronson meint, ihre Vertreter würden zusätzlich behaupten, dass auch jede andere von der technischen Analyse genutzte Datenreihe für die Prognose künftiger Renditen nutzlos sei.
 - Ein Verwalter ohne Können hat eine Wahrscheinlichkeit von 0,5, den Markt in einer gegebenen Zeitperiode, zum Beispiel einem Jahr, zu schlagen.
+- Die meisten Finanzpreisreihen sind geometrische Random Walks. Um einen Mittelwert von null verteilt sind gewöhnlich die Renditen, nicht die Preise.
+- Wird die ADF-Null λ gleich 0 nicht verworfen, hängt der nächste Preisschritt nicht vom aktuellen Niveau ab und die Reihe gilt als Random Walk.
+- Für USD.CAD bleibt die Random-Walk-Null bestehen: vratiotest ergibt h gleich 0 und pValue 0,367281. Die ADF-Statistik minus 1,84 liegt über dem 90-Prozent-Wert minus 2,594, die AR(1)-Schätzung ist 0,994120. λ ist negativ, ein Trend ist damit nicht angezeigt.
+- Ist im Mehrreihenmodell Λ gleich 0, hängt der nächste Schritt des Preisvektors nicht vom aktuellen Niveau ab und es gibt keine Mean Reversion.
+- Aktienkurse folgen geometrischen Random Walks, wie Malkiel (2008) betont, aber nur wenn die Reihe streng in regelmäßigen Abständen geprüft wird, etwa an den Tagesschlüssen.
+- Der geometrische Random Walk beschreibt einzelne Aktien auf Tagesbasis gut: einmal weggelaufen, kehren sie selten zum Ausgangspunkt zurück. Intraday- und saisonale Mean Reversion sind Sonderfälle.
+- Die Aufgabe ist, besondere Bedingungen oder Zeiträume zu finden, in denen Mean Reversion regelmäßig auftritt, und dabei Data-Snooping-Bias zu vermeiden.
+- Preisreihen, die auf Tagesbars keine Mean Reversion zeigen, können in bestimmten Perioden stark mean-reverten.
+- Für den Zwei-Jahres-Treasury-Future TU beträgt der Hurst-Exponent 0,44, und der Variance-Ratio-Test verwirft die Random-Walk-Hypothese nicht.
+- Die Korrelationstests zeigen trotzdem Momentum auf bestimmten Zeitrahmen; der Variance-Ratio-Test kann diese Zeitrahmen, in denen die Korrelationen überdurchschnittlich sind, nicht prüfen.
+- Dieselbe Reihe zeigt auf verschiedenen Zeitrahmen Momentum und Mean Reversion.
+- Hurst-Exponent und Variance-Ratio-Test sollen gemeinsam die Null eines Random Walk ausschließen, wenn langfristiges Trendverhalten ohne festes Zeitfenster geprüft wird.
+- Unterschiedliche Verteilungsannahmen führen in der Finanztheorie zu unterschiedlichen Theorien; die genannte Random-Walk-Fassung ist dafür das Beispiel des Buches.
+- Kapitel 2 behandelt unter den linearen Modellen auch Unit-Root-Nichtstationarität.
+- Ist pt der Logpreis einer Aktie, kann p0 der Logpreis beim Börsengang sein.
+- Ist at symmetrisch um null verteilt, hat pt bedingt auf pt−1 eine Chance von 50 zu 50, zu steigen oder zu fallen.
+- Als AR(1) gelesen hat der Random Walk den Koeffizienten 1 und erfüllt die Bedingung schwacher Stationarität nicht; er ist unit-root-nichtstationär und das bekannteste Beispiel einer solchen Reihe.
+- Der Random Walk ist ein verbreitetes statistisches Modell für logarithmierte Aktienkurse; unter ihm ist der Kurs nicht prognostizierbar und nicht mean-reverting.
+- Die l-Schritt-Prognose ist für jeden Horizont l größer als 0 der Wert am Prognoseursprung und hat keinen praktischen Wert.
+- Die Moving-Average-Darstellung ist pt gleich der Summe aller Schocks at plus at−1 plus at−2 und so weiter; jedes ψ-Gewicht ist 1, vergangene Schocks klingen nicht ab und wirken ökonomisch dauerhaft, und die Reihe behält alle vergangenen Schocks im Gedächtnis.
+- Die Varianz des l-Schritt-Prognosefehlers ist l mal σa zum Quadrat und divergiert mit dem Horizont; die Länge einer Intervallprognose geht gegen unendlich, und die unbedingte Varianz von pt ist unbeschränkt, sodass pt für hinreichend großes t theoretisch jeden reellen Wert annehmen kann.
+- Für den Logpreis einer einzelnen Aktie ist diese unbeschränkte Spannweite plausibel; negative Logpreise von Marktindizes sind sehr selten, sodass die Angemessenheit eines Random Walk für Indizes fraglich ist.
+- Mit Startwert p0 gilt pt gleich t mal µ plus p0 plus der Summe der Schocks bis t; die bedingte Standardabweichung Wurzel aus t mal σa wächst langsamer als der bedingte Erwartungswert.
+- Ein positiver Drift lässt den Logpreis gegen unendlich laufen, ein negativer gegen minus unendlich.
+- Die Stichprobenautokorrelationen einer Random-Walk-Reihe gehen mit wachsender Stichprobe gegen 1.
+- Der Benchmark für die IBM-Monatsprognosen 1998 und 1999 setzt das Stichprobenmittel als Ein-Schritt-Prognose und entspricht der Annahme, dass der monatliche Logpreis einem Random Walk mit Drift folgt.
+- Der mittlere quadratische Prognosefehler dieses Random-Walk-Benchmarks ist 91,85, der des AR(1) 91,70 und der des 3–2–1-Netzes 91,74.
+- Im direktionalen Simulationsvergleich mit 500 Läufen prognostiziert der Random Walk mit Drift eine Aufwärtsbewegung, wenn 1,19 + ε_t ≥ 0 ist; 1,19 ist die mittlere monatliche IBM-Logrendite von Januar 1926 bis Dezember 1997, und ε_t ist iid N(0, 1).
+- Dieser Random Walk hat im Mittel 10,53 Richtungsfehler, das 8–4–1-Netz 11,28; das Netz schlägt den Random Walk mit Drift nicht.
+- Die Kontingenztabelle des Netzes hat χ² = 0,137 und p = 0,71 und schlägt damit auch einen Random Walk mit gleichen Wahrscheinlichkeiten für Auf- und Abwärtsbewegungen nicht signifikant.
+- In der realistischeren Fassung des Roll-Modells folgt der fundamentale Preis einem Random Walk: ΔP*_t = ε_t ist iid mit Mittel null und Varianz σ² und unabhängig vom Auftragsindikator.
+- Dann ist Var(ΔP_t) = σ² + S²/2, die Autokovarianzen bleiben gegenüber dem Fall ohne fundamentalen Random Walk unverändert, und ρ1(ΔP_t) = (−S²/4) / (S²/2 + σ²) ≤ 0.
+- Der negative Lag-1-Effekt des Spreads bleibt erhalten, solange S = P_a − P_b > 0 ist, sein Betrag wird aber durch die Varianz des Random Walk verkleinert.
+- Nichtsynchroner Handel kann beobachtete Renditen seriell abhängig machen, obwohl die wahren stetigen Renditen iid sind, also der Logpreis einem Random Walk mit Drift μ folgt.
+- RiskMetrics modelliert den Logpreis als Random-Walk-IGARCH: pt minus pt minus 1 = at, wobei at = σt εt ein IGARCH(1,1) ohne Drift ist.
+- Für dieses Modell ist die k-Perioden-Logrendite bedingt normal mit Mittelwert null, und ihre bedingte Varianz wächst proportional zum Horizont k.
+- Für das Pairs-Trading-Modell wird angenommen, dass der Logpreis Unit-Root-nichtstationär ist und einem Random Walk pit = pi,t−1 + rit folgt, wobei die Renditen eine Folge unkorrelierter Innovationen bilden.
+- Im mittleren Regime des Schwellenmodells für Indexfuture und Kasse bestimmen normale Marktkräfte die Dynamik, die beiden Logpreise verhalten sich ungefähr wie ein Random Walk und sind frei von Arbitrageeffekten und von der Kointegrationsbeschränkung. Der Fehlerkorrekturkoeffizient dieses Regimes soll insignifikant sein.
+- Im lokalen Trendmodell ist der latente Zustand μt ein reiner Random Walk mit Startwert μ1: μt plus 1 gleich μt plus ηt, ηt normal mit Mittel null und Varianz σ²η.
+- Die Beobachtung ist dieser Random Walk plus Messrauschen, yt gleich μt plus et. Ohne Messfehler, σe gleich 0, fällt yt mit dem Random Walk zusammen und ist ein ARIMA(0,1,0).
+- Für die realisierte Volatilität ist μt die nicht direkt beobachtete Logvolatilität und entwickelt sich nach diesem Random-Walk-Modell. yt ist ihr Logarithmus, gebaut aus Hochfrequenzdaten und mit Mikrostrukturrauschen behaftet.
+- Im CAPM mit zeitvariablen Koeffizienten folgen Achsenabschnitt und Steigung Random Walks: αt plus 1 gleich αt plus ηt und βt plus 1 gleich βt plus εt, mit unabhängigen gaußschen Innovationen der Varianzen σ²η und σ²ε.
+- Die diffuse Initialisierung des lokalen Trendmodells behandelt das latente Random-Walk-Niveau bei unendlicher Startvarianz so, dass μ2|1 gleich der ersten Beobachtung y1 wird und die Varianz Σ2|1 gleich σ²e plus σ²η ist.
+- Ist die Varianz der Steigungsinnovation σς gleich 0, folgt das Trendniveau μt einem Random Walk mit Drift β1.
+- Sind σς und ση beide null, ist μt kein Random Walk, sondern ein linearer deterministischer Trend.
+- Die übliche Trendkomponente setzt μt plus 1 gleich μt plus βt plus ηt und lässt die Steigung selbst als Random Walk laufen, βt gleich βt minus 1 plus ςt.
+- Die lokale Trendkomponente im Komponentenmodell erfüllt µt+1 = µt + ηt mit ηt ∼ N(0, σ²η).
+- Aufgabe 11.2 schätzt das lokale Trendmodell der Gleichungen (11.1) und (11.2) für die Logarithmen der realisierten Alcoa-Volatilität und fragt nach den Schätzungen von σe und ση.
+- Die Rechtfertigung fast zufälliger Marktbewegungen hat eine Teilindustrie von Rauscherzeugern hervorgebracht, die erklären, warum die Preise gestern um 2 Prozent gestiegen oder gefallen sind.
+- Cutler et al. (1989) finden, dass über die Hälfte der 50 größten Bewegungen des US-Aktienmarkts zwischen 1947 und 1987 in keiner Beziehung zu Fundamentaldaten steht. Die von der Presse genannten Ursachen sind meist nicht besonders wichtig.
+- Bei Handzic (2001) ist die naive Prognose ein Random Walk: Die beste Schätzung der heutigen Produktionsquote ist der Absatz von gestern. Solche Modelle ignorieren den Kontext und schneiden gewöhnlich schlecht ab.
+- Ein RNE von 1 bedeutet Gleichstand mit diesem Random Walk. Ein Wert unter 1 ist eine Verbesserung gegenüber ihm.
+- Die Gruppe mit nur einem Informationshinweis verbesserte den Random Walk knapp. Die Gruppe mit allen drei Hinweisen unterbot den Random Walk und zugleich die informationsärmere Gruppe deutlich.
 
 ## Funktionsweise
 
@@ -170,6 +226,8 @@ aktualisiert: 2026-10-30
 - Die Repräsentativitätsheuristik erzeugt ein falsches Stereotyp davon, wie Zufallsdaten aussehen sollten, nämlich formlos, ungeordnet und ohne jeden Trend; weicht eine Stichprobe davon ab, wird sie automatisch für das Produkt eines nichtzufälligen Prozesses gehalten.
 - Man erwartet, die Wirkung ähnele der Ursache: Ist der erzeugende Prozess zufällig, sollten die Daten zufällig aussehen, und jede Abweichung von diesem Bild gilt als Zeichen eines nichtzufälligen Prozesses.
 - Malkiel hält den Markt für zufällig; der Text teilt diese extreme Position nicht, stimmt aber zu, dass Menschen Ordnung in zufälligen Daten falsch wahrnehmen, und deshalb ist die visuelle Inspektion von Preischarts nicht vertrauenswürdig.
+- In einer zufälligen Lichtfolge mit festen Anteilen von 70 und 30 Prozent suchen Menschen ein Muster, selbst wenn ihnen gesagt wird, die Folge sei zufällig. Frequency Matching trifft nur in 58 Prozent der Fälle, immer das häufigere Licht zu wählen in 70 Prozent.
+- Ratten und Tauben wählen die optimale Strategie und schlagen damit die meisten Menschen. Wolford et al. (2000) führen das darauf zurück, dass Menschen auch in einer als zufällig bezeichneten Folge ein Muster vermuten und es entschlüsseln wollen.
 
 ## Beispiele
 
@@ -186,6 +244,9 @@ aktualisiert: 2026-10-30
 - Ein Test, der echte von zufälligen Preisdaten unterscheidet, würde die Prognosekraft der objektiven Elliott-Wave-Signale nicht belegen. Nach Prechter wird ein getrennter Test dieser Behauptung ebenfalls durchgeführt.
 - Scheitern hieße, dass künstlich erzeugte Zufallscharts von echten Preischarts nicht unterscheidbar sind und dass Elliott-Wave-Signale keine Gewinne erzeugen, die Zufallssignalen überlegen sind.
 - Selbst wenn Elliott-Wave-Signale für sich genommen nutzlos sind, haben sie sich in einem multivariaten Modell durch Synergien mit anderen Indikatoren als wertvoll erwiesen.
+- Die kleinen, aber statistisch signifikanten positiven Mittel der Logrenditen des wert- und des gleichgewichteten CRSP-Index passen zu einem Random Walk mit positivem Drift für den Logpreis.
+- Die monatlichen Logrenditen von 3M von Februar 1946 bis Dezember 2008 folgen rt gleich 0,0103 plus at mit Residualstandardabweichung 0,0637, weil keine signifikante serielle Korrelation vorliegt; 0,0103 ist der Stichprobenmittelwert mit Standardfehler 0,0023.
+- Setzt man den Logpreis vom Januar 1946 auf null, ist der kumulierte Logpreis die Summe der Logrenditen und der mittelwertbereinigte kumulierte Logpreis die Summe der um 0,0103 bereinigten Schocks; die Gerade 0,0103 mal t plus 1946 ist die Steigung dieses Drift.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -219,6 +280,23 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 362–381 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-020-p362-p381|S. 362–381]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 476–495 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-026-p476-p495|S. 476–495]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 39–58 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-003-p039-p058|S. 39–58]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 96–115 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-006-p096-p115|S. 96–115]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 229–248 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-013-p229-p248|S. 229–248]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 248–267 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-014-p248-p267|S. 248–267]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 343–362 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-019-p343-p362|S. 343–362]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 571–590 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-031-p571-p590|S. 571–590]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 590–609 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-032-p590-p609|S. 590–609]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 609–628 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-033-p609-p628|S. 609–628]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 628–647 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-034-p628-p647|S. 628–647]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 58–77 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-004-p058-p077|S. 58–77]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 77–96 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-005-p077-p096|S. 77–96]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
 
 ## Verwandte Themen
 

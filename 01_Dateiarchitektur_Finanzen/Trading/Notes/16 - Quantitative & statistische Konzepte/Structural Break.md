@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Structural Break
@@ -40,6 +40,23 @@ aktualisiert: 2026-10-30
 - Eine weitergehende Fassung nimmt an, die Änderung sei eingetreten, weil zu viele Händler die Regel übernommen und das Muster durch ihr Handeln zerstört haben.
 - Beide Fassungen setzen eine Änderung der Marktdynamik voraus; die Erklärung über den Data-Mining-Bias passt ebenfalls dazu, dass die Leistung außer Stichprobe tendenziell schlechter ist, und kommt ohne diese Annahme aus.
 - Es wäre seltsam, fast teuflisch, wenn der Markt sein Verhalten immer genau dann änderte, wenn eine Regel aus dem Labor in den Handel wechselt, und zwar so oft, wie Regeln außer Stichprobe scheitern.
+- Um die Finanzkrise 2008 ändern VIX und seine Futures das Regime, was den Leistungssprung der VX-Kalenderspread-Strategie um Oktober 2008 erklären kann.
+- Das Streudiagramm ES gegen VX zeigt zwei Hauptregime, 2004 bis Mai 2008 und August 2008 bis 2012; kürzere Abschnitte können Übergänge sein und werden ignoriert.
+- Eine lineare Regression oder ein Johansen-Test auf der Mischung beider Regime wäre ein Fehler.
+- Der Crack Spread steigt dramatisch etwa vom 9. März 2007 bis zum 3. Juli 2008 und fällt danach scharf.
+- Das ETF-Paar GLD gegen GDX verlor 2008 die Kointegration; die ergänzte Hypothese war der hohe Rohölpreis, und mit dem Ölpreis als zusätzlicher Eingabe arbeitete das Modell wieder.
+- Abweichungen des Live-Handels vom Backtest werden oft als Strukturbruch der Marktstruktur durch Regulierung oder Makroökonomie erklärt und nicht als Backtest-Fallstrick.
+- Auch eine algorithmische Strategie verlangt danach die Beurteilung, ob das Modell nach dem Bruch noch gültig ist.
+- Tsay (1989) überführt das SETAR der Alternative in ein Problem des Modellwechsels, indem die Autoregression nach der Schwellengröße x_{t−d} geordnet wird und die Schwelle r1 als Änderungspunkt dient.
+- Unterhalb von r1 gelten die Koeffizienten des ersten Regimes, ab r1 die des zweiten; die geordnete Autoregression ändert die Abhängigkeit von den eigenen Verzögerungen nicht, sie stellt sie nur im Schwellenraum statt im Zeitraum dar.
+- Unter der Null eines linearen AR(p) gibt es in dieser geordneten Autoregression keinen Modellwechsel, und die standardisierten Vorhersageresiduen bleiben ohne Zusammenhang mit den Regressoren.
+- Der TAR-F-Test prüft genau diesen ausbleibenden Modellwechsel und braucht dafür weder den Wert der Schwelle noch die Zahl der Regime.
+- Hochfrequente Finanzdaten werden oft von äußeren Ereignissen beeinflusst, etwa einer Zinsänderung des Offenmarktausschusses der US-Notenbank oder einem Sprung des Ölpreises; ACD-Anwendungen stehen dann vor Interventionen von außen.
+- Die Wirkung solcher externen Ereignisse lässt sich mit der Interventionsanalyse von Box und Tiao (1975) erfassen.
+- Für die Apple-Range ist der Interventionszeitpunkt der 26. Januar 2001, t0 = 522, der letzte Handelstag vor der Umstellung der Tickgröße; die Indikatorvariable ist 1 für i ≤ t0 und 0 sonst.
+- Das Dauer-Modell mit Intervention lautet ψi = α0 + γ I(t0)i + α1 xi−1 + β1 ψi−1; γ ist der Rückgang der erwarteten Duration durch die Dezimalisierung der Aktienkurse.
+- Die Schätzung γ̂ = 0,0011 bei Standardfehler 0,0003 ist auf dem 1-Prozent-Niveau signifikant und positiv, sodass die Dezimalisierung den erwarteten Wert der täglichen Range senkt.
+- Im Interventionsmodell folgen die Innovationen W(2,2835) unterhalb und W(2,7322) oberhalb der Schwelle 0,04753, mit Standardfehlern 0,0413 und 0,0780.
 
 ## Funktionsweise
 
@@ -120,6 +137,10 @@ aktualisiert: 2026-10-30
 - Um die Finanzkrise 2008 liegt ein Regimewechsel im Verhalten von VIX und seinen Futures, und die VX-Kalenderspread-Strategie läuft vor Oktober 2008 deutlich schlechter.
 - Die Beziehung von ES und VX zerfällt in die Regime 2004 bis Mai 2008 und August 2008 bis 2012, mit kürzeren Phasen, die Übergänge sein können.
 - Der Crack Spread steigt um den 9. März 2007 bis zum 3. Juli 2008 dramatisch und fällt danach scharf.
+- GLD und GDX verlieren die Kointegration um den 14. Juli 2008, als WTI bei etwa 145 Dollar je Barrel ein Allzeithoch markierte. Teures Öl verteuert die Goldförderung, und die Minenaktien bleiben hinter dem Goldspot zurück.
+- Vom 23. Mai 2006 bis 14. Juli 2008 kointegrieren sie im Johansen-Test mit 99 Prozent, vom 15. Juli 2008 bis 9. April 2012 nicht mehr.
+- Die Erklärung lässt sich prüfen: mit USO kointegriert das Triplett über 2006 bis 2012 mit 99 Prozent für genau eine Beziehung.
+- Hört eine Strategie auf zu arbeiten, wird eine Ursache als Hypothese formuliert und an den Daten geprüft. Oft wird daraus eine geänderte Strategie, hier das Triplett oder ein Stopp von GLD gegen GDX ab einer Ölpreisschwelle.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -136,6 +157,11 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 105–124 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-008-p105-p124|S. 105–124]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 144–150 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-010-p144-p150|S. 144–150]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 248–267 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-014-p248-p267|S. 248–267]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 229–248 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-013-p229-p248|S. 229–248]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 286–305 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-016-p286-p305|S. 286–305]]
 
 ## Verwandte Themen
 

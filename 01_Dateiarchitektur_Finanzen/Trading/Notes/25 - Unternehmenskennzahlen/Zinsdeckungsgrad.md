@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/25 - Unternehmenskennzahlen/25 - Unternehmenskennzahlen|25 - Unternehmenskennzahlen]]"
 weitere_hauptthemen: []
 unterthema: "Bilanz"
@@ -10,19 +10,18 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Zinsdeckungsgrad
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
 
 ## Kernaussagen
 
+- Abbildung 43.9 zeigt den Nettozinsdeckungsgrad, net interest cover, der nichtfinanziellen Gesamtwirtschaft.
 
 ## Funktionsweise
 
@@ -50,5 +49,6 @@ aktualisiert: 2026-10-26
 
 ## Quellen und Fundstellen
 
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 552–571 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-030-p552-p571|S. 552–571]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Bestätigungsfehler
@@ -21,6 +21,7 @@ aktualisiert: 2026-10-30
 - Bestätigungsfehler heißt, Information überzugewichten, die die bereits eingenommene Haltung stützt.
 - Bestätigungsfehler ist die Neigung, nur Antworten anzuerkennen, die vorgefasste Überzeugungen stützen. Das führt zu Tunnelblick und am Ende zu Verlusten.
 - Bestätigungsfehler ist die Tendenz, nach der verfügbaren Oberflächeninformation zu wählen und diese Wahl weiter zu verteidigen, auch wenn andere Bedingungen alle bisherigen Überzeugungen entwerten.
+- Belief Bias ist nach Evans und Curtis-Holmes (2005) die Neigung, die Gültigkeit eines Arguments danach zu beurteilen, ob man der Schlussfolgerung zustimmt, und nicht danach, ob sie logisch aus den Prämissen folgt.
 
 ## Kernaussagen
 
@@ -93,6 +94,57 @@ aktualisiert: 2026-10-30
 - Gefühle und Bilder können in Urteilen schwer wiegen, die besser durch eine rein analytische Prüfung der Evidenz zu behandeln wären.
 - Nach Forgas gilt: Je größer Komplexität und Unsicherheit einer Lage, desto stärker beeinflussen Emotionen die Entscheidung.
 - Experten verstehen nicht, wie sie zu ihren eigenen Urteilen kommen. Das ist bei hoch erfahrenen Experten am stärksten ausgeprägt, und dieselben Eingaben erzeugen bei ihnen zu verschiedenen Anlässen inkonsistente Urteile.
+- Wason-Karten E, 4, K und 7. Die Regel lautet, ein Vokal auf einer Seite verlange eine gerade Zahl auf der anderen. Die meisten drehen E und 4 um. Prüfbar sind nur E und 7. Die 4 kann nichts beweisen, weil nicht behauptet wurde, eine gerade Zahl verlange einen Vokal.
+- Dieser Durst nach Zustimmung statt Widerlegung ist der Bestätigungsfehler. Popper: Eine Sicht prüfen heißt, die Hypothese zu bilden und danach die Information zu suchen, die ihr widerspricht. Die meisten bilden die Sicht und suchen dann alles, was sie richtig aussehen lässt.
+- Natürlich hört man denen zu, die zustimmen. Sitzen sollte man bei denen, die am stärksten widersprechen, nicht weil ein Meinungswechsel wahrscheinlich wäre, die Chancen stehen massiv dagegen, sondern um die Gegensicht zu kennen und den logischen Fehler darin zu suchen. Findet sich keiner, ist die eigene Sicht weniger sicher, als sie sich anfühlt.
+- Hostile-Media-Bias: Wird Information vorgelegt, die der eigenen Sicht widerspricht, gilt die Quelle als voreingenommen.
+- Wer eine Aktie schon hält, sucht im Gespräch mit dem Management die Information, die zum Halten passt. Die skeptische Haltung wäre, ohne etwas, das die Sicht wirklich ändert, zu verkaufen. Das Management sagt nie etwas anderes, als dass es ein großartiges Geschäft und eine großartige Anlage sei. Einige sehr erfolgreiche Fondsmanager treffen Firmen aus diesem Grund nie.
+- Die vierte große Hürde beim Lernen aus Fehlern ist die Fähigkeit, Fakten so zu drehen, dass sie zu den eigenen Überzeugungen passen. Zustimmung wird akzeptiert, Widerspruch wird geprüft, und dadurch wird aus Fehlern nicht gelernt.
+- Zeigt die Waage eine ungeliebte Gewichtszunahme, steigt man herunter und versucht es noch einmal, für den Fall, dass man schief stand. Eine angenehme Überraschung wird sofort akzeptiert.
+- 95 Prozent der getesteten Fondsmanager scheiterten an der Kartenfrage. Die Karten zeigen E, 4, K und 7, jede hat auf der einen Seite einen Buchstaben und auf der anderen eine Zahl. Die Regel lautet, eine Karte mit E müsse auf der Rückseite eine 4 haben.
+- Die richtige Prüfung dreht E und 7 um. Die häufigste Antwort ist E und 4. Die 4 kann nichts zeigen, weil die Regel nicht verlangt, dass eine 4 ein E auf der Rückseite hat. Die 7 widerlegt die Regel, wenn auf ihrer Rückseite ein E steht.
+- Die 4 umzudrehen ist Bestätigungsfehler: die Neigung, Information zu suchen, die einem zustimmt. Popper verlangt, eine Hypothese zu bilden und dann den Rest des Tages nach dem Beweis zu suchen, dass man irrt. Üblich ist das Gegenteil.
+- Statt Sitzungen mit Zustimmenden sollte man sich zu denen setzen, die widersprechen. Nicht, um die eigene Meinung zu ändern, denn die Chance, sie im bloßen Gespräch zu ändern, ist im Wesentlichen null, sondern um die Gegenseite zu kennen. Sieht man den logischen Fehler in deren Argument nicht, sollte man der eigenen Sicht weniger sicher sein.
+- Ditto und Lopez (1992): Einigen wurde gesagt, das Enzym TAA sei nützlich, TAA-positive Menschen erkrankten zehnmal seltener an einer Bauchspeicheldrüsenerkrankung. Anderen wurde gesagt, es sei schädlich und erhöhe dieses Risiko auf das Zehnfache.
+- Vor dem Testergebnis unterschieden sich die Angaben kaum. Danach nannten jene, denen TAA als gesund galt, weniger lebenspraktische Störfaktoren und hielten den Test für genauer. Jene, denen es als schädlich galt, nannten deutlich mehr Störfaktoren und hielten den Test für weniger verlässlich als die Gruppe, die vor dem Ergebnis antwortete.
+- Westen et al. (2005): Motiviertes Schlussfolgern hängt mit Hirnteilen der Emotionsverarbeitung zusammen, dem X-System, und nicht mit logischer Analyse, dem C-System. Es ist qualitativ anders als Schlussfolgern ohne starken emotionalen Anteil am Ergebnis.
+- Überzeugte Demokraten und Republikaner bekamen Aussagen von Bush, Kerry und einer neutralen Person, dann ein widersprüchliches Verhalten, und bewerteten den Widerspruch auf einer Skala von 1 bis 4. Republikaner fanden den Widerspruch bei Bush deutlich milder als Demokraten, und umgekehrt bei Kerry. Dasselbe Muster galt dafür, ob eine entlastende Erklärung den Widerspruch milderte.
+- Ist der emotionale Konflikt des Widerspruchs aufgelöst, zeigt das ventrale Striatum, ein Lustzentrum, einen Aktivitätsschub. Das Gehirn belohnt sich, sobald ein emotional stimmiges Ergebnis erreicht ist. Weniger negativer Affekt plus mehr Belohnung macht solche Urteile doppelt verstärkend und schwer zu ändern.
+- Psychologen finden, dass viel mehr Information über Fehler nötig ist, als nötig sein sollte, bevor Menschen ihre Meinung ändern. Nach Edwards (1968) leisten zwei bis fünf Beobachtungen erst die Arbeit einer einzigen.
+- Selbst Teilnehmer mit dem maximalen CRT-Wert suchten weiter nach Information, die mit ihnen übereinstimmte.
+- In Unternehmensgesprächen stellen Anleger eher freundliche Leitfragen, die die gewünschten Antworten erzeugen, als harte Fragen, die den Basisfall prüfen.
+- Weil Anleger schlecht nach Information suchen, die sie widerlegt, werden solche Gespräche meist zu gegenseitigen Harmonieveranstaltungen.
+- In Gruppen gewinnen Mitglieder bei den anderen an zugeschriebener Kompetenz und Glaubwürdigkeit, wenn sie Information liefern, die zur Gruppenmeinung passt.
+- Trotz eindeutiger Widerlegung senkten Tetlocks Experten die Wahrscheinlichkeit, mit der sie ihr Verständnis der zugrunde liegenden Kräfte bezifferten, praktisch nicht. Die Werte vor und nach dem Ereignis blieben nahezu identisch.
+- Über vier Fälle hinweg griffen die ungenauen Prognostiker 1,6-mal so stark auf Abwehrmechanismen zurück wie die genauen, um den Glauben an die eigene Sicht zu bewahren.
+- Einschätzungen der eigenen Fähigkeit entstehen oft top-down: Man startet mit einer vorgefassten Überzeugung wie der, gut im eigenen Job oder gut im Prognostizieren zu sein, und leitet daraus die erwartete Leistung in der konkreten Aufgabe ab.
+- Biased Assimilation heißt, bestätigende Information zu suchen und zugleich jede Information als vereinbar mit den Vorüberzeugungen zu lesen, auch wenn sie es klar nicht ist.
+- Leeper et al. (1979): 151 Studierende füllten einen Fragebogen zur Todesstrafe aus. 48 wurden weiter untersucht, 24 dafür und 24 dagegen. Sie lasen zufällig ausgewählte Studien zur Abschreckungswirkung und Kritiken daran und bewerteten den Einfluss auf einer Skala von −5 bis +5.
+- Wer von vornherein für die Todesstrafe war, hielt die stützenden Studien für gut argumentiert, solide und wichtig.
+- In Unternehmensgesprächen stellen Anleger Leitfragen, die die ursprüngliche Sicht stützen, statt Fragen, die den Basisfall widerlegen sollen. Das Management sagt zudem, was das Gegenüber hören will.
+- Oskamp (1965): Mit zunehmender Information sank der Anteil der Psychologen, die ihre Meinung änderten, von 40 Prozent in Stufe II auf 25 Prozent in Stufe IV. Sie bildeten aus der ersten bruchstückhaften Information fest Stereotype und blieben bei neuer Information dabei.
+- Evans et al. (1983): Bei gültiger und glaubwürdiger Schlussfolgerung akzeptierten 86 %; bei gültiger, aber unglaubwürdiger sank das auf 62 %; bei ungültiger, aber glaubwürdiger akzeptierten 66 % die Schlussfolgerung fälschlich.
+- Ob die Aufgaben als Prosatext oder im syllogistischen Format vorlagen, änderte den Anteil richtiger Antworten nicht.
+- Die gültige Form lautet: Kein A ist B; einige C sind B; also sind einige C nicht A. Die ungültige Form lautet: Kein A ist B; einige C sind B; also sind einige A nicht C.
+- Selbst die klare Anweisung, nur Logik zu benutzen, beseitigt den Befund nicht.
+- Wird Zeit zum Nachdenken gegeben, prüfen die Leute die Antwort nicht neu, sondern rechtfertigen die ursprüngliche Schlussfolgerung; bei Shynkaruk und Thompson (2006) änderte die zusätzliche Minute besonders bei logisch falschen, aber glaubwürdigen Aufgaben wenig.
+- Der Logic-Index ist VB+VU−IB−IU, der Belief-Index VB+IB−VU−IU, der Interaction-Index VU+IB−VB−IU; der Belief-Index überwiegt den Logic-Index.
+- Unter einem Zeitlimit von zehn Sekunden werden deutlich mehr gültige unglaubwürdige Schlüsse abgelehnt und mehr ungültige glaubwürdige akzeptiert als ohne Zeitdruck; der Belief-Index läuft aus dem Rahmen, der Logic-Index bricht ein.
+- Goel und Dolan (2003), fMRI: Wird ein glaubwürdiges, aber ungültiges Problem korrekt erkannt, ist der rechte laterale präfrontale Cortex stark aktiv, Teil des langsamen C-Systems; unterliegt man dem Belief Bias, ist der ventromediale präfrontale Cortex aktiv, der wiederholt mit emotionaler Verarbeitung und dem X-System verbunden ist.
+- Biased Assimilation heißt, nicht nur bestätigende Information zu suchen, sondern jede Information so zu lesen, als sei sie mit der bisherigen Überzeugung vereinbar.
+- Predecisional Distortion nach Carlson und Russo (2001) ist die verzerrte Deutung neuer Information zugunsten der Alternative, die im Entscheidungsprozess gerade führt.
+- Leeper et al. (1979) ließen 48 von 151 Studierenden, je 24 für und gegen die Todesstrafe, Studien zur Abschreckungswirkung und deren Kritik lesen. Wer dafür war, hielt die stützenden Studien für gut begründet, solide und wichtig und die gegnerischen für tief fehlerhaft. Die Gegenseite kam zum genau umgekehrten Schluss.
+- Lord et al. schließen, dass Befürworter danach noch stärker für die Todesstrafe waren und Gegner noch weniger. Dieselben Studien polarisierten beide Gruppen.
+- Westen et al. (2004) konnten in 84 Prozent der Fälle allein aus der Zuneigung zu Republikanern, zum US-Militär und zu Menschenrechtsgruppen wie Amnesty International vorhersagen, ob jemand die Belege für ausreichend hielt, Donald Rumsfeld vorzuladen. Die Belege selbst hoben die Trefferquote nur von 84 auf 85 Prozent.
+- Im Clinton-Lewinsky-Fall, unmittelbar nach Lewinskys Aussage vor dem Geschworenengericht, waren die einzigen signifikanten Prädiktoren dafür, ob jemand eine Justizbehinderung durch den Präsidenten sah, ob die Person Clinton mochte und ob sie Demokrat war.
+- Bei Carlson und Russo verzerrten sowohl Studierende als auch echte Geschworene die Information signifikant zugunsten der gerade führenden Seite. Die Geschworenen verzerrten etwa doppelt so stark wie die Studierenden.
+- Die Verzerrung nahm mit der Sicherheit zu: Je sicherer die Personen waren, das richtige Urteil zu haben, desto stärker bogen sie neue Belege auf ihre bisherige Präferenz. Russo und andere finden denselben Effekt bei Konsumenten, Wirtschaftsprüfern und Verkäufern.
+- Ein Video wies die Teilnehmer mindestens dreimal ausdrücklich darauf hin, vor dem gesamten Beweismaterial kein Urteil zu bilden. Die Verzerrung trat trotzdem auf. Jede Aussage kam gleich oft in jeder Reihenfolge.
+- Das Verzerrungsmaß ist die Abweichung von einem führerfreien Wert, dem Mittel der Neun-Punkte-Bewertung von Personen, die jeweils eine Seite führen sahen. Eine Abweichung zugunsten des eigenen Führenden zählt plus 1, zugunsten des Zurückliegenden minus 1.
+- Wer Information teilt, die die Gruppensicht bestätigt, gilt bei den anderen und bei sich selbst als kompetenter und glaubwürdiger. Wittenbaum et al. (1999) nennen das mutual enhancement.
+- In der Personalstudie von Hightower und Sayeed (1995) teilten die Mitglieder positive Information über den eindeutig besten Kandidaten und negative über die Verlierer und unterdrückten negative Information über den Gewinner sowie positive über die Verlierer. Fast keine deliberierende Dreiergruppe, ob von Angesicht zu Angesicht oder online, traf die richtige Wahl.
+- Groupthink ist unter anderem durch hohe Selektivität bei der Informationsbeschaffung, fehlende kritische Prüfung der Ideen der anderen und das Rationalisieren schlechter Entscheidungen gekennzeichnet.
+- Mitglieder mit relativ niedrigem Status halten einzigartige, nicht konforme Information besonders oft zurück, weil das Reputationsrisiko zu hoch ist (Wittenbaum und Park, 2001; Stasser und Titus, 2003).
 
 ## Funktionsweise
 
@@ -111,6 +163,12 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Immer wenn die Backtest-Leistung größer als null ist, spricht die Stichprobe tatsächlich für die Alternativhypothese einer erwarteten Rendite größer als null. Der Hypothesentest verlangt aber zwingende Evidenz, bevor die angenommene Wahrheit der Nullhypothese aufgegeben wird, und nicht bloß vernünftige oder bestätigende Evidenz.
+- Finanzanalyse sollte logisch sein, also den inneren Wert berechnen und zum Marktpreis ins Verhältnis setzen; Analysten und Fondsmanager lieben oder hassen Aktien aber oft, und diese Vorprägung färbt die Logik.
+- Die vorgelegte Evidenz zeigt, dass Logik verdorrt und stirbt, wenn sie auf starke Überzeugung trifft.
+- Der Zen des Investierens ist die Ruhe, eigene Vorprägungen zu vermeiden oder gehaltene Überzeugungen wenigstens an ihrer empirischen Gültigkeit zu prüfen.
+- Bestätigungsfehler, Biased Assimilation und Predecisional Distortion sind die dritte der fünf psychologischen Hürden, bevor Gespräche mit Unternehmen den Anlageprozess tragen können.
+- Wer schon eine Sicht auf die Firma hat, oft deckungsgleich damit, ob die Aktie gehalten wird, deutet das Gespräch im Licht dieser Sicht und sucht nicht die widerlegenden Belege. Dient das Treffen nur der Wiederbestätigung, hat es wenig Sinn.
+- Die Assimilation wird dadurch schärfer, dass Leitungen sagen, was man hören will. Sie gestehen nicht, ein schlechtes Unternehmen mit aussichtslosem Management zu sein. Sie sagen, die schwierige Phase, etwa unerwarteter Lageraufbau oder Margendruck, sei gelöst und es gehe voran.
 
 ## Regeln und Kriterien
 
@@ -122,6 +180,7 @@ aktualisiert: 2026-10-30
 - Das Market Profile hält psychologisch und intellektuell ehrlich.
 - Eine starke bärische Voreingenommenheit kann den Abwärtslauf nach einer Eröffnung deutlich über der Vortagesrange für Verkäuferkontrolle halten. Bleibt die Value höher etabliert, kann längerfristig der Käufer führen.
 - Die Erwartung, Märkte seien geordnet und leicht verständlich, ist der falsche Start.
+- Eine der 15 Regeln gegen die häufigsten mentalen Fallstricke lautet, nach Information zu suchen, die der eigenen Ansicht widerspricht.
 
 ## Risiken und Grenzen
 
@@ -167,6 +226,18 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 343–362 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-019-p343-p362|S. 343–362]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 362–381 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-020-p362-p381|S. 362–381]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 457–476 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-025-p457-p476|S. 457–476]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 39–58 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-003-p039-p058|S. 39–58]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 58–77 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-004-p058-p077|S. 58–77]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 77–96 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-005-p077-p096|S. 77–96]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 96–115 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-006-p096-p115|S. 96–115]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 115–134 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-007-p115-p134|S. 115–134]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 134–153 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-008-p134-p153|S. 134–153]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 172–191 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-010-p172-p191|S. 172–191]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 210–229 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-012-p210-p229|S. 210–229]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 229–248 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-013-p229-p248|S. 229–248]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 533–552 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-029-p533-p552|S. 533–552]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 552–571 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-030-p552-p571|S. 552–571]]
 
 ## Verwandte Themen
 

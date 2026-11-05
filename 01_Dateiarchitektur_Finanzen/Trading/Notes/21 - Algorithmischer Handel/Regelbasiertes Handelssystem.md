@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Regelbasiertes Handelssystem
@@ -152,6 +152,54 @@ aktualisiert: 2026-10-30
 - Der Glossartext formuliert den Satz „You can't buy success.“.
 - Nach Kenntnis des Autors ist kein verkauftes Handelssystem im Echtzeithandel über die Zeit durchgehend profitabel gewesen.
 - Statt ein System zu kaufen, sollen die Systemkosten und das Handelskonto an eine Wohltätigkeitsorganisation der eigenen Wahl gegeben werden.
+- Die lineare Mean-Reversion-Regel wird auf den 12-Monats-Kalenderspread von CL und auf VX-Kalenderspreads angewendet.
+- Beim VX-Spread nutzt die Regel das Verhältnis Back zu Front und einen Lookback von 15 Tagen für Durchschnitt und Standardabweichung.
+- Die ES-VX-Regel shortet das aus der Preisregression gebaute Portfolio, sobald der Wert um eine Residual-Standardabweichung des Trainingssets abweicht.
+- Eine weitere Regel auf VX gegen ES stützt sich nicht auf die Mean Reversion dieses Spreads und wird als Momentum-Strategie im nächsten Kapitel behandelt.
+- Die beschriebenen Strategien sind Illustrationen von Technik und Prinzip, keine Rezepte und keine schrittweise Implementierung, und sie sind nicht garantiert frei von den Fallstricken aus Kapitel 1.
+- Der Prozess bildet eine Hypothese als quantitatives Modell ab und prüft sie an neuen, ungesehenen Daten; scheitert sie, werden Gründe gesucht und das Modell angepasst, statt blind Regeln zu häufen.
+- Einfache lineare Regeln werden bevorzugt, sobald die Marktunvollkommenheit verstanden ist, etwa Regression zum Mittel, Rollrenditen oder das Schluss-Rebalancing gehebelter ETFs.
+- Trotz des regelbasierten Anspruchs bleibt subjektives Urteil nötig, etwa ob vor einem großen Ereignis der Hebel gesenkt oder das Modell abgeschaltet wird und ob Kelly über das Gesamtportfolio oder je Strategie gilt.
+- Dass Urteil nötig bleibt, macht Regeln nicht nutzlos: Kahneman zufolge sind Experten Algorithmen in unsicheren Bereichen einheitlich unterlegen, und der Finanzmarkt sei hoffentlich keine Ausnahme.
+- Auch eine automatische Strategie verlangt weiter die Beurteilung, ob die Modelle nach einem Regimewechsel noch gültig sind.
+- Grove et al. (2000) fanden in 136 Studien, dass 64 klar für das einfache Quant-Modell sprachen, 64 ungefähr gleich lagen und nur acht für das menschliche Urteil; in diesen acht hatten die Menschen mehr Information als das Modell.
+- Über diese Studien lag die durchschnittliche Trefferquote der Fachleute bei 66,5 Prozent und die der Quant-Modelle bei 73,2 Prozent.
+- Der Schlüssel der Modellleistung ist eine bekannte Fehlerrate, während die eigenen Fehlerraten unbekannt sind.
+- Die häufigste Antwort auf die Befunde ist, Quant als Input zu nutzen und das Modell bei Bedarf zu übersteuern; die Evidenz zeigt die Modelle eher als Decke denn als Boden für das Verhalten.
+- Leli und Filskov (1981): Eine einfache Regel erkannte 83 Prozent neuer Fälle; unerfahrene Profis lagen bei 63 Prozent, erfahrene bei 58 Prozent, und selbst mit der Modellausgabe nur bei 68 Prozent beziehungsweise 75 Prozent.
+- Chris Snijders untersuchte Einkaufsmanager in 300 Organisationen: Die Urteile von Profis sind bestenfalls dürftig und nicht besser als die weniger Erfahrener oder von Amateuren, und weder allgemeines noch spezifisches Humankapital beeinflusst die Leistung.
+- Eine einfache Formel schlägt bei Snijders den durchschnittlichen und den überdurchschnittlichen Manager, selbst wenn sie nur die halbe Information des Managers hat.
+- Ashenfelter et al. (1995) erklären mit einer Gleichung aus vier Faktoren, dem Alter des Jahrgangs, der Durchschnittstemperatur von April bis September, dem Regen im September und August und dem Regen von Oktober bis März, 83 Prozent der Preisvariation von Bordeaux-Weinen.
+- Junge Weine sind relativ zu Wetter und Preis alter Weine meist überteuert; mit der Reife konvergieren die Preise zur Gleichung, schlechte Jahrgänge sind jung zu teuer, und gute Jahrgänge können zu billig sein.
+- Dawes (1989) berichtet, dass die Interviewränge der University of Texas die späteren Medizinstudenten nicht trennten: DeVaul und Kollegen fanden zu keinem Zeitpunkt einen Unterschied, und 82 Prozent jeder Gruppe erhielten den MD.
+- LSV und Fuller & Thaler nutzen einen ausdrücklich quantitativen Prozess; mit nur einer Ausnahme haben ihre Fonds seit Auflegung sehr signifikantes positives Alpha geliefert.
+- Montier stellt klar, dass diese Fonds Quant-Überlegenheit nicht beweisen, weil dafür eine viel größere Stichprobe nötig wäre.
+- Meehl schreibt, keine Kontroverse der Sozialwissenschaft zeige eine so große und qualitativ vielfältige Studienlage so einheitlich in dieselbe Richtung, von Football-Ergebnissen bis zur Leberdiagnose, und kaum ein halbes Dutzend Studien zeige auch nur eine schwache Tendenz zugunsten des Klinikers.
+- Quant-Investing bleibt nach Montier voraussichtlich eine Randaktivität, weil die Furcht vor technologischer Arbeitslosigkeit, die Trägheit großer Häuser und die schwerere Verkäuflichkeit eines als Black Box gescholtenen Modells dagegen stehen.
+- Yaniv und Kleinberger (2000): Statt die eigene Schätzung und den Rat gleich zu gewichten, legten die Teilnehmer 71 Prozent Gewicht auf die eigene Antwort und in mehr als der Hälfte der Durchgänge 90 bis 100 Prozent.
+- In einigen Feldern sind Quant-Modelle akzeptierter geworden; Abbildung 22.5 zeigt die Zahl der US-Bundesstaaten, in denen die Bewährungsentscheidung ein quantitatives Prognoseinstrument einbezieht.
+- Es ist schwer, sich einzugestehen, dass eine einfache Regel einen leicht outperformen kann; alle meinen, Aktien oder Anlageklassen besser wählen zu können als eine Regel oder ein Modell, und die Evidenz stützt diese Sicht nicht.
+- Statt einer einfachen Regel, etwa die untersten 20 Prozent des MSCI-Universums nach dem KGV zu kaufen, verlassen sich Anleger lieber auf ihre Fähigkeiten der Aktienauswahl.
+- Graham: In 44 Jahren Wall Street hat er nie verlässliche Berechnungen von Aktienwerten gesehen, die über einfache Arithmetik oder die elementarste Algebra hinausgingen.
+- Höhere Analysis ist für Graham ein Warnsignal, dass Theorie an die Stelle von Erfahrung gesetzt wird und die Spekulation den trügerischen Anstrich von Anlage erhält.
+- Graham: Es braucht keinen Genius, um ein erfolgreicher Value-Analyst zu sein, sondern erstens leidlich gute Intelligenz, zweitens solide Arbeitsprinzipien und drittens und am wichtigsten Festigkeit des Charakters.
+- Psychologen finden, dass aktuelle Absichten bei der Vorhersage des eigenen künftigen Verhaltens massiv übergewichtet werden; die Wahrscheinlichkeit, eine angekündigte Value-Regel wirklich zu befolgen, liegt weit unter dem, was man glauben möchte.
+- Eine solche Value-Regel, der Kauf der 20 Prozent mit den niedrigsten KGV, hätte global 6 Prozent pro Jahr Outperformance geliefert und vermeidet die Abhängigkeit von Analystenprognosen.
+- Der Kauf der obersten 20 Prozent nach trailing PE hätte seit 1975 fast 6 Prozent pro Jahr Underperformance geliefert.
+- Es ist schwer einzugestehen, dass eine einfache Regel einen leicht schlägt; die Evidenz stützt die Ansicht nicht, man könne besser auswählen als die Regel.
+- Einfachen Regeln und Verfahren zu folgen ist kein großer Spaß, und wer den Spielinstinkt hat, zahlt dafür nach Keynes den entsprechenden Zoll.
+- Samuelson: Investieren sollte langweilig sein wie Farbe, die trocknet, oder Gras, das wächst.
+- Koehler und Poon (2006): Aktuelle Absichten wirken überstark auf die Vorhersage des Verhaltens, nicht auf das Verhalten; die Wahrscheinlichkeit, die angekündigte Regel wirklich zu befolgen, ist gering.
+- Value-Investieren ist das Eingeständnis der eigenen Grenzen und bietet durch den Kauf billiger Aktien eine Sicherheitsmarge gegen Fehler.
+- Die strategische Aktienquote wird an die Bewertung gekoppelt statt als feste Long-Run-Vorgabe der Treuhänder im Mandat festgeschrieben. Im obersten KGV-Quartil beträgt das varianzminimale Aktiengewicht 30 Prozent, im untersten 55 Prozent.
+- Das taktische Allokationsmodell, bezogen auf Global Equity Strategy vom 23. April 2003, erzeugte in den dismal years 1964 bis 1982 reale Renditen von 4,5 Prozent pro Jahr gegen kaum 1 Prozent bei Buy-and-hold und mit deutlich geringerer Volatilität.
+- Die Strategien der dismal years kaufen Aktien unter benannten Bedingungsgruppen: Value und Momentum unter I, II und III, nur Value unter I und II, nur Momentum unter I und III, Buy-and-hold unter I, II, III und IV.
+- Einfache statistische Modelle schlagen sogenannte Experten in so verschiedenen Feldern wie Baseball, Weinpreisen, medizinischer Diagnose, Hochschulzulassung und Rückfallprognose. Für Finanzmärkte gibt es keinen Grund, das anders zu erwarten.
+- Grove et al. sichteten über 130 Arbeiten. Nur acht sprachen für das menschliche Urteil, und in allen acht hatten die Menschen Information, die dem Modell fehlte. Bei gleicher Information waren die Modelle deutlich besser. Die mittlere Genauigkeit betrug 66,5 Prozent bei Menschen und 73,2 Prozent bei den Modellen.
+- Goldberg (1968) bildete aus zehn MMPI-Scores eine einfache Formel auf mehr als 1000 Patienten. Außer Stichprobe lag sie bei rund 70 Prozent und schlug erfahrene wie unerfahrene Kliniker, auch dann, wenn diese die Vorhersage der Regel als Eingabe bekamen.
+- Leli und Filskov (1981) erkannten mit einer einfachen Regel auf Standardtests 83 Prozent neuer Fälle. Unerfahrene lagen bei 63 Prozent, erfahrene bei 58 Prozent, mit Modellausgabe bei 68 und 75 Prozent. Die Verbesserung hing davon ab, wie stark das Modell genutzt wurde.
+- Das Modell ist eine Decke der Leistung und kein Boden, auf den geschickte Nutzer qualitativ aufsetzen. Montier fragt, ob Fondsmanager aus der Liste eines Quant-Modells, etwa zur Little-Book-Strategie, nur die Titel herauspicken, die sie mögen, so wie die Psychologen die Goldberg-Regel nur selektiv als Eingabe nutzten.
+- Über die Hälfte der US-Bundesstaaten nutzt ein quantitatives Modell bei Bewährungsentscheidungen für Verurteilte.
 
 ## Funktionsweise
 
@@ -190,6 +238,9 @@ aktualisiert: 2026-10-30
 - Bei stetigen Eingaben ist die Antwortfläche einer linearen Kombination eben, ohne Hügel und Täler, und die Steigung bezüglich jeder Eingabe bleibt über den ganzen Bereich dieser Eingabe konstant.
 - Die Steigung bezüglich der Eingabe X1 ist der Koeffizient a1, die bezüglich X2 der Koeffizient a2; a1 und a2 werden typischerweise per Regression aus Daten geschätzt und richten zusammen mit dem Achsenabschnitt a0 die Ebene so aus, dass sie die Datenpunkte am besten schneidet.
 - In einem nichtlinearen Modell ist der Wert Y nicht einfach eine gewichtete Summe der einzelnen Eingaben, und die Steigung der Antwortfläche bezüglich einer Eingabe Xi ist nicht über ihren ganzen Bereich konstant, sodass Hügel und Täler entstehen.
+- Die Little-Book-Strategie ist ein quantitatives Screening: zwei Ränge, Kapitalrendite und Earnings Yield, werden addiert, und es werden die 30 bestgereihten Titel gekauft, bei nur jährlichem Rebalancing.
+- Einem quantitativen Modell oder einem Satz Regeln zu folgen nimmt der Aktienanlage viel Aufregung, weil weder Firmen noch die Sell-Side getroffen werden müssen.
+- Keynes wird zitiert: das professionelle Anlagespiel sei unerträglich langweilig und übergenau für jeden, dem der Spieltrieb fehle; wer ihn habe, zahle den entsprechenden Zoll.
 
 ## Voraussetzungen
 
@@ -222,6 +273,14 @@ aktualisiert: 2026-10-30
 - Für MACD oder einen anderen bekannten Indikator wird zuerst die Aktivität bestimmt, die eine Momentumänderung darstellt, also Kreuzung von schneller und langsamer Linie, höherer oder tieferer Histogrammbalken oder ein Stoß über oder unter eine Overbought- oder Oversold-Linie, und danach werden die vier Lagen der höheren Zeitebene in Regeln gefasst.
 - Die Mindestbedingungen, die auf beiden Zeitebenen erfüllt sein müssen, um einen Trade zu erwägen, sind der erste Teil eines Tradingplans mit einem Vorteil bei der Setup-Erkennung.
 - Die in diesem Buch empfohlenen Einstiegsstrategien sind vollständig objektiv, sobald die Trade-Bedingungen erfüllt sind.
+- Das ungleiche Währungssystem schätzt jeden Tag die Hedge Ratio aus den Log-Preisen der vorangehenden 250 Tage mit dem Johansen-Test, bildet über 20 Tage Mittel und Standardabweichung des Portfoliomarktwerts und setzt die Stückzahl auf den negativen Z-Score.
+- Es handelt AUD.USD gegen CAD.USD und nicht den Kreuzkurs, weil die Hedge Ratio nicht eins ist. Die berichtete Leistung nach den ersten 250 Tagen ist 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6.
+- Das einfache System auf AUD.CAD setzt die Position auf das negative Vorzeichen der Abweichung vom 20-Tage-Durchschnitt und addiert den Übernacht-Rollover zur Log-Rendite, mit Verdreifachung mittwochs für AUD und donnerstags für CAD.
+- Der Kalenderspread von CL hält den fernen Zwölfmonatskontrakt long und den nahen short, solange der Z-Score der Rollrendite nicht positiv ist, andernfalls umgekehrt, über 61 Handelstage und mit Roll zehn Tage vor Verfall.
+- Lookback ist die gerundete Halbwertszeit der Rollrendite, etwa 36 Tage. Die ungehebelt Rendite teilt den Gewinn durch zwei. Vom 2. Januar 2008 bis 13. August 2012 sind annualisierte Rendite 8,3 Prozent und Sharpe Ratio 1,3.
+- Dieselbe Kontraktregel ist nicht auf VX übertragbar über die Gleichung für gehandelte Basiswerte, weil VIX nicht gehandelt wird und die vorgeschlagenen Alternativformeln die Mean Reversion der VX-Spreads nicht erklären.
+- Die dargestellte Pairs-Regel kauft eine Aktie 1 und shortet γ Aktien 2, wenn der Spread wt gleich μw minus einer Zielabweichung ist, und löst auf, wenn der Spread μw plus dieser Zielabweichung erreicht, vorausgesetzt das Doppelte der Zielabweichung übersteigt die Kosten η.
+- Eine zweite Regel löst bereits bei wt = μw auf, wenn die Zielabweichung größer als η ist. Bei negativer Zielabweichung werden die Seiten getauscht: eine Aktie 1 short und γ Aktien 2 long. η hängt von Gebühren und Bid-Ask-Spreads ab.
 
 ## Risiken und Grenzen
 
@@ -244,6 +303,7 @@ aktualisiert: 2026-10-30
 - Subjektive Analysten sind zudem stark darin beschränkt, das Informationsmuster einer Konfiguration aus mehreren Regeln richtig zu deuten.
 - Eine nichtlineare Kombination einfacher Regeln kann informativer sein als die summierte Information ihrer einzelnen Bestandteile.
 - Evidence-based Technical Analysis hat als wichtigste Grenze, dass kontrollierte Experimente nicht möglich sind. Technische Analyse ist zwangsläufig eine Beobachtungswissenschaft, die neues Wissen in der Historie suchen muss.
+- Quant bleibt Randaktivität, weil Anwender glauben, dem Modell etwas hinzufügen zu können, weil das Modell eine bekannte Fehlerrate hat und die eigene unbekannt bleibt, weil 18 von 20 um ihren Platz fürchten, weil ein zwanzigjähriger Prozess kaum verschrottet wird und weil Black-Box-Vorwürfe den Verkauf erschweren.
 
 ## Beispiele
 
@@ -274,6 +334,7 @@ aktualisiert: 2026-10-30
 - Nichtlineare Kombinationen lassen sich mit autonomen Lernsystemen erzeugen, darunter neuronale Netze, Entscheidungsbäume und ihre Ensembles, multiple Regressionssplines, Kernelregression, polynomiale Netze, genetische Programmierung und Support-Vector-Machines.
 - Diese Systeme synthetisieren per induktiver Verallgemeinerung eine komplexe nichtlineare Regel, indem sie aus einer großen Menge historischer Beispiele lernen; jedes Beispiel ist ein Fall mit Indikatorwerten zu einem Datum und dem Wert der vorherzusagenden Ergebnisvariable.
 - Komplexe nichtlineare Regeln ließen sich auf zwei Wegen ableiten: die Regeln in binärer Form als Kandidateneingaben vorlegen oder die von den Regeln verwendeten Indikatoren vorlegen.
+- Für BHP gegen VALE wird die Pairs-Regel mit γ̂ = 0,718, Spreadmittel 1,81 und Zielabweichung 0,045 kalibriert. Die Grenzen sind 1,81 plus und minus 0,045, der Logreturn je abgeschlossenes Geschäft ist 0,09, und die Wahl von 0,045 liegt knapp über dem Standardfehler 0,044 des Spreads.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -308,6 +369,17 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 457–476 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-025-p457-p476|S. 457–476]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 248–267 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-014-p248-p267|S. 248–267]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 267–286 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-015-p267-p286|S. 267–286]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 286–305 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-016-p286-p305|S. 286–305]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 305–324 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-017-p305-p324|S. 305–324]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 324–343 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-018-p324-p343|S. 324–343]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 362–381 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-020-p362-p381|S. 362–381]]
 
 ## Verwandte Themen
 

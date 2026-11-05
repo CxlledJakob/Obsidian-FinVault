@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Bootstrap-Verfahren
@@ -25,6 +25,7 @@ aktualisiert: 2026-10-30
 - Das Bootstrap-Verfahren wurde zuerst 1979 von Efron beschrieben und in späteren Arbeiten verfeinert, die Eric Noreen in Computer Intensive Methods for Testing Hypotheses zitiert.
 - Es leitet die Stichprobenverteilung der Teststatistik ab, indem aus einer Originalstichprobe mit Zurücklegen neu gezogen wird.
 - White's Reality Check, erfunden und patentiert von Halbert White an der University of California in San Diego, nutzt den Bootstrap, um die Stichprobenverteilung zu erzeugen, mit der die statistische Signifikanz der besten durch Data Mining gefundenen Regel geprüft wird.
+- Der parametrische Bootstrap berechnet Prognosen nichtlinearer Modelle, sobald der Horizont größer als 1 ist, weil dann für die meisten nichtlinearen Modelle keine geschlossenen Prognoseformeln existieren.
 
 ## Kernaussagen
 
@@ -119,6 +120,12 @@ aktualisiert: 2026-10-30
 - Bei vielen Regeln ist das eine beträchtliche Datenmenge, und derzeit speichern wenige Data Miner oder Data-Mining-Systeme diese Information.
 - Der Bootstrap verwendet die Intervallrenditen der Regel, die Monte-Carlo-Permutation dagegen die historische Reihe der Regelausgaben +1 und −1 sowie die rohen Marktrenditen.
 - Damit die Null erwarteter Rendite null gilt, bestimmt White's Reality Check die mittlere Tagesrendite jeder Regel und zieht sie von jeder einzelnen Tagesrendite ab; im Beispiel werden bei Regel 1 ein Prozent und bei Regel 2 zwei Prozent abgezogen, sodass die Verteilung der Tagesrenditen über null zentriert ist.
+- Am Ursprung T und für den Horizont ℓ wird jede Realisation schrittweise erzeugt: eine neue Innovation aus der im Modell festgelegten Innovationenverteilung ziehen und x_{T+i} aus Modell, Daten und den vorherigen Prognosen x_{T+1}, …, x_{T+i−1} berechnen.
+- Das Verfahren wird M-mal wiederholt; die Punktprognose von x_{T+ℓ} ist der Stichprobenmittelwert der M Realisationen {x^{(j)}_{T+ℓ}.
+- In einigen Anwendungen wurde M = 3000 verwendet, und die Ergebnisse erschienen brauchbar.
+- Dieselben Realisationen liefern eine empirische Verteilung von x_{T+ℓ}; werden die Parameter als fest behandelt, ist das eine bedingte prädiktive Verteilung.
+- Eine prädiktive Verteilung im strengen Sinn enthält zusätzlich die Parameterunsicherheit; die Bootstrap-Verteilung hier tut das nicht, sofern die geschätzten Parameter als gegeben gelten.
+- Das zur Prognose verwendete Modell umfasst die dynamische Struktur und die Verteilung der Innovationen und soll vorher streng geprüft worden sein.
 
 ## Voraussetzungen
 
@@ -126,6 +133,7 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Überlappende Labels sind der im Text genannte Grund, in Finanzdaten nicht unverändert mit dem Standard-Bootstrap zu baggen, sondern die Stichprobe nach der Eindeutigkeit zu begrenzen oder sequenziell zu ziehen.
+- Wird die endliche Stichprobenverteilung der Kreuzkorrelationen von Assetrenditen gebraucht, sollen geeignete Bootstrap-Ziehungen diese Verteilung nähern, weil bedingte Heteroskedastizität und hohe Kurtosis die Verteilung verkomplizieren.
 
 ## Regeln und Kriterien
 
@@ -135,6 +143,8 @@ aktualisiert: 2026-10-30
 - Ein kleines k ist einem großen vorzuziehen, weil eine zu feine Aufteilung erneut zu ähnliche Beobachtungen in Training und Test legt.
 - max_samples kann auf die mittlere Eindeutigkeit gesetzt werden, sowohl beim Bagging von Entscheidungsbäumen als auch beim Bagging von Random Forests mit einem Baum je Ziehung.
 - max_features niedriger zu setzen, zwingt die Bäume auseinander. Ein min_weight_fraction_leaf von etwa 5 Prozent soll die Out-of-Bag-Genauigkeit an die k-Fold-Genauigkeit außerhalb der Stichprobe heranführen.
+- Sei u_T(ℓ) das Perzentil des beobachteten x_{T+ℓ} in der empirischen Bootstrap-Verteilung; bei angemessenem Modell ist die Folge dieser Perzentile eine Zufallsstichprobe aus der Gleichverteilung auf [0, 1].
+- Für hinreichend großes m lässt sich die Kolmogorov-Smirnov-Statistik dieser Perzentile gegen die Gleichverteilung auf [0, 1] sowohl zur Modellprüfung als auch zum Prognosevergleich verwenden.
 
 ## Risiken und Grenzen
 
@@ -152,6 +162,7 @@ aktualisiert: 2026-10-30
 - Der p-Wert 0,0692 bedeutet, dass 0,069 der 5.000 Bootstrap-Mittelwerte mindestens plus 4,84 Prozent betrugen; wäre die erwartete Rendite wirklich null, träte das etwa 7 von 100 Mal allein durch Zufall auf.
 - Für TT-4-91 liegt das 80-Prozent-Intervall auf der bei der beobachteten Rendite von plus 4,84 Prozent positionierten Bootstrap-Verteilung zwischen plus 0,62 und plus 9,06 Prozent.
 - Würde TT-4-91 auf 100 unabhängigen Stichproben gebacktestet und um jede mittlere Rendite ein 80-Prozent-Intervall gelegt, schlösse das Intervall in ungefähr 80 Stichproben die wahre erwartete Rendite ein.
+- Die 1- bis 5-Quartals-Prognosen der nichtlinearen Modelle für die US-Arbeitslosenquote werden mit diesem parametrischen Bootstrap berechnet.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -171,5 +182,7 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 324–343 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-018-p324-p343|S. 324–343]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 419–438 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-023-p419-p438|S. 419–438]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 438–457 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-024-p438-p457|S. 438–457]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 229–248 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-013-p229-p248|S. 229–248]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 419–438 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-023-p419-p438|S. 419–438]]
 
 ## Verwandte Themen

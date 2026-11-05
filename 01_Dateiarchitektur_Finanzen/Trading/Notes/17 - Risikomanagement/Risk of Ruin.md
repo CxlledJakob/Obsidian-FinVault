@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Risk of Ruin
@@ -26,6 +26,8 @@ aktualisiert: 2026-10-30
 - Ein überschätzter Kelly-Hebel, durch überschätzten Mittelwert oder unterschätzte Varianz, führt bei ausreichender Höhe schließlich zum Ruin.
 - Nichtgaußische Renditen können den Kelly-Hebel schon im Backtest auf einen maximalen Drawdown von minus 1 bringen.
 - Half-Kelly wird gewählt, weil die Folge eines zu hohen Hebels der Ruin sein kann und die Folge eines zu niedrigen nur eine geringere Wachstumsrate ist.
+- Das Verkaufen in die Verluste wegen konstanten Hebels kann eine Ansteckung auslösen, wie beim Zusammenbruch der Quant-Fonds im August 2007: ein Fonds liquidiert ähnliche Positionen, die anderen erleiden Verluste und müssen ebenfalls liquidieren.
+- Am 6. Mai 2010 wurde eine Sell-Stop-Order auf Accenture zu 0,01 Dollar je Aktie ausgeführt, weil Market Maker im Stress nur ein Stub Quote von 0,01 Dollar halten mussten und die Liquidität zugleich verschwand.
 
 ## Funktionsweise
 
@@ -60,5 +62,6 @@ aktualisiert: 2026-10-30
 
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 187–206 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-014-p187-p206|S. 187–206]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 229–248 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-013-p229-p248|S. 229–248]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
 
 ## Verwandte Themen

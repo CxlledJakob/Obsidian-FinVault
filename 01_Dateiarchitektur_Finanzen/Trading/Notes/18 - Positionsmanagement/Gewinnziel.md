@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Gewinnziel
@@ -73,6 +73,8 @@ aktualisiert: 2026-10-30
 - Das minimale Gewinnziel der ersten Einheit kann das 50-Prozent-Retracement des vorangehenden Rückgangs sein.
 - Die Hälfte einer Position kann an einem kleineren Retracement geschlossen werden, die zweite Einheit für ein weiter entferntes Ziel bleiben.
 - Ein relativ kleiner Gewinn auf einer Einheit wird schnell mitgenommen, damit der Zwei-Einheiten-Trade auch bei einem Fehlschlag der größeren These netto vorn liegen kann.
+- Das Aufwärtspotenzial einer Momentum-Strategie ist unbegrenzt, solange keine willkürliche Gewinnobergrenze gesetzt wird; eine solche Obergrenze ist unratsam.
+- Das Aufwärtspotenzial einer Mean-Reversion-Strategie ist durch den Mean begrenzt, zu dem die Preise zurückkehren.
 
 ## Funktionsweise
 
@@ -159,5 +161,6 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 196–214 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-015-p196-p214|S. 196–214]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 215–234 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-016-p215-p234|S. 215–234]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 234–250 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-017-p234-p250|S. 234–250]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
 
 ## Verwandte Themen

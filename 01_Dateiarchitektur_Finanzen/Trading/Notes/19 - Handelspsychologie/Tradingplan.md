@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Tradingplan
@@ -191,6 +191,9 @@ aktualisiert: 2026-10-30
 - Immer mindestens zwei Einheiten: die kurzfristige mit objektivem Ausstieg, die der höheren Zeitebene nach der jeweiligen Marktlage.
 - Die Ausstiegsstrategie muss bestimmt sein, bevor der Trade eingegangen wird.
 - Auch wenn die Ausstiegsstrategie subjektiver ist und im Verlauf angepasst wird, sollen das Ziel des Trades und die allgemeinen Bedingungen für einen Ausstieg im Voraus festgelegt sein.
+- Lässt sich der künftige emotionale Zustand nicht simulieren, sind vorab festgelegte und automatisch umgesetzte Handlungsabläufe die Alternative zu einer Wahl in der Hitze des Moments.
+- Eine einfache Handelsregel ändert das Ergebnis der Empathielücke: Verfehlt die Aktie die Gewinnzahl, wird sofort verkauft, statt zu erklären, im nächsten Quartal werde alles gut. Dieselbe Logik gilt für eine Hausregel, nach einer Gewinnwarnung zu verkaufen.
+- Eine formale Verkaufsdisziplin gehört in jeden erfolgreichen Anlageprozess. Der Prozess selbst verlangt, aus der täglichen Markthektik zurückzutreten und psychologische Befunde auf das eigene Verhalten anzuwenden.
 
 ## Risiken und Grenzen
 
@@ -243,5 +246,6 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 215–234 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-016-p215-p234|S. 215–234]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 58–77 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-004-p058-p077|S. 58–77]]
 
 ## Verwandte Themen

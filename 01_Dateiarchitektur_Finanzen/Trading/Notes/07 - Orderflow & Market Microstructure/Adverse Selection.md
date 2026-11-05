@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Adverse Selection
@@ -33,6 +33,12 @@ aktualisiert: 2026-10-30
 - Predatory Algorithms nutzen Quotestornierungen und verschiedene Ordertypen, um Market Maker advers zu selektieren.
 - Bei asymmetrisch informierten Händlern liefern Market Maker uninformierte Prognosen, gemessen an hohem Cross-Entropy-Verlust, und werden advers selektiert.
 - Mikrostrukturelle Information lässt sich nur relativ zur Prognosekraft der Market Maker definieren und messen.
+- Im Übernahmespiel von Bazerman hängt der Wert von Gesellschaft T gleichverteilt zwischen 0 und 100 Dollar je Aktie vom Bohrergebnis ab. Unter der Führung von A ist sie 50 Prozent mehr wert, bei Fehlschlag unter beiden Führungen null. T kennt das Ergebnis, bevor es das Angebot annimmt, und nimmt nur an, wenn das Gebot über dem Wert unter der alten Führung liegt.
+- Die richtige Antwort ist ein Gebot von null. Jedes positive Gebot hat einen negativen Erwartungswert, weil T nur annimmt, wenn der wahre Wert darunter liegt.
+- Bei einem Gebot von 60 Dollar ist T im Schnitt 30 Dollar wert, für den Käufer also 1,5 mal 30 gleich 45 Dollar. Das Gebot von 60 Dollar hat damit einen negativen Erwartungswert.
+- Die große Mehrheit der Antworten liegt zwischen 50 und 75 Dollar, mit der Begründung, die Gesellschaft sei im Schnitt 50 Dollar und für den Käufer 75 Dollar wert. Das ignoriert, dass das Zielunternehmen das Bohrergebnis abwarten kann und nur gewinnbringende Gebote annimmt.
+- Ball, Bazerman und Carroll (1991): Über 20 Runden zeigt sich kein klarer Lertrend. Nur fünf von 72 MBA-Studenten einer Spitzenuniversität lernten die richtige Antwort.
+- Grosskopf und Bereby-Meyer (2002): Auch über 1000 Runden, ausgewertet in Blöcken von zehn Spielen, lernten die Spieler die richtige Antwort nicht.
 
 ## Funktionsweise
 
@@ -68,5 +74,7 @@ aktualisiert: 2026-10-30
 
 - Advances in Financial Machine Learning.pdf, S. 286–305 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-016-p286-p305|S. 286–305]]
 - Advances in Financial Machine Learning.pdf, S. 305–324 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-017-p305-p324|S. 305–324]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 77–96 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-005-p077-p096|S. 77–96]]
 
 ## Verwandte Themen

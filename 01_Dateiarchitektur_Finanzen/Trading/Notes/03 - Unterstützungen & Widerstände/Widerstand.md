@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Widerstand
@@ -76,6 +76,9 @@ aktualisiert: 2026-10-30
 - Mehrere 100-Prozent-APPs in einer sehr engen Zone heißen Symmetrie-Setup und markieren diesen Widerstand.
 - Ein mögliches ABC-Hoch an einer solchen größeren Widerstandszone wird als Two-Step-Pattern bezeichnet.
 - Die Decke eines Regressionskanals bei zwei Standardabweichungen ist ein konkretes oberes Ziel, an dem eine Long-Position geschlossen werden kann.
+- Intraday-Breakout-Einstiege können an verschiedenen Widerstandsniveaus erfolgen.
+- Diese Niveaus können täglich von Banken oder Brokern gemeldet sein oder runde Zahlen nahe dem aktuellen Preis.
+- Viele Stop-Orders liegen auf oder nahe dem Widerstand, und ihr Auslösen treibt den Preis weiter in Bruchrichtung.
 
 ## Funktionsweise
 
@@ -195,6 +198,7 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 125–144 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-010-p125-p144|S. 125–144]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 144–152 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-011-p144-p152|S. 144–152]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 234–250 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-017-p234-p250|S. 234–250]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 
 ## Verwandte Themen
 

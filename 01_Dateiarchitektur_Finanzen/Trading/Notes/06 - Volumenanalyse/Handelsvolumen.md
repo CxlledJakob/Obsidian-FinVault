@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Handelsvolumen
@@ -109,6 +109,14 @@ aktualisiert: 2026-10-30
 - Für On-Balance Volume, Negative Volume und Positive Volume wurde das NYSE-Volumen mit der Richtung oder der prozentualen Änderung des S&P-500-Schlusses verknüpft.
 - Liegt der vorausschauende Horizont bei 3 bis 12 Monaten, verstärkt hohes Volumen den Effekt des Preismomentums.
 - Auf Sicht von 3 Jahren sind Aktien mit hohem Momentum und niedrigem Volumen auf der Oberseite beständiger, während Aktien mit negativem Momentum und hohem Volumen auf der Unterseite beständig bleiben.
+- Im Dezember 1999 wurden allein 134.120 IBM-Intraday-Trades gezählt, etwa sechsmal so viele wie in der Vergleichsstichprobe 1990/91; der Anteil der Trades mit Dauer null verdoppelte sich auf 22,98 Prozent.
+- Am 3. Dezember 1999 gab es zweimal 42 Transaktionen innerhalb einer gegebenen Sekunde.
+- Von 133.475 in den regulären Stunden erfassten IBM-Trades im Dezember 1999 hatten 61.149 keine Preisänderung, etwa 45,8 Prozent und damit deutlich weniger als von November 1990 bis Januar 1991.
+- Boeing hatte am 1. Dezember 2008 in den regulären Handelsstunden 43.894 Transaktionen.
+- Im ADS-Modell für IBM ist das durch 1000 geteilte Volumen des vorherigen Trades statistisch nicht signifikant.
+- Die tägliche Zahl der Transaktionen und der zeitliche Abstand zwischen den Trades stehen bei IBM im Dezember 1999 in einem inversen Verhältnis.
+- Ein Kennzeichen des Blasenendes ist der Zusammenbruch der Umsätze, das Zeichen verlorenen Glaubens an die Aktienkultur. Die laufenden Umsätze bleiben auf massiven, rekordhohen Niveaus.
+- Der verwendete Umsatz ist das gemeldete Volumen relativ zur durchschnittlichen Zahl gelisteter Aktien, danach trendbereinigt, um die zunehmende Gewohnheit herauszunehmen, dass Händler miteinander handeln. Selbst nach dieser Bereinigung bleiben die Umsätze auf Rekord.
 
 ## Funktionsweise
 
@@ -130,6 +138,9 @@ aktualisiert: 2026-10-30
 - Die Benchmark-Trade-Größe Tmax kann ein Bruchteil des gesamten Handelsvolumens des Vortags sein; der genaue Bruchteil wird mit Trainingsdaten optimiert.
 - Ist die Trade-Größe T gleich Tmax, gibt es keine Unsicherheit im beobachteten Preis, der Kalman-Gain ist 1, und die neue Schätzung des mittleren Preises ist genau der beobachtete Preis.
 - Der Kalman-Filter gibt nicht nur Trades mit größerer Stückzahl mehr Gewicht, sondern auch jüngeren Trade-Preisen mehr Gewicht und ist damit mit einem volumen- und zeitgewichteten Durchschnittspreis vergleichbar.
+- Im Market-Making-Kalman-Filter hängt die Messunsicherheit Ve von der Handelsgröße ab: ist die Größe T groß gegenüber einer Benchmark Tmax, ist die Unsicherheit des beobachteten Transaktionspreises klein, und umgekehrt.
+- Ist T gleich Tmax, ist diese Unsicherheit null, der Kalman-Gain gleich 1, und der neue Schätzer des Mittelpreises ist exakt der beobachtete Preis.
+- Der Filter gewichtet größere Trades stärker und zusätzlich jüngere Preise stärker. Das entspricht einem volumen- und zeitgewichteten Durchschnittspreis, nicht nur einem VWAP.
 
 ## Voraussetzungen
 
@@ -143,6 +154,8 @@ aktualisiert: 2026-10-30
 - Die CME bot früher mit Chart-EX ein ähnliches Bild für Futures an. Die Autorin hält dieses Angebot für eingestellt.
 - Auf einem Tick-Chart wird Trade Volume statt Tick Volume gewählt, sonst sind alle Säulen gleich hoch.
 - Richard Arms entwickelte Equivolume und veröffentlichte es 1994 in Volume Cycles in the Stock Market. Sein Satz dazu: trüge der Markt eine Armbanduhr, wäre sie in Aktien geteilt, nicht in Stunden.
+- Das Handelsvolumen kann ein Schlüsselindikator der Endphasen einer Blase sein.
+- Als Stimmungsindikator dient der trendbereinigte Umsatz der NYSE, gemeldetes Volumen geteilt durch die durchschnittliche Zahl gelisteter Aktien. Darüber wurde zuvor im Global Strategy Weekly vom 29. November 2001 geschrieben.
 
 ## Regeln und Kriterien
 
@@ -231,6 +244,11 @@ aktualisiert: 2026-10-30
 - Im GLD handelten einzelne Kerzen über 6 Millionen bei einem Durchschnitt um 500.000.
 - Der Wochenchart des Dow Jones ist die Zeitebene, die ein längerfristiger Investor für Aktien und die großen Indizes betrachtet.
 - Der ES E-Mini wird als der von großen Akteuren am stärksten manipulierte Index beschrieben. Das Beispiel ist ein Zehn-Minuten-Chart über eine Session zwischen dem Tag davor und dem Tag danach.
+- 2002 blieben die Handelsumsätze erstaunlich hoch. Das wurde als Zeichen gelesen, dass sich die Leute der Welt nach der Blase noch nicht vollständig angepasst hatten. Kapitulation und Revulsion fehlten.
+- Das Ende von Bärenmärkten fällt gewöhnlich mit einem Einbruch des Volumens zusammen. Ein solches Zeichen fehlte, der Umsatz blieb massiv hoch.
+- Das Volumen relativ zur Marktkapitalisierung blieb auf erstaunlich hohem Niveau, vergleichbar den späten 1920ern.
+- Im Labormarkt handelten die Diplom-Ökonomen zum richtigen Preis, aber die Umsätze lagen viel höher, als die Theorie erwarten ließe.
+- Bei den Undergraduates und bei den Geschäftsführern entstanden Blasen in demselben einfachen Markt. Die Executives trieben den Preis im Hoch auf 570 Prozent des Fundamentalwerts, die Undergraduates auf eine Lücke von 270 Prozent.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -274,6 +292,10 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 381–400 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-021-p381-p400|S. 381–400]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 400–419 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-022-p400-p419|S. 400–419]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 267–286 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-015-p267-p286|S. 267–286]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 495–514 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen
 

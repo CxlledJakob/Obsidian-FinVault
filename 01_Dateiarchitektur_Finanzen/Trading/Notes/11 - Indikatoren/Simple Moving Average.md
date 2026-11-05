@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Simple Moving Average
@@ -34,6 +34,12 @@ aktualisiert: 2026-10-30
 - Eine Kreuzung gleitender Durchschnitte allein taugt wenig, die wahrscheinliche Trendrichtung einer künftigen Periode zu erkennen; Preisumkehren fallen immer wieder nicht mit diesen Signalen zusammen.
 - Die langsame Linie der meisten Zwei-Linien-Momentum-Indikatoren ist gewöhnlich ein gleitender Durchschnitt der schnellen Linie, die gewöhnlich die Rohdaten ist.
 - Eine Momentum-Kreuzung ähnelt einer Kreuzung gleitender Durchschnitte, betrifft aber die Indikatorwerte und nicht die Preisdaten selbst.
+- In der linearen Mean-Reversion haben gleitender Durchschnitt und gleitende Standardabweichung einen Lookback gleich der Halbwertszeit. Bei 20 Tagen Halbwertszeit wäre ein Lookback von 5 Tagen unpassend; ein kleines Vielfaches der Halbwertszeit ist oft nahe optimal.
+- Der gleitende Durchschnitt wird trotz der Annahme eines festen Mittels benutzt, weil sich der Mittelwert durch Wirtschaft oder Unternehmensführung langsam ändern kann.
+- Bollinger-Mittel und Bollinger-Standardabweichung werden über einen Lookback berechnet, der frei optimiert oder gleich der Halbwertszeit der Mean Reversion gesetzt wird.
+- Ein kurzes gleitendes Fenster lässt den Durchschnitt sprunghaft springen, wenn der älteste Bar durch den neuesten ersetzt wird. Dieselbe Sprungstelle trifft die gleitende Standardabweichung und eine im Fenster geschätzte Hedge Ratio.
+- Der GLD-USO-Lookback für die dynamische Hedge Ratio und den Z-Score ist 20 Handelstage und mit Wissen im Nachhinein nahe optimal gewählt. Dieselbe Fensterlänge gilt für die Ratio USO/GLD; die ersten 20 Beobachtungen werden entfernt, damit das Testset mit den Spread-Strategien übereinstimmt.
+- Die VX-Kalenderspread-Strategie berechnet den gleitenden Durchschnitt des Verhältnisses Back zu Front mit einem Lookback von 15 Tagen, zusammen mit den Standardabweichungen über dasselbe Fenster.
 
 ## Funktionsweise
 
@@ -66,6 +72,10 @@ aktualisiert: 2026-10-30
 - Die langsame Linie eines Indikators ist gewöhnlich nur ein gleitender Durchschnitt der schnellen Linie und reagiert langsamer auf Momentumänderungen.
 - Der MACD misst die Differenz zwischen zwei gleitenden Durchschnitten.
 - Ein Balken auf der anderen Seite der MACD-Mittellinie bedeutet, dass der schnellere gleitende Durchschnitt den langsameren nach oben oder unten gekreuzt hat.
+- Graham und Dodd bilden das zyklisch bereinigte Kurs-Gewinn-Verhältnis mit einem gleitenden Durchschnitt der Gewinne von mindestens fünf, vorzugsweise sieben oder zehn Jahren, nicht mit einer einzigen Trailing-Gewinnzahl.
+- Das Graham-und-Dodd-Verhältnis teilt den aktuellen Kurs durch den zehnjährigen Durchschnitt der ausgewiesenen Gewinne.
+- Ein einfacher gleitender Durchschnitt der Vergangenheit wird einer aufwendigen Trendschätzung vorgezogen. Graham hatte keine verlässlichen Aktienwertberechnungen gesehen, die über einfache Arithmetik oder die elementarste Algebra hinausgingen.
+- Fehlt eine volle Gewinnhistorie, wird der Durchschnitt auf dem längsten verfügbaren Zeitraum gerechnet.
 
 ## Voraussetzungen
 
@@ -84,6 +94,13 @@ aktualisiert: 2026-10-30
 - Hsu und Kuan nennen als Thema komplexer linearer Regeln unter anderem alle Regeln, die auf einem gleitenden Durchschnitt des On-Balance Volume beruhen, neben allen Regeln auf Channel Breakouts.
 - Das Kreuz zweier gleitender Durchschnitte ist eines der fünf getesteten Trendfolge-Systeme, neben Channel-Breakout, zwei Momentum-Fassungen und MACD gegen die Signallinie.
 - Der gleitende Durchschnitt gehört zu den Zeitreihenoperatoren, zusammen mit gleitender Kanalnormalisierung, Ausbruchskanälen und gleitenden Steigungen.
+- Buy-on-Gap verlangt, dass der Eröffnungskurs über dem 20-Tage-Durchschnitt der Schlusskurse liegt. Im Code ist der Lookback 20 und der Durchschnitt um einen Tag verschoben.
+- Dieser Durchschnitt wirkt als Momentum-Filter: Titel über einem langfristigen Mittel ziehen Verkaufsdruck länger orientierter Long-only-Fonds an, und nur wenig gefallene Aktien kehren eher um.
+- Die Short-Variante verlangt einen Gap nach oben um eine Standardabweichung bei einem Open, der noch unter dem 20-Tage-Durchschnitt liegt.
+- Im SPY-Backtest sind gleitender Durchschnitt und gleitende Standardabweichung des Log-Marktwerts auf einen Lookback von 5 fixiert, mit dem Vorteil des Rückblicks.
+- Die beiden Währungsbeispiele nutzen einen Lookback von 20 Tagen für den gleitenden Durchschnitt. Auf AUD.CAD ist das Signal der Schluss minus diesem Durchschnitt.
+- Die Hedge Ratio im ungleichen Paar kommt nicht aus diesen 20 Tagen, sondern aus einem Johansen-Fenster von 250 Tagen. Die 20 Tage bleiben für Mittel und Standardabweichung.
+- Beim CL-Kalenderspread werden gleitender Durchschnitt und gleitende Standardabweichung der Rollrendite mit einem Lookback gleich der gerundeten Halbwertszeit berechnet, etwa 36 Tage.
 
 ## Regeln und Kriterien
 
@@ -159,5 +176,12 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 23–42 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-003-p023-p042|S. 23–42]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 343–362 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-019-p343-p362|S. 343–362]]
 
 ## Verwandte Themen

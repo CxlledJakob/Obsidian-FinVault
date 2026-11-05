@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Market Impact
@@ -39,6 +39,17 @@ aktualisiert: 2026-10-30
 - Das Rebalancing gehebelter ETFs nahe dem Schluss erzeugt Momentum im Marktwert des Portfolios und in den Basiswerten.
 - Momentum Ignition legt eine große Buy-Limit-Order auf den Best Bid, um Kaufdruck vorzutäuschen und andere zum Kauf am Ask zu bewegen.
 - Zum Slippage gehört neben dem Bid-Ask-Spread der Betrag, um den die Order des Anlegers den Marktpreis schiebt, nach oben beim Kauf und nach unten beim Verkauf.
+- Das Platzieren oder Ausführen einer Order kann das Verhalten der anderen Marktteilnehmer ändern, sodass der Gewinn einer Hochfrequenzstrategie selbst mit dem historischen Gesamtorderbuch von diesen Reaktionen abhängt.
+- Wer große Größen handelt, verringert den Market Impact von Ein- und Ausstieg, wenn die Position schrittweise auf- und abgebaut wird.
+- Cheng und Madhavan schätzen, dass eine Bewegung des SPX um 1 Prozent Käufe oder Verkäufe von etwa 17 Prozent des Market-on-Close-Volumens erzwingt und damit erheblichen, momentumtreibenden Market Impact hat.
+- Das Rebalancing eines dreifach gehebelten ETF wie DRN mit über hundert Millionen Dollar Eigenkapital nahe dem Schluss verkauft bei negativer Portfoliorendite die Komponenten und kauft bei positiver.
+- Ende Januar 2009 lag das AUM aller gehebelten ETFs, Long und Short, bei 19 Milliarden Dollar.
+- High-Frequency-Händler können nahe einer Unterstützung künstlichen Verkaufsdruck erzeugen, indem sie große Verkaufsorders legen, um den nächsten Tick nach unten zu treiben.
+- Große institutionelle Orders werden nicht mehr als ein Block ausgeführt, sondern in winzige Child Orders zerlegt und über den Tag sowie verschiedene Plätze ausgeführt.
+- Eine aktuellere Analyse des Intraday-Rebalancing stammt von Rodier, Haryanto, Shum und Hejazi, 2012.
+- Das CAPM setzt keine Transaktionskosten voraus, also weder Kommission noch Geld-Brief-Spanne, und dass jede Long- oder Short-Position in jeder Größe den Marktpreis nicht beeinflusst.
+- In beliebiger Größe zu handeln, ohne einen Fußabdruck im Markt zu hinterlassen, ist für ein großes Institut nur ein Wunsch und eine der zwei Schlüsselannahmen, an denen das CAPM scheitert.
+- Diese Preisannahme gehört zu den Annahmen, die der Realität offenkundig widersprechen.
 
 ## Funktionsweise
 
@@ -61,6 +72,7 @@ aktualisiert: 2026-10-30
 
 - Wird die große Buy-Limit-Order beim Flipping gefüllt, kann der anschließende Verkauf mit Verlust erfolgen.
 - Eine aktuellere Impact-Analyse zum Rebalancing gehebelter ETFs stammt von Rodier, Haryanto, Shum und Hejazi (2012).
+- Die Regulation NMS im Juli 2007 trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei.
 
 ## Beispiele
 
@@ -81,5 +93,9 @@ aktualisiert: 2026-10-30
 - Advances in Financial Machine Learning.pdf, S. 305–324 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-017-p305-p324|S. 305–324]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 33–51 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-003-p033-p051|S. 33–51]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
 
 ## Verwandte Themen

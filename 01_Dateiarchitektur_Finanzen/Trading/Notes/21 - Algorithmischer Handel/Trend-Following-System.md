@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Trend-Following-System
@@ -49,6 +49,23 @@ aktualisiert: 2026-10-30
 - Der n-Perioden-Kanalausbruch identifiziert Trends und hat sich trotz extremer Einfachheit als so wirksam erwiesen wie komplexere Trendfolge-Methoden.
 - Die Fallstudie testet für diesen Operator 11 Rückschauen: 3, 5, 8, 12, 18, 27, 41, 61, 91, 137 und 205 Tage. Größere Rückschauen identifizieren größere Trends und machen den Kanal breiter und unempfindlicher.
 - Echte Trends sind Strähnen, die länger dauern als die Strähnen in Random Walks. In echt trendenden Prozessen enthalten frühere Beobachtungen nützliche Prognoseinformation.
+- Vier Hauptursachen des Momentums sind die Persistenz der Rollrenditen, besonders ihres Vorzeichens, bei Futures; die langsame Diffusion, Analyse und Annahme neuer Information; erzwungene Käufe oder Verkäufe verschiedener Fonds; und Marktmanipulation durch Hochfrequenzhändler.
+- Die Strategien dieses Kapitels halten Positionen über mehrere Tage und heißen deshalb Interday-Momentum-Strategien; viele von ihnen leiden unter einer neu entdeckten Schwäche, von der Intraday-Momentum weniger betroffen ist.
+- Für TU wird bei Lookback 250 und Haltedauer 25 vom 1. Juni 2004 bis 11. Mai 2012 eine Sharpe Ratio von 1 und 1,7 Prozent annualisiert erreicht, bei einem maximalen Drawdown von 2,5 Prozent auf einem Nominalwert von etwa 200.000 Dollar.
+- Ein saubereres Signal als die verzögerte Gesamtrendite ist die verzögerte Rollrendite; mit einer Schwelle von annualisiert 3 Prozent steigen APR auf 2,5 Prozent, die Sharpe Ratio auf 2,1 und der maximale Drawdown fällt auf 1,1 Prozent, vom 2. Januar 2009 bis 13. August 2012.
+- Der Alexander-Filter kauft bei einem Tagesanstieg von mindestens x Prozent und geht short, wenn der Preis von einem späteren Hoch um mindestens x Prozent fällt.
+- Der S&P DTI ist long, wenn der Future über seinem exponentiellen gleitenden Durchschnitt liegt, und short, wenn er darunter liegt, mit monatlichem Rebalancing über 24 Futures; seit der Finanzkrise 2008 ist die Leistung schlecht, der Drawdown seit dem 5. Dezember 2008 beträgt minus 25,9 Prozent.
+- Wegen weniger Trades bei langen Haltedauern besteht Data-Snooping-Risiko; der eigentliche Test ist echtes Out-of-Sample.
+- Momentum-Strategien sind nach der Erfahrung des Autors schwerer profitabel zu machen und haben dann niedrigere Sharpe Ratios als Mean-Reversion-Strategien, weil unabhängige Signale selten sind.
+- Nach Daniel und Moskowitz schneiden Momentum-Strategien auf Futures oder Aktien mehrere Jahre nach einer Finanzkrise miserabel ab.
+- Nach dem Crash 1929 brauchte eine repräsentative Momentum-Strategie mehr als 30 Jahre bis zum alten Equity-Hoch; Ursache ist vor allem der starke Rebound der Short-Positionen nach der Krise.
+- Nach 2008 bis 2009 verschwand querschnittliches Aktienmomentum und wurde durch starke Mean Reversion ersetzt; die Dauer dieses Regimes ist unbekannt.
+- Stop-Losses sind mit Momentum vereinbar, weil die Gegenposition bei einem Richtungswechsel eröffnet wird und der Ausstieg aus der verlierenden Position damit als Stop wirkt; mit Mean Reversion sind sie nicht vereinbar, weil sie dem Einstieg widersprechen.
+- Die Wirkungsdauer kürzerfristigen nachrichtengetriebenen Momentums wird immer kürzer, je mehr Händler es aufgreifen; gewinnmeldungsgetriebenes Momentum hielt früher mehrere Tage und hält inzwischen kaum bis zum Börsenschluss.
+- Die Haltedauer muss deshalb womöglich ständig verkürzt werden, ohne vorhersagbaren Zeitplan.
+- Beispiel 1.1 erzeugt eine Renditereihe mit der Kurtosis der TU-Futures, aber ohne serielle Autokorrelationen, und trifft in 12 Prozent der Zufallsziehungen die Renditen der TU-Momentum-Strategie.
+- Der kumulierte Verlust aufeinanderfolgender Verlustpositionen kann trotz begrenztem Einzelverlust ruinös sein.
+- Momentum-Strategien überstehen Risiken und können in ihnen gedeihen, schnitten aber in der Folge riskanter Ereignisse schlecht ab.
 
 ## Funktionsweise
 
@@ -113,6 +130,8 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 362–381 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-020-p362-p381|S. 362–381]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 381–400 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-021-p381-p400|S. 381–400]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
 
 ## Verwandte Themen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Mean Reversion
@@ -32,6 +32,7 @@ aktualisiert: 2026-10-30
 - Mean-Reversion-Regeln beruhen auf dem Konzept, dass eine Datenreihe zu ihrem Mittelwert zurückkehren soll, wenn sie gegenüber den jüngeren Werten extrem hohe oder extrem niedrige Werte erreicht.
 - Echte Mean Reversion bedeutet, dass Strähnen kürzer dauern als in Random Walks, also dass positive und negative Ergebnisse häufiger wechseln, als es bei Random Walks der Fall ist.
 - Mean-Reversion-Regeln beruhen darauf, dass eine Datenreihe zu ihrem Mittelwert zurückkehren soll, wenn sie gegenüber den jüngeren Werten extrem hoch oder extrem tief liegt.
+- Dass die Mehrschritt-Punktprognose eines stationären AR(p) mit wachsendem Horizont gegen den unbedingten Erwartungswert der Reihe konvergiert, heißt in der Finanzliteratur Mean Reversion.
 
 ## Kernaussagen
 
@@ -117,6 +118,97 @@ aktualisiert: 2026-10-30
 - Sowohl in echt trendenden als auch in echt mean-reverting Prozessen enthalten frühere Beobachtungen nützliche Prognoseinformation.
 - In echten Random-Walk-Prozessen enthalten frühere Beobachtungen keine Prognoseinformation.
 - Menschen haben Schwierigkeiten, Zufallsreihen von Reihen mit systematischem Verhalten wie Mean Reversion oder Trend zu unterscheiden. Dieses Scheitern erklärt die Fehlwahrnehmung der Hot Hand bei Sportfans und die Unfähigkeit von Chartisten, echte von zufälligen Charts zu unterscheiden.
+- Unterschieden wird Zeitreihen-Mean-Reversion von querschnittlicher Mean Reversion.
+- Die Leistung von Strategien mean-revertiert oft.
+- Gewinne der linearen Mean-Reversion-Beispiele stammen nicht aus subtiler Kompliziertheit der Strategie, sondern aus einer intrinsischen, offen sichtbaren Marktineffizienz.
+- Die meisten Preisreihen sind geometrische Random Walks. Zufällig um einen Mittelwert von null verteilt sind gewöhnlich die Renditen, nicht die Preise. Mean Reversion der Renditen lässt sich nicht handeln.
+- Anti-Serienkorrelation der Renditen ist handelbar und ist dasselbe wie Mean Reversion der Preise.
+- Querschnitts-Mean-Reversion heißt, dass die kumulierten Renditen der Instrumente eines Korbs zur kumulierten Korbrendite zurückkehren. Die kurzfristigen relativen Renditen, Instrumentrendite minus Korbrendite, sind dann seriell antikorreliert. Sie tritt am häufigsten bei Aktienkörben auf und wird in Kapitel 4 behandelt.
+- Die Halbwertszeit ist minus log(2)/λ. Ist λ positiv, liegt keine Mean Reversion vor und eine solche Strategie sollte nicht angesetzt werden. Liegt λ nahe null, ist die Halbwertszeit sehr lang und es lassen sich zu wenige Roundtrips abschließen.
+- λ setzt die natürliche Zeitskala. Bei einer Halbwertszeit von 20 Tagen sollte der Lookback für Durchschnitt und Standardabweichung nicht 5 Tage betragen. Ein kleines Vielfaches der Halbwertszeit ist oft nahe optimal und erspart die Brute-Force-Optimierung eines freien Parameters.
+- Für USD.CAD beträgt die Halbwertszeit etwa 115 Tage, für das Johansen-Portfolio aus EWA, EWC und IGE 23 Tage. Die kürzere Halbwertszeit lässt eine bessere Strategie erwarten.
+- Die Stationaritätstests verlangen mindestens 90 Prozent Sicherheit. Darunter kann eine Strategie trotzdem profitabel sein; dann entscheidet die Halbwertszeit über die praktische Handelbarkeit. Auch eine nichtstationäre Reihe muss von Mean Reversion nicht abhalten.
+- Der Mittelwert wird meist als fest angenommen, kann sich aber durch Wirtschaft oder Unternehmensführung langsam ändern. Deshalb werden gleitender Durchschnitt und gleitende Standardabweichung benutzt, auch um Gewinn schneller mitzunehmen.
+- Die Halbwertszeit ist ein guter Prädiktor für die Profitabilität oder die Sharpe Ratio einer Mean-Reversion-Strategie auf dieser Preisreihe.
+- Mean-Reversion-Strategien lassen sich leicht bauen, weil das einzelne Instrument nicht von sich aus stationär sein muss. Jährlich neu aufgelegte ETFs, die sich von bestehenden nur geringfügig unterscheiden, vergrößern die Auswahl kointegrierender Bausteine.
+- Hinter einem Paar steht oft eine fundamentale Geschichte. GDX kointegriert mit GLD, weil der Wert der Goldbergbauunternehmen stark vom Goldwert abhängt. Anfang 2008 lief das Paar auseinander, weil hohe Energiepreise die Goldförderung ungewöhnlich teuer machten.
+- Diese fundamentale Begründbarkeit steht im Gegensatz zu vielen Momentum-Strategien, deren einzige Rechtfertigung langsamere Anleger sind. Holen diese auf, kann die Momentum-Strategie ohne Erklärung aufhören zu funktionieren.
+- Die Zeitskalen reichen von Sekunden beim Market Making bis zu Jahren, in denen fundamentale Anleger auf den fairen Wert warten. Die kurze Skala erhöht Tradezahl, statistische Sicherheit, Sharpe Ratio und zusammengesetzte Rendite.
+- Die hohe Stetigkeit kann den späteren Zusammenbruch einleiten. Der Bruch, dessen fundamentaler Grund oft erst im Nachhinein erkennbar ist, trifft häufig beim maximalen Hebel nach einer Erfolgsserie. Übliche Stop-Losses lassen sich dabei logisch nicht einsetzen; passendes Risikomanagement behandelt Kapitel 8.
+- Echte Stationarität oder Kointegration ist für eine erfolgreiche Strategie nicht notwendig. Kurzfristige oder saisonale Mean Reversion lässt sich abschöpfen und die Position schließen, bevor der Preis das nächste Gleichgewicht erreicht. Saisonal heißt, die Reihe kehrt nur in bestimmten Tagesperioden oder unter bestimmten Bedingungen zurück.
+- Nicht jede stationäre Reihe ist lukrativ. Eine Halbwertszeit von zehn Jahren genügt nicht für große Gewinne.
+- Die lineare Strategie skaliert die Stückzahl mit der Abweichung vom gleitenden Mittel. Sie ist praktisch parameterfrei, aber unpraktisch wegen ständigem infinitesimalem Rebalancing und unbegrenzter Kaufkraft. Praktischer sind Bollinger-Bänder.
+- GLD und USO sind nicht kointegriert. Der adaptive Preisspread liefert trotzdem etwa 10,9 Prozent APR und eine Sharpe Ratio von 0,59; Bollinger-Bänder auf demselben Spread verbessern das auf 17,8 Prozent und 0,96.
+- Sind zwei Assets nicht wirklich kointegriert, die kurzfristige Spread-Rückkehr aber glaubwürdig, kann die Ratio besser arbeiten als Preis- oder Logpreisspread, analog zum gleitenden Durchschnitt der linearen Strategie. Bei GLD und USO ist der adaptive Preisspread der Ratio dennoch deutlich überlegen, und die Ratio hat eine negative APR.
+- Neben der Zeitreihen-Mean-Reversion, bei der der Preis zum Mittel der eigenen Historie zurückkehrt, gibt es die querschnittliche Form: die kumulierten Renditen der Instrumente eines Korbs kehren zur kumulierten Rendite des Korbs zurück.
+- Die statistischen Tests der Zeitreihen-Mean-Reversion sind für die querschnittliche Form weitgehend irrelevant. Diese zweite Form macht Mean-Reversion-Strategien für Aktien noch leichter zu bauen.
+- Theoretisch ist der Aktienmarkt der fruchtbarste Boden, weil Sektorpaare vielen gemeinsamen Faktoren ausgesetzt sind und die große Zahl Diversifikation erleichtert. Praktisch funktionieren einfache Mean-Reversion-Strategien bei ETF-Paaren und ETF-Tripletts besser.
+- Bei der querschnittlichen Strategie muss der Kurs einer Aktie nicht zum eigenen historischen Mittel zurück. Genutzt wird die serielle Antikorrelation der kurzfristigen relativen Renditen, definiert als Aktienrendite minus Durchschnitt des Universums.
+- Eine Aktie kann geshortet werden, obwohl ihre absolute Rendite negativ ist, solange sie weniger negativ ist als der Durchschnitt aller Aktien. Gewinne entstehen nur aggregiert, einzelne Titel dienen an manchen Tagen als Hedge.
+- Das Kapital der Aktie i ist minus (ihre Tagesrendite minus die Durchschnittsrendite) geteilt durch die Summe der absoluten Abweichungen aller Aktien, sodass das Bruttokapital jeden Tag 1 Dollar beträgt.
+- Preisreihen ohne Mean Reversion auf regelmäßigen Tagesbars können in bestimmten Perioden stark mean-reverten. Solche Bedingungen sind zu finden, ohne einen Data-Snooping-Bias einzubauen.
+- Ein Momentum-Filter auf einer Mean-Reversion-Strategie verbessert typischerweise die Stetigkeit. Aktien, die nur wenig gefallen sind, kehren eher um als stark gefallene, weil letztere oft negative Nachrichten tragen.
+- Bewegungen aus Liquiditätsbedarf kehren eher um als Bewegungen aus einer Verschiebung der Fundamentaldaten. Deshalb kann eine Intraday-Strategie in einem nachrichtenreichen Umfeld bestehen, in dem mehrtägiges Paar-Trading scheitert.
+- Statt der relativen Rendite kann das Kurs-Gewinn-Verhältnis die Aktien reihen, mit Gewinnen des letzten Quartals oder mit geschätzten Gewinnen von Analysten oder Firmen.
+- Eine positive Änderung der Gewinnschätzungen bringt voraussichtlich eine positive Rendite. Passt die Rendite zur prozentualen Änderung der Schätzungen, ist keine Mean Reversion zu erwarten, und die Aktie sollte über dieses Ranking nicht geshortet werden.
+- Währungen und Futures sind überwiegend das Feld von Momentum-Händlern, und die meisten CTAs handeln Momentum. Die meisten Paare kointegrieren nicht, die meisten Portfolios zeigen keine querschnittliche Mean Reversion. Die Gelegenheiten sind begrenzt, aber nicht abwesend.
+- Ausnahmen, in denen Mean Reversion die Ausnahme von der Regel ist, sind Future-Kalenderspreads und der Intermarket-Spread aus Volatilitäts-Future und Aktienindex-Future.
+- Kalenderspreads sehen nach Mean Reversion aus, weil beide Beine denselben Basiswert abbilden, mean-reverten aber im Allgemeinen nicht. Im Modell hängt das Signal nur von der Rollrendite ab, nicht vom Spot.
+- Renditereihen mean-reverten fast immer, Preisreihen nicht. Hier wird nur die Rollrendite betrachtet, nicht die Gesamtrendite, deshalb kann das anders sein. Das Modell unterstellt konstante Spot- und Rollrendite und wird auch angewendet, wenn die Rollrendite langsam variiert.
+- Der 12-Monats-Log-Kalenderspread von CL ist im ADF-Test mit 99 Prozent stationär, die Halbwertszeit beträgt etwa 36 Tage. Die lineare Strategie erzielt ungehebelt 8,3 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,3 vom 2. Januar 2008 bis 13. August 2012.
+- Für einzelne Rohstoffmärkte mean-reverten oft nur Kalenderspreads bestimmter Monate und Abstände.
+- Der VIX ist mean-reverting, der back-adjustierte Frontmonat des VX-Futures im ADF-Test dagegen definitiv nicht. Der ganze Unterschied ist die Rollrendite, und eine naive Mean-Reversion-Strategie auf VX ist deshalb keine gute Strategie.
+- Das Verständnis von Spot- gegen Rollrendite und von Backwardation gegen Contango soll neue Future-Strategien nahelegen, ohne auf ad-hoc-technische Indikatoren angewiesen zu sein.
+- Wegen der Rollrendite erzeugt Mean Reversion des Spotpreises nicht notwendig Mean Reversion des Futurespreises.
+- An Rohstoffmärkten ist Saisonalität oft so ausgeprägt, dass nur Kalenderspreads bestimmter Monate und bestimmter Monatsabstände mean-reverten; diese marktabhängigen Einzelheiten werden hier nicht weiterverfolgt.
+- Intermarket-Spreads von Futures verschiedener Basiswerte, die mean-reverten, sind schwer zu finden.
+- Der Crack Spread long drei CL, short zwei RB und short ein HO ist im ADF-Test vom 20. Mai 2002 bis zum 4. Mai 2012 nicht mean-reverting.
+- Der Crack Spread steigt dramatisch etwa vom 9. März 2007 bis zum 3. Juli 2008 und fällt danach scharf; die lineare Mean-Reversion-Strategie hat in dieser Periode negative Renditen.
+- CL gegen BZ im Verhältnis 1:1 ist weit von stationär entfernt, weil BZ CL anhaltend outperformt hat.
+- Die lineare Strategie auf dem 12-Monats-Kalenderspread von CL erzielt vom 2. Januar 2008 bis zum 13. August 2012 eine ungehebelte annualisierte Rendite von 8,3 Prozent und eine Sharpe Ratio von 1,3.
+- Das Portfolio long 0,3906 VX und long ein ES soll stationär sein; die Bollinger-ähnliche Strategie darauf erzielt vom 29. Juli 2010 bis zum 8. Mai 2012 12,3 Prozent annualisiert bei einer Sharpe Ratio von 1,4.
+- Dieselbe Preisreihe kann auf verschiedenen Zeitrahmen Momentum und Mean Reversion zeigen; bei TU ist der Hurst-Exponent 0,44, während einzelne Renditepaare positiv korrelieren.
+- Eine Mischung kann besser sein als jede Regel allein: bei CL wird zum Schluss gekauft, wenn der Preis unter dem Stand von vor 30 Tagen und über dem Stand von vor 40 Tagen liegt, und umgekehrt für Shorts; sonst wird glattgestellt.
+- Diese CL-Regel erzielt 12 Prozent annualisiert bei einer Sharpe Ratio von 1,1.
+- Ein Mean-Reversion-Filter auf Beispiel 6.1 nimmt IBX an der MEFF, KT an der NYMEX, SXF an der DE, US an der CBOT, CD an der CME, NG an der NYMEX und W an der CME in Tabelle 6.2 auf und verbessert Rendite und Sharpe Ratio der schon enthaltenen Kontrakte.
+- Nach dem Crash 2008 bis 2009 wird querschnittliches Aktienmomentum durch starke Mean Reversion ersetzt; wie lange das anhält, ist offen.
+- Nach dem Ende des Fondskauf- oder -verkaufsdrucks mean-reverten die betroffenen Aktien oft; die Strategie auf dem Druck der Quartale t minus 4 bis t minus 1 erzielt weitere 7 Prozent annualisiert.
+- Das lineare Mean-Reversion-Modell für S&P-500-Aktien hält weniger als einen Tag und hat eine Sharpe Ratio von 4,7.
+- Momentum-Strategien haben in der Erfahrung des Autors tendenziell niedrigere Sharpe Ratios als Mean-Reversion-Strategien und sind schwerer profitabel zu bauen.
+- Stop-Losses widersprechen den Einstiegssignalen von Mean-Reversion-Strategien und sind mit ihnen nicht vereinbar.
+- Das Aufwärtspotenzial ist durch den Mean als natürliche Gewinnobergrenze begrenzt, das Abwärtspotenzial kann unbegrenzt sein.
+- Eine einzige Position kann einen enormen Drawdown erzeugen.
+- Zusammen mit Momentum-Strategien entstehen höhere Sharpe Ratios und kleinere Drawdowns als mit Mean Reversion allein.
+- Ein Stop-Loss scheint der zentralen Annahme zu widersprechen: fällt der Preis nach dem Long-Einstieg weiter, wird gerade dann die Rückkehr erwartet, und ein Ausstieg auf dem tiefen Preis ist nicht sinnvoll.
+- Der Autor hat keine Mean-Reversion-Strategie gebacktestet, deren APR oder Sharpe Ratio durch einen aufgezwungenen Stop-Loss stieg.
+- Hört die Mean Reversion dauerhaft auf, während eine Position offen ist, kann die Reihe für längere Zeit, vielleicht für immer, zum Trend werden; dann verhindert der Stop-Loss katastrophale Verluste und gibt Zeit, die Strategie vor einem Verlust von 100 Prozent abzuschalten.
+- Ein Stop-Loss senkt die Performance, solange die Preise mean-reverting bleiben, und verbessert sie, wenn ein Regimewechsel zum Trend einsetzt.
+- Er wird größer gewählt als der maximale Intraday-Drawdown des Backtests, damit er dort nie auslöst und die ausgewiesene Performance nicht verändert, ein künftiges Black-Swan-Ereignis aber am Ruin hindert.
+- Die Buy-on-Gap-Aktienstrategie aus Kapitel 4 hatte vom 11. Mai 2006 bis 24. April 2012 eine annualisierte Durchschnittsrendite von etwa 8,7 Prozent und eine Sharpe Ratio von 1,5; lag der VIX des Vortags über 35, stieg die annualisierte Tagesrendite auf 17,2 Prozent bei einer Sharpe Ratio von 1,4, die Strategie profitiert also von diesem sogenannten Risiko.
+- Der Ölpreis ist ein guter führender Risikoindikator für den Paarhandel von GLD gegen GDX; auch andere Rohstoffpreise, etwa Gold, können das für ETFs der produzierenden Länder oder Firmen sein.
+- Für die Mean-Reversion-Strategie aus Beispiel 5.1 beträgt der Kelly-Hebel, gerechnet aus den Tagesrenditen des Testsets, 18,4.
+- Die Regression zum Mittel ist eine der grundlegenden Marktunvollkommenheiten, aus denen sich eine einfache lineare Strategie ableiten lässt, neben den Rollrenditen bei Futures und dem nötigen Rebalancing gehebelter ETFs zum Handelsschluss.
+- Ist die Unvollkommenheit verstanden, ist eine Strategie dazu leicht zu konstruieren; beliebige Zusatzregeln sind unnötig, wenn ein einfaches Modell die Unvollkommenheit ausnutzt.
+- Unter einem Random-Walk-Modell für logarithmierte Aktienkurse ist der Kurs nicht prognostizierbar und nicht mean-reverting.
+- Die Punktprognose eines Random Walk bleibt für jeden Horizont der Wert am Prognoseursprung, deshalb kehrt der Prozess nicht zum Mittel zurück.
+- Die Moving-Average-Darstellung einer stationären Reihe zeigt die Mean Reversion: weil die ψ-Gewichte gegen null gehen, läuft die l-Schritt-Prognose gegen den Mittelwert µ, und langfristig wird erwartet, dass die Renditereihe ihren Mittelwert erreicht.
+- Die Geschwindigkeit, mit der diese Prognose gegen µ läuft, ist die Geschwindigkeit der Mean Reversion.
+- Beim Random Walk ist jedes ψ-Gewicht gleich 1, der vergangene Schock wirkt dauerhaft, und die Prognosevarianz läuft nicht gegen eine endliche unbedingte Varianz.
+- Weil die l-Schritt-Prognose der bedingte Erwartungswert von r(h plus l) am Ursprung h ist, bedeutet die Konvergenz gegen µ, dass die Reihe langfristig ihren Mittelwert erreicht.
+- Die lokal geglättete bedingte Änderung des wöchentlichen 3-Monats-Treasury-Bill-Satzes ist positiv, wenn der Satz klein ist, und negativ, wenn er groß ist. Das entspricht der Erwartung, dass ein hoher Zins eher fällt und ein niedriger eher steigt.
+- Die Schätzung von μ(x_{t−1}) ist im Groben null. Auf feiner Skala zeigt sich das Vorzeichenmuster.
+- Die Daten sind der wöchentliche Sekundärmarktzinssatz der 3-Monats-Treasury-Bill von 1970 bis 1997, 1461 Beobachtungen der Federal Reserve Bank of St. Louis. y_t = x_t − x_{t−1} ist die Änderung.
+- Dieselbe Reihe dient in der Literatur als Beispiel für die Schätzung stochastischer Diffusionsgleichungen aus diskret beobachteten Daten. Das einfache Modell ist y_t = μ(x_{t−1}) dt + σ(x_{t−1}) dw_t.
+- Haben zwei Aktien ähnliche Risikofaktoren, ist die Linearkombination wt = p1t − γ p2t der Logpreise Unit-Root-stationär und deshalb mean-reverting.
+- In der Fehlerkorrektur der beiden Logrenditen messen α1 und α2 die Wirkung der vergangenen Abweichung wt−1 − μw auf die beiden Renditen; in der Praxis sollen α1 und α2 entgegengesetzte Vorzeichen haben und damit die Rückkehr zum Gleichgewicht anzeigen.
+- Pairs Trading handelt die Schwankungen des Spreads um seinen Gleichgewichtswert μw, weil der Spread mean-reverting ist. Der Auflösungszeitpunkt tritt wegen dieser Mean Reversion ein.
+- Gewinnwachstum ist über einen Zeitraum von fünf Jahren stark mean-revertierend, und die Basisrate dieser Rückkehr ist sehr hoch. Analysten verstehen das nicht und schreiben Firmen mit hohem Wachstum der letzten fünf Jahre weiterhin sehr hohes Wachstum für die nächsten fünf Jahre zu. Das Niedrigwachstumsportfolio erzeugt nahezu so viel langfristiges Gewinnwachstum wie das Hochwachstumsportfolio (Montier, 2002; Chan, Karceski und Lakonishok, 2003).
+- Manager, die in den drei Jahren vor der Einstellung fast 14 % Outperformance hatten, haben danach statistisch insignifikante Renditen. Aus Performancegründen entlassene Manager lagen in den drei Jahren davor rund 6 % zurück und outperformen in den drei Jahren danach um fast 5 %.
+- Growth-Aktien mit hohem historischem Gewinnwachstum haben nach der Portfoliobildung viel niedrigeres Wachstum: bei Growth-Emittenten im Wesentlichen null, bei Growth-Rückkäufern noch etwa 6 % p.a. Value-Rückkäufe mit schwacher Vergangenheit drehen operativ.
+- Kurzfristige und langfristige Performance werden als ziemlich unkorrelierte Größen beschrieben. Von den langfristig besten Fonds lagen auf Jahressicht 73 % einmal im untersten Dezil und auf Dreijahressicht einer von dreien.
+- In Japan nach der Blase überwiegen negative Koeffizienten der zyklischen Indikatoren, angezeigt durch negative t-Statistiken. Sie dienen als Proxy für Mean Reversion: Aktien gegenüber Anleihen kaufen, wenn das Wachstum einbricht.
+- Das passt zur Sicht, dass in Japan erst eine Krise die Politikreaktion auslöst und man in der dunkelsten Stunde kauft.
+- Die stärkste Ausprägung ist das Prognose-BIP für die Einjahres-Überrendite, t = −2,7 und adjustiertes R² 0,21, Stichprobe 1991–2003.
 
 ## Funktionsweise
 
@@ -144,6 +236,12 @@ aktualisiert: 2026-10-30
 - Aktien, die nur wenig gefallen sind, kehren eher um als solche, die stark gefallen sind, weil starke Fälle oft negative Nachrichten wie schlechte Gewinnmeldungen haben und solche Fälle seltener zurückkehren.
 - Ein Kurs über einem langfristigen gleitenden Durchschnitt zieht Verkaufsdruck größerer Akteure wie Long-only-Fonds an, deren Horizont länger ist; dieser Liquiditätsbedarf kann den Abwärtsdruck übertreiben, und Preisbewegungen aus Liquiditätsbedarf kehren eher zurück als Bewegungen aus einer Verschiebung der Fundamentaldaten.
 - Querschnittlich wird Unterperformance von Überperformance erwartet und umgekehrt; Gewinne werden nicht von jeder einzelnen Aktie erwartet, weil manche an manchen Tagen als Hedges dienen, sondern nur aggregiert.
+- Die Ornstein-Uhlenbeck-Formel lautet dy(t) gleich (λy(t−1) plus μ)dt plus dε: die Preisänderung im nächsten Zeitabschnitt ist proportional zur Differenz aus mittlerem Preis und aktuellem Preis.
+- Die Geschwindigkeit der Mean Reversion eines AR(1) misst die Halbwertszeit l gleich dem natürlichen Logarithmus von 0,5, geteilt durch den natürlichen Logarithmus des Betrags von phi1.
+- Für die mittelwertbereinigte Reihe xt gleich rt minus E(rt) ist die l-Schritt-Prognose phi1 hoch l mal dem Wert am Ursprung; die Halbwertszeit ist der Horizont, an dem diese Prognose auf die Hälfte des Ausgangswerts gefallen ist, also phi1 hoch l gleich 1/2.
+- Bei einem MA(1) dauert die Rückkehr zum Mittel nur eine Periode: ab dem zweiten Schritt liegen die Prognosen auf dem unbedingten Mittel, für jeden Prognoseursprung.
+- Bei einem MA(2) erreichen die Mehrschrittprognosen den Mittelwert nach zwei Schritten, bei einem MA(q) nach den ersten q Schritten.
+- Mit dem Horizont nähert sich zugleich die Varianz des Prognosefehlers der unbedingten Varianz von rt.
 
 ## Voraussetzungen
 
@@ -170,6 +268,9 @@ aktualisiert: 2026-10-30
 - Momentum, Front-Running und Mean Reversion zusammen ergeben vor Kosten etwa 41 Prozent.
 - Das lineare Mean-Reversion-Modell für S&P-500-Aktien aus Kapitel 4 hält weniger als einen Tag und hat eine Sharpe Ratio von 4,7.
 - Momentum-Strategien zu einem Portfolio aus Mean-Reversion-Strategien hinzuzufügen ergibt höhere Sharpe Ratios und kleinere Drawdowns als jeder Strategietyp allein.
+- Spot- und Rollrenditen von Futures werden stark betont; mehrere Futures-Strategien folgen aus einem einfachen mathematischen Modell der Futures-Preise, und Backwardation und Contango werden grafisch und mathematisch gezeigt.
+- Eine praktische Umsetzung einer linearen Handelsstrategie sind Bollinger-Bänder mit Scaling-in.
+- Den erwarteten Preis eines Instruments aus dem letzten Trade, Preis und Größe, nachzuführen, leistet der Kalman-Filter.
 
 ## Regeln und Kriterien
 
@@ -259,6 +360,17 @@ aktualisiert: 2026-10-30
 - Eine bisher mean-reverting Reihe kann für lange Zeit, vielleicht für immer, zu einer Trendreihe werden, weil finanzwirtschaftliche Zusammenhänge anders als physikalische Gesetze nicht unveränderlich sind.
 - Dann verhindert der Stop-Loss katastrophale Verluste und gibt Zeit zu prüfen, ob die Strategie vor einem Verlust von 100 Prozent abgeschaltet werden sollte.
 - Solche Reihen, die von Mean Reversion zu Momentum wechseln, fehlen im Katalog profitabler Mean-Reversion-Strategien, weil gescheiterte Backtests nicht aufgenommen wurden.
+- Der Aufstieg von Dark Pools und Hochfrequenzhandel hat den Handel mancher dieser Strategien in den letzten Jahren erheblich erschwert.
+- Fundamentale Überlegungen können erklären, warum ein zuvor sehr profitables ETF-Paar vorübergehend aus der Kointegration gerät, und dieselben Überlegungen können eine verbesserte Fassung der Strategie liefern.
+- Besonders bei Mean-Reversion-Strategien auf Spreads wird die Gefahr von Datenfehlern hervorgehoben.
+- Ein Mean-Reversion-Backtest auf konsolidierten Schlusskursen ist oft aufgebläht, weil wenige Stücke abseits der Primärbörse zu einem vom Auktionspreis abweichenden Kurs ausgeführt werden können und der Folgetag von diesem schwer erreichbaren Ausreißer zurückläuft.
+- Konsolidierte Hochs und Tiefs sind oft übertriebene Werte aus kleinen Trades an Zweitbörsen; ihre Verwendung bläht den Backtest ebenfalls auf.
+- Mean-Reversion-Strategien gedeihen bei einem hohen, aber konstanten Volatilitätsniveau; nach 2008 sanken ihre Gewinne allgemein, weil die durchschnittliche Volatilität fiel und plötzliche Ausbrüche häufiger wurden.
+- Ein exzellenter Mean-Reversion-Backtest eines Aktienmodells auf Schlusskursen ist bei einem erneuten Test mit Primärbörsendaten eine Deflation der Ergebnisse zu erwarten.
+- Ein mean-revertierender Intraday-Futures-Spread kann im Backtest auf Bar-Daten gut und live schlecht laufen, wenn statt tickbasierter Daten die asynchronen Last-Preise der Beine verwendet wurden.
+- Datenfehler können die Backtest-Ergebnisse von Mean-Reversion-Strategien aufblähen, die von Momentum-Strategien dagegen nicht.
+- Strategien auf Spreads sind gegen kleine Datenfehler besonders empfindlich, im Backtest wie im Live-Handel.
+- Scaling-in ist im Backtest oft nicht optimal, im Live-Handel aber häufig nützlich, weil Volatilitäten und Wahrscheinlichkeiten sich ändern.
 
 ## Beispiele
 
@@ -281,6 +393,9 @@ aktualisiert: 2026-10-30
 - Der VIX ist mean-reverting und im ADF mit 99 Prozent stationär, die back-adjustierten VX-Front-Month-Preise mean-reverten aber nicht; Mean Reversion von VX zeigt sich erst nach den Volatilitätsspitzen um den 20. November 2008, den 20. Mai 2010 und den 3. Oktober 2011, sonst fällt die Reihe unaufhaltsam.
 - Gleichung 5.7 gilt nur für einen Future, dessen Basiswert ein gehandeltes Asset ist; der VIX ist keines, und die Logpreise der VX-Futures gegen die Restlaufzeit fallen nicht auf eine Gerade.
 - Die Monte-Carlo-Rechnung zum Hebel verwendet die Mean-Reversion-Strategie aus Beispiel 5.1: Kelly 18,4, Monte-Carlo-Optimum 19, historisch 18,4, schlechteste Periodenrendite minus 0,0331.
+- Beispiel 4.2 zeigt eine lineare mean-revertierende Strategie zwischen einem ETF und seinen Bestandteilaktien.
+- Der angepasste BHP-VALE-Spread wechselt im Fenster vom 1. Juli 2002 bis zum 31. März 2006 mehrfach zwischen der unteren Grenze Mittel minus 0,045 und der oberen Grenze Mittel plus 0,045. Der Mittelwert beträgt 1,81.
+- Die Ladung der BHP-Logrendite auf die Abweichung vom Spreadmittel ist negativ, die Ladung der VALE-Logrendite positiv: −0,067 und 0,026. Das entspricht der erwarteten Rückkehr zum Gleichgewicht.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -326,6 +441,32 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 419–438 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-023-p419-p438|S. 419–438]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 476–495 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-026-p476-p495|S. 476–495]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 33–51 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-003-p033-p051|S. 33–51]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 58–77 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-004-p058-p077|S. 58–77]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 77–96 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-005-p077-p096|S. 77–96]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 96–115 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-006-p096-p115|S. 96–115]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 210–229 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-012-p210-p229|S. 210–229]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 39–58 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-003-p039-p058|S. 39–58]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 210–229 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-012-p210-p229|S. 210–229]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 286–305 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-016-p286-p305|S. 286–305]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 381–400 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-021-p381-p400|S. 381–400]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 552–571 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-030-p552-p571|S. 552–571]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 590–609 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-032-p590-p609|S. 590–609]]
 
 ## Verwandte Themen
 

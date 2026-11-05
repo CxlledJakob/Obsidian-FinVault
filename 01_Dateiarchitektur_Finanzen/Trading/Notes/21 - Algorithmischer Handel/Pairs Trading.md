@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Pairs Trading
@@ -21,6 +21,7 @@ aktualisiert: 2026-10-30
 - Pairs Trading ist die übliche Kointegration zweier Preisreihen: ein Asset long und das andere gleichzeitig short, mit passender Kapitalzuteilung.
 - Der Begriff der Kointegration lässt sich leicht auf drei oder mehr Assets erweitern.
 - Aktien-Pair-Trading ist die erste algorithmische Mean-Reversion-Strategie, die institutionelle Händler erfanden, nach dem Bericht von Gerry Bamberger bei Morgan Stanley (Patterson, 2010).
+- Pairs Trading wird hier als marktneutrale Strategie behandelt, und zwar in der Form der statistischen Arbitrage, die Kointegration und Fehlerkorrektur nutzt. Weiterführend genannt werden Vidyamurthy (2004) und Pole (2007).
 
 ## Kernaussagen
 
@@ -44,6 +45,30 @@ aktualisiert: 2026-10-30
 - Der Paartrade erzielt einen Gewinn, egal wie die Divergenz korrigiert wird: Ford fällt, GM steigt, oder eine Kombination aus beidem tritt ein.
 - In dieser üblichen Anwendung sagt das Error-Correction-Modell das Verhalten des Spreads zwischen den kointegrierten Reihen vorher.
 - Fosback wich davon ab und nutzte das aus dem Error-Correction-Modell abgeleitete Maß als Indikator für eine dritte Variable, den S&P 500, statt für den Spread selbst.
+- Fundamentale Überlegungen können erklären, warum ein zuvor sehr profitables ETF-Paar vorübergehend aus der Kointegration gerät, und dieselben Überlegungen können eine verbesserte Fassung der Strategie liefern.
+- CADF prüft nur ein Paar, Johansen beliebig viele Reihen. ETFs sind ein ergiebiges Feld für solche Paare.
+- EWA und EWC werden geprüft, weil Kanada und Australien rohstoffbasierte Volkswirtschaften sind. Mit EWC als abhängiger und EWA als unabhängiger Variable verwirft CADF die Null auf 95 Prozent, t-Statistik etwa minus 3,64 gegen minus 3,359. Das Residuum sieht stationär aus, das Streudiagramm liegt auf einer Geraden.
+- Die CADF-Hedge-Ratio hängt davon ab, welche Reihe die unabhängige ist, und ist nicht der Kehrwert der Gegenrichtung. Oft ist nur eine Richtung stationär. Bei EWA und EWC findet Johansen zwei unabhängige Beziehungen und ist dabei reihenfolgeunabhängig.
+- IGE, ein ETF aus Rohstoffaktien, ergibt mit EWA und EWC nach dem Text drei kointegrierende Beziehungen auf 95 Prozent. Der stärkste Eigenvektor hat die Halbwertszeit 23 Tage.
+- GDX kointegriert mit GLD, weil der Wert der Goldbergbauunternehmen stark vom Goldwert abhängt. Anfang 2008 lief das Paar auseinander, weil hohe Energiepreise die Goldförderung ungewöhnlich teuer machten; der Grund blieb verständlich.
+- EWA kointegriert mit EWC, weil die kanadische und die australische Wirtschaft von Rohstoffen dominiert werden.
+- Diese fundamentale Geschichte unterscheidet Paare von vielen Momentum-Strategien, die nur darauf setzen, dass andere Anleger langsamer auf Nachrichten reagieren. Holen diese auf, kann die Strategie ohne Erklärung aufhören.
+- Der Preis eines Einheitsportfolios ist sein Marktwert. Mit nur einer Long- und einer Short-Position heißt es Spread; die mathematische Form steht in Kapitel 3.
+- Der Portfoliopreis ist die gewichtete Summe der Bestandteilspreise, und die Gewichte sind die Stückzahlen. Für zwei Aktien ist der übliche Spread y1 minus h y2, mit positivem h.
+- Logpreisspreads sind gerechtfertigt, wenn die Logpreise kointegrieren, verlangen aber ständiges Rebalancing, weil die Gewichte dann Kapitalgewichte sind. Preisspreads sind einfacher. Beide sind vertretbar, wenn Preis und Logpreis kointegrieren.
+- Die Ratio y1/y2 ist nur stationär, wenn die Hedge Ratios gleichen Betrag haben. Für nicht wirklich kointegrierte Paare kann sie eine dynamische Hedge Ratio ersetzen. Bei GLD und USO ist der adaptive Preisspread dennoch klar besser: etwa 10,9 Prozent APR und Sharpe Ratio 0,59 gegen eine negative APR der Ratio. Der Logpreisspread liegt bei 9 Prozent und 0,5, vor Rebalancing-Kosten.
+- GLD und USO sind nicht kointegriert. Manche Händler erwarten trotzdem, dass Öl über die Inflation Gold mitzieht.
+- EUR.GBP ist die Ratio EUR.USD/GBP.USD. Für MXN.NOK kann die Ratio USD.NOK/USD.MXN wirksamer sein als der Spread, obwohl die beiden Dollarpaare gehandelt werden und der P&L dann in zwei Währungen anfällt.
+- EWA gegen EWC mit Kalman-Filter erreicht eine Sharpe Ratio von 2,4 und eine APR von 26,2 Prozent.
+- Mean-revertierende Paare von Futures verschiedener Basiswerte sind schwer zu finden.
+- Der naheliegende Kandidat ist der Energiekomplex CL, Brent BZ, Benzin RB und Heizöl HO, alle an der NYMEX.
+- Der fertige Crack Spread long drei CL, short zwei RB und short ein HO ist vom 20. Mai 2002 bis zum 4. Mai 2012 im ADF-Test nicht mean-reverting.
+- CL gegen BZ im Verhältnis 1:1 ist trotz ähnlicher Basiswerte weit von stationär entfernt.
+- Ein Paar, das sich stationär machen lässt, ist long 0,3906 Front-Kontrakte VX und long ein Front-Kontrakt ES.
+- Rohstoffwährungen als Gruppe bieten viele Gelegenheiten zur Kointegration.
+- Bei zwei Währungs-Cross-Rates hängen die Renditeformeln davon ab, ob die Kurse dieselbe Notierungswährung, dieselbe Basiswährung oder keine von beiden haben.
+- Das ETF-Paar GLD gegen GDX hörte 2008 auf zu kointegrieren.
+- Die Hypothese dazu war der hohe Rohölpreis; nachdem der Ölpreis als Eingabevariable ergänzt wurde, funktionierte das Kointegrationsmodell wieder.
 
 ## Funktionsweise
 
@@ -66,9 +91,24 @@ aktualisiert: 2026-10-30
 - Der Crack Spread ist long drei CL, short zwei RB und short ein HO, weil drei Barrel CL ungefähr zwei Barrel Benzin und ein Barrel Heizöl ergeben, was nicht für jede Raffinerie gilt.
 - Ein Portfolio long 0,3906 VX und long ein ES soll stationär sein; die Hedge Ratio stammt aus ES mal 50 gleich minus 0,3906 mal VX mal 1.000 plus 77.150 Dollar.
 - Als die Strategie den Backtest unterschritt, wurde ein fundamentaler Grund gesucht und quantitativ geprüft, statt blind weitere Regeln und Indikatoren zu ergänzen.
+- Beim Kreuzkurs AUD.ZAR ist AUD die Basiswährung und ZAR die Kurswährung. Ein Kurs von 9,58 bedeutet, dass 9,58 Rand einen Australischen Dollar kaufen. Der Kauf von 100.000 AUD.ZAR kauft 100.000 AUD und verkauft zum Beispielkurs 958.000 ZAR.
+- Kaum ein Broker stellt AUD.ZAR. Synthetisch kauft man X Einheiten einer liquiden Basis gegen ZAR und verkauft X Einheiten derselben Basis gegen AUD, etwa mit USD oder EUR. Der Kreuzkurs ist exakt das Verhältnis dieser beiden Quotes.
+- Der live realisierte Gewinn fällt in beiden Währungen an. Ohne regelmäßigen Umtausch in die Heimatwährung weicht ein großer aufgelaufener Bestand spürbar vom Backtest ab, der in dieser Heimatwährung rechnet.
+- Manchmal ist es besser, die Währungen ungleich zu gewichten und AUD.USD gegen CAD.USD getrennt zu handeln statt den fertigen AUD.CAD. Die Johansen-Hedge-Ratio ist dann nicht eins.
+- Damit der Eigenvektor Kapitalgewichte sind, brauchen beide Reihen dieselbe Kurswährung. Eine Einheit einer Währung gegen USD ist so viele Dollar wert wie der Kurs, ihre Rendite ist die einfache Kursänderung geteilt durch den Kurs.
+- Eine Einheit USD gegen eine Kurswährung ist exakt einen Dollar wert. Für einen echten Kreuzkurs ist die verwendete Rendite die Differenz der Log-Kurse. Dieselben Formeln gelten, wenn die Heimatwährung EUR statt USD ist.
+- Zwei völlig verschiedene Kreuzkurse lassen sich gegeneinander handeln. Die Tagesrendite in der Heimatwährung folgt derselben Portfoliogleichung, mit der Log-Rendite jedes Kreuzkurses.
+- Der Leitgedanke ist, unterbewertete Aktien zu kaufen und überbewertete zu verkaufen. Weil der wahre Preis schwer zu bestimmen ist, setzt Pairs Trading auf relative Preise: Nach der Arbitrage-Pricing-Theorie müssen zwei Aktien mit ähnlichen Eigenschaften ungefähr denselben Preis haben. Weichen die beobachteten Preise ab, ist voraussichtlich eine Aktie zu teuer und die andere zu billig; verkauft wird die teurere, gekauft die billigere, in der Erwartung, dass die Fehlbewertung sich korrigiert. Entscheidend ist die Gleichheit der beobachteten Preise, nicht ihr Niveau.
+- Die geeignet skalierte Lücke zwischen den beiden beobachteten Preisen heißt Spread. Je größer der Spread, desto größer die Fehlbewertung und das Gewinnpotenzial.
+- Mit pit = ln(Pit) wird angenommen, dass der Logpreis einem Random Walk pit = pi,t−1 + rit mit unkorrelierten Renditeinnovationen folgt. Ähnliche Risikofaktoren erzeugen nach der Arbitrage-Pricing-Theorie ähnliche Renditen, eine gemeinsame Komponente und Kointegration: wt = p1t − γ p2t ist Unit-Root-stationär und mean-reverting und heißt Spread der beiden Logpreise.
+- Die Fehlerkorrektur setzt die Logrenditen gleich α mal (wt−1 − μw) plus Innovation. wt−1 − μw ist die Abweichung vom langfristigen Gleichgewicht. α1 und α2 sollen entgegengesetzte Vorzeichen haben. γ, μw, α1 und α2 werden per Maximum Likelihood oder kleinste Quadrate geschätzt.
+- Ein Portfolio long eine Aktie 1 und short γ Aktien 2 hat über das Intervall i die Rendite rp,t+i = wt+i − wt. Diese Rendite hängt nicht vom Mittelwert von wt ab.
+- Ein einfacher Weg zu prüfen, ob zwei Aktien für Pairs Trading taugen, ist die Kointegration ihrer Logpreise über die Regression p1t = β0 + β1 p2t + wt und die anschließende Stationaritätsprüfung der Residuen.
+- Paare sollen ähnliche Risikofaktoren haben. Die Auswahl soll sich von der Finanzierungstheorie leiten lassen.
 
 ## Voraussetzungen
 
+- Ein Anbieter von Intraday-Historien für Kalenderspreads, Quotes und Trades, ist cqgdatafactory.com.
 
 ## Anwendung im Trading
 
@@ -90,6 +130,20 @@ aktualisiert: 2026-10-30
 - Ein Schlusskurs-Backtest von BZ gegen CL vor dem 5. September 2001 wäre falsch, weil BZ bis dahin in London an der Intercontinental Petroleum Exchange und CL an der NYMEX mit anderer Schlusszeit gehandelt wurde.
 - Futures-Preise sind oft mit einem Faktor von Punkten in US-Dollar umzurechnen, bei VX mal 1.000 und bei ES mal 50.
 - Der Crack Spread muss auf preisadjustierten und nicht auf renditeadjustierten fortlaufenden Kontrakten getestet werden, sonst springt der Preisspread an den Rolls.
+- Beim Backtest eines Intermarket-Pair-Trades in Futures müssen die Schlusskurse beider Märkte gleichzeitig entstehen.
+- Settlement-Preise garantieren bei gleichem Underlying gleichzeitige Preise für den Futures-Spread; letzte Trades können zeitlich auseinanderliegen, einen unrealistisch großen Spread und im Backtest überhöhte Gewinne erzeugen, wenn der Spread später auf den kleineren richtigen Wert zurückkehrt.
+- Ein Intraday-Spread illiquider Futures darf nicht aus den Last-Preisen der Beine eines Bars gebildet werden; nötig sind Bid und Ask beider Kontrakte oder die börsen-native Spreadsreihe, sonst ist die Rendite aufgebläht.
+- Kontrakte an verschiedenen Börsen und ein Future gegen einen ETF haben oft verschiedene Schlusszeiten, deshalb ist der Spread aus den Schlusskursen falsch; statt GC mit Settlement um 13:30 Uhr ET gegen GDX lassen sich GLD und GDX handeln, beide mit Schluss um 16:00 Uhr ET auf Arca.
+- Signale aus der Preisdifferenz zweier Kontrakte verlangen die Preis-Rückanpassung der fortlaufenden Reihe, Signale aus dem Preisverhältnis die Rendite-Rückanpassung.
+- Bei Kalenderspreads ist die Rückanpassung besonders wichtig, weil der Spread klein gegen ein Bein ist und ein Rollover-Fehler leicht ein falsches Signal auslöst, im Backtest und live.
+- Für Währungspaare ist das Verhältnis oft ein besserer Indikator als der Spread.
+- Wer ein Paar Basis gegen Kurs über Nacht hält, also bis oder über 17:00 Uhr ET, erhält oder zahlt die Zinsdifferenz aus Basiszins minus Kurswährungszins. Ist der Zins der Kurswährung höher, ist das ein Sollzins.
+- Wegen der Abwicklung an T+2 wird dieser Rollover mit eins plus der Zahl geschlossener Tage multipliziert, wenn T+3 für eine der Währungen Wochenende oder Feiertag ist. Haltung über Mittwoch 17:00 Uhr ET verdreifacht den Tagessatz.
+- Bei USD.CAD und USD.MXN gilt T+1. Die Verdreifachung trifft dann die Haltung über Donnerstag 17:00 Uhr ET.
+- In der Überschussrendite wird der Rollover als log(1 + Basiszins) minus log(1 + Kurswährungszins) zur Log-Preisänderung addiert. Die einfachen Formeln ohne diesen Term sind bei kurzen Strategien meist eine kleine Auslassung.
+- Gehandelt werden die Schwankungen des Spreads um μw. Die nötige Abweichung hängt von Handelskosten, Grenzzinssätzen und den Bid-Ask-Spreads ab. Ist η die Kostengröße und die Zielabweichung so groß, dass ihr Doppeltes η übersteigt, wird bei Spread gleich Mittel minus Zielabweichung eine Aktie 1 gekauft und γ Aktien 2 geshortet und bei Spread gleich Mittel plus Zielabweichung aufgelöst.
+- Der Einstieg ist identifizierbar, solange die Zielabweichung gegenüber der Standardabweichung von wt nicht zu groß ist. Der Ausstieg tritt wegen der Mean Reversion ein. Der Portfoliologreturn ist dann das Doppelte der Zielabweichung, der Nettogewinn dieses Doppelte minus η.
+- Eine Alternative löst auf, sobald der Spread auf μw zurück ist, sofern die Zielabweichung größer als η ist. Der Nettogewinn ist die Zielabweichung minus η, bei mehr Transaktionen, höheren Kosten und kürzerer Haltedauer. Ist die Zielabweichung negativ, wird Aktie 1 geshortet und γ Aktien 2 gekauft; der Nettogewinn ist minus das Doppelte der Zielabweichung minus η. η ist die Handelsschwelle.
 
 ## Risiken und Grenzen
 
@@ -114,6 +168,18 @@ aktualisiert: 2026-10-30
 - Die Gleichungen ohne Rollover-Zinsen sind nicht streng korrekt; bei der kurzfristigen Strategie ist die Wirkung meist klein.
 - Der ADF-Test auf dem Crack Spread vom 20. Mai 2002 bis zum 4. Mai 2012 zeigt keine Mean Reversion, und die lineare Mean-Reversion-Strategie darauf hat negative Renditen.
 - Die Suche nach mean-reverting Intermarket-Futures-Spreads bleibt bis zum VX-ES-Spread ohne Erfolg.
+- Fehlerhafte Live-Quotes sind beim Paar- und beim sonstigen Arbitragehandel besonders gefährlich, weil die Signale auf Differenzen von Quotes beruhen.
+- Die Differenz zweier Quotes ist gewöhnlich viel kleiner als die Quotes selbst, deshalb erzeugt ein kleiner Quotefehler einen viel größeren prozentualen Fehler im Spread.
+- Hat X einen wahren Bid von 100 Dollar und Y einen wahren Ask von 105 Dollar, ist der Spread von 5 Dollar zu klein für eine Market Order, die X kauft und Y verkauft. Zeigt Y fälschlich einen Ask von 106 Dollar, wird der Spread 6 Dollar, 20 Prozent mehr, und kann die Order fälschlich auslösen.
+- Strategien auf Spreads sind gegen kleine Datenfehler besonders empfindlich, im Backtest wie im Live-Handel.
+- Einzelne Aktien sind auf Tagesschlüssen fast nie stationär. Selbst Exxon gegen Chevron oder Citibank gegen Bank of America kointegrieren out of sample selten, und dieselbe Branche garantiert nichts, Beispiel AAPL gegen BBRY.
+- Ein einzelnes Paar bleibt nur profitabel, wenn man die Firmen fundamental versteht und aussteigt, bevor schlechte Nachrichten einer Seite öffentlich werden.
+- Viele Paare retten das Ergebnis nicht, solange die erwartete Out-of-Sample-Rendite eines einzelnen Paares nicht positiv ist. Die kleinen Gewinne der guten Paare wurden von den großen Verlusten der schlechten aufgezehrt.
+- Besonders gefährlich ist der Short einer schwer leihbaren Aktie. Springt der Kurs auf unerwartete gute Nachrichten und rufen die Verleiher die Stücke zurück, muss die Position zum schlechtesten Zeitpunkt mit großem Verlust eingedeckt und das Long-Bein verkauft werden. Das ist der Short Squeeze.
+- Weil die Margen sanken, müssen Paare intraday eröffnet und geschlossen werden. Die NBBO-Größen sind dabei sehr klein geworden, durch Dark Pools, Iceberg-Orders, Child-Orders, häufig ersetzte Hochfrequenzorders und zurückhaltende Market Maker.
+- Bei AAPL ist eine NBBO-Größe von nur 100 Aktien nicht ungewöhnlich. Ein Backtest auf Trades oder Quotes ist dann unrealistisch, außer bei nur 100 Stück oder mit erheblichen Transaktionskosten.
+- Market Orders auf beiden Seiten nach einem NBBO-Signal können erheblichen Slippage erleiden. Nötig sind Limit Orders auf einer oder beiden Seiten, vorübergehend kleine ungedeckte Positionen und die aktive Verwaltung von Stornos und Neueinstellungen.
+- Eine realistischere Demonstration würde den Handel außerhalb der Stichprobe umsetzen. Das Beispiel zeigt nur, dass Pairs Trading durchführbar ist.
 
 ## Beispiele
 
@@ -135,6 +201,22 @@ aktualisiert: 2026-10-30
 - Das ETF-Paar GLD gegen GDX hörte 2008 auf zu kointegrieren.
 - Die Hypothese schrieb das dem hohen Rohölpreis zu.
 - Mit dem Ölpreis als zusätzlicher Inputvariable funktionierte das Kointegrationsmodell wieder.
+- Beispiele für mean-revertierende Strategien umfassen ETF-Paare und -Tripletts sowie ETFs gegen ihre Bestandteilaktien.
+- GLD gegen GDX kointegrierte vom 23. Mai 2006 bis 14. Juli 2008 mit 99 Prozent und verlor die Kointegration vom 15. Juli 2008 bis 9. April 2012. Am 14. Juli 2008 stand WTI bei etwa 145 Dollar je Barrel, und teures Öl verteuert die Goldförderung.
+- Das Triplett aus GLD, GDX und USO kointegriert über 2006 bis 2012 mit 99 Prozent für eine Beziehung. Wer das Triplett scheut, sollte GLD gegen GDX aussetzen, sobald der Ölpreis eine Schwelle überschreitet.
+- USO hält Oil-Futures und nicht das Öl selbst. XLE kann mit dem Spot kointegrieren und mit USO dennoch nicht. Das trifft jeden Rohstoff-Futures-Fonds gegen einen Produzentenfonds.
+- EWA gegen EWC kointegrierte im November 2012 noch. Mit der Verbreitung von ETFs auf nahezu denselben Sektor nehmen die Paar-Gelegenheiten stetig zu.
+- An einem typischen Tag liegen die NBBO-Größen von EWC um 5.000 Aktien.
+- Die Dezimalisierung verengte die Spreads drastisch und senkte die Market-Making-Gewinne der Paarhändler (Serge, 2008).
+- AUD.USD gegen CAD.USD mit ungleicher Hedge Ratio erzielt 11 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,6. Der fertige AUD.CAD mit Rollover nur 6,2 Prozent und 0,54, ohne Rollover 6,7 Prozent und 0,58, bei fast 5 Prozent annualisiertem durchschnittlichem Rollover.
+- Die Rollrendite kann verhindern, dass eine Produzenten-ETF mit dem Future kointegriert, obwohl sie mit dem Spot kointegriert.
+- Das Beispiel nimmt BHP Billiton, Australien, Naturressourcen mit Geschäft in Australien, Amerika und dem südlichen Afrika, und Vale S.A., Brasilien, Metalle und Bergbau, Tickers BHP und VALE, beide an der New York Stock Exchange. Beide gehören zur Naturressourcenbranche und haben ähnliche Risikofaktoren. Verwendet werden adjustierte Tagesschlusskurse von Yahoo Finance vom 1. Juli 2002 bis zum 31. März 2006.
+- Die Kleinste-Quadrate-Regression der Logpreise lautet p1t = 1,823 + 0,717 p2t + ŵt mit σw = 0,044, wobei p1t der Logpreis von BHP und p2t der von VALE ist.
+- BHP Billiton und Vale, adjustierte Tagesschlusskurse vom 1. Juli 2002 bis zum 31. März 2006, gehören beide zu Naturressourcen und teilen ähnliche Risikofaktoren. Die Logpreise zeigen ein gemeinsames Bewegungsmuster.
+- Die Kleinste-Quadrate-Schätzung lautet Intercept 1,822648 und Steigung 0,716664, Residualstandardfehler 0,04421 bei 944 Freiheitsgraden, R² 0,9899. Die Residuen haben Mittel null, bleiben in einer festen Spanne, ihre Autokorrelation fällt exponentiell, und ein AR(2) ist stationär. Der Augmented-Dickey-Fuller-Test ergibt −6,04 bei einem p-Wert von 0,01.
+- Der Johansen-Test mit restricted constant bestätigt einen Kointegrationsvektor: Trace 47,7400 und Maximum-Eigenvalue 39,965 für Rang 0, beide über den 1-Prozent-Werten 24,600 und 20,200; für Rang 1 liegt die Trace-Statistik 7,7748 unter 9,240.
+- Die Maximum-Likelihood-Fehlerkorrektur liefert γ̂ = 0,718, Spreadmittel 1,81 und Ladungen −0,067 sowie 0,026. α1 ist negativ, α2 positiv. Die Innovationsstandardfehler sind 0,0193 und 0,0224. Das Ergebnis liegt nahe an den Kleinste-Quadrate-Werten 1,823 und 0,717.
+- Als Zielabweichung wird 0,045 gewählt, knapp über einem Standardfehler von 0,044. Unter Normalität ist die Wahrscheinlichkeit einer solchen Abweichung etwa 30 Prozent. Der Spread kreuzt die Grenzen Mittel plus und minus 0,045 mehrfach, sodass viele Gelegenheiten entstehen. Der Logreturn je Geschäft ist 0,09.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -154,5 +236,17 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 144–150 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-010-p144-p150|S. 144–150]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 206–225 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-015-p206-p225|S. 206–225]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 419–438 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-023-p419-p438|S. 419–438]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
 
 ## Verwandte Themen

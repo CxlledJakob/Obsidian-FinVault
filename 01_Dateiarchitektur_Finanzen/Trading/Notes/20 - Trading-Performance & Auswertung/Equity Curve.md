@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Equity Curve
@@ -21,6 +21,8 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Abbildung 6.7 zeigt den S&P DTI Index; zum Zeitpunkt des Schreibens beträgt der Drawdown seit dem 5. Dezember 2008 minus 25,9 Prozent.
+- Die kumulierten Renditen der querschnittlichen Futures-Strategie in Abbildung 6.5 erholen sich nach dem Einbruch 2008 bis 2009; die Aktienkurve in Abbildung 6.6 stabilisiert sich nach 2009, ohne das frühere Hoch wieder zu erreichen.
 
 ## Funktionsweise
 
@@ -52,6 +54,10 @@ aktualisiert: 2026-10-30
 - Die kumulierte Rendite der querschnittlichen Futures-Momentum-Strategie in Abbildung 6.5 zeigt vom 1. Juni 2005 bis zum 31. Dezember 2007 eine annualisierte Rendite von 18 Prozent bei einer Sharpe Ratio von 1,37 und vom 2. Januar 2008 bis zum 31. Dezember 2009 eine annualisierte Rendite von minus 33 Prozent, danach eine Erholung.
 - Die kumulierte Rendite der querschnittlichen Aktien-Momentum-Strategie in Abbildung 6.6 zeigt vom 15. Mai 2007 bis zum 31. Dezember 2007 eine annualisierte Rendite von 37 Prozent bei einer Sharpe Ratio von 4,1 und vom 2. Januar 2008 bis zum 31. Dezember 2009 eine annualisierte Rendite von minus 30 Prozent; nach 2009 stabilisiert sie sich, ohne das frühere Hoch zu erreichen.
 - Der S&P DTI in Abbildung 6.7 hat zum Zeitpunkt des Textes seit dem 5. Dezember 2008 einen Drawdown von minus 25,9 Prozent.
+- Abbildung 26.9 zeigt den Zeitpfad der US-Value- und der US-Growth-Portfolios; der Einfluss der Blasenjahre wird daran sofort offensichtlich, und die beiden Portfolios haben sehr ähnliche Renditen erzeugt.
+- Die US-CAGR seit 1988 beträgt 13,7 Prozent für Value und 14,0 Prozent für hohes Prognosewachstum, bei einer Standardabweichung von 17,7 Prozent gegen 25,1 Prozent.
+- Abbildung 26.10 zeigt die globalen Portfolios, niedriges KGV neben hohem prognostiziertem Gewinnwachstum, mit 15,4 Prozent CAGR gegen 10,2 Prozent CAGR.
+- Abbildung 26.1 zeigt die Rohrenditen der globalen Value-Strategie.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -66,5 +72,9 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 125–144 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-009-p125-p144|S. 125–144]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 144–150 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-010-p144-p150|S. 144–150]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 151–170 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-011-p151-p170|S. 151–170]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 324–343 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-018-p324-p343|S. 324–343]]
 
 ## Verwandte Themen

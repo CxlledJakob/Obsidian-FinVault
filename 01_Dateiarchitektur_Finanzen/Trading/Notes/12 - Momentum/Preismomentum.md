@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Preismomentum
@@ -30,6 +30,7 @@ aktualisiert: 2026-10-30
 - Bullisches Momentum heißt, der Indikator ist positiv; bei zwei Linien liegt die schnelle über der langsamen.
 - Bärisches Momentum heißt, der Indikator ist negativ; bei zwei Linien liegt die schnelle unter der langsamen.
 - Bullisch überkauft heißt, der Indikator ist bullisch und beide Linien haben die überkaufte Zone erreicht; bärisch überverkauft heißt, er ist bärisch und beide Linien haben die überverkaufte Zone erreicht.
+- Euphorie ist der Zustand, in dem zur Investition für Produktion und Absatz die Spekulation auf steigende Preise tritt. Das ist Momentum-Handel oder die Greater-Fool-Theorie. Adam Smith sprach von Overtrading.
 
 ## Kernaussagen
 
@@ -159,6 +160,49 @@ aktualisiert: 2026-10-30
 - Eine kurze Lookback-Periode macht den Indikator relativ empfindlich für die jüngste Preisvolatilität und den jüngsten Trend, eine lange Lookback-Periode macht ihn relativ langsam.
 - Ein überverkauftes Niveau ist ein relativ niedriges Niveau, gewöhnlich etwa 20 bis 30 Prozent.
 - Erreichen viele Indikatoren ein überverkauftes Niveau, soll das Abwärtspotenzial des Kurses begrenzt sein, bevor ein Kurstief entsteht.
+- Viele Momentum-Strategien haben als einzige Rechtfertigung, dass andere Anleger langsamer auf Nachrichten reagieren. Holen diese auf, kann die Strategie eines Tages ohne Erklärung aufhören zu funktionieren.
+- Mean-Reversion-Paare haben dagegen oft eine fundamentale Geschichte, und wenn die Kointegration endet, bleibt der Grund häufig noch verständlich.
+- Von Gewinnmeldungen getriebenes Preismomentum dauerte früher mehrere Tage und hält inzwischen kaum bis zum Börsenschluss.
+- Die Dauer wird kürzer, je mehr Händler die Information schneller und früher lernen, wenn Momentum aus langsamer Informationsdiffusion entsteht.
+- Die Haltedauer muss womöglich ständig verkürzt werden, ohne vorhersagbaren Zeitplan.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist der Markt für Momentum-Strategien.
+- Beispiel 1.1 erzeugt mit der Kurtosis der TU-Futures und ohne serielle Autokorrelation in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Die meisten Instrumente, Aktien wie Futures, zeigen Cross-Sectional-Momentum und oft Zeitreihenmomentum, typischerweise über einen Monat oder länger.
+- Lange Haltedauern senken die Sharpe Ratio und die statistische Signifikanz, weil unabhängige Signale selten sind, und sie underperformen nach Finanzkrisen; kurzfristige Intraday-Strategien haben diese Nachteile nicht und behalten einige zentrale Vorteile.
+- Von vier Hauptursachen des Momentums wirkt intraday alle außer der Persistenz der Rollrendite, deren Betrag und Volatilität intraday zu klein sind.
+- Eine zusätzliche, vor allem kurzfristige Ursache ist das Auslösen von Stops, das oft zu Breakout-Strategien führt.
+- Wird Momentum durch langsame Diffusion von Nachrichten getrieben, lässt sich von den ersten Tagen, Stunden oder sogar Sekunden nach dem Ereignis profitieren.
+- Die Opening-Gap-Strategie auf FSTX liefert vom 16. Juli 2004 bis 17. Mai 2012 13 Prozent APR und eine Sharpe Ratio von 1,4; auf GBPUSD mit Close 17:00 Uhr ET und Open 5:00 Uhr ET vom 23. Juli 2007 bis 20. Februar 2012 7,2 Prozent APR und eine Sharpe Ratio von 1,3.
+- Das Gap-Momentum entsteht, weil bei der Eröffnung viele Stops zugleich ausgelöst werden und eine Kaskade weiter entfernte Stops treffen kann, oder weil über Nacht wesentliche Ereignisse lagen.
+- Die DRN-Strategie kauft bei einer Rendite vom Vortagesschluss bis 15 Minuten vor Schluss über 2 Prozent und verkauft unter minus 2 Prozent, mit Ausstieg am Schluss; APR 15 Prozent und Sharpe Ratio 1,8 vom 12. Oktober 2011 bis 25. Oktober 2012.
+- Eine große positive Indexbewegung erzeugt Momentum in derselben Richtung auch beim gehebelten Short-ETF, weil dessen Sponsor Shorts abbaut und damit kauft.
+- Eine Bewegung des SPX um 1 Prozent erzwingt Käufe oder Verkäufe von etwa 17 Prozent des Market-on-Close-Volumens.
+- Auf der kürzesten Skala erzeugen das Ungleichgewicht der Bid- und Ask-Sizes, Änderungen im Orderflow oder ungleich verteilte Stop-Orders Preismomentum, und High-Frequency-Händler erzeugen das Ungleichgewicht manchmal selbst.
+- Momentum-Strategien profitieren vom Stop-Loss auf geradlinige Weise: ein Verlust heißt, dass das Momentum gedreht hat, also sind Ausstieg und vielleicht die Umkehr der Position logisch.
+- Ein fortlaufend aktualisiertes Momentum-Signal wirkt als faktischer Stop-Loss, und deshalb haben Momentum-Modelle nicht dasselbe Tail Risk wie Mean-Reversion-Modelle.
+- Die FSTX-Opening-Gap-Strategie hatte vom 16. Juli 2004 bis 17. Mai 2012 eine annualisierte Durchschnittsrendite von etwa 13 Prozent und eine Sharpe Ratio von 1,4; lag der VIX des Vortags über 35, fielen die annualisierte Tagesrendite auf 2,6 Prozent und die Sharpe Ratio auf 0,16, der VIX rät also, am Folgetag nicht zu handeln.
+- Der Stop-Loss ist bei Momentum ein natürlicher Bestandteil der Strategie, während er bei Mean Reversion die Backtest-Performance wegen Survivorship Bias meist senkt und vor allem ein künftiges Black-Swan-Ereignis abfangen soll.
+- Das langfristige Preismomentum in der Analystenauswertung ist die Preisrendite der vergangenen drei Jahre, verteilt über die Dezile der Konsensempfehlungen.
+- Die Favoriten haben außerdem in den letzten zwölf Monaten außergewöhnlich hohe Preisrenditen erzielt.
+- Chan und Kot (2002) kreuzen lang- und kurzfristiges Preismomentum. Am US-Markt 1965 bis 2002 ist die beste der vier Gruppen der kurzfristige Preisgewinner, der langfristig ein Preisverlierer war. Die Analysten bevorzugen langfristige Preisgewinner.
+- Hohes gegen niedriges Preismomentum bringt im europäischen Growth-PE-Quintil rund 12 Prozent p.a. und im Value-PE-Quintil rund 4 Prozent p.a., Sample 1990 bis 2006.
+- Der mediane Mehrertrag des Sechsmonats-Preismomentums liegt im Growth-Universum über 400 Basispunkten p.a. und im Value-Universum bei 130 Basispunkten p.a.
+- High-Momentum-Sektoren schlugen Low-Momentum-Sektoren und den Markt um rund 2 Prozent p.a., ein für Preismomentum ungewöhnlich niedriger und nur grenzwertig signifikanter Ertrag.
+- Auf Titelebene lieferte Long-Short-Preismomentum fast 10 Prozent p.a. seit 1926, auf Sektorebene 2,2 Prozent von 1926 bis 2005 und 1,3 Prozent von 1974 bis 2005.
+- Der sektoradjustierte Backtest einer 6-Monats-Preismomentum-Strategie arbeitet schlechter als bei Value und Size; Preismomentum funktioniert nicht am besten sektoradjustiert.
+- Das getestete Preismomentum ist eine 6-Monats-Strategie mit Ausführung, die um einen Monat verzögert ist, einmal absolut und einmal relativ zum Branchenmedian.
+- Auf Länderebene ist Momentum die Preisänderung der vorherigen zwölf Monate.
+- Weil der Preis selbst nicht von Branchenmix oder Rechnungslegung abhängt, überrascht es nicht, dass branchenrelatives Preismomentum höhere Signifikanz, aber niedrigere absolute Renditen liefert.
+- Der Schluss des Backtests: die meisten Bewertungskriterien gewinnen durch die Sektoranpassung, Preismomentum nicht.
+- Länder mit dem höchsten Zwölfmonats-Preismomentum schlagen die mit dem niedrigsten um 15,8 Prozent p.a. und den MSCI World long-only um 9,0 Prozent p.a.
+- Ein einseitiger Markt, getrieben von momentumbasierten zynischen Anlegern, schafft ein sehr riskantes Umfeld. Momentum- oder Trendfolgestrategien dominieren diese Phase.
+- Trotz fehlender fundamentaler Überzeugung in die Rally der letzten Jahre spielen viele den Markt weiter. Kurze Horizonte, Überkonfidenz, vor dem Hoch auszusteigen, und die Einseitigkeit lassen die Abwicklung viel schneller erwarten, als viele glauben.
+- Eine starke Implikation positiver Rückkopplung ist, dass eine moderate Bewegung außergewöhnlich unwahrscheinlich ist. Die Preise bewegen sich kaum oder sehr scharf.
+- Overtrading kann reine Spekulation, eine Überschätzung der erwarteten Renditen oder übermäßiges Gearing sein. Die US-Erfahrung von 1991 bis 2002 erfüllt alle drei Elemente.
+- Die massive Beliebtheit aggressiver Wachstumsfonds belegt das große rein spekulative Element im US-Aktienmarkt.
+- Jedes Versagen des Preismomentums kann nach Abreu und Brunnermeier einen sich selbst erfüllenden Abschwung an den Aktienmärkten auslösen.
+- Das einfache Preismomentum des S&P 500 über 3, 6 und 12 Monate war zuletzt stark (Abbildung 40.8).
+- Berkelaar und Kouwenberg (2000): Verlustaverse Anleger sind in guten Weltzuständen Momentum-Händler.
 
 ## Funktionsweise
 
@@ -191,6 +235,8 @@ aktualisiert: 2026-10-30
 - Eine längere Lookback-Periode ist weniger empfindlich für Preisänderungen und braucht eine längere Phase jüngster Momentumänderung, bis sie beeinflusst wird.
 - Der Vorteil der längeren Lookback-Periode sind weniger falsche Umkehren durch kurzfristige Momentumänderungen; der Nachteil ist ein möglicher Nachlauf, sodass der Preis mehrere Bars vor dem Indikator umgekehrt haben kann.
 - Momentumtrends wechseln von niedriger Volatilität mit relativ seltenen Umkehren zu hoher Volatilität mit relativ häufigen Umkehren, und kein System warnt vor der Art der künftigen Zyklen.
+- Der Momentum-Filter im Growth- und Value-Test nutzt das Preismomentum der vergangenen sechs Monate, um einen Monat verzögert, und teilt das PE-Quintil in drei Gruppen.
+- Auf Sektorebene wird Momentum als 12-Monats-Gesamtrendite gemessen und das Universum in Tritiles sortiert.
 
 ## Voraussetzungen
 
@@ -222,6 +268,11 @@ aktualisiert: 2026-10-30
 - Momentum, Muster und Preis werden gemeinsam benutzt; die Preisposition allein trägt die Entscheidung nicht.
 - Die Dynamic Price Strategies gelten als die schnellsten, leichtesten und verlässlichsten Preisstrategien aus mehr als 20 Jahren, aber nicht jedes Hoch und Tief liegt genau auf dem vorher bestimmten Schlüsselziel.
 - Am Ziel einer möglichen Welle 5 wird jede Momentumumkehr zusammen mit einer Musterumkehr als Signal beachtet.
+- Die zweite Buy-on-Gap-Regel ist ein Momentum-Filter auf einer Mean-Reversion-Strategie und oft sehr nützlich.
+- Aktien, die nur wenig gefallen sind, kehren eher um als stark gefallene, weil letztere häufig negative Nachrichten wie schlechte Gewinnmeldungen haben. Nachrichtengetriebene Einbrüche kehren seltener um.
+- Auf solchen Nachrichten lassen sich eigene Momentum-Strategien bauen. Das wird in Kapitel 7 behandelt.
+- Ein Kurs über einem langfristigen gleitenden Durchschnitt zieht Verkaufsdruck größerer Long-only-Fonds mit längerem Horizont an.
+- Ein Momentum-Filter auf Mean-Reversal-Strategien verbessert typischerweise ihre Stetigkeit.
 
 ## Regeln und Kriterien
 
@@ -247,6 +298,9 @@ aktualisiert: 2026-10-30
 - Nennt man einen Trendindikator und ein Beispiel, zeigt er zwei schnelle Fehlschläge, und auf jedes nachträgliche Beispiel mindestens zwei, in denen die Umkehr nicht rechtzeitig kam.
 - Verluste wird es geben; eine Strategie, die Verluste auf Verlusttrades minimiert, ist wesentlich, und Divergenz von Momentum und Preis soll wenigstens diese Verluste begrenzen.
 - Nicht jedes Dual-Time-Frame-Setup ist profitabel; ohne Einhalten des Tradingplans ist man zum Scheitern verurteilt.
+- Datenfehler dieser Art drücken die Backtest-Performance von Momentum-Strategien: der Backtest kauft im Beispiel um 11:01 bei 110 Dollar und wird um 11:02 bei 100 Dollar womöglich mit Verlust ausgestoppt.
+- Im Live-Handel lösen fehlerhafte Ticks auch bei Momentum-Strategien falsche Orders aus und sind für die Ausführung ebenso verlustbringend.
+- Datenfehler können Mean-Reversion-Backtests aufblähen, Momentum-Backtests dagegen nicht.
 
 ## Beispiele
 
@@ -272,6 +326,12 @@ aktualisiert: 2026-10-30
 - Zum 17. April 2007 waren Wochen- und Tagesmomentum der November-Sojabohnen überverkauft, der Preis lag nicht weit über der Unterstützung des Regressionskanals.
 - Nach der 162-Prozent-APP im USD/CAD war das Tagesmomentum noch bärisch und nicht überverkauft, deshalb wurde die Fortsetzung für wahrscheinlich gehalten.
 - Am 30. Januar war der 13er Tages-DTosc bärisch überverkauft, passend zu einem möglichen Welle-5-von-5-Tief.
+- Länder nach dem Preismomentum 1976 bis 2003: das hohe Tritile hat Monatsrendite 1,7, Risiko 4,9 und Rendite je Risiko 0,34; das niedrige 0,4, 4,6 und 0,08; der Markt 0,9, 4,2 und 0,23.
+- Das Long-Short-Alpha beträgt 1,2 bei t 5,6, das Long-only-Alpha 0,81 bei t 4,8, und das Long-only-Beta liegt bei 1,0 mit t 24,1.
+- 67 Prozent der Calls sind richtig, der Informationskoeffizient beträgt 0,34 und die Information Ratio 1,19.
+- Die erste Abbildung je Strategie setzt 1975 100 Einheiten in das obere und das untere Tritile und verfolgt sie bei monatlichem Rebalancing.
+- Die lange Aufwertung des Dollar gegen den Yen seit 1995 zog sämtliche trendfolgenden Momentum-Spieler in den Yen-Carry. Die Umkehr explodierte in der Woche ab dem 5. Oktober 1998 mit einem Wochenverlust des Dollar von 15 Prozent gegen den Yen.
+- Portfolio Insurance, dynamisches Hedging und informelle Stop-Losses verstärkten den Crash von 1987, nach Shiller 1987 und 1989.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -314,6 +374,21 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 234–250 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-017-p234-p250|S. 234–250]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 172–191 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-010-p172-p191|S. 172–191]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 191–210 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-011-p191-p210|S. 191–210]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 400–419 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-022-p400-p419|S. 400–419]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 419–438 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-023-p419-p438|S. 419–438]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 457–476 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-025-p457-p476|S. 457–476]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 514–533 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-028-p514-p533|S. 514–533]]
 
 ## Verwandte Themen
 

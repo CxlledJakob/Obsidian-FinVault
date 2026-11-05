@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Liquidität
@@ -65,6 +65,21 @@ aktualisiert: 2026-10-30
 - Wie ein unvorsichtiger Höhenarbeiter oder Testpilot nicht lange genug leben muss, um einen Lohn einschließlich Gefahrenzulage zu kassieren, kann ein unvorsichtiger Sucher von Risikoprämien nicht lange genug im Spiel bleiben, um sie einzusammeln.
 - Aktien- und Anleihemärkte geben den Eigentümern einen schnellen Weg, ihre Position an andere Anleger zu verkaufen.
 - Die Liquidität von Aktien und Anleihen macht sie für die ersten Anleger attraktiv und erleichtert es den Unternehmen dadurch, Fremdkapital und Eigenkapital aufzunehmen.
+- Die Dezimalisierung am 9. April 2001 senkte die angezeigte Liquidität am besten Bid und Ask, neben den Bid-Ask-Spreads.
+- Die Finanzkrise 2008 ließ die durchschnittlichen Tagesumsätze anschließend um 50 Prozent einbrechen; Retail-Handel und der Besitz von Stammaktien gingen besonders zurück.
+- Die Regulation NMS im Juli 2007 trug zum drastischen Rückgang der durchschnittlichen Trade-Größen und zum Verschwinden des NYSE-Blocktrades bei.
+- Gegenüber den zugehörigen Aktienindex-ETFs sind Währungen gewöhnlich liquider, besonders in den Größen am besten Bid und Ask, und die Transaktionskosten sind deshalb niedriger.
+- Gehandelt wird mindestens fünf Tage rund um die Uhr, von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET. ET ist entweder EDT oder EST, also GMT minus 4 oder GMT minus 5.
+- Aktien unter dem Verkaufs- oder Kaufdruck von Publikumsfonds werden aus Liquiditätsgründen und ohne eigenes Verdienst im Kurs gedrückt oder gehoben.
+- Nachdem dieser Druck endet, mean-reverten die Kurse oft; Käufe der Titel mit dem stärksten Verkaufsdruck der Quartale t minus 4 bis t minus 1, und umgekehrt, erzielen weitere 7 Prozent annualisiert.
+- Orderflow kann Preismomentum auch auf der kürzesten Zeitskala zünden.
+- Die Slippage der Fonds-Druck-Strategie ist voraussichtlich erheblich, weil die Holdings-Information zum Quartalsende verzögert eintrifft.
+- Market Maker stellen Marktliquidität bereit, indem sie bereitstehen, zu kaufen oder zu verkaufen, wann immer das Publikum kaufen oder verkaufen will.
+- Liquidität meint die Fähigkeit, beträchtliche Mengen eines Wertpapiers schnell, anonym und mit geringem Preiseinfluss zu kaufen oder zu verkaufen.
+- Als Gegenleistung für diese Liquidität erhalten die Market Maker vom Börsenplatz das Monopol, unterschiedliche Preise für Käufe und Verkäufe zu stellen; der Bid-Ask-Spread ist ihre primäre Vergütung.
+- In einem auftragsgetriebenen Markt, etwa der Taiwan Stock Exchange, können Hochfrequenzdaten die Orderdynamik und die Frage untersuchen, wer die Marktliquidität bereitstellt.
+- Cho, Russell, Tiao und Tsay (2003) verwenden 5-Minuten-Renditen von mehr als 340 an der Taiwan Stock Exchange gehandelten Aktien und finden signifikante Evidenz für Magneteffekte in Richtung der oberen Preisgrenze.
+- Im Minutendaten-Schwellenmodell für den S&P 500 im Mai 1993 sind vergangene Logrenditen des Indexfutures informativer als vergangene Logrenditen der Kasse, gemessen an der größeren Zahl signifikanter t-Verhältnisse, und der Text führt das darauf zurück, dass Futures im Allgemeinen liquider sind.
 
 ## Funktionsweise
 
@@ -76,6 +91,7 @@ aktualisiert: 2026-10-30
 ## Anwendung im Trading
 
 - Unter normalen Marktbedingungen erzeugen Market Maker informierte Prognosen mit niedrigem Cross-Entropy-Verlust, während sie Position Takern Liquidität bereitstellen.
+- Der Rückgang von Spreads und angezeigter Liquidität senkte die Profitabilität vieler Statistical-Arbitrage-Strategien und erhöhte die vieler Hochfrequenzstrategien.
 
 ## Regeln und Kriterien
 
@@ -122,5 +138,10 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 125–144 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-009-p125-p144|S. 125–144]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 381–400 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-021-p381-p400|S. 381–400]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 33–51 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-003-p033-p051|S. 33–51]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 248–267 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-014-p248-p267|S. 248–267]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
 
 ## Verwandte Themen

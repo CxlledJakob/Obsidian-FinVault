@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Out-of-Sample-Test
@@ -117,6 +117,46 @@ aktualisiert: 2026-10-30
 - Danach wird angenommen, dass diese Einstellungen nützlich bleiben; mehr ist nicht möglich, weil sich die Zukunft nicht sehen lässt.
 - Ob Volatilität und Momentumzyklen sich künftig ändern, lässt sich nie wissen, und es muss angenommen werden, dass sie fortbestehen.
 - Ändern ein Markt später Trendgeschwindigkeit und Volatilität und sind die früher besten Einstellungen nach einigen Momentumzyklen nicht mehr optimal, kann die Lookback-Periode verkürzt oder verlängert werden.
+- Der bekannte Weg, Data-Snooping-Bias zu erkennen, ist der Test auf Out-of-Sample-Daten und die Verwerfung eines Modells, das ihn nicht besteht.
+- Wer das Modell danach so nachjustiert, dass es auf In-Sample und Out-of-Sample vernünftig läuft, hat die Out-of-Sample-Daten in In-Sample-Daten verwandelt.
+- Wahrer Out-of-Sample-Test beginnt erst nach der Veröffentlichung, weil der Autor bei schlechten Zwischenergebnissen Parameter ändern oder das Modell wesentlich nachjustieren kann, bis die sogenannten Out-of-Sample-Daten gut aussehen.
+- Scaling-in über mehrere Bollinger-Bänder ist in der Stichprobe nie optimal, kann die All-in-Methode außerhalb der Stichprobe aber übertreffen, wenn die Wahrscheinlichkeit einer weiteren Abweichung nicht konstant ist.
+- δ im Kalman-Filter und der Lookback einer gleitenden Regression sollen auf Trainingsdaten bestimmt werden. In den Beispielen sind δ gleich 0,0001, Ve gleich 0,001 und der Lookback 20 mit Wissen im Nachhinein gesetzt.
+- Kointegrierende Aktienpaare findet man in einem gewählten Fenster leicht, out of sample verlieren sie die Kointegration ebenso leicht.
+- Ein einzelnes Aktienpaar bleibt nur mit fundamentalem Verständnis der Firmen konsistent profitabel, das den Ausstieg erlaubt, bevor schlechte Nachrichten einer Seite öffentlich werden.
+- Viele Paare helfen nur, wenn die erwartete Out-of-Sample-Rendite des einzelnen Paares positiv ist. Bei Aktienpaaren hat der Autor das nicht gefunden.
+- EWA gegen EWC kointegrierte im November 2012 noch, nachdem das Paar 2009 genannt worden war, weil sich die Ökonomie eines ETF-Korbs langsamer ändert als die einer Firma.
+- GLD gegen GDX kointegrierte bis etwa 14. Juli 2008 mit 99 Prozent und verlor die Beziehung danach. Die Hypothese teuren Öls lässt sich prüfen: mit USO kointegriert das Triplett über 2006 bis 2012 mit 99 Prozent.
+- Hört eine Strategie auf zu funktionieren, wird eine Hypothese über den Grund gebildet und an den Daten geprüft. Oft entsteht eine geänderte Strategie, die wieder profitabel wird.
+- Das SPY-Modell trainiert vom 1. Januar bis 31. Dezember 2007 und testet vom 2. Januar 2008 bis 9. April 2012. Die Performance fällt mit der Zeit, teils weil Bestandteile und Hedge Ratios nicht nachtrainiert werden.
+- Beim linearen Long-Short-Modell ist die Leistung ab Anfang 2008 echt out of sample, weil die Strategie 2007 veröffentlicht wurde. 2008 lag die annualisierte Rendite bei 30 Prozent, 2011 bei 11 Prozent.
+- Die Regressionskoeffizienten für ES gegen VX werden nur auf den ersten 500 Tagen nach August 2008 geschätzt, damit die Statistiken anschließend das Handelsmodell bauen.
+- Die gemeldete Leistung gilt für das Testset vom 29. Juli 2010 bis zum 8. Mai 2012: 12,3 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,4.
+- Dieses Testfenster liegt nach dem Trainingsfenster, aus dem Residual-Standardabweichung und Hedge Ratio stammen.
+- Die verfügbaren Daten werden in eine Schätz- und eine Prognoseteilstichprobe geteilt: die erste baut das nichtlineare Modell, die zweite bewertet seine Prognoseleistung.
+- In manchen Studien wandert beim rollierenden Prognoseverfahren mit jedem neuen Ursprung ein Datenpunkt aus der Prognoseteilstichprobe in die Schätzteilstichprobe.
+- Es gibt kein allgemein akzeptiertes einzelnes Maß zum Modellvergleich; eine Nutzenfunktion, die am Ziel der Prognose hängt, kann den Vergleich besser fassen.
+- Das Richtungsmaß fasst Treffer und Fehler bei Auf- und Abwärtsbewegungen von x_{T+ℓ} in einer 2×2-Kontingenztabelle zusammen; große Werte von m11 und m22 bedeuten bessere Prognosen.
+- Die zugehörige χ²-Statistik ist unter milden Bedingungen asymptotisch chi-quadrat-verteilt mit einem Freiheitsgrad; ein großer Wert bedeutet, dass das Modell die zufällige Wahl schlägt.
+- Als Betragsmaße dienen MSE(ℓ), MAD(ℓ) und MAPE(ℓ) über die m verfügbaren ℓ-Schritt-Prognosen; gewählt wird oft das Modell mit dem kleinsten Wert auf dem gewählten Maß.
+- Verschiedene Horizonte ℓ können verschiedene Modelle auswählen; die Maße haben weitere Grenzen im Modellvergleich, siehe Clements und Hendry (1993).
+- Das Verteilungsmaß setzt das Perzentil der Beobachtung in der bedingten prädiktiven Bootstrap-Verteilung an; bei angemessenem Modell sind diese Perzentile auf [0, 1] gleichverteilt und lassen sich mit der Kolmogorov-Smirnov-Statistik prüfen.
+- Im außerstichprobenartigen Vergleich für die US-Arbeitslosenquote verbessert das TAR das lineare Modell in Kontraktionen bei MSE und Verzerrung, während in Expansionen das lineare Modell beide nichtlinearen Modelle schlägt.
+- Der Beitrag der nichtlinearen Modelle liegt damit hauptsächlich in Kontraktionsphasen.
+- Für die monatlichen GE-Renditen von Januar 1926 bis Dezember 2008 sollen die letzten drei Jahre der Bewertung von Ein-Schritt-Prognosen dienen, einmal mit einem 3–2–1-Netz auf r_{t−1}, r_{t−2} und r_{t−3} und einmal mit einem 6–5–1-Netz, das zusätzlich die Vorzeichen dieser Lags für die Richtung verwendet.
+- Die Richtungsvariable ist 1, wenn die Rendite positiv ist, und sonst 0; bewertet wird jeweils der mittlere quadratische Prognosefehler.
+- Leli und Filskov (1981) identifizierten mit einer einfachen Regel aus Standardtests der intellektuellen Funktion 83 Prozent neuer, also Out-of-Sample-Fälle fortschreitender Hirnfunktionsstörung.
+- Unerfahrene Fachleute erreichten mit denselben Daten 63 Prozent und erfahrene 58 Prozent; mit der Modellausgabe stiegen die Werte auf 68 Prozent beziehungsweise 75 Prozent und blieben unter der Trefferquote des Modells.
+- Die Verbesserung hing davon ab, in welchem Ausmaß das Modell benutzt wurde.
+- Die Preisdaten zu den Bordeaux-Jahrgängen stammen aus einer anderen Stichprobe als die ursprüngliche Schätzung der Gleichung von Ashenfelter et al. (1995) und sind damit ein Out-of-Sample-Test.
+- Grove et al. (2000) betrachteten 136 Studien einfacher Quant-Modelle gegen menschliches Urteil, von krimineller Rückfälligkeit über Berufswahl und Herzinfarktdiagnose bis zur akademischen Leistung.
+- Davon sprachen 64 klar für das Modell, 64 zeigten ungefähr dasselbe Ergebnis, und nur acht sprachen für das menschliche Urteil.
+- Allen acht Studien zugunsten des Menschen war gemeinsam, dass die Menschen mehr Information hatten als die Quant-Modelle; hätte das Modell dieselbe Information gehabt, hätte es sehr wahrscheinlich besser abgeschnitten.
+- Goldbergs einfache statistische Formel auf zehn MMPI-Scores war außer Stichprobe rund 70 Prozent genau und schlug selbst die besten klinischen Psychologen. Selbst als die Vorhersagen der Regel vorlagen, blieben die Psychologen hinter dem Modell zurück.
+- Die Regel von Leli und Filskov (1981) erkannte 83 Prozent der neuen, also außer Stichprobe liegenden Fälle von intellektuellem Defizit nach Hirnschädigung. Unerfahrene Kliniker lagen bei 63 Prozent, erfahrene bei 58 Prozent. Mit der Modellausgabe stiegen sie auf 68 und 75 Prozent und blieben beide deutlich unter dem Modell.
+- Grove et al. fanden in über 130 Arbeiten nur acht Studien, in denen menschliches Urteil die quantitativen Modelle schlug. In allen acht hatten die Menschen Information, die den Modellen fehlte. Bei demselben Informationsstand waren die Modelle deutlich besser.
+- Über das ganze Spektrum der Arbeiten lag die mittlere Treffergenauigkeit der Menschen bei 66,5 Prozent und die mittlere Hit Ratio der quantitativen Modelle bei 73,2 Prozent.
+- Selbst wenn die Menschen die Modellergebnisse als frei nutzbare Eingabe bekamen, unterperformten sie die Modelle. Das Modell ist eine Decke, von der die eigene Bearbeitung Leistung abzieht, und kein Boden, auf dem man aufbaut.
 
 ## Funktionsweise
 
@@ -155,6 +195,9 @@ aktualisiert: 2026-10-30
 - Sobald die beste komplexe Regel gefunden ist, wird sie auf dem dritten Segment bewertet, dem Validierungssatz, der bis zur Entdeckung von Parametern und Komplexitätsgrad zurückgehalten wurde.
 - Weil der Validierungssatz in dieser Entdeckung nicht benutzt wurde, ist die Leistung der besten Regel dort eine unverzerrte Schätzung ihrer künftigen Leistung.
 - Die Leistung, die die Regel optimaler Komplexität im Testsatz erreicht, ist positiv verzerrt, weil der Testsatz wiederholt aufgesucht wurde; das ist der Data-Mining-Bias.
+- Schwache Leistung auf einem festen Out-of-Sample-Satz kann Pech sein; dann kommt Cross-Validation mit mehreren Trainings- und Prüfmengen infrage.
+- Der abschließende echte Out-of-Sample-Test ist ein Walk-Forward, als Paper-Trading oder besser mit echtem Geld bei minimalem Hebel.
+- Die meisten Trader sind zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Werts erzeugt.
 
 ## Risiken und Grenzen
 
@@ -187,6 +230,10 @@ aktualisiert: 2026-10-30
 - Der Look-back von 5 für Mittel und Standardabweichung der SPY-Arbitrage ist mit dem Vorteil des Hindsight festgelegt.
 - Die annualisierte Rendite von 6,9 Prozent und die Sharpe Ratio von 1 der VX-ES-Rollrendite-Strategie gelten für den 29. Juli 2010 bis zum 7. Mai 2012, und dieser Zeitraum wurde nicht zur Bestimmung der Hedge Ratio verwendet.
 - Die Vier-Parameter-Regel verdiente im Testset 20 Prozent, die einfache Regel aus zwei gleitenden Durchschnitten 15 Prozent.
+- Für IBM 1998 und 1999 beträgt der mittlere quadratische Ein-Schritt-Prognosefehler 91,85 beim Mittelwert-Benchmark, 91,70 beim AR(1) und 91,74 beim 3–2–1-Netz; je nach Schätzung liegt der Netz-MSE zwischen 89,46 und 93,65.
+- Die 2×2-Tabelle des 8–4–1-Netzes über 24 Monate lautet 12 und 2 in der Zeile prognostiziertes Aufwärts sowie 8 und 2 in der Zeile prognostiziertes Abwärts; χ² = 0,137 mit p = 0,71.
+- Das Netz trifft Aufwärtsbewegungen gut und Abwärtsbewegungen schlecht und schlägt einen Random Walk mit gleichen Wahrscheinlichkeiten für Auf und Ab nicht signifikant.
+- Ab dem Ursprung 1968.II liegt der relative Fünf-Schritt-MSE des TAR-Modells der Arbeitslosenquote im Gesamtvergleich bei 1,03 und der des Markov-Switching-Modells bei 1,61, der MSE des linearen Benchmarks bei 1,54.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -222,5 +269,13 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 457–476 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-025-p457-p476|S. 457–476]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 476–495 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-026-p476-p495|S. 476–495]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 229–248 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-013-p229-p248|S. 229–248]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 248–267 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-014-p248-p267|S. 248–267]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 267–286 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-015-p267-p286|S. 267–286]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 286–305 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-016-p286-p305|S. 286–305]]
 
 ## Verwandte Themen

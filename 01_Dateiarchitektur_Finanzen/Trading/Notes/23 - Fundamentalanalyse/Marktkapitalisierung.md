@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Marktkapitalisierung
@@ -28,6 +28,20 @@ aktualisiert: 2026-10-30
 - Fama und French führen die Marktkapitalisierung als Risikofaktor ein: Firmen mit niedriger Marktkapitalisierung seien fundamental riskanter und müssten höhere Durchschnittsrenditen bieten, große Kapitalisierungen seien sicherer und erzielten niedrigere Durchschnittsrenditen.
 - Der Faktor wurde erst hinzugefügt, nachdem die Marktkapitalisierung schon Überschussrenditen erzeugt hatte.
 - Wäre die Größe ein legitimer Risikofaktor, müsste eine darauf gestützte Strategie weiterhin eine Risikoprämie verdienen. Das Verschwinden der Überschussrendite von Small-Cap-Aktien in den letzten 15 Jahren ist damit ein Problem.
+- Fundamentale Faktormodelle konstruieren gemeinsame Faktoren aus titelspezifischen Merkmalen, darunter der Marktkapitalisierung, neben Buchwert, Branche und Stil.
+- Bei Fama und French ist SMB, small minus big, die Performance kleiner gegenüber großen Aktien. Die Größe wird nach dem Marktkapital, market equity, sortiert. Die Rendite des zugehörigen Hedgeportfolios ist die Faktorrealisation von SMB.
+- Der in den jüngeren Jahren fallende Trend der Korrelation zwischen den monatlichen Logrenditen von IBM und dem S&P 500 wird damit erklärt, dass sich der Rang der Marktkapitalisierung von IBM unter den großen US-Industrieunternehmen verändert hat.
+- Das CAPM sagt vorher, der kapitalisierungsgewichtete Marktindex sei mittelwert-varianz-effizient, weil alle Anleger bei gleichen Erwartungen dasselbe Portfolio halten, das dann das wertgewichtete Marktportfolio sein muss.
+- Clarke et al. (2006) zeigen, dass ein Minimum-Varianz-Portfolio höhere Renditen bei niedrigerem Risiko erzeugte als der Marktindex.
+- Fundamental gewichtete Indizes auf Gewinn und Dividenden, weiterhin passiv und formelhaft, erzeugen höhere Rendite und niedrigeres Risiko als ein kapitalisierungsgewichteter Index.
+- Die gezeigten Fundamentalindizes schlugen die kapitalisierungsgewichteten MSCI-Pendants 1984 bis 2004 im Schnitt um 278 Basispunkte p.a. und hatten im Schnitt 53 Basispunkte weniger Volatilität.
+- Abbildung 35.4 stellt die Rendite je Risiko der Fundamentalindizes gegen die kapitalisierungsgewichteten Indizes für Welt, Australien, Frankreich, Deutschland, Hongkong, Italien, Japan, UK und USA, und die kapitalisierungsgewichteten Indizes sind nicht mittelwert-varianz-effizient.
+- Fällt nach Markowitz (2005) die Annahme unbegrenzter Kreditaufnahme, ist der kapitalisierungsgewichtete Markt nicht mehr das optimale Portfolio.
+- Das Verwässerungsmaß ist das Verhältnis von Marktkapitalisierung zum Preisindex. Wächst die Marktkapitalisierung um den Faktor 10 und der kapitalgewichtete Preisindex um den Faktor 5, gab es 100 Prozent Nettoemission.
+- Das Maß eignet sich für breite Indizes. Ein eng gemanagter Index wie der S&P 500 lässt das Verhältnis schon steigen, weil er die Zusammensetzung häufig ändert und der aufgenommene Titel typischerweise größer ist als der gestrichene.
+- Seit 1975 wuchs die Marktkapitalisierung mit 13 Prozent CAGR und der Preisindex mit 10 Prozent CAGR.
+- Das Datastream-Gesamtuniversum der USA ist breit genug, um die Verwässerung der letzten 30 Jahre zu zeigen; beim S&P 500 sank das Verhältnis von Marktkapitalisierung zu Preis 1988–1991.
+- Das Wachstum dieses Verhältnisses 1970–2002 beträgt im Vereinigten Königreich 4,7 Prozent, in Deutschland 4,5, in Frankreich 8,7 und in Japan 3,2 Prozent.
 
 ## Funktionsweise
 
@@ -56,5 +70,10 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 343–362 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-019-p343-p362|S. 343–362]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 495–514 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-027-p495-p514|S. 495–514]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 533–552 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-029-p533-p552|S. 533–552]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 552–571 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-030-p552-p571|S. 552–571]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 571–590 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-031-p571-p590|S. 571–590]]
 
 ## Verwandte Themen

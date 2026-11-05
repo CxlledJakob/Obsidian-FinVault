@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Dark Pool
@@ -26,6 +26,8 @@ aktualisiert: 2026-10-30
 - Die Alternative ist, die Order in kleinere Blöcke zu teilen oder sie vollständig im Dark Pool zu verstecken.
 - Es gibt dabei keine Transparenz, und die wenigsten Trader oder Investoren wissen davon.
 - Der Aufstieg von Dark Pools und Hochfrequenzhandel macht den Handel mancher Mean-Reversion-Strategien in den letzten Jahren recht herausfordernd, darunter Interday- und Intraday-Aktienmodelle, ETF-Paare und -Triplets, ETFs gegen ihre Komponentenaktien, Währungspaare sowie Futures-Kalender- und Intermarket-Spreads.
+- Die NBBO-Größen von Aktien und ETFs sind sehr klein geworden, unter anderem weil institutionelle Händler Dark Pools oder nicht angezeigte Iceberg-Orders nutzen.
+- Weitere Ursachen sind die Zerlegung großer Orders in sehr kleine Child-Orders durch Ausführungsalgorithmen, häufig ersetzte Kleinorders von Hochfrequenzhändlern und die Zurückhaltung der Market Maker, große Größen zu zeigen.
 
 ## Funktionsweise
 
@@ -56,5 +58,6 @@ aktualisiert: 2026-10-30
 
 - A Complete Guide to Volume Price Analysis.pdf, S. 58–77 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-004-p058-p077|S. 58–77]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 1–18 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-001-p001-p018|S. 1–18]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
 
 ## Verwandte Themen

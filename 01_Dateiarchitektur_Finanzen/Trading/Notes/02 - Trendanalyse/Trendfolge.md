@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Trendfolge
@@ -87,6 +87,10 @@ aktualisiert: 2026-10-30
 - Auch ein erfolgreicher Daytrader soll längere Positionen von wenigen Tagen bis wenigen Wochen erwägen, um die größeren Trends mit größerem Potenzial mitzunehmen.
 - Ein Positionstrader handelt diese längeren Trends, Punkte statt Ticks, und die meisten legendären Trader waren Positionstrader.
 - Die Grundstrategie ist, in Richtung der größeren Zeitebene zu handeln und nach der Umkehr der kleineren in dieselbe Richtung einzusteigen.
+- In dem beschriebenen Marktumfeld dominieren Momentum- und Trendfolgestrategien. Zusammen mit zynischen Anlegern und einem einseitigen Markt läuft die Abwicklung viel schneller, als viele erwarten.
+- Die lange Dauer der Dollar-Aufwertung zog sämtliche trendfolgenden Momentum-Spieler in den Trade.
+- Die hohe Korrelation der Hedgefonds-Strategien wird damit erklärt, dass sie entweder Beta oder Momentum mitreiten oder Volatilität verkaufen.
+- Jedes Aktienmarktminus und jeder Anstieg der Volatilität trifft dann alle Stile gleichzeitig.
 
 ## Funktionsweise
 
@@ -145,6 +149,9 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- Seit 1995 wertete der Dollar gegen den Yen auf, mit kurzer Pause 1997, bei positivem Zinsdifferential. Der Carry, Leihe in Yen und Kauf von Dollar-Assets, galt als hoch profitabel und wurde von fast allen massiv genutzt.
+- Nach dem russischen Ausfall im August 1998 fiel der Dollar bis Anfang Oktober noch relativ geordnet um weniger als 10 Prozent gegen Yen und D-Mark. In der Woche ab dem 5. Oktober schloss er 15 Prozent schwächer gegen den Yen.
+- Portfolio Insurance, dynamisches Hedging und informelle Stop-Losses spielten im Crash 1987 eine große Rolle und werden als positives Feedback gedeutet, nach Shiller 1987 und 1989.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -179,6 +186,8 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 17–22 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-002-p017-p022|S. 17–22]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 23–42 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-003-p023-p042|S. 23–42]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 457–476 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-025-p457-p476|S. 457–476]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 609–628 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-033-p609-p628|S. 609–628]]
 
 ## Verwandte Themen
 

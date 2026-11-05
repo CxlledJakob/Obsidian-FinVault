@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Sensitivitätsanalyse
@@ -30,6 +30,9 @@ aktualisiert: 2026-10-30
 - Der fünfte ist die Variation der wahren erwarteten Rendite unter den gebacktesteten Regeln: Je geringer diese Variation, desto größer der Bias.
 - Haben die geprüften Regeln ähnliche Grade an Vorhersagekraft, ist der Data-Mining-Bias größer.
 - Werden die fünf Faktoren berücksichtigt, lassen sich statistische Signifikanz oder ein Konfidenzintervall für eine durch Data Mining entdeckte Regel berechnen.
+- Die Differenz zwischen niedrigem und hohem Kurs-Gewinn-Dezil am MSCI World 1980 bis 2005 steigt monoton mit dem Mittelungsfenster der Gewinne: 11, 15, 18, 22 und 25 Prozentpunkte p.a. bei einem, drei, fünf, sieben und zehn Jahren.
+- Die relative Outperformance der billigen Seite steigt von 5,5 % beim einjährigen Trailing auf 10 % bei drei Jahren und 13 % bei zehn Jahren, während die teure Seite von −5,5 % auf −12 % fällt.
+- Die Rendite der teuren Seite fällt über diese Fenster von 9 % auf −4 % p.a., die der billigen Seite liegt bei 20, 23, 23, 22 und 21 % p.a. Der Zusatz kommt also von beiden Seiten der Sortierung.
 
 ## Funktionsweise
 
@@ -76,5 +79,6 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 267–286 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-015-p267-p286|S. 267–286]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 286–305 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-016-p286-p305|S. 286–305]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 343–362 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-019-p343-p362|S. 343–362]]
 
 ## Verwandte Themen

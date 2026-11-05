@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Seitwärtsmarkt
@@ -60,6 +60,10 @@ aktualisiert: 2026-10-30
 - Gehandelt wird immer auf der rechten Seite des Charts nach dem letzten Balken, der unbekannten Seite; für die Entscheidung steht nur die Information bis zum letzten Preisbalken.
 - Man kann nie im Voraus wissen, ob ein Markt eine Trading Range beginnen wird; versucht ein Lehrer besondere Strategien für Trading Ranges, soll man weglaufen, denn sie haben alle nur nachträglich funktioniert.
 - Weil Beginn und Ende nie im Voraus bekannt sind, hat dieser Ansatz keine Trading-Range-Strategie; nur akademische Autoren mit zweifelhafter Handelserfahrung haben eine.
+- In einem Trading-Range-Umfeld, in dem Aktien nicht mehr anleihengetrieben sind, wird der Konjunkturzyklus für das Timing der Aktienrenditen wichtiger als in einem anleihengetriebenen Markt.
+- Die dismal years der USA sind ein Seitwärtsmarkt über 17 Jahre, im Text 1964–1982 und in der Tabelle 1964–1981, und zugleich der Testfall für Niedriginflation.
+- Dort erklärt die Steigung der Zinskurve etwa 15 Prozent der Einjahres-Aktienrendite, t = −3,01; der ISM erklärt sie nicht nutzbar, t = −0,79 und adjustiertes R² 0,08.
+- Die These lautet, der Zyklus zähle in Trading-Range- und Niedriginflationsmärkten deutlich mehr; die dismal years bestätigen das für die Zinskurve.
 
 ## Funktionsweise
 
@@ -178,6 +182,7 @@ aktualisiert: 2026-10-30
 - A Complete Guide to Volume Price Analysis.pdf, S. 115–134 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-007-p115-p134|S. 115–134]]
 - A Complete Guide to Volume Price Analysis.pdf, S. 134–153 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-008-p134-p153|S. 134–153]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 23–42 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-003-p023-p042|S. 23–42]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 590–609 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-032-p590-p609|S. 590–609]]
 
 ## Verwandte Themen
 

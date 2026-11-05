@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Credit Spreads
@@ -28,6 +28,12 @@ aktualisiert: 2026-10-30
 
 - Das Arbitrage-Pricing-Modell nennt als Faktoren unter anderem die Inflationsrate, den Spread zwischen Anleihen niedriger und hoher Qualität und die Steigung der Zinsstrukturkurve.
 - Diese lineare Beziehung der Aktienrendite zu den Faktoren entsteht, weil Arbitrageure nach risikolosen Gelegenheiten mit Investment null suchen.
+- Der TED Spread ist die Differenz zwischen dem Dreimonats-LIBOR und dem Zinssatz der Dreimonats-T-Bills und misst das Ausfallrisiko der Banken.
+- In der Kreditkrise 2008 stieg der TED Spread auf ein Rekordhoch von 457 Basispunkten.
+- Der Kreditmarkt wird von großen Institutionen dominiert, die vermutlich informierter sind als Indikatoren des Aktienmarkts, in dessen Bewertung der Herdentrieb der Privatanleger eingeht.
+- Der TED Spread bleibt ein brauchbarer führender Risikoindikator trotz der Manipulation der LIBOR-Sätze durch Banken, die sie niedriger erscheinen ließen, nach Snider und Youle 2010; entscheidend ist der relative Wert über die Zeit, nicht der absolute.
+- Hochzinsanleihen, vertreten etwa durch den ETF HYG, haben zu verschiedenen Zeiten als Risikoindikator gedient und müssen darauf geprüft werden, ob sie führend sind.
+- Das Portfolio aus Value-Rückkäufen minus Growth-Emittenten ist bei hohem und bei niedrigem Default Premium positiv und ebenso bei einem Chicago National Activity Index unter null und über null. Value-Rückkäufe schlagen Growth-Emittenten also unabhängig von diesen wirtschaftlichen Zuständen.
 
 ## Funktionsweise
 
@@ -37,6 +43,8 @@ aktualisiert: 2026-10-30
 - Fallen die Renditen niedrigerer Qualität wie BAA schneller als die höherer Qualität wie AAA, wird das als Bereitschaft gelesen, für die höheren Renditen zusätzliches Ausfallrisiko zu übernehmen.
 - Ein steigender Trend des Quality Spread gilt als Signal, dass Anleger höhere Risiken für höhere Renditen eingehen, und der Spread soll in dieselbe Richtung wie die Aktien laufen.
 - Die inverse Trendregel TI-40-41 wendet den Channel-Breakout-Operator mit 41 Tagen Look-back auf Eingabereihe 40 an, den Quality Spread BAA minus AAA.
+- Als Maß für schlechte Weltzustände dient der Default Premium, der Spread niedrig eingestufter Unternehmensanleihen zu Staatspapieren. Ist er hoch, durchläuft die Wirtschaft wahrscheinlich einen Abschwung, und Value sollte nach der Effizienzmarktthese viel schlechter abschneiden als Growth.
+- Der zweite Proxy ist der Chicago National Activity Index. Liegt er unter null, wächst die Wirtschaft unter dem Trend, was ebenfalls ein schlechtes Ergebnis für Value-Aktien implizieren würde.
 
 ## Voraussetzungen
 
@@ -66,6 +74,8 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 400–419 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-022-p400-p419|S. 400–419]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 495–514 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-027-p495-p514|S. 495–514]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 381–400 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-021-p381-p400|S. 381–400]]
 
 ## Verwandte Themen
 

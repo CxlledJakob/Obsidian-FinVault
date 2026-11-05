@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Exit-Logik
@@ -52,6 +52,19 @@ aktualisiert: 2026-10-30
 - Stop-Losses sind mit Momentum-Strategien verträglich und mit Mean-Reversion-Strategien nicht, weil sie deren Einstiegssignalen widersprechen; das wird in Kapitel 8 wieder aufgenommen.
 - Durch zeitbasierten Ausstieg oder Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt.
 - Eine willkürlich gesetzte Gewinnobergrenze bei Momentum ist unratsam, weil das Aufwärtspotenzial sonst unbegrenzt ist.
+- Die zwei üblichen Ausstiege von Momentum-Strategien sind zeitbasiert und Stop-Loss.
+- Alle bisher besprochenen Momentum-Strategien nutzen nur den zeitbasierten Ausstieg: eine Haltedauer wird festgelegt, und bei ihrem Erreichen wird geschlossen.
+- Ein Stop-Loss kann die Ausstiegsbedingung sein oder zusätzlich zur Haltedauer gelten.
+- Stop-Losses passen zu Momentum: dreht das Momentum, wird die Gegenposition eröffnet, und weil die alte Position verloren hätte, wirkt dieser Ausstieg als Stop.
+- Stop-Losses passen nicht zu Mean Reversion, weil sie den Einstiegssignalen widersprechen; das wird in Kapitel 8 wieder aufgenommen.
+- Der kumulierte Verlust aufeinanderfolgender Verlustpositionen einer Momentum-Strategie kann trotzdem ruinös sein.
+- Eine willkürliche Gewinnobergrenze ist unratsam, weil das Aufwärtspotenzial von Momentum sonst unbegrenzt ist.
+- Die Opening-Gap-Strategie hält vom Open bis zum Close desselben Tages; die Rendite ist die Position mal (Open minus Close) geteilt durch Open.
+- Die PEAD-Strategie wird am Schluss desselben Tages geschlossen. Ob eine noch kürzere Haltedauer bessere Renditen bringt, bleibt zu testen.
+- Die DRN-Strategie steigt am Handelsschluss aus.
+- Beim Ratio Trade wird verkauft, sobald der Bid um einen oder mehrere Ticks steigt, oder eine Verkaufsorder auf den Best Ask gelegt, wenn der Spread die Round-Trip-Kommission übersteigt; sonst Verkauf zum ursprünglichen Best Bid.
+- Beim Ticking wird zum Best Ask minus einem Tick verkauft; scheitert die Füllung, Verkauf zum ursprünglichen Best Bid mit Verlust der Kommissionen plus einem Tick.
+- Stop Hunting deckt die Short-Position, sobald die Sell-Stops ausgelöst sind und das Abwärtsmomentum läuft.
 
 ## Funktionsweise
 
@@ -98,6 +111,17 @@ aktualisiert: 2026-10-30
 - Für GLD gegen GDX soll zumindest eine Regel den Handel beenden, sobald der Ölpreis eine bestimmte Schwelle überschreitet.
 - Bei einem einzelnen Aktienpaar setzt konsistente Profitabilität voraus, dass man jedes Unternehmen fundamental versteht und die Position verlässt, bevor schlechte Nachrichten eines der beiden öffentlich werden.
 - Wer bei Aktienpaaren auf Overnight-Positionen verzichtet, kann die Änderungen der fundamentalen Unternehmensbewertung vermeiden, die längere Positionen treffen.
+- Beim Bollinger-Band bedeutet exitZscore gleich 0 einen Ausstieg am aktuellen Mittel. exitZscore gleich minus entryZscore bedeutet einen Ausstieg erst jenseits des gegenüberliegenden Bandes, der dort das Gegensignal auslöst.
+- Schrittweises Aussteigen nimmt Gewinn bei jeder kleinen Rückkehr mit und wartet nicht auf die volle Rückkehr zum Mittel. Dadurch kann die Strategie auch profitabel bleiben, wenn die Reihe nicht stationär ist und den Mittelwert nie erreicht.
+- Im Vergleich von Schoenberg und Corwin wird dagegen jeder Kontrakt erst beim Endpreis F geschlossen, auch wenn der Einstieg ein average-in war.
+- Beim Kalman-Beispiel wird der Long geschlossen, sobald der Prognosefehler e über minus der Wurzel von Q steigt, und der Short, sobald e unter die Wurzel von Q fällt.
+- Ein Kontraktpaar im CL-Kalenderspread wird drei Monate gehalten, gerechnet als 61 Handelstage, und zehn Tage vor Verfall des nahen Kontrakts in das nächste Paar gerollt.
+- Die Fälligkeiten von nahem und fernem Kontrakt liegen ein Jahr auseinander.
+- Fehlt ein Z-Score, ist die Position null. Ein positiver Z-Score dreht die Ausgangslage long fern und short nah um.
+- Im Devisenhandel sind Stop-Losses brauchbar, weil von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET durchgehend gehandelt wird. Ist ein Markt lange geschlossen, sind Stops nutzlos, weil er zur Wiedereröffnung gappen kann.
+- Die Long-Short-Position wird aufgelöst, wenn der Spread die gegenüberliegende Grenze Mittel plus Zielabweichung erreicht; der Logreturn des Portfolios ist dann das Doppelte der Zielabweichung, der Nettogewinn dieses Doppelte minus η, und er ist positiv, wenn das Doppelte der Zielabweichung die Kosten übersteigt.
+- Der Auflösungszeitpunkt tritt ein, weil der Spread mean-reverting ist.
+- Ist die Zielabweichung größer als η, kann schon bei Rückkehr des Spreads auf den Mittelwert μw aufgelöst werden; der Nettogewinn ist dann die Zielabweichung minus η.
 
 ## Risiken und Grenzen
 
@@ -125,5 +149,11 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 81–100 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-006-p081-p100|S. 81–100]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 105–124 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-008-p105-p124|S. 105–124]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 170–172 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-012-p170-p172|S. 170–172]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Chance-Risiko-Verhältnis
@@ -67,6 +67,15 @@ aktualisiert: 2026-10-30
 - Ein Verhältnis wie 3:1 ist hier Reward zu Risk, also 3 Dollar möglicher Gewinn auf 1 Dollar Risiko, das als Kapitaleinsatz verstanden wird.
 - Das Risiko je Einheit lässt sich als Differenz zwischen Einstiegspreis und initialem Schutzstoppreis definieren.
 - Die Belohnung ist immer nur eine bestmögliche Schätzung der wahrscheinlichen Mindestbewegung, die der Markt voraussichtlich macht.
+- Bei Momentum ist das Aufwärtspotenzial unbegrenzt, solange keine willkürliche Gewinnobergrenze gesetzt wird, und eine solche Obergrenze ist unratsam; das Abwärtspotenzial einer einzelnen Position ist begrenzt.
+- Bei Mean Reversion ist das Aufwärtspotenzial durch die natürliche Gewinnobergrenze begrenzt, den Mean, zu dem die Preise zurückkehren, und das Abwärtspotenzial kann unbegrenzt sein.
+- Zeitbasierter Ausstieg oder Stop-Loss begrenzen den Verlust einer einzelnen Momentum-Position; der kumulierte Verlust aufeinanderfolgender Verlustpositionen kann trotzdem ruinös sein.
+- Eine einzige Mean-Reversion-Position kann einen enormen Drawdown erzeugen.
+- Je häufiger Black-Swan-Ereignisse auftreten und je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis sind, desto eher profitiert eine Momentum-Strategie.
+- Momentum kann in Risiken gedeihen, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
+- Im Münzwurfspiel von Bechara et al. (2005) steht einem möglichen Verlust von 1 Dollar ein möglicher Gewinn von 2,50 Dollar gegenüber; der erwartete Auszahlungsbetrag der Wette ist 1,25 Dollar gegen 1 Dollar bei Verzicht, und wer in allen 20 Runden investiert, hat nur 13 Prozent Chance, unter den gehaltenen 20 Dollar zu landen.
+- Jeder Wurf ist unabhängig, der vorherige Ausgang dürfte die nächste Entscheidung also nicht ändern. Nach einem Verlust investieren normale Spieler trotzdem nur in 46,9 Prozent der Folgerunden; in der gemeinsamen Darstellung mit Shiv et al. sind es 41 Prozent bei den Normalen und 37 Prozent bei den Patientenkontrollen.
+- Ist Risiko belohnt, führen geringere myopische Verlustaversion und geringere Risikoaversion zu höheren Erträgen. Wird das Spiel so geändert, dass Risikonehmen ein schlechtes Ergebnis ist, schneiden Furchtläsionspatienten und Süchtige schlechter ab als Normale.
 
 ## Funktionsweise
 
@@ -235,5 +244,7 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 196–214 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-015-p196-p214|S. 196–214]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 58–77 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-004-p058-p077|S. 58–77]]
 
 ## Verwandte Themen

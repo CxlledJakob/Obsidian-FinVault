@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Leverage
@@ -19,6 +19,7 @@ aktualisiert: 2026-10-30
 ## Kurzdefinition
 
 - Leverage misst die Verschuldung, die nötig ist, um die berichtete Performance zu erreichen.
+- Finanzrisiko ist nach Frank Martin die oft katastrophale Abwärtsseite des übermäßigen Einsatzes von geliehenem Geld, um den Kauf von Assets zu finanzieren.
 
 ## Kernaussagen
 
@@ -56,6 +57,34 @@ aktualisiert: 2026-10-30
 - Tagestrader handeln Ticks statt Punkte; um die Kosten zu decken, brauchen sie Größe, und zwei oder drei Future-Kontrakte lohnen die Zeit selbst bei hoher Trefferquote kaum.
 - Früher kostete ein Future-Kontrakt bis zu 100 Dollar Kommission, und der Fill lag wegen der Verzögerung oft einige Ticks vom Entscheidungsmarkt weg; heute kosten Future-Trades etwa 3 Dollar und Aktien einen Penny je Aktie, mit Ein-Minuten-Charts und sofortiger Ausführung.
 - Die neue Technik hat den Anteil erfolgreicher Trader wahrscheinlich nicht erhöht, eher gesenkt.
+- Die Finanzierungskosten einer Future-Position sind null, weil Futures Kontrakte und keine bar zu finanzierenden Assets sind. Die Margin-Kasse wird nicht mitgezählt, weil sie auf dem Konto Zinsen trägt.
+- Ein Portfolio, das den MSCI US REIT Index RMZ vor allem zum Handelsschluss mit konstantem Hebel 3 abbilden soll, muss nach einem starken Tagesverlust Aktien über das Buch verkaufen und nach einem Anstieg kaufen.
+- DRN ist ein dreifach gehebelter Immobilien-ETF mit über hundert Millionen Dollar Eigenkapital; der gehebelte ETF dient dazu, das Momentum der zugrunde liegenden Aktien zu vergrößern, das auch ungehebelte ETFs wie SPY nahe dem Schluss treffen sollte.
+- Die PEAD-Strategie ist intraday und lässt sich mindestens vierfach hebeln; aus 6,7 Prozent APR wird damit eine annualisierte Durchschnittsrendite nahe 27 Prozent.
+- Die Rendite der Rebalancing-Strategie sollte mit dem aggregierten Vermögen aller gehebelten ETFs steigen.
+- Ende Januar 2009 betrug das gesamte AUM gehebelter ETFs, Long und Short zusammen, 19 Milliarden Dollar, nach Cheng und Madhavan 2009.
+- Dieselben Autoren schätzen, dass eine Bewegung des SPX um 1 Prozent Käufe oder Verkäufe von Aktien im Umfang von etwa 17 Prozent des Market-on-Close-Volumens erzwingt.
+- Für Manager, die nur eigenes Geld verwalten und niemandem Rechenschaft schulden, ist das einzige Ziel die langfristige Maximierung des Nettovermögens; Drawdowns und Volatilitäten zählen dabei nicht.
+- Der Hebel muss ständig konstant gehalten werden, mit oder ohne Drawdown-Nebenbedingung, damit die Wachstumsrate optimiert wird.
+- Start mit 100.000 Dollar und optimalem Hebel 5 verlangt einen Marktwert von 500.000 Dollar. Nach einem Verlust von 10.000 Dollar müssen weitere 40.000 Dollar liquidiert werden, damit 5 mal 90.000 gleich 450.000 Dollar erreicht werden; nach einem Gewinn von 20.000 Dollar sind Wertpapiere für 80.000 Dollar zuzukaufen, weil der Zielwert 550.000 und der aktuelle Wert 470.000 Dollar ist.
+- Viele Analysten sehen dieses Verkaufen in die Verluste als Ansteckung in Finanzkrisen, insbesondere als Ursache des Quant-Fonds-Zusammenbruchs im August 2007 nach Khandani und Lo 2007: ähnliche Positionen, ein Fonds liquidiert wegen konstantem Hebel, die anderen erleiden Verluste und müssen ebenfalls liquidieren.
+- Das wird als Tragik der Allmende gefasst: das Risikomanagement eines Fonds kann die Katastrophe für alle bedeuten.
+- Liegt die erlaubte Bruttohebel-Grenze weit unter der Summe der Kelly-Hebel, ist es oft optimal, die ganze Kaufkraft in die Strategie mit der höchsten mittleren Überschussrendite zu legen, statt alle Hebel proportional zu kürzen.
+- Im Beispiel sinkt die annualisierte Wachstumsrate bei proportionaler Kürzung auf den Bruttohebel 2 von 2,1 auf 0,82, während die Konzentration auf die zweite Strategie 0,96 ergibt.
+- Vor einer kommenden Krise den Hebel zu senken ist nach der Erfahrung unnötig, wenn das Modell frühere Stressphasen im Backtest überstanden hat; besser wird schon in guten Zeiten konservativer gehebelt.
+- Schaden tun die unbekannten Unbekannten, nicht die bekannten Unbekannten, und vor den unbekannten lässt sich das Modell nicht abschalten.
+- Das CAPM setzt voraus, dass Anleger zum risikofreien Satz unbegrenzt leihen und verleihen können.
+- Markowitz (2005): wird die Annahme unbegrenzter Kreditaufnahme gebrochen, ändern sich die Schlüsse drastisch, der kapitalisierungsgewichtete Markt ist nicht mehr das optimale Portfolio und Beta hängt nicht mehr linear an der Rendite.
+- Gefragt, wie er selbst allokiert, sagte Markowitz, er habe künftiges Bedauern minimieren wollen und seine Beiträge 50 zu 50 auf Anleihen und Aktien aufgeteilt, also nicht über den gehebelten Optimierer.
+- Übermäßige Verschuldung ist ein prominentes Merkmal der US-Erfahrung. Um die immer weiter steigenden EPS-Prognosen zu treffen oder zu schlagen, erhöht durch die Dominanz von Optionszuteilungen als Vergütung, trieben die Firmen den Verschuldungsgrad auf ehrfurchtsgebietende Niveaus.
+- Overtrading kann nach Kindleberger übermäßiges Gearing einschließen. Die USA zwischen 1991 und 2002 erfüllen neben reiner Spekulation und überschätzten Renditen auch dieses dritte Merkmal.
+- Überzogene Erwartungen veranlassen die Firmen, sich zu verschulden, um zu überinvestieren. Das kann im Bust eine deflationäre Schuldenspirale auslösen.
+- Manager verschulden die Firmen übermäßig, weil sie glauben, das schnellere Wachstum der neuen Ära werde die Rückzahlung leicht erzeugen. Die finanzielle Notlage ist der Realitätscheck dieser Überverschuldung.
+- Fisher sieht in der anfänglichen Überschuldung und der bald folgenden Deflation die zwei herausragenden Ursachen einer Depression. Der Schuldenüberhang ist die kritischste Gefahr, wenn die Blase platzt.
+- Zu viele der sogenannten Hedgefonds der letzten Jahre sind nichts anderes als gehebelte Long-Fonds.
+- Ein großer Teil der Hedgefonds ist nach Montier kaum mehr als gehebelte Long-Fonds, betrieben von früheren Tradern, die den Markt wetten, und nicht ein sorgfältig gebautes ausgeglichenes Long-Short-Portfolio.
+- Asness et al. (2001) finden für 1994 bis 2000 bei den meisten Stilgruppen negatives Alpha bei positivem Summen-Beta. Viele dieser Fonds dürften den Anlegern um die Ohren fliegen.
+- Das Netto-Margin-Debt hat das Niveau von 2000 erreicht. Insider verkauften zugleich im weitesten Abstand seit 1987, mit einem Verhältnis von Verkäufen zu Käufen von fast 11 zu 1 über das bisherige Jahr und 35 zu 1 im November.
 
 ## Funktionsweise
 
@@ -88,6 +117,7 @@ aktualisiert: 2026-10-30
 - Eine Messgröße ist das Verhältnis der durchschnittlichen Dollarpositionsgröße zum durchschnittlichen verwalteten Vermögen.
 - Bei mehreren Strategien und einem Fmax weit unter der Kelly-Summe ist oft die Konzentration auf die Strategie mit dem höchsten mittleren Excess Return besser als proportionales Skalieren.
 - Die Key Points nennen Half-Kelly für langfristiges Vermögenswachstum, Monte Carlo statt Kelly bei Fat Tails und CPPI, wenn ein Maximal-Drawdown eingehalten und die Wachstumsrate möglichst hoch sein soll.
+- Keynes warnt, ein Anleger, der kurzfristige Marktschwankungen ignorieren will, brauche größere Mittel zur Sicherheit und dürfe, wenn überhaupt, nicht in so großem Maßstab mit geliehenem Geld arbeiten.
 
 ## Risiken und Grenzen
 
@@ -103,6 +133,11 @@ aktualisiert: 2026-10-30
 - Die 3-fach-ETFs BGU und TNA liegen über dem Kelly-Hebel von etwa 1,8 der Russell-Indizes; ihr Nettoinventarwert kann auf null gehen.
 - Unknown Unknowns schaden, nicht die Known Unknowns; die Modelle lassen sich nicht abschalten, bevor die Unknown Unknowns eintreten.
 - Große gehebelte Positionen mit weitem Stop können in Verlusten enden, die der Broker schließt, wenn die Margin aufgebraucht ist.
+- Die scheinbar hohe Stetigkeit einer Mean-Reversion-Strategie führt nach Dever (2011) oft zu übermäßigem Hebel. Der Zusammenbruch trifft dann häufig beim maximalen Hebel nach einer ungebrochenen Erfolgsserie, und der seltene Verlust ist sehr schmerzhaft oder katastrophal.
+- Ob ein VaR-Teufelskreis wahrscheinlich wird, hängt wesentlich vom Hebel und von der Gemeinsamkeit der Positionen ab.
+- Das Risiko des Fremdkapitals gilt als unter Profis weithin verstanden. Dass auch die Besten es gelegentlich vergessen, zeigt LTCM.
+- Experimentell wird eine Blase wahrscheinlicher, wenn Kauf auf Margin möglich ist.
+- In der Deflation stehen Firmen nach Keynes lang in realen Assets und kurz in nominalen Verbindlichkeiten. Die Position schließt sich nur durch Stilllegung der Produktion. Reichen die Cashflows nicht für die Zinsen, bleiben Preissenkung, Notverkauf oder Konkurs, und alle drei sind deflationär.
 
 ## Beispiele
 
@@ -112,6 +147,10 @@ aktualisiert: 2026-10-30
 - Im Monte-Carlo-Beispiel liegt das optimale f bei 19, nahe dem Kelly-Wert 18,4; ab 1 geteilt durch 0,0331 gleich 30,2 droht wegen der schlechtesten Rendite von minus 0,0331 der Ruin, und bei f gleich 31 ist die Wachstumsrate minus 1.
 - Für einen Drawdown von etwa 0,5 musste der Simulationshebel von 19,2 um den Faktor 7 auf etwa 2,7 sinken.
 - CPPI hebelt nur das Subkonto mit dem Anteil D mit dem Kelly-Hebel und lässt 1 minus D in Cash.
+- Abbildung 38.5 zeigt die gesamten Verbindlichkeiten relativ zum Unternehmens-BIP, die in den späten 1990ern hochschnellen.
+- Abbildung 38.2 zeigt den Umfang der Margin-Käufe als Prozentsatz des verfügbaren Haushaltseinkommens von 1980 bis 2002.
+- Die US-Blase der 1920er wurde unter anderem durch das Wachstum der Margin-Konten und der Broker-Loans getragen.
+- Abbildung 39.7 zeigt die Debt/Equity-Ratio der japanischen Unternehmen, Abbildung 39.8 die US-Unternehmensschulden im Verhältnis zum BIP, beide im Kontext der Schuldaufnahme unter dem Glauben an schnelleres Wachstum.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -133,5 +172,16 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 343–362 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-019-p343-p362|S. 343–362]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 153–172 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-012-p153-p172|S. 153–172]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 267–286 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-015-p267-p286|S. 267–286]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 457–476 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-025-p457-p476|S. 457–476]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 495–514 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen

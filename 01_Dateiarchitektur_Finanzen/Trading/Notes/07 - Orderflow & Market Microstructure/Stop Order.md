@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Stop Order
@@ -24,6 +24,11 @@ aktualisiert: 2026-10-30
 - Broker nehmen keine ungefähren Orders an, sondern konkrete Preisorders. Deshalb haben Einstieg und erster Schutzstop einen exakten Preis.
 - Der Einstieg erfolgt über einen Buy-Stop einen Tick über dem Hoch oder einen Sell-Stop einen Tick unter dem Tief, entweder des letzten abgeschlossenen Bars oder des Swing-Extrems.
 - Der erste Schutz ist ein Sell-Stop einen Tick unter dem Swing-Tief oder ein Buy-Stop einen Tick über dem Swing-Hoch.
+- Das Auslösen von Stops ist eine vor allem kurzfristige Ursache von Momentum und führt oft zu Breakout-Strategien.
+- Über Nacht oder am Wochenende können Stop-Orders auf verschiedenen Preisen bei der Eröffnung zugleich ausgelöst werden, und eine Kaskade trifft auch weiter vom Open entfernte Stops.
+- Ein Bruch der Unterstützung löst die dort liegenden Sell-Stops aus und treibt den Preis weiter nach unten; beim Widerstand ist es symmetrisch.
+- Diese Niveaus können die täglich von Banken oder Brokern gemeldeten sein oder runde Zahlen nahe dem aktuellen Preis.
+- High-Frequency-Händler legen nahe der Unterstützung große Verkaufsorders, um den nächsten Tick zu drücken, die Stops auszulösen und die Shorts danach zu decken.
 
 ## Funktionsweise
 
@@ -65,5 +70,6 @@ aktualisiert: 2026-10-30
 
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 153–172 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-012-p153-p172|S. 153–172]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 172–176 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-013-p172-p176|S. 172–176]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Transaktionskostenmodell
@@ -82,6 +82,11 @@ aktualisiert: 2026-10-30
 - Ein Backtest einer Aktienpaar-Strategie auf Trade- oder Quote-Preisen ist unrealistisch, wenn nicht nur 100 Stück gehandelt werden oder erhebliche Transaktionskosten angesetzt werden.
 - Market Orders auf beiden Seiten, nachdem das Signal von den NBBO-Preisen kam, können erheblichen Slippage erzeugen.
 - In der Open-to-Close-Variante des linearen Long-Short verdoppeln sich die Transaktionskosten gegenüber einmal täglichem Handel, weil zweimal am Tag gehandelt wird; auch diese Kosten fehlen im Backtest.
+- Die Backtests dieses Buches setzen keine Transaktionskosten an. Die Kosten hängen empfindlich von der Ausführungsmethode und vom Aktienuniversum ab.
+- Ein Paar-Backtest auf Trade- oder Quote-Preisen ist unrealistisch, wenn die NBBO-Größe wie bei AAPL oft nur 100 Aktien beträgt, außer es werden nur 100 Stück gehandelt oder erhebliche Kosten angesetzt.
+- Market Orders auf beiden Beinen nach einem NBBO-Signal können erheblichen Slippage erzeugen. Die praktische Antwort sind Limit Orders mit Teilausführung und aktiver Nachsteuerung.
+- Die Intraday-Variante des linearen Long-Short-Modells verdoppelt die Transaktionskosten gegenüber einem Handel pro Tag. Diese Kosten stecken nicht in den berichteten Renditen.
+- MOO-, LOO-, MOC- und LOC-Fills liegen am Open oder Close der Primärbörse, der Backtest nutzt aber konsolidierte Eröffnungen und Schlüsse. Die tatsächlichen Renditen sind deshalb gewöhnlich niedriger.
 
 ## Beispiele
 
@@ -100,5 +105,6 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 19–38 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-002-p019-p038|S. 19–38]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 105–124 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-008-p105-p124|S. 105–124]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Unterstützung
@@ -74,6 +74,10 @@ aktualisiert: 2026-10-30
 - Im Voraus werden enge Zeitziele für Unterstützung, Widerstand und Trendumkehr projiziert.
 - Preisretracements und Alternate Price Projections kennzeichnen im Voraus das wahrscheinliche Preisziel für Unterstützung, Widerstand und die Umkehr von Trends und Korrekturen.
 - Alternate Price Projections qualifizieren, welches Preisretracement wahrscheinlich die Stelle von Unterstützung, Widerstand oder Trendumkehr ist.
+- Intraday-Breakout-Einstiege können an verschiedenen Unterstützungsniveaus erfolgen.
+- Forschung an Devisenmärkten zeigt, dass Preise nach einem Bruch der Unterstützung noch eine Weile weiter fallen (Osler, 2000, 2001).
+- Das kurzfristige Momentum entsteht, weil viele Stop-Orders auf oder nahe der Unterstützung liegen; ihr Auslösen treibt den Preis weiter nach unten.
+- High-Frequency-Händler können nahe der Unterstützung große Verkaufsorders legen, um den nächsten Tick nach unten zu treiben und diese Stops auszulösen.
 
 ## Funktionsweise
 
@@ -191,6 +195,7 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 116–124 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-009-p116-p124|S. 116–124]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 125–144 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-010-p125-p144|S. 125–144]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 144–152 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-011-p144-p152|S. 144–152]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 
 ## Verwandte Themen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Bollinger Bands
@@ -28,6 +28,17 @@ aktualisiert: 2026-10-30
 - Grundlage ist die Idee, dass der Preis zum Mean zurückkehrt.
 - Oberes und unteres Band werden zu Kurszielen.
 - Im Aufwärtstrend gilt die Rotation zum unteren Band als überverkauft und als Kaufgelegenheit.
+- Auf dem GLD-USO-Preisspread mit entryZscore 1 und exitZscore 0 erreicht die Bollinger-Strategie 17,8 Prozent APR und eine Sharpe Ratio von 0,96, besser als die lineare Strategie auf demselben Spread. Die kumulierten Renditen zeigt Abbildung 3.3.
+- Ist exitZscore gleich 0, wird am aktuellen Mittel geschlossen. Ist exitZscore gleich minus entryZscore, wird erst geschlossen, wenn das gegenüberliegende Band ein Signal der anderen Seite auslöst. Zu jedem Zeitpunkt wird null oder eine Einheit gehalten, long oder short.
+- Ein kurzer Lookback und kleine Beträge von entryZscore und exitZscore verkürzen die Haltedauer, erhöhen die Zahl der Roundtrips und führen allgemein zu höheren Gewinnen.
+- entryZscore wird auf einem Trainingsset optimiert. Mittel und Standardabweichung laufen über einen Lookback, der ebenfalls frei ist oder gleich der Halbwertszeit gesetzt wird.
+- Schoenberg und Corwin (2010) zeigen, dass Ein- oder Ausstieg an zwei oder mehr Bollinger-Bändern nie optimal ist. Es gibt immer ein einzelnes Ein- und Ausstiegsniveau mit höherer durchschnittlicher Backtest-Rendite; sie nennen es all-in.
+- Eine Bollinger-Band-ähnliche Strategie shortet das Portfolio long 0,3906 Kontrakte VX und long ein Kontrakt ES, sobald dessen Wert um eine Standardabweichung der im Trainingsset bestimmten Residuen abweicht.
+- Die Standardabweichung dieser Residuen beträgt 2.047 Dollar.
+- Die Koeffizienten und diese Residualstreuung stammen nur aus den ersten 500 Tagen nach August 2008.
+- Auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 beträgt die annualisierte Rendite 12,3 Prozent bei einer Sharpe Ratio von 1,4.
+- Besonders profitabel war die Strategie um die Herabstufung der US-Bonität durch Standard & Poor's.
+- Die kumulierten Renditen zeigt Abbildung 5.12.
 
 ## Funktionsweise
 
@@ -40,6 +51,7 @@ aktualisiert: 2026-10-30
 - Eine Bollinger-Band-ähnliche Mean-Reversion-Strategie shortet das Portfolio aus 0,3906 VX und einem ES, sobald dessen Wert um eine Standardabweichung der im Trainingsset bestimmten Residuen abweicht.
 - Beim Bollinger Band hängt die Lage der Bänder von der jüngeren Volatilität der Zeitreihe ab; Bänder können stattdessen auch ein fester Prozentsatz über und unter dem gleitenden Durchschnitt sein.
 - In der Bandregel setzt das Aufwärtsdurchstoßen des oberen Bandes die Ausgabe auf +1, und dieser Wert bleibt, bis das untere Band nach unten durchstoßen wird und die Ausgabe auf −1 wechselt.
+- Zu einem nichtlinearen Modell liefert die Taylor-Entwicklung meist eine einfachere lineare Näherung; eine Begründung ist nötig, warum sie nicht genügt, außer in den seltenen Fällen, in denen die Terme niedriger Ordnung verschwinden und die realistische Finanzzeitreihen selten beschreiben.
 
 ## Voraussetzungen
 
@@ -67,6 +79,7 @@ aktualisiert: 2026-10-30
 - Der Beweis nimmt an, dass die Wahrscheinlichkeit p, vor der Rückkehr zum Endpreis noch weiter abzuweichen, über die Zeit konstant ist.
 - Ist die Volatilität nicht konstant, ist auch p nicht konstant, und Scaling-in liefert dann voraussichtlich eine bessere realisierte Sharpe Ratio, wenn schon nicht mehr Gewinn.
 - Scaling-in ist in der Stichprobe nie optimal, kann die All-in-Methode außer Stichprobe aber übertreffen.
+- Das Bollinger-Band als Schwellenmodell ist anfälliger für Data-Snooping-Bias als das lineare Gegenstück, weil nichtlineare Modelle komplizierter sind und gewöhnlich mehr freie Parameter haben.
 
 ## Beispiele
 
@@ -85,5 +98,9 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 81–100 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-006-p081-p100|S. 81–100]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 144–150 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-010-p144-p150|S. 144–150]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
 
 ## Verwandte Themen

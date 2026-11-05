@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Aufwärtstrend
@@ -101,6 +101,8 @@ aktualisiert: 2026-10-30
 - War das Wochenmomentum überverkauft und das Tagesmomentum überkauft, war vor der Fortsetzung des Aufwärtstrends eine kleinere Korrektur wahrscheinlich.
 - Der Ausbruch am 26. Dezember bestätigte, dass Gold in Welle 3 des Aufwärtstrends war.
 - Die Analyse sah die Schlussphase des Gold-Aufwärtstrends und eine Gewinnmitnahme um das Niveau von 1000 Dollar.
+- Trägt man den Logpreis eines Random Walk mit Drift gegen die Zeit ab, entsteht ein Zeittrend mit Steigung µ; ein positives µ lässt den Logpreis gegen unendlich laufen, ein negatives µ gegen minus unendlich.
+- Die bedingte Standardabweichung Wurzel aus t mal σa wächst langsamer als der bedingte Erwartungswert, sodass sich die Steigung µ im Zeitplot durchsetzt.
 
 ## Funktionsweise
 
@@ -257,6 +259,9 @@ aktualisiert: 2026-10-30
 - Anfang März 2008 hatte Gold 995 erreicht, den Beginn der maximalen Preisziele, und sollte nach den Zeitprojektionen bis Mitte März ein finales Hoch abschließen.
 - Gold machte am 17. März 2008 ein Hoch bei 1038,6 im kontinuierlichen Kontrakt; das tägliche Schlusshoch lag am 14. März, das letzte Zeitziel für ein größeres Hoch war der 15. März, das maximale Preisziel 1038.
 - Die zweite Einheit im EUR/USD wurde für einen möglichen längeren Trend gehalten, der aus einem ABC-Korrekturtief erwartet wurde; der Kurs stieg noch einige Tage, nachdem der Stop gegriffen hatte.
+- Bei den monatlichen Logrenditen der 3M-Aktie von Februar 1946 bis Dezember 2008 ist die Konstante 0,0103 die Steigung des Aufwärtstrends des Logpreises; die Vergleichsgerade ist yt gleich 0,0103 mal t plus 1946, wenn der Logpreis im Januar 1946 auf null gesetzt wird.
+- Die Logreihe des vierteljährlichen US-Bruttoinlandsprodukts von 1947.I bis 2008.IV zeigt einen Aufwärtstrend, der das Wachstum der US-Wirtschaft abbildet.
+- Der Logarithmus des S&P 500 vom 3. Januar 1950 bis 16. April 2008 enthält eine Einheitswurzel und einen positiven Drift; einen starken Zeittrend belegt der Test nicht, denn der Trendschätzer ist auf dem 5-Prozent-Niveau nicht signifikant und auf dem 10-Prozent-Niveau signifikant.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -311,6 +316,7 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 177–196 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-014-p177-p196|S. 177–196]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 196–214 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-015-p196-p214|S. 196–214]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 215–234 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-016-p215-p234|S. 215–234]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 96–115 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-006-p096-p115|S. 96–115]]
 
 ## Verwandte Themen
 

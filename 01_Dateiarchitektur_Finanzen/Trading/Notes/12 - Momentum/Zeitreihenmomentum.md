@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Zeitreihenmomentum
@@ -49,6 +49,26 @@ aktualisiert: 2026-10-30
 - Weil Momentum-Trader nicht beurteilen können, in welchem Maß die Nachricht schon diffundiert und verstanden ist, können die Preise weiter laufen, als die Fundamentaldaten rechtfertigen. Ist die Nachricht vollständig diffundiert und haben alle gehandelt, ist keine weitere Bewegung fundamental gerechtfertigt.
 - Manche Trends entstehen, weil ein Preisanstieg weiteres Kaufen und Preisschwäche weiteres Verkaufen anregt. Diese Anleger suchen Signale in den jüngsten Preisänderungen statt in Nachrichten.
 - Andere Fälle von Preismomentum sind das Aufholen der Preise nach einer anfänglichen Unterreaktion auf Nachrichten, wenn die Preise die Fundamentaldaten erst allmählich einholen.
+- Gemessen wird Zeitreihenmomentum über den Korrelationskoeffizienten vergangener und künftiger Renditen samt p-Wert; als Lookback und Haltedauer dient das Paar mit der höchsten positiven Korrelation.
+- Alternativ werden nur die Vorzeichen der Renditen korreliert, wenn die ähnliche Größe der Bewegungen egal ist.
+- Ohne festes Zeitfenster dienen Hurst-Exponent und Variance-Ratio-Test als Momentum-Tests und sollen einen Random Walk ausschließen.
+- Für TU sind die besten Kompromisspaare (60, 10), (60, 25), (250, 10), (250, 25), (250, 60) und (250, 120); gewählt wird 250 und 25 mit einem Koeffizienten von 0,27 und einem p-Wert von 0,02.
+- Der Hurst-Exponent von TU ist 0,44, und der Variance-Ratio-Test verwirft den Random Walk nicht, weil die Reihe je nach Zeitrahmen Momentum oder Mean Reversion zeigt.
+- Die einfache Regel kauft bei positiver und verkauft bei negativer 12-Monats-Rendite; statt monatlich wird täglich entschieden, und jeden Tag nur ein Fünfundzwanzigstel des Kapitals eingesetzt.
+- Vom 1. Juni 2004 bis 11. Mai 2012 hat TU eine Sharpe Ratio von 1 und 1,7 Prozent annualisiert auf etwa 200.000 Dollar Nominalwert, bei etwa 400 Dollar Margin und 2,5 Prozent maximalem Drawdown.
+- Tabelle 6.2: BR Lookback 100 und Haltedauer 10 mit 17,7 Prozent und Sharpe 1,09; HG 40 und 40 mit 18,0 Prozent und Sharpe 1,05; TU 250 und 25 mit 1,7 Prozent und Sharpe 1,04.
+- Die serielle Korrelation entsteht, weil das Vorzeichen der Rollrendite lange gleich bleibt und die Rollrendite die Gesamtrendite dominieren kann; das gilt für BR, HG und TU, nicht aber für C.
+- Die verzögerte Rollrendite ist ein saubereres Signal: long über der Schwelle, short unter der negativen Schwelle, sonst glatt; bei annualisiert 3 Prozent auf TU folgen 2,5 Prozent APR, Sharpe 2,1 und 1,1 Prozent maximaler Drawdown.
+- Ein Mean-Reversion-Filter auf dieser Regel verbessert die vorhandenen Kontrakte und nimmt IBX, KT, SXF, US, CD, NG und W hinzu.
+- Der S&P DTI setzt Zeitreihenmomentum über 24 Futures um, long über und short unter dem exponentiellen gleitenden Durchschnitt, monatlich rebalanciert, mit einer Sharpe Ratio von 1,3 von Januar 1988 bis Dezember 2010 und schlechter Leistung seit 2008.
+- Beispiel 1.1 zeigt, dass eine Renditereihe mit der Kurtosis der TU-Futures und ohne serielle Autokorrelation in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Zeitreihen-Momentum-Strategie erzeugen kann.
+- Die Dauer kürzerfristigen nachrichtengetriebenen Momentums wird kürzer, je mehr Händler es aufgreifen, sodass die Haltedauer womöglich ständig ohne festen Zeitplan verkürzt werden muss.
+- Momentum-Strategien zusätzlich zu Mean Reversion erzeugen höhere Sharpe Ratios und kleinere Drawdowns als Zeitreihenmomentum allein.
+- Der Horizont von Cross-Sectional- und Zeitreihenmomentum ist typischerweise ein Monat oder länger.
+- Lange Haltedauern senken die Sharpe Ratio und die statistische Signifikanz und underperformen nach Finanzkrisen; Intraday-Zeitreihenmomentum hat diese Nachteile nicht.
+- Von den vier Hauptursachen wirkt intraday alle außer der Persistenz der Rollrendite, weil deren Betrag und Volatilität intraday zu klein sind.
+- Auf der kürzesten Skala erzeugen Bid-Ask-Ungleichgewicht, Änderungen im Orderflow und ungleich verteilte Stop-Orders Zeitreihenmomentum.
+- Dass Ereignisse Zeitreihenmomentum erzeugen, ist lange bekannt; der Text stellt Forschung zu den einzelnen Ereigniskategorien vor, und die Dauer wird kürzer, je bekannter der Effekt ist.
 
 ## Funktionsweise
 
@@ -62,6 +82,7 @@ aktualisiert: 2026-10-30
 - Futures zeigen Zeitreihenmomentum vor allem, weil das Vorzeichen der Rollrendite lange bestehen bleibt und die durchschnittliche Rollrendite die durchschnittliche Gesamtrendite dominieren kann.
 - Das sauberere Signal ist deshalb die verzögerte Rollrendite statt der verzögerten Gesamtrendite, long über einer Schwelle, short unter der negativen Schwelle, sonst flach.
 - Das Rebalancing gehebelter ETFs erzeugt kurzfristiges Momentum in Richtung der Marktrendite seit dem vorigen Schluss.
+- Die TU-Momentum-Strategie kauft den TU-Future bei positiver und verkauft ihn bei negativer 12-Monats-Rendite und hält die Position einen Monat.
 
 ## Voraussetzungen
 
@@ -100,6 +121,9 @@ aktualisiert: 2026-10-30
 - Britische Makrodaten und Zinsentscheide der Bank of England erzeugten in GBPUSD bis mindestens zehn Minuten Momentum (Clare und Courtenay, 2001, Daten bis 1999).
 - Eigene Tests von Zinsentscheiden des Federal Open Market Committee und des Verbraucherpreisindex fanden auf EURUSD kein signifikantes Momentum.
 - Der Drift nach Gewinnmeldungen läuft in derselben Richtung wie die unmittelbare Kursreaktion, im getesteten Intraday-Setup aber nicht über Nacht.
+- Die gaußsche Teststatistik mean der Tagesrenditen geteilt durch ihre Standardabweichung mal der Wurzel der Länge beträgt 2,93, die Null wird mit besser als 99 Prozent verworfen.
+- Der Erfolg liegt weniger am Mittelwert der Renditeverteilung, weil die Position zu verschiedenen Zeiten long oder short sein kann; die Form der Verteilung hat mit dem Erfolg zu tun.
+- Im dritten Test der TU-Strategie, der die Einstiegstage bei gleicher Zahl von Long- und Short-Trades vertauscht, erreicht unter 100.000 Ziehungen keine die beobachtete Durchschnittsrendite; der Text nennt diesen Test für die Strategie viel schwächer.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -116,5 +140,11 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 170–172 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-012-p170-p172|S. 170–172]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 362–381 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-020-p362-p381|S. 362–381]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 33–51 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-003-p033-p051|S. 33–51]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 
 ## Verwandte Themen

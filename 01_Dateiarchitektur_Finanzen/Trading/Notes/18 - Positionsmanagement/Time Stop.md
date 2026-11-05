@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Time Stop
@@ -34,6 +34,7 @@ aktualisiert: 2026-10-30
 - Alle bisher besprochenen Momentum-Strategien verwenden nur zeitbasierte Ausstiege.
 - Ein Stop-Loss kann zusätzlich oder stattdessen die Ausstiegsbedingung sein.
 - Durch den zeitbasierten Ausstieg oder einen Stop-Loss ist der Verlust einer Momentum-Position immer begrenzt.
+- Durch den zeitbasierten Ausstieg ist der Verlust einer einzelnen Momentum-Position begrenzt; der kumulierte Verlust vieler aufeinanderfolgender Verlustpositionen ist damit nicht ausgeschlossen.
 
 ## Funktionsweise
 
@@ -77,5 +78,6 @@ aktualisiert: 2026-10-30
 - Advances in Financial Machine Learning.pdf, S. 58–77 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-004-p058-p077|S. 58–77]]
 - Advances in Financial Machine Learning.pdf, S. 191–210 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-011-p191-p210|S. 191–210]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 170–172 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-012-p170-p172|S. 170–172]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Noise Trader Risk
@@ -36,6 +36,13 @@ aktualisiert: 2026-10-30
 - Markteffizienz ist danach ein eher besonderer Zustand und weniger wahrscheinlich als Zustände, in denen die Preise von rationalen Niveaus abweichen und sich dann systematisch und vorhersagbar auf diese Niveaus zubewegen.
 - Das erklärt, warum systematische Strategien auf veralteter Information Gewinn machen können.
 - Noise Trader handeln auf nicht informativen Signalen. Zusammen mit den Grenzen der Arbitrage können Wertpapierpreise deshalb über längere Zeit systematisch von rationalen Niveaus abweichen.
+- Manche sehen den Privatanleger als Quelle aller verhaltensbedingten Fehlbewertung. Montier hält diese Sicht für weit von der Wahrheit entfernt.
+- Arbeiten wie die von Jackson und Glushkov argumentieren überzeugend, dass die professionellen Investoren selbst die Noise Trader sein können.
+- Professionelle Investoren leiden ebenso wahrscheinlich unter Verhaltensverzerrungen wie andere. Soweit sie Experten ihres Feldes sind, können sie noch überkonfidenter und überoptimistischer sein als Laien.
+- Nur 5 Prozent wählten Zahlen über 67 und hatten die Frage entweder nicht verstanden oder handelten klar irrational. Ein Spieler schrieb 100 und nannte sich keinen rationalen Anleger, mit Amazon und EBAY als Lieblingsaktien.
+- Marktmacht ist hier die Zahl zusätzlicher Stimmen von 100, die das Ergebnis um 1 verschieben würde. Bei 1002 Antworten ist das 1002 geteilt durch (99 minus 26), also 13,7. Einzelne irrationale Extremantworten haben deshalb wenig Macht.
+- Selbst wenn alle Wahlen über 67 gestrichen werden, bleibt der Durchschnitt bei 23 und zwei Drittel bei 15,2, massiv über dem Nash-Gleichgewicht 0. Der Abstand zum rationalen Ergebnis verschwindet also nicht mit den offensichtlich irrationalen Spielern.
+- Sobald erkennbar ist, dass wenigstens ein Teil des Marktes nicht voll rational ist, wird das Problem immer komplexer. Die Annahme, jeder sei ein vollkommener Logiker und maximiere nur den eigenen Vorteil, trägt dann nicht mehr.
 
 ## Funktionsweise
 
@@ -66,5 +73,9 @@ aktualisiert: 2026-10-30
 
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 324–343 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-018-p324-p343|S. 324–343]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 343–362 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-019-p343-p362|S. 343–362]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 1–20 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-001-p001-p020|S. 1–20]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 20–39 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-002-p020-p039|S. 20–39]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 172–191 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-010-p172-p191|S. 172–191]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 514–533 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-028-p514-p533|S. 514–533]]
 
 ## Verwandte Themen

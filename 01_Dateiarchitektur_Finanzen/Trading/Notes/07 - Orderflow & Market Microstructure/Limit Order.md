@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Limit Order
@@ -21,6 +21,14 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Der Ratio Trade tritt dem Bid sofort bei, damit bei jeder Füllung auf der Bid-Seite ein Teil zugeteilt wird, und nur wenn die ursprüngliche Bid-Size viel größer ist als die Ask-Size.
+- Der erwartete Füllungsanteil gleicht dem Verhältnis der eigenen Größe zur gesamten Größe auf dem Bid; steigt der Bid um einen oder mehrere Ticks, wird mit Gewinn verkauft oder eine Verkaufsorder auf den Best Ask gelegt, wenn der Spread die Round-Trip-Kommission übersteigt.
+- Bewegt sich der Bid nicht, lässt sich vermutlich noch zum ursprünglichen Best Bid verkaufen, mit Verlust nur der Kommissionen.
+- Ticking ist nur profitabel, wenn die Round-Trip-Kommission je Stück kleiner ist als der Spread minus zwei Ticks; scheitert der Verkauf einen Tick unter dem Best Ask, folgt der Verkauf zum ursprünglichen Best Bid mit Verlust der Kommissionen plus einem Tick.
+- Flipping startet bei ungefähr gleichen Größen, lockt mit der großen Kauforder Käufe zum Ask an und kauft nach der Stornierung zum ursprünglichen Best Bid zurück, wenn die zuvor Kaufenden mit Verlust verkaufen.
+- Wer die große Kauforder für Flipping hält, kann an die Flipper verkaufen und die Short-Position unter dem ursprünglichen Bid decken, sobald Bid und Ask nachgeben.
+- Nach Füllung der kleinen NBBO-Orders quoten Market Maker wieder zu denselben Preisen; große Quotes werden auch vermieden, weil ihre Füllung große Inventare erzeugt.
+- Große institutionelle Orders werden in winzige Child Orders zerlegt, über Handelsplätze gestreut und über den Tag ausgeführt.
 
 ## Funktionsweise
 
@@ -58,5 +66,6 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 
 ## Verwandte Themen

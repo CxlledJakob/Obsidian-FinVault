@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # FOMO
@@ -43,6 +43,9 @@ aktualisiert: 2026-10-30
 
 - Die Insider ziehen zusätzliche Nachfrage an, indem sie die Preise hin- und hersägen, während ängstliche Käufer eine goldene Gelegenheit zu verpassen glauben.
 - Das vermeintlich nächste Bein nach oben läuft in die Gegenrichtung, und diese Käufer bleiben auf dem Niveau gefangen.
+- Menschen spüren den Schmerz der Reue über kleine Fehler, ohne diese Fehler in einen Zusammenhang zu stellen. Wer diesen Schmerz vermeiden will, handelt auf Arten, die irrational wirken, solange der Reueschmerz nicht mitgerechnet wird.
+- Anleger sorgen sich deshalb mehr um das Risiko, den nächsten Anstieg zu verpassen, als darum, zu warten, bis Aktien billig sind.
+- Psychologie und der Vergleich mit der Peer Group erklären, warum Kunden bei Fair Value wieder einsteigen, obwohl sie wissen, dass Märkte billig und nicht nur fair sein sollten. Institutionelle warten auf ihre Fair-Value-Ziele, um zu kaufen.
 
 ## Voraussetzungen
 
@@ -82,5 +85,6 @@ aktualisiert: 2026-10-30
 - A Complete Guide to Volume Price Analysis.pdf, S. 115–134 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-007-p115-p134|S. 115–134]]
 - A Complete Guide to Volume Price Analysis.pdf, S. 134–153 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-008-p134-p153|S. 134–153]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 172–176 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-013-p172-p176|S. 172–176]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 495–514 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-027-p495-p514|S. 495–514]]
 
 ## Verwandte Themen

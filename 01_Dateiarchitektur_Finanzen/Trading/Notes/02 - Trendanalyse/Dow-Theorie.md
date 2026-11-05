@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Dow-Theorie
@@ -46,6 +46,12 @@ aktualisiert: 2026-10-30
 - Eine abgeschlossene Umkehr wird nicht unterstellt, bevor beide Reihen überzeugend gedreht haben und wieder in dieselbe Richtung laufen.
 - Der Grundgedanke dieser Divergenzanalyse ist Kohärenz: Sind zwei Wellen in Phase, gilt ihr gemeinsamer Trend als stark und wird als fortsetzend erwartet; werden die Trends außer Phase, ist die Zukunft des gemeinsamen Trends offen.
 - Kandidaten sind Paare, die gewöhnlich kohärent sind, bei denen aber ein Glied im Fall einer Divergenz führende Information über das andere hat, also eine ziemlich stabile Lead-Lag-Beziehung besteht.
+- Die Dow-Theorie reicht bis etwa 1900 und die Schriften von Charles Dow zurück, fortgeführt von William Hamilton und später Rupert Rhea; akademische Stützung nennen Brown et al. (1998).
+- Märkte haben drei Komponenten: Primärtrend, sekundäre Reaktion und tägliche Schwankungen.
+- Rhea (1932) beschreibt drei Phasen des Bärenmarkts: Aufgabe der Kaufhoffnungen, Verkauf wegen schwächerer Geschäfte und Gewinne, dann Notverkäufe solider Werte ungeachtet ihres Preises.
+- Hamilton hielt sekundäre Reaktionen gewöhnlich für ein Retracement von 40 bis 60 % der vorangegangenen Primärbewegung.
+- Rheas Prüfung: Sekundärbewegungen in Bärenmärkten holten im Schnitt 55,8 % des vorangegangenen Primärrückgangs zurück; 72,5 % lagen zwischen einem Drittel und zwei Dritteln; alle Rallys holten im Schnitt 49,5 % der letzten Primärbewegung zurück.
+- Hamilton: Sekundäre Rallys im Bärenmarkt sind plötzlich und schnell. Rhea: Bullenmärkte beginnen nicht mit gewaltsamen Rallys.
 
 ## Funktionsweise
 
@@ -85,5 +91,6 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 39–58 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-003-p039-p058|S. 39–58]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 58–77 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-004-p058-p077|S. 58–77]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 419–438 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-023-p419-p438|S. 419–438]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 533–552 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-029-p533-p552|S. 533–552]]
 
 ## Verwandte Themen

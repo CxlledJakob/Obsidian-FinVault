@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Ask
@@ -32,6 +32,14 @@ aktualisiert: 2026-10-30
 - Ob eine Transaktion am Bid oder am Ask stattfand, lässt sich für Aktien und Futures aus jedem Tick bestimmen, also aus Änderungen von Best Bid, Ask sowie Transaktionspreis und -größe.
 - Eine Transaktion am Ask zählt als positiver Orderflow, eine am Bid als negativer.
 - Ist die Bid-Size viel größer als die Ask-Size, wird ein Tick nach oben erwartet, und umgekehrt.
+- Market Maker verkaufen zum höheren Ask-Preis P_a; für das Publikum ist P_a der Kaufpreis und der Bid-Preis P_b der Verkaufspreis.
+- Die Differenz P_a − P_b heißt Bid-Ask-Spread und ist die primäre Vergütung der Market Maker; typischerweise beträgt sie ein oder zwei Cent.
+- Im Roll-Modell nimmt der beobachtete Preis den Wert P_a oder P_b an, wenn der fundamentale Wert gleich (P_a + P_b)/2 gesetzt wird.
+- War der zuvor beobachtete Preis das Ask, ist die aktuelle Preisänderung entweder 0 oder −S.
+- Im Ordered-Probit-Modell von Hausman, Lo und MacKinlay sind P^a_j und P^b_j der Ask- und der Bid-Preis zum Zeitpunkt t_j.
+- Der geltende Bid-Ask-Spread zum Zeitpunkt t_{i−1}, gemessen in Ticks, heißt AB_{i−1} und geht in die bedingte Varianz des latenten Preisänderung ein.
+- Für die 206.794 IBM-Trades von 1988 betragen Mittelwert und Standardabweichung des Bid-Ask-Spreads 1,9470 und 1,4625 Ticks.
+- Die Verkleinerung der Tick-Größe von einem Achtel auf ein Sechzehntel Dollar soll den Bid-Ask-Spread verringern.
 
 ## Funktionsweise
 
@@ -54,6 +62,8 @@ aktualisiert: 2026-10-30
 
 - Zeigt ein Datenfehler den Ask von Y als 106 Dollar, wird der fehlerhafte Spread 6 Dollar, ein Anstieg von 20 Prozent über den realen Spread von 5 Dollar, und das kann eine fehlerhafte Order zum Kauf von X und Verkauf von Y auslösen.
 - Market Maker passen Bid und Ask sofort an, wenn großer gleichgerichteter Orderflow auf informierte Händler hindeutet.
+- Ein Datenfehler kann den wahren Ask von Y, 105 Dollar, als 106 Dollar anzeigen. Der Spread Y minus X steigt dann von 5 auf 6 Dollar, also um 20 Prozent, und kann eine Order auslösen, die X kauft und Y verkauft, obwohl der wahre Spread von 5 Dollar dafür zu klein war.
+- Die Differenz zweier Quotes ist gewöhnlich viel kleiner als die Quotes selbst, deshalb wird aus einem kleinen Fehler im Ask ein viel größerer prozentualer Fehler im Spread.
 
 ## Beispiele
 
@@ -70,5 +80,8 @@ aktualisiert: 2026-10-30
 - Advances in Financial Machine Learning.pdf, S. 305–324 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-017-p305-p324|S. 305–324]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 100–104 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-007-p100-p104|S. 100–104]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 248–267 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-014-p248-p267|S. 248–267]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 267–286 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-015-p267-p286|S. 267–286]]
 
 ## Verwandte Themen

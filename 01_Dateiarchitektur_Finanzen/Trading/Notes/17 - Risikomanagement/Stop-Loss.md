@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Stop-Loss
@@ -84,6 +84,18 @@ aktualisiert: 2026-10-30
 - Später im Buch folgen konkrete Strategien von Einstieg bis Ausstieg, die Verluste klein halten, wenn ein Setup scheitert, und Gewinne vergrößern, wenn es aufgeht.
 - Erfolgreiche Trader haben immer einen relativ engen Stop. Ein damit entstandener Verlust ist akzeptabel. Verluste zu minimieren, ist absolut entscheidend.
 - Sobald die Hochwahrscheinlichkeitsbedingungen erkannt sind, bestimmen Marktposition und Einstiegsstrategie den Einstiegspreis und den anfänglichen Schutz-Stop-Loss. Das maximale Kapitalrisiko je Einheit ist vor der Ausführung bekannt.
+- Ein Stop-Loss kann bei Momentum die Ausstiegsbedingung sein oder zusätzlich zum zeitbasierten Ausstieg gelten.
+- Stop-Losses sind mit Momentum-Strategien vereinbar: dreht das Momentum, wird die Gegenposition eröffnet, und weil die ursprüngliche Position verloren hätte, wirkt der neue Einstieg als Stop.
+- Der übliche Stop-Loss verlässt eine Position, wenn der unrealisierte Gewinn und Verlust unter eine Schwelle fällt, und erlaubt später einen neuen Einstieg, auch in derselben Richtung; der kumulierte Drawdown der Strategie ist dabei nicht der Maßstab.
+- Der seltenere Gebrauch verlässt die ganze Strategie, wenn der Drawdown unter eine Schwelle fällt. Das kann nur einmal im Leben der Strategie vorkommen, deshalb ist CPPI für denselben Schutz vorzuziehen.
+- Der Stop hält das Limit nur, solange der Markt während der Position offen ist: ohne Overnight-Positionen oder in Währungen und manchen Futures, deren elektronischer Markt außer an Wochenenden und Feiertagen immer offen ist.
+- Gapt der Preis bei der Wiedereröffnung, kann die Ausführung weit schlechter sein als der erlaubte Verlust. Optionskäufe können das beseitigen, sind aber teuer und lohnen nur für erwartete Marktschließungen.
+- Selbst bei offenem Markt ist der Stop nutzlos, wenn alle Liquiditätsanbieter zugleich die Liquidität abziehen. Am 6. Mai 2010 genügte ein Stub Quote von 0,01 Dollar, und eine Sell-Stop-Order auf Accenture wurde zu 0,01 Dollar je Aktie ausgeführt.
+- Bei Mean Reversion widerspricht der Stop der Annahme, dass der Preis nach weiterem Fall zurückkehrt. Der Autor hat keine solche Strategie gebacktestet, deren APR oder Sharpe Ratio durch einen Stop-Loss stieg.
+- Wechselt die Reihe dauerhaft zum Trend, verhindert der Stop katastrophale Verluste und gibt Zeit, die Strategie vor einem Verlust von 100 Prozent abzuschalten.
+- Wegen Survivorship Bias senkt ein Stop die ausgewiesene Performance erfolgreich gebacktesteter Mean-Reversion-Strategien, verbessert sie aber, wenn die Preise zu trenden beginnen.
+- Der Stop wird größer gewählt als der maximale Intraday-Drawdown des Backtests, damit er dort nie auslöst, ein künftiges Black-Swan-Ereignis aber am Ruin hindert.
+- Bei Momentum ist ein Verlust das Signal, dass das Momentum gedreht hat; Ausstieg und vielleicht Umkehr sind logisch, und ein fortlaufend aktualisiertes Signal ist ein faktischer Stop-Loss.
 
 ## Funktionsweise
 
@@ -113,6 +125,7 @@ aktualisiert: 2026-10-30
 - Eine schon bestehende Position, deren erwartetes Ergebnis ein Verlust ist, braucht einen Ausstieg, der diesen Verlust begrenzt.
 - Ein rationaler Marktteilnehmer eröffnet keine Position, deren erwartetes Ergebnis ein Verlust ist.
 - Weil Devisen von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET nahezu durchgehend gehandelt werden, lassen sich Stop-Losses dort sinnvoll einsetzen.
+- Stop-Losses mildern zusammen mit der Erfahrung aus schwarzen Schwänen und mit Constant Proportion Portfolio Insurance die Anwendung der Kelly-Formel im Risikomanagement.
 
 ## Regeln und Kriterien
 
@@ -190,6 +203,8 @@ aktualisiert: 2026-10-30
 - CPPI und Stop-Loss verhindern einen Drawdown im Overnight-Gap oder bei ausgesetztem Handel nicht.
 - Bei Mean Reversion scheint der Stop-Loss der Annahme zu widersprechen, und der Autor hat keine solche Strategie gebacktestet, deren APR oder Sharpe Ratio dadurch stieg.
 - Ein weiter Stop, nur um der Position Raum zu geben, und weiteres Aufstocken bei Gegenlauf enden in einem großen Verlust oder darin, dass der Broker die Position schließt, wenn das Margin-Kapital aufgebraucht ist.
+- Bei Mean-Reversion-Strategien lassen sich die üblichen Stop-Losses logisch nicht einsetzen. Das Risikomanagement ist deshalb besonders wichtig und besonders schwierig; warum das so ist und welche Techniken passen, behandelt Kapitel 8.
+- Der seltene Verlust fällt oft beim maximalen Hebel nach einer ungebrochenen Erfolgsserie und ist dann sehr schmerzhaft oder katastrophal, weil die hohe Stetigkeit zuvor zu Überkonfidenz geführt hat (Dever, 2011).
 
 ## Beispiele
 
@@ -281,5 +296,9 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 234–250 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-017-p234-p250|S. 234–250]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
 
 ## Verwandte Themen

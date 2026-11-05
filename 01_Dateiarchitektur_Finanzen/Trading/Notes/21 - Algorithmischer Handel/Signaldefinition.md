@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Signaldefinition
@@ -34,6 +34,9 @@ aktualisiert: 2026-10-30
 - Die Alternativhypothese behauptet, MA50 habe Vorhersagekraft und erziele auf trendbereinigten Daten eine erwartete Rendite größer als null. Null ist die erwartete Rendite einer Regel ohne Vorhersagekraft.
 - Die Nullhypothese behauptet, die erwartete Rendite von MA50 sei gleich null oder kleiner.
 - Die Teststatistik zu diesem Signal ist die mittlere Rendite, die der Backtest der Regel in einer historischen Stichprobe liefert.
+- Das Signal der VX-Kalenderspread-Strategie ist das Verhältnis aus Back- und Front-Kontrakt.
+- Gleitender Durchschnitt und Standardabweichungen dieses Verhältnisses verwenden einen Lookback von 15 Tagen.
+- Das Signal der ES-VX-Strategie ist die Abweichung des Portfoliowerts um mindestens eine Standardabweichung der Residuen, die im Trainingsset bestimmt wurden.
 
 ## Funktionsweise
 
@@ -95,6 +98,10 @@ aktualisiert: 2026-10-30
 - Die komplexere Signalregel nimmt eine Long-Position und wird durch vier optimierbare Parameter festgelegt: Spanne des kurzen gleitenden Durchschnitts, Spanne des langen gleitenden Durchschnitts, rsi_max und rsi_min.
 - Ein Diffusionsindikator wendet dieselbe Regel, etwa ein Kreuz des gleitenden Durchschnitts, auf alle Zeitreihen eines festgelegten Universums an, zum Beispiel alle NYSE-Aktien.
 - Jede Reihe wird als Aufwärtstrend oder Abwärtstrend eingestuft, je nach ihrer Lage zum eigenen gleitenden Durchschnitt. Der Wert des Diffusionsindikators ist der Prozentsatz der Reihen im Aufwärtstrend und liegt zwischen 0 und 100.
+- Auf dem fertigen AUD.CAD ist das Signal nicht der Z-Score, sondern das Vorzeichen von Schluss minus 20-Tage-Durchschnitt. Die Position ist das um einen Tag verzögerte negative Vorzeichen. Der Rollover steckt in der Rendite, nicht im Signal.
+- Das Handelssignal eines Kalenderspreads hängt im Modell nicht vom Spot ab, nur von der Rollrendite. Der Z-Score wird auf diese Rollrendite gebildet, mit einem Lookback gleich ihrer Halbwertszeit von etwa 36 Tagen.
+- Ist dieser Z-Score positiv, wird die Ausgangsposition long fern und short nah umgekehrt. Ist er nicht endlich, ist die Position null.
+- Im ungleichen Währungspaar bleibt das Signal der negative Z-Score des Portfoliomarktwerts über 20 Tage, während die Hedge Ratio selbst aus 250 Tagen kommt.
 
 ## Risiken und Grenzen
 
@@ -139,5 +146,7 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 381–400 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-021-p381-p400|S. 381–400]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 400–419 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-022-p400-p419|S. 400–419]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 457–476 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-025-p457-p476|S. 457–476]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
 
 ## Verwandte Themen

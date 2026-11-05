@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Momentumfortsetzung
@@ -37,6 +37,15 @@ aktualisiert: 2026-10-30
 - Die Momentumumkehren der niedrigeren Zeitebene in Richtung des Momentums der höheren Zeitebene sind wichtige Filter für ein Setup mit hoher Wahrscheinlichkeit.
 - Die höhere Zeitebene bestimmt die Handelsrichtung, in der diese Umkehren liegen müssen.
 - Abbildung 2.24 zeigt bärische Stochastic-Umkehren der kleineren Zeitebene während eines Bärentrends der größeren Zeitebene, also Umkehren in Richtung des größeren Bärentrends.
+- Die Wirkungsdauer kürzerfristigen nachrichtengetriebenen Momentums wird immer kürzer, je mehr Händler es aufgreifen.
+- Von Gewinnmeldungen getriebenes Momentum hielt früher mehrere Tage und hält inzwischen kaum bis zum Börsenschluss.
+- Es gibt keinen vorhersagbaren Zeitplan, nach dem die Haltedauer zu verkürzen ist.
+- Dreht das Momentum, wird die Gegenposition eröffnet; der Ausstieg aus der verlierenden Altposition wirkt dabei als Stop.
+- Momentum gedeiht an Black Swans und an hoher Kurtosis der Renditeverteilung, schnitt aber in der Folge riskanter Ereignisse schlecht ab.
+- In Beispiel 1.1 erzeugt eine Reihe mit der Kurtosis der TU-Futures, aber ohne serielle Autokorrelation, in 12 Prozent der Ziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Analysten bevorzugen Aktien, die in den letzten zwölf Monaten und über die vergangenen drei Jahre gut gelaufen sind, also die Fortsetzung beider Horizonte.
+- Die profitablere Kombination ist nach Chan und Kot (2002) die Umkehr des langen Horizonts: kurzfristige Gewinner, die langfristig Verlierer waren. Datenbasis ist der US-Markt von 1965 bis 2002.
+- Es gibt eine lange Forschung dazu, dass Momentum-Investing funktioniert. Ein reiner Screen dieser Fortsetzung ließe sich von einem Computer in einem Bruchteil der Zeit und der Kosten eines Analystenberichts erstellen.
 
 ## Funktionsweise
 
@@ -78,5 +87,7 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 96–115 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-006-p096-p115|S. 96–115]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 23–42 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-003-p023-p042|S. 23–42]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 61–62 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-005-p061-p062|S. 61–62]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
 
 ## Verwandte Themen

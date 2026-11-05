@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Volatilitätsindex
@@ -43,6 +43,23 @@ aktualisiert: 2026-10-30
 - Der VIX, der Index der impliziten Volatilität, wurde als führender Risikoindikator für die Rendite des nächsten Tages getestet.
 - Führende Risikoindikatoren sagen voraus, ob die nächste Periode riskant wird; allgemeine Risikoindikatoren fallen nur mit der riskanten Phase zusammen.
 - Es gibt keinen Risikoindikator für alle Strategien: Was für eine Strategie riskant ist, kann für eine andere hoch profitabel sein.
+- Nach Multiplikation der Preise lautet die Regression ES mal 50 gleich minus 0,3906 mal VX mal 1.000 plus 77.150 Dollar, bei einer Residual-Standardabweichung von 2.047 Dollar.
+- Das Portfolio long 0,3906 VX und long ein ES soll stationär sein.
+- Die Bollinger-ähnliche Strategie auf diesem Portfolio erzielt vom 29. Juli 2010 bis zum 8. Mai 2012 12,3 Prozent annualisiert und eine Sharpe Ratio von 1,4 und war um die Herabstufung der US-Bonität besonders profitabel.
+- Eine andere Strategie auf VX gegen ES nutzt nicht die Mean Reversion des Spreads und wird als Momentum-Strategie behandelt.
+- Im Regime ab August 2008 ist die Volatilität bei gegebenem Indexstand niedriger als 2004 bis Mai 2008, die Spannweite der Volatilitäten aber größer.
+- Es gibt keinen Risikoindikator für alle Strategien: eine für die eine Strategie riskante Phase kann für eine andere hochprofitabel sein.
+- Die Buy-on-Gap-Aktienstrategie hatte vom 11. Mai 2006 bis 24. April 2012 etwa 8,7 Prozent annualisierte Durchschnittsrendite und eine Sharpe Ratio von 1,5. Lag der VIX des Vortags über 35, einer üblichen Schwelle für hochriskante Phasen, stieg die annualisierte Tagesrendite auf 17,2 Prozent bei einer Sharpe Ratio von 1,4; die Strategie profitiert von diesem Risiko.
+- Die FSTX-Opening-Gap-Strategie hatte vom 16. Juli 2004 bis 17. Mai 2012 etwa 13 Prozent annualisierte Durchschnittsrendite und eine Sharpe Ratio von 1,4. Bei VIX über 35 am Vortag fielen sie auf 2,6 Prozent und 0,16; der VIX sagt, am Folgetag nicht zu handeln.
+- Führende Risikoindikatoren sagen das Risiko der nächsten Periode voraus, gewöhnliche Risikoindikatoren sind nur gleichzeitig mit der riskanten Periode.
+- Neben dem VIX werden der TED Spread, der Hochzins-ETF HYG, der mexikanische Peso MXN sowie die ETFs ONN und OFF als mögliche führende Indikatoren genannt.
+- ONN steigt in Risk-on-Stimmung und hält einen Korb riskanter Assets, OFF ist das Spiegelbild; ein hoher OFF kann ein guter führender Indikator sein. Zum Zeitpunkt des Schreibens hatten diese ETFs nur etwa sieben Monate Historie, zu wenig, um Vorhersagekraft zu bestätigen.
+- In der europäischen Schuldenkrise 2011 reagierte der MXN besonders empfindlich auf schlechte Nachrichten, obwohl die mexikanische Wirtschaft gesund blieb; Kommentatoren sahen ihn als Stellvertreter für riskante Assets insgesamt.
+- Auf kurzen Skalen ist eine plötzliche große Orderflow-Änderung ein führender Indikator: negativ bei Aktien, Rohstoffen und riskanten Währungen, positiv bei US-Treasuries, USD, JPY oder CHF, bevor die Information sich weiter verbreitet.
+- Weil Paniken selten sind, ist der Test dieser Indikatoren anfällig für Data-Snooping-Bias, und kein Finanzindikator sagt natürliche Katastrophen voraus; der höherfrequente Orderflow könnte der nützlichste sein.
+- Der Volatilitätsindex eines Marktes ist selbst zu einem Finanzinstrument geworden.
+- Der von der Chicago Board Options Exchange erstellte VIX wird seit dem 26. März 2004 als Future gehandelt.
+- Der VIX der CBOE ist eine implizite Volatilität.
 
 ## Funktionsweise
 
@@ -58,6 +75,7 @@ aktualisiert: 2026-10-30
 - Die Bollinger-Band-ähnliche Strategie auf diesem Portfolio erzielt vom 29. Juli 2010 bis zum 8. Mai 2012 eine annualisierte Rendite von 12,3 Prozent bei einer Sharpe Ratio von 1,4.
 - Vom 29. Juli 2010 bis zum 7. Mai 2012, einem Zeitraum, der nicht für die Hedge Ratio verwendet wurde, beträgt die annualisierte Rendite 6,9 Prozent bei einer Sharpe Ratio von 1.
 - SPY korreliert mit dem VIX-Spot passend, gehandelt wird aber ES, weil Futures leichter zu handeln sind als ein ETF.
+- Das Kapitel zur Mean Reversion von Währungen und Futures gipfelt im VX-Future, der die Grundlage einiger recht lukrativer Strategien bilden kann.
 
 ## Regeln und Kriterien
 
@@ -80,6 +98,7 @@ aktualisiert: 2026-10-30
 - Lag der VIX des Vortags über 35, einer üblichen Schwelle für hoch riskante Phasen, betrug die annualisierte Durchschnittsrendite dieses Tages 17,2 Prozent bei einer Sharpe Ratio von 1,4; die Strategie profitiert also von diesem sogenannten Risiko.
 - Die FSTX-Opening-Gap-Strategie hatte vom 16. Juli 2004 bis 17. Mai 2012 etwa 13 Prozent annualisierte Durchschnittsrendite und eine Sharpe Ratio von 1,4.
 - Bei einem VIX des Vortags über 35 fallen diese Werte auf 2,6 Prozent und eine Sharpe Ratio von 0,16; der VIX sagt hier, am Folgetag nicht zu handeln.
+- Die im Kapitel genannte weltweite Finanzkrise ging mit einem starken Anstieg der Marktvolatilität einher, unter anderem des Volatilitätsindex VIX der Chicago Board Options Exchange, und mit starken Rückgängen der Marktindizes.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -93,5 +112,11 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 144–150 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-010-p144-p150|S. 144–150]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 151–170 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-011-p151-p170|S. 151–170]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 187–206 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-014-p187-p206|S. 187–206]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 134–153 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-008-p134-p153|S. 134–153]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 343–362 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-019-p343-p362|S. 343–362]]
 
 ## Verwandte Themen

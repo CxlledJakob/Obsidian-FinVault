@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Look-Ahead Bias
@@ -44,6 +44,17 @@ aktualisiert: 2026-10-30
 - Liegt die rechte Schulter nur 4 Prozent über der Nackenlinie und die Schwelle bei 10 Prozent, wäre ein Einstieg nur 4 Prozent unter der Schulter günstiger als das Warten auf einen Preis 10 Prozent unter der Schulter.
 - Es wäre nicht zulässig anzunehmen, ein Händler habe von der Nackenlinienpenetration gewusst, denn erst ein Rückgang von 10 Prozent ab der rechten Schulter identifiziert diese Schulter.
 - Chang und Osler setzten den Einstieg erst an, nachdem der Zigzag die rechte Schulter objektiv erkannt hatte; der Preis war in manchen Fällen ungünstiger, der Backtest aber frei von Look-ahead Bias.
+- Allgemeiner heißt Look-ahead Bias, zukünftige Information für eine Prognose zum aktuellen Zeitpunkt zu verwenden.
+- Ein häufiges Beispiel ist, Tageshoch oder Tagestief als Einstiegssignal noch am selben Tag zu verwenden; vor dem Schluss sind Hoch und Tief des Tages unbekannt.
+- Look-ahead Bias ist im Wesentlichen ein Programmierfehler und kann nur das Backtest-Programm befallen, nicht das Live-Programm, weil dieses keine Zukunftsinformation erhalten kann.
+- Im Backtest der linearen Mean-Reversion auf USD.CAD entsteht Look-ahead Bias, weil Halbwertszeit und damit Lookback auf denselben In-Sample-Daten bestimmt werden, auf denen die Strategie bewertet wird.
+- Die Backtests der Prototypstrategien benutzen teilweise dieselben Daten zur Parameteroptimierung, etwa für die beste Hedge Ratio, und für die Bewertung. Das ist Look-ahead Bias, hingenommen nur damit Darstellung und Code einfach bleiben, und soll vor dem Einsatz entfernt werden.
+- Der Lookback von 20 Handelstagen für GLD gegen USO und die Kalman-Parameter δ gleich 0,0001 und Ve gleich 0,001 sind mit Wissen im Nachhinein gesetzt.
+- Die erste Sortierung verwendet das tatsächlich gemeldete Gewinnwachstum der nächsten zwölf Monate, so als könnte man die Zukunft perfekt vorhersagen, und setzt damit eine Obergrenze, keine zum Entscheidungszeitpunkt öffentliche Information.
+- Getrennt davon wird das KGV durch die von Analysten prognostizierte Wachstumsrate ersetzt und die Prognose mit dem späteren Ergebnis verglichen.
+- Dieser Prognosetest beginnt 1988 und umfasst 17 Jahre, weil Analystenprognosen in der weiter zurückreichenden Historie fehlen.
+- In den Prognoseregressionen zum Konjunkturzyklus werden die Renditen verzögert, sodass sie nur die Information abbilden, die zum Zeitpunkt der erforderlichen Prognose verfügbar war.
+- Dieselbe Verzögerung gilt für die Sektorrotation: verwendet wird nur, was bei der Prognose schon bekannt war.
 
 ## Funktionsweise
 
@@ -75,6 +86,9 @@ aktualisiert: 2026-10-30
 - Bei Daten täglicher Frequenz, wie in der Fallstudie, fällt der erste zulässige Ausführungspreis erst auf die Eröffnung des Marktes am Tag nach dem Signal.
 - Look-ahead Bias entsteht auch, wenn eine Regel Datenreihen mit Meldeverzug nutzt, etwa Cash-Statistiken von Fonds, oder Reihen, die Revisionen unterliegen, etwa staatliche Wirtschaftsstatistiken.
 - In diesen Fällen müssen verzögerte Werte verwendet werden, die Meldefristen oder Revisionen berücksichtigen.
+- Sind Backtest und Live dasselbe Programm und unterscheidet sich nur die Datenquelle, historische gegen Live-Daten, kann im Programm kein Look-ahead Bias entstehen.
+- Eine Plattform, die dasselbe Programm für Backtest und Live nutzt, beseitigt Look-ahead Bias, weil sie historische Marktdaten Tick für Tick oder Bar für Bar einspeist, genau wie Live-Daten, sodass zukünftige Information nicht eingehen kann.
+- Dieselbe Programmquelle beseitigt auch Abweichungen beim Übertragen eines Backtests in eine Live-Strategie, die Programme in einer allgemeinen Sprache wie C++ oder MATLAB oft befallen.
 
 ## Risiken und Grenzen
 
@@ -115,5 +129,11 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 20–39 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-002-p020-p039|S. 20–39]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 153–172 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-009-p153-p172|S. 153–172]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 438–457 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-024-p438-p457|S. 438–457]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 33–51 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-003-p033-p051|S. 33–51]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 324–343 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-018-p324-p343|S. 324–343]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 590–609 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-032-p590-p609|S. 590–609]]
 
 ## Verwandte Themen

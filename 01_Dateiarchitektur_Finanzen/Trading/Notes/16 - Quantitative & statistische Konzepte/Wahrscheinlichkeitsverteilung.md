@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Wahrscheinlichkeitsverteilung
@@ -24,6 +24,25 @@ aktualisiert: 2026-10-30
 - Die relative Häufigkeit eines Ereignisses ist die Zahl der tatsächlichen Eintritte geteilt durch die Zahl der Gelegenheiten, bei denen es hätte eintreten können, als Bruch zwischen 0 und 1.
 - Eine Wahrscheinlichkeitsverteilung zeigt, wie oft die verschiedenen möglichen Werte einer Zufallsvariablen zu erwarten sind. Sie ist eine relative Häufigkeitsverteilung aus unendlich vielen Beobachtungen.
 - Die Stichprobenverteilung ist die Wahrscheinlichkeitsverteilung einer Zufallsvariablen, die eine Stichprobenstatistik ist. Sie zeigt die möglichen Werte der Statistik und die zugehörigen Wahrscheinlichkeiten.
+- Die gemeinsame Verteilungsfunktion von X und Y mit Parameter θ ist FX,Y(x, y; θ) = P(X ≤ x, Y ≤ y; θ); der Vergleich ≤ gilt komponentenweise. Existiert die gemeinsame Dichte, sind X und Y stetige Zufallsvektoren.
+- Die Randverteilung von X entsteht durch Herausintegrieren von Y: FX(x; θ) = FX,Y(x, ∞, …, ∞; θ).
+- Für eine skalare Zufallsvariable ist die Verteilungsfunktion die CDF FX(x) = P(X ≤ x; θ). Sie ist nichtfallend, FX(−∞) = 0 und FX(∞) = 1.
+- Zu einer Wahrscheinlichkeit p ist das 100p-te Quantil die kleinste reelle Zahl xp mit p ≤ FX(xp), also xp = inf{x | p ≤ F(x)}.
+- Das allgemeinste Modell der Logrenditen ist ihre gemeinsame Verteilungsfunktion mit Zustandsvektor Y und Parametervektor θ. Y fasst die Umgebung zusammen, in der die Asset-Renditen bestimmt werden, und θ legt die Verteilungsfunktion eindeutig fest.
+- Die gemeinsame Verteilung einer einzelnen Renditereihe wird zerlegt in die Randverteilung der ersten Beobachtung mal das Produkt der bedingten Verteilungen gegeben die jeweilige Vergangenheit. Diese Zerlegung hebt die zeitliche Abhängigkeit hervor.
+- Die Exponentialverteilung mit β > 0 hat für x ≥ 0 die Dichte (1/β) e^{−x/β} und sonst 0, Erwartungswert β, Varianz β² und Verteilungsfunktion 1 − e^{−x/β}; bei β = 1 liegt die Standard-Exponentialverteilung vor.
+- Die Gammafunktion ist für κ > 0 durch das Integral von 0 bis unendlich von x^{κ−1} e^{−x} definiert; für κ > 1 gilt Gamma(κ) = (κ − 1) Gamma(κ − 1), für positive ganze m gilt Gamma(m) = (m − 1)!, und Gamma(1/2) = √π.
+- Die Gammaverteilung mit κ > 0 und β > 0 hat für x ≥ 0 die Dichte x^{κ−1} e^{−x/β} / (β^κ Gamma(κ)); E(X) = κβ, Var(X) = κβ², und die Standard-Gammaverteilung ist der Fall β = 1.
+- Die Weibull-Verteilung mit Form α > 0 und Skala β > 0 hat für x ≥ 0 die Dichte (α/β^α) x^{α−1} e^{−(x/β)^α} und die Verteilungsfunktion 1 − e^{−(x/β)^α}; bei α = 1 wird sie zur Exponentialverteilung.
+- Die verallgemeinerte Gammaverteilung mit α, β, κ > 0 hat für x ≥ 0 die Dichte α x^{κα−1} / (β^{κα} Gamma(κ)) exp(−(x/β)^α); bei κ = 1 wird sie zur Weibull-Verteilung, sodass Exponential- und Weibull-Verteilung Spezialfälle sind.
+- Die Überlebensfunktion ist S(x) = P(X > x) = 1 − CDF(x) für x > 0; die Hazard-Funktion ist h(x) = f(x)/S(x).
+- Für die Weibull-Verteilung gelten S(x|α, β) = exp(−(x/β)^α) und h(x|α, β) = (α/β^α) x^{α−1} für x > 0.
+- Bei α = 1 ist die Hazard-Funktion der Exponentialverteilung konstant gleich 1/β; bei α > 1 steigt die Hazard-Funktion der Weibull-Verteilung monoton, bei α < 1 fällt sie monoton.
+- Bei der verallgemeinerten Gammaverteilung hängen Überlebens- und Hazard-Funktion von der unvollständigen Gammafunktion ab; die Hazard-Funktion kann U-förmig oder umgekehrt U-förmig sein.
+- Bei κ = 1 wird die verallgemeinerte Gammaverteilung zur Weibull-Verteilung; Exponential- und Weibull-Verteilung sind Spezialfälle der verallgemeinerten Gammaverteilung.
+- Ein Wiener-Prozess erfüllt Δwt = ϵ √Δt mit standardnormalem ϵ, und der Zuwachs über nicht überlappende Intervalle ist unabhängig; wt − w0 ist N(0, t).
+- Die bedingte Verteilung des Überschusses über die Schwelle η ist eine verallgemeinerte Pareto-Verteilung mit Form ξt und Skala ψt gleich αt plus ξt mal (η minus βt).
+- Ein k-dimensionaler Vektor x folgt Nk(μ, Σ) mit positiv definiter Kovarianzmatrix Σ, wenn seine Dichte (2π) hoch −k/2 mal |Σ| hoch −1/2 mal der Exponentialfunktion von minus ein Halb mal (x − μ)′ Σ hoch −1 (x − μ) ist.
 
 ## Kernaussagen
 
@@ -143,6 +162,212 @@ aktualisiert: 2026-10-30
 - Die Bootstrap-Verteilung, die zu einem Backtest einer einzelnen Regel passt, ist dagegen bei null zentriert.
 - Bei einem gewöhnlichen Signifikanztest wären etwa 320 der 6.402 Regeln auf dem Niveau 0,05 signifikant, genau die Zahl, die der Zufall vorhersagt.
 - Über 15 Prozent annualisierte Rendite hätten in den Verteilungen der besten von 6.402 Regeln bei 0,05 signifikant gelegen, über 17 Prozent mit einem p-Wert unter 0,001.
+- Die drei Arten, die Verteilung unter der Null zu schätzen, geben verschiedene Antworten, weil jede die Strategie mit einem anderen Zufalls-Benchmark vergleicht.
+- Der dritte Weg nach Lo, Mamaysky und Wang 2000 verteilt zufällig dieselbe Zahl von Long- und Short-Einstiegen mit derselben mittleren Haltedauer über die echte historische Preisreihe.
+- Je dicker die Ränder der Renditeverteilung oder je höher ihre Kurtosis, desto besser ist der Markt für Momentum-Strategien.
+- Beispiel 1.1 simuliert eine Renditereihe mit derselben Kurtosis wie die TU-Futures und ohne serielle Autokorrelationen und erzeugt in 12 Prozent der Zufallsziehungen dieselben Renditen wie die TU-Momentum-Strategie.
+- Je häufiger Black-Swan-Ereignisse auftreten, desto wahrscheinlicher profitiert eine Momentum-Strategie von ihnen.
+- Alle drei Hebelmethoden unterstellen, dass die künftige Verteilung der Marktrenditen der vergangenen entspricht; restriktiver wird dasselbe für die Strategie selbst unterstellt, am restriktivsten eine Gauß-Verteilung der Strategierenditen. Die restriktivsten Annahmen liefern die eleganteste Lösung, deshalb beginnt die Übersicht mit Kelly.
+- Eine andere analytische Form mit endlich vielen Momenten, etwa die Student-t, erfasst die Fat Tails und führt über Thorps Herleitung zu einem anderen optimalen Hebel. Die Pareto-Levy-Verteilung hat keine endliche Zahl von Momenten, und für manche Verteilungen gibt es keine analytische Lösung.
+- Das Pearson-System bildet aus Mittelwert, Standardabweichung, Schiefe und Kurtosis eine von sieben analytischen Verteilungen, darunter Gauß, Beta, Gamma und Student-t.
+- Im Beispiel der Mean-Reversion-Strategie ist der Verteilungstyp 4, also keine der benannten Standardverteilungen wie die Student-t.
+- Ist die Verteilung gaußisch, ist der Erwartungswert der Wachstumsrate g(f) gleich f mal m minus f zum Quadrat mal m zum Quadrat geteilt durch 2.
+- Stationär im Schlusskapitel ist ein anderer Sinn als die Stationarität der Zeitreihe in Kapitel 2: hier bleibt die Wahrscheinlichkeitsverteilung der Preise über die Zeit unverändert, und Wissenschaft kommt eigentlich nur mit solchen stationären Statistiken zurecht.
+- Das erste Moment ist der Mittelwert und misst die Lage, das zweite zentrale Moment die Streuung. Die ersten zwei Momente legen eine Normalverteilung eindeutig fest; für andere Verteilungen interessieren auch höhere Momente.
+- Schiefe und Kurtosis sind die normierten dritten und vierten zentralen Momente und fassen Asymmetrie und Randstärke zusammen.
+- Y wird in vielen Studien als gegeben behandelt; der Gegenstand ist dann die bedingte Verteilung der Renditen gegeben Y. Die empirische Analyse schätzt θ und zieht Schlüsse über das Verhalten der Renditen gegeben vergangene Logrenditen.
+- Eine Fassung der Random-Walk-Hypothese setzt die bedingte Verteilung gleich der Randverteilung. Dann sind die Renditen zeitlich unabhängig und nicht prognostizierbar.
+- Asset-Renditen werden üblicherweise als stetige Zufallsvariablen behandelt, besonders Indexrenditen und Aktienrenditen niedriger Frequenz, und über ihre Dichten beschrieben.
+- Bedingte Verteilungen sind für Asset-Renditen relevanter als Randverteilungen. Randverteilungen sind aus vergangenen Renditen leichter zu schätzen, und bei schwacher empirischer serieller Korrelation liegen sie nahe bei den bedingten Verteilungen.
+- Für die Randverteilungen von Asset-Renditen werden unter anderem die Normalverteilung, die Lognormalverteilung, stabile Verteilungen und Skalenmischungen von Normalverteilungen vorgeschlagen.
+- Das CAPM von Sharpe (1964) betrachtet die gemeinsame Verteilung von N Renditen zu einem Zeitpunkt. Andere Theorien betonen die dynamische Struktur der einzelnen Asset-Rendite. Das Buch behandelt beides.
+- In der Finanzliteratur wird für den Logrenditevektor oft die multivariate Normalverteilung verwendet.
+- Die empirische Dichte der monatlichen IBM-Renditen von Januar 1926 bis Dezember 2008 hat einen höheren Gipfel und dickere Ränder als die Normaldichte mit Stichprobenmittel und Stichprobenstandardabweichung; die Normalannahme ist für diese Monatsrenditen fraglich.
+- Ist {rt} unabhängig und identisch verteilt mit endlichem zweiten Moment, ist jede feste Stichprobenautokorrelation asymptotisch normal mit Mittel null und Varianz 1/T.
+- Die t-Ratio Wurzel aus T mal der Lag-1-Stichprobenautokorrelation folgt asymptotisch der Standardnormalverteilung.
+- Die Portmanteau-Statistik Q-Stern von m ist unter unabhängig und identisch verteilten Renditen mit bestimmten Momentbedingungen asymptotisch chi-quadrat-verteilt mit m Freiheitsgraden.
+- Die Ljung-Box-Statistik wird mit den Quantilen der Chi-Quadrat-Verteilung mit m Freiheitsgraden verglichen; für Residuen eines AR(p) sind es m minus g Freiheitsgrade.
+- Ist die Reihe stationär und gaußsch und sind die Autokorrelationen jenseits eines Lags l null, ist die t-Ratio der zugehörigen Stichprobenautokorrelation asymptotisch standardnormal.
+- Weißes Rauschen ist eine Folge unabhängiger und identisch verteilter Zufallsvariablen mit endlichem Mittel und endlicher Varianz; ist rt normal mit Mittel null und Varianz σ zum Quadrat, liegt gaußsches weißes Rauschen vor.
+- In diesem Buch steht der Fall im Vordergrund, dass der Schock at eine stetige Zufallsvariable ist.
+- Für ein stationäres gaußsches AR(p) ist die Stichproben-PACF jenseits der Ordnung p asymptotisch normal um null mit Varianz 1/T.
+- Unter normalverteiltem Schock at ist die 95-Prozent-Ein-Schritt-Intervallprognose die Punktprognose plus oder minus 1,96 mal σa.
+- Die Ljung-Box-Statistik der Residuen eines korrekt spezifizierten ARMA ist asymptotisch chi-quadrat-verteilt mit m minus g Freiheitsgraden, wobei g die Zahl der angepassten AR- oder MA-Koeffizienten ist.
+- Für die Rohreihe unter unabhängig und identisch verteilten Werten bleibt Q(m) asymptotisch chi-quadrat mit m Freiheitsgraden; die Anpassung der Freiheitsgrade gilt für Residuen eines angepassten Modells.
+- Im S-Plus-Output des AR(3) der wertgewichteten Renditen steht bei den Residuendiagnosen die Jarque-Bera-Statistik 1656,3928 mit p-Wert 0,0000.
+- Die Dickey-Fuller-Statistik konvergiert gegen eine Funktion der standardisierten Brownschen Bewegung, wenn der Fehler weißes Rauschen mit endlichen Momenten der Ordnung etwas größer als 2 ist.
+- Diese Grenzverteilung ist nicht die Standardnormalverteilung; kritische Werte werden per Simulation bestimmt, siehe Fuller (1976, Kapitel 8).
+- Wird eine von null verschiedene Konstante mitgeschätzt, ist die t-Ratio für phi1 gleich 1 asymptotisch normal, allerdings erst bei großen Stichproben brauchbar.
+- Ist die Konstante in Wahrheit null und wird trotzdem eine Konstante mitgeschätzt, konvergiert die t-Ratio gegen eine andere nichtstandardisierte asymptotische Verteilung.
+- Ist der Schock des Random Walk symmetrisch um null verteilt, hat der nächste Preis bedingt auf den heutigen eine Chance von 50 zu 50, zu steigen oder zu fallen.
+- Die Prognosen der Quartalsgewinne von Johnson & Johnson werden per Antilogarithmus aus den Logprognosen gewonnen und nutzen den Zusammenhang zwischen Normal- und Lognormalverteilung aus Kapitel 1.
+- Die ARCH-Innovationen epsilon t sind unabhängig und identisch verteilt mit Mittelwert null und Varianz 1 und werden oft als Standardnormalverteilung, standardisierte Student-t oder verallgemeinerte Fehlerverteilung angesetzt.
+- Für eine Student-t mit v Freiheitsgraden und v größer als 2 ist die Varianz v durch (v minus 2); die standardisierte Innovation ist diese Größe geteilt durch ihre Standardabweichung.
+- Die Freiheitsgrade werden entweder gemeinsam geschätzt oder fest vorgegeben; fest vorgegeben wird oft ein Wert zwischen 4 und 8.
+- Ein bedingt gaußscher ARCH(1) hat eine unbedingte Kurtosis über 3 und damit schwerere Ränder als die Normalverteilung, sofern alpha 1 quadrat kleiner als 1/3 ist.
+- Die verallgemeinerte Fehlerverteilung wird für den Parameter v gleich 2 zur Normalverteilung und hat für v kleiner als 2 schwere Ränder.
+- Schiefe wird über die Konstruktion von Fernández und Steel (1998) in die standardisierte Student-t eingeführt; xi quadrat misst das Verhältnis der Wahrscheinlichkeitsmassen ober- und unterhalb des Modus.
+- Die bedingte Likelihood unter Normalität lässt die gemeinsame Dichte der ersten m Beobachtungen weg, besonders wenn die Stichprobe groß ist, und die Schätzer heißen bedingte Maximum-Likelihood-Schätzer unter Normalität.
+- Die entsprechenden Schätzer unter der Student-t heißen bedingte Maximum-Likelihood-Schätzer unter der t-Verteilung.
+- Die Innovationen eines GARCH werden oft als standardnormal, als standardisierte Student-t oder als verallgemeinerte Fehlerverteilung angenommen.
+- Für die S&P-500-Überschussrenditen wird eine standardisierte Student-t mit fest 5 Freiheitsgraden und alternativ mit geschätzten 7,02 Freiheitsgraden verwendet; der Standardfehler 1,78 lässt die Vorgabe von 5 Freiheitsgraden auf dem 5-Prozent-Niveau bestehen.
+- Nelsons EGARCH für die täglichen CRSP-Überschussrenditen nutzt die verallgemeinerte Fehlerverteilung mit geschätztem v gleich 1,576 und Standardfehler 0,032.
+- Die Kurtosis eines GARCH(1,1) liegt unter der genannten Positivitätsbedingung über 3, die Randverteilung ist schwerer als die Normalverteilung.
+- Jarque-Bera und Shapiro-Wilk lehnen die Normalität der standardisierten Intel-Residuen ab, sowohl im gaußschen ARCH(1) als auch im GARCH(1,1), mit p-Werten von 0 beziehungsweise 4,025172e-08 und 1,626824e-07.
+- Der Fehler eta t in der ARMA-Darstellung der Quadrate hat den Erwartungswert null und ist mit seinen Lags unkorreliert, ist aber im Allgemeinen keine unabhängig und identisch verteilte Folge.
+- In der Ox-Ausgabe zu Intel wird ein ARCH(1) als GARCH(0,1) spezifiziert; unter der Student-t liegen die Freiheitsgrade bei 6,02272 und alpha 1 bei 0,292318, nahe an der S-Plus-Schätzung.
+- Im EGARCH-Beispiel von Nelson folgen die standardisierten Schocks ε_t einer verallgemeinerten Fehlerverteilung nach Gleichung (3.10).
+- Im AR(1)–EGARCH(1,1) für IBM bis Dezember 1997 ist {ε_t} eine Folge unabhängiger standardnormaler Zufallsvariablen.
+- Im EGARCH(1,1) mit Hebel für IBM bis 2003 folgt ε_t einer verallgemeinerten Fehlerverteilung mit geschätztem Parameter 1,5003 und Standardfehler 0,09912.
+- Im TGARCH(1,1) für IBM 1926 bis 2003 ist der Parameter der verallgemeinerten Fehlerverteilung 1,51 mit Standardfehler 0,099.
+- Die Zweischrittprognose des EGARCH(1,1) benutzt Dichte und Verteilungsfunktion der Standardnormalverteilung. Φ(θ+γ) und Φ(γ−θ) stammen aus Statistikpaketen oder aus der Näherung in Anhang B von Kapitel 6.
+- Im stochastischen Volatilitätsmodell sind die ε_t unabhängig identisch N(0,1), die v_t unabhängig identisch N(0, σ²_v), und beide Folgen sind voneinander unabhängig.
+- Für m = 1 ist ln(σ²_t) normalverteilt mit Mittel α₀/(1−α₁) und Varianz σ²_v/(1−α₁²).
+- Im Long-Memory-SV-Modell ist ln(a²_t) ein gaußsches Long-Memory-Signal plus ein nichtgaußsches weißes Rauschen (Breidt, Crato und de Lima, 1998).
+- Die Exzess-Kurtosis einer standardisierten Student-t-Innovation mit v > 4 Freiheitsgraden ist 6/(v − 4), weil das vierte Moment 6/(v − 4) + 3 beträgt.
+- Bei vorgegebenen Freiheitsgraden verwendet das Kapitel eine t-Verteilung mit 5 Freiheitsgraden.
+- Im linearen Modell wird die Verteilung von a_t als stetig mit Erwartungswert null angenommen, häufig zusätzlich mit Var(a_t) = σ²_a oder sogar als normal.
+- Der standardisierte Schock ist ε_t = a_t / σ_t. Für das GARCH(1,1) gilt E(ε_t) = 0, Var(ε_t) = 1 und E(ε⁴_t) = K_ε + 3.
+- Im simulierten Zwei-Regime-TAR sind die a_t unabhängig identisch N(0,1).
+- Das bilineare Modell der CRSP-Renditen wird unter der Annahme geschätzt, dass die bedingte Verteilung von a_t normal ist, per bedingter Maximum-Likelihood.
+- Für die GARCH-Exzess-Kurtosis wird im gaußschen Fall K_ε = 0 gesetzt. Die Formel von Tiao gilt auch, wenn die Innovation nicht normal ist, sofern die Kurtosis existiert.
+- Die glatte Übergangsfunktion eines STAR ist in der Praxis logistisch, exponentiell oder eine Verteilungsfunktion und liegt zwischen 0 und 1.
+- Ein Kern ist eine Wahrscheinlichkeitsdichte mit K(x) ≥ 0 und Integral 1. Die Bandbreite h > 0 reskaliert ihn zu K_h(x) = (1/h) K(x/h), dessen Integral ebenfalls 1 ist.
+- Der Gauß-Kern ist die skalierte Normaldichte (1/(h√(2π))) exp(−x²/(2h²)). Der Epanechnikov-Kern ist (0,75/h)(1 − x²/h²) für |x/h| ≤ 1 und sonst 0.
+- Die Aktivierung eines Knotens in der verborgenen Schicht eines Feed-forward-Netzes ist typischerweise die logistische Funktion exp(z) / (1 + exp(z)).
+- In der Ausgabeschicht ist die Aktivierung linear oder eine Heaviside-Funktion, die 1 liefert, wenn das Argument positiv ist, und sonst 0. Ein Neuron mit Heaviside-Funktion heißt Schwellenneuron.
+- Bei mehreren erklärenden Variablen kann der Kern eine multivariate Normaldichte mit vorgegebener positiv definiter Kovarianzmatrix sein oder das Produkt univariater Kerne. Das Produkt ignoriert die Abhängigkeit zwischen den erklärenden Variablen.
+- Die Zustandsübergänge des Markov-Switching-Modells sind die Wahrscheinlichkeiten einer Markov-Kette erster Ordnung: P(s_t = 2 | s_{t−1} = 1) = w_1 und P(s_t = 1 | s_{t−1} = 2) = w_2.
+- McCulloch und Tsay (1993) setzen diese Übergangswahrscheinlichkeiten als logistische oder Probit-Funktionen von erklärenden Variablen an, die zur Zeit t−1 bekannt sind.
+- Der Bispektraltest prüft zugleich Linearität und Gaußheit: für eine lineare gaußsche Reihe ist E(a³_t) = 0, und das Bispektrum ist bei allen Frequenzen null.
+- Die Ljung-Box-Statistik Q(m) der quadrierten Residuen ist bei angemessenem linearem Modell asymptotisch chi-quadrat-verteilt mit m−p−q Freiheitsgraden.
+- Die BDS-Statistik hat eine standardnormale Grenzverteilung; die Null lautet, dass {x_t} iid mit einer nicht entarteten Verteilungsfunktion F ist.
+- RESET- und Ori-F-Statistik sind unter Linearität F-verteilt, der TAR-F-Test hat eine F-Grenzverteilung, und die χ²-Statistik der Richtungstabelle ist asymptotisch chi-quadrat mit einem Freiheitsgrad.
+- Die empirische Verteilung der parametrischen Bootstrap-Realisationen ist eine bedingte prädiktive Verteilung, solange die Parameter als fest gelten; eine prädiktive Verteilung im strengen Sinn enthält die Parameterunsicherheit.
+- Ist das Modell angemessen, bilden die Perzentile der beobachteten x_{T+ℓ} in dieser Verteilung eine Stichprobe aus der Gleichverteilung auf [0, 1] und lassen sich mit der Kolmogorov-Smirnov-Statistik prüfen.
+- Zum Modell gehört neben der dynamischen Struktur die Verteilung der Innovationen; im direktionalen Vergleich werden die Störungen als iid N(0, 1) gezogen, und eine der simulierten Vergleichsreihen ist iid Student-t mit 6 Freiheitsgraden.
+- Das Ordered-Probit-Modell wird von einer unbeobachteten stetigen Zufallsgröße getrieben; die beobachteten, natürlich geordneten Werte sind Kategorien dieses Prozesses.
+- Unter bedingter Normalität ist die Wahrscheinlichkeit der Kategorie s_j eine Differenz von Werten der Standardnormalverteilungsfunktion Φ an den standardisierten Schwellen (α − x_i β) / σ_i(w_i).
+- Für IBM 1988 gibt es neun Preiskategorien {−4, −3, −2, −1, 0, 1, 2, 3, 4} in Ticks; die geschätzten Grenzen −4,67, −4,16, −3,11, −1,34, 1,33, 3,13, 4,21 und 4,73 sind nicht gleichabständig, aber nahezu symmetrisch um null.
+- Die Größe einer Preisänderung, sofern sie eintritt, folgt im Zerlegungsmodell 1 plus einer geometrischen Verteilung, damit die Änderung mindestens einen Tick beträgt.
+- Die geometrische Verteilung g(λ) hat die Masse λ(1−λ)^m für m = 0, 1, 2, …; Anstieg und Rückgang dürfen verschiedene, zeitlich veränderliche λ haben.
+- Im ACD ist ε_i nichtnegativ mit Mittel 1; Engle und Russell verwenden die Standard-Exponentialverteilung oder eine standardisierte Weibull-Verteilung.
+- Die Hazard-Funktion des EACD ist konstant, die des WACD monoton; die verallgemeinerte Gamma-Verteilung des GACD lässt auch eine U-Form und eine umgekehrte U-Form zu.
+- Bei Boeing am 1. Dezember 2008 ist das Histogramm der Preisänderungen näherungsweise symmetrisch um null, konzentriert sich auf ganze Cent, und 58,5 Prozent der 43.894 Transaktionen haben keine Preisänderung.
+- Die Häufigkeiten in Cent lauten 1,63, 1,05, 3,51, 12,6, 58,5, 12,2, 3,45, 0,94 und 1,53 Prozent für die Klassen unter −3, −3, −2, −1, 0, 1, 2, 3 und über 3; weitere 4,59 Prozent der Transaktionen haben Preisänderungen, die nicht auf ganzen Cent liegen.
+- Bei IBM im Dezember 1999 bleiben die Preisbewegungen näherungsweise symmetrisch um null; große Intraday-Bewegungen sind weiter selten, und der Anteil ohne Preisänderung sinkt auf 45,8 Prozent.
+- Die stetig verzinste Jahresrendite r = ln(PT/Pt)/(T − t) ist normalverteilt mit Mittel µ − σ²/2 und Varianz σ²/(T − t), wenn der Preis einer geometrischen Brownschen Bewegung folgt.
+- In der risikoneutralen Welt ist ln(PT) normal mit Mittel ln(Pt) + (r − σ²/2)(T − t) und Varianz σ²(T − t).
+- Der europäische Callpreis ist ct = Pt Φ(h+) − K exp[−r(T − t)] Φ(h−); Φ ist die Verteilungsfunktion der Standardnormalverteilung, h+ = [ln(Pt/K) + (r + σ²/2)(T − t)] / (σ √(T − t)) und h− = h+ − σ √(T − t).
+- Der europäische Putpreis ist pt = K exp[−r(T − t)] Φ(−h−) − Pt Φ(−h+); wegen Symmetrie um 0 gilt Φ(x) = 1 − Φ(−x).
+- Ein Poisson-Prozess erfüllt Pr(Xt = m) = (λt)^m / m! exp(−λt) für λ > 0; λ ist die Intensität, und Xt ist ein rechtsstetiger homogener Markov-Prozess mit linksseitigem Grenzwert.
+- Die Sprunggröße X = ln(J) folgt einer doppelten Exponentialverteilung mit Dichte (1/(2η)) exp(−|x − κ|/η), 0 < η < 1; E(X) = κ, Var(X) = 2η² und E(e^X) = e^κ/(1 − η²).
+- Die angenäherte einfache Rendite ist µ Δt + σ ϵ √Δt + I X, wobei I bernoullisch mit Wahrscheinlichkeit λ Δt für den Wert 1 ist und X doppelt exponentialverteilt ist; ohne Sprung bleibt die geometrische Brownsche Bewegung.
+- Die Dichte dieser Rendite hat bei den Beispielparametern höheren Gipfel und dickere Ränder als die Normalverteilung mit Mittel 0 und Varianz 2,0572×10^−4.
+- Die Lösung des Preisprozesses ist Pt = P0 exp[(µ − σ²/2)t + σ wt] mal dem Produkt der Sprungfaktoren Ji; unter P* steht im Exponenten (r − σ²/2 − λψ)t + σ wt.
+- Der Drift µ fällt aus der Black-Scholes-Differenzialgleichung heraus; die Gleichung hängt nicht von der Risikopräferenz ab.
+- Ein Call ist im Geld bei P > K, am Geld bei P = K und aus dem Geld bei P < K; beim Put ist es umgekehrt. Ausgeübt wird in der Praxis nur eine Option im Geld, weil nur sie einen positiven Cashflow liefert.
+- Amerikanische Optionen können jederzeit bis zum Verfall ausgeübt werden, europäische nur am Verfallstag; die Randbedingung des europäischen Calls ist GT = max(PT − K, 0), die des Puts GT = max(K − PT, 0).
+- RiskMetrics nimmt an, dass die stetig verzinste Tagesrendite bedingt normalverteilt ist; im einfachen Modell mit Mittelwert null ist die k-Perioden-Rendite bedingt normal mit Varianz k mal σ zum Quadrat von t+1.
+- Ist der Mittelwert μ ungleich null, ist die k-Perioden-Rendite bedingt normal mit Mittelwert kμ und Varianz k mal σ zum Quadrat von t+1.
+- Gegeben eine VaR-Überschreitung ist die Verlustfunktion unter RiskMetrics eine von unten gestutzte Normalverteilung.
+- Für standardisierte Student-t-Innovationen mit v > 2 Freiheitsgraden entsteht das für den VaR benötigte Quantil aus dem Student-t-Quantil geteilt durch die Wurzel aus v / (v minus 2).
+- Der VaR mehrerer Positionen setzt eine multivariate Normalverteilung der Logrenditen mit Mittelwert null voraus.
+- Im Black-Scholes-Anhang ist ln(PT) normal mit Mittel ln(Pt) plus (r minus σ zum Quadrat durch 2) mal (T minus t) und Varianz σ zum Quadrat mal (T minus t); ist die Sprungintensität λ = 0, fällt die Kou-Formel für den Call auf Black-Scholes zurück.
+- Abbildung 6.9 vergleicht die Dichte aus Gleichung (6.31) mit einer Normalverteilung, beide mit Mittelwert null und Varianz 2,0572 mal 10 hoch minus 4, getrennt für den Gipfel und die beiden Ränder.
+- Die Ordnungsstatistik zum Stichprobenanteil p ist asymptotisch normal mit Mittel gleich dem theoretischen Quantil und Varianz p(1 minus p) geteilt durch n mal der quadrierten Dichte an dieser Stelle.
+- Die Grenzverteilung des normierten Maximums ist die verallgemeinerte Extremwertverteilung: exp von minus (1 plus ξx) hoch minus 1/ξ, wenn ξ ungleich 0, und exp von minus exp(minus x), wenn ξ = 0.
+- Fréchet mit ξ > 0 enthält stabile Verteilungen und die Student-t, Gumbel mit ξ = 0 die Normal- und die Lognormalverteilung, Weibull mit ξ < 0 Verteilungen mit endlichem rechtem Ende.
+- Ist εt gaußsch, ist die k-Perioden-Rendite bedingt normal mit dem prognostizierten Mittel und der prognostizierten Varianz des Prognosefehlers. Bei Student-t oder generalized error distribution wird die Mehrperiodenverteilung für den VaR simuliert.
+- Die empirische Quantilmethode nimmt an, die Verteilung der Rendite bleibe von der Stichprobenperiode bis zur Prognoseperiode unverändert.
+- Die bedingte Verteilung einer Überschreitung über eine hohe Schwelle wird durch die verallgemeinerte Pareto-Verteilung approximiert. Für ξ = 0 ist das eine Exponentialverteilung.
+- Liegt der Exzess über einer Ausgangsschwelle als verallgemeinerte Pareto-Verteilung vor, bleibt er über jeder höheren Schwelle dieselbe Verteilung mit unverändertem Formparameter und linear angepasster Skala.
+- Überschreitungen und ihre Zeitpunkte werden als zweidimensionaler Poisson-Prozess modelliert, homogen bei zeitkonstanter Intensität und inhomogen, wenn Form, Skala und Lage von erklärenden Variablen abhängen.
+- Bei einem passenden Modell sind die transformierten Dauern zwischen Überschreitungen unabhängig standard-exponentialverteilt, und die transformierten Exzesse sind unabhängig exponentialverteilt mit Mittel 1.
+- Der QQ-Plot der negativen IBM-Tageslogrenditen über der Schwelle 2,5 Prozent ist nicht linear; der linke Schwanz ist schwerer als bei einer Normalverteilung, also ist ξ ungleich 0.
+- Für iid-Daten sind die einzigen nicht degenerierten Grenzverteilungen des Maximums Extremwertverteilungen. Unter der Bedingung D(un) bleibt diese Klasse auch für streng stationäre Reihen die Grenzklasse, die Parameter ändern sich aber mit der Abhängigkeit.
+- Für ξ ungleich 0 hat die verallgemeinerte Extremwertverteilung der iid-Maxima die Form exp{minus [1 plus ξ mal (x minus β)/α] hoch (minus 1/ξ)}, sofern 1 plus ξ mal (x minus β)/α positiv ist.
+- Die θ-te Potenz dieser Verteilung ist wieder eine verallgemeinerte Extremwertverteilung mit demselben ξ, der Skala α mal θ hoch ξ und der Lage β minus α mal (1 minus θ hoch ξ) geteilt durch ξ.
+- Im Fall ξ gleich 0 bleiben die Skala α und wird die Lage zu β plus α mal ln(θ).
+- Passt das Modell, sind die wti unabhängig exponentialverteilt mit Mittel 1. Für ξ ungleich 0 ist wti gleich (1/ξ) mal ln(1 plus ξ mal (r minus η)/ψ), für ξ gleich 0 gleich (r minus η)/ψ.
+- Unter lim n[1 minus F(un)] gleich τ geht die Wahrscheinlichkeit, dass das iid-Maximum unter un liegt, gegen exp(minus τ), und für die stationäre Reihe gegen exp(minus θτ).
+- In der Literatur wird die Innovation at eines VAR oft als multivariat normal angenommen. AIC, BIC und das Hannan-Quinn-Kriterium für die VAR-Ordnung setzen diese Normalität voraus.
+- Unter der Null ist Qk(m) asymptotisch Chi-Quadrat mit k zum Quadrat mal m Freiheitsgraden. M(i) ist asymptotisch Chi-Quadrat mit k zum Quadrat Freiheitsgraden.
+- OLS- und ML-Schätzer eines VAR sind unter Regularitätsbedingungen asymptotisch normal (Reinsel 1993).
+- Die endliche Stichprobenverteilung der Kreuzkorrelationen von Assetrenditen ist kompliziert; wenn sie gebraucht wird, sollen Bootstrap-Ziehungen sie nähern.
+- VARMA-Modelle sind nicht immer eindeutig bestimmt. Ein bivariates VMA(1), das von r1t den Term 2 mal a2,t minus 1 abzieht und r2t gleich a2t setzt, ist identisch mit einem VAR(1), in dem r1t plus 2 mal r2,t minus 1 gleich a1t ist. Diese Mehrdeutigkeit ist harmlos, weil jedes der beiden Modelle verwendbar ist.
+- Eine zweite Mehrdeutigkeit ist ernst: ein VARMA(1,1) bleibt für beliebige von null verschiedene ω und η dasselbe Modell, weil sich diese Parameter zwischen AR- und MA-Teil aufheben, wenn r2t gleich a2t ist. Ohne Restriktionen ist die Likelihood nicht eindeutig, analog zur exakten Multikollinearität.
+- Für ein k-dimensionales ARMA(p, q) sind die Randmodelle der Komponenten ARMA der Maximalordnungen kp und (k minus 1)p plus q. Das Randmodell eines VMA(q) ist ein univariates MA(q). Für ein k-dimensionales VAR(1) sind die Ränder ARMA(k, k minus 1), für ein VAR(p) ARMA[kp, (k minus 1)p]. Die tatsächliche Ordnung kann deutlich niedriger sein.
+- In den meisten Finanzanwendungen genügen VAR- und VMA-Modelle. Werden VARMA-Modelle genutzt, dann nur niedrige Ordnungen wie VARMA(1,1) oder VARMA(2,1), besonders wenn die Reihen nicht saisonal sind.
+- Die Innovation des VAR(p) wird als gaußsch angenommen. Der Likelihood-Quotient für den Rang der Fehlerkorrekturmatrix setzt diese Normalität voraus und benutzt die kanonische Korrelationsanalyse.
+- Die asymptotische Verteilung der Johansen-Trace- und der Maximum-Eigenvalue-Statistik ist wegen der Unit Roots eine Funktion von Standard-Brownschen Bewegungen.
+- Jede von null verschiedene Linearkombination c′x ist univariat normal mit Mittel c′μ und Varianz c′Σc. Gilt das für jedes solche c, dann ist x multivariat normal. Die Randverteilungen der Teilvektoren sind normal.
+- Σ12 = 0 gilt genau dann, wenn die beiden Teilvektoren unabhängig sind. Die Größe (x − μ)′ Σ hoch −1 (x − μ) ist chi-quadrat-verteilt mit m Freiheitsgraden.
+- Die bedingte Verteilung von x1 gegeben x2 = b ist normal mit Mittel μ1 + Σ12 Σ22 hoch −1 (b − μ2) und Kovarianz Σ11 − Σ12 Σ22 hoch −1 Σ21. Sie trägt Prognosen unter Normalität und die rekursive Kleinste-Quadrate-Schätzung.
+- Unter der Normalannahme für den BHP-VALE-Spread ist die Wahrscheinlichkeit, um 0,045 vom Mittel abzuweichen, etwa 30 Prozent, wenn der Standardfehler des Spreads 0,044 beträgt.
+- Die Teststatistik LR(m) für ein m-Faktor-Modell ist unter der Nullhypothese asymptotisch chi-quadrat-verteilt mit einem halben mal [(k minus m) zum Quadrat minus k minus m] Freiheitsgraden.
+- Die standardisierten Innovationen der erweiterten DCC-Modelle folgen einer multivariaten Student-t-Verteilung. Die geschätzten Freiheitsgrade sind 7,8729 im vollen Modell, 7,8772 im restringierten Modell, 7,9180 im endgültig restringierten Modell und 8,4527 im Hebelmodell, mit asymptotischen Standardfehlern 0,4693, 0,7144, 0,6952 und 0,7556.
+- Für den gemeinsamen Faktor der monatlichen IBM- und S&P-500-Logrenditen wird ein univariates gaußsches GARCH-Modell angepasst.
+- Der Likelihood-Ratio-Test auf Hebeleffekte wird mit einer Chi-Quadrat-Verteilung mit 2 Freiheitsgraden bewertet. Die Statistik 15,16 hat den p-Wert 0,0005.
+- Alle vier Tagesrenditen von Euro, Yen, IBM und Dell haben schwere Ränder. Die Exzess-Kurtosis beträgt 2,7090, 2,0332, 6,2164 und 3,3054, die Schiefe 0,0342, minus 0,1674, minus 0,0530 und minus 0,0383.
+- Im lokalen Trendmodell sind Messfehler et und Zustandsinnovation ηt unabhängige gaußsche weiße Rauschen, et mit Varianz σ²e und ηt mit Varianz σ²η. Der Startzustand ist von beiden für t größer 0 unabhängig.
+- Bedingt auf Ft minus 1 sind Zustand μt und Prognosefehler vt gemeinsam normal, vt mit Mittel null und Varianz Vt gleich Σt|t minus 1 plus σ²e.
+- Ein k-dimensionaler Vektor x hat die einfache multivariate Student-t mit v Freiheitsgraden, Mittel null und Einheitsmatrix, wenn die Dichte Γ((v plus k)/2) geteilt durch ((πv) hoch k/2 mal Γ(v/2) mal (1 plus v hoch minus 1 mal x′x) hoch (v plus k)/2) ist. Γ ist die Gammafunktion.
+- Die Varianz jeder Komponente dieser Student-t ist v geteilt durch (v minus 2). Die standardisierte Version ist εt gleich der Wurzel aus (v minus 2)/v mal x. Ihre Dichte ersetzt v durch (v minus 2) im Nenner und im quadratischen Term.
+- Für die Volatilitätsmodellierung wird at gleich Σt hoch 1/2 mal εt gesetzt, εt standardisiert multivariat Student-t. Über die Cholesky-Zerlegung von Σt hängt die Dichte der transformierten Schocks bt nicht von einer Matrixinversion ab.
+- Unter Normalität faktorisiert die gemeinsame Dichte der Prognosefehler in das Produkt der Randdichten, weil die Abbildung von y auf v eine Jacobi-Determinante von 1 hat und jeder vt bedingt auf der Vergangenheit normal mit Mittel null und Varianz Vt ist.
+- Der geglättete Zustand ist normal: μt gegeben FT ist normal mit Mittel μt|T und Varianz Σt|T. Alle im lokalen Trendmodell vorkommenden Verteilungen sind normal.
+- Der Startzustand ist normal mit Mittel μ1|0 und Varianz Σ1|0. In der Likelihood-Herleitung werden diese Startwerte als bekannt behandelt.
+- Im allgemeinen linearen Modell sind Zustands- und Messinnovationen gaußsches weißes Rauschen mit positiv definiten Kovarianzen Qt und Ht. Die Unabhängigkeit von et und ηt kann gelockert werden.
+- Die diffuse Initialisierung ersetzt eine endliche Startvarianz durch eine beliebig große: Σ1|0 gleich Σ-Stern plus λ mal Σ-unendlich, λ gegen unendlich.
+- Im allgemeinen linearen Zustandsraummodell ist die bedingte Verteilung des Zustands gegeben die Daten normal. Deshalb reichen bedingter Mittelwert und Kovarianz für Filter und Glättung.
+- Die Ein-Schritt-Prognosefehler sind unabhängige normale Zufallsvektoren mit Mittel null und Kovarianz Vt.
+- Die Trendstartwerte μ1 und β1 sind normal mit Mittel null und Varianz ξ, ξ eine große reelle Zahl, zum Beispiel 10 hoch 8.
+- Die Zyklusstartwerte sind unabhängig normal mit Varianz σ²ε. Der Vektor der Zyklusinnovationen ist normal mit Mittel null und Kovarianz σ²ε mal (1 minus δ²) mal der 2-mal-2-Einheitsmatrix.
+- Messfehler und Zustandsinnovation des allgemeinen Modells sind gaußsche weiße Rauschen mit positiv definiten Kovarianzmatrizen Ht und Qt.
+- Die Posteriorverteilung von θ ist f(θ|X); sie ist proportional zum Produkt aus Likelihood und Prior.
+- Eine Zufallsvariable η hat eine Gammaverteilung mit positiven α und β, wenn f(η|α, β) = β^α / Γ(α) mal η hoch (α−1) mal e hoch −βη für η > 0; dann ist E(η) = α/β und Var(η) = α/β².
+- Eine Zufallsvariable θ hat eine Betaverteilung mit positiven α und β, wenn die Dichte auf (0, 1) gleich Γ(α+β) / (Γ(α)Γ(β)) mal θ hoch (α−1) mal (1−θ) hoch (β−1) ist; Mittel und Varianz sind α/(α+β) und αβ/[(α+β)²(α+β+1)].
+- Konjugierte Paare in diesem Abschnitt sind Normal–Normal für das Mittel bei bekannter Varianz, Gamma für die Präzision, Beta für Bernoulli und Gamma für Poisson und Exponential.
+- Die negative Binomialverteilung mit Parametern m > 0 und 0 < λ < 1 hat für n = 0, 1, … die Masse (m+n−1 über n) mal λ^m mal (1−λ)^n und sonst 0.
+- Die Übergangswahrscheinlichkeit eines Markov-Prozesses ist Pt(θ, h, A) = P(Xh ∈ A | Xt = θ).
+- Y hat eine invertierte Chi-Quadrat-Verteilung mit v Freiheitsgraden, wenn 1/Y chi-quadrat mit denselben Freiheitsgraden ist; die Dichte ist 2 hoch −v/2 über Γ(v/2) mal y hoch −(v/2+1) mal e hoch −1/(2y) für y > 0.
+- Für diese Verteilung gilt E(Y) = 1/(v − 2) bei v > 2 und Var(Y) = 2/[(v − 2)²(v − 4)] bei v > 4.
+- Result 12.8: Die Posterior von σ² bleibt invertiert chi-quadrat, (vλ + Summe a²i)/σ² ∼ χ² mit v + n Freiheitsgraden, wenn die Prior (vλ)/σ² ∼ χ²v ist und die Stichprobe normal mit Mittel null.
+- Result 12.7: Die bedingte Posterior von µ gegeben η ist normal, die marginale Posterior von η ist gamma mit α + n/2 und dem angegebenen β*.
+- Result 12.6: Die Posterior von λ einer negativen Binomialstichprobe mit festem m und Beta-Prior ist beta mit α + m n und β + Summe xi.
+- Ein additiver Ausreißer wird über unabhängige Bernoulli-Variablen δt mit P(δt = 1) = ϵ modelliert; die Posterior von δh vergleicht die beiden gewichteten Likelihoods für Ausreißer und Nicht-Ausreißer.
+- Ist δh = 0, bleibt βh bei der Prior N(0, ξ²); ist δh = 1, ist die Posterior von βh normal mit dem aus der lokalen Regression und Result 12.1 folgenden Mittel und der Varianz σ² ξ² / (σ² + ξ² Summe ψ²).
+- Die bedingte Posterior von ht verbindet die Normalverteilung von at und die Lognormalverteilung der Volatilität und ist für innere Zeitpunkte proportional zu ht hoch −1,5 mal der genannten Exponentialfunktion.
+- Für die Endpunkte wird h1 festgehalten, sodass ab t = 2 gezogen wird, oder es werden eine Prognose von hn+1 und eine Rückwärtsprognose von h0 eingesetzt; ln hn ist dann normal mit Mittel α0 + α1 ln hn−1 und Varianz σ²v.
+- Weil ε²t ∼ χ² mit einem Freiheitsgrad ist, ist ε*t = ln(ε²t) nicht normal; Kim, Shephard und Chib (1998) nähern die Dichte durch Summe von i = 1 bis 7 von pi N(µi, ω²i) an, siehe auch Chib, Nardari und Shephard (2002).
+- Die sieben Komponenten haben (pi, µi, Varianz) gleich (0,00730, −11,4004, 5,7960), (0,10556, −5,2432, 2,6137), (0,00002, −9,8373, 5,1795), (0,04395, 1,5075, 0,1674), (0,34001, −0,6510, 0,6401), (0,24566, 0,5248, 0,3402) und (0,25750, −2,3586, 1,2626).
+- Abbildung 12.12 vergleicht die Dichte von log(χ² mit 1 Freiheitsgrad) mit dieser Mischung auf Basis von 100.000 Beobachtungen; die Näherung ist sehr gut.
+- Die Posterior der Mischungsindikatoren ist pit = pi qit / Summe pj qjt, wobei qit die Likelihood von It gegeben yt und zt über die Standardnormal-Verteilungsfunktion ist.
+- Eine inverse Gamma IG(α, β) hat die Dichte β^α / Γ(α) mal ω hoch −(α+1) mal exp(−β/ω) für ω > 0, mit α > 2 und β > 0; ω ist IG(γ0/2, γ1/2) als Prior.
+- ϕ ist bedingt normal, ω bedingt invers gamma, und (εt, ηt)′ ist bivariat normal mit Mittel null.
+- Ohne Leverage sind die Filterverteilungen von zn gegeben Fn und von zt gegeben zt+1 und Ft normal; mit den Nachbarn ist (zt, zt+1) gegeben Ft bivariat normal.
+- Die bedingte Posterior-Verteilung von βi ist normal mit Mittel β*i und Varianz σ²i*, wobei 1/σ²i* = ni + 1/σ²io und β*i = σ²i* (ni r̄i + βio/σ²io).
+- Die Posterior-Verteilung der Übergangswahrscheinlichkeit ei ist Beta(γi1 + ℓi, γi2 + ni − ℓi).
+- Als konjugierte Priors dienen βi ~ N(βio, σ²io) und ei ~ Beta(γi1, γi2); der Prior von αij ist eine Gleichverteilung über ein festgelegtes Intervall.
+- Die bedingte Posterior-Verteilung von αij entspricht keiner bekannten Verteilung und wird auf einem Gitter mit Griddy Gibbs ausgewertet.
+- Im stochastischen Volatilitätsmodell sind εt iid N(0,1) und ηt iid N(0, σ²η); der vom Renditeschock unabhängige Rest η*t ist normal mit Varianz σ²η(1 − ρ²).
+- MCMC erzeugt eine prädiktive Verteilung der Volatilität, die informativer ist als eine Punktprognose.
+- Der Zustand sj wird anhand seiner bedingten Posterior-Wahrscheinlichkeit mit einer Gleichverteilung auf dem Intervall [0, 1] gezogen.
+- Die Welt ist inhärent probabilistisch: Ursache und Wirkung sind nicht immer durchsichtig. Menschen akzeptieren das oft nicht und schreiben Ausgänge den eigenen Handlungen zu, auch wenn diese nichts damit zu tun haben.
+- Im Übernahmespiel sind alle Aktienwerte zwischen 0 und 100 Dollar gleich wahrscheinlich. Der bedingte Erwartungswert gegeben ein Gebot von 60 Dollar ist deshalb 30 Dollar, nicht die unbedingten 50 Dollar.
+- Die Konjunktion kann nicht wahrscheinlicher sein als eines ihrer Glieder. Linda, die in einer Bank arbeitet und in der Frauenbewegung aktiv ist, kann nicht wahrscheinlicher sein als Linda, die nur in einer Bank arbeitet (Tversky und Kahneman, 1983).
+- Fondsmanager schätzten den Anteil der Männer mit mindestens einem Herzinfarkt im Schnitt auf 12,5 Prozent und den Anteil der Männer über 55 mit mindestens einem Herzinfarkt auf 16 Prozent. 40 Prozent hatten für die engere Gruppe die höhere Schätzung.
+- Nach drei Köpfen ist der nächste Wurf einer fairen Münze weiterhin gleich wahrscheinlich, die Münze hat kein Gedächtnis. 81 Prozent hatten keine Präferenz, 12,5 Prozent wetteten auf die Umkehr, 6,5 Prozent auf eine Fortsetzung der Serie.
+- Programm B hat denselben Erwartungswert wie die sicheren 200 geretteten Leben, nämlich ein Drittel mal 600. Programm D hat denselben Erwartungswert wie die sicheren 400 Toten, nämlich zwei Drittel mal 600. 20 Prozent der Manager waren trotzdem indifferent und ließen das Risiko aus.
+- Beim Monty-Hall-Problem liegen hinter drei Türen zwei Ziegen und ein Auto. Nach der ersten Wahl öffnet der Moderator eine andere Tür mit einer Ziege und bietet den Wechsel auf die verbleibende Tür an. Die richtige Entscheidung ist der Wechsel.
+- Von den Teilnehmern blieben 47 Prozent bei der ersten Tür, 43 Prozent wechselten, und 11 Prozent hatten keine Präferenz.
+- Die zuerst gewählte Tür behält die Wahrscheinlichkeit 1/3. Die geöffnete Tür hat die Wahrscheinlichkeit null, also trägt die andere ungeöffnete Tür die Wahrscheinlichkeit 2/3. Der Beweis läuft über den Satz von Bayes.
+- Bleiben gewinnt nur, wenn die erste Wahl schon das Auto trifft, also in einem von drei Fällen. In den beiden anderen Spielverläufen gewinnt der Wechsel.
+- Der Moderator deckt nie das Auto auf. Das ist die versteckte Information in der Aufgabe.
+- Tyszka und Zielonka (2002) legten drei einander ausschließende und erschöpfende Ausgänge so fest, dass jeder ungefähr die Wahrscheinlichkeit 0,33 hatte.
+- Die Kalibrierungskurve trägt die genannte Wahrscheinlichkeit gegen die tatsächliche Häufigkeit ab. Perfekte Kalibrierung ist die 45-Grad-Linie.
+- Bei Torngren und Montgomery (2004) hätte ein Münzwurf sowohl die Laien als auch die professionellen Investoren bei der Wahl der outperformenden Aktie geschlagen.
 
 ## Funktionsweise
 
@@ -153,9 +378,41 @@ aktualisiert: 2026-10-30
 - Die wahre Verteilung von R ist unbekannt; das Pearson-System bildet aus Mittelwert, Standardabweichung, Schiefe und Kurtosis eine von sieben analytischen Verteilungen, darunter Gauß, Beta, Gamma und Students t.
 - Das sind nicht die allgemeinsten Verteilungen; höhere Momente können fehlen oder unendlich sein.
 - Im Beispiel war der Pearson-Typ 4, also keine benannte Standardverteilung, und 100.000 Ziehungen dienten der Schätzung von g(f).
+- Die bedingte Dichte von X gegeben Y = y ist die gemeinsame Dichte geteilt durch die Randdichte von Y. Die gemeinsame Dichte ist das Produkt aus bedingter Dichte und Randdichte; diese Zerlegung wird in der Zeitreihenanalyse und bei der Maximum-Likelihood-Schätzung verwendet.
+- X und Y sind genau dann unabhängige Zufallsvektoren, wenn die bedingte Dichte von X gegeben Y gleich der Randdichte von X ist; dann ist die gemeinsame Dichte das Produkt der Randdichten.
+- Die CDF wird benutzt, um den p-Wert einer Teststatistik zu berechnen.
+- Bei einer Skalenmischung ist rt bedingt N(µ, σ²), und σ² ist zufällig mit positiver Verteilung, zum Beispiel σ hoch −2 gammaverteilt.
+- Die endliche Mischung ist rt = (1 − X) N(µ, σ1²) + X N(µ, σ2²) mit Bernoulli-X, P(X = 1) = α, 0 < α < 1, kleinem σ1² und großem σ2². Mit α = 0,05 folgen 95 Prozent der Renditen der engen und 5 Prozent der weiten Normalverteilung.
+- Ist die bedingte Verteilung normal mit Mittel µt und Varianz σ²t, ist die Likelihood das Produkt der bedingten Normaldichten, multipliziert mit der Randdichte der ersten Beobachtung. Der Maximum-Likelihood-Schätzer maximiert diese Likelihood oder, weil der Logarithmus monoton ist, die Log-Likelihood.
+- Die Log-Likelihood ist ln f(r1; θ) minus ein halb mal der Summe von ln(2π) + ln(σ²t) + (rt − µt)²/σ²t von t = 2 bis T. Ist die bedingte Verteilung nicht normal, ergibt sich die Log-Likelihood analog.
+- Dauer-Modelle mit Weibull-Innovationen verwenden in der Maximum-Likelihood-Schätzung die Dichte der standardisierten Weibull-Verteilung mit Erwartungswert 1; bei α = 1 reduziert sich die bedingte Log-Likelihood des WACD auf die des EACD.
+- Die bedingte Log-Likelihood des GACD verwendet die auf Erwartungswert 1 standardisierte verallgemeinerte Gammaverteilung mit λ = Gamma(κ)/Gamma(κ + 1/α); bei κ = 1 fällt sie mit der des WACD zusammen.
+- Der marginale Dichtebeitrag der ersten io Beobachtungen ist für ein allgemeines ACD-Modell verwickelt und wird oft weggelassen, weil sein Einfluss auf die Likelihood mit wachsender Stichprobe schwindet; geschätzt wird dann mit der bedingten Likelihood.
+- Die Richtung Di ist das Vorzeichen einer normalverteilten Zufallsvariablen mit Mittel µi und Varianz σi².
+- Die Größe einer Preisänderung folgt getrennt für Abwärts- und Aufwärtsbewegungen einer um 1 verschobenen Poisson-Verteilung, weil die Mindestgröße bei einer Preisänderung ein Tick ist.
+- Ni gegeben Ni > 0 folgt einer um 1 verschobenen geometrischen Verteilung mit Parameter λi im Intervall (0, 1).
+- Eine Brownsche Bewegung ist ein reellwertiger, fast sicher stetiger Prozess mit unabhängigen und stationären Zuwächsen; für 0 ≤ t1 < … < tk ist (wt1, …, wtk) multivariat normal, und die standardisierte Bewegung hat w0 = 0, µ = 0 und σ² = 1.
+- Die Pfade einer Brownschen Bewegung sind fast sicher nicht differenzierbar, deshalb trägt das gewöhnliche Integral nicht für Integrale, die eine standardisierte Brownsche Bewegung enthalten; dafür wird Itos Kalkül verwendet.
+- Ein Ito-Prozess erfüllt dxt = µ(xt, t) dt + σ(xt, t) dwt; der Wiener-Prozess ist der Sonderfall µ(xt, t) = 0 und σ(xt, t) = 1, der verallgemeinerte Wiener-Prozess der Fall konstanter µ und σ.
+- Itos Lemma: für eine differenzierbare Funktion G(xt, t) gilt dG = [∂G/∂x µ(xt, t) + ∂G/∂t + (1/2) ∂²G/∂x² σ²(xt, t)] dt + (∂G/∂x) σ(xt, t) dwt.
+- Folgt Pt der geometrischen Brownschen Bewegung dPt = µ Pt dt + σ Pt dwt, dann folgt ln(Pt) einem verallgemeinerten Wiener-Prozess mit Drift µ − σ²/2 und Varianzrate σ².
+- Die Logpreisänderung von t bis T ist dann normal mit Mittel (µ − σ²/2)(T − t) und Varianz σ²(T − t); bedingt ist ln(PT) normal mit Mittel ln(Pt) + (µ − σ²/2)(T − t) und derselben Varianz.
+- PT ist bedingt lognormal mit E(PT) = Pt exp[µ(T − t)] und Var(PT) = Pt² exp[2µ(T − t)] {exp[σ²(T − t)] − 1}.
+- Nach Donskers Theorem konvergiert wn,t = (1/√n) Summe der ersten [nt] unabhängigen Standardnormalvariablen auf [0, 1] in Verteilung gegen einen Wiener-Prozess, wenn n gegen unendlich geht.
+- Unter Normalität ist AIC(i) gleich ln der Determinante von Σ-Tilde i plus 2 mal k zum Quadrat mal i durch T. Gewählt wird das p mit minimalem AIC zwischen 0 und einer vorgegebenen Obergrenze p0.
+- BIC(i) ersetzt den Strafterm durch k zum Quadrat mal i mal ln(T) durch T. Das Hannan-Quinn-Kriterium HQ(i) verwendet 2 mal k zum Quadrat mal i mal ln(ln(T)) durch T (Hannan und Quinn 1979).
+- Der ML-Schätzer der Innovations-Kovarianz teilt die Residuen-Quadratmatrix durch T, nicht durch T minus 2i minus 1.
+- Die bedingte Likelihood eines VMA setzt at für t ≤ 0 gleich 0 und nimmt at als multivariat normal an. Die Dichte ist das Produkt der k-dimensionalen Normaldichten mit Kovarianz Σ. Die exakte Likelihood integriert den unbekannten Anfangsschock a0 heraus.
+- AIC und BIC können wegen unterschiedlicher Normierung zwischen Programmen zahlenmäßig auseinanderfallen; die Normierung ändert die gewählte Ordnung nicht. Im S-Plus-Beispiel wählt AIC die Ordnung 5 und BIC die Ordnung 1.
+- Ist at gegeben die Vergangenheit multivariat normal mit Kovarianz Σt, dann ist der Cholesky-transformierte Vektor bt multivariat normal mit Mittelwert null und diagonaler Kovarianz Gt. Die Log-Dichte ist, bis auf eine Konstante, die Summe über i von minus ein halb mal [ln(gii,t) plus b hoch 2 von it geteilt durch gii,t].
+- Für bivariate normale Schocks hängt die bedingte Dichte von den beiden bedingten Varianzen und der einen Korrelation ab. Die quadratische Form darin ist a1 zum Quadrat durch σ11 plus a2 zum Quadrat durch σ22 minus 2 mal ρ21 mal a1 mal a2, geteilt durch die Wurzel aus dem Produkt der beiden Varianzen.
+- Ein Prognoseschritt zieht vn+1 aus N(0, σ²v,j) und εn+1 aus N(0,1).
 
 ## Voraussetzungen
 
+- Die Matrixpolynome eines VARMA dürfen keine linken gemeinsamen Faktoren haben, sonst lässt sich das Modell kürzen. Strukturelle Spezifikation gegen die Identifizierbarkeitsprobleme stammt von Tiao und Tsay (1989) und Tsay (1991); sie wird hier nicht ausgeführt.
+- Sind die gemeinsamen Faktoren und die spezifischen Fehler gemeinsam normal, dann ist die Rendite rt multivariat normal mit Mittelwert µ und Kovarianz ββ′ plus D. Unter dieser Annahme schätzt die Maximum-Likelihood-Methode die Ladungen und die spezifischen Varianzen.
+- Für die gemeinsame Maximum-Likelihood-Schätzung von lambda und den Parametern der Mittelgleichung wird angenommen, dass die Innovation at multivariat normal ist mit Mittelwert null und Kovarianz Σt.
 
 ## Anwendung im Trading
 
@@ -163,10 +420,16 @@ aktualisiert: 2026-10-30
 ## Regeln und Kriterien
 
 - Bei Fat Tails soll die Wachstumsrate per Monte Carlo statt per Kelly optimiert werden.
+- Die QQ-Gerade der Standard-Exponentialverteilung geht durch den Ursprung und hat Steigung 1. Abweichungen des QQ-Plots von zti zeigen im homogenen IBM-Modell eine Unzulänglichkeit der Verteilungsannahme.
 
 ## Risiken und Grenzen
 
 - Die Fläche spricht für die Wahrscheinlichkeit des Belegs unter der Annahme, die Null sei wahr, nicht für die Wahrscheinlichkeit, dass die Hypothese wahr ist.
+- Die Annahme, einfache Renditen seien iid normal mit festem Mittel und fester Varianz, hat drei Schwierigkeiten: die Untergrenze einer einfachen Rendite ist −1, die Normalverteilung ist nach unten unbeschränkt; die Mehrperioden-Rendite als Produkt ist dann nicht normal; viele empirische Renditen haben positive Exzess-Kurtosis.
+- Die Lognormalannahme beseitigt die Untergrenzenfrage, weil 1 + Rt = exp(rt) ist, und die Summe endlich vieler iid normaler Logrenditen bleibt normal. Sie ist aber nicht mit allen Eigenschaften historischer Aktienrenditen vereinbar, insbesondere nicht mit positiver Exzess-Kurtosis.
+- Nichtnormale stabile Verteilungen sind unter Addition stabil und können Exzess-Kurtosis erfassen, haben aber keine endliche Varianz, im Konflikt mit den meisten Finanztheorien, und sind statistisch schwer zu modellieren.
+- Bei Hochfrequenzdaten wird die Stetigkeit zum Problem. An der NYSE änderten sich Aktienkurse vor Juli 1997 in Achteldollar und von Juli 1997 bis Januar 2001 in Sechzehnteldollar; ab dem 29. Januar 2001 handelten alle NYSE- und AMEX-Aktien in Dezimalen. Die Tick-Rendite einer dort gelisteten Aktie ist nicht stetig.
+- Mischungsparameter, etwa α bei der endlichen Normalmischung, sind schwer zu schätzen.
 
 ## Beispiele
 
@@ -193,6 +456,28 @@ aktualisiert: 2026-10-30
 - Wäre die erwartete Rendite einer Regel wirklich null, kann die Wahrscheinlichkeit 0,03 betragen, dass der Backtest eine Rendite von plus 20 Prozent oder mehr liefert.
 - Bei einer beobachteten mittleren Rendite von 15 Prozent könnte das 95-Prozent-Konfidenzintervall die wahre Rendite zwischen 5 und 25 Prozent eingrenzen. In einem anderen Beispiel ist die geschätzte Rendite 10 Prozent, mit einer Wahrscheinlichkeit von 95 Prozent für den Bereich von 5 bis 15 Prozent.
 - Bei einer beobachteten Rendite von plus 3,5 Prozent und einem Flächenanteil von 0,10 ist der p-Wert 0,10.
+- Die simulierten TU-Tagesrenditen im zweiten Test haben denselben Mittelwert, dieselbe Standardabweichung, Schiefe und Kurtosis wie die beobachteten Futures-Renditen, aber nicht dieselben Korrelationen; 1.166 von 10.000 Pfaden erreichen die beobachtete Strategierendite.
+- Die Cauchy-Dichte ist 1/(π(1 + x²)) für alle reellen x. In Abbildung 1.1 hat sie dickere Ränder als die Mischung (1 − X) N(0, 1) + X N(0, 16) mit P(X = 1) = 0,05, und diese hat dickere Ränder als die Standardnormalverteilung.
+- Die Häufigkeiten der Abwärtsbewegungen von IBM im Dezember 1999, in Ticks von einem Sechzehntel Dollar, betragen 18,03, 5,80, 1,79, 0,66, 0,25, 0,15, 0,09 und 0,32 Prozent für die Größen 1, 2, 3, 4, 5, 6, 7 und mehr als 7.
+- Die entsprechenden Aufwärtsbewegungen betragen 18,24, 5,57, 1,79, 0,71, 0,24, 0,17, 0,10 und 0,31 Prozent.
+- Im WACD(1,1) für die IBM-Dauern ist α̂ = 0,879 und damit kleiner als 1, aber nahe an 1; die bedingte Hazard-Funktion fällt monoton, aber langsam.
+- Für die Apple-Range sind die Weibull- und verallgemeinerten-Gamma-Formparameter größer als 1, die Hazard-Funktion der täglichen Range steigt also monoton.
+- Für ein großes Ni, also viele Geschäfte ohne Preisänderung im Intervall, werden die Poisson-Parameter λd,i und λu,i kleiner geschätzt; ein kleines λ ergibt eine kleine Preisänderung, gelesen als Hinweis auf fehlende neue Information.
+- Für G(wt, t) = wt² liefert Itos Lemma d(wt²) = dt + 2 wt dwt.
+- Vier mit n = 3000 simulierte Wiener-Prozesse auf [0, 1] starten bei w0 = 0 und laufen auseinander, weil die Varianz mit der Zeit wächst.
+- Bei Pt = 50 Dollar, µ = 0,15 und σ = 0,40 betragen erwarteter Preis und Varianz nach sechs Monaten 53,89 Dollar und 241,92, die Standardabweichung 15,55 Dollar.
+- Die täglichen IBM-Logrenditen 1998 haben Schiefe −0,464 und Exzess-Kurtosis 2,396, sodass die Normalannahme zweifelhaft ist.
+- Bei Intel mit Pt = 80 Dollar, σ = 0,20, r = 0,08, K = 90 und Restlaufzeit 0,25 sind h+ = −0,9278 und h− = −1,0278, Φ(−0,9278) = 0,1767 und Φ(−1,0278) = 0,1520; der Call kostet 0,73 Dollar, der Put 8,95 Dollar.
+- Unter denselben Bedingungen mit K = 81 sind h+ = 0,125775 und h− = 0,025775, Φ(0,125775) = 0,5500 und Φ(0,025775) = 0,5103; der Call kostet 3,49 Dollar, der Put 2,89 Dollar.
+- Bei erwarteter Rendite 15 Prozent und Volatilität 10 Prozent ist die stetig verzinste Rendite über zwei Jahre normal mit Mittel 14,5 Prozent und Standardabweichung 7,1 Prozent pro Jahr.
+- Bei Schwelle 2,5 Prozent gibt es 310 Überschreitungen in 9190 IBM-Tagen. Die GPD-Schätzung lautet Form 0,26418 und Skala 0,007786.
+- Für IBM und S&P 500 liegen die AIC-Werte der Ordnungen 1 bis 6 bei 6,795, 6,789, 6,786, 6,786, 6,782 und 6,788. Das Minimum liegt bei Ordnung 5, im Einklang mit den M(i)-Statistiken.
+- Die monatlichen prozentualen Logrenditen von Januar 1926 bis Dezember 2008 reichen bei IBM von minus 30,37 bis 38,57 und beim S&P 500 von minus 35,59 bis 35,22.
+- Die AIC-Werte der Ordnungen 1 bis 10 im S-Plus-Lauf sind 12296,04, 12290,48, 12288,07, 12288,2, 12283,91, 12289,96, 12295,22, 12296,13, 12298,82 und 12305,37. Die BIC-Werte starten bei 12325,41 für Ordnung 1 und steigen bis 12510,91 für Ordnung 10.
+- Das geschätzte VAR(1) hat die Log-Likelihood minus 6193,988, AIC 12399,977, BIC 12429,393 und HQ 12411,159.
+- Die in den Beispielen angepassten EWMA-, DVEC-, BEKK- und Constant-Correlation-Modelle verwenden als bedingte Verteilung die Normalverteilung.
+- Im GE-Beispiel sind die Priors β1 ~ N(0,3, 0,09), β2 ~ N(1,3, 0,09) und ei ~ Beta(5, 95).
+- Im Experiment von Caginalp et al. (2000) ist die Verteilung der unsicheren Dividenden bekannt. Vier Ausgänge haben je die Wahrscheinlichkeit 0,25, mit Auszahlungen von 0, 8, 28 und 60.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -218,5 +503,47 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 305–324 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-017-p305-p324|S. 305–324]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 324–343 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-018-p324-p343|S. 324–343]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 438–457 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-024-p438-p457|S. 438–457]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 20–39 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-002-p020-p039|S. 20–39]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 39–58 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-003-p039-p058|S. 39–58]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 58–77 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-004-p058-p077|S. 58–77]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 77–96 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-005-p077-p096|S. 77–96]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 96–115 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-006-p096-p115|S. 96–115]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 134–153 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-008-p134-p153|S. 134–153]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 153–172 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-009-p153-p172|S. 153–172]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 172–191 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-010-p172-p191|S. 172–191]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 191–210 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-011-p191-p210|S. 191–210]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 210–229 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-012-p210-p229|S. 210–229]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 229–248 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-013-p229-p248|S. 229–248]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 267–286 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-015-p267-p286|S. 267–286]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 286–305 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-016-p286-p305|S. 286–305]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 305–324 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-017-p305-p324|S. 305–324]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 324–343 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-018-p324-p343|S. 324–343]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 343–362 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-019-p343-p362|S. 343–362]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 362–381 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-020-p362-p381|S. 362–381]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 381–400 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-021-p381-p400|S. 381–400]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 400–419 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-022-p400-p419|S. 400–419]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 419–438 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-023-p419-p438|S. 419–438]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 438–457 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-024-p438-p457|S. 438–457]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 514–533 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-028-p514-p533|S. 514–533]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 533–552 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-029-p533-p552|S. 533–552]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 552–571 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-030-p552-p571|S. 552–571]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 571–590 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-031-p571-p590|S. 571–590]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 590–609 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-032-p590-p609|S. 590–609]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 609–628 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-033-p609-p628|S. 609–628]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 628–647 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-034-p628-p647|S. 628–647]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 647–666 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-035-p647-p666|S. 647–666]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 666–685 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-036-p666-p685|S. 666–685]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 685–704 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-037-p685-p704|S. 685–704]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 77–96 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-005-p077-p096|S. 77–96]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 96–115 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-006-p096-p115|S. 96–115]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 115–134 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-007-p115-p134|S. 115–134]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 134–153 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-008-p134-p153|S. 134–153]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
 
 ## Verwandte Themen

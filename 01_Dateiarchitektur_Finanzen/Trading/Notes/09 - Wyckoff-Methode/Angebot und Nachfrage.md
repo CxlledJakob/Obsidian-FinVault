@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Angebot und Nachfrage
@@ -50,6 +50,12 @@ aktualisiert: 2026-10-30
 - Manchmal haben die Farmer mehr Weizen zu verkaufen, als Bäckereien und andere kommerzielle Nutzer kaufen müssen, manchmal ist es umgekehrt. Die Lücke zwischen Angebot und Nachfrage braucht eine dritte Gruppe, die zu kaufen oder zu verkaufen bereit ist.
 - An den Futures-Märkten muss die verkaufte Menge der gekauften Menge gleichen, so wie bei Immobilientransaktionen die Zahl der verkauften Häuser der Zahl der gekauften gleichen muss.
 - In steigenden Trends übersteigt der Hedge-Verkauf den Hedge-Kauf, deshalb werden zusätzliche Käufer gebraucht. In fallenden Trends übersteigt der Hedge-Kauf den Hedge-Verkauf, deshalb werden zusätzliche Verkäufer gebraucht.
+- Ein Rohstoff hat keinen Einkommensstrom. Er ist nur ein Preis, das Zusammenspiel von Angebot und Nachfrage, und nur so viel wert, wie jemand zu zahlen bereit ist.
+- Am Spotpreis wirken Angebot und Nachfrage vermutlich überwiegend industriell, also nicht spekulativ.
+- Das Spinnwebmodell nimmt kurzfristig unelastisches Angebot an, sodass der Preis kurzfristig von der Nachfrage bestimmt wird. Die Anbieter setzen das künftige Angebot nach dem vergangenen Preis: nach hohen Preisen produzieren sie im Folgejahr mehr, überschwemmen den Markt und zerstören die Preisstruktur; der niedrigere Preis regt die Nachfrage an, das Angebot wird im Jahr darauf gekürzt, und die Preise schnellen wieder hoch.
+- Langfristig sollte die marginale Rohstoffnachfrage gegen das globale Wirtschaftswachstum tendieren, sodass Preissteigerungen im Takt der Wirtschaftsaktivität als langfristiger Maßstab dienen.
+- Physische Rohstoffe sind meist die Domäne der Anbieter. Wenn Anleger von Rohstoffen sprechen, meinen sie in der Regel Rohstoff-Futures.
+- Der Spot-Return eines Index-Future ist die Wette darauf, was jemand für den Basiswert zu zahlen bereit ist.
 
 ## Funktionsweise
 
@@ -60,6 +66,8 @@ aktualisiert: 2026-10-30
 - Hohes Volumen beim Angebotstest bedeutet, dass Verkäufer in großer Zahl zurückkehren und weitere Versuche nach oben erschweren.
 - Hohes Volumen beim Nachfragetest bedeutet, dass Käufer den bullischen Trend für fortgesetzt halten und die Abwärtskampagne stoppt.
 - Verkauf in großem Volumen erzeugt selbst Druck und lässt den Preis fallen, sodass die Insider Inventar nicht in einer einzigen Session räumen.
+- Früher oder später übersteigt die Nachfrage nach dem Asset das Angebot, und die Preise steigen. Die Preissteigerungen lösen weitere reale und finanzielle Investition aus.
+- Es entsteht eine positive Rückkopplung: Neue Investition erhöht das Einkommen, und das Einkommen regt weitere Investition an.
 
 ## Voraussetzungen
 
@@ -100,5 +108,7 @@ aktualisiert: 2026-10-30
 - A Complete Guide to Volume Price Analysis.pdf, S. 58–77 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-004-p058-p077|S. 58–77]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 77–96 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-005-p077-p096|S. 77–96]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 362–381 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-020-p362-p381|S. 362–381]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 609–628 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-033-p609-p628|S. 609–628]]
 
 ## Verwandte Themen

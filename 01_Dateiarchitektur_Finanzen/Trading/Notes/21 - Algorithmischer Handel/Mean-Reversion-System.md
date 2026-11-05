@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Mean-Reversion-System
@@ -26,6 +26,34 @@ aktualisiert: 2026-10-30
 - Fortlaufendes Ein- und Aussteigen hat voraussichtlich mehr statistische Signifikanz als selektive Ein- und Ausstiegsregeln.
 - Solche Strategien lassen sich aus einer großen Vielfalt kointegrierender Aktien und ETFs bauen, auch aus Instrumenten, die einzeln nicht stationär sind.
 - Sie reichen von Market Making auf Sekundenskala bis zum mehrjährigen Warten auf den fairen Wert.
+- Die lineare Strategie hält eine Stückzahl, die negativ proportional zur normalisierten Abweichung vom gleitenden Durchschnitt ist. Der Lookback von Durchschnitt und Standardabweichung wird gleich der Halbwertszeit gesetzt, im USD.CAD-Beispiel auf die gerundeten 115 Tage.
+- Bei einer Halbwertszeit von 20 Tagen wäre ein Lookback von 5 Tagen für Durchschnitt und Standardabweichung zu kurz. Ein kleines Vielfaches der Halbwertszeit ist oft nahe optimal und vermeidet die Optimierung eines freien Parameters an der Strategieperformance.
+- Der USD.CAD-Backtest ist positiv trotz langer Halbwertszeit, aber mit großem Drawdown. Transaktionskosten fehlen, der Lookback stammt aus der Stichprobe, und ohne Obergrenze des Marktwerts kann unbegrenztes Kapital nötig sein. Der Autor empfiehlt das Beispiel nicht praktisch und verweist auf Kapitel 5.
+- Das Portfolio aus EWA, EWC und IGE zum ersten Johansen-Eigenvektor hat eine Halbwertszeit von 23 Tagen und soll sich deshalb besser handeln lassen als USD.CAD.
+- Gleitender Durchschnitt und gleitende Standardabweichung passen sich einem langsam wandernden Mittel und einer mit der Zeit steigenden Varianz an und nehmen Gewinn schneller mit.
+- In der einfachsten Form ist die lineare Strategie unpraktisch: das maximale Kapital ist vorher unbekannt, und infinitesimale Stückzahlen bei infinitesimalen Preisänderungen sind nicht handelbar.
+- Die Strategie auf dem Einheitsportfolio aus EWA, EWC und IGE erreicht eine APR von 12,6 Prozent und eine Sharpe Ratio von 1,4. Die Rendite ist der P&L geteilt durch den Bruttomarktwert der verzögerten Positionen.
+- Die Dollarposition je ETF ist das Vielfache des Einheitsportfolios mal Eigenvektor-Stückzahl mal Preis. Das Vielfache ist der negative Z-Score des Einheitsportfolio-Preises, mit Lookback gleich der Halbwertszeit.
+- Jährlich neu aufgelegte, nur geringfügig andere ETFs vergrößern die Menge baubarer stationärer Portfolios.
+- Übliche Stop-Losses lassen sich bei Mean-Reversion-Strategien logisch nicht einsetzen. Kapitel 8 behandelt, warum das so ist, und welche Risikotechniken passen.
+- Praktischer als die lineare Strategie sind Bollinger-Bänder, weil jederzeit null oder eine Einheit gehalten wird und die Kapitalbindung damit nach oben begrenzt ist. Einstieg jenseits von entryZscore Standardabweichungen, Ausstieg bei einem kleineren exitZscore.
+- Auf GLD-USO steigen APR und Sharpe Ratio von etwa 10,9 Prozent und 0,59 beim linearen adaptiven Preisspread auf 17,8 Prozent und 0,96 bei Bollinger mit entryZscore 1 und exitZscore 0.
+- Der Logpreisspread liegt bei 9 Prozent APR und Sharpe Ratio 0,5. Die Ratio USO/GLD hat eine negative APR; Long und Short haben dort dasselbe Dollarkapital.
+- Der Kalman-Handel von EWA-EWC, Einstieg bei einer Prognoseabweichung jenseits der Wurzel von Q, erreicht 26,2 Prozent APR und eine Sharpe Ratio von 2,4.
+- Mehrere Bollinger-Niveaus setzen Scaling-in um. Nach Schoenberg und Corwin ist ein einzelner Ein- und Ausstieg im Backtest immer mindestens so gut; bei nicht konstanter Volatilität kann Scaling-in out of sample die realisierte Sharpe Ratio trotzdem verbessern.
+- Schrittweises Aussteigen realisiert kleine Gewinne auch dann, wenn die Reihe den Mittelwert nie erreicht.
+- Auf VX-Kalenderspreads ist das Signal das Verhältnis Back zu Front, mit 15 Tagen Lookback für Durchschnitt und Standardabweichung; vom 27. Oktober 2008 bis zum 23. April 2012 ergeben sich 17,7 Prozent annualisierte Rendite und eine Sharpe Ratio von 1,5.
+- Vor Oktober 2008 schnitt diese VX-Strategie deutlich schlechter ab.
+- Dieselbe lineare Strategie auf dem 12-Monats-Kalenderspread von CL erzielt vom 2. Januar 2008 bis zum 13. August 2012 ungehebelte 8,3 Prozent annualisiert und eine Sharpe Ratio von 1,3; die kumulierten Renditen zeigt Abbildung 5.7.
+- Die Bollinger-Band-ähnliche Variante shortet das Portfolio aus 0,3906 VX und einem ES, wenn der Wert um eine Standardabweichung der Residuen aus den ersten 500 Tagen nach August 2008 abweicht.
+- Auf dem Testset vom 29. Juli 2010 bis zum 8. Mai 2012 beträgt die annualisierte Rendite dieser ES-VX-Strategie 12,3 Prozent bei einer Sharpe Ratio von 1,4.
+- Auf dem Crack Spread hat die lineare Strategie in der Phase des Anstiegs bis zum 3. Juli 2008 und des anschließenden Falls negative Renditen.
+- Bei CL kauft die kombinierte Regel zum Schluss, wenn der Preis unter dem von vor 30 Tagen und über dem von vor 40 Tagen liegt, geht umgekehrt short und stellt glatt, wenn keine Bedingung erfüllt ist; die annualisierte Rendite ist 12 Prozent bei einer Sharpe Ratio von 1,1.
+- Ein Mean-Reversion-Filter auf der Zeitreihen-Momentum-Regel von Beispiel 6.1 verbessert die Renditen und Sharpe Ratios der Kontrakte in Tabelle 6.2 und nimmt zusätzlich IBX, KT, SXF, US, CD, NG und W auf.
+- Die Strategie, Aktien mit dem stärksten Verkaufsdruck der Quartale t minus 4 bis t minus 1 zu kaufen und umgekehrt zu shorten, erzielt weitere 7 Prozent annualisiert.
+- Das lineare Mean-Reversion-Modell auf S&P-500-Aktien in Kapitel 4 nutzt die kurzfristige querschnittliche Mean Reversion, hält weniger als einen Tag und hat eine Sharpe Ratio von 4,7.
+- Stop-Losses sind mit Mean-Reversion-Strategien nicht vereinbar, weil sie dem Einstiegssignal widersprechen.
+- Die Gewinnobergrenze ist der Mean, zu dem die Preise zurückkehren; der Verlust einer einzelnen Position ist nicht ebenso gedeckelt und kann einen enormen Drawdown erzeugen.
 
 ## Funktionsweise
 
@@ -49,6 +77,8 @@ aktualisiert: 2026-10-30
 - Die übliche lineare Mean-Reversion-Strategie auf VX benutzt das Ratio Back zu Front als Signal und einen Lookback von 15 Tagen für den gleitenden Durchschnitt und die Standardabweichungen.
 - Die Bollinger-Band-ähnliche Strategie auf ES und VX shortet das Portfolio, sobald dessen Wert um eine Standardabweichung der Residuen aus dem Trainingsset abweicht.
 - Das Trainingsset für diese Regression sind die ersten 500 Tage nach August 2008, und die Standardabweichung der Residuen beträgt 2.047 Dollar.
+- Das Pairs-System handelt die Oszillation des stationären Spreads wt um seinen Mittelwert μw: Einstieg bei einer hinreichend großen Abweichung, Auflösung, wenn das Gleichgewicht wiederhergestellt ist.
+- Die Parameter γ, μw, α1 und α2 der Fehlerkorrektur lassen sich per Maximum Likelihood oder kleinste Quadrate schätzen. Die Rendite des Portfolios aus einer Aktie long und γ Aktien short ist der Zuwachs des Spreads und unabhängig von μw.
 
 ## Voraussetzungen
 
@@ -92,6 +122,42 @@ aktualisiert: 2026-10-30
 - Je Tag wird ein Far- und ein Near-Kontrakt gewählt: Haltedauer 3 Monate oder 61 Handelstage, Rollen 10 Tage vor Verfall des Near-Kontrakts, Verfälle ein Jahr auseinander; zunächst long Far und short Near, und bei positivem Z-Score werden die Positionen umgekehrt.
 - Die ungehebelte Tagesrendite ist der P&L geteilt durch 2, weil zwei Kontrakte im Spread sind.
 - Mean-Reversion-Regeln geben das Konzept vor, dass eine Datenreihe zu ihrem Mittelwert zurückkehrt, sobald sie gegenüber den jüngeren Werten extrem hoch oder extrem tief liegt.
+- Soll das Portfolio während des Trades eine feste Stückzahl halten, werden die Hedge Ratios aus den Preisreihen bestimmt. Sollen die Marktwerte der Bestandteile fest bleiben, aus den Log-Preisreihen.
+- Für Währungspaare ist das Verhältnis oft ein besserer Indikator als der Spread.
+- Können Hedge Ratio, Mittel und Standardabweichung eines Spreads künftig variieren, helfen ein gleitender Lookback oder der Kalman-Filter.
+- Scaling-in ist im Backtest oft nicht optimal, im Live-Handel aber häufig nützlich, weil Volatilitäten und Wahrscheinlichkeiten sich ändern.
+- Den erwarteten Preis aus dem letzten Trade, also aus Preis und Größe, führt der Kalman-Filter dynamisch nach.
+- Buy-on-Gap wählt nahe der Eröffnung Aktien, deren Rendite vom Tief des Vortags bis zur heutigen Eröffnung unter minus einer Standardabweichung liegt. Die Standardabweichung kommt aus den Close-to-Close-Renditen der letzten 90 Tage. Das sind die nach unten gegappten Aktien.
+- Zusätzlich muss der Eröffnungskurs über dem 20-Tage-Durchschnitt der Schlusskurse liegen.
+- Gekauft werden die zehn Titel dieser Liste mit der niedrigsten Rendite seit dem Tief des Vortags. Sind es weniger als zehn, wird die ganze Liste gekauft. Alle Positionen werden zum Marktschluss glattgestellt.
+- Vom 11. Mai 2006 bis 24. April 2012 beträgt die annualisierte Rendite 8,7 Prozent und die Sharpe Ratio 1,5.
+- Die Begründung: sind die Aktienindex-Futures vor der Eröffnung unten, leiden manche Aktien überproportional unter Panikverkäufen zur Eröffnung und erholen sich im Tagesverlauf.
+- Die Durchschnitts-Regel ist ein Momentum-Filter. Nur wenig gefallene Aktien kehren eher um, weil stark gefallene oft negative Nachrichten wie schlechte Gewinnmeldungen haben, und nachrichtengetriebene Einbrüche seltener umkehren.
+- Ein Kurs über einem langfristigen Durchschnitt zieht Verkaufsdruck länger orientierter Long-only-Fonds an. Der Liquiditätsbedarf zur Eröffnung überzeichnet den Abwärtsdruck, und solche Bewegungen kehren eher um als fundamentale.
+- Eine Fassung ohne diese Durchschnitts-Regel litt ab 2009 unter abnehmenden Renditen. Die reine Long-Ausrichtung erschwert das Risikomanagement, und die kleine Zahl gehandelter Aktien begrenzt die Kapazität.
+- Das Spiegelbild shortet Aktien, die um eine Standardabweichung nach oben gappen und dennoch unter ihrem 20-Tage-Durchschnitt liegen: 46 Prozent annualisierte Rendite und Sharpe Ratio 1,27 über denselben Zeitraum, bei steilerem Drawdown und Leerverkaufsbeschränkung.
+- Varianten handeln Long und Short zugleich, hedgen Long-Aktien mit Short-Index-Futures, begrenzen die Titel je Sektor, verlängern das Kaufzeitfenster über die Eröffnung hinaus oder setzen Intraday-Gewinnobergrenzen.
+- Das SPY-System sucht im Trainingsjahr 2007 alle Aktien, die im Johansen-Test mit mindestens 90 Prozent mit SPY kointegrieren, bildet daraus ein gleichgewichtiges Long-only-Portfolio und prüft die Kointegration mit SPY auf Log-Preisen erneut, weil täglich auf konstantes Kapital je Aktie rebalanciert wird.
+- Auf dem Testzeitraum 2. Januar 2008 bis 9. April 2012 läuft die lineare Mean Reversion mit einem im Rückblick auf 5 fixierten Lookback. Die annualisierte Rendite ist 4,5 Prozent, die Sharpe Ratio 1,3, und die Performance fällt, solange Bestandteile und Hedge Ratios nicht nachtrainiert werden.
+- Das lineare Long-Short-Modell von Khandani und Lo setzt nahe dem Schluss für jede Aktie eines Index wie S&P 500, S&P 1500 oder Russell 2000 ein Kapital proportional zur negativen Abweichung ihrer Tagesrendite vom Durchschnitt, normiert auf 1 Dollar Brutto.
+- Auf dem S&P 500 vom 2. Januar 2007 bis 30. Dezember 2011 sind annualisierte Rendite 13,7 Prozent und Sharpe Ratio 1,3. Die Strategie ist parameterfrei und nahezu dollarneutral. Ab Anfang 2008 ist der Test echt out of sample, weil sie 2007 veröffentlicht wurde.
+- Die Intraday-Variante bestimmt die Gewichte aus der Rendite vom vorigen Schluss zur heutigen Eröffnung und stellt zum Schluss glatt: 73 Prozent annualisierte Rendite und Sharpe Ratio 4,7, bei verdoppelten, im Backtest fehlenden Transaktionskosten und Signalrauschen an der Eröffnung.
+- Beispiel 5.1 handelt AUD.USD gegen CAD.USD mit einer Hedge Ratio ungleich eins, also nicht als Kreuzkurs AUD.CAD. Der Johansen-Test läuft auf den Log-Preisen der vorangehenden 250 Tage, genommen wird die erste Spalte des Eigenvektors.
+- Mittel und Standardabweichung nutzen 20 Tage. Die Stückzahl des Einheitsportfolios ist der negative Z-Score, die Marktwerte in USD sind Stückzahl mal Hedge Ratio mal Preis.
+- Die Tagesrendite ist der Gewinn geteilt durch den gesamten Bruttomarktwert am Ende des Vortags. Nach Ausschluss der ersten 250 Tage sind annualisierte Rendite 11 Prozent und Sharpe Ratio 1,6, vom 18. Dezember 2009 bis 26. April 2012.
+- Gekauft wird CAD, wenn CAD.USD deutlich unter AUD.USD liegt. Live entspricht der Kauf einer Einheit CAD.USD dem Verkauf von 1/y Einheiten USD.CAD.
+- Beispiel 5.2 handelt den fertigen Kreuzkurs AUD.CAD und hält über 17:00 Uhr ET, deshalb mit Rollover. Die Position ist das negative Vorzeichen von Schluss minus 20-Tage-Durchschnitt.
+- Die Überschussrendite addiert log(1 + Zinssatz AUD) minus log(1 + Zinssatz CAD) zur Log-Preisänderung. Der AUD-Rollover wird mittwochs verdreifacht, der CAD-Rollover donnerstags.
+- Diese Fassung erzielt 6,2 Prozent annualisierte Rendite bei einer Sharpe Ratio von 0,54, ohne Rollover 6,7 Prozent und 0,58, und bleibt damit deutlich schwächer als die ungleiche Hedge Ratio. Der annualisierte durchschnittliche Rollover beträgt fast 5 Prozent.
+- Der Log-Marktwert eines Kalenderspreads, long der ferne und short der nahe Kontrakt, ist die Rollrendite mal (T1 − T2). Weil die Fälligkeiten fest sind, erzeugt die Rollrendite die Signale.
+- Die Halbwertszeit der CL-Rollrendite ist etwa 36 Tage, aus minus log(2) geteilt durch die Steigung der Regression der Änderung auf den verzögerten Wert. Lookback von Mittel und Standardabweichung ist diese gerundete Halbwertszeit.
+- Gehalten wird ein Paar 61 Handelstage, gerollt wird zehn Tage vor Verfall des nahen Kontrakts, und die Fälligkeiten liegen ein Jahr auseinander. Bei positivem Z-Score drehen die Vorzeichen von long fern und short nah.
+- Die ungehebelt Tagesrendite teilt den Gewinn durch 2, weil zwei Kontrakte gehalten werden. Vom 2. Januar 2008 bis 13. August 2012 sind annualisierte Rendite 8,3 Prozent und Sharpe Ratio 1,3.
+- Dieselbe lineare Regel auf VX-Kalenderspreads lässt sich mit der Gleichung für gehandelte Basiswerte nicht begründen: VIX wird nicht gehandelt, die Log-Preise gegen die Restlaufzeit liegen nicht auf einer Geraden, und die Formeln von Dupoyet, Daigler und Chen (2011) erklären die Mean Reversion nicht.
+- Sei η die Kosten eines Pairs-Geschäfts und die Zielabweichung so gewählt, dass ihr Doppeltes größer als η ist. Dann wird eine Aktie 1 gekauft und γ Aktien 2 geshortet, wenn wt gleich μw minus der Zielabweichung ist, und aufgelöst, wenn wt gleich μw plus der Zielabweichung ist. Der Nettogewinn ist das Doppelte der Zielabweichung minus η.
+- Alternativ wird bei Rückkehr auf μw aufgelöst, sofern die Zielabweichung größer als η ist. Der Nettogewinn ist dann die Zielabweichung minus η, bei mehr Transaktionen und kürzerer Haltedauer.
+- Für BHP und VALE wird die Zielabweichung auf 0,045 gesetzt, etwas größer als ein Standardfehler des Spreads von 0,044. Unter Normalität liegt die Wahrscheinlichkeit einer solchen Abweichung vom Mittel bei etwa 30 Prozent.
+- Der Logreturn jedes so definierten Pairs-Geschäfts ist das Doppelte von 0,045, also 0,09. Die Handelsgrenzen sind der Mittelwert 1,81 sowie 1,81 plus und minus 0,045; γ̂ beträgt 0,718.
 
 ## Risiken und Grenzen
 
@@ -117,6 +183,10 @@ aktualisiert: 2026-10-30
 - Ein Stop-Loss widerspricht den Einstiegssignalen eines Mean-Reversion-Systems und ist deshalb damit nicht verträglich.
 - Eine einzige Position kann einen enormen Drawdown erzeugen.
 - Das Aufwärtspotenzial ist auf das Mittel gedeckelt, zu dem die Preise zurückkehren, das Abwärtspotenzial kann unbegrenzt sein.
+- Der Aufstieg von Dark Pools und Hochfrequenzhandel hat den Handel mancher Mean-Reversion-Strategien in den letzten Jahren erheblich erschwert.
+- Datenfehler blähen die Backtests von Mean-Reversion-Strategien auf, die von Momentum-Strategien dagegen nicht.
+- Ob die Abweichung groß genug für einen Gewinn ist, hängt von Handelskosten, Grenzzinssätzen und den Bid-Ask-Spreads der beiden Aktien ab. Die Schwelle η hängt voraussichtlich von Gebühren und Bid-Ask-Spreads ab.
+- Eine realistischere Prüfung würde den Handel außerhalb der Schätzstichprobe ausführen. Das Beispiel zeigt innerhalb der Stichprobe nur, dass Pairs Trading durchführbar ist.
 
 ## Beispiele
 
@@ -152,5 +222,17 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 144–150 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-010-p144-p150|S. 144–150]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 170–172 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-012-p170-p172|S. 170–172]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 476–495 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-026-p476-p495|S. 476–495]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 71–75 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-005-p071-p075|S. 71–75]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 76–95 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-006-p076-p095|S. 76–95]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 99–118 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-008-p099-p118|S. 99–118]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 119–138 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-009-p119-p138|S. 119–138]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 138–143 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-010-p138-p143|S. 138–143]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 457–476 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-025-p457-p476|S. 457–476]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 476–495 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-026-p476-p495|S. 476–495]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Overfitting
@@ -128,6 +128,13 @@ aktualisiert: 2026-10-30
 - Die besten Einstellungen für einen begrenzten Zeitraum von nur wenigen Monaten täglicher SPX-Daten zu wählen, wird hier Optimieren der historischen Daten genannt.
 - Ob diese historisch gewählten Einstellungen künftig nützlich bleiben, gilt gewöhnlich, nicht immer.
 - Perfektion gibt es nicht; gesucht wird die beste Passung, und besser als diese beste Passung wird es nicht.
+- Einfache und lineare Strategien gelten als Gegenmittel gegen Overfitting und Data-Snooping-Bias, die komplexe Strategien oft befallen.
+- Den Lookback als kleines Vielfaches der Halbwertszeit zu wählen, vermeidet die Brute-Force-Optimierung eines freien Parameters anhand der Performance der Handelsstrategie.
+- Underperformt eine Strategie den Backtest, sollen nicht blind weitere Regeln und Indikatoren ergänzt werden in der Hoffnung, die Leistung stelle sich wieder ein; gesucht wird ein fundamentaler Grund, der dann quantitativ geprüft wird.
+- Einfache lineare Strategien werden betont, weil eine verstandene Marktunvollkommenheit durch ein einfaches Modell ausgenutzt werden kann und beliebige Zusatzregeln unnötig sind.
+- Nichtparametrische Methoden sind stark datenabhängig und können leicht zu Overfitting führen.
+- Geht die Bandbreite h des Nadaraya-Watson-Schätzers mit Epanechnikov-Kern gegen null, reproduziert der Glätter die beobachteten Punkte. Geht h gegen unendlich, entsteht die überglättete Kurve des Stichprobenmittels.
+- Ist h sehr klein, konzentrieren sich die Gewichte auf wenige Nachbarn jedes x_t. Ist h sehr groß, verteilen sie sich über eine weite Nachbarschaft. Die Wahl von h ist damit das zentrale Bandbreitenproblem der Kernregression.
 
 ## Funktionsweise
 
@@ -161,6 +168,10 @@ aktualisiert: 2026-10-30
 - Findet der Backtest keine profitable Strategie, wird von vorn begonnen und das Wiederverwenden der Ergebnisse unterlassen.
 - Den Lookback auf ein kleines Vielfaches der Halbwertszeit zu setzen, vermeidet die Brute-Force-Optimierung eines freien Parameters anhand der Performance der Handelsstrategie.
 - Die lineare Mean-Reversion-Strategie wird als wirklich parameterfrei beschrieben.
+- Data-Snooping-Bias wird minimiert, indem das Modell so einfach wie möglich und mit so wenigen Parametern wie möglich gebaut wird.
+- Wenige Parameter bei vielen komplizierten Handelsregeln bleiben anfällig; nichtlineare Modelle sind anfälliger als lineare, weil sie komplizierter sind und gewöhnlich mehr freie Parameter haben.
+- Einfache Modelle sind ein einfaches Heilmittel gegen Data-Snooping-Bias.
+- Strategien mit hoher Rendite und niedriger Sharpe Ratio, im Beispiel 30 Prozent bei 0,3 und zwei Jahren maximaler Drawdown-Dauer, lohnen den Backtest nicht, weil die hohe Rendite wahrscheinlich Data-Snooping ist.
 
 ## Risiken und Grenzen
 
@@ -199,6 +210,10 @@ aktualisiert: 2026-10-30
 - Eine bestimmte Datendichte ist nötig, damit Data-Mining-Software gültige Muster vom Hintergrundzufall unterscheiden kann.
 - Reichen 100 Beobachtungen für die nötige Dichte in zwei Dimensionen, werden 1.000 in drei Dimensionen und 10.000 in vier Dimensionen benötigt.
 - Trotz dieser Grenze ist moderne Data-Mining-Software im konfiguralen Schlussfolgern und in der Erkennung komplexer Muster unendlich besser als die klügsten Menschen.
+- Die Beispiel-Backtests optimieren Parameter und messen die Leistung oft auf denselben In-Sample-Daten und blähen die Ergebnisse damit auf.
+- Eine nichtlineare Extrapolation passt die historischen Preise besser, garantiert aber keine bessere Prognose künftiger Werte.
+- Wer ein Modell so lange nachjustiert, bis In-Sample und Out-of-Sample beide gut aussehen, hat die Out-of-Sample-Daten in Trainingsdaten verwandelt.
+- Die Auswahl eines ARMA(p, q) über AIC oder BIC für alle Ordnungen von 0 bis zu vorgegebenen Obergrenzen P und Q verlangt Maximum-Likelihood-Schätzungen vieler Modelle und kann in manchen Fällen auf Overfitting in der Schätzung stoßen.
 
 ## Beispiele
 
@@ -209,6 +224,7 @@ aktualisiert: 2026-10-30
 - Weitere Komplexität wird ergänzt, bis die Leistung im Testsatz nachlässt; die optimale Regel ist dann die Regel der höchsten Komplexität, die im Testsatz am besten abgeschnitten hat.
 - Eine Regel, deren Komplexitätswachstum vor diesem Testgipfel gestoppt wird, hat nicht alle gültigen Muster erfasst und heißt unterangepasst.
 - Die Vier-Parameter-Regel verdiente in den Trainingsdaten 50 Prozent, die Zwei-Parameter-Vorgängerregel 30 Prozent.
+- Ein neuronales Netz mit etwa 100 Knoten passt mindestens etwa 100 Parameter an die In-Sample-Daten an, kann eine Backtest-Sharpe-Ratio von 6 erzeugen und hat danach wenig oder keine Prognosekraft.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -241,5 +257,12 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 438–457 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-024-p438-p457|S. 438–457]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 457–476 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-025-p457-p476|S. 457–476]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 42–61 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-004-p042-p061|S. 42–61]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 33–51 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-003-p033-p051|S. 33–51]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 77–96 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-005-p077-p096|S. 77–96]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 210–229 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-012-p210-p229|S. 210–229]]
 
 ## Verwandte Themen

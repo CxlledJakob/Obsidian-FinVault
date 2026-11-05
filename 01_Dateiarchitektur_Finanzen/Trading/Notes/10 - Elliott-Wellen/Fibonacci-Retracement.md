@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Fibonacci-Retracement
@@ -143,6 +143,9 @@ aktualisiert: 2026-10-30
 - Die erste ES-Einheit wurde bei 1360 geschlossen, nahe dem 38,2-Prozent-Retracement der Welle 3; die zweite war nahe dem 50-Prozent-Retracement vorgesehen, lief nicht sofort dorthin und wurde am Stop mit 45 Punkten Gewinn ausgestoppt.
 - Im ES-Widerstand vom 10. März lagen das 50-Prozent-Retracement vom Hoch des 7. März und das 78,6-Prozent-Retracement vom frühen Hoch des 10. März.
 - Am 30. Januar erreichte USD/CAD ein größeres Retracement von 78,6 Prozent und das kleinere Welle-5-von-5-Preisziel.
+- Die Rally seit dem März des Vorjahres, im Text vom 23. März 2004, ist am 50-%-Fibonacci-Retracement zum Stehen gekommen (Abbildung 41.9).
+- Das spricht dafür, dass die Rally nichts Ungewöhnliches war und die Arbeit zum Bubble Echo stützt.
+- Abbildung 41.9 trägt am S&P 500 die Linien 0/100, 23,6/76,4, 38,2/61,8, 50/50, 61,8/38,2, 76,4/23,6 und 100/0.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -164,5 +167,6 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 234–250 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-017-p234-p250|S. 234–250]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 533–552 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-029-p533-p552|S. 533–552]]
 
 ## Verwandte Themen

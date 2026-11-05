@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Maximum Drawdown
@@ -34,6 +34,26 @@ aktualisiert: 2026-10-30
 - Große Positionen können große Verluste erzeugen, die sich sehr schwer erholen lassen.
 - Ein großer Verlust ist emotional und finanziell sehr schwer aufzuholen. Deshalb bleiben erfolgreiche Trader bei einem relativ engen Stop und einem akzeptablen Verlust.
 - Einen bedeutenden Verlust aufzuholen, erfordert viel.
+- Die kumulierte P&L der linearen Mean-Reversion auf USD.CAD in Abbildung 2.3 bleibt trotz einer Halbwertszeit von etwa 115 Tagen positiv, zeigt aber einen großen Drawdown. Transaktionskosten sind nicht enthalten.
+- Die TU-Momentum-Strategie hat vom 1. Juni 2004 bis zum 11. Mai 2012 einen maximalen Drawdown von 2,5 Prozent.
+- Die auf die verzögerte Rollrendite umgestellte TU-Strategie senkt den maximalen Drawdown auf 1,1 Prozent, gemessen vom 2. Januar 2009 bis zum 13. August 2012.
+- Tabelle 6.2 weist als maximalen Drawdown für BR minus 14,8 Prozent, für HG minus 24,0 Prozent und für TU minus 2,5 Prozent aus.
+- Long GLD und short GC haben vom 3. August 2007 bis zum 2. August 2010 einen maximalen Drawdown von 0,8 Prozent.
+- Der S&P DTI hat von Januar 1988 bis Dezember 2010 einen maximalen Drawdown von minus 16,6 Prozent, der S&P 500 im selben Zeitraum minus 50,96 Prozent.
+- Zum Schreibzeitpunkt beträgt der Drawdown des S&P DTI seit dem 5. Dezember 2008 minus 25,9 Prozent.
+- Nach dem Aktiencrash 1929 brauchte eine repräsentative Momentum-Strategie mehr als 30 Jahre, um ihr altes Equity-Hoch wieder zu erreichen.
+- Ursache dieses Momentum-Crashs ist vor allem der starke Rebound der Short-Positionen nach einer Marktkrise.
+- Querschnittliches Aktienmomentum verschwand nach dem Crash 2008 bis 2009 und wurde durch starke Mean Reversion ersetzt; wie lange dieses Regime anhält, ist offen.
+- Eine einzelne Mean-Reversion-Position kann einen enormen Drawdown erzeugen, während der Verlust einer einzelnen Momentum-Position durch Zeitausstieg oder Stop-Loss begrenzt ist.
+- Der kumulierte Verlust aufeinanderfolgender Verlustpositionen einer Momentum-Strategie kann trotzdem ruinös sein.
+- Momentum zusätzlich zu Mean Reversion erzeugt kleinere Drawdowns als jeder Typ allein.
+- Momentum-Strategien können in riskanten Ereignissen gedeihen, schnitten aber in deren Folge schlecht ab.
+- Im Simulationsbeispiel beträgt der maximale Drawdown minus 0,999 beim unbeschränkten optimalen Hebel 19,2. Der halbe Hebel 9,6 lässt ihn bei minus 0,963; erst der Faktor 7, also etwa 2,7, senkt den Betrag auf etwa 0,5. Die Zahlen sind an die Zufallsreihe gebunden.
+- Auf historischen Strategierenditen genügt der Faktor 1,5, also der Hebel 13, um den maximalen Drawdown unter minus 0,49 zu drücken.
+- Die Schätzung auf simulierten Strategierenditen ähnelt dem Value-at-Risk und hat höhere Signifikanz, kann aber einen Drawdown enthalten, der in einer Million Jahren kaum eintritt, und lässt serielle Korrelationen aus, die den realen maximalen Drawdown senken können.
+- Die historischen Strategierenditen erfassen diese Korrelationen und eine realistische Lebensdauer statt einer Million Jahre, enthalten aber zu wenig Daten für den Worst Case; ein Kompromisshebel liegt dazwischen.
+- Bei CPPI ist der Drawdown des Gesamtkontos konstruktionsbedingt auf minus D begrenzt. In einer Simulation mit D gleich 0,5 bleibt er unter 0,5, während der Hebel f mal D ohne Stop-Loss einen Drawdown von 0,9 erreicht.
+- Der aus der Simulation gesetzte Höchsthebel verhindert nur, dass der simulierte Drawdown das erlaubte Maximum überschreitet, nicht der künftige.
 
 ## Funktionsweise
 
@@ -67,6 +87,7 @@ aktualisiert: 2026-10-30
 - Historische Drawdowns decken eine realistische Strategielebensdauer ab, enthalten aber zu wenig Daten für den Worst Case.
 - CPPI und Stop-Loss verhindern einen Drawdown über das Overnight-Gap oder bei ausgesetztem Handel nicht.
 - Für Mean Reversion soll der Stop-Loss größer sein als der maximale Intraday-Drawdown des Backtests.
+- Bei endlicher Stichprobe unterliegen der maximale Drawdown und die Durchschnittsrendite dem Zufall; die Strategie kann in einer kleinen Stichprobe nur Glück gehabt haben.
 
 ## Beispiele
 
@@ -81,6 +102,8 @@ aktualisiert: 2026-10-30
 - Erst die Senkung um den Faktor 7 auf etwa 2,7 bringt den Betrag auf etwa 0,5; die Zahlen sind an die genaue simulierte Reihe gebunden und nicht exakt reproduzierbar.
 - An den historischen Strategierenditen senkt der Faktor 1,5, also der Hebel 13, den maximalen Drawdown unter minus 0,49.
 - Bei CPPI mit erlaubtem Drawdown minus 0,5 bleibt der Betrag unter 0,5; die Alternative ohne Stop-Loss erreicht 0,9 selbst mit halbem Optimalhebel.
+- Die Peak-to-Trough-Darstellung des S&P 500 wird als Beleg für die Schwere dieses Bärenmarkts angeführt.
+- Bevor von Bewertungsstütze die Rede sein kann, sind mindestens 30 Prozent weitere Kursrückgänge wahrscheinlich nötig.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -99,5 +122,12 @@ aktualisiert: 2026-10-30
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 362–381 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-020-p362-p381|S. 362–381]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 153–172 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-012-p153-p172|S. 153–172]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 172–176 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-013-p172-p176|S. 172–176]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 14–33 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-002-p014-p033|S. 14–33]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 52–71 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-004-p052-p071|S. 52–71]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 180–199 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-014-p180-p199|S. 180–199]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 199–214 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-015-p199-p214|S. 199–214]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 476–495 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-026-p476-p495|S. 476–495]]
 
 ## Verwandte Themen

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # ABC-Korrektur
@@ -98,6 +98,9 @@ aktualisiert: 2026-10-30
 - Der Dynamic-Time-Projection-Report bildet alle gelernten Zeitprojektionen plus einige zusätzliche, die zu verschiedenen Musterstrukturen gehören, und zeigt die Treffer als Bars im Indikatorfenster.
 - Die Bars stehen für die künftigen Zeiten mit den meisten Treffern. Sie bilden die Häufung aus Zeitretracement, Alternate Time Projection sowie High-High- und Low-Low-Projektionen ab, plus einige weitere.
 - Ein Dynamic-Time-Projection-Ziel lässt sich für jede Musterstruktur bilden. Der Report nutzt dieselben Informationen und rechnet die Ziele sofort aus.
+- Frost und Prechter (1980): In Welle A eines Bärenmarkts ist die Anlagewelt überzeugt, der Rückgang sei nur ein Pullback vor dem nächsten Aufwärtsbein; das Publikum kauft, trotz der ersten technisch wirklich schädlichen Brüche in den Einzelmustern.
+- B-Wellen sind Scheinbewegungen, Bullenfallen, ein Paradies für Spekulanten, Ausdruck von Odd-Lot-Mentalität oder institutioneller Selbstzufriedenheit; sie konzentrieren sich oft auf wenige Aktien, werden oft von anderen Durchschnitten nicht bestätigt, sind selten technisch stark und fast immer zum vollständigen Retracement durch Welle C verurteilt.
+- Fallende C-Wellen sind gewöhnlich verheerend; außer Cash gibt es praktisch kein Versteck, die in A und B gehaltenen Illusionen verdampfen, Angst übernimmt, und C-Wellen sind ausdauernd und breit.
 
 ## Voraussetzungen
 
@@ -211,5 +214,8 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 234–250 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-017-p234-p250|S. 234–250]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 251–270 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-018-p251-p270|S. 251–270]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 270–289 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-019-p270-p289|S. 270–289]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 533–552 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-029-p533-p552|S. 533–552]]
 
 ## Verwandte Themen
+
+- Dass die Illusionen durch die Wellen A und B gehalten werden, liegt nach Montier nahe am Konservatismus-Bias.

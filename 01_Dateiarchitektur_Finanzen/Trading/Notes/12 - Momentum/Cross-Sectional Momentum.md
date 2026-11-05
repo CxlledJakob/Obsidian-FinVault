@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Cross-Sectional Momentum
@@ -45,6 +45,31 @@ aktualisiert: 2026-10-30
 - Jegadeesh und Titman (1993) zeigen, dass Preismomentum über die vergangenen sechs bis zwölf Monate anhält: Die stärksten Aktien über 6, 7, 8 bis hin zu 12 Monaten schlagen tendenziell in den folgenden 6 bis 12 Monaten.
 - Ihre simulierte Strategie ist long im obersten Dezil der Rendite der vorangegangenen sechs Monate, short im untersten Dezil und wird sechs Monate gehalten; sie erzielt 10 Prozent annualisiert.
 - Angesichts dieser Evidenz räumte Eugene Fama ein, dass vergangene Aktienrenditen künftige Aktienrenditen vorhersagen können.
+- Ein dritter Weg, Rollrenditen zu extrahieren, kauft ein Portfolio von Futures in Backwardation und shortet zugleich ein Portfolio in Contango, in der Hoffnung, dass sich die Spot-Renditen aufheben.
+- Diese Hoffnung ist nicht unvernünftig, wenn die Spotpreise von Rohstoffen positiv mit Wirtschaftswachstum oder anderen makroökonomischen Indizes korrelieren.
+- Die vereinfachte Strategie von Daniel und Moskowitz rangiert täglich die 12-Monats-Rendite von 52 physischen Rohstoffen und hält den Future mit der höchsten Rendite 25 Handelstage long und den mit der niedrigsten short.
+- Vom 1. Juni 2005 bis zum 31. Dezember 2007 beträgt die annualisierte Rendite 18 Prozent bei einer Sharpe Ratio von 1,37; vom 2. Januar 2008 bis zum 31. Dezember 2009 beträgt sie minus 33 Prozent, danach erholt sich die Leistung.
+- Dieselbe Strategie funktionierte laut Daniel und Moskowitz für Weltaktienindizes, Währungen, internationale Aktien und US-Aktien.
+- Bei US-Aktien wird das oberste Dezil der um 12 Monate verzögerten Renditen einen Monat gekauft und das unterste Dezil leerverkauft.
+- Beispiel 6.2 setzt Lookback 252, Haltedauer 25 und die obersten sowie untersten 50 Titel des S&P 500; vom 15. Mai 2007 bis zum 31. Dezember 2007 ergeben sich 37 Prozent annualisiert bei einer Sharpe Ratio von 4,1, vom 2. Januar 2008 bis zum 31. Dezember 2009 minus 30 Prozent.
+- Daniel und Moskowitz finden von 1947 bis 2007 eine annualisierte Durchschnittsrendite von 16,7 Prozent und eine Sharpe Ratio von 0,83; nach 2009 stabilisiert sich die Rendite, das frühere Hoch ist noch nicht wieder erreicht.
+- Die Strategie ist fast ein Spiegelbild des linearen Long-Short-Mean-Reversion-Aktienmodells von Khandani und Lo, aber mit viel längerem Lookback und längerer Haltedauer.
+- Ein Faktormodell auf Futures kann BIP-Wachstum oder Inflation mit der Rendite jedes Futures korrelieren oder eine Hauptkomponentenanalyse verwenden.
+- Hafez und Xie finden mit dem RavenPack Sentiment Index, dass long positive und short negative Sentimentänderung vor Kosten 52 bis 156 Prozent annualisiert und Sharpe Ratios von 3,9 bis 5,3 bringt, je nach Portfoliogröße.
+- Die Ansteckung erzwungener Verkäufe und Käufe unter Publikumsfonds trägt zum Momentum der gemeinsam gehaltenen Aktien bei.
+- Die Finanzkrise 2008 bis 2009 ruinierte diese Momentum-Strategie ebenso wie den S&P DTI.
+- Chan und Kot (2002) bilden vier Portfolios aus dem Zusammenspiel von lang- und kurzfristigem Momentum. Die Daten decken den US-Markt von 1965 bis 2002. Am besten schneidet der kurzfristige Gewinner ab, der langfristig ein Verlierer war.
+- Über die Dezile der Analystenempfehlungen, Dezil 1 am meisten und Dezil 10 am wenigsten gemocht, bevorzugen die Analysten bei der Preisrendite der vergangenen drei Jahre die langfristigen Gewinner.
+- Momentum funktioniert weit besser in der Kombination aus kurzfristigen Gewinnern und langfristigen Verlierern. Die Analysten wählen im Querschnitt der Empfehlungen die gegenteilige Seite.
+- Asness et al. (1997) zeigen Parallelen der querschnittlichen Vorhersagbarkeit von Aktien und Ländern: billige Länder schlagen teure, und Länder mit der besten Zwölfmonatsperformance tendieren dazu, das fortzusetzen.
+- Momentum der Länder ist die Preisänderung der vorangegangenen zwölf Monate; Länder mit dem stärksten Anstieg bleiben im Folgemonat stark, Länder mit dem schwächsten Momentum bleiben schwach.
+- Das höchste Momentum-Tritile schlägt das niedrigste um 15,8 Prozent p.a. im Long-Short und den MSCI World im Long-only um 9,0 Prozent p.a., Sample Januar 1975 bis März 2003.
+- Die Rendite je Risikoeinheit ist bei Länder-Momentum mit 0,26 im Long-Short und 0,12 im Long-only höher als bei den Value-Maßen.
+- Sechsmonats-Preismomentum, Ausführung um einen Monat verzögert, arbeitet branchenrelativ noch, mit geringfügig höherer Signifikanz, ist aber weniger wirksam als marktweit, wo die absoluten Renditen höher sind.
+- Weltweit über 30 Jahre rentiert 6-Monats-Preismomentum sektorrelativ mit 8,0 Prozent p.a. bei t 4,3 und marktweit mit 9,3 Prozent bei t 4,5.
+- Indizes sind häufig kaum mehr als Momentum-Maße: Die besten Aktien werden aufgenommen, die schlechtesten gestrichen. Indexfonds sind deshalb ein wirksamer Weg, Momentum zu spielen.
+- Closet Indexer entpuppen sich als Momentum-Spieler, genau wie der Index, an den sie sich schmiegen. Ihre UMD-Ladung beträgt 0,07.
+- In den dismal years lieferte die reine Momentum-Strategie, Kaufbedingungen I und III, 12,2 Prozent geometrisch und 11,4 Prozent arithmetisch, bei einer Standardabweichung von 5,5, einer Sharpe Ratio von 0,69, einem Informationskoeffizienten von 0,21 und einer Information Ratio von 0,73. Buy-and-hold lag bei 7,5 Prozent geometrisch, Standardabweichung 14,7 und Sharpe Ratio −0,01.
 
 ## Funktionsweise
 
@@ -80,6 +105,10 @@ aktualisiert: 2026-10-30
 - Beispiel 6.2 erzielt vom 15. Mai 2007 bis zum 31. Dezember 2007 eine annualisierte Rendite von 37 Prozent bei einer Sharpe Ratio von 4,1; Daniel und Moskowitz finden von 1947 bis 2007 16,7 Prozent annualisiert bei einer Sharpe Ratio von 0,83.
 - Dieselbe Aktienstrategie erzielt vom 2. Januar 2008 bis zum 31. Dezember 2009 eine annualisierte Rendite von minus 30 Prozent; nach 2009 stabilisiert sich die Rendite, ohne das frühere Hoch zu erreichen.
 - Dieselbe Strategie funktionierte nach Daniel und Moskowitz für Welt-Aktienindizes, Währungen, internationale Aktien und US-Aktien.
+- Der Momentum-Länderkorb 1976 bis 2003 hat eine durchschnittliche Monatsrendite von 1,7 im hohen Tritile, 1,1 im mittleren, 0,4 im niedrigen und 0,9 im Markt.
+- Long-only-Alpha 0,81 bei t 4,8 und Beta 1,0 bei t 24,1; Long-Short-Alpha 1,2 bei t 5,6 und Beta 0,1 bei t 2,0.
+- Der t-Test der Mitteldifferenz beträgt 3,53, der t-Test des Long-Short-Portfolios 6,07.
+- Anteil richtiger Calls 0,67, Informationskoeffizient 0,34, Information Ratio 1,19.
 
 ## Unterschiedliche Quellenpositionen
 
@@ -94,5 +123,12 @@ aktualisiert: 2026-10-30
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 170–172 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-012-p170-p172|S. 170–172]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 1–20 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-001-p001-p020|S. 1–20]]
 - Evidence-based Technical Analysis_ Applying the Scientific Method and Statistical Inference to Trading Signals.pdf, S. 343–362 → [[Trading/Pilot/blocks/evidence-based-technical-analysis/evidence-based-technical-analysis-block-019-p343-p362|S. 343–362]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 1–13 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-001-p001-p013|S. 1–13]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 144–163 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-011-p144-p163|S. 144–163]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 163–165 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-012-p163-p165|S. 163–165]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 248–267 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-014-p248-p267|S. 248–267]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 419–438 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-023-p419-p438|S. 419–438]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 438–457 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-024-p438-p457|S. 438–457]]
 
 ## Verwandte Themen

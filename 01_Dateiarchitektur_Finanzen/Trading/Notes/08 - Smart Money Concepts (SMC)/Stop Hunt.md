@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-01
 ---
 
 # Stop Hunt
@@ -34,6 +34,10 @@ aktualisiert: 2026-10-30
 - Das kurzfristige Momentum entsteht, weil viele Stop-Orders auf oder nahe Unterstützung und Widerstand liegen.
 - Die Key Points fassen Stop Hunting als Strategie, die Stop-Orders an typischerweise runden Zahlen nahe dem aktuellen Marktpreis auslöst.
 - Auch die ungleichmäßige Verteilung von Stop-Orders kann auf der kürzesten Skala Momentum erzeugen.
+- Unterschreitet der Preis eine Unterstützung, werden die dort liegenden Sell-Stop-Orders ausgelöst und treiben den Preis weiter nach unten; beim Widerstand ist es symmetrisch.
+- High-Frequency-Händler können großen Verkaufsdruck künstlich erzeugen, indem sie große Verkaufsorders legen, sobald der Preis nah genug an der Unterstützung ist, um den nächsten Tick nach unten zu treiben.
+- Sobald die Stops ausgelöst sind und Abwärtsmomentum läuft, decken sie die Short-Position mit schnellem Gewinn.
+- Beim Opening Gap können Stop-Orders auf verschiedenen Preisen bei der Eröffnung zugleich ausgelöst werden, und eine Kaskade trifft auch weiter vom Open entfernte Stops.
 
 ## Funktionsweise
 
@@ -81,6 +85,7 @@ aktualisiert: 2026-10-30
 - A Complete Guide to Volume Price Analysis.pdf, S. 39–58 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-003-p039-p058|S. 39–58]]
 - A Complete Guide to Volume Price Analysis.pdf, S. 77–96 → [[Trading/Pilot/blocks/a-complete-guide-to-volume-price-analysis-pdf/a-complete-guide-to-volume-price-analysis-pdf-block-005-p077-p096|S. 77–96]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 166–179 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-013-p166-p179|S. 166–179]]
 
 ## Verwandte Themen
 

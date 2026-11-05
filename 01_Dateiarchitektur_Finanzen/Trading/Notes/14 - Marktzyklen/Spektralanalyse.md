@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Spektralanalyse
@@ -24,6 +24,10 @@ aktualisiert: 2026-10-30
 - Die Fourier-Analyse des Marktes für Erdgas-Futures zeigt starke Hinweise auf Hochfrequenzhandel.
 - Die Fourier-Komponenten hoher Frequenzen werden in den jüngeren Jahren prominenter und sind viel stärker, als die Struktur des Marktes erwarten ließe.
 - Die Fourier-Analyse der Handelsvolumina liefert weitere Hinweise auf algorithmischen Handel und auf eine stärkere Präsenz in jüngeren Jahren.
+- Die Spektraldichte des fraktional differenzierten Prozesses ist die Fourier-Transformierte seiner Autokorrelation und verhält sich für omega gegen 0 wie omega hoch minus 2d, mit omega im Intervall von 0 bis 2 pi.
+- Dieses Spektrum divergiert gegen unendlich, wenn die Frequenz gegen 0 geht.
+- Die Spektraldichte eines stationären ARMA-Prozesses bleibt dagegen für alle Frequenzen von 0 bis 2 pi beschränkt.
+- Der fraktionale Differenzenparameter d lässt sich per Maximum Likelihood oder per Regression des logarithmierten Periodogramms bei den niedrigen Frequenzen schätzen.
 
 ## Funktionsweise
 
@@ -59,5 +63,6 @@ aktualisiert: 2026-10-30
 ## Quellen und Fundstellen
 
 - Advances in Financial Machine Learning.pdf, S. 362–381 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-020-p362-p381|S. 362–381]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 115–134 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-007-p115-p134|S. 115–134]]
 
 ## Verwandte Themen

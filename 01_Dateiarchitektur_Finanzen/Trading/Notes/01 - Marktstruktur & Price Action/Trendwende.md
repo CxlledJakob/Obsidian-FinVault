@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Trendwende
@@ -137,6 +137,10 @@ aktualisiert: 2026-10-30
 - Das Time Band ist die Überlappung der High-High- und der Low-High-Spannen und ein Zeitfenster hoher Wahrscheinlichkeit für das nächste vergleichbare Hoch oder, sinngemäß für Tiefs, für das nächste vergleichbare Tief.
 - Das Band sagt nicht, ob die Umkehr größer wird als die jüngsten Extrempunkte, nur dass ein vergleichbarer Extrempunkt entsteht. Deutet die größere Zeitebene auf eine größere Umkehr, liefert das Band das enge Fenster dafür.
 - Ein Hoch oder Tief kann außerhalb des Bands entstehen. Auf Basis des jüngsten Rhythmus ist die Entstehung im Band hochwahrscheinlich, nicht sicher.
+- Momentum wirkt weit besser, wenn kurzfristige Gewinner mit langfristigen Verlierern kombiniert werden, also nach einer positiven Trendumkehr.
+- Chan und Kot (2002) zeigen am US-Markt von 1965 bis 2002, dass von vier Kombinationen aus lang- und kurzfristigem Momentum die Gruppe kurzfristiger Gewinner und langfristiger Verlierer am besten abschneidet.
+- Thaler und DeBondt (1985): Frühere Gewinneraktien werden künftige Verlierer, und frühere Verlierer werden künftige Gewinner.
+- Analysten kaufen eher Aktien, die über die vergangenen drei Jahre und in den letzten zwölf Monaten gut gelaufen sind, und lassen diese Trendumkehr aus.
 
 ## Funktionsweise
 
@@ -318,6 +322,7 @@ aktualisiert: 2026-10-30
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 125–144 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-010-p125-p144|S. 125–144]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 144–152 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-011-p144-p152|S. 144–152]]
 - High Probability Trading Strategies_ Entry to Exit Tactics for the Forex, Futures, and Stock Markets.pdf, S. 153–172 → [[Trading/Pilot/blocks/high-probability-trading-strategies/high-probability-trading-strategies-block-012-p153-p172|S. 153–172]]
+- Behavioural Investing_ A Practitioners Guide to Applying -- James Montier -- Wiley finance series, Chichester, West Sussex, England, 2007 -- Wiley ; -- isbn13 9780470490297 -- 552a06a98fb1ad4320dc7c3128ea169b -- Ann.pdf, S. 153–172 → [[Trading/Pilot/blocks/behavioural-investing/behavioural-investing-block-009-p153-p172|S. 153–172]]
 
 ## Verwandte Themen
 

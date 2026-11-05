@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Bid
@@ -26,6 +26,12 @@ aktualisiert: 2026-10-30
 - Niedrige Preise werden fast immer gegen das Bid gematcht.
 - Das gegen das Bid gehandelte Volumen, also die verkaufsinitiierten Trades, wird VS genannt.
 - Das Break-even-Bid der Market Maker ist der erwartete Preis abzüglich (μ αt δt) / (ε + μ αt δt) mal (E[St] − SB).
+- Market Maker kaufen zum Bid-Preis P_b; für das Publikum ist P_b der Verkaufspreis.
+- Im Roll-Modell ist eine Transaktion mit I_t = −1 zum Preis P*_t − S/2 die Bid-Seite des Spreads S = P_a − P_b.
+- War der zuvor beobachtete Preis das Bid, ist die nächste beobachtete Preisänderung entweder 0 oder +S, sofern sich der fundamentale Wert nicht ändert.
+- Der Bid-Preis P^b_j bildet zusammen mit dem Ask P^a_j das Mittel, an dem der Indikator IBS eine Transaktion als über, auf oder unter der Quote klassifiziert.
+- Der in Ticks gemessene Spread zwischen Ask und Bid zum vorherigen Trade beeinflusst im Ordered Probit die bedingte Varianz der latenten Preisänderung.
+- Für IBM 1988 liegt der mittlere Spread bei 1,9470 Ticks.
 
 ## Funktionsweise
 
@@ -53,6 +59,8 @@ aktualisiert: 2026-10-30
 - Eine Falle besteht darin, dass der ursprüngliche Bid eigentlich verkaufen wollte und den Bid storniert, sobald zum Bid plus einem Tick gekauft wurde.
 - Wird die große Buy-Limit-Order beim Flipping wirklich gefüllt, kann der Verkauf mit Verlust nötig werden.
 - Eine Transaktion am Bid ist negativer Orderflow.
+- Ein fehlerhafter Bid von 110 Dollar um 11:02 Uhr kann eine Short-Market-Sell-Order auslösen, die bei 100 Dollar gefüllt wird, weil tatsächlich kein Bid bei 110 Dollar vorhanden war.
+- Im Paarbeispiel hat X einen wahren Bid von 100 Dollar. Zusammen mit einem wahren Ask von Y bei 105 Dollar ist der Spread von 5 Dollar zu klein, um eine Market Order zum Kauf von X und Verkauf von Y auszulösen.
 
 ## Beispiele
 
@@ -69,5 +77,8 @@ aktualisiert: 2026-10-30
 - Advances in Financial Machine Learning.pdf, S. 305–324 → [[Trading/Pilot/blocks/advances-in-financial-machine-learning-pdf/advances-in-financial-machine-learning-pdf-block-017-p305-p324|S. 305–324]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 100–104 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-007-p100-p104|S. 100–104]]
 - Algorithmic Trading_ Winning Strategies and Their Rationale.pdf, S. 173–186 → [[Trading/Pilot/blocks/algorithmic-trading/algorithmic-trading-block-013-p173-p186|S. 173–186]]
+- Algorithmic Trading (Winning Strategies and Their Rationale) -- Chan, Ernest P_ -- 2013 may 22 -- John Wiley & Sons, Inc_ -- doi 10_1002_9781118676998 -- e374e4354dcd660c7bc666e0297a580b -- Anna’s Archive.pdf, S. 95–98 → [[Trading/Pilot/blocks/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p/algorithmic-trading-winning-strategies-and-their-rationale-chan-ernest-p-block-007-p095-p098|S. 95–98]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 248–267 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-014-p248-p267|S. 248–267]]
+- Analysis of Financial Time Series, Third Edition (Wiley -- Ruey S_ Tsay -- Wiley series in probability and statistics, 3rd ed_, -- John Wiley & Sons, -- isbn13 9780470414354 -- 9f99b80c7b2dedd477f463dc5323f3b6 -- An.pdf, S. 267–286 → [[Trading/Pilot/blocks/analysis-of-financial-time-series-third-edition-wiley-ruey-s/analysis-of-financial-time-series-third-edition-wiley-ruey-s-block-015-p267-p286|S. 267–286]]
 
 ## Verwandte Themen
