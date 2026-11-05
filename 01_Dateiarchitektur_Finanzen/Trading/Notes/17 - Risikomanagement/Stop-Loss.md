@@ -126,6 +126,7 @@ aktualisiert: 2026-11-05
 - Ein rationaler Marktteilnehmer eröffnet keine Position, deren erwartetes Ergebnis ein Verlust ist.
 - Weil Devisen von Sonntag 17:00 Uhr ET bis Freitag 17:00 Uhr ET nahezu durchgehend gehandelt werden, lassen sich Stop-Losses dort sinnvoll einsetzen.
 - Stop-Losses mildern zusammen mit der Erfahrung aus schwarzen Schwänen und mit Constant Proportion Portfolio Insurance die Anwendung der Kelly-Formel im Risikomanagement.
+- Ehlers entwickelt die Strategie ohne Stop-Loss, untersucht danach die Maximum Adverse Excursions und fügt eine Stop-Regel ein, die nur die maximalen Verluste begrenzt, ohne die Gewinntrades stark zu stören.
 
 ## Regeln und Kriterien
 
@@ -188,6 +189,10 @@ aktualisiert: 2026-11-05
 - Bei der Momentum-Reversal-Strategie liegt der initiale Schutzstop nach Ausführung einen Tick unter dem Swing-Tief oder über dem Swing-Hoch vor dem Einstieg.
 - Ein Handelssystem bestimmt mit vollständig objektiven Regeln auch den genauen Stop-Loss-Preis.
 - Laut Ehlers sollten Stop-Loss-Techniken nur eingesetzt werden, um große Verluste zu begrenzen.
+- Stop-Loss-Regeln sollten sparsam eingesetzt und nicht so eingebettet werden, dass der Stop fester Bestandteil der Strategie ist; die Hälfte des Namens ist Verlust.
+- Stop-Loss-Techniken sollten nur dazu dienen, große Verluste zu begrenzen.
+- Ehlers' Regel setzt den Stop als Prozentsatz des Einstiegspreises: Long wird am nächsten Open verkauft, wenn Close < (1 − PctLoss/100) · EntryPrice; Short wird am nächsten Open eingedeckt, wenn Close > (1 + PctLoss/100) · EntryPrice.
+- PctLoss kann je Symbol unterschiedlich gesetzt werden; für die meisten Aktien funktionieren 2 bis 5 Prozent, bei Futures sollte der Wert wegen des Hebels etwas kleiner sein.
 
 ## Risiken und Grenzen
 
@@ -206,6 +211,8 @@ aktualisiert: 2026-11-05
 - Ein weiter Stop, nur um der Position Raum zu geben, und weiteres Aufstocken bei Gegenlauf enden in einem großen Verlust oder darin, dass der Broker die Position schließt, wenn das Margin-Kapital aufgebraucht ist.
 - Bei Mean-Reversion-Strategien lassen sich die üblichen Stop-Losses logisch nicht einsetzen. Das Risikomanagement ist deshalb besonders wichtig und besonders schwierig; warum das so ist und welche Techniken passen, behandelt Kapitel 8.
 - Der seltene Verlust fällt oft beim maximalen Hebel nach einer ungebrochenen Erfolgsserie und ist dann sehr schmerzhaft oder katastrophal, weil die hohe Stetigkeit zuvor zu Überkonfidenz geführt hat (Dever, 2011).
+- Ist der Stop-Loss fest eingebaut und integraler Teil der Strategie, zerstört er nach Ehlers' Erfahrung ihre Robustheit.
+- Für den Ausstieg aus Verlusttrades bei antizipierten Swing-Trades hält Ehlers einen Stop-Loss nicht für wirksam, weil er so eng gesetzt werden müsste, dass man aus Trades herausgeworfen wird, die am Ende profitabel geworden wären.
 
 ## Beispiele
 

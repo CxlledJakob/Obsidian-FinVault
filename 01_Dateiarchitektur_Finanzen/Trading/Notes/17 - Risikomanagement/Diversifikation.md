@@ -109,6 +109,8 @@ aktualisiert: 2026-11-05
 - Manager, die 800 US-Aktien nach Buch zu Preis reihen, Billige kaufen und Teure verkaufen und einmal je Quartal neu gewichten, wenden nur eine Erkenntnis an. Die Breite ist nicht 800, weil die Sichten nicht unabhängig sind, aber sie ist größer als vier, die Zahl der Neugewichtungen pro Jahr.
 - Core-Satellite-Strukturen und der Schub der Pensionsberater haben das Verschwinden der Balanced Funds beschleunigt, die strategische und taktische Allokation kombinierten. Diese Fonds hätten einen Teil der Rückkopplung der Blasen mildern können.
 - Statt endlos vieler Spezialisten mit je einer Gebühr wäre ein Manager mit einer Gebühr und der Freiheit vorzuziehen, überall dort anzulegen, wo die Gelegenheit liegt.
+- Die Streuung der Equity-Kurven selbst bei relativ hohem Profit Factor und hoher Trefferquote zeigt, wie sinnvoll Diversifikation im Portfolio ist.
+- Sind alle Symbole statistisch unabhängig, sinkt die Abweichung der Equity-Kurve theoretisch um die Wurzel aus zwei bei jeder Verdopplung der Elementzahl: Vier Symbole halbieren die Abweichung, acht halbieren sie erneut, für die nächste Halbierung braucht es 16 gleichzeitig gehandelte Symbole.
 
 ## Funktionsweise
 
@@ -141,6 +143,8 @@ aktualisiert: 2026-11-05
 - Das Alpha eines Russell-1000-Managers auf das Beta des S&P 500 zu setzen, kann wegen der Überlappung zweier Large-Cap-Inlandindizes zugleich long und short dieselbe Aktie ergeben. Die Short-Kosten sind dann vollständig verschwendet.
 - Auch ein unkorreliert wirkendes japanisches Aktien-Alpha auf einem S&P-500-Beta erzeugt dasselbe Problem, sobald das Portfolio bereits japanisches Beta hält.
 - Bei einem großen diversifizierten Portfolio ist das Risiko proportional zur Wurzel der Korrelation. Steigt die maßgebliche Korrelation von der mittleren Aufwärts-Halbekorrelation 0,21 auf die Abwärtskorrelation 0,38, ist der VaR mit dem Faktor 1,35 zu multiplizieren; der Diversifikationsnutzen schrumpft im Abschwung.
+- Durch Hinzufügen von Symbolen erreicht man schnell abnehmende Grenzerträge.
+- Eine große Menge von Symbolen mit statistisch unabhängigen Trades zu finden, ist unwahrscheinlich.
 
 ## Beispiele
 

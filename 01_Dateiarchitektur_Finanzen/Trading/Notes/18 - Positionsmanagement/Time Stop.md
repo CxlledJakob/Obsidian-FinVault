@@ -60,6 +60,9 @@ aktualisiert: 2026-11-05
 - In der Konfiguration [1,1,0] ist die vertikale Barriere aus, Gewinn wird mitgenommen, solange kein Stop greift, und die Haltedauer ist nicht begrenzt.
 - Swing-Trades brauchen einen Sicherheitsventil-Ausstieg (Safety Valve), weil sie in Erwartung eines Preiswendepunkts eingegangen werden.
 - Das Sicherheitsventil kann entweder auf der Zeit im Trade oder auf einem Preisausbruch beruhen.
+- Ein zeitbasiertes Sicherheitsventil muss die Periodizität des gehandelten Zyklus berücksichtigen. Ein Monatszyklus besteht meist aus 10 Bars aufwärts und 10 Bars abwärts, die erwartete Haltedauer ist also etwa 10 Bars; ist man nach etwa der Hälfte nicht im Gewinn, sollte man wahrscheinlich mit Verlust aussteigen.
+- Aggressiver ist eine Quick-out-Regel: Ist der Trade in den ersten ein oder zwei Bars nicht profitabel, wird ausgestiegen und auf eine bessere Gelegenheit gewartet.
+- Für das Sicherheitsventil eines Verlusttrades gibt es zwei Optionen: Ausstieg nach Preis oder nach Zeit im Trade.
 
 ## Risiken und Grenzen
 

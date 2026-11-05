@@ -81,6 +81,10 @@ aktualisiert: 2026-11-05
 - Über die von Grove et al. gesichteten Arbeiten lag die mittlere Genauigkeit der menschlichen Teilnehmer bei 66,5 Prozent und die mittlere Hit Ratio der quantitativen Modelle bei 73,2 Prozent.
 - Goldbergs Regel auf zehn MMPI-Scores traf die Diagnose neurotisch oder psychotisch außer Stichprobe zu rund 70 Prozent und schlug selbst den besten Psychologen, auch wenn diesem die Regelvorhersage vorlag.
 - Die Regel von Leli und Filskov erkannte 83 Prozent neuer Fälle. Unerfahrene Kliniker lagen bei 63 Prozent, erfahrene bei 58 Prozent. Mit der Modellausgabe stiegen die Quoten auf 68 und 75 Prozent und blieben unter dem Modell. Die erfahrenen waren ohne Modell schlechter als die unerfahrenen.
+- Trefferquote und Profit Factor beschreiben die Performance einer Strategie am einfachsten; es gibt keine eindeutige Kombination beider, die zum Erfolg führt.
+- Trendhandel akzeptiert eine relativ niedrige Trefferquote für einen relativ hohen Profit Factor.
+- Sind die Indikatoren tatsächlich prädiktiv, hat kurzfristiger Handel eine höhere Trefferquote.
+- Auch bei relativ hoher Trefferquote und hohem Profit Factor streuen die Equity-Kurven einer Strategie erheblich.
 
 ## Funktionsweise
 
@@ -124,6 +128,7 @@ aktualisiert: 2026-11-05
 - Der Anteil richtiger Calls beträgt 0,57 im Kurs-Gewinn-Länderkorb.
 - Der Anteil richtiger Calls beträgt 0,67 im Momentum-Länderkorb.
 - Die erneut ausgewiesene Dividendenrendite trifft in 59 Prozent der Calls.
+- In der Monte-Carlo-Tabelle wird ein Trade als Gewinner gewertet, wenn eine gleichverteilte Zufallszahl unter der Trefferquote liegt; 55 Prozent Gewinntrades gelten mit einem Profit Factor von 1,5 als repräsentativ für ein gutes System.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -368,6 +368,10 @@ aktualisiert: 2026-11-05
 - Tyszka und Zielonka (2002) legten drei einander ausschließende und erschöpfende Ausgänge so fest, dass jeder ungefähr die Wahrscheinlichkeit 0,33 hatte.
 - Die Kalibrierungskurve trägt die genannte Wahrscheinlichkeit gegen die tatsächliche Häufigkeit ab. Perfekte Kalibrierung ist die 45-Grad-Linie.
 - Bei Torngren und Montgomery (2004) hätte ein Münzwurf sowohl die Laien als auch die professionellen Investoren bei der Wahl der outperformenden Aktie geschlagen.
+- Ein verbreiteter Irrtum ist, dass die Wahrscheinlichkeitsverteilung technischer Indikatoren normal, also gaußförmig, sei; das ist nicht so, wie man an einer ausreichenden Datenmenge selbst prüfen kann.
+- Die Fisher-Transformation formt einen Indikator mit nominalem Nullmittelwert zwischen −1 und +1 so um, dass er annähernd normalverteilt ist. Ihre nichtlineare Vergrößerung nahe dem Betrag 1 erzeugt die langen Enden der Ausgangsverteilung.
+- Einen auf die Normalverteilung skalierten Indikator zu plotten, hat einen großen Vorteil für die Interpretation, weil die Werte direkt Standardabweichungen und Wahrscheinlichkeiten entsprechen.
+- Indikatoren sind nach Ehlers im Grunde Darstellungen eines statistischen Prozesses.
 
 ## Funktionsweise
 

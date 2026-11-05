@@ -24,6 +24,9 @@ aktualisiert: 2026-11-05
 
 - Die bevorzugte Methode zur Berechnung des dominanten Zyklus ist das Autokorrelationsperiodogramm.
 - Der Even Better Sinewave Indicator verzichtet vollständig auf Zyklusmessungen und stützt sich auf eine starke Normierung der Wellenform am Ausgang eines modifizierten Roofing-Filters.
+- Ehlers zeigt drei Wege, die zeitvariable dominante Zyklusperiode mit analytischen Signalen zu messen: Dual Differentiator, Phase Accumulation und Homodyne. Alle messen im Kern die momentane Phase und summieren die Phasen zur Schätzung der Zyklusperiode.
+- Ein weit überlegener Ansatz zur Berechnung des dominanten Zyklus ist das Autokorrelations-Periodogramm.
+- Analytische Signale erlauben sehr schnelle Messungen der dominanten Zyklusperiode über die Änderungsrate des Phasenwinkels: Ändert sich der Winkel um 18 Grad pro Bar, beträgt der dominante Zyklus 20 Bars, weil das 360 Grad über 20 Bars ergibt.
 
 ## Funktionsweise
 
@@ -36,6 +39,11 @@ aktualisiert: 2026-11-05
 - Der dominante Zyklus wird aus der Spektralschätzung mit einem Schwerpunkt-Algorithmus (Center of Gravity, CG) gewonnen: Die Y-Werte und unabhängig davon die Produkte X mal Y werden summiert; die zweite Summe geteilt durch die erste ergibt die mittlere Position entlang der X-Achse.
 - Beim dominanten Zyklus sind die Y-Werte die Leistungen und die X-Werte die Perioden; der Algorithmus berechnet also die mittlere Periode, um die sich die Leistungen konzentrieren. Das ist der dominante Zyklus.
 - Im Code gehen nur Perioden mit normierter Leistung von mindestens 0,5 in die Schwerpunktberechnung ein.
+- Beim Dual Differentiator ist der Phasenwinkel der Arkustangens des Verhältnisses von imaginärer zu reeller Komponente und die Kreisfrequenz die Änderungsrate der Phase. Im Code gilt Period = 6,28318 · (Real² + Imag²) / (−Real · QDot + Imag · IDot), begrenzt auf 8 bis 48, danach mit einem SuperSmoother geglättet.
+- Bei der Phase Accumulation wird je Sample die Phase als Arkustangens von Quadratur zu In-Phase gemessen, die Phasendifferenz zwischen aufeinanderfolgenden Samples gebildet und rückwärts aufsummiert; erreicht die Summe 360 Grad, ist im Mittel ein voller Zyklus durchlaufen.
+- Im Phase-Accumulation-Code wird über count von 0 bis 40 summiert; die momentane Periode ist der count, bei dem die Summe erstmals 360 übersteigt. Ist sie 0, wird der Vorwert übernommen, danach wird geglättet.
+- Homodyne bedeutet, dass das Signal mit sich selbst multipliziert wird, genauer das Signal des aktuellen Bars mit dem komplex konjugierten Signal des Vorbars. Weil der Zeitabstand ein Bar ist, liefert das Produkt das Amplitudenquadrat und die Kreisfrequenz 2π / Period.
+- Bei der Homodyne-Methode wird der dominante Zyklus berechnet, indem 2π durch das Verhältnis von imaginärer zu reeller Komponente geteilt wird, weil bei kleinem Winkel Winkel, Tangens und Arkustangens ungefähr gleich sind.
 
 ## Voraussetzungen
 
@@ -65,6 +73,9 @@ aktualisiert: 2026-11-05
 ## Risiken und Grenzen
 
 - Die Messung der dominanten Zyklusperiode über Nulldurchgänge der Bandpasswelle ist einfach, aber nicht unbedingt die genaueste Methode; genauere Verfahren untersuchen den gesamten Spektralgehalt der Daten.
+- Weil die Glättungslänge meist kürzer als ein voller Zyklus ist, sind die Ergebnisse der Hilbert-Methoden recht verrauscht und nur marginal handelstauglich; Ehlers nimmt den Code nur der Vollständigkeit halber auf.
+- Die Algorithmen funktionieren auf rauschfreien theoretischen Wellenformen recht gut. Ehlers vermutet, dass das Rauschen von Sample zu Sample die Berechnung der Phasenänderungsrate überdeckt und die Ergebnisse im Grunde wertlos macht.
+- Bei der Homodyne-Methode kann der Winkel idealerweise nicht negativ sein, weil die Zeit nicht rückwärts läuft; der Glättungsfilter dient vor allem dazu, die durch Rauschen erratischen Berechnungen zu überdecken.
 
 ## Beispiele
 

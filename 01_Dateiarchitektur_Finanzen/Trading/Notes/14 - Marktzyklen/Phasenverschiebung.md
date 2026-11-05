@@ -26,6 +26,9 @@ aktualisiert: 2026-11-05
 - Die Phasenverschiebung verdoppelt sich jedes Mal, wenn die Zahl der Pole in der Übertragungsfunktion verdoppelt wird. Deshalb soll im Trading der einfachste mögliche Filter genutzt werden, um Verzerrungen durch Phasenverschiebung zu minimieren.
 - Ein Bandpassfilter, der auf eine kürzere Periode als den dominanten Zyklus abgestimmt ist, liefert einen Ausgang, der dem Swing der Eingangsdaten vorausläuft.
 - Ein Bandpassfilter, der auf eine längere Periode als den dominanten Zyklus abgestimmt ist, liefert einen Ausgang, der dem Swing der Eingangsdaten hinterherläuft.
+- Die Kosinuswelle kreuzt null, wenn die Sinuswelle ihr Maximum mit Steigung null erreicht. Die Kosinuswelle stellt die Änderungsrate der Sinuswelle dar.
+- Die Quadraturkomponente eines modifizierten Hilbert-Transformers läuft der reellen Ausgabe voraus wie eine Kosinuswelle einer Sinuswelle; in diesem Sinn ist er prädiktiv.
+- In-Phase- und Quadraturkomponente stehen als Vektoren in der komplexen Ebene im rechten Winkel zueinander.
 
 ## Funktionsweise
 
@@ -36,6 +39,9 @@ aktualisiert: 2026-11-05
 - Kein technischer Indikator ist vorhersagend, alle Signale verzögern; weil beobachtete Zyklen oft eine kurze Zeit weiterlaufen, kann man zyklische Schwünge auf eine Sinuswelle übertragen und deren Phase künstlich vorziehen, um einen vorhersagenden Indikator zu erhalten.
 - Im Code des adaptiven Bandpasses wird das Signal als BP geteilt durch einen mit 0,991 abklingenden Spitzenwert normiert; der Lead ist 1,3 · (Signal + Signal[1] − Signal[2] − Signal[3]) / 4 und wird über einen mit 0,93 abklingenden Spitzenwert auf 0,7 normiert.
 - Die Konvolution wird um vier Balken nach links verschoben, um den Indikator besser mit dem tatsächlichen Wendepunkt in Deckung zu bringen, weil für die kürzeste Berechnung eine endliche Datenmenge nötig ist; das ähnelt einem zentrierten gleitenden Durchschnitt.
+- Die Ein-Bar-Differenz der reellen Komponente liefert die für die imaginäre Komponente nötige Phasenquadratur, analog zur Ableitung einer Sinuswelle zu einer Kosinuswelle.
+- Ein FIR-Filter mit ungerader Elementzahl N verzögert um (N − 1) / 2 Bars; beim 23-Element-Hilbert-Transformer sind das 11 Bars, beim Dreielement-Filter [1 0 −1] ein Bar.
+- Die Homodyne-Methode multipliziert das Signal des aktuellen Bars mit dem komplex konjugierten Signal des Vorbars; die komplex Konjugierte ist eine komplexe Zahl mit umgekehrtem Vorzeichen der imaginären Komponente.
 
 ## Voraussetzungen
 
@@ -53,6 +59,8 @@ aktualisiert: 2026-11-05
 ## Risiken und Grenzen
 
 - Adaptive gleitende Durchschnitte wie Kaufmans KAMA und Chandes VIDYA passen sich an Volatilitätsänderungen an; sie reagieren per Definition auf Preisänderungen und kommen damit zu spät.
+- Im klassischen Hilbert-Code muss die imaginäre Kurve um 11 Bars nach links verschoben werden; für den Handel müsste Real um 11 Bars verzögert werden, um die richtige Beziehung zu Imag zu haben.
+- Eine Glättung der imaginären Komponente mit einem SuperSmoother führt mehrere Bars Lag ein und zerstört ihre Orthogonalität zur reellen Komponente.
 
 ## Beispiele
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Profit Factor
@@ -26,6 +26,10 @@ aktualisiert: 2026-10-30
 - Der Profit Factor wird neben der Sharpe Ratio und der mittleren Rendite geteilt durch den Ulcer Index als mögliches Performancemaß genannt. Die Stichprobenverteilung solcher alternativen Statistiken unterscheidet sich von der Stichprobenverteilung des Mittelwerts.
 - Der Profit Factor ist eine Verhältniszahl und kann einen lang gezogenen rechten Schwanz haben. Die Verfahren für die Stichprobenverteilung des Mittelwerts können dann nur begrenzt taugen.
 - Das Problem des langen rechten Schwanzes lässt sich mildern, indem der Logarithmus des Verhältnisses genommen wird.
+- In Analogie zum Glücksspiel lässt sich die Performance einer Strategie am einfachsten durch Trefferquote und Profit Factor beschreiben; der Profit Factor ist mit der Auszahlung einer Wette vergleichbar.
+- Es gibt keine eindeutige Kombination von Profit Factor und Trefferquote, die zu einer erfolgreichen Strategie führt; der Handelsstil ist deshalb frei wählbar.
+- Trendhandel bedeutet, eine relativ niedrige Trefferquote für einen relativ hohen Profit Factor zu akzeptieren.
+- Der Profit Factor kurzfristiger Trades ist im Allgemeinen kleiner, weil die spektrale Dilatation die Schwankungen kurzfristiger Marktbewegungen begrenzt.
 
 ## Funktionsweise
 
@@ -46,6 +50,7 @@ aktualisiert: 2026-10-30
 
 ## Beispiele
 
+- In der Monte-Carlo-Tabelle gelten ein Profit Factor von 1,5 und 55 Prozent Gewinntrades als repräsentativ für ein gutes System; ein Gewinntrade erhält den Profit Factor als Auszahlung, ein Verlusttrade −1.
 
 ## Unterschiedliche Quellenpositionen
 

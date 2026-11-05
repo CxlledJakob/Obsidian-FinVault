@@ -25,6 +25,7 @@ aktualisiert: 2026-11-05
 - Coulling sieht darin die Steuerung der Händleremotionen: Hoffnung auf Erholung wird geweckt und wieder zerstört.
 - Anleger zahlen für die Hoffnung auf Wachstum zu viel. Montier warnt vor der Wachstumsfalle: Wachstum ist oft nicht das Allheilmittel, als das es scheint.
 - Börsenmakler verkaufen Träume und liefern Albträume, und die Leute hören ihre Sirenengesänge trotzdem gern. Die Hoffnung, die in der Wachstumsgeschichte steckt, zieht sie in die Entscheidung.
+- Ehlers verlässt sich beim Handel auf Technik und kaum auf Psychologie, räumt der Psychologie aber im diskretionären Handel einen Platz ein.
 
 ## Funktionsweise
 
@@ -37,6 +38,7 @@ aktualisiert: 2026-11-05
 
 ## Regeln und Kriterien
 
+- Ehlers nennt ein unmissverständliches psychologisches Ausstiegssignal: Wer auch nur daran denkt, zu hoffen, dass ein Trade dreht und in die eigene Richtung läuft, sollte den Trade sofort schließen. Hoffnung hat im Trading einen negativen Wert.
 
 ## Risiken und Grenzen
 

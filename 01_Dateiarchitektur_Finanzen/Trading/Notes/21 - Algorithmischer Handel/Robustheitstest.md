@@ -35,6 +35,8 @@ aktualisiert: 2026-11-05
 - Die Nachbildung mit Standard-Earnings-Yield und Rendite auf die Aktiva liefert eine ähnliche Größenordnung und lässt die Little-Book-Befunde robust erscheinen.
 - Die US-Dezilreihenfolge ist nicht monoton wie bei Greenblatt. Das kleinere Universum von rund 750 Titeln und einzelne Titel in einem Jahr schränken die glatte Dezilgeschichte ein.
 - Ähnliche Renditen in Europa seit 1995, Value-Rückkäufe mit 5 % p.a. Überschuss und Growth-Emittenten mit 5 % p.a. Underperformance, stützen den US-Befund von Bali, Demirtas und Hovakimian und sprechen gegen einen reinen statistischen Zufall der europäischen Horizontverlängerung.
+- Eine einfache Strategie mit wenigen Parametern ist eher über mehrere Symbole und mehrere Zeitebenen robust.
+- Ein fest eingebauter Stop-Loss zerstört nach Ehlers' Erfahrung die Robustheit einer Strategie; nur als Schutz vor extrem großen Verlusten eingesetzt, bleibt die Robustheit der Kernstrategie erhalten.
 
 ## Funktionsweise
 
@@ -47,6 +49,9 @@ aktualisiert: 2026-11-05
 
 ## Regeln und Kriterien
 
+- Eine Faustregel verlangt mindestens 30 Trades pro Parameter der Strategie, bei vier Parametern also mindestens 120 Trades; Ehlers hält diese Zahl für eher zu niedrig.
+- Liefert die Optimierung keinen sanften Gipfel über einen Bereich von Parametereinstellungen, ist die Strategie garantiert nicht robust.
+- Bringt der Out-of-Sample-Test ohne Parameteränderung zufriedenstellende Ergebnisse, ist die Strategie robust.
 
 ## Risiken und Grenzen
 

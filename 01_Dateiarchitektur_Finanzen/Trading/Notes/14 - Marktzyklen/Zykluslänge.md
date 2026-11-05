@@ -70,6 +70,11 @@ aktualisiert: 2026-11-05
 - Beim Even Better Sinewave setzt der Duration-Parameter die kritische Periode des Hochpasses und steuert damit die maximale Länge einer angezeigten Position; der Hochpass beginnt, zyklische Komponenten länger als die Duration zu dämpfen.
 - Der einpolige Hochpass gleicht die Amplitude aller Zykluskomponenten an, die wegen Spectral Dilation bei längeren Wellenlängen sonst größer wären.
 - Eine kürzere Duration macht den Indikator empfindlicher für kürzere Wellenlängen; Abbildung 12.3 zeigt die Einstellung 20 Balken.
+- Ändert sich der Phasenwinkel des analytischen Signals um 18 Grad pro Bar, muss die dominante Zyklusperiode 20 Bars betragen, weil das 360 Grad über 20 Bars ergibt.
+- Die Phase-Accumulation-Methode verwendet immer Daten aus einem vollen Zyklus. Vorteil: Der Lag der Messung skaliert direkt mit der Zyklusperiode, kurze Perioden werden mit weniger Lag gemessen als lange.
+- Bei der Phase Accumulation ist die Mittelungsperiode mit der Zyklusperiode variabel; längere Mittelung senkt das Rauschen gegenüber dem Signal. Daraus folgert der Text, dass kürzere Zyklusperioden notwendigerweise ein höheres Signal-Rausch-Verhältnis am Ausgang haben.
+- Mit der Homodyne-Methode lässt sich die momentane Zyklusperiode im Prinzip aus nur zwei aufeinanderfolgenden Samples bestimmen.
+- Im Dual-Differentiator-Code wird die gemessene Periode auf 8 bis 48 Bars begrenzt.
 
 ## Voraussetzungen
 
@@ -77,6 +82,9 @@ aktualisiert: 2026-11-05
 ## Anwendung im Trading
 
 - Wird die Zykluslänge in Bars angegeben, gilt die Spektraldarstellung gleichermaßen für Intraday-, Tages- und Wochendaten.
+- Schöpft der adaptive RSI den Bereich 0 bis 1 nicht voll aus, kann sein Lookback auf weniger als die Hälfte des gemessenen dominanten Zyklus verkürzt werden.
+- Statt einen Indikator an die gemessene Zyklusperiode anzupassen, betrachten SwamiCharts ihn über einen Bereich von Lookback-Perioden und sehen die kurzfristige Bewegung im Kontext der längerfristigen Ergebnisse, gewissermaßen als Fuzzy Logic.
+- Bei der Homodyne-Methode wird die Periode als 6,28318 / |Im / Re| berechnet und auf 10 bis 48 Bars begrenzt.
 
 ## Regeln und Kriterien
 

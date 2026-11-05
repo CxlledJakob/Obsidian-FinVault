@@ -35,6 +35,9 @@ aktualisiert: 2026-11-05
 - Die praktische Berechnung einer DFT für Marktdaten missachtet die theoretischen Voraussetzungen.
 - Trotz aller Zugeständnisse an die reine Theorie ist die DFT-Spektralschätzung gut mit dem bevorzugten Autokorrelationsperiodogramm vergleichbar (Abbildung 9.2).
 - Die DFT-Berechnung sollte eine Kompensation für Spectral Dilation enthalten.
+- Nach der Fourier-Analyse lässt sich jede komplexe Wellenform aus Sinuskomponenten zusammensetzen; die Sinuswelle ist damit ein Primitiv, aus dem alle Muster gebildet werden können.
+- Im Interesse der Robustheit sollte im Handel ein Primitiv verwendet werden; schon ein einziges Primitiv in den Marktdaten zu messen ist schwierig, erst recht eine komplexe Menge, die anekdotische Muster erzeugt.
+- Ein Bandpassfilter mit ausreichend kleiner Bandbreite erzeugt eine Ausgabe, die sich als Sinuswelle mit langsam variierender Amplitude und Phase beschreiben lässt.
 
 ## Funktionsweise
 

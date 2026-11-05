@@ -197,6 +197,7 @@ aktualisiert: 2026-11-05
 
 - Der Zentrale Grenzwertsatz setzt eine endliche Standardabweichung der Elternpopulation voraus, neben einem endlichen Mittelwert und unabhängigen Ziehungen aus derselben Population.
 - Für die betreffende Grenzwertaussage hat die Population einen endlichen Mittelwert und eine endliche Standardabweichung.
+- Sind Indikatordaten nicht normalverteilt, beruht die Berechnung einer Standardabweichung auf einer falschen Prämisse.
 
 ## Anwendung im Trading
 
@@ -212,6 +213,9 @@ aktualisiert: 2026-11-05
 - Die Sharpe Ratio teilt die mittlere Überschussrendite durch die Standardabweichung der Überschussrenditen, passend annualisiert.
 - Beim Kalenderspread ist die Standardabweichung die gleitende Standardabweichung der Rollrendite über die Halbwertszeit von etwa 36 Tagen.
 - Der adaptive CCI auf Dollar General überschreitet plus oder minus eine Standardabweichung nur gelegentlich.
+- Ein Fisher-transformierter Indikator wird in Standardabweichungen geplottet: −1 entspricht minus einer Standardabweichung mit 32 Prozent Chance auf tiefere Preise, −2 nur 8 Prozent, −3 nur 2 Prozent.
+- Ein auf 0,999 begrenzter Fisher-Input entspricht einem Output in der Größenordnung von drei Standardabweichungen.
+- Beim fisherisierten adaptiven RSI werden die Niveaus plus und minus zwei Standardabweichungen im Display gezeigt; der Verstärkungsfaktor wurde so gewählt, dass der Indikator die Zwei-Sigma-Punkte selten überschreitet.
 
 ## Regeln und Kriterien
 

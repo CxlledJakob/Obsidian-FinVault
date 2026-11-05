@@ -1,6 +1,6 @@
 ---
 typ: wissen
-status: platzhalter
+status: entwurf
 hauptthema: "[[Trading/Notes/20 - Trading-Performance & Auswertung/20 - Trading-Performance & Auswertung|20 - Trading-Performance & Auswertung]]"
 weitere_hauptthemen: []
 unterthema: "Trade-Auswertung"
@@ -10,13 +10,11 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-26
+aktualisiert: 2026-11-05
 ---
 
 # Maximum Adverse Excursion
 
-> [!info] Platzhalter
-> Diese Notiz ist angelegt, aber noch nicht befüllt. Inhalte werden ausschließlich aus geprüften Quellen ergänzt (siehe `quellen`).
 
 ## Kurzdefinition
 
@@ -32,6 +30,7 @@ aktualisiert: 2026-10-26
 
 ## Anwendung im Trading
 
+- Ehlers entwickelt eine Strategie zunächst ohne Stop-Loss-Regel. Ist der Hauptteil zufriedenstellend, untersucht er die aufgetretenen Maximum Adverse Excursions und setzt dann eine Stop-Loss-Regel ein, die nur die maximalen Verluste begrenzt, ohne die Gewinntrades stark zu beeinträchtigen.
 
 ## Regeln und Kriterien
 

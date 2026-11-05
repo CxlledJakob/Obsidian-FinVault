@@ -60,6 +60,8 @@ aktualisiert: 2026-11-05
 - Der adaptive Stochastic nutzt die Variable Filt statt der Schlusskurse, damit nur die vom Roofing-Filter durchgelassenen Frequenzkomponenten eingehen.
 - Zuerst werden höchster und tiefster Filt-Wert über die aktuelle dominante Zyklusperiode bestimmt; Stoc = (Filt − LowestC) / (HighestC − LowestC) ist der ungefilterte Wert des adaptiven Stochastic.
 - Statt Zähler und Nenner getrennt zu mitteln, glättet Ehlers das Verhältnis Stoc mit dem SuperSmoother-Filter.
+- Der SwamiCharts Stochastic berechnet für jeden Lookback von 5 bis 48 auf der Ausgabe des Roofing-Filters das Verhältnis (Filt − LowestC) / (HighestC − LowestC), wobei HighestC und LowestC Maximum und Minimum des gefilterten Werts über den Lookback sind.
+- Der SwamiCharts Stochastic wird für jeden Lookback mit einem 10-Bar-SuperSmoother geglättet, auf 0 bis 1 begrenzt und als Heatmap in Ampelfarben dargestellt.
 
 ## Voraussetzungen
 
@@ -71,6 +73,8 @@ aktualisiert: 2026-11-05
 - Die Fallstudie nutzt den Operator für zwei Arten von Regeln: Extreme und Übergänge sowie Divergenzen.
 - Dieser Text verwendet den Ausdruck Kanalnormierung statt Lanes Ausdruck, weil er beschreibt, was der Operator tut. Die meisten Schriften der technischen Analyse verwenden weiter den Ausdruck Stochastics.
 - Die bärische Stochastic-Umkehr der höheren Zeitebene eröffnet das Setup. Ausgeführt wird erst, wenn die kleinere Zeitebene ebenfalls bärisch dreht und der Preis das verlangte Bar- oder Swing-Tief nimmt.
+- Für die inverse Fisher-Transformation des adaptiven Stochastic wird Value1 = 2 · (AdaptiveStochastic − 0,5) mit dem Faktor 3 verstärkt. Die Triggerlinie ist der um einen Bar verzögerte, auf 90 Prozent gedämpfte Wert.
+- Kreuzt die inverse Fisher-Linie des adaptiven Stochastic über die Triggerlinie, wird gekauft; kreuzt sie darunter, wird short gegangen oder die Long-Position geschlossen. Die Kreuzungen liefern klare Kauf- und Verkaufspunkte.
 
 ## Regeln und Kriterien
 
@@ -78,12 +82,15 @@ aktualisiert: 2026-11-05
 - Im Chartbeispiel liegen die Zonen bei 75 Prozent Overbought und 25 Prozent Oversold.
 - Höchster und tiefster Schluss über die dominante Zyklusperiode sind nur sicher gefunden, wenn die gesamte Periode durchsucht wird; der adaptive Stochastic verwendet daher die volle dominante Zyklusperiode als Beobachtungsbereich.
 - Der adaptive Stochastic hat Referenzlinien bei 30 und 70 Prozent; sie lassen sich leicht auf 20/80 Prozent oder andere passende Werte ändern.
+- Die konventionelle Stochastic-Regel wartet auf Bestätigung: long, wenn der Oszillator über 20 Prozent kreuzt, Umkehr in short, wenn er unter 80 Prozent kreuzt.
+- Die Antizipationsregel lautet: long, wenn der Oszillator unter 20 Prozent kreuzt, Umkehr in short, wenn er über 80 Prozent kreuzt.
 
 ## Risiken und Grenzen
 
 - Es gibt keinen magischen oder mystischen Stochastic für Momentum-Handel; ein angeblich geheimer narrensicherer Indikator ist wahrscheinlich schon einer aus dem Chartprogramm.
 - Ein Stochastic bleibt in einem Aufwärtstrend auch bei relativ kurzer Rückschau nahe seiner Obergrenze, weil größere und längere zyklische Komponenten in den Daten vorhanden sind (Spectral Dilation).
 - Im Aufwärtstrend liegt der aktuelle Kurs tendenziell im oberen Bereich der Spanne aus Höchst- und Tiefstwert der Rückschau.
+- Da der Stochastic die relative Position in einem Kanal misst, liegt er in Trends nahe der oberen oder unteren Grenze, hat kurzfristig keinen Nullmittelwert und eignet sich daher nicht für die Fisher-Transformation.
 
 ## Beispiele
 
@@ -99,10 +106,13 @@ aktualisiert: 2026-11-05
 - Am letzten Wochenbar hatte der wöchentliche Stochastic eine bärische Umkehr gemacht und damit das Swing-Entry-Short-Setup auf den Tagesdaten eröffnet, in der Woche zum 19. Oktober.
 - Erst am 31. Oktober machte IBM eine bärische Stochastic-Umkehr auf Tagesbasis. Der Kurs hatte das 50-Prozent-Retracement am 100-Prozent-Zeitretracement berührt, sieben Handelstage abwärts und sieben aufwärts.
 - Auf Dollar General (DG) über etwa ein Jahr zeigt der adaptive Stochastic die relativen trendbereinigten Preise über die Länge der dominanten Zyklusperiode genau an und hat viele Eigenschaften mit dem adaptiven RSI gemeinsam (Abbildung 11.2).
+- Bei einem Monatszyklus wird die Stochastic-Länge auf 10 gesetzt, weil er etwa 10 Tage auf und 10 Tage ab hat. Auf 10 Jahren S&P-Futures ergibt die konventionelle Regel mit dem Zwei-Pol-Stochastic sehr schlechte Ergebnisse, weil Einstiege etwa 8 Bars zu spät bei einer 10-Bar-Bewegung kommen; die Antizipationsregel ist allgemein profitabel.
 
 ## Unterschiedliche Quellenpositionen
 
 - Im direkten Vergleich der adaptiven Indikatoren hat der Bandpassfilter mehr hochfrequente Komponenten, während RSI, Stochastic und CCI im groben Sinn ziemlich dasselbe anzeigen (Abbildung 11.5).
+- Ein konventioneller RSI und ein konventioneller Stochastic scheinen auf demselben Chart verschiedene Informationen zu geben; laut Ehlers liegt das teils an fehlender Kompensation der spektralen Dilatation, im Kontext zeigen beide fast dasselbe.
+- Gegenüber dem SwamiCharts RSI zeigt der SwamiCharts Stochastic kurzfristige Abschwünge lebhafter und bei längeren Lookbacks viel weniger Gelb; er legt sich bei den Marktsignalen also weniger unentschieden fest.
 
 ## Eigene Erkenntnisse
 

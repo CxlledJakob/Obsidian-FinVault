@@ -32,6 +32,8 @@ aktualisiert: 2026-11-05
 
 ## Anwendung im Trading
 
+- Wer per Zufallszahl und Trefferquote über Gewinn oder Verlust jedes Trades entscheidet, die Auszahlung zuweist und die Trades summiert, erhält realistische Erwartungen an das Equity-Wachstum des Systems.
+- In der Tabellenkalkulation werden Spalte C (kumulierter Gewinn) und Spalte E (kumulierter Durchschnittsgewinn) als Linien geplottet; jedes Drücken von F9 erzeugt eine neue zufällige Equity-Kurve über 500 Trades.
 
 ## Regeln und Kriterien
 
@@ -39,6 +41,7 @@ aktualisiert: 2026-11-05
 ## Risiken und Grenzen
 
 - Die gezeigte Kurve enthält keine Transaktionskosten, benutzt den In-Sample-Lookback aus der Halbwertszeit und begrenzt den Portfoliomarktwert nicht.
+- Eine Strategie an ihrer historischen Equity-Kurve zu beurteilen, kann zu unberechtigter Begeisterung oder, seltener, zum Verwerfen einer guten Strategie führen, weil die Equity-Kurven bei gegebenem Profit Factor und gegebener Trefferquote stark streuen.
 
 ## Beispiele
 
@@ -58,6 +61,7 @@ aktualisiert: 2026-11-05
 - Die US-CAGR seit 1988 beträgt 13,7 Prozent für Value und 14,0 Prozent für hohes Prognosewachstum, bei einer Standardabweichung von 17,7 Prozent gegen 25,1 Prozent.
 - Abbildung 26.10 zeigt die globalen Portfolios, niedriges KGV neben hohem prognostiziertem Gewinnwachstum, mit 15,4 Prozent CAGR gegen 10,2 Prozent CAGR.
 - Abbildung 26.1 zeigt die Rohrenditen der globalen Value-Strategie.
+- Die konventionelle Stochastic-Regel auf S&P-Futures vom 17.09.2003 bis 25.04.2013 ergibt eine nicht profitable Equity-Kurve (Abbildung 17.1), die Antizipationsregel eine allgemein profitable (Abbildung 17.2).
 
 ## Unterschiedliche Quellenpositionen
 

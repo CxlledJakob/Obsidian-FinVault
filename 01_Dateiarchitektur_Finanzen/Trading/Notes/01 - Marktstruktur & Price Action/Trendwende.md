@@ -193,6 +193,10 @@ aktualisiert: 2026-11-05
 - Nach Ehlers zeigt ein Decycler-Oszillator die Übergänge zwischen Aufwärts- und Abwärtstrends an seinen Nulldurchgängen.
 - Alternativ lassen sich die Steigungswechsel des Decycler-Oszillators leichter erkennen als die Steigungswechsel des ursprünglichen Decyclers.
 - Die optimalen Cutoff-Perioden für den Decycler-Oszillator lassen sich nach Ehlers leicht durch Experimentieren finden; im Beispiel liegt die Cutoff-Periode bei 30 Bars und die längere Cutoff-Periode des Oszillators bei 60 Bars.
+- Der Convolution-Indikator findet Preisumkehrpunkte über die höchste Korrelation der Daten beim Falten in der Zeitdimension um die Lookback-Periode.
+- Die großen Preisumkehrungen erscheinen im Convolution-Indikator als Fahnen, die zeitlich zurück auf den Zeitpunkt der Umkehr zeigen.
+- Hochs und Tiefs lassen sich farblich unterscheiden, indem die Farbwerte über die Preissteigung vergeben werden.
+- Beim Hilbert-Transformer-Indikator ist der prognostizierte Wendepunkt nach oben das Kreuzen der imaginären über die reelle Komponente, nach unten das Kreuzen darunter.
 
 ## Regeln und Kriterien
 
@@ -253,6 +257,7 @@ aktualisiert: 2026-11-05
 - Nicht jede Umkehr trifft alle vier Faktoren Zeit, Preis, Muster und Momentum, aber viele tun es.
 - Die Strategie kennzeichnet enge und maximale Zeitziele, an denen eine Umkehr wahrscheinlich, aber nicht sicher ist. Nicht jedes Hoch und Tief entsteht am projizierten Ziel.
 - Ein neues Hoch jenseits des 100-Prozent-Zeitretracements macht die bis hier gelernte Strategie für dieses Hoch wenig brauchbar, wie im IBM, dessen endgültiges Korrekturhoch am 26. Dezember abseits der Faktoren lag.
+- Ein vorhergesagter Wendepunkt kann statt eines Swing-Wendepunkts der Beginn eines neuen Trends sein. Man kann den Trade in prognostizierter Richtung eingehen und schnell aussteigen, wenn der Even Better Sinewave Indicator nicht bestätigt.
 
 ## Beispiele
 

@@ -79,6 +79,9 @@ aktualisiert: 2026-11-05
 - Scaling-in skaliert auch schrittweise aus: der Gewinn muss nicht bis zur vollen Rückkehr zum Mittel warten.
 - Schon kleine Rückläufe lassen sich realisieren, sodass die Strategie auch profitabel bleiben kann, wenn die Reihe nicht wirklich stationär ist und nie zum Mittel zurückkehrt.
 - In der Modellrechnung von Schoenberg und Corwin werden alle Kontrakte erst bei F geschlossen, also ohne average-out, selbst wenn mit average-in eingestiegen wurde.
+- Für den preisbasierten Ausstieg aus einem Verlusttrade wird ein Kanal aus einem SuperSmoother auf Hochs und Tiefs gebildet, auf Wunsch erweitert um einen Bruchteil der durchschnittlichen Barspanne. Fällt der Preis in einer Long-Position unter den unteren Kanal, wird mit Verlust ausgestiegen, eventuell mit Umkehr in eine Short-Position.
+- Der preisbasierte Ausstieg stützt sich darauf, dass der Swing-Trade eine Rückkehr zum Mittel erwartet und die Preise in einem Kanal schwanken; bleibt die Umkehr aus, kommt es wahrscheinlich zum Kanalausbruch.
+- Der Ausstieg nach dem Prinzip Gewinne laufen lassen hält in einer profitablen Long-Position länger, weil die geglätteten Preise bei steigenden Kursen immer über den verzögerten geglätteten Preisen liegen; beim Drehen gibt man etwas aufgelaufenen Gewinn ab, das ist der Preis für die Vermeidung des Whipsaw-Ausstiegs.
 
 ## Voraussetzungen
 
@@ -122,6 +125,9 @@ aktualisiert: 2026-11-05
 - Die Long-Short-Position wird aufgelöst, wenn der Spread die gegenüberliegende Grenze Mittel plus Zielabweichung erreicht; der Logreturn des Portfolios ist dann das Doppelte der Zielabweichung, der Nettogewinn dieses Doppelte minus η, und er ist positiv, wenn das Doppelte der Zielabweichung die Kosten übersteigt.
 - Der Auflösungszeitpunkt tritt ein, weil der Spread mean-reverting ist.
 - Ist die Zielabweichung größer als η, kann schon bei Rückkehr des Spreads auf den Mittelwert μw aufgelöst werden; der Nettogewinn ist dann die Zielabweichung minus η.
+- Swing-Trades brauchen ein Sicherheitsventil für den Ausstieg, weil sie in Erwartung eines Wendepunkts eingegangen werden. Es kann auf der Haltedauer oder auf einem Preisausbruch beruhen.
+- Bei Futures mit Long und Short kann der Ausstieg aus einer Long-Position zum Einstieg in die nächste Short-Position werden. Bei Long-only kann das Short-Einstiegssignal als Ausstieg der Long-Position dienen.
+- Bei Aktien auf der Long-Seite gelingt der Ausstieg am besten, wenn ein SuperSmoother auf den Schlusskursen unter sich selbst, um einige Bars verzögert, kreuzt; das minimiert Whipsaws und unnötig frühe Ausstiege.
 
 ## Risiken und Grenzen
 
@@ -130,6 +136,8 @@ aktualisiert: 2026-11-05
 - Die übliche Kalibrierung von Ein- und Ausstiegsparametern über historische Simulationen führt zu Backtest-Overfitting.
 - Schoenberg und Corwin zeigen, dass auch der Ausstieg an zwei oder mehr Bollinger-Bändern im Backtest nie optimal ist.
 - Nicht jede stationäre Reihe trägt, wenn die Halbwertszeit beispielsweise zehn Jahre lang ist.
+- Ein Short-Einstiegssignal als Ausstieg bei Aktien ist nicht optimal, weil Aktienkurse sich nicht symmetrisch bewegen: Sie haben einen Aufwärtsdrall und steigen meist langsamer als sie fallen, sodass eine antizipierte Abwärtsbewegung oft zu einem frühen Ausstieg aus einem sonst sehr profitablen Trade führt.
+- Da Swing-Trades den Wendepunkt antizipieren, läuft der Preis zwangsläufig manchmal weiter und wird zu einer neuen Trendbewegung; dann steht man genau auf der falschen Seite.
 
 ## Beispiele
 

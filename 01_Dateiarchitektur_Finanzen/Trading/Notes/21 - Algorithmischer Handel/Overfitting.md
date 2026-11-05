@@ -135,6 +135,7 @@ aktualisiert: 2026-11-05
 - Nichtparametrische Methoden sind stark datenabhängig und können leicht zu Overfitting führen.
 - Geht die Bandbreite h des Nadaraya-Watson-Schätzers mit Epanechnikov-Kern gegen null, reproduziert der Glätter die beobachteten Punkte. Geht h gegen unendlich, entsteht die überglättete Kurve des Stichprobenmittels.
 - Ist h sehr klein, konzentrieren sich die Gewichte auf wenige Nachbarn jedes x_t. Ist h sehr groß, verteilen sie sich über eine weite Nachbarschaft. Die Wahl von h ist damit das zentrale Bandbreitenproblem der Kernregression.
+- Handelssysteme sollten einfach sein, um Curve Fitting an den Entwicklungsdatensatz zu vermeiden. Mit wenigen Parametern ist die Strategie weniger auf den Datensatz zugeschnitten und eher über mehrere Symbole und Zeitebenen robust.
 
 ## Funktionsweise
 
@@ -214,6 +215,8 @@ aktualisiert: 2026-11-05
 - Eine nichtlineare Extrapolation passt die historischen Preise besser, garantiert aber keine bessere Prognose künftiger Werte.
 - Wer ein Modell so lange nachjustiert, bis In-Sample und Out-of-Sample beide gut aussehen, hat die Out-of-Sample-Daten in Trainingsdaten verwandelt.
 - Die Auswahl eines ARMA(p, q) über AIC oder BIC für alle Ordnungen von 0 bis zu vorgegebenen Obergrenzen P und Q verlangt Maximum-Likelihood-Schätzungen vieler Modelle und kann in manchen Fällen auf Overfitting in der Schätzung stoßen.
+- Setups und Muster beruhen oft auf wenigen Beobachtungen und sind daher anekdotisch oder heuristisch; dass sie für statistische Signifikanz zu wenige Fälle haben, wird meist übersehen.
+- Optimierung auf modernen Plattformen ist alles andere als optimal und kann ein falsches Vertrauen in die Strategie erzeugen.
 
 ## Beispiele
 
@@ -225,6 +228,7 @@ aktualisiert: 2026-11-05
 - Eine Regel, deren Komplexitätswachstum vor diesem Testgipfel gestoppt wird, hat nicht alle gültigen Muster erfasst und heißt unterangepasst.
 - Die Vier-Parameter-Regel verdiente in den Trainingsdaten 50 Prozent, die Zwei-Parameter-Vorgängerregel 30 Prozent.
 - Ein neuronales Netz mit etwa 100 Knoten passt mindestens etwa 100 Parameter an die In-Sample-Daten an, kann eine Backtest-Sharpe-Ratio von 6 erzeugen und hat danach wenig oder keine Prognosekraft.
+- Wer ein System auf einem Jahr Tagesdaten als Polynom 250. Ordnung schreibt, kann es theoretisch exakt an die Daten anpassen; auf ein anderes Jahr angewendet hätte es sehr wahrscheinlich katastrophale Ergebnisse.
 
 ## Unterschiedliche Quellenpositionen
 

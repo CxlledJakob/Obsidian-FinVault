@@ -42,6 +42,8 @@ aktualisiert: 2026-11-05
 - Die zeitnäheren Signale der kürzeren Periode haben den Preis vieler falscher Momentumumkehren, die der fortgesetzte Trend innerhalb kurzer Zeit wieder zurücknimmt.
 - Eine zu kurze Lookback-Periode erzeugt zu viele Momentum-Whipsaws.
 - Die primäre Einstellung jedes Indikators ist die Lookback-Periode, also die Zahl der Bars, die in die Momentumberechnung eingehen.
+- Die Optimierung sollte eine Sensitivitätsanalyse enthalten: Jeder Parameter wird für sich variiert und die Performance über seinen gesamten Bereich betrachtet. Ohne sanften Gipfel, also ohne Wirksamkeit über einen Bereich von Einstellungen, ist die Strategie garantiert nicht robust.
+- In der Monte-Carlo-Tabelle lässt sich durch Ändern von Trefferquote und Profit Factor die Empfindlichkeit des Erfolgs gegenüber diesen Grundparametern beurteilen.
 
 ## Voraussetzungen
 

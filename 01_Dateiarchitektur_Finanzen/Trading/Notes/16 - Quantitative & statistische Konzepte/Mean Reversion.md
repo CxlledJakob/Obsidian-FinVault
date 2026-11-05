@@ -271,6 +271,8 @@ aktualisiert: 2026-11-05
 - Spot- und Rollrenditen von Futures werden stark betont; mehrere Futures-Strategien folgen aus einem einfachen mathematischen Modell der Futures-Preise, und Backwardation und Contango werden grafisch und mathematisch gezeigt.
 - Eine praktische Umsetzung einer linearen Handelsstrategie sind Bollinger-Bänder mit Scaling-in.
 - Den erwarteten Preis eines Instruments aus dem letzten Trade, Preis und Größe, nachzuführen, leistet der Kalman-Filter.
+- Ehlers hält es für den besten Weg, einen Oszillator zu handeln, den Wendepunkt zu antizipieren und sich auf die statistische Rückkehr zum Mittel als prädiktiv zu verlassen; sein Aufsatz dazu erhielt 2008 den Runner-Up des Charles H. Dow Award der Market Technicians Association.
+- Ein Swing-Trade erwartet eine Rückkehr zum Mittel, die Preise schwanken also in einem Kanal. Bleibt die erwartete Umkehr aus, kommt es wahrscheinlich zu einem Kanalausbruch, der als preisbasierter Ausstieg dienen kann.
 
 ## Regeln und Kriterien
 

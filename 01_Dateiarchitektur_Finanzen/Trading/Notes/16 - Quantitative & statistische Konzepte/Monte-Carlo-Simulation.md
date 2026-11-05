@@ -125,6 +125,8 @@ aktualisiert: 2026-11-05
 - Nach 50 Jahren zeigt der beste Manager ein Alpha von 5,2 Prozent und der schlechteste eines von 1 Prozent. In der Kapitelankündigung sind dieselben Enden auf 5 und 1 Prozent gerundet.
 - An den Jahresrenditen ist kaum zu erkennen, wer der gute und wer der schlechte Manager ist, obwohl jeder per Konstruktion dasselbe wahre Alpha von 3 Prozent hat.
 - Laut Ehlers ist die Monte-Carlo-Analyse der beste und verlässlichste Weg, die Performance einer Handelsstrategie zu beurteilen.
+- Die Monte-Carlo-Analyse ist nach Ehlers der beste und verlässlichste Weg, die Performance einer Handelsstrategie zu beurteilen, sofern man programmieren kann; die Rechnungen sind relativ einfach.
+- Zufall lässt sich nur in dem Sinn einführen, dass Gewinn oder Verlust je Trade über Trefferquote und Zufallszahl bestimmt und die Auszahlung zugewiesen wird; Gewinnen oder Verlieren an sich ist kein zufälliges Ereignis.
 
 ## Funktionsweise
 
@@ -203,6 +205,10 @@ aktualisiert: 2026-11-05
 - Im univariaten stochastischen Volatilitätsmodell wird vn+1 aus N(0, σ²v,j) gezogen und die logarithmierte Varianz als ln ht = α0,j + α1,j ln ht−1 + vt mit Var(vt) = σ²v,j fortgeschrieben.
 - Anschließend wird εn+1 aus N(0,1) gezogen, an+1 = √hn+1 εn+1 gesetzt und die Rendite aus rt = β0,j + β1,j x1t + … + βp,j xpt + at berechnet; beide Schritte werden für die Horizonte 2 bis ℓ wiederholt.
 - Die erklärenden Variablen xjt müssen im Prognosezeitraum vorliegen oder sich der Reihe nach prognostizieren lassen.
+- In der Tabellenkalkulation stehen in B1 die Trefferquote (Startwert 55) und in B2 der Profit Factor (Startwert 1,5); beide Werte gelten als repräsentativ für ein gutes System.
+- In A5 erzeugt =RAND() eine gleichverteilte Zufallszahl zwischen 0 und 1. B5 enthält =IF(A4<$B$1/100,$B$2,−1): Liegt die Zufallszahl innerhalb der Gewinnwahrscheinlichkeit, erhält der Trade den Profit Factor als Auszahlung, sonst −1.
+- Spalte C kumuliert die Trade-Gewinne, Spalte D zählt die Trades, Spalte E enthält =D5*(($B$2+1)*$B$1/100 −1) als kumulierten Durchschnittsgewinn; die Zeilen werden bis Zeile 504 kopiert, was 500 Trades ergibt.
+- Mit F9 wird neu berechnet und eine neue zufällige Equity-Kurve erzeugt; durch Ändern von B1 und B2 lässt sich der Einfluss der Grundparameter auf den Erfolg beurteilen.
 
 ## Voraussetzungen
 

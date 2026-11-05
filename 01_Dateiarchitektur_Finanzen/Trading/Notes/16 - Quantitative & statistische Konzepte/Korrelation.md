@@ -213,6 +213,8 @@ aktualisiert: 2026-11-05
 - Am idealisierten Markttief fallen die Preise linear bis zum Tief und steigen danach linear; faltet man die Preise am Tief, sind die beiden Preissegmente perfekt korreliert.
 - Die perfekte Korrelation tritt nur am idealisierten Tief auf; deshalb ist vor der Korrelationsberechnung eine Vorfilterung nötig, damit mit echten Daten eine relativ hohe Korrelation erreicht wird.
 - Wird mitten in einem laufenden Trend gefaltet, sind die beiden Preissegmente danach nicht korreliert; wird genau am Hoch gefaltet, sind sie exakt korreliert. Liegt das Hoch nicht am Faltpunkt, sinkt die Korrelation.
+- Orthogonalität bedeutet allgemein, dass das Produkt der beiden Vektoren unkorreliert ist; so ist die Summe von sin(x) mal cos(x) über einen vollen Zyklus null.
+- Der Convolution-Indikator findet Preisumkehrpunkte, indem er die höchste Korrelation der Daten beim Falten in der Zeitdimension um die Lookback-Periode bestimmt.
 
 ## Funktionsweise
 

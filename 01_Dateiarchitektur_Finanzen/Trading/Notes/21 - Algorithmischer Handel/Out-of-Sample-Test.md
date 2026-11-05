@@ -22,6 +22,7 @@ aktualisiert: 2026-11-05
 - In-sample sind die Gelegenheiten von 1 bis I, und out of sample sind die späteren Gelegenheiten von I plus 1 bis J.
 - Der Out-of-Sample-Test prüft, ob das Portfolio mit minimaler Varianz in der Stichprobe auch außer Stichprobe die geringste Varianz hat.
 - Out-of-Sample-Daten sind Daten, die nicht für das Backtesten der Regel verwendet wurden.
+- Out-of-Sample-Testen heißt, die Strategie auf dasselbe Symbol über einen anderen Zeitraum oder auf mehrere andere Symbole anzuwenden, ohne die Parameter zu ändern.
 
 ## Kernaussagen
 
@@ -198,6 +199,9 @@ aktualisiert: 2026-11-05
 - Schwache Leistung auf einem festen Out-of-Sample-Satz kann Pech sein; dann kommt Cross-Validation mit mehreren Trainings- und Prüfmengen infrage.
 - Der abschließende echte Out-of-Sample-Test ist ein Walk-Forward, als Paper-Trading oder besser mit echtem Geld bei minimalem Hebel.
 - Die meisten Trader sind zufrieden, wenn der Live-Handel eine Sharpe Ratio besser als die Hälfte des Backtest-Werts erzeugt.
+- Out-of-Sample-Tests sind der letzte allgemeine Aspekt der Strategieentwicklung, der nicht übersehen werden darf.
+- Wer für den Out-of-Sample-Test neu optimiert, betrügt nur sich selbst und wird im realen Handel enttäuscht.
+- Sind die Out-of-Sample-Ergebnisse zufriedenstellend, ist die Strategie robust und kann mit größerem Vertrauen gehandelt werden.
 
 ## Risiken und Grenzen
 

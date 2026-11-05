@@ -52,6 +52,9 @@ aktualisiert: 2026-11-05
 - In einer idealen Welt mit Preisen als Sinuswelle der dominanten Zyklusperiode berührt der RSI gerade 1, wenn die Aufwärtshälfte des Zyklus summiert wird, und gerade 0 bei der Abwärtshälfte; die beste adaptive Summationslänge ist daher die Hälfte des gemessenen dominanten Zyklus.
 - Der adaptive RSI nutzt als Eingabe die Variable Filt statt der Schlusskurse, damit nur die vom Roofing-Filter durchgelassenen Frequenzkomponenten eingehen.
 - Statt Zähler und Nenner getrennt zu mitteln, glättet Ehlers das Verhältnis mit dem SuperSmoother-Filter; dessen Koeffizienten stammen aus der Messung des dominanten Zyklus im selben Code.
+- Der SwamiCharts RSI berechnet mehrere RSIs über Lookbacks von 5 bis 48 und stellt sie als Heatmap dar; der Bereich schließt laut Code die Hälfte der kürzesten interessierenden Periode ein.
+- Der SwamiCharts RSI wird auf der Ausgabe des Roofing-Filters statt auf den Schlusskursen berechnet, um spektrale Dilatation zu beseitigen, und anschließend mit einem 10-Bar-SuperSmoother geglättet und auf 0 bis 1 begrenzt.
+- ClosesUp summiert über den Lookback die positiven, ClosesDn die negativen Änderungen des gefilterten Werts; das Verhältnis ist ClosesUp / (ClosesUp + ClosesDn).
 
 ## Voraussetzungen
 
@@ -65,6 +68,10 @@ aktualisiert: 2026-11-05
 - Im unterstellten Zahlenbeispiel verdient die Vier-Parameter-Regel 50 Prozent im Training gegenüber 30 Prozent der Zwei-Parameter-Regel und 20 Prozent im Test gegenüber 15 Prozent.
 - Schneidet eine komplexere Regel im Testsatz besser ab, ist die vernünftige Annahme, die zusätzliche Komplexität habe weitere systematische Aspekte des Marktverhaltens ausgenutzt.
 - Der aus einer Spektralschätzung gewonnene dominante Zyklus ändert sich mit der Zeit und kann genutzt werden, um Indikatoren wie den RSI automatisch abzustimmen.
+- Für die Fisher-Transformation des adaptiven RSI wird MyRSI mit 2 · (MyRSI − 0,5) auf −1 bis +1 gebracht und mit 1,5 verstärkt. Ein Fall unter −2 kündigte im Beispiel den Aufwärtstrend an, ein Anstieg über +2 den Abwärtstrend.
+- Im SwamiCharts RSI erscheinen kurzfristige Abschwünge im Kontext von Vorsicht gegenüber Aufwärtstrends; dreht der Markt nach unten, dehnen sich die kurzfristigen roten Bereiche in den längerfristigen Abwärtsmarkt aus.
+- Die Antizipationsregel, long unter der unteren und short über der oberen Schwelle, gilt auch für den Zwei-Pol-RSI.
+- Im Vergleich in Abbildung 16.4 sagen SwamiCharts RSI und SwamiCharts Stochastic im Wesentlichen dasselbe über den Markt; beim Vergleich der Standardversionen ist diese Übereinstimmung kaum zu erkennen.
 
 ## Regeln und Kriterien
 
@@ -81,6 +88,10 @@ aktualisiert: 2026-11-05
 - Bei sehr langer Summationslänge sind die Closes Up etwa die Hälfte der absoluten Kursdifferenzen; der RSI pendelt dann um 0,5 und ist praktisch wertlos.
 - Bei sehr kurzer Summationslänge bleibt der RSI in Aufwärtstrends lange bei 1 und in Abwärtstrends lange bei 0 stecken.
 - Die übliche Länge von 14 Tagen wurde laut Ehlers' Broker verwendet, weil Wilder es so sagte; diese unbefriedigende Antwort war für Ehlers der Anlass, jahrzehntelang nach optimalen Indikatoreinstellungen zu suchen.
+- Technische Indikatoren sind präzise, aber wenig treffsicher: Man weiß genau, wann ein RSI die Schwelle von 80 Prozent kreuzt. Diese Präzision gibt Tradern nach Ehlers ein falsches Sicherheitsgefühl und verdeckt, dass Indikatoren im Grunde Darstellungen eines statistischen Prozesses sind.
+- Die meisten Trader kennen die richtige Lookback-Einstellung nicht, sodass der präzise Indikator je nach Parametern fast alles zeigen kann.
+- Ein konventioneller RSI und ein konventioneller Stochastic auf demselben Chart scheinen verschiedene Informationen zu liefern. Ein Teil des Grundes ist, dass keiner für spektrale Dilatation kompensiert ist; im Kontext betrachtet zeigen beide fast dasselbe.
+- Der RSI legt sich bei längeren Lookbacks naturgemäß nicht fest, weil sich die Summe der Aufwärtsschlüsse über den längeren Durchschnitt der Summe der Abwärtsschlüsse annähert.
 
 ## Beispiele
 

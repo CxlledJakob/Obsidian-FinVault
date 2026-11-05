@@ -47,6 +47,8 @@ aktualisiert: 2026-11-05
 
 - Die Annahme einer Gaußverteilung hinter der Skalierung auf ±100 ist nicht gut; das lässt sich heuristisch belegen, indem man die Wahrscheinlichkeitsverteilungen über viele Daten misst.
 - Die Kanallänge variiert in der Literatur stark und wird in allen Fällen eher willkürlich festgelegt, um den Indikator an ein vorgefasstes Ereignis anzupassen.
+- Stochastic und Commodity Channel Index messen die relative Position in einem Kanal und liegen deshalb in Trends eher nahe der oberen oder unteren Grenze. Kurzfristig haben sie keinen Nullmittelwert und sind daher keine guten Kandidaten für die Fisher-Transformation.
+- Ein Bandpassfilter wäre ein viel besserer Kandidat für die Fisher-Transformation, doch dessen große zyklische Wendepunkte sind ohnehin leicht zu erkennen und brauchen keinen komplexeren statistischen Ansatz.
 
 ## Beispiele
 
