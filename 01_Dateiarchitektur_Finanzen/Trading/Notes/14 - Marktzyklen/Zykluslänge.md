@@ -50,6 +50,8 @@ aktualisiert: 2026-11-05
 - Nach Ehlers ist ein 10-Bar-Zyklus etwa die kürzeste für das Trading nützliche Zyklusperiode, und Zyklusperioden länger als 48 Bars können oft als Trends betrachtet werden.
 - Der Zyklusgehalt von Kursdaten schwingt weitgehend wie eine Sinuswelle mit variabler Amplitude und variabler Periodizität.
 - Die dominante Zyklusperiode lässt sich schätzen, indem man die Zahl der Bars zwischen Nulldurchgängen des Bandpassausgangs zählt.
+- Marktzyklen sind evaneszent: Sie kommen und gehen und ändern ihre Periodizität über die Zeit.
+- Der Lag-Abstand zwischen aufeinanderfolgenden roten (oder grünen) Balken in der Autokorrelations-Heatmap mit drei Bars Mittelung ergibt die Periodizität der Welle, bei einer 20-Bar-Sinuswelle genau 20 Bars.
 
 ## Funktionsweise
 
@@ -67,6 +69,7 @@ aktualisiert: 2026-11-05
 
 ## Anwendung im Trading
 
+- Wird die Zykluslänge in Bars angegeben, gilt die Spektraldarstellung gleichermaßen für Intraday-, Tages- und Wochendaten.
 
 ## Regeln und Kriterien
 
@@ -81,6 +84,9 @@ aktualisiert: 2026-11-05
 - Ob der nächste Hoch- oder Tiefpunkt den Rhythmus fortsetzt, bleibt unsicher. Er kann früher oder später liegen. Trotzdem ist die Entstehung im Band hochwahrscheinlich, weil das Band auf dem jüngsten Rhythmus beruht.
 - Ausreißer-Spannen dürfen bei der Bestimmung der Zyklusspannen ausgelassen werden.
 - Beim Time Band im Aufwärtstrend dürfen Ausreißer beim Messen der L-L- oder L-H-Spannen ausgeschlossen werden.
+- Die kürzeste mögliche Periode (Nyquist-Frequenz) hat nur zwei Samples pro Periode; selbst bei vier Bars pro Periode bleibt zu wenig Zeit, das Signal zu erhalten und den Trade umzusetzen.
+- Erst bei acht Samples pro Zyklus kommt schnelles Trading in Betracht, weil nach dem Signal mehrere Bars Folgebewegung bleiben; idealerweise würde man höchstens alle vier Bars handeln, also eine halbe kürzeste nutzbare Zyklusperiode.
+- Ehlers begrenzt die für Trading nutzbaren Zykluslängen per Roofing Filter auf 10 bis 48 Bars, weil längere Wellen als 48 Bars vermutlich keinen Nutzen für zyklisches Trading haben.
 
 ## Risiken und Grenzen
 

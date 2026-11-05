@@ -18,6 +18,7 @@ aktualisiert: 2026-11-05
 
 ## Kurzdefinition
 
+- Der dominante Zyklus ist die mittlere Periode, um die sich die Spektralleistungen zentrieren.
 
 ## Kernaussagen
 
@@ -27,12 +28,17 @@ aktualisiert: 2026-11-05
 - Der Bandpassfilter kann als relativ einfache Messung des dominanten Zyklus genutzt werden.
 - Ein Zyklus ist vollständig, wenn die Wellenform seit dem letzten Nulldurchgang zweimal die Null kreuzt; jeder Nulldurchgang markiert also eine halbe Zyklusperiode, und die dominante Zyklusperiode ist das Doppelte des Abstands zwischen aufeinanderfolgenden Nulldurchgängen.
 - Im Code wird bei jedem Nulldurchgang DC = 2 * counter gesetzt; DC wird nach oben auf 1,25 * DC[1] und nach unten auf 0,8 * DC[1] begrenzt, und DC wird nicht kleiner als 6.
+- Ehlers ermittelt den dominanten Zyklus aus der Spektralschätzung des Autokorrelationsperiodogramms mit einem Schwerpunkt-Algorithmus (Center of Gravity, CG).
+- Der CG-Algorithmus summiert die Y-Werte und unabhängig davon die Produkte X·Y; der Quotient aus zweiter und erster Summe ist die mittlere Position auf der X-Achse. Beim dominanten Zyklus sind die Y-Werte die Leistungen und die X-Werte die Perioden.
+- Im Code gehen nur Perioden von 10 bis 48 Bars ein, deren normierte Leistung mindestens 0,5 beträgt; der dominante Zyklus wird nur berechnet, wenn die Leistungssumme ungleich null ist.
 
 ## Voraussetzungen
 
 
 ## Anwendung im Trading
 
+- Der dominante Zyklus ändert sich mit der Zeit und kann zum automatischen Abstimmen anderer Indikatoren wie Bandpassfilter, CCI, RSI oder Stochastic genutzt werden.
+- Im Periodogramm für Dollar General verläuft der berechnete dominante Zyklus als blaue Linie ungefähr durch die Mitte der stärksten Spektralkomponenten.
 
 ## Regeln und Kriterien
 

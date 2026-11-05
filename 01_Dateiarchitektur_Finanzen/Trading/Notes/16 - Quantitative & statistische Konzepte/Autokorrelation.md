@@ -23,6 +23,7 @@ aktualisiert: 2026-11-05
 - Eine schwach stationäre Reihe ist genau dann nicht seriell korreliert, wenn ρℓ = 0 für alle ℓ > 0.
 - Die Lag-l-Autokorrelation ρl einer schwach stationären Renditereihe rt ist die Korrelation zwischen rt und rt minus l und hängt nur von l ab: ρl gleich Cov(rt, rt−l) geteilt durch Var(rt), also γl durch γ0.
 - Aus der Definition folgen ρ0 gleich 1, ρl gleich ρ minus l und minus 1 kleiner oder gleich ρl kleiner oder gleich 1.
+- Bei der Autokorrelation wird der jüngste Datenstrom eines Tickers mit demselben Datenstrom korreliert, der um einen Parameter namens Lag verzögert ist.
 
 ## Kernaussagen
 
@@ -187,6 +188,13 @@ aktualisiert: 2026-11-05
 - Weißes Rauschen hat keine Korrelation in der Zeit, und Random-Walk-Rauschen (Brownsche Bewegung) hat keine Korrelation zwischen den Inkrementen.
 - Rauschen in ökonomischen Daten wird meist als langfristige Abhängigkeit oder Long Memory untersucht; 1/F-Rauschen ist gleichbedeutend mit langfristiger Abhängigkeit.
 - Nach Ehlers lassen sich Märkte als Rauschen mit unterschiedlich starkem Langzeitgedächtnis beschreiben.
+- Mit unkonventioneller Verarbeitung lässt sich über die Autokorrelation die Periodizität der Preisdaten ohne Verzerrung durch Spectral Dilation bestimmen; zudem liefert sie aufschlussreiche Wendepunktsignale.
+- In einem Prozess mit langem Gedächtnis und normalverteilten Zufallszahlen folgt die Autokorrelation dem Potenzgesetz Autocorrelation(Lag) = C · Lag^−α, mit einer Konstanten C und α nominell gleich 1.
+- Ein Grundprinzip der technischen Analyse ist, dass Marktdaten diesem Potenzgesetz eines effizienten Marktes nicht folgen und sich daher Information aus der partiellen Korrelation der Autokorrelationsfunktion gewinnen lässt.
+- Eine Folge perfekt zufälliger Zahlen korreliert mit sich selbst perfekt, bei einem Lag von nur einem Bar sinkt die Korrelation jedoch dramatisch.
+- Bei einer Sinuswelle mit 20 Bars Periode ist die über eine Periode gemittelte Autokorrelation bei Lag 0 gleich 1, sinkt mit zunehmendem Lag bis zur perfekten Antikorrelation bei Lag 10 und ist bei Lag 20 wieder perfekt; die Korrelationswerte verlaufen als Funktion des Lags exakt sinusförmig.
+- Marktdaten sind deutlich unordentlicher als reine Zufallszahlen oder perfekte Sinuswellen, enthalten aber Merkmale von beiden.
+- Bei zyklischen Preisumkehren wechselt die Autokorrelation bei allen Lag-Werten von Grün zu Rot oder von Rot zu Grün; dieser dramatische Wechsel kann als zuverlässiger Umkehrindikator genutzt werden.
 
 ## Funktionsweise
 
@@ -208,6 +216,15 @@ aktualisiert: 2026-11-05
 - Die Unabhängigkeit nach Bereinigung um erklärende Variablen wird über die Stichproben-Autokorrelationsfunktionen von zti und wti geprüft; unter Unabhängigkeit sollen beide keine seriellen Korrelationen haben.
 - In der vereinfachten Notation von Tiao und Box (1981) steht ein Plus, wenn der Koeffizient mindestens 2 geteilt durch die Wurzel aus T ist, ein Minus, wenn er höchstens minus 2 geteilt durch die Wurzel aus T ist, und ein Punkt dazwischen. 1 geteilt durch die Wurzel aus T ist der asymptotische 5-Prozent-kritische Wert unter weißem Rauschen.
 - Für die 996 Monate von IBM und S&P 500 beträgt der genäherte Standardfehler der geschätzten Korrelationen 1 geteilt durch die Wurzel aus 996, also 0,03169. Die gestrichelten Linien der Autokorrelations- und Kreuzkorrelationsplots sind die asymptotischen Grenzen von zwei Standardfehlern.
+- Peter Swerling modellierte verrauschte Radarechos als Konstante plus Zufallszahl mit Gedächtnis, in Tradersprache als EMA von Zufallszahlen; das Swerling-Modell ist mit dem 1/F^α-Spektralmodell mit Zufallseingaben und langem Gedächtnis vereinbar.
+- Synthetische Preise aus einer EMA von Zufallszahlen sind eine brauchbare Annäherung an reale Marktpreise; Preise lassen sich daher als Zufallszahlen mit Gedächtnis auffassen, deren Gedächtnisanteil die Korrelation mit der jüngeren Historie nutzen soll.
+- Der einzige Input des Autokorrelationsindikators ist die Mittelungslänge; beim Standardwert 0 entspricht sie jeweils dem Lag, sodass die Mittelung die maximale Zahl an Datenpunkten ohne Überlappung von Original- und verzögertem Datenstrom enthält.
+- Vor der Korrelation entfernt ein zweipoliger Hochpass auf 48 Bars die langen Wellen; 48 Bars sind mehr als zwei Monate Tagesdaten bzw. vier Stunden 5-Minuten-Bars, längere Wellen haben vermutlich keinen Nutzen für zyklisches Trading. Danach folgt ein 10-Bar-SuperSmoother.
+- Für jeden Lag von 1 bis 48 wird eine Lehrbuch-Pearson-Korrelation berechnet; das Ergebnis zwischen −1 und +1 wird für die Darstellung auf 0 bis 1 skaliert.
+- Die Heatmap zeigt vertikal die Lags 3 bis 48; Grün steht für perfekte Korrelation, Rot für perfekte Antikorrelation und Gelb für Zwischenwerte (Stoplight-Darstellung).
+- Für die Autocorrelation Reversals werden die Bar-zu-Bar-Änderungen der Autokorrelationsfunktion über alle Lags summiert; ist die Summe groß, ist ein Wendepunkt identifiziert.
+- Im Code wird für jeden Lag von 3 bis 48 gezählt, ob die auf 0 bis 1 skalierte Korrelation zwischen vorigem und aktuellem Bar die Schwelle 0,5 kreuzt; ist diese Summe größer als 24, wird Reversal = 1 gesetzt.
+- Die Standardeingaben des Autocorrelation-Reversals-Indikators sind HPLength 48, LPLength 10 und AvgLength 3.
 
 ## Voraussetzungen
 
@@ -217,6 +234,8 @@ aktualisiert: 2026-11-05
 
 - Eine Fassung des Capital Asset Pricing Model besagt, dass die Rendite eines Assets nicht prognostizierbar ist und keine Autokorrelationen haben soll; der Test auf Autokorrelation null dient der Prüfung der Effizienzmarkthypothese.
 - Preisbildung und Indexberechnung können Autokorrelationen in die beobachtete Rendite bringen, besonders bei Hochfrequenzdaten, etwa durch Bid-Ask-Bounce und nichtsynchrone Umsätze.
+- Ehlers hält das Kapitel für Algo-Trader für wichtig, weil der Autokorrelationsprozess mehrere eigenständige und nützliche Indikatoren hervorbringt.
+- Mit LPLength 20 eignen sich die Umkehrsignale für Handelssysteme mit Haltedauern von 10 bis 20 Bars, mit LPLength 10 für aktivere Systeme mit Haltedauern von einigen Tagen bis zu einer Woche.
 
 ## Regeln und Kriterien
 
@@ -226,6 +245,9 @@ aktualisiert: 2026-11-05
 - Nach Anpassung an erklärende Variablen prüft man die Unabhängigkeit eines zweidimensionalen Poisson-Modells für Überschreitungen an den Stichproben-Autokorrelationsfunktionen der Dauergrößen zti und der Exzessgrößen wti; unter Unabhängigkeit sollen beide keine seriellen Korrelationen zeigen.
 - Für gaußsche Folgen mit Autokorrelation ρn ist die Bedingung D(un) erfüllt, wenn ρn mal ln(n) für n gegen unendlich gegen 0 geht (Berman 1964).
 - Die Stichproben-Kreuzkorrelationsmatrizen identifizieren die Ordnung eines VMA, weil ρℓ für ℓ größer als q verschwindet.
+- Die angezeigten Umkehren reagieren sehr empfindlich auf die Glättung der Preisdaten; über die Eingabe LPLength lässt sich die Zahl der angezeigten Umkehren verringern oder erhöhen, eine höhere LPLength verringert sie.
+- Auch AvgLength beeinflusst die Zahl der angezeigten Umkehren; bei einer Erhöhung ist Vorsicht geboten, weil der Lag des Indikators direkt proportional zu AvgLength steigt; bei AvgLength 3 beträgt die typische Verzögerung etwa drei Bars.
+- HPLength ist für volle Flexibilität als Eingabe verfügbar, eine Änderung wirkt sich aber nur relativ gering auf die angezeigten Umkehren aus.
 
 ## Risiken und Grenzen
 
@@ -260,6 +282,9 @@ aktualisiert: 2026-11-05
 - Für das Gauß-GARCH(1,1) der monatlichen S&P-500-Logrenditen, Januar 1962 bis Dezember 2009, sind die Ljung-Box-Statistiken der standardisierten Residuen und ihrer Quadrate Q(12) = 10,04 (p 0,61) und 6,14 (p 0,91) und zeigen keine Modellunzulänglichkeit.
 - Der Posteriormittelwert von α1 im stochastischen Volatilitätsmodell derselben Reihe ist 0,837 bei Standardfehler 0,025 und bestätigt starke serielle Abhängigkeit der Volatilität; der Wert liegt unter dem von Jacquier, Polson und Rossi (1994) für Tagesrenditen.
 - Weil {zt} seriell korreliert ist, ist gemeinsames Ziehen der Logvolatilität effizienter als einzelnes Ziehen.
+- Bei Dollar General (DG) über etwa ein Jahr wird der Autokorrelationsindikator am unteren Rand bei jeder Preisumkehr rot und zwischen den Umkehren grün; nach oben wird die Darstellung wegen der stärkeren Glättung bei längeren Lags wolkenartig und liefert gemischte Signale, etwa Antikorrelation um 20 Bars und gute Korrelation bei 30 bis 40 Bars im selben Zeitraum.
+- Mit der minimalen Mittelungslänge von drei Bars zeigt der Indikator bei Preisumkehren für alle Lags einen scharfen Wechsel von Rot zu Grün bzw. Grün zu Rot sowie eine zeitlich variierende Dicke und Anzahl der Balken über die Lags.
+- Bei einer theoretischen 20-Bar-Sinuswelle erfolgen die scharfen Farbwechsel genau drei Bars nach Gipfeln und Tälern, und der Lag-Abstand vom unteren Rand eines roten Balkens zum nächsten roten Balken darüber beträgt genau 20 Bars, also die Periodizität der Welle.
 
 ## Unterschiedliche Quellenpositionen
 

@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Relative Strength Index
@@ -18,6 +18,8 @@ aktualisiert: 2026-10-30
 
 ## Kurzdefinition
 
+- Welles Wilder definierte den RSI als RSI = 100 − 100 / (1 + RS) mit RS = CU / CD; CU ist die Summe der positiven Schlusskursdifferenzen über die Beobachtungsperiode, CD die Summe der negativen Schlusskursdifferenzen, ausgedrückt als positive Zahl.
+- Nach Einsetzen und Vereinfachen ist der RSI der prozentuale Anteil der Summe der Aufwärts-Schlusskursdifferenzen an der Summe aller Schlusskursdifferenzen der Beobachtungsperiode: RSI = 100 · CU / (CU + CD).
 
 ## Kernaussagen
 
@@ -27,6 +29,10 @@ aktualisiert: 2026-10-30
 - Im Indikatorfenster des DTosc stehen vier Zahlen: Die erste ist die rohe Lookback-Periode, die übrigen sind die Perioden, über die die Rohdaten geglättet werden.
 - Bei einem Zweilinien-Indikator wie dem DTosc müssen schnelle und langsame Linie beide in der Overbought- oder Oversold-Zone liegen, damit der Indikator als overbought oder oversold gilt.
 - Der MACD oder ein anderer vertrauter Indikator kann ebenso nützlich sein wie ein Indikator mit Overbought- und Oversold-Zonen.
+- Der modifizierte RSI mit vorgeschaltetem Roofing Filter ist deutlich reaktionsschneller und hat weniger Lag als der Standard-RSI, weil der Hochpassteil des Roofing Filters die niederfrequenten Komponenten entfernt.
+- Die übliche Interpretation von Indikatoren wie RSI oder Stochastic enthält die Frequenzverzerrungen der Spectral Dilation in ihrer Ausgabe.
+- Das Einfügen des Roofing Filters verändert Nutzung und Interpretation von Standardindikatoren dramatisch und macht sie im Grunde zu neuen Indikatoren.
+- In Abbildung 7.5 verwendet Ehlers für den Standard-RSI einen SuperSmoother als Glättung.
 
 ## Funktionsweise
 
@@ -35,6 +41,10 @@ aktualisiert: 2026-10-30
 - In Abbildung 2.1 werden Stochastic, RSI und der DT Oscillator verglichen, der eine Kombination aus RSI und Stoch ist; alle vier Studien einschließlich eines einfachen ROC haben eine Acht-Perioden-Rückschau.
 - Die Momentumtrends von Stochastic, RSI und DTosc sind ungefähr gleich, und die Umkehren der schnellen über die langsame Linie liegen innerhalb von ein oder zwei Balken voneinander, auch ohne Justierung der Einstellungen.
 - Fast jeder preisbasierte Momentum-Indikator, also auch der RSI, kann für die Multiple-Time-Frame-Momentum-Strategie genutzt werden, weil alle die Änderungsrate und dieselben Momentum-Zyklen darstellen.
+- Der RSI ist funktional dasselbe wie ein einpoliger Hochpassfilter, weil der CU-Term im Zähler nur eine Summe von Ein-Bar-Differenzen ist.
+- Der modifizierte RSI nach Ehlers beginnt mit einem Roofing Filter aus zweipoligem 48-Bar-Hochpass und 10-Bar-SuperSmoother, danach folgt die übliche RSI-Berechnung über eine Länge von standardmäßig 10 Bars.
+- Im Code des modifizierten RSI wird ClosesUp durch die Summe aus ClosesUp und ClosesDn geteilt, optional mit einem SuperSmoother zu MyRSI geglättet und mit Referenzlinien bei 0,7 und 0,3 dargestellt.
+- Ohne den optionalen Glättungsfilter lässt sich der Lag des modifizierten RSI etwas verringern, allerdings wird der Indikator dadurch unregelmäßiger.
 
 ## Voraussetzungen
 
@@ -52,6 +62,8 @@ aktualisiert: 2026-10-30
 
 - Die komplexere Regel hat vier optimierbare Parameter, darunter rsi_max und rsi_min, neben der Spanne des kurzen und der Spanne des langen gleitenden Durchschnitts.
 - Eine große Zahl von Kombinationen dieser Parameter wird gegen die Trainingsdaten laufen gelassen.
+- Die einzige Variable des RSI ist die Beobachtungsperiode; für maximale Wirksamkeit soll sie die Hälfte der gemessenen Zyklusperiode betragen.
+- Ist die Beobachtungsperiode der halbe dominante Zyklus, entspricht bei einer reinen Sinuswelle die Summe der Aufwärtsschlüsse vom Tal bis zum Gipfel genau der Gesamtsumme, sodass der RSI 100 beträgt; in der folgenden Halbperiode gibt es keine Aufwärtsschlüsse und der RSI ist null.
 
 ## Risiken und Grenzen
 

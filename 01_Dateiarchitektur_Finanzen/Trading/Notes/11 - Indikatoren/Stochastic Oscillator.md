@@ -10,7 +10,7 @@ voraussetzung: []
 verwandt: []
 quellen: []
 erstellt: 2026-10-26
-aktualisiert: 2026-10-30
+aktualisiert: 2026-11-05
 ---
 
 # Stochastic Oscillator
@@ -25,6 +25,7 @@ aktualisiert: 2026-10-30
 
 ## Kernaussagen
 
+- Ehlers behandelt Interpretation und Nutzung des Stochastic mit vorgeschaltetem Roofing Filter nicht und überlässt es dem Leser zu untersuchen, wie Standardindikatoren durch den vorgeschalteten Roofing Filter verbessert werden können.
 
 ## Funktionsweise
 
@@ -52,6 +53,10 @@ aktualisiert: 2026-10-30
 - Bei einem Zweilinien-Indikator wie dem Stochastic müssen schnelle und langsame Linie beide in der Zone liegen, damit er als overbought oder oversold gilt.
 - Ein Stochastic hängt in der Overbought-Zone, wenn der Trend bullisch ist, macht relativ flache Momentumkorrekturen und erreicht auf Preiskorrekturen oft nicht die Oversold-Zone.
 - Die Trendneigung größeren Grades beeinflusst, wie der Stochastic zykliert.
+- Im weiten Sinn wirkt der klassische Stochastic als einpoliger Filter, weil der Zähler seiner Berechnung nur einen einzigen Differenzterm enthält.
+- Ehlers berechnet den Stochastic über eine 20-Bar-Rückschau wie den Standard, verwendet zur Glättung jedoch einen SuperSmoother statt gleitender Durchschnitte.
+- Beim modifizierten Stochastic geht ein Roofing Filter voraus, der die zyklischen Komponenten auf Perioden von 10 bis 48 Bars begrenzt; dadurch wird der Indikator dramatisch verändert.
+- Im Code des modifizierten Stochastic werden Höchst- und Tiefstwert des gefilterten Signals über die Länge ermittelt, Stoc = (Filt − LowestC) / (HighestC − LowestC) berechnet und mit einem SuperSmoother zu MyStochastic geglättet.
 
 ## Voraussetzungen
 
@@ -72,6 +77,8 @@ aktualisiert: 2026-10-30
 ## Risiken und Grenzen
 
 - Es gibt keinen magischen oder mystischen Stochastic für Momentum-Handel; ein angeblich geheimer narrensicherer Indikator ist wahrscheinlich schon einer aus dem Chartprogramm.
+- Ein Stochastic bleibt in einem Aufwärtstrend auch bei relativ kurzer Rückschau nahe seiner Obergrenze, weil größere und längere zyklische Komponenten in den Daten vorhanden sind (Spectral Dilation).
+- Im Aufwärtstrend liegt der aktuelle Kurs tendenziell im oberen Bereich der Spanne aus Höchst- und Tiefstwert der Rückschau.
 
 ## Beispiele
 

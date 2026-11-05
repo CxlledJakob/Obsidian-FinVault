@@ -38,6 +38,10 @@ aktualisiert: 2026-11-05
 - Für Finanzzeitreihen in chronologischer Zeit verwenden die Autoren eine nicht-uniforme Fast-Fourier-Transformation.
 - Weil Marktaktivität in Schüben auftritt, kann eine Finanzzeitreihe nach einem Index der Handelsaktivität abgetastet werden.
 - Eine Fourier-Analyse in chronologischer Zeit kann dennoch aufschlussreich sein; dafür wird die nicht-uniforme FFT eingesetzt.
+- Beim Autokorrelationsperiodogramm wird die Zyklusinformation mit einer diskreten Fourier-Transformation (DFT) der Autokorrelationsergebnisse mit minimal drei Bars Mittelung gewonnen.
+- Die DFT erfolgt, indem die Autokorrelation jedes Lags mit Kosinus und Sinus jeder interessierenden Periode korreliert wird; die Summe der Quadrate beider Teile ergibt die relative Leistung je Periode nach A² = A²·sin²(x) + A²·cos²(x).
+- Im Code werden Kosinus- und Sinusteil für Perioden von 10 bis 48 über die Lags N von 3 bis 48 aufsummiert.
+- Weil die Leistungsmessung von Bar zu Bar stark schwanken kann, wird sie je Periode mit einer EMA geglättet; im Code mit dem Gewicht 0,2 für den neuen und 0,8 für den vorigen Wert.
 
 ## Voraussetzungen
 
@@ -52,6 +56,7 @@ aktualisiert: 2026-11-05
 
 ## Risiken und Grenzen
 
+- Viele Verfahren zur Spektralmessung von Marktdaten, darunter Wavelets, benötigen analytische Daten, die Tradern nicht leicht zugänglich sind, und keines davon kompensiert Spectral Dilation.
 
 ## Beispiele
 

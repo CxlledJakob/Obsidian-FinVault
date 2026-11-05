@@ -243,6 +243,8 @@ aktualisiert: 2026-11-05
 - Engle modelliert eine Hilfsmatrix Qt als Schrumpfung zur unbedingten Kovarianz der standardisierten Innovationen plus einem äußeren Produkt der vorherigen standardisierten Innovationen plus der vorherigen Qt, und normiert Qt zeilen- und spaltenweise zu einer Korrelationsmatrix.
 - Weil θ1 und θ2 bei Tse-Tsui und bei Engle Skalare sind, haben alle bedingten Korrelationen dieselbe Dynamik. Bei großer Dimension ist das schwer zu rechtfertigen.
 - Über die Cholesky-Zerlegung ist die bedingte Korrelation q21,t mal der Wurzel aus g11,t, geteilt durch die Wurzel aus g22,t plus q21,t zum Quadrat mal g11,t.
+- Im EasyLanguage-Code von Ehlers wird die Pearson-Korrelation aus den über die Mittelungslänge M aufsummierten Werten X, Y, X·X, X·Y und Y·Y berechnet: Corr = (M·Sxy − Sx·Sy) / Wurzel((M·Sxx − Sx·Sx) · (M·Syy − Sy·Sy)), nur wenn das Produkt unter der Wurzel größer als null ist.
+- Die Korrelation von −1 bis +1 wird mit 0,5 · (Corr + 1) auf den Bereich 0 bis 1 umskaliert, etwa für die Farbdarstellung in einer Heatmap.
 
 ## Voraussetzungen
 
