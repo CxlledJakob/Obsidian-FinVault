@@ -1,0 +1,251 @@
+{
+  "schema": "status-v1",
+  "ticker": "ONDS",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/ONDS/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - ONDS - Analysten-Update"
+  },
+  "next_id": 6,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (Bestätigung als Unterstützung gefordert)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 3.74,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.78 Fib (Untere Grenze Buy Zone)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "zone",
+      "wert": 3.74,
+      "wert_bis": 6.2,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone (0.618 Fib bis 0.78 Fib)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "kursziel",
+      "wert": 27.57,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave 3 Ziel (1.618 Fib) (Laut Analyst Wave-3-Ziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "kursziel",
+      "wert": 42.33,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave 5 Ziel (2.618 Fib) (Laut Analyst Wave-5-Ziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht ONDS nach einem 5-Wellen-Impuls bis nahe 14 USD in Welle C einer ABC-Korrektur. Der Kurs von etwa 5,50 USD testet die 200 WMA innerhalb der Buy Zone zwischen 3,74 USD und 6,2 USD. Nachkäufe sollen erst nach Bestätigung der Unterstützung erfolgen.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet, dass Welle C an der 200 WMA bzw. in der Buy Zone abschließt und sich anschließend eine Aufwärtsbewegung in Richtung der Wave-3- und Wave-5-Ziele entwickelt.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Ein Halten von 200 WMA und Buy Zone ist laut Analyst der risikoarme Pfad. Ein Bruch wird nicht ausdrücklich als Szenario genannt.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Halten der 200 WMA und der Buy Zone (3,74 USD bis 6,2 USD) als Bestätigung der Unterstützung\n- Quartalszahlen am 12 November",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Der Analyst sieht einen abgeschlossenen 5-Wellen-Impuls bis nahe 14 USD. Aktuell befindet sich der Kurs in Welle C einer ABC-Korrektur.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA (ca. 5,50 USD Kurs testet diesen Durchschnitt; Bestätigung als Unterstützung gefordert)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.618 Fib bei 6,20 USD (obere Grenze Buy Zone)\n- 0.78 Fib bei 3,74 USD (untere Grenze Buy Zone)\n- 1.618 Fib bei 27,57 USD (Wave-3-Ziel)\n- 2.618 Fib bei 42,33 USD (Wave-5-Ziel)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Bestätigung der 200 WMA als Unterstützung\n- Bestätigung der Buy Zone vor Nachkäufen\n- Quartalszahlen am 12 November",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Nächste Quartalszahlen am 12 November können den Kurs beeinflussen\n- Keine Invalidierungsmarke für das Zählmodell genannt\n- Kein Zeithorizont genannt\n- Keine konkrete Marke für die Haltebedingung unterhalb der 200 WMA genannt\n- Street-Konsens Strong Buy mit durchschnittlichem Kursziel von 19 USD (Spanne 13 bis 25 USD)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ONDS - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - ONDS - Analysten-Update",
+      "nachtrag": false,
+      "neu": 5,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T22:42:08.157Z",
+      "kosten_cent": 0.1123
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Fibonacci-Projektion",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "ABC-Korrektur",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/ABC-Korrektur"
+    },
+    {
+      "begriff": "Welle 3",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 3"
+    },
+    {
+      "begriff": "Welle 5",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 5"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - ONDS - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T22:42:08.158Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1123
+  }
+}

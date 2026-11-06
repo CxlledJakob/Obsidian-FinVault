@@ -8,7 +8,7 @@
     "datum": "2026-11-06",
     "update": "2026-11-06 - CIFR - Analysten-Update"
   },
-  "next_id": 6,
+  "next_id": 10,
   "marken": [
     {
       "id": "M1",
@@ -19,8 +19,8 @@
       "beschreibung": "0.887 Fib (letzte Verteidigungslinie) (Käufer traten dort ein)",
       "status": "aktiv",
       "erstmals": {
-        "datum": "2026-11-06",
-        "update": "2026-11-06 - CIFR - Analysten-Update"
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
       },
       "zuletzt": {
         "datum": "2026-11-06",
@@ -87,12 +87,80 @@
       "beschreibung": "0.618 Fib (Nächster Schritt nach Rückeroberung von 7,88 $)",
       "status": "aktiv",
       "erstmals": {
-        "datum": "2026-11-06",
-        "update": "2026-11-06 - CIFR - Analysten-Update"
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
       },
       "zuletzt": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M6",
+      "art": "widerstand",
+      "wert": 34.8,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1 Fib (Wave-3-Bereich)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M7",
+      "art": "invalidation",
+      "wert": 4.93,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Verlust von 4,93 $ (Extreme Schwäche, Test ATL möglich)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M8",
+      "art": "kursziel",
+      "wert": 25.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Bull Case (Nach Rückeroberung von 12,60 $)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M9",
+      "art": "kursziel",
+      "wert": 53.28,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1.618 Fib (Wave 3) (Wave-3-Ziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
       }
     }
   ],
@@ -180,6 +248,18 @@
   },
   "updates": [
     {
+      "datum": "2026-11-04",
+      "update": "2026-11-04 - CIFR - Analysten-Update",
+      "nachtrag": true,
+      "neu": 4,
+      "bestaetigt": 2,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 0,
+      "verarbeitet_am": "2026-11-06T22:43:49.896Z",
+      "kosten_cent": 0.1403
+    },
+    {
       "datum": "2026-11-06",
       "update": "2026-11-06 - CIFR - Analysten-Update",
       "nachtrag": false,
@@ -231,14 +311,26 @@
       "fibonacci",
       "ausstehende_bestaetigungen",
       "risiken"
+    ],
+    "nachtraege": [
+      {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update",
+        "neu": [
+          "M6",
+          "M7",
+          "M8",
+          "M9"
+        ]
+      }
     ]
   },
   "pruefhinweise": [],
-  "aktualisiert_am": "2026-11-06T22:32:18.376Z",
+  "aktualisiert_am": "2026-11-06T22:43:49.896Z",
   "verarbeitung": {
     "workflow": "FinVault Status fortschreiben v0.2",
     "prompt_version": "status-abgleich-v1",
     "modell": "claude-haiku-5-5",
-    "kosten_cent": 0.1229
+    "kosten_cent": 0.1403
   }
 }

@@ -1,0 +1,207 @@
+{
+  "schema": "status-v1",
+  "ticker": "NBIS",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/NBIS/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - NBIS - Analysten-Update"
+  },
+  "next_id": 4,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Getestet; Lage nicht als Zahl genannt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "widerstand",
+      "wert": 163,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Herausforderung von unten; Flip zur Unterstützung nötig)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "invalidation",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Vorherige Wellenzählung (Durch Welle C unter 0.618 Fib invalidiert)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht nach einer Abwärtsbewegung einen klaren ABC-Korrekturverlauf, bei dem Welle C unter das 0.618 Fib gefallen ist und die bisherige Wellenzählung invalidiert hat. Das 0.618 Fib wurde getestet. Als nächster Schritt wird ein Anstieg auf den 50 WMA bei 163 USD beobachtet, dessen Rückeroberung als Unterstützung das Ende der Korrektur signalisieren würde.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst geht davon aus, dass die Korrektur abgeschlossen ist, sobald der 50 WMA bei 163 USD als Unterstützung zurückerobert wird. Danach wird der Beginn der nächsten Impulswelle erwartet.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- 163 USD – 50 WMA: Rückeroberung als Unterstützung würde das Ende der Korrektur signalisieren\n- Welle C unter dem 0.618 Fib hat die bisherige Wellenzählung invalidiert",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "ABC-Korrektur; Welle C ist unter das 0.618 Fib gefallen, die vorherige Wellenzählung wurde dadurch invalidiert.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Analyst beschreibt nach der Abwärtsbewegung eine Korrekturphase. Das Chartbild wird als deutlich sauberer bewertet als zuvor.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 50 WMA bei 163 USD: Herausforderung von unten; Flip zur Unterstützung nötig",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.618 Fib: getestet; konkrete Kurslage nicht genannt",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Rückeroberung des 50 WMA bei 163 USD als Unterstützung\n- Beginn der nächsten Impulswelle nach Abschluss der Korrektur",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Konkreter Zahlenwert des 0.618 Fib nicht genannt\n- Kursziel für die nächste Impulswelle nicht genannt\n- Zeithorizont nicht genannt\n- Invalidierungslevel für die aktuelle Zählung nicht genannt",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - NBIS - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T22:42:03.388Z",
+      "kosten_cent": 0.0985
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "ABC-Korrektur",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/ABC-Korrektur"
+    },
+    {
+      "begriff": "Welle 3",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 3"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - NBIS - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T22:42:03.388Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.0985
+  }
+}

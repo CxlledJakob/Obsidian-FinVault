@@ -8,14 +8,14 @@ ticker: CIFR
 letztes_update: "[[2026-11-06 - CIFR - Analysten-Update]]"
 zeiteinheit: ""
 stand: 2026-11-06
-erstes_update: "[[2026-11-06 - CIFR - Analysten-Update]]"
-anzahl_updates: 1
+erstes_update: "[[2026-11-04 - CIFR - Analysten-Update]]"
+anzahl_updates: 2
 theorie:
   - "[[Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen|Elliott-Wellen]]"
   - "[[Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement|Fibonacci-Retracement]]"
   - "[[Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände|Unterstützungen & Widerstände]]"
 pruefhinweise: []
-aktualisiert_am: 2026-11-06T22:32:18.376Z
+aktualisiert_am: 2026-11-06T22:43:49.896Z
 verarbeitung:
   workflow: "FinVault Status fortschreiben v0.2"
   prompt_version: "status-abgleich-v1"
@@ -24,7 +24,7 @@ verarbeitung:
 
 # CIFR – Aktueller Analystenstand
 
-> **Datei-Stand:** [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · 1 Update(s) seit 06.11.2026 · Einschätzungen des Analysten, keine Anlageempfehlung.
+> **Datei-Stand:** [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · 2 Update(s) seit 04.11.2026 · Einschätzungen des Analysten, keine Anlageempfehlung.
 
 ## Kurzüberblick
 Der Analyst sieht CIFR unter der Konfluenz aus 0.78 Fib und 200 WMA bei 7,88 USD in einer Korrekturphase, die er als Wave 2 einordnet. Der Kurs testet die 0.887 Fib bei 4,93 USD, wo laut Analyst Käufer eingestiegen sind; aktuell notiert die Aktie bei 6,23 USD (+12 % am Tag). Der Fokus liegt auf der Rückeroberung von 7,88 USD.
@@ -50,18 +50,22 @@ Ein Bruch der 0.887 Fib bei 4,93 USD, die der Analyst als letzte Verteidigungsli
 *Stand: [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]*
 
 ## Unterstützungen
-- **4,93 USD** – 0.887 Fib (letzte Verteidigungslinie) (Käufer traten dort ein) · gültig · erstmals [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
+- **4,93 USD** – 0.887 Fib (letzte Verteidigungslinie) (Käufer traten dort ein) · gültig · erstmals [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
 
 ## Widerstände
+- **34,8 USD** – 1 Fib (Wave-3-Bereich) · gültig · erstmals [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] · zuletzt bestätigt [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]]
 - **17,46 USD** – 50 WMA (Ausbruch darüber angestrebt) · gültig · erstmals [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
 - **7,88 USD** – Konfluenz 0.78 Fib / 200 WMA (Rückeroberung im Fokus) · gültig · erstmals [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
 
 ## Kauf- oder Beobachtungszonen
 
 ## Kursziele
-- **12,6 USD** – 0.618 Fib (Nächster Schritt nach Rückeroberung von 7,88 $) · gültig · erstmals [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
+- **53,28 USD** – 1.618 Fib (Wave 3) (Wave-3-Ziel) · gültig · erstmals [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] · zuletzt bestätigt [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]]
+- **25,5 USD** – Bull Case (Nach Rückeroberung von 12,60 $) · gültig · erstmals [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] · zuletzt bestätigt [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]]
+- **12,6 USD** – 0.618 Fib (Nächster Schritt nach Rückeroberung von 7,88 $) · gültig · erstmals [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
 
 ## Invalidationsbedingungen
+- **4,93 USD** – Verlust von 4,93 $ (Extreme Schwäche, Test ATL möglich) · gültig · erstmals [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] · zuletzt bestätigt [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]]
 - Blaue Linie (Chart bleibt gültig, solange Kurs darüber hält) · gültig · erstmals [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · zuletzt bestätigt [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
 
 ## Elliott-Wellen-Stand
@@ -95,7 +99,7 @@ Der Kurs liegt unter der 200 WMA. Die aktuelle Phase wird als starke Korrektur n
 *Stand: [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]*
 
 ## Änderungen durch das letzte Update
-Bezug: [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
+Bezug: [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] · ergänzt durch Nachtrag [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]]
 
 ### Neu
 - **4,93 USD** – 0.887 Fib (letzte Verteidigungslinie) (Käufer traten dort ein) · Unterstützung
@@ -120,3 +124,4 @@ Bezug: [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]]
 
 ## Verwendete Analysten-Updates
 - [[2026-11-06 - CIFR - Analysten-Update|06.11.2026]] – neu 5, bestätigt 0, geändert 0, nicht mehr gültig 0, Abschnitte aktualisiert 10
+- [[2026-11-04 - CIFR - Analysten-Update|04.11.2026]] – neu 4, bestätigt 2, geändert 0, nicht mehr gültig 0, Abschnitte aktualisiert 0 (Nachtrag)

@@ -1,0 +1,261 @@
+{
+  "schema": "status-v1",
+  "ticker": "RDDT",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/RDDT/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - RDDT - Analysten-Update"
+  },
+  "next_id": 7,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 95.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.78 Fib (Unterstützung) (Bisher haltend laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 89,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Haltenslevel (Verlust bedeutet Abwärtsrisiko bis 65)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "zone",
+      "wert": 95.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "invalidation",
+      "wert": 89,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Verlust von 89 (Abwärtsrisiko bis 65 genannt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "kursziel",
+      "wert": 335,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1.0 Fib (langfristig) (Langfristiges Ziel laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      }
+    },
+    {
+      "id": "M6",
+      "art": "kursziel",
+      "wert": 487,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1.618 Fib (langfristig) (Langfristiges Ziel laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht RDDT in Welle C einer ABC-Korrektur nach einem 5-Wellen-Impuls zum Hoch bei 283 vor etwa 12 Monaten. Der Kurs um 95,50 USD liegt laut Analyst in der Buy Zone, das 0.78 Fib wird seit zwei Wochen getestet und hält. Bei Verlust von 89 USD sieht der Analyst Abwärtsrisiko bis 65 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet, dass Welle C der ABC-Korrektur nahe dem 0.78 Fib (95,5 USD) endet und anschließend ein Anstieg zu 335 USD und 487 USD folgt.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Ein Verlust von 89 USD führt laut Analyst zu Abwärtsrisiko bis 65 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Halten von 95,5 USD (0.78 Fib) als Unterstützung\n- Verlust von 89 USD (Invalidation mit Abwärtsrisiko bis 65 USD)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Der Analyst sieht eine ABC-Korrektur, deren Welle C laut Analyst fortgeschritten ist. Vorausgegangen ist ein 5-Wellen-Impuls zum Hoch bei 283 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Analyst beschreibt eine Abwärts- bzw. Korrekturphase nach dem Impuls; Welle C laut Analyst fortgeschritten.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.78 Fib bei 95,5 USD (Unterstützung, bisher haltend laut Analyst; seit zwei Wochen getestet)\n- 1.0 Fib bei 335 USD (langfristiges Kursziel)\n- 1.618 Fib bei 487 USD (langfristiges Kursziel)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Halten der Unterstützung bei 95,5 USD\n- Verlust von 89 USD beobachten\n- Nicht genannt: Zeithorizont für die langfristigen Ziele",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Schwieriges Marktumfeld für den Breitmarkt\n- Bärenargument zur KI-Exponierung (vom Analyst als wenig überzeugend gesehen)\n- Nicht genannt: Konkrete Positionsgröße und Stop-Loss für die Starter-Position\n- Nicht genannt: Begründung der fundamentalen Einschätzung\n- Street-Konsens mit durchschnittlichem Kursziel um 154 USD (Spanne 100 bis 272 USD) liegt unter den langfristigen Zielen des Analysten",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - RDDT - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - RDDT - Analysten-Update",
+      "nachtrag": false,
+      "neu": 6,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T22:42:12.590Z",
+      "kosten_cent": 0.1132
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Fibonacci-Projektion",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "Korrekturbewegung",
+      "ziel": "Trading/Notes/01 - Marktstruktur & Price Action/Korrekturbewegung"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - RDDT - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T22:42:12.590Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1132
+  }
+}

@@ -11,7 +11,7 @@ analyseart:
   - technisch
 zeithorizont: ""
 quell_url: "https://www.patreon.com/thelonginvestor/posts/cifr-174584024"
-vorgänger: ""
+vorgänger: "[[2026-11-04 - CIFR - Analysten-Update]]"
 nachfolger: ""
 hauptkategorie: Technisch
 kategorie: "1 Analyse"

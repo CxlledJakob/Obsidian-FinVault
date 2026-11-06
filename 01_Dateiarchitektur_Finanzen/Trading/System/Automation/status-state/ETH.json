@@ -1,0 +1,226 @@
+{
+  "schema": "status-v1",
+  "ticker": "ETH",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/ETH/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - ETH - Analysten-Update"
+  },
+  "next_id": 6,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 2158,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Konfluenz 200 Day MA / 0.5 Fib (Sprungbrett, Ausgangspunkt der Erholung)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 Day MA (Aktuell knapp darunter gehalten)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "unterstuetzung",
+      "wert": 2000,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Konfluenz 0.618 Fib, blaue Unterstützungslinie, Psychologische Unterstützung (Downside-Risiko laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "widerstand",
+      "wert": 2500,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 Day MA (Muss nach Rücklauf als Support zurückkehren)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "zone",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone (Langfristinvestment laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "ETH hat an der Konfluenz aus 200 Day MA und 0.5 Fib bei 2.158 USD eine Erholung gestartet und nach einem Rücksetzer knapp über der 200 Day MA gehalten. Der Analyst bewertet die aktuelle Seitwärtsbewegung positiv und erwartet einen Vorstoß zur 50 Day MA bei 2.500 USD, deren Rückeroberung als Support bestätigt werden soll. Für langfristige Investoren sieht der Analyst ETH in der Buy Zone.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet eine Seitwärtskonsolidierung über der 200 Day MA. Danach soll ETH zur 50 Day MA bei 2.500 USD vorstoßen, und erst wenn dieses Niveau als Support zurückkehrt, sieht der Analyst die Fortsetzung nach oben.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Der Analyst sieht ein Abwärtsrisiko bis zur Konfluenz bei 2.000 USD (0.618 Fib, blaue Unterstützungslinie, psychologische Unterstützung).",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Rückkehr zur 50 Day MA bei 2.500 USD und Bestätigung dieses Niveaus als Support (Fortsetzung des Primärszenarios)\n- Rücksetzer bis zur Konfluenz bei 2.000 USD (Abwärtsrisiko laut alternativem Szenario)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 Day MA: aktuelle Haltezone nach dem Rücksetzer, ETH wird knapp darüber gehalten (Unterstützung)\n- 50 Day MA bei 2.500 USD: Widerstand, muss nach Rücklauf als Support zurückkehren",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 2.158 USD: Konfluenz aus 200 Day MA und 0.5 Fib, Sprungbrett und Ausgangspunkt der Erholung\n- 2.000 USD: Konfluenz aus 0.618 Fib, blauer Unterstützungslinie und psychologischer Unterstützung, Downside-Risiko laut Analyst",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Rückeroberung der 50 Day MA bei 2.500 USD und Bestätigung als Support\n- Konsolidierung über der 200 Day MA als Basis für einen späteren Ausbruch",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Abwärtsrisiko bis 2.000 USD bei weiterem Rücksetzer, im Einklang mit dem Gesamtmarkt\n- Keine explizite Invalidierungsmarke genannt\n- Kein konkretes Kursziel genannt\n- Spanne der Buy Zone nicht definiert",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ETH - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - ETH - Analysten-Update",
+      "nachtrag": false,
+      "neu": 5,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 8,
+      "verarbeitet_am": "2026-11-06T22:41:58.690Z",
+      "kosten_cent": 0.1122
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Trendanalyse",
+      "ziel": "Trading/Notes/02 - Trendanalyse/02 - Trendanalyse"
+    },
+    {
+      "begriff": "Konsolidierung",
+      "ziel": "Trading/Notes/01 - Marktstruktur & Price Action/Konsolidierung"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - ETH - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T22:41:58.690Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1122
+  }
+}
