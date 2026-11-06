@@ -1,0 +1,376 @@
+{
+  "schema": "status-v1",
+  "ticker": "CIFR",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/CIFR/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - CIFR - Analysten-Update"
+  },
+  "next_id": 11,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 4.93,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.887 Fib (letzte Verteidigungslinie) (Käufer traten dort ein)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "widerstand",
+      "wert": 12.6,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Rückeroberung) (Rückeroberung bringt Bull Case in Sicht)",
+      "status": "ersetzt",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update",
+        "grund": "Konfluenz 0.78 Fib / 200 WMA (Rückeroberung im Fokus)"
+      },
+      "ersetzt_durch": "M7"
+    },
+    {
+      "id": "M3",
+      "art": "widerstand",
+      "wert": 34.8,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1 Fib (Wave-3-Bereich)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "invalidation",
+      "wert": 4.93,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Verlust von 4,93 $ (Extreme Schwäche, Test ATL möglich)",
+      "status": "ersetzt",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update",
+        "grund": "Blaue Linie (Chart bleibt gültig, solange Kurs darüber hält)"
+      },
+      "ersetzt_durch": "M8"
+    },
+    {
+      "id": "M5",
+      "art": "kursziel",
+      "wert": 25.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Bull Case (Nach Rückeroberung von 12,60 $)",
+      "status": "ersetzt",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update",
+        "grund": "0.618 Fib (Nächster Schritt nach Rückeroberung von 7,88 $)"
+      },
+      "ersetzt_durch": "M9"
+    },
+    {
+      "id": "M6",
+      "art": "kursziel",
+      "wert": 53.28,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1.618 Fib (Wave 3) (Wave-3-Ziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - CIFR - Analysten-Update"
+      }
+    },
+    {
+      "id": "M7",
+      "art": "widerstand",
+      "wert": 7.88,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Konfluenz 0.78 Fib / 200 WMA (Rückeroberung im Fokus)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "ersetzt": "M2"
+    },
+    {
+      "id": "M8",
+      "art": "invalidation",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Blaue Linie (Chart bleibt gültig, solange Kurs darüber hält)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "ersetzt": "M4"
+    },
+    {
+      "id": "M9",
+      "art": "kursziel",
+      "wert": 12.6,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Nächster Schritt nach Rückeroberung von 7,88 $)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "ersetzt": "M5"
+    },
+    {
+      "id": "M10",
+      "art": "widerstand",
+      "wert": 17.46,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Ausbruch darüber angestrebt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht CIFR nach dem Rückgang unter die Konfluenz aus 0.78 Fib und 200 WMA bei 7,88 USD nun am Test der 0.887 Fib bei 4,93 USD. Dort sind laut Analyst Käufer eingestiegen; der Kurs liegt aktuell bei 6,23 USD (+12 % am Tag). Der Fokus liegt auf der Rückeroberung von 7,88 USD, der Verlust von 4,93 USD bliebe die letzte Verteidigungslinie.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst geht davon aus, dass CIFR sich in der Korrektur nach Welle 2 befindet, die tiefer ausfiel als erwartet. Primärszenario ist die Rückeroberung von 7,88 USD (Konfluenz 0.78 Fib / 200 WMA); danach richtet sich der Fokus auf den 0.618 Fib bei 12,60 USD, den der Analyst erst nach einem Flip zur Unterstützung als Ziel sieht, bevor ein Ausbruch über den 50 WMA bei 17,46 USD angestrebt wird. Die Unterstützung bei 4,93 USD ist inzwischen durch Käufer bestätigt, aber laut Analyst weiterhin entscheidend.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Ein Bruch der 0.887 Fib bei 4,93 USD als letzte Verteidigungslinie würde laut Analyst extreme Schwäche signalisieren, mit einem möglichen Test des All-Time-Lows bei 1,85 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Rückeroberung von 7,88 USD (Konfluenz 0.78 Fib / 200 WMA) als Fokus für den nächsten Schritt\n- Flip von 12,60 USD (0.618 Fib) zur Unterstützung vor einem Ausbruch über 17,46 USD\n- Ausbruch über 17,46 USD (50 WMA) angestrebt\n- Bruch von 4,93 USD (0.887 Fib) bedeutet extreme Schwäche und möglichen Test des ATL bei 1,85 USD\n- Halten über der blauen Linie (Chart bleibt gültig, solange Kurs darüber hält)\n- Widerstand bei 34,80 USD (1 Fib, Wave-3-Bereich)\n- Wave-3-Ziel bei 53,28 USD (1.618 Fib)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Der Analyst sieht Welle 2 als Korrektur, die tiefer ausfiel als erwartet (Rückgang um etwa 70% vom Wave-1-Hoch nahe 30 USD). Die Unterstützung bei 4,93 USD wird laut Analyst nun verteidigt; danach wäre Welle 3 mit Zielbereich um 34,80 USD bzw. 53,28 USD vorgesehen.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Kurs liegt laut Analyst unter dem 200 WMA bei 8 USD bzw. unter der Konfluenz bei 7,88 USD (0.78 Fib / 200 WMA).",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA bei 8 USD (Konfluenz mit 0.78 Fib bei 7,88 USD): Kurs liegt darunter\n- 50 WMA bei 17,46 USD: Ausbruch darüber angestrebt",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.887 Fib bei 4,93 USD: letzte Verteidigungslinie; Käufer traten dort ein\n- 0.78 Fib bei 7,81 USD (Konfluenz mit 200 WMA bei 7,88 USD): Rückeroberung im Fokus\n- 0.618 Fib bei 12,60 USD: nächster Schritt nach Rückeroberung von 7,88 USD\n- 1 Fib bei 34,80 USD: Wave-3-Bereich\n- 1.618 Fib bei 53,28 USD: Wave-3-Ziel",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Rückeroberung von 7,88 USD (Konfluenz 0.78 Fib / 200 WMA)\n- Flip von 12,60 USD (0.618 Fib) zur Unterstützung\n- Halten der Unterstützung bei 4,93 USD\n- Ausbruch über 17,46 USD (50 WMA)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Bruch von 4,93 USD würde extreme Schwäche bedeuten, möglicher Test des ATL bei 1,85 USD\n- Blaue Linie als Gültigkeitsgrenze nicht bezifferbar; kein konkreter Invalidierungskurs genannt\n- Verwässerung durch neue Wandelanleihe und Umsatzverfehlung belasten die Aktie; Quartalszahlen vom 2. November wurden berichtet, der Verkaufsdruck im Sektor hält an\n- Konsens-Kursziel etwa 30 USD (Spanne 18 bis 59 USD), überwiegend Buy-Einschätzungen\n- Nicht genannt: Zeithorizont",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - CIFR - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-04",
+      "update": "2026-11-04 - CIFR - Analysten-Update",
+      "nachtrag": false,
+      "neu": 6,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 10,
+      "verarbeitet_am": "2026-11-06T23:49:32.536Z",
+      "kosten_cent": 0.1305
+    },
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - CIFR - Analysten-Update",
+      "nachtrag": false,
+      "neu": 1,
+      "bestaetigt": 1,
+      "geaendert": 3,
+      "aufgehoben": 0,
+      "abschnitte": 10,
+      "verarbeitet_am": "2026-11-06T23:50:00.922Z",
+      "kosten_cent": 0.1808
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - CIFR - Analysten-Update",
+    "neu": [
+      "M10"
+    ],
+    "bestaetigt": [
+      "M1"
+    ],
+    "nicht_erwaehnt": [
+      "M3",
+      "M6"
+    ],
+    "geaendert": [
+      {
+        "alt": "M2",
+        "neu": "M7"
+      },
+      {
+        "alt": "M4",
+        "neu": "M8"
+      },
+      {
+        "alt": "M5",
+        "neu": "M9"
+      }
+    ],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:50:00.922Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1808
+  }
+}

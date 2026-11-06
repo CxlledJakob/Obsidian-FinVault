@@ -1,0 +1,275 @@
+{
+  "schema": "status-v1",
+  "ticker": "APP",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/APP/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - APP - Analysten-Update"
+  },
+  "next_id": 8,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 247,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (Verteidigt, kurzzeitig leicht unterschritten)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "widerstand",
+      "wert": 291,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Rückeroberung erwartet, dann bullisch)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "widerstand",
+      "wert": 378,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.5 Fib (Rückeroberung angestrebt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "kursziel",
+      "wert": 449,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Fokus nach Ausbruch über 378 $)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - APP - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "unterstuetzung",
+      "wert": 243,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA / blaue Unterstützungslinie (Buy Zone) (Bounce-Bereich laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      }
+    },
+    {
+      "id": "M6",
+      "art": "unterstuetzung",
+      "wert": 281,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Haltemarke) (Kurs soll darüber halten)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      }
+    },
+    {
+      "id": "M7",
+      "art": "zone",
+      "wert": 243,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone an 200 WMA / blauer Unterstützungslinie",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "APP hat nach einer starken Quartalszahl (EPS 4,30 $ vs. 4,033 $ erwartet; Umsatz 2,18 Mrd. $ vs. 2,07 Mrd. $ erwartet) an der 200 WMA bei 243 USD eine Kursreaktion gezeigt und liegt laut Update im Premarket etwa 16 % höher. Der Analyst sieht eine Haltezone über dem 0.618 Fib bei 281 USD als nächste Voraussetzung, danach wird eine Rückeroberung des 0.5 Fib bei 378 USD betrachtet.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet, dass der Kurs über dem 0.618 Fib bei 281 USD hält. Danach sieht er die Rückeroberung des 0.5 Fib bei 378 USD im Blick. Die 200 WMA bei 243 USD bildet laut Analyst die Buy Zone und den Bounce-Bereich.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Haltenfähigkeit über 281 USD (0.618 Fib) als Bedingung für eine Neubewertung\n- Rückeroberung von 378 USD (0.5 Fib) als nächster Schritt",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA bei 243 USD: Bounce-Bereich laut Analyst, fällt mit der blauen Unterstützungslinie zusammen und liegt in der Buy Zone\n- 50 WMA bei 449 USD: Kursziel, Fokus nach Ausbruch über 378 USD",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.618 Fib bei 281 USD: Haltemarke, Kurs soll darüber halten\n- 0.5 Fib bei 378 USD: Rückeroberung angestrebt, starke Unterstützung im Februar und März",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Haltenfähigkeit über 281 USD (0.618 Fib)\n- Rückeroberung von 378 USD (0.5 Fib)\n- Quartalszahlen wurden veröffentlicht (Doppel-Beat), Reaktion im Kurs sichtbar",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Kein Invalidierungsniveau genannt\n- Kein Zeithorizont und kein Kursziel für das neue Update genannt\n- Kurs liegt im Premarket stark im Plus, Nachhaltigkeit offen",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - APP - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-04",
+      "update": "2026-11-04 - APP - Analysten-Update",
+      "nachtrag": false,
+      "neu": 4,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 7,
+      "verarbeitet_am": "2026-11-06T23:49:26.272Z",
+      "kosten_cent": 0.0952
+    },
+    {
+      "datum": "2026-11-05",
+      "update": "2026-11-05 - APP - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 1,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 7,
+      "verarbeitet_am": "2026-11-06T23:49:44.541Z",
+      "kosten_cent": 0.1157
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Trendanalyse",
+      "ziel": "Trading/Notes/02 - Trendanalyse/02 - Trendanalyse"
+    },
+    {
+      "begriff": "Price Action",
+      "ziel": "Trading/Notes/01 - Marktstruktur & Price Action/Price Action"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - APP - Analysten-Update",
+    "neu": [
+      "M5",
+      "M6",
+      "M7"
+    ],
+    "bestaetigt": [
+      "M3"
+    ],
+    "nicht_erwaehnt": [
+      "M1",
+      "M2",
+      "M4"
+    ],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "trigger",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:49:44.541Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1157
+  }
+}
