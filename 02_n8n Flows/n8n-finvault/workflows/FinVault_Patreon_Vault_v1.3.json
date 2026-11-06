@@ -1,0 +1,1603 @@
+{
+  "name": "FinVault – Patreon → Vault v1.3",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Manuell starten",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -100
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "minutes",
+              "minutesInterval": 5
+            }
+          ]
+        }
+      },
+      "id": "a1b2c3d4-0017-4000-8000-000000000017",
+      "name": "Alle 5 Minuten",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "/vault/Finanzen/Trading/System/Automation/concept-links.json",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0008-4000-8000-000000000008",
+      "name": "Register lesen",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        240,
+        -80
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Register + Templates vorbereiten (v1.0)\n// Eingang: concept-links.json UND alle Templates/Analysten-*.md (Merge \"Register + Template\")\n// templates: { 'Analysten-Update': '…', 'Analysten-Earnings': '…', … } für die Platzhalter je Kategorie\n// Liest concept-links.json (vom Node \"Register lesen\") und baut\n// 1) eine kompakte Begriffsliste für Claude (nach Hauptthema gruppiert)\n// 2) ein Nachschlage-Verzeichnis Begriff/Alias -> Zielnotiz für die Link-Prüfung\n\nlet reg = null, template = '';\nconst templates = {};\nconst ins = $input.all();\nfor (let i = 0; i < ins.length; i++) {\n  const bin = ins[i].binary && ins[i].binary.data;\n  if (!bin) continue;\n  const text = (await this.helpers.getBinaryDataBuffer(i, 'data')).toString('utf8');\n  if (/\\.json$/i.test(bin.fileName || '')) reg = JSON.parse(text);\n  else if (/\\.md$/i.test(bin.fileName || '')) {\n    const name = String(bin.fileName).normalize('NFC').replace(/\\.md$/i, '');\n    templates[name] = text;\n    if (name === 'Analysten-Update') template = text;\n  }\n}\nif (!reg) throw new Error('concept-links.json nicht gefunden');\nif (!template) throw new Error('Template Trading/Templates/Analysten-Update.md nicht gefunden');\nconst konzepte = Array.isArray(reg.konzepte) ? reg.konzepte : [];\nif (!konzepte.length) throw new Error('concept-links.json enthält keine Konzepte');\n\nconst norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();\n\nconst lookup = {};\nconst groups = {};\nfor (const k of konzepte) {\n  if (!k.begriff || !k.zielpfad) continue;\n  const entry = { begriff: k.begriff, zielpfad: k.zielpfad, hauptthema: k.hauptthema || '', prioritaet: k.prioritaet || '' };\n  for (const name of [k.begriff, ...(k.aliases || [])]) {\n    const key = norm(name);\n    if (key && (!lookup[key] || k.primaer)) lookup[key] = entry;\n  }\n  if (k.primaer !== false) {\n    const g = `${String(k.hauptthema_nummer || '').padStart(2, '0')} ${k.hauptthema || 'Sonstige'}`;\n    (groups[g] = groups[g] || []).push(k.begriff);\n  }\n}\n\n// Hauptthemen -> Übersichtsnotiz (Fallback laut Register-Regel \"fallback_auf_hauptthema_index\")\nconst themen = Array.isArray(reg.hauptthemen) ? reg.hauptthemen : [];\nfor (const h of themen) {\n  if (!h.hauptthema || !h.zielpfad) continue;\n  const key = norm(h.hauptthema);\n  if (!lookup[key]) lookup[key] = { begriff: h.hauptthema, zielpfad: h.zielpfad, hauptthema: h.hauptthema, prioritaet: 'Hauptthema' };\n}\n\nconst list = 'Hauptthemen (Übersichtsnotizen): ' + themen.map(h => h.hauptthema).join('; ') + '\\n' + Object.keys(groups).sort()\n  .map(g => `${g}: ${[...new Set(groups[g])].join('; ')}`)\n  .join('\\n');\n\nreturn [{\n  json: {\n    register_version: reg.schema_version || '',\n    concept_count: konzepte.length,\n    concept_list: list,\n    concept_lookup: lookup,\n    template,\n    templates,\n  },\n}];\n"
+      },
+      "id": "a1b2c3d4-0009-4000-8000-000000000009",
+      "name": "Register vorbereiten",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/**/*.md",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0010-4000-8000-000000000010",
+      "name": "Bestand lesen",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        720,
+        0
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Bestand auswerten (v0.7)\n// Liest die vorhandenen Update-Dateien (vom Node \"Bestand lesen\") und merkt sich je Datei:\n// Name, Pfad, Ticker, Datum, Gmail-ID und Inhalt -> für Dubletten, Vorgänger/Nachfolger und deren Korrektur.\n\nfunction frontmatter(text) {\n  const m = text.match(/^---\\s*\\n([\\s\\S]*?)\\n---/);\n  const fm = {};\n  if (!m) return fm;\n  for (const line of m[1].split('\\n')) {\n    const kv = line.match(/^([A-Za-z_äöüÄÖÜ]+):\\s*(.*)$/);\n    if (kv) fm[kv[1]] = kv[2].replace(/^[\"']|[\"']$/g, '').trim();\n  }\n  return fm;\n}\n\nconst existing = [];\nconst items = $input.all();\nfor (let i = 0; i < items.length; i++) {\n  const bin = items[i].binary && items[i].binary.data;\n  if (!bin) continue;\n  if (!/^\\d{4}-\\d{2}-\\d{2} - /.test(bin.fileName || '')) continue; // nur Update-Dateien\n  const text = (await this.helpers.getBinaryDataBuffer(i, 'data')).toString('utf8');\n  const fm = frontmatter(text);\n  const fileName = bin.fileName || '';\n  const nameMatch = fileName.match(/^(\\d{4}-\\d{2}-\\d{2}) - ([^ ]+) - /);\n  existing.push({\n    name: fileName.replace(/\\.md$/i, ''),\n    file_name: fileName,\n    directory: bin.directory || '',\n    ticker: String(fm.ticker || (nameMatch ? nameMatch[2] : '')).toUpperCase(),\n    date: fm.veroeffentlicht || fm['veröffentlicht'] || (nameMatch ? nameMatch[1] : ''),\n    gmail_message_id: fm.gmail_message_id || '',\n    neues_format: fm.schema_version === '1.0',\n    content: text,\n  });\n}\nreturn [{ json: { existing_count: existing.length, existing } }];\n"
+      },
+      "id": "a1b2c3d4-0011-4000-8000-000000000011",
+      "name": "Bestand auswerten",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        960,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "label",
+        "operation": "getAll",
+        "returnAll": true
+      },
+      "id": "a1b2c3d4-0018-4000-8000-000000000018",
+      "name": "Gmail: Labels holen",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1200,
+        0
+      ],
+      "webhookId": "9f8e7d6c-0018-4000-8000-000000000018",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "returnAll": false,
+        "limit": 20,
+        "simple": false,
+        "filters": {
+          "q": "label:finvault-eingang"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "Gmail: Mails aus FinVault/Eingang",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        1440,
+        0
+      ],
+      "webhookId": "9f8e7d6c-0002-4000-8000-000000000002",
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 1: Mail bereinigen (v0.9)\n// - erkennt manuell weitergeleitete Mails (Fwd/WG) und nutzt den Originalteil\n// - schneidet bei Patreon-Mails (DE/EN) Kopfbereich und Footer ab\n// - entfernt Füllzeichen, Bild-Links, Tracking und harte Zeilenumbrüche\n// - liest Veröffentlichungsdatum, Titel, Ticker und Beitrags-URL aus\n\nconst FORWARD_MARKER = /-{3,}\\s*(Forwarded message|Weitergeleitete Nachricht|Original Message|Ursprüngliche Nachricht)\\s*-{3,}/i;\n// Ende des Beitragskopfs: letzte \"In der App anzeigen\"/\"View in app\"-Zeile inkl. Link-Zeile\nconst HEADER_END = /^(In der App anzeigen|View in app|Open in app)\\s*\\n\\[[^\\]]*\\]\\s*$/gim;\n// Beginn des Footers (erste Fundstelle zählt)\nconst FOOTER_MARKERS = [\n  /^\\s*HAT DIR DIESER POST GEFALLEN\\??/im,\n  /^\\s*DID YOU (ENJOY|LIKE) THIS POST\\??/im,\n  /^\\s*Teile diesen Post\\b/im,\n  /^\\s*Share this post\\b/im,\n  /^\\s*©\\s*\\d{4}\\b/m,\n  /^\\s*(Abbestellen|Unsubscribe)\\b/im,\n  /E-Mail wurde an .* gesendet/i,\n  /This email was sent to/i,\n];\nconst MONTHS = { jan:1, feb:2, 'mär':3, mar:3, apr:4, mai:5, may:5, jun:6, jul:7, aug:8, sep:9, okt:10, oct:10, nov:11, dez:12, dec:12 };\n\nfunction htmlToText(html) {\n  return String(html || '')\n    .replace(/<(script|style)[\\s\\S]*?<\\/\\1>/gi, '')\n    .replace(/<br\\s*\\/?>/gi, '\\n')\n    .replace(/<\\/(p|div|li|h[1-6]|tr)>/gi, '\\n\\n')\n    .replace(/<[^>]+>/g, '')\n    .replace(/&nbsp;/g, ' ').replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')\n    .replace(/&#39;|&rsquo;/g, '’').replace(/&quot;/g, '\"');\n}\n\nfunction headerValue(block, names) {\n  for (const name of names) {\n    const m = block.match(new RegExp('^\\\\s*\\\\*?' + name + '\\\\*?:\\\\s*(.+)$', 'im'));\n    if (m) return m[1].trim();\n  }\n  return '';\n}\n\nfunction removeInvisible(text) {\n  // Füllzeichen aus E-Mail-Vorschauen: CGJ, Soft Hyphen, Zero-Width, Figure Space, BOM\n  return text.replace(/[͏­​-‍ ⁠﻿]/g, '');\n}\n\nfunction parseDate(text) {\n  // \"30. Okt. 2026\" | \"30 Oct 2026\" | \"Oct 30, 2026\"\n  let m = text.match(/^\\s*(\\d{1,2})\\.?\\s+([A-Za-zÄÖÜäöü]{3,})\\.?\\s+(\\d{4})\\s*$/m);\n  let d, mo, y;\n  if (m) { d = +m[1]; mo = MONTHS[m[2].slice(0, 3).toLowerCase()]; y = +m[3]; }\n  else {\n    m = text.match(/^\\s*([A-Za-z]{3,})\\.?\\s+(\\d{1,2}),\\s+(\\d{4})\\s*$/m);\n    if (m) { d = +m[2]; mo = MONTHS[m[1].slice(0, 3).toLowerCase()]; y = +m[3]; }\n  }\n  if (!m || !mo) return '';\n  return `${y}-${String(mo).padStart(2, '0')}-${String(d).padStart(2, '0')}`;\n}\n\nfunction berlinDate(iso) {\n  if (!iso) return '';\n  const dt = new Date(iso);\n  if (isNaN(dt)) return '';\n  return dt.toLocaleDateString('sv-SE', { timeZone: 'Europe/Berlin' }); // YYYY-MM-DD\n}\n\nfunction cutFooter(text) {\n  let cut = text.length;\n  for (const re of FOOTER_MARKERS) {\n    const m = re.exec(text);\n    if (m && m.index < cut && m.index > 20) cut = m.index;\n  }\n  return text.slice(0, cut);\n}\n\nfunction cleanBody(text) {\n  return text\n    .replace(/^\\s*\\[https?:\\/\\/[^\\]]*\\]\\s*\\S*\\s*$/gim, '')   // Bildzeilen \"[https://...png]link\"\n    .replace(/\\[https?:\\/\\/[^\\]]*\\]/g, '')                    // übrige Link-Klammern\n    .replace(/(https?:\\/\\/[^\\s<>()\\]]+)\\?[^\\s<>()\\]]*/g, '$1') // Tracking-Parameter\n    .replace(/\\r/g, '')\n    .replace(/[ \\t]+\\n/g, '\\n')\n    .replace(/\\n{3,}/g, '\\n\\n')\n    .split(/\\n\\s*\\n/)                                          // Absätze\n    .map(p => p.replace(/\\s*\\n\\s*/g, ' ').trim())              // harte Umbrüche entfernen\n    .filter(Boolean)\n    .join('\\n\\n')\n    .trim();\n}\n\nconst out = [];\nfor (const item of $input.all()) {\n  const m = item.json;\n  let raw = (m.text && String(m.text).trim()) ? String(m.text) : htmlToText(m.html);\n  raw = removeInvisible(raw).replace(/\\r/g, '');\n\n  let isForwarded = false;\n  let origFrom = (m.from && (m.from.text || (m.from.value && m.from.value[0] && m.from.value[0].address))) || '';\n  let origDateRaw = m.date || '';\n  let origSubject = String(m.subject || '');\n\n  const fwd = FORWARD_MARKER.exec(raw);\n  if (fwd) {\n    isForwarded = true;\n    const after = raw.slice(fwd.index + fwd[0].length);\n    const split = after.match(/^([\\s\\S]*?\\n\\s*\\n)([\\s\\S]*)$/);\n    const headerBlock = split ? split[1] : '';\n    raw = split ? split[2] : after;\n    origFrom = headerValue(headerBlock, ['From', 'Von']) || origFrom;\n    origDateRaw = headerValue(headerBlock, ['Date', 'Datum', 'Gesendet', 'Sent']) || origDateRaw;\n    origSubject = headerValue(headerBlock, ['Subject', 'Betreff']) || origSubject;\n  }\n\n  // Kopfbereich (Vorschau, Titel, Autor, Datum, Like/Comment/Share) abschneiden\n  let body = raw;\n  let headerPart = '';\n  let lastHeaderEnd = -1;\n  for (const hm of raw.matchAll(HEADER_END)) lastHeaderEnd = hm.index + hm[0].length;\n  if (lastHeaderEnd > -1) { headerPart = raw.slice(0, lastHeaderEnd); body = raw.slice(lastHeaderEnd); }\n  body = cleanBody(cutFooter(body));\n\n  const subject = origSubject.replace(/^\\s*((fwd?|fw|wg|aw|re)\\s*:\\s*)+/i, '').trim();\n  const tickerMatch = subject.match(/\\$([A-Z][A-Z0-9.]{0,6})\\b/) || body.match(/\\$([A-Z][A-Z0-9.]{0,6})\\b/);\n  const postUrl = (raw.match(/https?:\\/\\/(?:www\\.)?patreon\\.com\\/(?:[\\w-]+\\/)?posts\\/[\\w-]+/i) || [''])[0];\n  const datePost = parseDate(headerPart || raw);\n  const dateFallback = berlinDate(isForwarded ? origDateRaw : m.date);\n\n  // Abbildungen des Beitrags (Patreon-CDN, nur Post-Bilder, keine Avatare/Icons)\n  const imgSrc = String(m.html || '');\n  const images = [];\n  for (const mm of imgSrc.matchAll(/<img[^>]+src=\"([^\"]+)\"/gi)) {\n    const u = mm[1].replace(/&amp;/g, '&');\n    if (/patreonusercontent\\.com\\/.*\\/p\\/post\\//i.test(u) && !images.includes(u)) images.push(u);\n  }\n  if (!images.length) {\n    for (const mm of String(m.text || '').matchAll(/\\[(https?:\\/\\/[^\\]\\s]*patreonusercontent\\.com\\/[^\\]\\s]*\\/p\\/post\\/[^\\]\\s]*)\\]/gi)) {\n      if (!images.includes(mm[1])) images.push(mm[1]);\n    }\n  }\n\n  const errors = [];\n  const warnings = [];\n  // Datum plausibilisieren: Beitrag darf nicht nach Mail-Eingang liegen und nicht uralt sein\n  let published = datePost || dateFallback;\n  let dateStatus = datePost ? 'aus_beitrag' : (dateFallback ? 'aus_email_datum' : 'unbekannt');\n  const mailDay = berlinDate(m.date);\n  if (datePost && mailDay && (datePost > mailDay || datePost < '2015-01-01')) {\n    warnings.push(`Datum im Beitrag (${datePost}) unplausibel zum Mail-Datum (${mailDay}) – Mail-Datum verwendet`);\n    published = dateFallback; dateStatus = 'aus_email_datum';\n  }\n  if (!published) errors.push('Veröffentlichungsdatum nicht ermittelbar');\n  if (!body || body.length < 80) errors.push('Beitragstext fehlt oder ist zu kurz');\n  if (!/patreon/i.test(origFrom + postUrl)) errors.push('Absender/Link ist nicht Patreon');\n\n  out.push({\n    json: {\n      gmail_message_id: m.id,\n      gmail_thread_id: m.threadId,\n      email_date: m.date || '',\n      is_forwarded: isForwarded,\n      original_from: origFrom,\n      published_date: published,\n      date_status: dateStatus,\n      subject,\n      ticker_hint: tickerMatch ? tickerMatch[1] : '',\n      post_url: postUrl,\n      body_clean: body,\n      images,\n      body_words: body ? body.split(/\\s+/).length : 0,\n      ok: errors.length === 0,\n      errors,\n      warnings,\n    },\n  });\n}\nreturn out;\n"
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Mail bereinigen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1680,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 2a: Anfrage an Claude bauen (v0.5)\n// System-Prompt + Begriffsliste werden bei Anthropic zwischengespeichert (Prompt Caching).\n// Claude muss über ein \"Werkzeug\" antworten -> die Antwort ist garantiert ein JSON-Objekt nach Schema.\n\nconst MODEL = 'claude-haiku-5-5';\nconst PROMPT_VERSION = 'analyst-extraction-v4';\n\nconst SYSTEM = `Du bist ein Extraktionssystem für Analystenbeiträge zu Wertpapieren. Du erhältst einen Patreon-Beitrag des Analysten \"The Long Investor\" und rufst genau einmal das Werkzeug \"analyse_speichern\" mit den extrahierten Daten auf.\n\nRegeln:\n1. Übernimm nur Informationen, die im Beitrag ausdrücklich stehen. Erfinde keine Kursmarken, Spannen, Daten, Unternehmensnamen oder Zeithorizonte.\n2. Fehlt eine wichtige Angabe (Invalidierung, Kursziel, Zeithorizont), nenne sie in \"missing_information\" (höchstens 4 Einträge). Sonst \"\", [] oder null.\n3. Rollen von Kursmarken nur zuordnen, wenn der Text die Rolle ausdrücklich nennt:\n   - supports: \"support\", \"Unterstützung\", \"holding $X\", \"buyers step in\"\n   - resistances: \"resistance\", \"Widerstand\", \"break above $X\"\n   - invalidations: \"invalidation\", \"invalidates\", \"count fails below\"\n   - targets: \"target\", \"Ziel\", \"Bull Case\", \"Bear Case\" (Label entsprechend)\n   - observation_zones: \"buy zone\", \"accumulation zone\", \"attractive to add/buy\". Eine einzelne Marke als from = to. Spannen nur, wenn der Text beide Grenzen nennt.\n   Alle anderen genannten Marken (aktueller Kurs, frühere Hochs/Tiefs, verlorene oder zurückeroberte Durchschnitte) gehören in \"other_levels\" mit kurzer Rollenbeschreibung.\n4. Eine Marke darf in mehreren Feldern stehen, wenn der Text ihr mehrere Rollen gibt (z. B. Invalidierung und \"holding $143\").\n5. Das Haupt-Wertpapier ist das im Betreff genannte. Andere Ticker im Text gehören nur in \"mentioned_tickers\" (ohne $).\n6. Kursziele, Konsens oder Einschätzungen anderer Analysten sind keine Ziele von The Long Investor: in \"fundamental_statements\".\n7. Termine wie Earnings oder Hauptversammlungen in \"upcoming_events\" (Datum genau wie im Text, kein Jahr ergänzen).\n8. \"WMA\" = Weekly Moving Average, \"Day MA\" = Daily Moving Average, \"PM\" = Premarket. Fib-Verhältnisse wie im Original schreiben (z. B. \"0.618 Fib\"). Monatsangaben ohne Jahr bleiben ohne Jahr.\n9. Kurz und ohne Wiederholungen: \"summary\" höchstens 3 Sätze; jedes andere Textfeld höchstens 1 Satz; \"note\" höchstens 8 Wörter oder leer. Dieselbe Information nicht in mehreren Textfeldern wiederholen.\n10. Alle Texte auf Deutsch, sachlich, als Einschätzung des Analysten. Keine eigene Bewertung, keine Empfehlung.\n11. recognized_concepts: höchstens 8 Begriffe, die im Beitrag inhaltlich vorkommen. Verwende AUSSCHLIESSLICH Begriffe exakt so geschrieben wie in der Begriffsliste unten. Passt kein Begriff, lass ihn weg.\n\nBegriffsliste (Hauptthema: Begriffe):\n`;\n\nconst level = {\n  type: 'object',\n  properties: {\n    level: { type: ['number', 'null'] },\n    currency: { type: 'string' },\n    label: { type: 'string' },\n    note: { type: 'string' },\n  },\n  required: ['level', 'label'],\n};\nconst zone = {\n  type: 'object',\n  properties: {\n    from: { type: ['number', 'null'] },\n    to: { type: ['number', 'null'] },\n    currency: { type: 'string' },\n    label: { type: 'string' },\n  },\n  required: ['from', 'to', 'label'],\n};\nconst strings = { type: 'array', items: { type: 'string' } };\n\nconst register = $('Register vorbereiten').first().json;\nconst SYSTEM_FULL = SYSTEM + register.concept_list;\n\nconst TOOL = {\n  name: 'analyse_speichern',\n  description: 'Speichert die strukturierte Analyse des Beitrags.',\n  input_schema: {\n    type: 'object',\n    properties: {\n      ticker: { type: 'string', description: 'Haupt-Ticker ohne $' },\n      main_category: { type: 'string', enum: ['Technisch', 'Fundamental', 'Sonstige'] },\n      analysis_types: { type: 'array', items: { type: 'string', enum: ['technisch', 'fundamental', 'makro', 'sonstige'] } },\n      time_horizon: { type: 'string' },\n      summary: { type: 'string' },\n      market_state: { type: 'string' },\n      primary_scenario: { type: 'string' },\n      alternative_scenario: { type: 'string' },\n      supports: { type: 'array', items: level },\n      resistances: { type: 'array', items: level },\n      observation_zones: { type: 'array', items: zone },\n      invalidations: { type: 'array', items: level },\n      targets: { type: 'array', items: level },\n      other_levels: { type: 'array', items: level },\n      elliott_wave: { type: 'string' },\n      trend_structure: { type: 'string' },\n      fundamental_statements: strings,\n      upcoming_events: strings,\n      reevaluation_conditions: strings,\n      changes_stated_by_analyst: { type: 'string' },\n      uncertainties_and_risks: strings,\n      mentioned_tickers: strings,\n      missing_information: strings,\n      recognized_concepts: strings,\n    },\n    required: ['ticker', 'main_category', 'analysis_types', 'summary', 'supports', 'resistances',\n      'observation_zones', 'invalidations', 'targets', 'missing_information', 'recognized_concepts'],\n  },\n};\n\nreturn $input.all().map(item => {\n  const p = item.json;\n  const user = [\n    `Betreff: ${p.subject}`,\n    `Haupt-Ticker laut Betreff: ${p.ticker_hint || 'unbekannt'}`,\n    `Veröffentlicht: ${p.published_date || 'unbekannt'}`,\n    '',\n    'Beitrag:',\n    p.body_clean,\n  ].join('\\n');\n\n  return {\n    json: {\n      ...p,\n      model: MODEL,\n      prompt_version: PROMPT_VERSION,\n      request: {\n        model: MODEL,\n        max_tokens: 4000,\n        system: [{ type: 'text', text: SYSTEM_FULL, cache_control: { type: 'ephemeral' } }],\n        tools: [TOOL],\n        tool_choice: { type: 'tool', name: 'analyse_speichern' },\n        messages: [{ role: 'user', content: user }],\n      },\n    },\n  };\n});\n"
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Prompt bauen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2460,
+        -260
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "anthropicApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "options": {
+          "timeout": 60000
+        }
+      },
+      "id": "a1b2c3d4-0006-4000-8000-000000000006",
+      "name": "Claude Haiku",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2680,
+        -260
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 2b: Antwort von Claude prüfen (v0.6)\n// Holt das JSON aus der Werkzeug-Antwort, normalisiert sicher Normalisierbares\n// und prüft die Regeln aus dem Datenvertrag. Ergebnis: ok=true/false + errors/warnings.\n\nconst PRICE_IN = 0.10 / 1e6;   // Haiku 5.5, USD pro Input-Token (Prompt < 100k)\nconst PRICE_OUT = 0.50 / 1e6;  // USD pro Output-Token\nconst PRICE_CACHE_WRITE = 0.125 / 1e6; // Cache schreiben (5 Min.)\nconst PRICE_CACHE_READ = 0.01 / 1e6;   // Cache lesen\nconst CATEGORIES = ['Technisch', 'Fundamental', 'Sonstige'];\n\nconst sources = $('Prompt bauen').all();\nconst lookup = $('Register vorbereiten').first().json.concept_lookup || {};\nconst norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[\\u0300-\\u036f]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();\n\nreturn $input.all().map((item, i) => {\n  const res = item.json;\n  const src = sources[i] ? sources[i].json : {};\n  const { request, ...meta } = src;\n  const errors = [];\n  const warnings = [];\n\n  const toolUse = (res.content || []).find(c => c.type === 'tool_use');\n  let a = toolUse ? JSON.parse(JSON.stringify(toolUse.input)) : null;\n  if (!a || typeof a !== 'object') {\n    errors.push('Keine strukturierte Antwort von Claude erhalten');\n    a = {};\n  }\n\n  // --- beschädigte Antworten reparieren ---\n  // Selten rutscht Werkzeug-Syntax wie '</feld>\\n<parameter name=\"x\">...' in ein Textfeld.\n  // Dann: Wert vor dem Tag behalten, mitgeschleppte Parameter dem richtigen Feld zuordnen.\n  let repaired = false;\n  const LEAK = /<\\/?(parameter|invoke|antml|[a-z_]+>)/i;\n  for (const key of Object.keys(a)) {\n    const val = a[key];\n    if (typeof val !== 'string' || !LEAK.test(val)) continue;\n    repaired = true;\n    const cut = val.search(/<\\/?[a-z_]+[\\s>]/i);\n    a[key] = val.slice(0, cut).trim();\n    for (const m of val.matchAll(/<parameter name=\"([a-z_]+)\">([\\s\\S]*?)(?=<\\/?parameter|<\\/[a-z_]+>|$)/gi)) {\n      const field = m[1], raw = m[2].trim();\n      const empty = a[field] == null || a[field] === '' || (Array.isArray(a[field]) && !a[field].length);\n      if (empty) { try { a[field] = JSON.parse(raw); } catch (e) { a[field] = raw; } }\n    }\n  }\n  const stripTags = s => String(s).replace(/<\\/?[a-z_]+(\\s[^>]*)?>/gi, '').trim();\n  const deep = x => Array.isArray(x) ? x.map(deep) : (x && typeof x === 'object')\n    ? Object.fromEntries(Object.entries(x).map(([k, y]) => [k, deep(y)]))\n    : (typeof x === 'string' ? stripTags(x) : x);\n  a = deep(a);\n\n  // --- sicher normalisierbar ---\n  const arr = v => {\n    if (Array.isArray(v)) return v.filter(x => x !== '' && x !== '[]' && x != null);\n    if (v == null || v === '' || v === '[]') return [];\n    if (typeof v === 'string' && v.trim().startsWith('[')) { try { const p = JSON.parse(v); if (Array.isArray(p)) return p; } catch (e) {} }\n    return [v];\n  };\n  for (const k of ['analysis_types', 'supports', 'resistances', 'observation_zones', 'invalidations', 'targets', 'other_levels',\n    'fundamental_statements', 'upcoming_events', 'reevaluation_conditions', 'uncertainties_and_risks',\n    'mentioned_tickers', 'missing_information', 'recognized_concepts']) a[k] = arr(a[k]);\n  a.ticker = String(a.ticker || '').replace(/^\\$/, '').trim().toUpperCase();\n  a.mentioned_tickers = a.mentioned_tickers.map(t => String(t).replace(/^\\$/, '').toUpperCase()).filter(t => t && t !== a.ticker);\n  if (a.main_category) {\n    const c = String(a.main_category).trim();\n    a.main_category = CATEGORIES.find(x => x.toLowerCase() === c.toLowerCase()) || c;\n  }\n  for (const k of ['supports', 'resistances', 'invalidations', 'targets', 'other_levels']) {\n    a[k] = a[k].map(l => ({ ...l, level: (l && l.level != null && l.level !== '') ? Number(l.level) : null, currency: (l && l.currency) || (l && l.level != null ? 'USD' : '') }));\n  }\n\n  // --- Pflichtprüfungen ---\n  if (!CATEGORIES.includes(a.main_category)) errors.push(`Unbekannte Kategorie: ${a.main_category}`);\n  if (['Technisch', 'Fundamental'].includes(a.main_category) && !/^[A-Z][A-Z0-9.]{0,6}$/.test(a.ticker)) errors.push(`Ungültiger oder fehlender Ticker: \"${a.ticker}\"`);\n  if (!a.summary) errors.push('Zusammenfassung fehlt');\n  for (const k of ['supports', 'resistances', 'invalidations', 'targets']) {\n    a[k].forEach((l, j) => { if (l.level !== null && !Number.isFinite(l.level)) errors.push(`${k}[${j}]: Kurs ist keine Zahl`); });\n  }\n\n  // --- Warnungen (kein Abbruch, aber im Review sichtbar) ---\n  if (meta.ticker_hint && a.ticker && meta.ticker_hint !== a.ticker) warnings.push(`Ticker weicht vom Betreff ab: Betreff ${meta.ticker_hint}, Claude ${a.ticker}`);\n  const body = String(meta.body_clean || '');\n  const allLevels = ['supports', 'resistances', 'invalidations', 'targets', 'other_levels'].flatMap(k => a[k].map(l => l.level)).filter(v => v !== null);\n  for (const v of allLevels) {\n    const plain = String(v);\n    const withComma = plain.replace('.', ',');\n    if (!body.includes(plain) && !body.includes(withComma)) warnings.push(`Kursmarke ${v} kommt im Originaltext nicht wörtlich vor – bitte prüfen`);\n  }\n  for (const z of a.observation_zones) for (const v of [z.from, z.to]) {\n    if (v != null && !body.includes(String(v)) && !body.includes(String(v).replace('.', ','))) warnings.push(`Zonengrenze ${v} kommt im Originaltext nicht wörtlich vor – bitte prüfen`);\n  }\n  const lv = k => new Set(a[k].map(l => l.level).filter(v => v !== null));\n  for (const v of lv('supports')) if (lv('resistances').has(v)) warnings.push(`Kursmarke ${v} ist gleichzeitig Unterstützung und Widerstand`);\n  if (res.stop_reason === 'max_tokens') errors.push('Antwort von Claude wurde abgeschnitten (max_tokens)');\n\n  // --- Begriffe gegen das Register prüfen -> Links zur Theorie ---\n  const conceptLinks = [];\n  const seen = new Set();\n  for (const c of a.recognized_concepts) {\n    const hit = lookup[norm(c)];\n    if (!hit) { warnings.push(`Begriff \"${c}\" steht nicht im Register – kein Link`); continue; }\n    if (seen.has(hit.zielpfad)) continue;\n    seen.add(hit.zielpfad);\n    conceptLinks.push(hit);\n  }\n\n  if (repaired) warnings.push('Claude-Antwort enthielt fehlerhafte Steuerzeichen – automatisch bereinigt, bitte Inhalte prüfen');\n  if (meta.warnings && meta.warnings.length) warnings.unshift(...meta.warnings);\n\n  const usage = res.usage || {};\n  const cost = (usage.input_tokens || 0) * PRICE_IN + (usage.output_tokens || 0) * PRICE_OUT\n    + (usage.cache_creation_input_tokens || 0) * PRICE_CACHE_WRITE + (usage.cache_read_input_tokens || 0) * PRICE_CACHE_READ;\n\n  return {\n    json: {\n      ...meta,\n      ok: errors.length === 0 && meta.ok !== false,\n      errors: [...(meta.errors || []), ...errors],\n      warnings,\n      analysis: a,\n      concept_links: conceptLinks,\n      usage: { input_tokens: usage.input_tokens || 0, output_tokens: usage.output_tokens || 0, cache_write_tokens: usage.cache_creation_input_tokens || 0, cache_read_tokens: usage.cache_read_input_tokens || 0, cost_usd: Number(cost.toFixed(6)), cost_cent: Number((cost * 100).toFixed(4)) },\n    },\n  };\n});\n"
+      },
+      "id": "a1b2c3d4-0007-4000-8000-000000000007",
+      "name": "Antwort prüfen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -260
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 3: Dateien nach Template bauen + Reihenfolge pflegen (v1.0)\n// - Ablage nach Ordnerstruktur v1.0 (Research/Analysten/The Long Investor):\n//     1 Analyse            -> <TICKER>/1 technische Analyse/Updates   (Template Analysten-Update, Inhalt von Claude)\n//     2 Earnings           -> <TICKER>/2 Earnings                     (Platzhalter nach Template Analysten-Earnings)\n//     3 Bewertung          -> <TICKER>/3 Bewertung                    (Platzhalter, Analysten-Bewertung)\n//     4 Grafiken & Kalender-> <TICKER>/4 Grafiken & Kalender           (Platzhalter, Analysten-Grafik-Kalender)\n//     5 Markt & Makro      -> 5 Markt & Makro                         (Platzhalter, Analysten-Markt-Makro)\n//     6 Newsletter         -> 6 Newsletter                            (Platzhalter, Analysten-Newsletter)\n//     8 Sonstige           -> 8 Sonstige                              (Platzhalter, Analysten-Sonstige)\n//     9 Manuelle Prüfung   -> 9 Manuelle Prüfung                      (Originaltext + Grund)\n//     7 Video / 0 fremder Absender -> keine Datei, nur Gmail-Label FinVault/Ignoriert\n// - Platzhalter: Frontmatter + Überschriften exakt aus dem Kategorie-Template, Originaltext und Abbildungen\n//   werden übernommen, inhaltliche Abschnitte bleiben leer (Auswertung je Kategorie folgt später).\n// - Dublettenschutz über gmail_message_id (über alle Kategorien), keine Überschreibung vorhandener Dateien\n// - Vorgänger/Nachfolger nur für Analyse-Updates; bei Nachträgen werden NUR diese Felder in den Nachbarn korrigiert\n// - Abbildungen: werden nach Trading/Media/Analysten/The Long Investor heruntergeladen und eingebettet\n// Ausgabe: kind=\"datei\" (Markdown), kind=\"bild\" (Download), kind=\"mail\" (Ergebnis je Mail)\n\nconst ROOT = '/vault/Finanzen/Trading/Research/Analysten/The Long Investor';\nconst MEDIA = '/vault/Finanzen/Trading/Media/Analysten/The Long Investor';\nconst WORKFLOW = 'FinVault Patreon → Vault v1.3';\nconst REG = $('Register vorbereiten').first().json;\nconst TEMPLATE = REG.template;\nconst TEMPLATES = REG.templates || {};\nconst bestand = ($('Bestand auswerten').first().json.existing || []).map(e => ({ ...e, path: e.directory ? `${e.directory}/${e.file_name}` : '' }));\n\nconst esc = s => String(s == null ? '' : s).replace(/</g, '&lt;').replace(/>/g, '&gt;');\nconst safe = s => String(s || '').replace(/[^A-Za-z0-9 ._-]/g, '').trim();\nconst q = s => JSON.stringify(s == null ? '' : String(s));\nconst wl = name => name ? `[[${name}]]` : '';\nconst num = v => (v == null || v === '') ? '' : `${Number(v).toLocaleString('de-DE', { maximumFractionDigits: 2 })}`;\nconst norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();\nconst lines = arr => (arr || []).filter(Boolean).map(x => `- ${esc(x)}`).join('\\n');\nconst levelLines = list => (list || []).map(l => {\n  const price = l.level != null ? `${num(l.level)} ${l.currency || 'USD'}` : '';\n  const text = [price, esc(l.label)].filter(Boolean).join(' – ');\n  return `- ${text}${l.note ? ` (${esc(l.note)})` : ''}`;\n}).join('\\n');\nconst zoneLines = list => (list || []).map(z => {\n  const range = (z.from != null && z.to != null && z.from !== z.to) ? `${num(z.from)} – ${num(z.to)}` : num(z.from != null ? z.from : z.to);\n  return `- ${[range ? `${range} ${z.currency || 'USD'}` : '', esc(z.label)].filter(Boolean).join(' – ')}`;\n}).join('\\n');\nconst join = (...parts) => parts.filter(p => p && String(p).trim()).join('\\n\\n');\n\n// ---------- Template zerlegen ----------\nfunction parseTemplate(t) {\n  const txt = String(t).replace(/\\r/g, '').split('\\n').map(l => l.replace(/\\s+$/, '')).join('\\n');\n  const m = txt.match(/^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n?([\\s\\S]*)$/);\n  const fmKeys = [];\n  if (m) for (const l of m[1].split('\\n')) { const k = l.match(/^([^\\s:#-][^:]*):/); if (k) fmKeys.push(k[1].trim()); }\n  const body = m ? m[2] : txt;\n  const blocks = []; // {level, title, lines[]} ; level 1 = Titel\n  let cur = null;\n  for (const l of body.split('\\n')) {\n    const h = l.match(/^(#{1,6})\\s+(.*)$/);\n    if (h) { cur = { level: h[1].length, title: h[2].trim(), lines: [] }; blocks.push(cur); continue; }\n    if (cur && l.trim()) cur.lines.push(l);\n  }\n  return { fmKeys, blocks };\n}\nconst TPL = parseTemplate(TEMPLATE);\nconst fmKey = (...alts) => TPL.fmKeys.find(k => alts.includes(norm(k))) || alts[0];\nconst KEY_VOR = fmKey('vorganger', 'vorgaenger');\nconst KEY_NACH = fmKey('nachfolger');\n\n// ---------- Inhalte je Abschnitt (Zuordnung über die Überschrift) ----------\nfunction sectionContent(title, ctx) {\n  const { p, a, ticker, images } = ctx;\n  const t = norm(title);\n  if (t === 'zusammenfassung') return esc(a.summary);\n  if (t.startsWith('marktstand')) return join(esc(a.market_state), esc(a.trend_structure), levelLines(a.other_levels));\n  if (t === 'technisches szenario') return '';\n  if (t === 'primarszenario') return esc(a.primary_scenario);\n  if (t === 'alternatives szenario') return esc(a.alternative_scenario);\n  if (t.startsWith('unterstutzung')) return levelLines(a.supports);\n  if (t.startsWith('widerstand')) return levelLines(a.resistances);\n  if (t.startsWith('kauf')) return zoneLines(a.observation_zones);\n  if (t.startsWith('invalidation')) return levelLines(a.invalidations);\n  if (t.startsWith('kursziel')) return levelLines(a.targets);\n  if (t.startsWith('elliott')) return esc(a.elliott_wave);\n  if (t.startsWith('fundamental')) return lines(a.fundamental_statements);\n  if (t.startsWith('anderungen gegenuber')) return '';\n  if (t.startsWith('bedingungen')) return lines([...(a.reevaluation_conditions || []), ...(a.upcoming_events || []).map(e => `Termin: ${e}`)]);\n  if (t.startsWith('unsicherheiten')) return lines([...(a.uncertainties_and_risks || []), ...(a.missing_information || []).map(x => `Nicht genannt: ${x}`)]);\n  if (t.startsWith('originalabbildungen')) {\n    const embeds = images.map(f => `![[${f}]]`).join('\\n');\n    const original = esc(p.body_clean).split('\\n').map(l => `> ${l}`).join('\\n');\n    return join(embeds, `**Originaltext:**\\n\\n${original}`);\n  }\n  return null; // unbekannt -> Template-Zeilen übernehmen bzw. leer\n}\n// Vorgegebene \"- **Label:** wert\"-Zeilen im Template befüllen\nfunction fillLabelLines(tplLines, values) {\n  return tplLines.map(l => {\n    const m = l.match(/^(\\s*-\\s*\\*\\*([^*]+?):\\*\\*)\\s*(.*)$/);\n    if (!m) return null;\n    const key = norm(m[2]);\n    const v = values[key];\n    return (v != null ? `${m[1]} ${v}` : `${m[1]} ${m[3]}`).replace(/\\s+$/, '');\n  }).filter(l => l != null).join('\\n');\n}\n\nfunction render(p, a, ticker, prev, next, images) {\n  const date = p.published_date;\n  const statusName = ticker ? `${ticker} - Aktueller Stand` : '';\n  const known = {\n    typ: 'analysten-update', status: 'review', quelle: 'Patreon', analyst: 'The Long Investor',\n    veroffentlicht: date, instrument: '', ticker: ticker || '', isin: '',\n    zeithorizont: q(a.time_horizon), quell_url: q(p.post_url),\n    vorganger: prev ? q(wl(prev)) : '\"\"', vorgaenger: prev ? q(wl(prev)) : '\"\"', nachfolger: next ? q(wl(next)) : '\"\"',\n  };\n  const fm = ['---'];\n  for (const k of TPL.fmKeys) {\n    const n = norm(k).replace(/ /g, '_');\n    if (n === 'analyseart') {\n      const arten = (a.analysis_types || []).filter(x => ['technisch', 'fundamental'].includes(x));\n      fm.push(`${k}:` + (arten.length ? '\\n' + arten.map(x => `  - ${x}`).join('\\n') : ' []'));\n    } else fm.push(`${k}: ${known[n] != null ? known[n] : ''}`.replace(/\\s+$/, ''));\n  }\n  // technische Zusatzfelder (für Dubletten, Status-Flow, Nachvollziehbarkeit)\n  fm.push(\n    'hauptkategorie: Technisch',\n    'kategorie: \"1 Analyse\"',\n    `einordnung_regel: ${q(p.regel)}`,\n    `datum_status: ${p.date_status}`,\n    `gmail_message_id: ${q(p.gmail_message_id)}`,\n    `erwaehnte_ticker:${(a.mentioned_tickers || []).length ? '\\n' + a.mentioned_tickers.map(x => `  - ${q(x)}`).join('\\n') : ' []'}`,\n    `konzepte:${(p.concept_links || []).length ? '\\n' + p.concept_links.map(c => `  - ${q(c.begriff)}`).join('\\n') : ' []'}`,\n    `pruefhinweise:${(p.warnings || []).length ? '\\n' + p.warnings.map(w => `  - ${q(w)}`).join('\\n') : ' []'}`,\n    `importiert_am: ${new Date().toISOString()}`,\n    'verarbeitung:',\n    `  workflow: ${q(WORKFLOW)}`,\n    `  prompt_version: ${q(p.prompt_version)}`,\n    `  modell: ${q(p.model)}`,\n    `  kosten_cent: ${p.usage ? p.usage.cost_cent : 0}`,\n    '---', '');\n\n  const out = [fm.join('\\n')];\n  const ctx = { p, a, ticker, images };\n  for (const b of TPL.blocks) {\n    if (b.level === 1) {\n      out.push('# ' + b.title.replace(/\\{\\{\\s*date\\s*\\}\\}/g, date).replace(/\\[Instrument\\]|\\{\\{\\s*instrument\\s*\\}\\}/gi, ticker || 'Allgemein'), '');\n      continue;\n    }\n    out.push(`${'#'.repeat(b.level)} ${b.title}`);\n    const t = norm(b.title);\n    let content;\n    if (t === 'quellenangabe') content = fillLabelLines(b.lines, {\n      plattform: 'Patreon', analyst: 'The Long Investor', veroffentlichungsdatum: date,\n      originalbeitrag: p.post_url || '', importart: p.is_forwarded ? 'E-Mail (weitergeleitet), Gmail-Automation' : 'E-Mail, Gmail-Automation',\n    });\n    else if (t === 'verknupfungen') content = fillLabelLines(b.lines, { wertpapierverlauf: statusName ? wl(statusName) : '' });\n    else {\n      content = sectionContent(b.title, ctx);\n      if (content == null) content = b.lines.filter(l => !/\\[\\[[^\\]]*\\]\\]/.test(l)).join('\\n'); // unbekannter Abschnitt: Template-Text ohne Platzhalter-Links\n    }\n    out.push(content ? content + '\\n' : '');\n  }\n  return out.join('\\n').replace(/\\n{3,}/g, '\\n\\n').trimEnd() + '\\n';\n}\n\n// Frontmatter-Feld setzen (vorhandene Schreibweise bevorzugen, sonst einfügen)\nfunction setFm(text, keys, value) {\n  const m = text.match(/^---\\s*\\n([\\s\\S]*?)\\n---/);\n  if (!m) return text;\n  let fm = m[1];\n  const key = keys.find(k => new RegExp(`^${k}:`, 'm').test(fm)) || keys[0];\n  const re = new RegExp(`^${key}:.*$`, 'm');\n  fm = re.test(fm) ? fm.replace(re, `${key}: ${value}`) : `${fm}\\n${key}: ${value}`;\n  return text.replace(m[0], `---\\n${fm}\\n---`);\n}\n\n// ---------- Platzhalter für Kategorien ohne eigene Auswertung (v1.0) ----------\nconst ABLAGE = {\n  2: { ordner: t => `${ROOT}/${t}/2 Earnings`, template: 'Analysten-Earnings', wort: 'Earnings' },\n  3: { ordner: t => `${ROOT}/${t}/3 Bewertung`, template: 'Analysten-Bewertung', wort: 'Bewertung' },\n  4: { ordner: t => `${ROOT}/${t}/4 Grafiken & Kalender`, template: 'Analysten-Grafik-Kalender', wort: 'Grafik' },\n  5: { ordner: () => `${ROOT}/5 Markt & Makro`, template: 'Analysten-Markt-Makro', wort: 'Makro' },\n  6: { ordner: () => `${ROOT}/6 Newsletter`, template: 'Analysten-Newsletter', wort: 'Newsletter' },\n  8: { ordner: () => `${ROOT}/8 Sonstige`, template: 'Analysten-Sonstige', wort: 'Sonstige' },\n  9: { ordner: () => `${ROOT}/9 Manuelle Prüfung`, template: 'Analysten-Sonstige', wort: 'Prüfung' },\n};\n\nfunction parseFm(t) {\n  const m = String(t).replace(/\\r/g, '').match(/^---\\s*\\n([\\s\\S]*?)\\n---/);\n  const out = [];\n  if (!m) return out;\n  for (const l of m[1].split('\\n')) {\n    const k = l.match(/^([^\\s:#-][^:]*):\\s*(.*?)\\s*$/);\n    if (k) out.push({ key: k[1].trim(), value: k[2] });\n  }\n  return out;\n}\nfunction isoWoche(d) {\n  const dt = new Date(d + 'T12:00:00Z');\n  if (isNaN(dt)) return '';\n  const day = (dt.getUTCDay() + 6) % 7;\n  dt.setUTCDate(dt.getUTCDate() - day + 3);\n  const first = new Date(Date.UTC(dt.getUTCFullYear(), 0, 4));\n  return String(1 + Math.round(((dt - first) / 864e5 - 3 + ((first.getUTCDay() + 6) % 7)) / 7));\n}\n\nfunction renderPlatzhalter(p, ticker, images, tplName, linkStatus) {\n  const tpl = TEMPLATES[tplName];\n  if (!tpl) throw new Error(`Template Trading/Templates/${tplName}.md nicht gefunden`);\n  const T = parseTemplate(tpl);\n  const fmT = parseFm(tpl);\n  const date = p.published_date;\n  const nr = p.kategorie_nr;\n  const titel = p.titel || p.subject || '';\n  const quartal = (titel.match(/\\bQ[1-4]\\s*'?\\s*\\d{2,4}\\b/i) || [''])[0];\n  const known = {\n    status: 'review', analyst: 'The Long Investor', veroffentlicht: date, instrument: ticker ? q(ticker) : '',\n    ticker: ticker || '', quell_url: q(p.post_url), thema: nr >= 5 ? q(titel) : '', quartal: quartal ? q(quartal) : '',\n  };\n  if (nr === 9) { known.typ = 'analysten-pruefung'; known.kategorie = '9 Manuelle Prüfung'; }\n  const fm = ['---'];\n  for (const { key, value } of fmT) {\n    const n = norm(key).replace(/ /g, '_');\n    let v = known[n];\n    if (v == null) v = ['typ', 'quelle', 'kategorie'].includes(n) ? value : '';   // feste Werte aus dem Template\n    fm.push(`${key}: ${v}`.replace(/\\s+$/, ''));\n  }\n  fm.push(\n    `betreff: ${q(p.subject)}`,\n    `einordnung_regel: ${q(p.regel)}`,\n    ...(p.einordnung_grund ? [`einordnung_grund: ${q(p.einordnung_grund)}`] : []),\n    `datum_status: ${p.date_status}`,\n    `gmail_message_id: ${q(p.gmail_message_id)}`,\n    `pruefhinweise:${(p.warnings || []).length ? '\\n' + p.warnings.map(w => `  - ${q(w)}`).join('\\n') : ' []'}`,\n    'platzhalter: true',\n    `importiert_am: ${new Date().toISOString()}`,\n    'verarbeitung:',\n    `  workflow: ${q(WORKFLOW)}`,\n    '---', '');\n\n  const hatAbbildungAbschnitt = T.blocks.some(b => norm(b.title) === 'abbildung');\n  const hatOriginalinhalt = T.blocks.some(b => norm(b.title) === 'originalinhalt');\n  const embeds = images.map(f => `![[${f}]]`).join('\\n');\n  const original = p.body_clean ? `**Originaltext:**\\n\\n${esc(p.body_clean).split('\\n').map(l => `> ${l}`).join('\\n')}` : '';\n  const hinweis = nr === 9\n    ? `> [!warning] Manuelle Prüfung\\n> ${esc(p.einordnung_grund || 'Beitrag konnte nicht eindeutig eingeordnet werden')}.\\n> Betreff: ${esc(p.subject)}\\n> Bitte einordnen und in den passenden Ordner verschieben.`\n    : `> [!info] Platzhalter – Kategorie ${nr} ${esc(p.kategorie)}\\n> Für diese Kategorie gibt es noch keine automatische Auswertung. Originaltext und Abbildungen stehen unten.\\n> Betreff: ${esc(p.subject)}`;\n  // Pfad-Notiz: welcher Pfad im Flow gegangen wurde und was dort später passiert (kommt aus dem Platzhalter-Node)\n  const pf = p.pfad || {};\n  const tk = s => esc(String(s || '').replace(/<TICKER>/g, ticker || 'TICKER'));\n  const geplant = (pf.spaeter || []).map((x, i) => `> ${i + 1}. ${tk(x)}`).join('\\n');\n  const pfadNotiz = pf.kategorie\n    ? `\\n>\\n> **Pfad im Flow:** ${esc(pf.kategorie)} → ${tk(pf.ziel)}` + (geplant ? `\\n> **Später geplant:**\\n${geplant}` : '')\n    : '';\n\n  const out = [fm.join('\\n')];\n  for (const b of T.blocks) {\n    if (b.level === 1) {\n      const art = /calendar|kalender/i.test(titel) ? 'Earnings-Kalender' : 'Infografik';\n      const h1 = b.title\n        .replace(/\\{\\{\\s*date\\s*\\}\\}/g, date)\n        .replace(/\\[Instrument oder Thema\\]|\\[Instrument\\]|\\{\\{\\s*instrument\\s*\\}\\}/gi, ticker || titel)\n        .replace(/\\[Infografik \\/ Earnings-Kalender\\]/g, art)\n        .replace(/\\[Quartal\\]/g, quartal)\n        .replace(/\\[Thema\\]|\\[Titel\\]|\\[Ausgabe\\]/g, titel)\n        .replace(/KW \\[Nummer\\]/g, `KW ${isoWoche(date)}`)\n        .replace(/^Sonstige/, nr === 9 ? 'Manuelle Prüfung' : 'Sonstige')\n        .replace(/ – Sonstige – /, nr === 9 ? ' – Manuelle Prüfung – ' : ' – Sonstige – ')\n        .replace(/\\s+–\\s*$/, '').replace(/\\s{2,}/g, ' ').trim();\n      out.push('# ' + h1, '', hinweis + pfadNotiz, '');\n      continue;\n    }\n    out.push(`${'#'.repeat(b.level)} ${b.title}`);\n    const t = norm(b.title);\n    let content;\n    if (t === 'quellenangabe') content = fillLabelLines(b.lines, {\n      plattform: 'Patreon', analyst: 'The Long Investor', veroffentlichungsdatum: date,\n      originalbeitrag: p.post_url || '', importart: p.is_forwarded ? 'E-Mail (weitergeleitet), Gmail-Automation' : 'E-Mail, Gmail-Automation',\n    });\n    else if (t === 'verknupfungen') content = fillLabelLines(b.lines, {\n      wertpapier: '', 'aktueller technischer stand': linkStatus ? wl(`${ticker} - Aktueller Stand`) : '',\n    });\n    else if (t === 'abbildung') content = embeds;\n    else if (t === 'originalinhalt') content = original;\n    else if (t.startsWith('originalabbildungen')) content = join(hatAbbildungAbschnitt ? '' : embeds, hatOriginalinhalt ? '' : original);\n    else content = b.lines.filter(l => !/\\[\\[[^\\]]*\\]\\]/.test(l)).join('\\n'); // Template-Gerüst (Tabellen, Listen) leer übernehmen\n    out.push(content ? content + '\\n' : '');\n  }\n  return out.join('\\n').replace(/\\n{3,}/g, '\\n\\n').trimEnd() + '\\n';\n}\n\n// ---------- Earnings (Kategorie 2) nach Template Analysten-Earnings (v1.3) ----------\nfunction renderEarnings(p, ticker, images, linkStatus, prev, next) {\n  const tpl = TEMPLATES['Analysten-Earnings'];\n  if (!tpl) throw new Error('Template Trading/Templates/Analysten-Earnings.md nicht gefunden');\n  const T = parseTemplate(tpl);\n  const fmT = parseFm(tpl);\n  const e = p.earnings;\n  const date = p.published_date;\n  const quartal = e.quartal || e.quartal_betreff || '';\n  const known = {\n    status: 'review', analyst: 'The Long Investor', veroffentlicht: date, instrument: q(ticker), ticker,\n    quartal: q(quartal), umsatz: q(e.umsatz.ist), umsatz_erwartung: q(e.umsatz.erwartung), umsatz_abweichung: q(e.umsatz.abweichung),\n    eps: q(e.eps.ist), eps_erwartung: q(e.eps.erwartung), eps_abweichung: q(e.eps.abweichung),\n    ergebnis: e.ergebnis || '', guidance: e.guidance.status || '', quell_url: q(p.post_url),\n    vorganger: prev ? q(wl(prev)) : '\"\"', vorgaenger: prev ? q(wl(prev)) : '\"\"', nachfolger: next ? q(wl(next)) : '\"\"',\n  };\n  const fm = ['---'];\n  for (const { key, value } of fmT) {\n    const n = norm(key).replace(/ /g, '_');\n    let v = known[n];\n    if (v == null) v = ['typ', 'quelle', 'kategorie'].includes(n) ? value : '';\n    fm.push(`${key}: ${v}`.replace(/\\s+$/, ''));\n  }\n  fm.push(\n    ...(e.quartal_betreff && e.quartal_betreff !== quartal ? [`quartal_betreff: ${q(e.quartal_betreff)}`] : []),\n    `quelle_werte: ${e.quelle_werte}`,\n    `betreff: ${q(p.subject)}`,\n    `einordnung_regel: ${q(p.regel)}`,\n    `datum_status: ${p.date_status}`,\n    `gmail_message_id: ${q(p.gmail_message_id)}`,\n    `pruefhinweise:${(p.warnings || []).length ? '\\n' + p.warnings.map(w => `  - ${q(w)}`).join('\\n') : ' []'}`,\n    `importiert_am: ${new Date().toISOString()}`,\n    'verarbeitung:',\n    `  workflow: ${q(WORKFLOW)}`,\n    `  prompt_version: ${q(p.prompt_version)}`,\n    `  modell: ${q(p.model)}`,\n    `  kosten_cent: ${p.usage ? p.usage.cost_cent : 0}`,\n    '---', '');\n\n  const zelle = s => esc(s || '').replace(/\\|/g, '/');\n  const tabelle = (kopf, zeilen) => zeilen.length\n    ? [kopf, '|' + kopf.split('|').slice(1, -1).map(() => '---').join('|') + '|', ...zeilen].join('\\n') : '';\n  const kennzahlZeilen = list => list.map(z => `| ${zelle(z.kennzahl)} | ${zelle(z.wert)} | ${zelle(z.qoq)} | ${zelle(z.yoy)} | ${zelle(z.anmerkung)} |`);\n  const KOPF5 = '| Kennzahl | Wert | QoQ | YoY | Anmerkung |';\n  const kopfZeile = (name, k) => `| ${name} | ${zelle(k.ist)} | ${zelle(k.erwartung)} | ${zelle(k.abweichung)} | ${zelle(k.ergebnis)} |`;\n  const bullets = list => (list || []).filter(Boolean).map(x => `- ${esc(x)}`).join('\\n');\n  const embeds = images.map(f => `![[${f}]]`).join('\\n');\n  const original = p.body_clean ? `**Originaltext:**\\n\\n${esc(p.body_clean).split('\\n').map(l => `> ${l}`).join('\\n')}` : '';\n  const hinweis = e.quelle_werte === 'text'\n    ? '> [!check] Kennzahlen aus dem Beitragstext übernommen (Claude) – bitte kurz prüfen und danach `status: geprüft` setzen.'\n    : '> [!check] Kennzahlen aus der Abbildung abgelesen (Claude) – bitte mit der Abbildung unten vergleichen und danach `status: geprüft` setzen.';\n\n  const out = [fm.join('\\n')];\n  for (const b of T.blocks) {\n    if (b.level === 1) {\n      const h1 = b.title.replace(/\\{\\{\\s*date\\s*\\}\\}/g, date).replace(/\\[Instrument\\]/g, ticker).replace(/\\[Quartal\\]/g, quartal).replace(/\\s{2,}/g, ' ').trim();\n      out.push('# ' + h1, '', hinweis, '');\n      continue;\n    }\n    out.push(`${'#'.repeat(b.level)} ${b.title}`);\n    const t = norm(b.title);\n    let content;\n    if (t === 'zusammenfassung') content = esc(e.zusammenfassung);\n    else if (t.startsWith('ergebnis gegenuber')) content = tabelle('| Kennzahl | Ist | Erwartung | Abweichung | Ergebnis |', [kopfZeile('Umsatz', e.umsatz), kopfZeile('EPS', e.eps)]);\n    else if (t === 'umsatz') content = tabelle(KOPF5, kennzahlZeilen(e.umsatz_zeilen));\n    else if (t.startsWith('operative')) content = tabelle(KOPF5, kennzahlZeilen(e.operative_zeilen));\n    else if (t.startsWith('profitabilitat')) content = tabelle(KOPF5, kennzahlZeilen(e.profit_zeilen));\n    else if (t.startsWith('ausblick')) content = e.guidance.status === 'keine' && !e.guidance.text ? 'Keine Prognose genannt.' : `**${esc(e.guidance.status)}**${e.guidance.text ? ' – ' + esc(e.guidance.text) : ''}`;\n    else if (t.startsWith('kommentar')) content = bullets(e.kommentar);\n    else if (t.startsWith('bezug zum technischen')) content = join(esc(e.bezug_technischer_stand), linkStatus ? `Aktueller technischer Stand: ${wl(`${ticker} - Aktueller Stand`)}` : '');\n    else if (t.startsWith('unsicherheiten')) content = bullets(e.risiken);\n    else if (t.startsWith('originalabbildungen')) content = join(embeds, original);\n    else if (t === 'quellenangabe') content = fillLabelLines(b.lines, {\n      plattform: 'Patreon', analyst: 'The Long Investor', veroffentlichungsdatum: date,\n      originalbeitrag: p.post_url || '', importart: p.is_forwarded ? 'E-Mail (weitergeleitet), Gmail-Automation' : 'E-Mail, Gmail-Automation',\n    });\n    else if (t === 'verknupfungen') content = fillLabelLines(b.lines, {\n      wertpapier: '', 'aktueller technischer stand': linkStatus ? wl(`${ticker} - Aktueller Stand`) : '',\n      'vorheriges quartal': prev ? wl(prev) : '', theorie: '',\n    });\n    else content = b.lines.filter(l => !/\\[\\[[^\\]]*\\]\\]/.test(l)).join('\\n');\n    out.push(content ? content + '\\n' : '');\n  }\n  return out.join('\\n').replace(/\\n{3,}/g, '\\n\\n').trimEnd() + '\\n';\n}\n\n// ---------- Verarbeitung je Mail ----------\nconst files = bestand.map(e => ({ ...e, changed: false, isNew: false }));\nconst mails = [];\nconst bilder = [];\nconst istAnalyseUpdate = e => /\\/1 technische Analyse\\/Updates$/.test(e.directory || '');\n\nconst items = $input.all().map(it => it.json)\n  .sort((x, y) => String(x.published_date).localeCompare(String(y.published_date)));\n\nfor (const p of items) {\n  const a = p.analysis || {};\n  const nr = p.kategorie_nr;\n  const basis = { gmail_message_id: p.gmail_message_id, subject: p.subject, kategorie_nr: nr, kategorie: p.kategorie, regel: p.regel };\n  if (nr === 0 || nr === 7) { mails.push({ ...basis, action: 'ignoriert', info: nr === 7 ? 'Video – wird derzeit nicht verarbeitet' : p.einordnung_grund }); continue; }\n  if (!p.ok) { mails.push({ ...basis, action: 'fehler', info: (p.errors || []).join('; ') }); continue; }\n  const dup = files.find(e => e.gmail_message_id && e.gmail_message_id === p.gmail_message_id);\n  if (dup) { mails.push({ ...basis, action: 'dublette', info: dup.file_name }); continue; }\n\n  let ticker = safe(p.ticker_hint || a.ticker).toUpperCase();\n  let dir, base, content;\n  const imgNames = [];\n  const bildNamen = stamm => (p.images || []).map((url, i) => {\n    const ext = ((url.split('?')[0].match(/\\.(png|jpe?g|gif|webp)$/i) || [])[1] || 'png').toLowerCase();\n    const fileName = `${stamm} - Abbildung ${i + 1}.${ext}`;\n    bilder.push({ kind: 'bild', url, file_name: fileName, target_path: `${MEDIA}/${fileName}`, gmail_message_id: p.gmail_message_id });\n    return fileName;\n  });\n  let prev = null, next = null;\n\n  if (nr === 1) {\n    // ---- Analyse: Inhalt von Claude, Template Analysten-Update ----\n    if (!ticker) { mails.push({ ...basis, action: 'fehler', info: 'Analyse ohne Ticker' }); continue; }\n    dir = `${ROOT}/${ticker}/1 technische Analyse/Updates`;\n    base = `${safe(p.published_date)} - ${ticker} - Analysten-Update`;\n    if (files.some(e => e.name === base)) base += ` - ${safe(p.gmail_message_id).slice(-6)}`;\n    imgNames.push(...bildNamen(base.replace(' - Analysten-Update', '')));\n    const chain = files\n      .filter(e => istAnalyseUpdate(e) && e.ticker === ticker && e.date && /^\\d{4}-\\d{2}-\\d{2}$/.test(e.date))\n      .sort((x, y) => (x.date + x.name).localeCompare(y.date + y.name));\n    const key = p.published_date + base;\n    prev = chain.filter(e => (e.date + e.name) < key).pop() || null;\n    next = chain.find(e => (e.date + e.name) > key) || null;\n    content = render(p, a, ticker, prev && prev.name, next && next.name, imgNames);\n  } else {\n    // ---- Platzhalter nach Kategorie-Template ----\n    const abl = ABLAGE[nr];\n    if (!abl) { mails.push({ ...basis, action: 'fehler', info: `Keine Ablage für Kategorie ${nr}` }); continue; }\n    if (nr >= 5) ticker = '';\n    dir = abl.ordner(ticker);\n    const kurz = safe(p.titel || p.subject).replace(/\\s+/g, ' ').slice(0, 60).trim() || 'ohne Titel';\n    base = ticker ? `${safe(p.published_date)} - ${ticker} - ${abl.wort}` : `${safe(p.published_date)} - ${abl.wort} - ${kurz}`;\n    if (files.some(e => e.name === base)) base += ` - ${safe(p.gmail_message_id).slice(-6)}`;\n    imgNames.push(...bildNamen(base));\n    const linkStatus = !!ticker && files.some(e => istAnalyseUpdate(e) && e.ticker === ticker);\n    if (nr === 2 && p.earnings) {\n      // ---- Earnings: Inhalt von Claude (Grafik + Text), Reihenfolge der Quartale je Ticker ----\n      const chain = files\n        .filter(e => e.directory === dir && e.date && /^\\d{4}-\\d{2}-\\d{2}$/.test(e.date))\n        .sort((x, y) => (x.date + x.name).localeCompare(y.date + y.name));\n      const key = p.published_date + base;\n      prev = chain.filter(e => (e.date + e.name) < key).pop() || null;\n      next = chain.find(e => (e.date + e.name) > key) || null;\n      content = renderEarnings(p, ticker, imgNames, linkStatus, prev && prev.name, next && next.name);\n    } else {\n      content = renderPlatzhalter(p, ticker, imgNames, abl.template, linkStatus);\n    }\n  }\n\n  const path = `${dir}/${base}.md`;\n  if (!path.startsWith(ROOT + '/') || path.includes('..')) throw new Error('Unzulässiger Zielpfad: ' + path);\n  files.push({ name: base, file_name: base + '.md', directory: dir, path, ticker, date: p.published_date, gmail_message_id: p.gmail_message_id, content, changed: true, isNew: true });\n\n  if (prev) { prev.content = setFm(prev.content, [KEY_NACH, 'nachfolger'], q(wl(base))); prev.changed = true; }\n  if (next) { next.content = setFm(next.content, [KEY_VOR, 'vorgänger', 'vorgaenger'], q(wl(base))); next.changed = true; }\n\n  mails.push({\n    ...basis, action: 'schreiben', info: base + '.md', ordner: dir.slice(ROOT.length + 1),\n    ticker, datum: p.published_date, vorgaenger: prev ? prev.name : '', nachfolger: next ? next.name : '',\n    abbildungen: imgNames.length, kosten_cent: p.usage ? p.usage.cost_cent : 0, warnungen: (p.warnings || []).length,\n  });\n}\n\n// ---------- Ordnerstruktur je Wertpapier ----------\n// Egal mit welcher Kategorie ein Ticker zum ersten Mal auftaucht (Analyse, Earnings, Bewertung, Grafik):\n// es wird immer die komplette Struktur <TICKER>/{1 technische Analyse/{Aktueller Stand,Updates}, 2 Earnings,\n// 3 Bewertung, 4 Grafiken & Kalender} angelegt. Vorhandene Ordner bleiben unverändert (mkdir -p).\n// Leere Ordner bekommen eine .gitkeep, damit sie auch im Git-Repo sichtbar sind.\nconst TICKER_ORDNER = ['1 technische Analyse/Aktueller Stand', '1 technische Analyse/Updates', '2 Earnings', '3 Bewertung', '4 Grafiken & Kalender'];\nfunction ordnerFuer(dir) {\n  const top = dir.slice(ROOT.length + 1).split('/')[0];\n  if (!top || /^\\d /.test(top)) return [dir];                     // Kategorie-Ordner ohne Ticker (5, 6, 8, 9)\n  return [...new Set([dir, ...TICKER_ORDNER.map(o => `${ROOT}/${top}/${o}`)])];\n}\nfunction mkdirBefehl(dirs) {\n  for (const d of dirs) {\n    if (!d.startsWith(ROOT + '/') || d.includes('..') || /[\"$`\\\\]/.test(d)) throw new Error('Unzulässiger Ordner: ' + d);\n  }\n  const quoted = dirs.map(d => `\"${d}\"`).join(' ');\n  return `mkdir -p ${quoted} && for d in ${quoted}; do [ -n \"$(ls -A \"$d\")\" ] || touch \"$d/.gitkeep\"; done`;\n}\n\nconst out = [];\nfor (const f of files.filter(f => f.changed)) {\n  const path = f.path || '';\n  if (!path.startsWith(ROOT + '/') || path.includes('..')) throw new Error('Unzulässiger Pfad beim Schreiben: ' + path);\n  const dir = path.slice(0, path.lastIndexOf('/'));\n  const ordner = ordnerFuer(dir);\n  out.push({ json: {\n    kind: 'datei', art: f.isNew ? 'neu' : 'reihenfolge_korrigiert',\n    target_dir: dir, target_path: path, file_name: f.file_name,\n    ordner_anlegen: ordner, befehl: mkdirBefehl(ordner),\n    content_b64: Buffer.from(f.content, 'utf8').toString('base64'),\n  } });\n}\nfor (const b of bilder) out.push({ json: b });\nfor (const m of mails) out.push({ json: { kind: 'mail', ...m } });\nreturn out;\n"
+      },
+      "id": "a1b2c3d4-0012-4000-8000-000000000012",
+      "name": "Zieldatei bestimmen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3360,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c13",
+              "leftValue": "={{ $json.kind }}",
+              "rightValue": "datei",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0013-4000-8000-000000000013",
+      "name": "Datei schreiben?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3600,
+        -300
+      ]
+    },
+    {
+      "parameters": {
+        "executeOnce": false,
+        "command": "={{ $json.befehl }}"
+      },
+      "id": "a1b2c3d4-0014-4000-8000-000000000014",
+      "name": "Ordner anlegen",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        3840,
+        -380
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Markdown als Datei vorbereiten (v0.9)\n// Holt die Datei-Einträge aus \"Datei schreiben?\" (true-Zweig) und hängt den Inhalt als Binärdatei an.\nconst src = $('Datei schreiben?').all(0);\nreturn src.map(s => {\n  const { content_b64, ...meta } = s.json;\n  return {\n    json: meta,\n    binary: { data: { data: content_b64, mimeType: 'text/markdown', fileName: meta.file_name, fileExtension: 'md' } },\n  };\n});\n"
+      },
+      "id": "a1b2c3d4-0015-4000-8000-000000000015",
+      "name": "Markdown als Datei",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4080,
+        -380
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $json.target_path }}",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0016-4000-8000-000000000016",
+      "name": "Datei in Vault schreiben",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        -380
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "c24",
+              "leftValue": "={{ $json.kind }}",
+              "rightValue": "bild",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "a1b2c3d4-0024-4000-8000-000000000024",
+      "name": "Bild?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        3600,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          },
+          "timeout": 30000
+        }
+      },
+      "id": "a1b2c3d4-0025-4000-8000-000000000025",
+      "name": "Bild herunterladen",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        3840,
+        -120
+      ],
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000
+    },
+    {
+      "parameters": {
+        "jsCode": "// Abbildung vorbereiten (v0.9)\n// Verbindet die heruntergeladenen Bilder mit Zielpfad/Dateiname aus \"Bild?\" (true-Zweig).\n// Fehlgeschlagene Downloads (ohne Binärdaten) werden übersprungen.\nconst src = $('Bild?').all(0);\nreturn $input.all()\n  .map((it, i) => ({ json: { ...src[i].json }, binary: it.binary }))\n  .filter(x => x.binary && x.binary.data)\n  .map(x => { x.binary.data.fileName = x.json.file_name; return x; });\n"
+      },
+      "id": "a1b2c3d4-0026-4000-8000-000000000026",
+      "name": "Abbildung vorbereiten",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4080,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "={{ $json.target_path }}",
+        "dataPropertyName": "data",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0027-4000-8000-000000000027",
+      "name": "Bild in Vault schreiben",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        4320,
+        -120
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 4: Ergebnis je Mail -> Ziel-Label bestimmen (v1.0)\n// schreiben / dublette -> FinVault/Verarbeitet · fehler -> FinVault/Fehler · ignoriert (Video, fremder Absender) -> FinVault/Ignoriert\nconst labels = $('Gmail: Labels holen').all().map(i => i.json);\nconst byName = n => labels.find(l => String(l.name).toLowerCase() === n.toLowerCase());\nconst L = {\n  eingang: byName('FinVault/Eingang'),\n  verarbeitet: byName('FinVault/Verarbeitet'),\n  fehler: byName('FinVault/Fehler'),\n  ignoriert: byName('FinVault/Ignoriert'),\n};\nconst fehlend = Object.entries(L).filter(([, v]) => !v).map(([k]) => 'FinVault/' + k[0].toUpperCase() + k.slice(1));\nif (fehlend.length) throw new Error('Gmail-Labels fehlen: ' + fehlend.join(', ') + ' – bitte in Gmail anlegen (Einstellungen → Labels → Neues Label, verschachtelt unter FinVault).');\nconst ziel = a => a === 'fehler' ? 'fehler' : a === 'ignoriert' ? 'ignoriert' : 'verarbeitet';\nreturn $('Zieldatei bestimmen').all()\n  .map(i => i.json)\n  .filter(j => j.kind === 'mail' && j.gmail_message_id)\n  .map(j => ({ json: {\n    ...j,\n    ziel_label_id: L[ziel(j.action)].id,\n    ziel_label: L[ziel(j.action)].name,\n    eingang_label_id: L.eingang.id,\n  } }));\n"
+      },
+      "id": "a1b2c3d4-0019-4000-8000-000000000019",
+      "name": "Ergebnis je Mail",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3600,
+        200
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "operation": "addLabels",
+        "messageId": "={{ $json.gmail_message_id }}",
+        "labelIds": "={{ [$json.ziel_label_id] }}"
+      },
+      "id": "a1b2c3d4-0020-4000-8000-000000000020",
+      "name": "Gmail: Ziel-Label setzen",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        3840,
+        200
+      ],
+      "webhookId": "9f8e7d6c-0020-4000-8000-000000000020"
+    },
+    {
+      "parameters": {
+        "operation": "removeLabels",
+        "messageId": "={{ $('Ergebnis je Mail').item.json.gmail_message_id }}",
+        "labelIds": "={{ [$('Ergebnis je Mail').item.json.eingang_label_id] }}"
+      },
+      "id": "a1b2c3d4-0021-4000-8000-000000000021",
+      "name": "Gmail: aus Eingang entfernen",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        4080,
+        200
+      ],
+      "webhookId": "9f8e7d6c-0021-4000-8000-000000000021"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Baustein 4: Log-Zeilen (JSON Lines) für System/Automation/patreon-import-log.jsonl (v1.0)\nconst now = new Date().toISOString();\nconst lines = $('Ergebnis je Mail').all().map(i => JSON.stringify({\n  timestamp: now,\n  workflow: 'FinVault Patreon → Vault v1.3',\n  gmail_message_id: i.json.gmail_message_id,\n  betreff: i.json.subject,\n  kategorie: i.json.kategorie_nr != null ? `${i.json.kategorie_nr} ${i.json.kategorie}` : '',\n  regel: i.json.regel || '',\n  ergebnis: i.json.action,\n  ziel_label: i.json.ziel_label,\n  datei: i.json.action === 'schreiben' ? `${i.json.ordner}/${i.json.info}` : '',\n  hinweis: i.json.action !== 'schreiben' ? i.json.info : '',\n  ticker: i.json.ticker || '',\n  abbildungen: i.json.abbildungen || 0,\n  kosten_cent: i.json.kosten_cent || 0,\n}));\nconst text = lines.join('\\n') + '\\n';\nreturn [{ json: { zeilen: lines.length }, binary: { data: { data: Buffer.from(text, 'utf8').toString('base64'), mimeType: 'application/x-ndjson', fileName: 'patreon-import-log.jsonl' } } }];\n"
+      },
+      "id": "a1b2c3d4-0022-4000-8000-000000000022",
+      "name": "Log bauen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4320,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "write",
+        "fileName": "/vault/Finanzen/Trading/System/Automation/patreon-import-log.jsonl",
+        "dataPropertyName": "data",
+        "options": {
+          "append": true
+        }
+      },
+      "id": "a1b2c3d4-0023-4000-8000-000000000023",
+      "name": "Log schreiben",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        4560,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## FinVault – Patreon → Vault v1.3 (Flow A)\n\nLäuft **alle 5 Minuten** (nach „Active/Publish“) oder manuell.\n\n1. Register + **alle Templates** (Trading/Templates/Analysten-*.md) + Bestand lesen, Gmail-Labels holen\n2. Mails aus *FinVault/Eingang* (max. 20) bereinigen\n3. **Beitrag einordnen** – regelbasiert nach Betreff (ohne KI): 1 Analyse · 2 Earnings · 3 Bewertung · 4 Grafiken & Kalender · 5 Markt & Makro · 6 Newsletter · 7 Video · 8 Sonstige · 9 Manuelle Prüfung\n4. **Nur 1 Analyse** → Claude Haiku extrahiert, Flow prüft → *<TICKER>/1 technische Analyse/Updates*\n5. **Pfad nach Kategorie**: jede Kategorie hat ihren eigenen Pfad. **2 Earnings**: Claude liest Grafik + Text → Earnings-Template. 3–6, 8, 9 legen vorerst eine **Platzhalter-Datei** an\n6. **Flow B** schreibt den Status je Wertpapier fort (nur Analyse)\n7. Mail → *Verarbeitet* / *Fehler* / *Ignoriert* (Video, fremder Absender), Log schreiben\n\nGmail-Labels: FinVault/Eingang, /Verarbeitet, /Fehler, /Ignoriert\n\nCredentials nach dem Import:\n- 4 Gmail-Nodes → **Gmail FinVault**\n- *Claude Haiku* → **Anthropic FinVault**\n- *Flow B: Status fortschreiben* → Workflow **FinVault – Status fortschreiben v0.2** auswählen",
+        "height": 560,
+        "width": 540
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "Hinweis",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -620
+      ]
+    },
+    {
+      "parameters": {
+        "fileSelector": "/vault/Finanzen/Trading/Templates/Analysten-*.md",
+        "options": {}
+      },
+      "id": "a1b2c3d4-0028-4000-8000-000000000028",
+      "name": "Templates lesen",
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1,
+      "position": [
+        240,
+        80
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "a1b2c3d4-0029-4000-8000-000000000029",
+      "name": "Register + Template",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        360,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Status-Aufträge für Flow B (v1.0): nur neu geschriebene Analyse-Updates (<TICKER>/1 technische Analyse/Updates)\nconst jobs = $('Zieldatei bestimmen').all().map(i => i.json)\n  .filter(j => j.kind === 'datei' && j.art === 'neu' && /\\/[^/]+\\/1 technische Analyse\\/Updates\\/[^/]+\\.md$/.test(j.target_path));\nreturn jobs.map(j => ({ json: { update_path: j.target_path } }));\n"
+      },
+      "id": "a1b2c3d4-0030-4000-8000-000000000030",
+      "name": "Status-Aufträge",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4560,
+        -380
+      ]
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "",
+          "mode": "list"
+        },
+        "workflowInputs": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": true
+        },
+        "mode": "once",
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "id": "a1b2c3d4-0031-4000-8000-000000000031",
+      "name": "Flow B: Status fortschreiben",
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.2,
+      "position": [
+        4800,
+        -380
+      ],
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Beitrag einordnen (v1.0) – regelbasiert, ohne KI\n// Entscheidungsbaum laut Prozessübersicht (Reihenfolge = Priorität, erster Treffer gewinnt):\n//   0 Nicht verarbeitet (fremder Absender) · 7 Video · 6 Newsletter · 2 Earnings · 3 Bewertung\n//   4 Grafiken & Kalender · 5 Markt & Makro · 1 Analyse · 9 Manuelle Prüfung · 8 Sonstige\n// Nur Kategorie 1 (mit Ticker) geht an Claude. Alle anderen bekommen vorerst eine Platzhalter-Datei.\n\nconst KATEGORIEN = {\n  0: 'Nicht verarbeitet', 1: 'Analyse', 2: 'Earnings', 3: 'Bewertung', 4: 'Grafiken & Kalender',\n  5: 'Markt & Makro', 6: 'Newsletter', 7: 'Video', 8: 'Sonstige', 9: 'Manuelle Prüfung',\n};\n\n// Regeln in Prioritätsreihenfolge. test(t) bekommt den normalisierten Titel (Originalschreibweise).\nconst REGELN = [\n  { nr: 7, regel: 'video', test: t => /\\bvideos?\\b/i.test(t) },\n  { nr: 6, regel: 'newsletter', test: t => /\\bthe\\s+lit\\s+(sunday\\s+)?(news|newsletter)\\b|\\bnewsletter\\b/i.test(t) },\n  { nr: 2, regel: 'earnings', test: t => /\\bearnings?\\s+results?\\b/i.test(t) || /\\bresults?\\b/i.test(t) || /\\bER\\b/.test(t)\n      || (/\\bearnings?\\b/i.test(t) && !/\\b(calendar|kalender)\\b/i.test(t)) },\n  { nr: 3, regel: 'bewertung', test: t => /\\bvaluation\\b|\\bfair\\s+value\\b|\\bbewertung\\b/i.test(t) },\n  { nr: 4, regel: 'grafik_kalender', test: t => /\\binfographics?\\b|\\b(earnings\\s+)?calendar\\b|\\bkalender\\b/i.test(t) },\n  { nr: 5, regel: 'makro', test: t => /\\b(treasury|bonds?|yields?|\\d{1,2}-year|inflation|fed|fomc|cpi|ppi|pce|gdp|macro|makro|interest\\s+rates?|rate\\s+(cut|hike)s?|jobs\\s+report|payrolls?|unemployment)\\b/i.test(t) },\n  { nr: 1, regel: 'analyse', test: t => TICKER_START.test(t) || /\\b(watchlist|buy\\s+zone|important\\s+level|top\\s+(10|20)|safe\\s+haven|elliott\\s+wave|ew\\s+count|wave\\s+count)\\b/i.test(t) },\n];\n// Ticker am Titelanfang: \"$UBER …\" oder \"UBER - …\" (Großbuchstaben, case-sensitiv)\nconst TICKER_START = /^(\\$[A-Z][A-Z0-9.]{0,6}\\b|[A-Z]{1,5}(\\.[A-Z])?\\s*[-–:|])/;\nconst TICKER_ANY = /\\$([A-Z][A-Z0-9.]{0,6})\\b/;\n\n// Betreff normalisieren: Weiterleitungs- und Patreon-Präfixe entfernen\nfunction titel(subject) {\n  return String(subject || '')\n    .replace(/^\\s*((fwd?|fw|wg|aw|re)\\s*:\\s*)+/i, '')\n    .replace(/^\\s*\\[?patreon\\]?\\s*[:\\-–]\\s*/i, '')\n    .replace(/^\\s*(new post from|neuer (beitrag|post) von)\\s+the long investor\\s*[:\\-–]?\\s*/i, '')\n    .replace(/^\\s*the long investor\\s+(posted|hat gepostet|hat einen beitrag veröffentlicht)\\s*[:\\-–]?\\s*/i, '')\n    .replace(/\\s+/g, ' ')\n    .trim();\n}\n\nfunction tickerAus(t) {\n  const m = t.match(TICKER_ANY);\n  if (m) return m[1];\n  const s = t.match(/^([A-Z]{1,5}(\\.[A-Z])?)\\s*[-–:|]/);\n  return s ? s[1] : '';\n}\n\nreturn $input.all().map(item => {\n  const p = item.json;\n  const t = titel(p.subject);\n  const errors = [...(p.errors || [])];\n  const warnings = [...(p.warnings || [])];\n  let nr, regel, grund = '';\n\n  // Absender prüfen: muss ein Patreon-Beitrag von The Long Investor sein (auch bei Weiterleitung)\n  const quelle = `${p.original_from || ''} ${p.post_url || ''}`;\n  const istPatreon = /patreon/i.test(quelle);\n  const istTLI = /long\\s*investor|thelonginvestor/i.test(quelle);\n  const treffer = REGELN.filter(r => r.test(t));\n  const ticker = tickerAus(t);\n\n  if (!istPatreon || !istTLI) {\n    nr = 0; regel = 'absender'; grund = `Absender/Link nicht als Patreon-Beitrag von The Long Investor erkennbar (${(p.original_from || 'unbekannt').slice(0, 80)})`;\n  } else if (treffer.length) {\n    nr = treffer[0].nr; regel = treffer[0].regel;\n  } else if (!t || t.replace(/[^A-Za-z0-9]/g, '').length < 3) {\n    nr = 9; regel = 'titel_unklar'; grund = 'Betreff leer oder zu kurz';\n  } else if (ticker) {\n    nr = 9; regel = 'ticker_ohne_art'; grund = `Ticker $${ticker} im Titel, aber keine eindeutige Beitragsart`;\n  } else {\n    nr = 8; regel = 'kein_treffer';\n  }\n\n  // Kategorien, die einem Wertpapier zugeordnet werden, brauchen einen Ticker\n  if ([1, 2, 3, 4].includes(nr) && !ticker) {\n    grund = `Kategorie ${nr} ${KATEGORIEN[nr]} erkannt (Regel \"${regel}\"), aber kein Ticker im Titel – Ablageort unklar`;\n    regel = `${regel}_ohne_ticker`; nr = 9;\n  }\n\n  // Fehler aus \"Mail bereinigen\", die nach der Einordnung nicht mehr gelten\n  const rest = errors.filter(e => {\n    if (/nicht Patreon/i.test(e)) return false;                       // übernimmt die Absenderprüfung oben\n    if (/zu kurz/i.test(e) && nr !== 1) return false;                  // Platzhalter brauchen keinen Mindesttext (z. B. Infografiken)\n    return true;\n  });\n  // Analyse (Ticker am Titelanfang) passt bei fast jedem Wertpapier-Beitrag mit – nicht als Konflikt melden\n  const weitere = treffer.slice(1).filter(r => r.nr !== 1).map(r => `${r.nr} ${KATEGORIEN[r.nr]}`);\n  if (weitere.length && nr === treffer[0].nr) warnings.push(`Titel passt auch zu: ${weitere.join(', ')} – nach Priorität als ${nr} ${KATEGORIEN[nr]} eingeordnet`);\n\n  const ok = rest.length === 0;\n  return {\n    json: {\n      ...p,\n      titel: t,\n      kategorie_nr: nr,\n      kategorie: KATEGORIEN[nr],\n      regel,\n      einordnung_grund: grund,\n      weitere_treffer: weitere,\n      ticker_hint: ticker || p.ticker_hint || '',\n      ki: ok && nr === 1,\n      ok,\n      errors: rest,\n      warnings,\n    },\n  };\n});\n"
+      },
+      "id": "14831b07-a4f3-47ef-ba12-88b6df2d98ff",
+      "name": "Beitrag einordnen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1920,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_ki",
+                    "leftValue": "={{ $json.ki }}",
+                    "rightValue": true,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "1 Analyse"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_2",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 2,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  },
+                  {
+                    "id": "r_2_ok",
+                    "leftValue": "={{ $json.ok }}",
+                    "rightValue": true,
+                    "operator": {
+                      "type": "boolean",
+                      "operation": "true",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "2 Earnings"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_3",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 3,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "3 Bewertung"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_4",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 4,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "4 Grafiken & Kalender"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_5",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 5,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "5 Markt & Makro"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_6",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 6,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "6 Newsletter"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_8",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 8,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "8 Sonstige"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_9",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 9,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "9 Manuelle Prüfung"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "r_0",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 0,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  },
+                  {
+                    "id": "r_7",
+                    "leftValue": "={{ $json.kategorie_nr }}",
+                    "rightValue": 7,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "or"
+              },
+              "renameOutput": true,
+              "outputKey": "7 Video / fremder Absender"
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra",
+          "renameFallbackOutput": "Fehler"
+        }
+      },
+      "id": "b036ccd1-3ac5-4903-8925-1ed819048576",
+      "name": "Pfad nach Kategorie",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        2160,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "id": "d5213a1e-e3c5-40c9-9a0b-73f6f2d712cb",
+      "name": "Zusammenführen",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.2,
+      "position": [
+        3120,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## Pfade je Kategorie\n**1 Analyse** (oben): Claude Haiku extrahiert → Analysten-Update → Flow B.\n\n**2 Earnings**: Bild laden → Claude liest Grafik + Text → Antwort prüfen → Earnings-Template.\n\nAlle anderen Kategorien haben ihren **eigenen Pfad**. Heute legen 3–6, 8 und 9 eine **Platzhalter-Datei** nach ihrem Template an (Originaltext + Abbildungen, Hinweis „folgt später“). Was später je Pfad passiert, steht im jeweiligen Node (Code-Kommentar) und in der Datei.",
+        "height": 1580,
+        "width": 760,
+        "color": 7
+      },
+      "id": "dc6048df-6842-4f81-87f4-4a5b4f2c45bc",
+      "name": "Pfade",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        -440
+      ]
+    },
+    {
+      "parameters": {
+        "url": "={{ ($json.images || [])[0] || 'https://invalid.invalid/kein-bild' }}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file",
+              "outputPropertyName": "data"
+            }
+          },
+          "timeout": 30000
+        }
+      },
+      "id": "83310730-c4ba-4da8-aff8-0a1e66541a8f",
+      "name": "2 Earnings: Bild laden",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2340,
+        -60
+      ],
+      "onError": "continueRegularOutput",
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 3000,
+      "notesInFlow": true,
+      "notes": "Lädt die Earnings-Grafik für Claude"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 2 Earnings: Anfrage an Claude bauen (v1.3)\n// Claude liest die Abbildung (Earnings-Grafik) UND den Beitragstext und füllt das Earnings-Schema.\n// Die Bilder kommen aus \"2 Earnings: Bild laden\" (gleiche Reihenfolge wie die Items aus dem Switch-Ausgang \"2 Earnings\").\n// Fehlt ein Bild (Download fehlgeschlagen), wird nur der Text geschickt.\n\nconst MODEL = 'claude-haiku-5-5';\nconst PROMPT_VERSION = 'earnings-extraction-v1';\nconst QUELLE = $('Pfad nach Kategorie').all(1); // Ausgang 1 = \"2 Earnings\"\n\nconst SYSTEM = `Du bist ein Extraktionssystem für Earnings-Beiträge des Analysten \"The Long Investor\". Du erhältst eine Earnings-Grafik (Bild) und den Beitragstext und rufst genau einmal das Werkzeug \"earnings_speichern\" auf.\n\nRegeln:\n1. Übernimm nur Werte, die in der Grafik oder im Text ausdrücklich stehen. Nichts schätzen, nichts berechnen, nichts ergänzen.\n2. Zahlen exakt wie abgebildet übernehmen, inklusive Vorzeichen, Einheit und Schreibweise (z. B. \"$228M\", \"−$0.66\", \"+66.2%\", \"+411 BPS\", \"n/m\"). Keine Umrechnung.\n3. \"quartal\" genau wie in der Grafik (z. B. \"Q1 FY27\"). Steht im Betreff eine andere Quartalsangabe, kommt sie in \"quartal_betreff\".\n4. Kopfzahlen: umsatz und eps jeweils mit ist, erwartung (est.), abweichung (z. B. \"+2.2%\") und ergebnis (beat | inline | miss), so wie in der Grafik angegeben. Fehlt etwas: leerer String.\n5. Tabellen zeilenweise übernehmen:\n   - umsatz_zeilen: Zeilen aus dem Umsatz-/Revenue-Block (inkl. Segmente)\n   - profit_zeilen: Zeilen aus Profit-, Margen-, Cashflow-Blöcken; bei Margen den Blocknamen in die Kennzahl schreiben (z. B. \"Bruttomarge\", \"Operative Marge\", \"Adj. EBITDA-Marge\")\n   - operative_zeilen: alle übrigen Kennzahlen (z. B. Nutzer, ARR, Backlog, Auslieferungen)\n   Jede Zeile: kennzahl (deutsch, Fachbegriffe wie EBITDA bleiben), wert, qoq, yoy, anmerkung (deutsch, höchstens 1 Satz, Zahlen exakt).\n6. guidance: status (angehoben | bestätigt | gesenkt | neu | keine) und text. \"keine\", wenn weder Grafik noch Text eine Prognose nennen.\n7. kommentar: die Kommentar-/Commentary-Punkte des Analysten auf Deutsch, je Punkt 1 Satz, Zahlen exakt.\n8. zusammenfassung: höchstens 3 Sätze auf Deutsch, sachlich, als Einschätzung des Analysten, keine eigene Bewertung.\n9. bezug_technischer_stand: nur wenn der Text Chart/Kursmarken erwähnt, sonst \"\".\n10. quelle_werte: \"abbildung\", \"text\" oder \"beides\" – woher die Kennzahlen stammen.\n11. Alle Texte auf Deutsch.`;\n\nconst zeile = {\n  type: 'object',\n  properties: { kennzahl: { type: 'string' }, wert: { type: 'string' }, qoq: { type: 'string' }, yoy: { type: 'string' }, anmerkung: { type: 'string' } },\n  required: ['kennzahl', 'wert'],\n};\nconst kopf = {\n  type: 'object',\n  properties: { ist: { type: 'string' }, erwartung: { type: 'string' }, abweichung: { type: 'string' }, ergebnis: { type: 'string', enum: ['beat', 'inline', 'miss', ''] } },\n  required: ['ist', 'erwartung', 'abweichung', 'ergebnis'],\n};\nconst TOOL = {\n  name: 'earnings_speichern',\n  description: 'Speichert die strukturierten Earnings-Daten des Beitrags.',\n  input_schema: {\n    type: 'object',\n    properties: {\n      quartal: { type: 'string' },\n      quartal_betreff: { type: 'string' },\n      zusammenfassung: { type: 'string' },\n      umsatz: kopf,\n      eps: kopf,\n      umsatz_zeilen: { type: 'array', items: zeile },\n      operative_zeilen: { type: 'array', items: zeile },\n      profit_zeilen: { type: 'array', items: zeile },\n      guidance: { type: 'object', properties: { status: { type: 'string', enum: ['angehoben', 'bestätigt', 'gesenkt', 'neu', 'keine'] }, text: { type: 'string' } }, required: ['status', 'text'] },\n      kommentar: { type: 'array', items: { type: 'string' } },\n      bezug_technischer_stand: { type: 'string' },\n      risiken: { type: 'array', items: { type: 'string' } },\n      quelle_werte: { type: 'string', enum: ['abbildung', 'text', 'beides'] },\n    },\n    required: ['quartal', 'zusammenfassung', 'umsatz', 'eps', 'umsatz_zeilen', 'profit_zeilen', 'guidance', 'kommentar', 'quelle_werte'],\n  },\n};\n\nconst out = [];\nconst bilder = $input.all();\nfor (let i = 0; i < QUELLE.length; i++) {\n  const p = QUELLE[i].json;\n  const content = [];\n  const bin = bilder[i] && bilder[i].binary && bilder[i].binary.data;\n  let bild = false;\n  if (bin) {\n    const mt = String(bin.mimeType || '').toLowerCase();\n    const mediaType = /jpe?g/.test(mt) ? 'image/jpeg' : /gif/.test(mt) ? 'image/gif' : /webp/.test(mt) ? 'image/webp' : 'image/png';\n    const data = (await this.helpers.getBinaryDataBuffer(i, 'data')).toString('base64');\n    content.push({ type: 'image', source: { type: 'base64', media_type: mediaType, data } });\n    bild = true;\n  }\n  content.push({ type: 'text', text: [\n    `Betreff: ${p.subject}`,\n    `Ticker: ${p.ticker_hint || 'unbekannt'}`,\n    `Veröffentlicht: ${p.published_date || 'unbekannt'}`,\n    bild ? 'Die Earnings-Grafik ist oben angehängt.' : 'Keine Grafik verfügbar – nur Text auswerten.',\n    '',\n    'Beitragstext:',\n    p.body_clean || '(kein Text)',\n  ].join('\\n') });\n\n  out.push({ json: {\n    ...p,\n    earnings_bild: bild,\n    model: MODEL,\n    prompt_version: PROMPT_VERSION,\n    request: {\n      model: MODEL,\n      max_tokens: 3000,\n      system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }],\n      tools: [TOOL],\n      tool_choice: { type: 'tool', name: 'earnings_speichern' },\n      messages: [{ role: 'user', content }],\n    },\n  } });\n}\nreturn out;\n"
+      },
+      "id": "f6843458-a6a1-408b-82eb-8a6ca33d8ffc",
+      "name": "2 Earnings: Prompt bauen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2520,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.anthropic.com/v1/messages",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "anthropicApi",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "options": {
+          "timeout": 90000
+        }
+      },
+      "id": "2170ba3f-3a1a-4634-94d8-2a4cc1ada2c8",
+      "name": "2 Earnings: Claude Haiku",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2700,
+        -60
+      ],
+      "retryOnFail": true,
+      "maxTries": 2,
+      "waitBetweenTries": 5000,
+      "notesInFlow": true,
+      "notes": "Liest Grafik + Text"
+    },
+    {
+      "parameters": {
+        "jsCode": "// 2 Earnings: Antwort von Claude prüfen (v1.3)\n// Holt das JSON aus der Werkzeug-Antwort, normalisiert es und setzt Prüfhinweise.\n// Werte aus einer Abbildung lassen sich nicht wörtlich im Text gegenprüfen -> immer Hinweis \"mit Abbildung vergleichen\".\n\nconst PRICE_IN = 0.10 / 1e6, PRICE_OUT = 0.50 / 1e6, PRICE_CACHE_WRITE = 0.125 / 1e6, PRICE_CACHE_READ = 0.01 / 1e6;\nconst sources = $('2 Earnings: Prompt bauen').all();\nconst PFAD = {\n  kategorie: '2 Earnings', ziel: '<TICKER>/2 Earnings', template: 'Analysten-Earnings',\n  heute: 'Claude liest Grafik + Text und füllt das Earnings-Template',\n  spaeter: ['Wertpapier-Übersicht <TICKER> aktualisieren'],\n};\n\nreturn $input.all().map((item, i) => {\n  const res = item.json;\n  const src = sources[i] ? sources[i].json : {};\n  const { request, ...meta } = src;\n  const errors = [];\n  const warnings = [...(meta.warnings || [])];\n\n  const tu = (res.content || []).find(c => c.type === 'tool_use');\n  let e = tu ? JSON.parse(JSON.stringify(tu.input)) : null;\n  if (!e || typeof e !== 'object') { errors.push('Keine strukturierte Earnings-Antwort von Claude erhalten' + (res.error ? `: ${JSON.stringify(res.error).slice(0, 200)}` : '')); e = {}; }\n\n  const str = v => (v == null ? '' : String(v)).replace(/<\\/?[a-z_]+(\\s[^>]*)?>/gi, '').replace(/\\|/g, '/').trim();\n  const arr = v => Array.isArray(v) ? v : (v == null || v === '' ? [] : (typeof v === 'string' && v.trim().startsWith('[') ? (() => { try { return JSON.parse(v); } catch (x) { return [v]; } })() : [v]));\n  const obj = v => (typeof v === 'string' ? (() => { try { return JSON.parse(v); } catch (x) { return {}; } })() : (v || {}));\n  const kopf = v => { const o = obj(v); return { ist: str(o.ist), erwartung: str(o.erwartung), abweichung: str(o.abweichung), ergebnis: ['beat', 'inline', 'miss'].includes(String(o.ergebnis || '').toLowerCase()) ? String(o.ergebnis).toLowerCase() : '' }; };\n  const zeilen = v => arr(v).map(obj).map(z => ({ kennzahl: str(z.kennzahl), wert: str(z.wert), qoq: str(z.qoq), yoy: str(z.yoy), anmerkung: str(z.anmerkung) })).filter(z => z.kennzahl || z.wert);\n\n  const g = obj(e.guidance);\n  const earn = {\n    quartal: str(e.quartal), quartal_betreff: str(e.quartal_betreff), zusammenfassung: str(e.zusammenfassung),\n    umsatz: kopf(e.umsatz), eps: kopf(e.eps),\n    umsatz_zeilen: zeilen(e.umsatz_zeilen), operative_zeilen: zeilen(e.operative_zeilen), profit_zeilen: zeilen(e.profit_zeilen),\n    guidance: { status: ['angehoben', 'bestätigt', 'gesenkt', 'neu', 'keine'].includes(g.status) ? g.status : 'keine', text: str(g.text) },\n    kommentar: arr(e.kommentar).map(str).filter(Boolean),\n    bezug_technischer_stand: str(e.bezug_technischer_stand),\n    risiken: arr(e.risiken).map(str).filter(Boolean),\n    quelle_werte: ['abbildung', 'text', 'beides'].includes(e.quelle_werte) ? e.quelle_werte : (meta.earnings_bild ? 'abbildung' : 'text'),\n  };\n  // Gesamtergebnis: beat nur, wenn kein miss dabei ist\n  const erg = [earn.umsatz.ergebnis, earn.eps.ergebnis].filter(Boolean);\n  earn.ergebnis = erg.includes('miss') ? (erg.includes('beat') ? 'gemischt' : 'miss') : erg.includes('beat') ? 'beat' : erg.length ? 'inline' : '';\n\n  // Pflichtprüfungen\n  if (!earn.zusammenfassung) errors.push('Zusammenfassung fehlt');\n  if (!earn.umsatz.ist && !earn.eps.ist && !earn.umsatz_zeilen.length) errors.push('Weder Umsatz noch EPS erkannt');\n  if (res.stop_reason === 'max_tokens') errors.push('Antwort von Claude wurde abgeschnitten (max_tokens)');\n\n  // Plausibilität (kein Abbruch)\n  for (const [name, k] of [['Umsatz', earn.umsatz], ['EPS', earn.eps]]) {\n    if (k.ist && !k.erwartung) warnings.push(`${name}: Erwartung fehlt`);\n    const abw = k.abweichung.replace(/[−–]/g, '-');\n    if (k.ergebnis === 'beat' && /^-/.test(abw)) warnings.push(`${name}: \"beat\", aber Abweichung negativ (${k.abweichung})`);\n    if (k.ergebnis === 'miss' && /^\\+/.test(abw)) warnings.push(`${name}: \"miss\", aber Abweichung positiv (${k.abweichung})`);\n  }\n  if (earn.quelle_werte !== 'text') warnings.push('Werte aus der Abbildung abgelesen – bitte mit der Abbildung vergleichen');\n  if (!meta.earnings_bild && (meta.images || []).length) warnings.push('Abbildung konnte nicht geladen werden – nur Text ausgewertet');\n\n  const u = res.usage || {};\n  const cost = (u.input_tokens || 0) * PRICE_IN + (u.output_tokens || 0) * PRICE_OUT + (u.cache_creation_input_tokens || 0) * PRICE_CACHE_WRITE + (u.cache_read_input_tokens || 0) * PRICE_CACHE_READ;\n\n  // Scheitert die Auswertung, geht nichts verloren: es entsteht die Platzhalter-Datei mit den Fehlern als Prüfhinweis\n  if (errors.length) warnings.unshift(...errors.map(x => `Earnings-Auswertung fehlgeschlagen: ${x} – Platzhalter angelegt`));\n  return { json: {\n    ...meta,\n    pfad: errors.length ? { ...PFAD, heute: 'Auswertung fehlgeschlagen – Platzhalter', spaeter: ['Beitrag erneut verarbeiten oder von Hand ausfüllen'] } : PFAD,\n    warnings,\n    earnings: errors.length ? null : earn,\n    usage: { input_tokens: u.input_tokens || 0, output_tokens: u.output_tokens || 0, cost_usd: Number(cost.toFixed(6)), cost_cent: Number((cost * 100).toFixed(4)) },\n  } };\n});\n"
+      },
+      "id": "6e157874-3448-4d0d-985b-51ae20cded84",
+      "name": "2 Earnings: Antwort prüfen",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -60
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// 3 Bewertung (Platzhalter) (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: Platzhalter-Datei nach Template Analysten-Bewertung (Originaltext + Abbildungen).\n// Später geplant:\n//   1. Claude extrahiert Methode, fairen Wert und Spanne, Annahmen, Bear/Base/Bull\n//   2. Template Analysten-Bewertung füllen\n//   3. Verknüpfen: vorherige Bewertung, letzte Earnings\n//   4. Wertpapier-Übersicht <TICKER> aktualisieren\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"3 Bewertung\",\n  \"ziel\": \"<TICKER>/3 Bewertung\",\n  \"template\": \"Analysten-Bewertung\",\n  \"heute\": \"Platzhalter-Datei nach Template Analysten-Bewertung (Originaltext + Abbildungen)\",\n  \"spaeter\": [\n    \"Claude extrahiert Methode, fairen Wert und Spanne, Annahmen, Bear/Base/Bull\",\n    \"Template Analysten-Bewertung füllen\",\n    \"Verknüpfen: vorherige Bewertung, letzte Earnings\",\n    \"Wertpapier-Übersicht <TICKER> aktualisieren\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "25af5c7d-327f-48e1-89ff-52e5f2be1e1f",
+      "name": "3 Bewertung (Platzhalter)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        80
+      ],
+      "notes": "Heute: Platzhalter-Datei · Später: Claude extrahiert Methode, fairen Wert und Spanne, Annahmen, Bear/Base/Bull",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 4 Grafiken & Kalender (Platzhalter) (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: Platzhalter-Datei nach Template Analysten-Grafik-Kalender (Originaltext + Abbildungen).\n// Später geplant:\n//   1. Abbildung mit Claude (Bildanalyse) auswerten\n//   2. Infografik: Kernaussagen · Kalender: Termine-Tabelle füllen\n//   3. Ablage für Kalender ohne Ticker festlegen\n//   4. Erwähnte Wertpapiere verlinken\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"4 Grafiken & Kalender\",\n  \"ziel\": \"<TICKER>/4 Grafiken & Kalender\",\n  \"template\": \"Analysten-Grafik-Kalender\",\n  \"heute\": \"Platzhalter-Datei nach Template Analysten-Grafik-Kalender (Originaltext + Abbildungen)\",\n  \"spaeter\": [\n    \"Abbildung mit Claude (Bildanalyse) auswerten\",\n    \"Infografik: Kernaussagen · Kalender: Termine-Tabelle füllen\",\n    \"Ablage für Kalender ohne Ticker festlegen\",\n    \"Erwähnte Wertpapiere verlinken\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "f49465a6-e2fb-4d36-a6fa-c49d43a6bca4",
+      "name": "4 Grafiken & Kalender (Platzhalter)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        220
+      ],
+      "notes": "Heute: Platzhalter-Datei · Später: Abbildung mit Claude (Bildanalyse) auswerten",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 5 Markt & Makro (Platzhalter) (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: Platzhalter-Datei nach Template Analysten-Markt-Makro (Originaltext + Abbildungen).\n// Später geplant:\n//   1. Claude extrahiert Indikatoren (Wert, Vorwert, Erwartung) und Einordnung\n//   2. Template Analysten-Markt-Makro füllen\n//   3. Betroffene Wertpapiere und vorherigen Beitrag zum Thema verlinken\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"5 Markt & Makro\",\n  \"ziel\": \"5 Markt & Makro\",\n  \"template\": \"Analysten-Markt-Makro\",\n  \"heute\": \"Platzhalter-Datei nach Template Analysten-Markt-Makro (Originaltext + Abbildungen)\",\n  \"spaeter\": [\n    \"Claude extrahiert Indikatoren (Wert, Vorwert, Erwartung) und Einordnung\",\n    \"Template Analysten-Markt-Makro füllen\",\n    \"Betroffene Wertpapiere und vorherigen Beitrag zum Thema verlinken\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "59d842a4-9514-4918-ba84-539a0815f427",
+      "name": "5 Markt & Makro (Platzhalter)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        360
+      ],
+      "notes": "Heute: Platzhalter-Datei · Später: Claude extrahiert Indikatoren (Wert, Vorwert, Erwartung) und Einordnung",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 6 Newsletter (Platzhalter) (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: Platzhalter-Datei nach Template Analysten-Newsletter (Originaltext + Abbildungen).\n// Später geplant:\n//   1. Newsletter in einzelne Meldungen zerlegen\n//   2. Je Meldung Thema, Wertpapiere, Kernaussagen, TL;DR\n//   3. Erwähnungen in den Wertpapier-Übersichten eintragen\n//   4. Vorherige Ausgabe verlinken\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"6 Newsletter\",\n  \"ziel\": \"6 Newsletter\",\n  \"template\": \"Analysten-Newsletter\",\n  \"heute\": \"Platzhalter-Datei nach Template Analysten-Newsletter (Originaltext + Abbildungen)\",\n  \"spaeter\": [\n    \"Newsletter in einzelne Meldungen zerlegen\",\n    \"Je Meldung Thema, Wertpapiere, Kernaussagen, TL;DR\",\n    \"Erwähnungen in den Wertpapier-Übersichten eintragen\",\n    \"Vorherige Ausgabe verlinken\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "9fa927a1-1ff8-4e5f-9a96-11d7fe781051",
+      "name": "6 Newsletter (Platzhalter)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        500
+      ],
+      "notes": "Heute: Platzhalter-Datei · Später: Newsletter in einzelne Meldungen zerlegen",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 8 Sonstige (Platzhalter) (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: Platzhalter-Datei nach Template Analysten-Sonstige (Originaltext + Abbildungen).\n// Später geplant:\n//   1. Kurze Zusammenfassung und Kernaussagen (optional mit Claude)\n//   2. Erwähnte Wertpapiere verlinken\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"8 Sonstige\",\n  \"ziel\": \"8 Sonstige\",\n  \"template\": \"Analysten-Sonstige\",\n  \"heute\": \"Platzhalter-Datei nach Template Analysten-Sonstige (Originaltext + Abbildungen)\",\n  \"spaeter\": [\n    \"Kurze Zusammenfassung und Kernaussagen (optional mit Claude)\",\n    \"Erwähnte Wertpapiere verlinken\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "13b00f1d-c6da-4217-8ba7-35c02ed02564",
+      "name": "8 Sonstige (Platzhalter)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        640
+      ],
+      "notes": "Heute: Platzhalter-Datei · Später: Kurze Zusammenfassung und Kernaussagen (optional mit Claude)",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// 9 Manuelle Prüfung (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: Platzhalter-Datei nach Template Analysten-Sonstige (Originaltext + Abbildungen).\n// Später geplant:\n//   1. Optional: Claude schlägt eine Kategorie vor\n//   2. Nach Prüfung von Hand in den richtigen Ordner verschieben\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"9 Manuelle Prüfung\",\n  \"ziel\": \"9 Manuelle Prüfung\",\n  \"template\": \"Analysten-Sonstige\",\n  \"heute\": \"Platzhalter-Datei nach Template Analysten-Sonstige (Originaltext + Abbildungen)\",\n  \"spaeter\": [\n    \"Optional: Claude schlägt eine Kategorie vor\",\n    \"Nach Prüfung von Hand in den richtigen Ordner verschieben\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "82cd6c34-9e80-4b4e-8a72-53404c917fb9",
+      "name": "9 Manuelle Prüfung",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        780
+      ],
+      "notes": "Heute: Platzhalter-Datei · Später: Optional: Claude schlägt eine Kategorie vor",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Ignorieren (7 Video, 0 fremder Absender) (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: keine Datei, nur Gmail-Label.\n// Später geplant:\n//   1. Video: evtl. Transkript erstellen und wie Analyse auswerten\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"7 Video / fremder Absender\",\n  \"ziel\": \"– (keine Datei, Gmail-Label FinVault/Ignoriert)\",\n  \"template\": \"\",\n  \"heute\": \"keine Datei, nur Gmail-Label\",\n  \"spaeter\": [\n    \"Video: evtl. Transkript erstellen und wie Analyse auswerten\"\n  ]\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "8125b80a-c390-43ff-831c-b0a20e53f139",
+      "name": "Ignorieren (7 Video, 0 fremder Absender)",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        920
+      ],
+      "notes": "Heute: nur Gmail-Label · Später: Video: evtl. Transkript erstellen und wie Analyse auswerten",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "jsCode": "// Fehler vor KI (v1.0)\n// Dieser Pfad ist eingerichtet. Heute: keine Datei, nur Gmail-Label.\n// Der Node markiert nur den Pfad; Datei bzw. Gmail-Label setzt \"Zieldatei bestimmen\".\nconst PFAD = {\n  \"kategorie\": \"Fehler\",\n  \"ziel\": \"– (keine Datei, Gmail-Label FinVault/Fehler)\",\n  \"template\": \"\",\n  \"heute\": \"keine Datei, nur Gmail-Label\",\n  \"spaeter\": []\n};\nreturn $input.all().map(i => ({ json: { ...i.json, pfad: PFAD } }));\n"
+      },
+      "id": "f9327ed5-f3fa-4f61-9ad0-1dae11819c01",
+      "name": "Fehler vor KI",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        1060
+      ],
+      "notes": "Heute: nur Gmail-Label",
+      "notesInFlow": true
+    }
+  ],
+  "connections": {
+    "Manuell starten": {
+      "main": [
+        [
+          {
+            "node": "Register lesen",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Templates lesen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Alle 5 Minuten": {
+      "main": [
+        [
+          {
+            "node": "Register lesen",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Templates lesen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Register vorbereiten": {
+      "main": [
+        [
+          {
+            "node": "Bestand lesen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bestand lesen": {
+      "main": [
+        [
+          {
+            "node": "Bestand auswerten",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bestand auswerten": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Labels holen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Labels holen": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Mails aus FinVault/Eingang",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Mails aus FinVault/Eingang": {
+      "main": [
+        [
+          {
+            "node": "Mail bereinigen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mail bereinigen": {
+      "main": [
+        [
+          {
+            "node": "Beitrag einordnen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Prompt bauen": {
+      "main": [
+        [
+          {
+            "node": "Claude Haiku",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Claude Haiku": {
+      "main": [
+        [
+          {
+            "node": "Antwort prüfen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Antwort prüfen": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zieldatei bestimmen": {
+      "main": [
+        [
+          {
+            "node": "Datei schreiben?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Bild?",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Ergebnis je Mail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Datei schreiben?": {
+      "main": [
+        [
+          {
+            "node": "Ordner anlegen",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Ordner anlegen": {
+      "main": [
+        [
+          {
+            "node": "Markdown als Datei",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Markdown als Datei": {
+      "main": [
+        [
+          {
+            "node": "Datei in Vault schreiben",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Bild?": {
+      "main": [
+        [
+          {
+            "node": "Bild herunterladen",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Bild herunterladen": {
+      "main": [
+        [
+          {
+            "node": "Abbildung vorbereiten",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Abbildung vorbereiten": {
+      "main": [
+        [
+          {
+            "node": "Bild in Vault schreiben",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ergebnis je Mail": {
+      "main": [
+        [
+          {
+            "node": "Gmail: Ziel-Label setzen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: Ziel-Label setzen": {
+      "main": [
+        [
+          {
+            "node": "Gmail: aus Eingang entfernen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail: aus Eingang entfernen": {
+      "main": [
+        [
+          {
+            "node": "Log bauen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Log bauen": {
+      "main": [
+        [
+          {
+            "node": "Log schreiben",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Register lesen": {
+      "main": [
+        [
+          {
+            "node": "Register + Template",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Register + Template": {
+      "main": [
+        [
+          {
+            "node": "Register vorbereiten",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Datei in Vault schreiben": {
+      "main": [
+        [
+          {
+            "node": "Status-Aufträge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Status-Aufträge": {
+      "main": [
+        [
+          {
+            "node": "Flow B: Status fortschreiben",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Templates lesen": {
+      "main": [
+        [
+          {
+            "node": "Register + Template",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Beitrag einordnen": {
+      "main": [
+        [
+          {
+            "node": "Pfad nach Kategorie",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2 Earnings: Bild laden": {
+      "main": [
+        [
+          {
+            "node": "2 Earnings: Prompt bauen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2 Earnings: Prompt bauen": {
+      "main": [
+        [
+          {
+            "node": "2 Earnings: Claude Haiku",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2 Earnings: Claude Haiku": {
+      "main": [
+        [
+          {
+            "node": "2 Earnings: Antwort prüfen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2 Earnings: Antwort prüfen": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "3 Bewertung (Platzhalter)": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "4 Grafiken & Kalender (Platzhalter)": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "5 Markt & Makro (Platzhalter)": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "6 Newsletter (Platzhalter)": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "8 Sonstige (Platzhalter)": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "9 Manuelle Prüfung": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "Ignorieren (7 Video, 0 fremder Absender)": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "Fehler vor KI": {
+      "main": [
+        [
+          {
+            "node": "Zusammenführen",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "Pfad nach Kategorie": {
+      "main": [
+        [
+          {
+            "node": "Prompt bauen",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "2 Earnings: Bild laden",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "3 Bewertung (Platzhalter)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "4 Grafiken & Kalender (Platzhalter)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "5 Markt & Makro (Platzhalter)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "6 Newsletter (Platzhalter)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "8 Sonstige (Platzhalter)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "9 Manuelle Prüfung",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Ignorieren (7 Video, 0 fremder Absender)",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Fehler vor KI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Zusammenführen": {
+      "main": [
+        [
+          {
+            "node": "Zieldatei bestimmen",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "timezone": "Europe/Berlin"
+  },
+  "pinData": {}
+}
