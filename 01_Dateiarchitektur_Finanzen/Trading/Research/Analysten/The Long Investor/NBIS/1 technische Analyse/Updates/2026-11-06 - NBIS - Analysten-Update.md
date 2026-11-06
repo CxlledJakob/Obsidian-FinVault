@@ -11,7 +11,7 @@ analyseart:
   - technisch
 zeithorizont: ""
 quell_url: "https://www.patreon.com/thelonginvestor/posts/nbis-174556832"
-vorgänger: ""
+vorgänger: "[[2026-11-05 - NBIS - Analysten-Update]]"
 nachfolger: ""
 hauptkategorie: Technisch
 kategorie: "1 Analyse"

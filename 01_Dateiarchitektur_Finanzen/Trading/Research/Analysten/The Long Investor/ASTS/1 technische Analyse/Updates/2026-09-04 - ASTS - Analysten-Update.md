@@ -17,7 +17,7 @@ quell_url: "https://www.patreon.com/thelonginvestor/posts/asts-168583397"
 gmail_message_id: "1a06bf3d36f76207"
 inhalt_vollstaendig: true
 vorgaenger:
-nachfolger:
+nachfolger: "[[2026-11-05 - ASTS - Analysten-Update]]"
 importiert_am: 2026-09-04T17:52:26.503Z
 ---
 # 2026-09-04 - ASTS - Analysten-Update

@@ -1,0 +1,199 @@
+{
+  "schema": "status-v1",
+  "ticker": "SPCX",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/SPCX/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-04",
+    "update": "2026-11-04 - SPCX - Analysten-Update"
+  },
+  "next_id": 4,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 132,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Buy Zone bei bestätigter Unterstützung) (Bestätigung abwarten)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "widerstand",
+      "wert": 149,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 Day MA (Zurückerobern und Halten als frühes Signal)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "zone",
+      "wert": 132,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone bei bestätigter Unterstützung am 0.618 Fib",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht SPCX nach einem vorherigen Anstieg in einem Rücksetzer, der Kurs liegt im Premarket bei 134 USD knapp über dem 0.618 Fib bei 132 USD. Bis zu einer bestätigten Unterstützung rät er ausdrücklich zur Geduld und zu keinen Käufen. Ein tieferer Pullback für Welle C unter 105 USD bleibt möglich.",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet, dass das Ende des Pullbacks früh signalisiert wird, wenn der Kurs am 0.618 Fib bei 132 USD eine Unterstützung findet und anschließend über dem 50 Day MA bei 149 USD hält.",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Der Analyst hält einen tieferen Pullback für Welle C für möglich, mit einem Rückgang unter 105 USD.",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Verhalten des Kurses am 0.618 Fib bei 132 USD (bestätigte Unterstützung als Kaufzone)\n- Rückeroberung und Halten über dem 50 Day MA bei 149 USD\n- Rückgang unter 105 USD als Hinweis auf tieferen Pullback für Welle C",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Der Analyst sieht einen möglichen Pullback als Welle C.",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 50 Day MA bei 149 USD: Zurückerobern und Halten gilt als frühes Signal, dass der Pullback abgeschlossen ist",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.618 Fib bei 132 USD: Mögliche Buy Zone bei bestätigter Unterstützung; bis zur Bestätigung abwarten",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Bestätigte Unterstützung am 0.618 Fib bei 132 USD\n- Rückeroberung und Halten über dem 50 Day MA bei 149 USD",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Möglicher tieferer Pullback für Welle C unter 105 USD\n- Kein Invalidierungsniveau genannt\n- Kein Kursziel genannt\n- Kein Zeithorizont genannt",
+      "stand": {
+        "datum": "2026-11-04",
+        "update": "2026-11-04 - SPCX - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-04",
+      "update": "2026-11-04 - SPCX - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T23:40:53.763Z",
+      "kosten_cent": 0.0986
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-04",
+    "update": "2026-11-04 - SPCX - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:40:53.763Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.0986
+  }
+}

@@ -13,7 +13,7 @@ analyseart:
 zeithorizont: ""
 quell_url: "https://www.patreon.com/thelonginvestor/posts/uber-174174222"
 vorgänger: ""
-nachfolger: ""
+nachfolger: "[[2026-11-04 - UBER - Analysten-Update]]"
 hauptkategorie: Technisch
 datum_status: aus_beitrag
 gmail_message_id: "1a19d3e37522e961"

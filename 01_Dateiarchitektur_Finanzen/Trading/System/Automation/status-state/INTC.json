@@ -1,0 +1,225 @@
+{
+  "schema": "status-v1",
+  "ticker": "INTC",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/INTC/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - INTC - Analysten-Update"
+  },
+  "next_id": 5,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 45.01,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.78 Fib / 200 WMA Confluence (Bereich, der halten soll)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "zone",
+      "wert": 56.8,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone (aktueller Bereich)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "kursziel",
+      "wert": 244,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "1.618 Fib Extension (Bei Drehpunkt wieder im Spiel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "kursziel",
+      "wert": 168,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Zwischenmarke (Bei Drehpunkt wieder im Spiel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht INTC nach dem Durchbruch durch die 0.5 Fib (80,4 USD) und die 0.618 Fib (65,8 USD) bei rund 56,8 USD in der Kaufzone. Er wertet die Bewegung als Welle C einer Korrektur nach einer großen Welle 5. Ein Halten der 0.78 Fib bei 45,01 USD mit dem 200 WMA gilt als wichtige Unterstützung.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst geht davon aus, dass sich der Kurs in einer Korrektur (Welle C nach einer großen Welle 5) befindet. Die Zone um 45,01 USD (0.78 Fib / 200 WMA) soll halten. Ein Drehpunkt aus dieser Zone könnte 168 USD und das 1.618-Extension-Ziel bei 244 USD wieder ins Spiel bringen. Ein Boden ist laut Analyst noch nicht erkennbar.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Halten der Zone um 45,01 USD (0.78 Fib / 200 WMA) als Unterstützung\n- Drehpunkt aus der Zone um 56,8 USD (Kaufzone) mit Unterstützungsbestätigung, der 168 USD und 244 USD wieder ins Spiel bringt",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Der Analyst wertet die aktuelle Bewegung als Welle C einer Korrektur nach einer großen Welle 5.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Tiefe Korrektur nach starkem Aufwärtslauf; der Kurs liegt unterhalb der Fib-Marken 80,4 USD und 65,8 USD, die durchbrochen wurden. Noch kein Boden erkennbar.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA: bildet zusammen mit der 0.78 Fib bei 45,01 USD eine Confluence-Unterstützung, die laut Analyst halten soll",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.5 Fib bei 80,4 USD: durchbrochen\n- 0.618 Fib bei 65,8 USD: durchbrochen\n- 0.78 Fib bei 45,01 USD: Confluence mit 200 WMA, Unterstützungsbereich\n- 1.618 Fib Extension bei 244 USD: Kursziel, bei Drehpunkt wieder im Spiel",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Halten der Unterstützung bei 45,01 USD (0.78 Fib / 200 WMA)\n- Bestätigung einer Bodenbildung (noch kein Boden erkennbar)\n- Support-Bestätigung aus der Kaufzone um 56,8 USD als Drehpunkt",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Keine Invalidierungsmarke genannt\n- Kein Zeithorizont genannt\n- Keine konkrete Bestätigungsbedingung für eine Bodenbildung genannt\n- Street-Konsens: Hold, Durchschnittskursziel ca. 92 bis 97 USD, Spanne 160 bis 200 USD (Hoch), rund 50 Analysten",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - INTC - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-05",
+      "update": "2026-11-05 - INTC - Analysten-Update",
+      "nachtrag": false,
+      "neu": 4,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T23:41:14.001Z",
+      "kosten_cent": 0.1161
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Fibonacci-Projektion",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - INTC - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:41:14.001Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1161
+  }
+}

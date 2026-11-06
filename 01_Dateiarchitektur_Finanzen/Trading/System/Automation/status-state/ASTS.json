@@ -1,0 +1,243 @@
+{
+  "schema": "status-v1",
+  "ticker": "ASTS",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/ASTS/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - ASTS - Analysten-Update"
+  },
+  "next_id": 6,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 34.45,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (Aktueller Kurs laut Beitrag, Haltestelle)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 28.95,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.78 Fib (Direkt unterhalb des 200 WMA)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "widerstand",
+      "wert": 65.52,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.5 Fib (Nächstes Ziel nach Bodenbildung)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "zone",
+      "wert": 27,
+      "wert_bis": 34.45,
+      "waehrung": "USD",
+      "beschreibung": "Kaufzone (\"load the boat\") laut Analyst",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "kursziel",
+      "wert": 169,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Ziel (Bei Bodenbildung am 200 WMA)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht ASTS auf der 200-Wochen-Gleitenden bei etwa 34,45 USD, wo Welle C enden sollte. Die Zone zwischen aktuellem Kurs und 27 USD bezeichnet er als Kaufzone. Eine Bodenbildung am 200 WMA würde laut Analyst den Weg zum 0.5 Fib bei 65,52 USD und zum Ziel von 169 USD öffnen.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet, dass eine Bodenbildung am 200 WMA bei etwa 34,45 USD Welle C beendet. Anschließend erwartet er einen Anstieg Richtung 0.5 Fib bei 65,52 USD und das Kursziel von 169 USD.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Bodenbildung am 200 WMA (ca. 34,45 USD) als Bestätigung des Primärszenarios\n- Turn vom 200 WMA öffnet laut Analyst den Weg zum 0.5 Fib bei 65,52 USD und zum Ziel 169 USD\n- Earnings am 9. November nach Börsenschluss",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Welle C ist laufend; das Ende wird am 200 WMA bei etwa 34,45 USD erwartet. Welle A-B-Hoch lag bei etwa 135 USD.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Kurs ist unter Druck und auf den 200 WMA abgerutscht. Der Sektor leidet laut Analyst unter politischen Entwicklungen nach der US-Wahl.",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 WMA bei etwa 34,45 USD: Der Kurs liegt laut Analyst auf diesem Durchschnitt; er erwartet hier das Ende von Welle C und eine mögliche Bodenbildung",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.78 Fib bei 28,95 USD: direkt unterhalb des 200 WMA, Unterstützung\n- 0.5 Fib bei 65,52 USD: nächstes Ziel nach einer Bodenbildung, Widerstand",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Bodenbildung und Haltebestätigung am 200 WMA (ca. 34,45 USD)\n- Earnings am 9. November nach Börsenschluss\n- Invalidierungsniveau wird im Update nicht genannt\n- Zeithorizont wird im Update nicht genannt",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Politischer Gegenwind für Elon-Musk-Unternehmen nach der Wahl; laut Analyst hat der Sektor nach der Wahl weiter Druck erhalten\n- Earnings am 9. November als Risikoereignis\n- Kein Invalidierungsniveau genannt\n- Kein Zeithorizont genannt\n- Positionsgröße und Risikolimit bei der geplanten Aufstockung nicht genannt\n- Street-Einschätzung: Hold, durchschnittliches Kursziel etwa 75 bis 80 USD, Hoch 108 USD, 13 bis 14 Analysten",
+      "stand": {
+        "datum": "2026-11-05",
+        "update": "2026-11-05 - ASTS - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-05",
+      "update": "2026-11-05 - ASTS - Analysten-Update",
+      "nachtrag": false,
+      "neu": 5,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T23:41:08.919Z",
+      "kosten_cent": 0.1186
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    },
+    {
+      "begriff": "Konsolidierung",
+      "ziel": "Trading/Notes/01 - Marktstruktur & Price Action/Konsolidierung"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-05",
+    "update": "2026-11-05 - ASTS - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:41:08.919Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1186
+  }
+}

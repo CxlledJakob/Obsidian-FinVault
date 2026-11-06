@@ -1,0 +1,186 @@
+{
+  "schema": "status-v1",
+  "ticker": "NVDA",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/NVDA/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - NVDA - Analysten-Update"
+  },
+  "next_id": 4,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 146,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.38 Fib (Kaufbereich laut Analyst)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "widerstand",
+      "wert": 204,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 Day MA (Erwarteter Widerstand bei Erholung)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "zone",
+      "wert": 146,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Kaufbereich unterhalb 0.38 Fib",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "NVDA steigt laut Analyst aktuell um 4,5 % auf 189 USD nach einem Test des 0.23 Fib bei 180 USD. Der Analyst sieht die Erholung als Relief Bounce und erwartet vor einem Ende der Korrektur einen tieferen Rücksetzer. Käufe möchte er unterhalb des 0.38 Fib bei 146 USD beginnen.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Die Erholung ist laut Analyst ein Relief Bounce. Danach erwartet er einen tieferen Rücksetzer zur Vervollständigung der Korrektur. Es sei laut Analyst viel zu früh, um zu sagen, dass das Schlimmste hinter uns liegt.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Steigt der Kurs weiter, wird der 200 Day MA bei 204 USD als Widerstand beobachtet. Idealerweise erwartet der Analyst dort einen Rücksetzer, um die Korrektur abzuschließen.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Kaufbereich unterhalb des 0.38 Fib bei 146 USD\n- Widerstand am 200 Day MA bei 204 USD mit anschließendem Rücksetzer",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 204 USD – 200 Day MA, erwarteter Widerstand bei einer Erholung",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.23 Fib bei 180 USD – kürzlich getestet, Auslöser der aktuellen Erholung\n- 0.38 Fib bei 146 USD – Kaufbereich laut Analyst",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Ende der Korrektur noch nicht bestätigt\n- Tieferer Rücksetzer nach dem Relief Bounce noch ausstehend\n- Reaktion des Kurses am 200 Day MA bei 204 USD",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Weiterer Rücksetzer möglich\n- Keine Invalidierungsmarke genannt\n- Kein Kursziel oder Zeithorizont genannt",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NVDA - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - NVDA - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 8,
+      "verarbeitet_am": "2026-11-06T23:41:29.011Z",
+      "kosten_cent": 0.0942
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Korrekturbewegung",
+      "ziel": "Trading/Notes/01 - Marktstruktur & Price Action/Korrekturbewegung"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - NVDA - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:41:29.011Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.0942
+  }
+}

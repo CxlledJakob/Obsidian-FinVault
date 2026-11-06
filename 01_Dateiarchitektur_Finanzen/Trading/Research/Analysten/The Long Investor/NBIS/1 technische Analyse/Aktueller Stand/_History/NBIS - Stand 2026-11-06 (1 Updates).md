@@ -1,6 +1,6 @@
 ---
 typ: analysten-wertpapierstatus
-status: review
+status: archiviert
 quelle: Patreon
 analyst: The Long Investor
 instrument: "NBIS"
@@ -24,7 +24,7 @@ verarbeitung:
   modell: "claude-haiku-5-5"
 ---
 
-# NBIS – Aktueller Analystenstand
+# NBIS – Aktueller Analystenstand (Stand 06.11.2026)
 
 > **Datei-Stand:** [[2026-11-06 - NBIS - Analysten-Update|06.11.2026]] · 1 Update(s) seit 06.11.2026 · Einschätzungen des Analysten, keine Anlageempfehlung.
 
