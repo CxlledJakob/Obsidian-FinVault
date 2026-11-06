@@ -1,0 +1,336 @@
+{
+  "schema": "status-v1",
+  "ticker": "ZVRA",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/ZVRA/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - ZVRA - Analysten-Update"
+  },
+  "next_id": 10,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 10.4,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Kurs wird darüber gehalten; Wave-3-Bedingung)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": 7.49,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Wave-2-Tief) (Ende 2025 erreicht)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "unterstuetzung",
+      "wert": 8,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (Mögliches Abwärtsrisiko)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M4",
+      "art": "widerstand",
+      "wert": 13.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Bull Case Linie (Muss als Unterstützung zurückerobert werden)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M5",
+      "art": "zone",
+      "wert": 10.4,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Einstieg bei Halt über 50 WMA",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M6",
+      "art": "zone",
+      "wert": 13.5,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Einstieg bei Bull-Case-Unterstützung (niedrigeres Risiko)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M7",
+      "art": "invalidation",
+      "wert": 8,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 WMA (Abwärtsrisiko, Analyst würde dort nachkaufen)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M8",
+      "art": "kursziel",
+      "wert": 22,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave 3 Ziel (1.618 Fib) (Analystenziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    },
+    {
+      "id": "M9",
+      "art": "kursziel",
+      "wert": 31,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Wave 5 Ziel (2.618 Fib) (Analystenziel)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Der Analyst sieht die Wave-2-Korrektur am 0.618 Fib bei 7,49 USD Ende 2025 als abgeschlossen und erwartet eine Wave-3-Bewegung. Der Kurs liegt laut Beitrag bei etwa 11 USD und damit oberhalb der 50 WMA bei 10,40 USD. Als nächste Bestätigung nennt der Analyst einen klaren Ausbruch und Halt über der Bull-Case-Marke von 13,50 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst erwartet eine Wave-3-Bewegung, nachdem die Wave-2-Korrektur am 0.618 Fib bei 7,49 USD Ende 2025 abgeschlossen ist. Voraussetzung ist, dass die 50 WMA bei 10,40 USD als Unterstützung hält. Wave 3 wird mit einem Ziel am 1.618 Fib bei 22 USD verortet, Wave 5 am 2.618 Fib bei 31 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Ein Abwärtsrisiko besteht bei einem Rückfall auf die 200 WMA bei 8 USD. Der Analyst würde dort nachkaufen.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Halt über der 50 WMA bei 10,40 USD (Wave-3-Bedingung, Einstieg)\n- Klarer Ausbruch und Halt über der Bull-Case-Linie bei 13,50 USD (nächste Bestätigung)\n- Rückfall auf die 200 WMA bei 8 USD (Abwärtsrisiko)",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Wave 2 gilt als abgeschlossen (Rücksetzer auf den 0.618 Fib bei 7,49 USD). Wave 3 befindet sich in Entwicklung, Wave 5 ist als Ziel genannt.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trend": {
+      "text": "Der Kurs bewegt sich laut Analyst seit dem Tief bei 7,49 USD aufwärts (\"grinding higher\") und liegt bei etwa 11 USD oberhalb der 50 WMA bei 10,40 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 50 WMA bei 10,40 USD: Kurs wird darüber gehalten; Voraussetzung für die Wave-3-Zählung\n- 200 WMA bei 8 USD: mögliches Abwärtsrisiko, Analyst würde dort nachkaufen",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.618 Fib bei 7,49 USD: Wave-2-Tief, Ende 2025 erreicht\n- 1.618 Fib bei 22 USD: Wave-3-Ziel\n- 2.618 Fib bei 31 USD: Wave-5-Ziel",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Klarer Ausbruch und Halt über der Bull-Case-Linie bei 13,50 USD\n- Halt der 50 WMA bei 10,40 USD als Unterstützung für Wave 3",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Zeithorizont wird im Update nicht genannt\n- Konkrete Invalidierung der Wave-3-Zählung wird nicht genannt\n- Abwärtsrisiko bis zur 200 WMA bei 8 USD\n- Street-Konsens: Buy mit durchschnittlichem Kursziel um 27 USD (Spanne 20–35 USD), liegt über dem eigenen Wave-3-Ziel von 22 USD",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - ZVRA - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - ZVRA - Analysten-Update",
+      "nachtrag": false,
+      "neu": 9,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 10,
+      "verarbeitet_am": "2026-11-06T22:12:34.498Z",
+      "kosten_cent": 0.1266
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fünf-Wellen-Impuls",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fünf-Wellen-Impuls"
+    },
+    {
+      "begriff": "Welle 3",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 3"
+    },
+    {
+      "begriff": "Welle 5",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 5"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Fibonacci-Projektion",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    },
+    {
+      "begriff": "Gleitender-Durchschnitt-Support",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/Gleitender-Durchschnitt-Support"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - ZVRA - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3",
+      "M4",
+      "M5",
+      "M6",
+      "M7",
+      "M8",
+      "M9"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "trend",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T22:12:34.498Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1266
+  }
+}
