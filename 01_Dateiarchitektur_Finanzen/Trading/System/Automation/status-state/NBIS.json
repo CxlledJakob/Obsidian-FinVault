@@ -5,10 +5,10 @@
   "instrument": "",
   "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/NBIS/1 technische Analyse",
   "stand": {
-    "datum": "2026-11-05",
-    "update": "2026-11-05 - NBIS - Analysten-Update"
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - NBIS - Analysten-Update"
   },
-  "next_id": 10,
+  "next_id": 13,
   "marken": [
     {
       "id": "M1",
@@ -91,7 +91,7 @@
       "wert_bis": null,
       "waehrung": "USD",
       "beschreibung": "Bruch 0.618 Fib (Dann Fokus auf 200 WMA)",
-      "status": "aktiv",
+      "status": "aufgehoben",
       "erstmals": {
         "datum": "2026-11-04",
         "update": "2026-11-04 - NBIS - Analysten-Update"
@@ -99,6 +99,11 @@
       "zuletzt": {
         "datum": "2026-11-04",
         "update": "2026-11-04 - NBIS - Analysten-Update"
+      },
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update",
+        "grund": "Wave C dropped below the 0.618 Fib and invalidated our previous wave count for $NBIS."
       }
     },
     {
@@ -108,7 +113,7 @@
       "wert_bis": null,
       "waehrung": "USD",
       "beschreibung": "Ziel 1 (Wieder im Blick nach Bodenbildung)",
-      "status": "aktiv",
+      "status": "aufgehoben",
       "erstmals": {
         "datum": "2026-11-04",
         "update": "2026-11-04 - NBIS - Analysten-Update"
@@ -116,6 +121,11 @@
       "zuletzt": {
         "datum": "2026-11-05",
         "update": "2026-11-05 - NBIS - Analysten-Update"
+      },
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update",
+        "grund": "Wave C dropped below the 0.618 Fib and invalidated our previous wave count for $NBIS."
       }
     },
     {
@@ -125,7 +135,7 @@
       "wert_bis": null,
       "waehrung": "USD",
       "beschreibung": "1.618 Extension (Wieder im Blick nach Bodenbildung)",
-      "status": "aktiv",
+      "status": "aufgehoben",
       "erstmals": {
         "datum": "2026-11-04",
         "update": "2026-11-04 - NBIS - Analysten-Update"
@@ -133,6 +143,11 @@
       "zuletzt": {
         "datum": "2026-11-05",
         "update": "2026-11-05 - NBIS - Analysten-Update"
+      },
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update",
+        "grund": "Wave C dropped below the 0.618 Fib and invalidated our previous wave count for $NBIS."
       }
     },
     {
@@ -142,7 +157,7 @@
       "wert_bis": null,
       "waehrung": "USD",
       "beschreibung": "Kaufzone / Positionsaufbau-Marke",
-      "status": "aktiv",
+      "status": "aufgehoben",
       "erstmals": {
         "datum": "2026-11-05",
         "update": "2026-11-05 - NBIS - Analysten-Update"
@@ -151,7 +166,12 @@
         "datum": "2026-11-05",
         "update": "2026-11-05 - NBIS - Analysten-Update"
       },
-      "ersetzt": "M4"
+      "ersetzt": "M4",
+      "ende": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update",
+        "grund": "Wave C dropped below the 0.618 Fib and invalidated our previous wave count for $NBIS."
+      }
     },
     {
       "id": "M9",
@@ -169,86 +189,137 @@
         "datum": "2026-11-05",
         "update": "2026-11-05 - NBIS - Analysten-Update"
       }
+    },
+    {
+      "id": "M10",
+      "art": "unterstuetzung",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.618 Fib (Getestet; Lage nicht als Zahl genannt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M11",
+      "art": "widerstand",
+      "wert": 163,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "50 WMA (Herausforderung von unten; Flip zur Unterstützung nötig)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      }
+    },
+    {
+      "id": "M12",
+      "art": "invalidation",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Vorherige Wellenzählung (Durch Welle C unter 0.618 Fib invalidiert)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
+      }
     }
   ],
   "abschnitte": {
     "kurzueberblick": {
-      "text": "NBIS notiert laut Analyst bei 136 USD (PM) innerhalb der eigenen Kaufzone, nach erneuter Sektorschwäche. Der Analyst erwartet einen Test des 0.618 Fib bei 123 USD; ein Rückfall bis zur 200 WMA (mittlere 80er USD) hält er für möglich, aber noch nicht eingetreten. Bei sauberer Bodenbildung am 0.618 Fib rücken 409 USD und die 1.618-Extension bei 586 USD wieder in den Blick.",
+      "text": "NBIS notiert laut Update bei 132 USD (PM) nach einem Plus von 9,8 % im Premarket. Welle C ist unter das 0.618 Fib gefallen; der Analyst sieht darin die Invalidierung seiner bisherigen Wellenzählung und einen klaren ABC-Korrekturverlauf, bei dem das 0.618 Fib getestet wurde. Als Signal für das Ende der Korrektur gilt die Rückeroberung des 50 WMA bei 163 USD als Unterstützung.",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "primaerszenario": {
-      "text": "Der Analyst erwartet einen Test des 0.618 Fib bei 123 USD mit anschließender Bodenbildung und Fortsetzung Richtung 409 USD und 586 USD. Er wartet auf Support-Bestätigung, bevor er handelt, und hält eine Position bei 123 USD für möglich.",
+      "text": "Der Analyst erwartet, dass die Korrektur abgeschlossen ist, sobald der 50 WMA bei 163 USD als Unterstützung zurückerobert wird; danach rechnet er mit der nächsten Impulswelle. Die bisherige Erwartung eines Tests bei 123 USD mit anschließendem Anstieg Richtung 409 USD und 586 USD ist mit der Invalidierung der bisherigen Zählung entfallen.",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "alternatives_szenario": {
-      "text": "Sollte der Kurs weiter fallen, rückt laut Analyst der Test der 200 WMA (mittlere 80er USD) in den Fokus. Dort würde der Analyst trotz des Risikos eine Position starten.",
+      "text": "Ein alternatives Szenario nennt das Update nicht ausdrücklich. Der Analyst beobachtet, ob der aktuelle Anstieg anhält und den 50 WMA bei 163 USD von unten herausfordert.",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "trigger": {
-      "text": "- Support-Bestätigung am 0.618 Fib bei 123 USD mit anschließender Bodenbildung\n- Rückfall bis zur 200 WMA (mittlere 80er USD) als alternatives Szenario\n- Reaktion auf die Quartalszahlen am 12. Nov, vor Börseneröffnung",
+      "text": "- Rückeroberung des 50 WMA bei 163 USD als Unterstützung (Ende der Korrektur, danach nächste Impulswelle)\n- Anstieg auf den 50 WMA bei 163 USD und Herausforderung von unten\n- Reaktion auf die Quartalszahlen am 12. Nov, vor Börseneröffnung",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "elliott": {
-      "text": "Der Analyst spricht nun von einem neuen Count; Details dazu werden im Beitrag nicht genannt. Die bisherige Welle-C-Interpretation wird im Update nicht weiter ausgeführt.",
+      "text": "Der Analyst sieht einen klaren ABC-Korrekturverlauf. Welle C ist unter das 0.618 Fib gefallen und hat die bisherige Wellenzählung invalidiert. Eine neue Zählung mit Kurszielen wird im Update nicht genannt.",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "trend": {
-      "text": "Der Kurs liegt laut Update bei 136 USD (PM) nach Sektorschwäche und damit innerhalb der Kaufzone. Zuvor wurden 151,50 USD als Schlusskurs des Vortags und 144 USD im nachbörslichen Handel genannt.",
+      "text": "Der Kurs liegt laut Update bei 132 USD (PM) nach einem Plus von 9,8 % im Premarket. Zuvor wurden 136 USD (PM) sowie 151,50 USD als Schlusskurs des Vortags genannt.",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "gleitende_durchschnitte": {
-      "text": "- 200 WMA (aktualisiert auf mittlere 80er USD, ca. 85 USD): laut Analyst noch nicht erreicht, aber als nächste Unterstützung und Testoption im Blick",
+      "text": "- 50 WMA bei 163 USD: Widerstand; der Analyst beobachtet einen Anstieg auf diesen Durchschnitt, Rückeroberung als Unterstützung wäre Signal für das Ende der Korrektur\n- 200 WMA (mittlere 80er USD, ca. 85 USD): laut bisherigem Stand als nächste Unterstützung und Testoption im Blick; im Update nicht erneut genannt",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "fibonacci": {
-      "text": "- 123 USD – 0.618 Fib: erwarteter Test; Position möglich, Kaufzone\n- 409 USD – 1 Fib (Ziel 1): wieder im Blick nach Bodenbildung\n- 586 USD – 1.618 Extension: wieder im Blick nach Bodenbildung\n- 157 USD – 0.5 Fib: vom Analysten zuvor beobachtete Marke\n- 190,73 USD – 0.382 Fib: erste Marke zum Zurückerobern bei Halten",
+      "text": "- 0.618 Fib: getestet; Lage nicht als Zahl genannt (bisher 123 USD)\n- 163 USD – 50 WMA: Widerstand, Herausforderung von unten; Flip zur Unterstützung nötig\n- 409 USD und 586 USD (Fib-Ziele): mit Invalidierung der bisherigen Zählung nicht mehr gültig\n- 157 USD (0.5 Fib) und 190,73 USD (0.382 Fib): im Update nicht genannt",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "ausstehende_bestaetigungen": {
-      "text": "- Support-Bestätigung am 0.618 Fib bei 123 USD\n- Reaktion auf die Quartalszahlen am 12. Nov, vor Börseneröffnung",
+      "text": "- Rückeroberung des 50 WMA bei 163 USD als Unterstützung\n- Reaktion auf die Quartalszahlen am 12. Nov, vor Börseneröffnung",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     },
     "risiken": {
-      "text": "- Anhaltende Sektorschwäche\n- Möglicher Rückfall bis zur 200 WMA (mittlere 80er USD)\n- Keine explizite Invalidierungsmarke genannt\n- Kein Zeithorizont genannt\n- Street-Durchschnittskursziel laut Update zwischen 240 USD und 300 USD; höchstes Analystenziel 410 USD; 22 Analysten decken die Aktie ab",
+      "text": "- Vorherige Wellenzählung durch Welle C unter dem 0.618 Fib invalidiert\n- Kein konkreter Zahlenwert für das 0.618 Fib genannt\n- Kein Kursziel für die nächste Impulswelle genannt\n- Kein Zeithorizont genannt\n- Kein Invalidierungslevel für die aktuelle Zählung genannt\n- Anhaltende Sektorschwäche (aus bisherigem Stand)",
       "stand": {
-        "datum": "2026-11-05",
-        "update": "2026-11-05 - NBIS - Analysten-Update"
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - NBIS - Analysten-Update"
       },
       "bestaetigt": null
     }
@@ -277,6 +348,18 @@
       "abschnitte": 10,
       "verarbeitet_am": "2026-11-06T23:59:23.166Z",
       "kosten_cent": 0.1585
+    },
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - NBIS - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 4,
+      "abschnitte": 10,
+      "verarbeitet_am": "2026-11-06T23:59:31.395Z",
+      "kosten_cent": 0.169
     }
   ],
   "konzepte": [
@@ -299,31 +382,38 @@
     {
       "begriff": "Fibonacci-Projektion",
       "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Projektion"
+    },
+    {
+      "begriff": "ABC-Korrektur",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/ABC-Korrektur"
+    },
+    {
+      "begriff": "Welle 3",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Welle 3"
     }
   ],
   "letzte_aenderung": {
-    "datum": "2026-11-05",
-    "update": "2026-11-05 - NBIS - Analysten-Update",
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - NBIS - Analysten-Update",
     "neu": [
-      "M9"
+      "M10",
+      "M11",
+      "M12"
     ],
-    "bestaetigt": [
-      "M1",
-      "M6",
-      "M7"
-    ],
+    "bestaetigt": [],
     "nicht_erwaehnt": [
+      "M1",
       "M2",
       "M3",
-      "M5"
+      "M9"
     ],
-    "geaendert": [
-      {
-        "alt": "M4",
-        "neu": "M8"
-      }
+    "geaendert": [],
+    "aufgehoben": [
+      "M5",
+      "M6",
+      "M7",
+      "M8"
     ],
-    "aufgehoben": [],
     "abschnitte": [
       "kurzueberblick",
       "primaerszenario",
@@ -338,11 +428,11 @@
     ]
   },
   "pruefhinweise": [],
-  "aktualisiert_am": "2026-11-06T23:59:23.166Z",
+  "aktualisiert_am": "2026-11-06T23:59:31.395Z",
   "verarbeitung": {
     "workflow": "FinVault Status fortschreiben v0.2",
     "prompt_version": "status-abgleich-v2",
     "modell": "claude-haiku-5-5",
-    "kosten_cent": 0.1585
+    "kosten_cent": 0.169
   }
 }
