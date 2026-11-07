@@ -1,0 +1,53 @@
+{
+  "id": "9j1H64djicxeAnvA",
+  "name": "My Sub-Workflow 1",
+  "connections": {
+    "When Executed by Another Workflow": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Replace me with your logic",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "description": null,
+  "meta": null,
+  "nodeGroups": [],
+  "nodes": [
+    {
+      "id": "b5942df6-0160-4ef7-965d-57583acdc8aa",
+      "name": "Replace me with your logic",
+      "parameters": {},
+      "position": [
+        520,
+        340
+      ],
+      "type": "n8n-nodes-base.noOp"
+    },
+    {
+      "id": "c055762a-8fe7-4141-a639-df2372f30060",
+      "name": "When Executed by Another Workflow",
+      "parameters": {},
+      "position": [
+        260,
+        340
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    }
+  ],
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "sourceWorkflowId": null,
+  "tags": [],
+  "versionCounter": 1,
+  "versionMetadata": {
+    "description": null,
+    "name": null
+  }
+}

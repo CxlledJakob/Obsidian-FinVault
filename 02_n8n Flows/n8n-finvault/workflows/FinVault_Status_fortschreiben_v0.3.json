@@ -1,0 +1,560 @@
+{
+  "id": "N0Uu2aA0H8egHtp6",
+  "name": "FinVault – Status fortschreiben v0.3",
+  "connections": {
+    "Abgleich nötig?": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Claude Haiku",
+            "type": "main"
+          }
+        ],
+        [
+          {
+            "index": 0,
+            "node": "Je Update",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Abgleich vorbereiten": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Abgleich nötig?",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Alle Updates finden": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aufträge sammeln",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Als Datei": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Datei schreiben",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Aufruf aus Flow A": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Aufträge sammeln",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Aufträge sammeln": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status-Template lesen",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Claude Haiku": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status fortschreiben",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Datei schreiben": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Je Update",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Je Update": {
+      "main": [
+        [],
+        [
+          {
+            "index": 0,
+            "node": "Update lesen",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Manuell nachholen": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Alle Updates finden",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Ordner anlegen": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Als Datei",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Register lesen": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Abgleich vorbereiten",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status fortschreiben": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Ordner anlegen",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status-Daten auswerten": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Register lesen",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status-Daten lesen": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status-Daten auswerten",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Status-Template lesen": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Vorbereitung",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update auswerten": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Status-Daten lesen",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Update lesen": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Update auswerten",
+            "type": "main"
+          }
+        ]
+      ]
+    },
+    "Vorbereitung": {
+      "main": [
+        [
+          {
+            "index": 0,
+            "node": "Je Update",
+            "type": "main"
+          }
+        ]
+      ]
+    }
+  },
+  "description": null,
+  "meta": {
+    "aiBuilderAssisted": true,
+    "builderVariant": "mcp"
+  },
+  "nodeGroups": [],
+  "nodes": [
+    {
+      "id": "1bf4f118-9999-4f25-ae61-8e0d2eb222bb",
+      "name": "Abgleich nötig?",
+      "parameters": {
+        "conditions": {
+          "combinator": "and",
+          "conditions": [
+            {
+              "id": "cb14",
+              "leftValue": "={{ $json.aktion }}",
+              "operator": {
+                "operation": "equals",
+                "type": "string"
+              },
+              "rightValue": "abgleich"
+            }
+          ],
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          }
+        },
+        "options": {}
+      },
+      "position": [
+        2880,
+        784
+      ],
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2
+    },
+    {
+      "id": "4e1746ed-5b9b-406a-916d-96317547da40",
+      "name": "Abgleich vorbereiten",
+      "parameters": {
+        "jsCode": "// Flow B – Abgleich vorbereiten (v0.3: Prompt status-abgleich-v2 – verworfene Zählungen/Szenarien, ausgelöste Invalidationen)\n// Eingang: concept-links.json (Register lesen); Update + bisheriger Stand aus den Nodes davor.\n// Baut die Claude-Anfrage: NUR neues Update gegen bisherigen Stand (nicht alle Updates).\nconst MODEL = 'claude-haiku-5-5';\nconst PROMPT_VERSION = 'status-abgleich-v2';\nconst upd = $('Update auswerten').first().json;\nconst state = $('Status-Daten auswerten').first().json.state;\nconst template = $('Vorbereitung').first().json.template;\nconst norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();\n\n// Theorie-Links: Begriffe aus dem Update über das Register auflösen (inkl. Aliasse, Hauptthemen)\nconst links = [];\nconst bin = $input.first().binary && $input.first().binary.data;\nif (bin) {\n  const reg = JSON.parse((await this.helpers.getBinaryDataBuffer(0, 'data')).toString('utf8'));\n  const lookup = {};\n  for (const h of reg.hauptthemen || []) if (h.hauptthema && h.zielpfad) lookup[norm(h.hauptthema)] = { begriff: h.hauptthema, ziel: h.zielpfad };\n  for (const k of reg.konzepte || []) {\n    if (!k.begriff || !k.zielpfad) continue;\n    for (const n of [k.begriff, ...(k.aliases || [])]) { const key = norm(n); if (key && (!lookup[key] || k.primaer)) lookup[key] = { begriff: k.begriff, ziel: k.zielpfad }; }\n  }\n  for (const b of upd.konzepte) { const e = lookup[norm(b)]; if (e && !links.some(l => l.ziel === e.ziel)) links.push({ begriff: b, ziel: e.ziel.replace(/\\.md$/, '') }); }\n}\n\nconst ctx = { upd: { ...upd }, state, template, links, prompt_version: PROMPT_VERSION, model: MODEL };\nif (state && (state.updates || []).some(u => u.update === upd.name)) return [{ json: { aktion: 'ueberspringen', grund: 'bereits im Status', ...ctx } }];\nconst nachtrag = !!(state && state.stand && upd.datum < state.stand.datum);\nctx.nachtrag = nachtrag;\n\nconst ART = { unterstuetzung: 'Unterstützung', widerstand: 'Widerstand', zone: 'Kauf-/Beobachtungszone', kursziel: 'Kursziel', invalidation: 'Invalidation' };\nconst de = v => Number(v).toLocaleString('de-DE', { maximumFractionDigits: 2 });\nconst wert = m => m.wert == null ? '(ohne Kurs)' : (m.wert_bis != null ? `${de(m.wert)} – ${de(m.wert_bis)}` : de(m.wert)) + ` ${m.waehrung || 'USD'}`;\nconst SECS = {\n  kurzueberblick: 'Kurzüberblick (2–3 Sätze Gesamtbild)',\n  primaerszenario: 'Aktives Primärszenario',\n  alternatives_szenario: 'Alternatives Szenario',\n  trigger: 'Entscheidende Trigger (Liste: Kursmarken/Ereignisse, die das Szenario laut Analyst bestätigen oder kippen)',\n  elliott: 'Elliott-Wellen-Stand',\n  trend: 'Trendstruktur',\n  gleitende_durchschnitte: 'Gleitende Durchschnitte (Liste: genannte Durchschnitte mit Kurs und Bedeutung)',\n  fibonacci: 'Fibonacci-Niveaus (Liste: genannte Niveaus mit Kurs und Bedeutung)',\n  ausstehende_bestaetigungen: 'Noch ausstehende Bestätigungen (Liste)',\n  risiken: 'Unsicherheiten und Risiken (Liste)',\n};\n\nconst aktive = state ? (state.marken || []).filter(m => m.status === 'aktiv') : [];\nconst alt = [\n  `## BISHERIGER STAND${state ? ` (Stand ${state.stand.datum})` : ' – noch keiner vorhanden'}`,\n  '### Aktive Marken',\n  aktive.length ? aktive.map(m => `${m.id} | ${ART[m.art] || m.art} | ${wert(m)} | ${m.beschreibung || ''} | erstmals ${m.erstmals.datum} | zuletzt ${m.zuletzt.datum}`).join('\\n') : '(keine)',\n  '### Abschnitte',\n  ...Object.entries(SECS).map(([k, t]) => `[${k}] ${t}:\\n${(state && state.abschnitte && state.abschnitte[k] && state.abschnitte[k].text) || '(leer)'}`),\n].join('\\n');\nconst neu = [\n  `## NEUES UPDATE vom ${upd.datum}${nachtrag ? ' – NACHTRAG (älter als der bisherige Stand, darf nur ergänzen)' : ''}`,\n  '### Marken im Update',\n  upd.marken.length ? upd.marken.map(m => `${m.id} | ${ART[m.art]} | ${wert(m)} | ${m.beschreibung}`).join('\\n') : '(keine)',\n  '### Inhalt des Updates',\n  upd.kern,\n].join('\\n');\n\nconst SYSTEM = `Du pflegst den aktuellen Analystenstand (Status) zu einem Wertpapier. Grundlage sind ausschließlich (a) der bisherige Stand und (b) EIN neues Analysten-Update des Analysten \"The Long Investor\". Du gleichst nur dieses neue Update mit dem bisherigen Stand ab.\n\nRegeln:\n1. Verwende nur Informationen aus dem bisherigen Stand und dem neuen Update. Keine eigenen Einschätzungen, keine eigenen Kursmarken, keine Berechnungen, kein Allgemeinwissen.\n2. Formuliere sachlich auf Deutsch als Einschätzung des Analysten (z. B. \"Der Analyst erwartet ...\").\n3. bisherige_marken: Gib für JEDE bisherige Marke (M...) genau eine Aktion an:\n   - bestaetigt: Das Update nennt dieselbe Marke (gleicher Kurs) erneut. neue_marke = passende N-ID.\n   - geaendert: Das Update ersetzt diese Marke ausdrücklich durch eine andere (z. B. verschobene Invalidation, neues Kursziel anstelle des alten). neue_marke = N-ID, beleg = wörtliches Zitat aus dem Update.\n   - aufgehoben: Das Update sagt ausdrücklich, dass die Marke nicht mehr gilt (gebrochen, erreicht, verworfen). beleg = wörtliches Zitat aus dem Update in Originalsprache.\n   - nicht_erwaehnt: Das Update sagt nichts dazu, weder direkt noch über die Zählung bzw. das Szenario, zu dem die Marke gehört. Nicht erwähnte Marken bleiben gültig.\n   Prüfe vor \"nicht_erwaehnt\" immer Regel 4.\n   Marken aus dem Update (N...), die zu keiner bisherigen Marke gehören, werden automatisch als neu übernommen. Du musst sie nicht auflisten.\n4. VERWORFENE ZÄHLUNG ODER SZENARIO / AUSGELÖSTE INVALIDATION – auch ohne dass die einzelne Marke genannt wird:\n   a) Erklärt das Update eine bisherige Wellenzählung, ein Szenario oder eine These ausdrücklich für ungültig oder überholt (z. B. \"invalidated our previous wave count\", \"the count is off\", \"new count\", \"scenario is no longer valid\", \"we were wrong\"), dann sind ALLE bisherigen Marken, die zu dieser Zählung bzw. diesem Szenario gehören, \"aufgehoben\": Wellen- und Kursziele, Fib-Extensions als Ziele, Kauf-/Beobachtungszonen und Invalidationsmarken dieser Zählung. beleg = genau dieser Satz aus dem Update.\n   b) Sagt das Update, dass eine bisherige Invalidationsmarke unterschritten bzw. überschritten wurde (z. B. \"dropped below the 0.618 Fib\" bei der Invalidation \"Bruch 0.618 Fib\"), ist diese Invalidation \"aufgehoben\" (ausgelöst). beleg = der Satz, der das Unterschreiten beschreibt.\n   c) Unterstützungen und Widerstände, die das Update weiterhin als Marke im Chart nennt oder die unabhängig von der verworfenen Zählung sind (z. B. gleitende Durchschnitte), bleiben gültig bzw. bestaetigt.\n   d) Nur anwenden, wenn das Update die Verwerfung ausdrücklich sagt – keine eigene Schlussfolgerung aus Kursbewegungen.\n5. abschnitte: Für jeden Abschnitt genau eine Aktion:\n   - unveraendert: Das Update enthält dazu nichts Neues und bestätigt es auch nicht ausdrücklich.\n   - bestaetigt: Das Update sagt inhaltlich dasselbe wie der bisherige Stand.\n   - aktualisiert: Das Update bringt neue oder geänderte Aussagen. text = vollständiger neuer Abschnittstext: weiterhin gültige bisherige Aussagen und neue Aussagen zusammengeführt, überholte Aussagen fallen weg.\n   - leer: Weder bisheriger Stand noch Update enthalten dazu etwas.\n   Gibt es noch keinen bisherigen Stand, ist jeder Abschnitt, zu dem das Update etwas sagt, \"aktualisiert\".\n   Bei einer verworfenen Zählung (Regel 4a) sind mindestens kurzueberblick, primaerszenario und elliott \"aktualisiert\"; Aussagen der alten Zählung fallen weg.\n6. Form: kurzueberblick 2–3 Sätze; primaerszenario, alternatives_szenario, elliott, trend kurzer Fließtext; trigger, gleitende_durchschnitte, fibonacci, ausstehende_bestaetigungen, risiken als Liste mit einer Zeile je Punkt, beginnend mit \"- \". Kursmarken mit Währung (z. B. 143 USD).\n7. NACHTRAG (Update älter als der bisherige Stand): darf nur ergänzen. Keine Marke als geaendert oder aufgehoben markieren, Regel 4 gilt nicht. Abschnitte nur \"aktualisiert\", wenn sie bisher leer sind.\n8. Keine Links, kein HTML, keine Überschriften im Text.`;\n\nconst SEC = { type: 'object', properties: { aktion: { type: 'string', enum: ['unveraendert', 'bestaetigt', 'aktualisiert', 'leer'] }, text: { type: 'string' } }, required: ['aktion'] };\nconst tool = {\n  name: 'status_abgleich',\n  description: 'Ergebnis des Abgleichs zwischen bisherigem Stand und neuem Update speichern.',\n  input_schema: {\n    type: 'object',\n    properties: {\n      bisherige_marken: { type: 'array', items: { type: 'object', properties: {\n        id: { type: 'string' },\n        aktion: { type: 'string', enum: ['bestaetigt', 'geaendert', 'aufgehoben', 'nicht_erwaehnt'] },\n        neue_marke: { type: 'string', description: 'N-ID aus dem Update (bei bestaetigt/geaendert)' },\n        beleg: { type: 'string', description: 'Wörtliches Zitat aus dem Update (bei geaendert/aufgehoben)' },\n      }, required: ['id', 'aktion'] } },\n      abschnitte: { type: 'object', properties: Object.fromEntries(Object.keys(SECS).map(k => [k, SEC])), required: Object.keys(SECS) },\n    },\n    required: ['bisherige_marken', 'abschnitte'],\n  },\n};\nconst request = {\n  model: MODEL, max_tokens: 3000, system: SYSTEM,\n  tools: [tool], tool_choice: { type: 'tool', name: 'status_abgleich' },\n  messages: [{ role: 'user', content: `WERTPAPIER: ${upd.ticker}\\n\\n${alt}\\n\\n${neu}` }],\n};\nreturn [{ json: { aktion: 'abgleich', request, ...ctx } }];\n"
+      },
+      "position": [
+        2640,
+        784
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "345c4ef1-1690-4918-a4b3-cccf7ca92c88",
+      "name": "Alle Updates finden",
+      "parameters": {
+        "fileSelector": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/*/1 technische Analyse/Updates/*.md",
+        "options": {}
+      },
+      "position": [
+        240,
+        784
+      ],
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "815ad8a5-b92e-4c50-ab7a-668b10cf2500",
+      "name": "Als Datei",
+      "parameters": {
+        "jsCode": "// Flow B – Als Datei (v0.1): Inhalte aus \"Status fortschreiben\" als Binärdaten zum Schreiben\nconst src = $('Status fortschreiben').all();\nreturn src.map(i => ({\n  json: { target_path: i.json.target_path, kind: i.json.kind, ticker: i.json.ticker },\n  binary: { data: { data: i.json.content_b64, mimeType: i.json.kind === 'state' ? 'application/json' : 'text/markdown', fileName: i.json.file_name, fileExtension: i.json.kind === 'state' ? 'json' : 'md' } },\n}));\n"
+      },
+      "position": [
+        3840,
+        688
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "6bb5fbf7-3092-4df4-8928-f486df4937ab",
+      "name": "Aufruf aus Flow A",
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "position": [
+        0,
+        528
+      ],
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1
+    },
+    {
+      "id": "ceb4dd1b-f140-4c2d-8a60-30f99221e212",
+      "name": "Aufträge sammeln",
+      "parameters": {
+        "jsCode": "// Flow B – Aufträge sammeln (v0.3)\n// Eingang A: Aufruf aus Flow A -> Items mit { update_path, neuaufbau } (neuaufbau=true: Status dieses Tickers von vorne aufbauen)\n// Eingang B: \"Manuell nachholen\" -> alle Update-Dateien (Binärdaten); nur Updates ab Flow-A-Version v0.8\nconst ROOT = '/vault/Finanzen/Trading/Research/Analysten/The Long Investor';\nconst RE = /^\\/vault\\/Finanzen\\/Trading\\/Research\\/Analysten\\/The Long Investor\\/[^/]+\\/1 technische Analyse\\/Updates\\/\\d{4}-\\d{2}-\\d{2} - [^/]+\\.md$/;\nconst out = [], seen = new Set();\nconst ins = $input.all();\nfor (let i = 0; i < ins.length; i++) {\n  const it = ins[i];\n  let p = it.json && it.json.update_path;\n  if (!p && it.binary && it.binary.data) {\n    const b = it.binary.data;\n    p = `${b.directory}/${b.fileName}`;\n    const txt = (await this.helpers.getBinaryDataBuffer(i, 'data')).toString('utf8');\n    const m = txt.match(/workflow:\\s*\"?FinVault Patreon → Vault v(\\d+)\\.(\\d+)/);\n    if (!m || (Number(m[1]) === 0 && Number(m[2]) < 8)) continue; // alte Formate: kein Status-Aufbau\n  }\n  if (!p || !p.startsWith(ROOT + '/') || p.includes('..') || !RE.test(p) || seen.has(p)) continue;\n  seen.add(p);\n  out.push({ update_path: p, datum: p.split('/').pop().slice(0, 10), neuaufbau: !!(it.json && it.json.neuaufbau), grund: (it.json && it.json.grund) || '' });\n}\nout.sort((a, b) => (a.datum + a.update_path).localeCompare(b.datum + b.update_path));\nreturn out.map(j => ({ json: j }));\n"
+      },
+      "position": [
+        480,
+        624
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "credentials": {
+        "anthropicApi": {
+          "id": "JOkJlXrN0OHE85J7",
+          "name": "Anthropic FinVault"
+        }
+      },
+      "id": "1ac5bf3c-658d-475f-8451-6bd062e6cb98",
+      "maxTries": 2,
+      "name": "Claude Haiku",
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "anthropic-version",
+              "value": "2023-06-01"
+            }
+          ]
+        },
+        "jsonBody": "={{ JSON.stringify($json.request) }}",
+        "method": "POST",
+        "nodeCredentialType": "anthropicApi",
+        "options": {
+          "timeout": 90000
+        },
+        "sendBody": true,
+        "sendHeaders": true,
+        "specifyBody": "json",
+        "url": "https://api.anthropic.com/v1/messages"
+      },
+      "position": [
+        3120,
+        688
+      ],
+      "retryOnFail": true,
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "waitBetweenTries": 5000
+    },
+    {
+      "id": "a6dbd921-17f9-4e56-b413-dd873b857013",
+      "name": "Datei schreiben",
+      "parameters": {
+        "fileName": "={{ $json.target_path }}",
+        "operation": "write",
+        "options": {}
+      },
+      "position": [
+        4080,
+        688
+      ],
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "941d3441-7425-4865-91b2-b577130a4ba2",
+      "name": "Hinweis",
+      "parameters": {
+        "content": "## FinVault – Status fortschreiben v0.3 (Flow B)\n\nWird von **Flow A** aufgerufen (je Lauf einmal, mit allen neu geschriebenen Updates).\nAlternativ: **Manuell nachholen** baut den Status für alle Updates ab Flow-A-Version v0.8 nach (bereits verarbeitete werden übersprungen).\n\nJe Update, chronologisch:\n1. Update lesen + zerlegen (Marken, Abschnitte, Begriffe)\n2. Bisherigen Stand laden (System/Automation/status-state/<TICKER>.json)\n3. Claude Haiku gleicht **nur das neue Update** mit dem bisherigen Stand ab\n4. Flow prüft (Belege, Zahlen, Nachtrag-Regeln) und schreibt fort\n5. Schreibt <TICKER>/1 technische Analyse/Aktueller Stand/<TICKER> - Aktueller Stand.md (nach Template), alte Fassung nach _History, Status-Daten (JSON)\n\n**Neuaufbau (v0.3):** Kommt ein Update, das älter ist als der bisherige Stand, schickt Flow A alle Updates dieses Tickers mit `neuaufbau` = true. Flow B sichert dann den alten Stand (_History bzw. status-state/_backup) und baut den Status in Datumsreihenfolge neu auf.\n\nCredential: *Claude Haiku* → **Anthropic FinVault**",
+        "height": 460,
+        "width": 560
+      },
+      "position": [
+        0,
+        0
+      ],
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1
+    },
+    {
+      "id": "30c86555-79b9-4e1c-be57-fe7e1d006254",
+      "name": "Je Update",
+      "parameters": {
+        "options": {}
+      },
+      "position": [
+        1200,
+        624
+      ],
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3
+    },
+    {
+      "id": "6b46d780-27f7-49bb-adbf-75f86f852023",
+      "name": "Manuell nachholen",
+      "parameters": {},
+      "position": [
+        0,
+        784
+      ],
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1
+    },
+    {
+      "id": "b43a35a9-24ce-468e-852b-bb74f407da93",
+      "name": "Ordner anlegen",
+      "parameters": {
+        "command": "={{ $('Status-Daten auswerten').first().json.neuaufbau && ($json.kind === 'status' || $json.kind === 'state') ? 'mkdir -p \"' + $json.target_dir + ($json.kind === 'status' ? '/_History' : '/_backup') + '\" && if [ -f \"' + $json.target_path + '\" ]; then cp \"' + $json.target_path + '\" \"' + $json.target_dir + ($json.kind === 'status' ? '/_History/' + $json.ticker + ' - Stand ' + $('Status-Daten auswerten').first().json.state_vorher_stand + ' vor Neuaufbau ' + $now.toFormat('yyyy-MM-dd HH-mm') + '.md' : '/_backup/' + $json.ticker + ' - vor Neuaufbau ' + $now.toFormat('yyyy-MM-dd HH-mm') + '.json') + '\"; fi && ' + $json.command : $json.command }}",
+        "executeOnce": false
+      },
+      "position": [
+        3600,
+        688
+      ],
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1
+    },
+    {
+      "id": "122780ee-560f-4ba3-97f7-5743e404ba70",
+      "name": "Register lesen",
+      "parameters": {
+        "fileSelector": "/vault/Finanzen/Trading/System/Automation/concept-links.json",
+        "options": {}
+      },
+      "position": [
+        2400,
+        784
+      ],
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "7479a7e7-169f-483a-b3b6-c880518463db",
+      "name": "Status fortschreiben",
+      "parameters": {
+        "jsCode": "// Flow B – Status fortschreiben (v0.2: Ordnerstruktur <TICKER>/1 technische Analyse)\n// Übernimmt Claudes Abgleich, prüft ihn gegen das Update und schreibt den Stand fort.\n// Ausgabe: Status-Datei (nach Template), History-Kopie des alten Stands, Status-Daten (JSON).\nconst WORKFLOW = 'FinVault Status fortschreiben v0.2';\nconst STATE_DIR = '/vault/Finanzen/Trading/System/Automation/status-state';\nconst ROOT = '/vault/Finanzen/Trading/Research/Analysten/The Long Investor';\nconst ALTERUNG_TAGE = 15;\nconst ctx = $('Abgleich vorbereiten').first().json;\nconst resp = $input.first().json;\nconst upd = ctx.upd;\nconst nachtrag = !!ctx.nachtrag;\nconst U = { datum: upd.datum, update: upd.name };\nconst hinweise = [];\n\nconst norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();\nconst clean = s => String(s == null ? '' : s).replace(/<\\/?[a-zA-Z_][^>]*>/g, '').replace(/\\[\\[|\\]\\]/g, '').replace(/</g, '&lt;').replace(/>/g, '&gt;').trim();\nconst parseMaybe = v => { if (typeof v === 'string') { try { return JSON.parse(v); } catch (e) { return null; } } return v; };\n\n// ---------- Claude-Antwort ----------\nconst tu = (resp.content || []).find(c => c.type === 'tool_use' && c.name === 'status_abgleich');\nif (!tu) throw new Error('Claude hat keinen Abgleich geliefert: ' + JSON.stringify(resp).slice(0, 300));\nconst r = tu.input || {};\nconst entsch = new Map();\nfor (const d of (parseMaybe(r.bisherige_marken) || [])) if (d && d.id) entsch.set(String(d.id).trim(), { aktion: String(d.aktion || '').trim(), neue_marke: String(d.neue_marke || '').trim(), beleg: clean(d.beleg) });\nconst abschn = parseMaybe(r.abschnitte) || {};\nconst usage = resp.usage || {};\nconst kostenCent = Math.round(((usage.input_tokens || 0) * 0.10 + (usage.output_tokens || 0) * 0.50) / 1e6 * 100 * 10000) / 10000;\n\n// ---------- Stand übernehmen oder anlegen ----------\nconst alt = ctx.state ? JSON.parse(JSON.stringify(ctx.state)) : null;\nconst st = ctx.state ? JSON.parse(JSON.stringify(ctx.state)) : {\n  schema: 'status-v1', ticker: upd.ticker, kategorie: upd.kategorie, instrument: upd.instrument || '',\n  ticker_dir: upd.ticker_dir, stand: null, next_id: 1, marken: [], abschnitte: {}, updates: [], konzepte: [],\n  letzte_aenderung: null, pruefhinweise: [],\n};\nif (upd.instrument && !st.instrument) st.instrument = upd.instrument;\nst.ticker_dir = upd.ticker_dir; // v0.2: Ordner kann sich geändert haben (Umzug Technisch/<T> -> <T>/1 technische Analyse)\nst.kategorie = upd.kategorie;\n\n// ---------- Belege und Zahlen prüfen ----------\nconst quelle = norm(upd.kern);\nconst belegOk = b => {\n  const n = norm(b);\n  if (!n) return false;\n  if (quelle.includes(n)) return true;\n  const w = n.split(' ').filter(x => x.length > 3);\n  return w.length >= 3 && w.filter(x => quelle.includes(x)).length / w.length >= 0.6;\n};\nconst zahlVarianten = s => {\n  const v = new Set([Number(s.replace(',', '.'))]);\n  if (/^\\d{1,3}(\\.\\d{3})+(,\\d+)?$/.test(s)) v.add(Number(s.replace(/\\./g, '').replace(',', '.')));\n  if (/^\\d{1,3}(,\\d{3})+(\\.\\d+)?$/.test(s)) v.add(Number(s.replace(/,/g, '')));\n  return [...v].filter(x => !isNaN(x));\n};\nconst zahlen = t => (String(t).match(/\\d+(?:[.,]\\d+)*/g) || []).flatMap(zahlVarianten);\nconst bekannt = new Set([...zahlen(upd.kern), ...(st.marken || []).flatMap(m => [m.wert, m.wert_bis]).filter(x => x != null),\n  ...Object.values(st.abschnitte || {}).flatMap(a => zahlen(a.text || ''))].map(x => Math.round(x * 1000)));\nconst pruefeZahlen = (key, text) => {\n  const fremd = [...new Set((String(text).match(/\\d+(?:[.,]\\d+)*/g) || []).filter(s => !zahlVarianten(s).some(x => x <= 10 || bekannt.has(Math.round(x * 1000)))))];\n  if (fremd.length) hinweise.push(`${key}: Zahl(en) ${fremd.join(', ')} stehen weder im Update noch im bisherigen Stand`);\n};\n\n// ---------- Marken abgleichen ----------\nconst nah = (a, b) => (a == null && b == null) || (a != null && b != null && Math.abs(a - b) <= Math.max(0.01, Math.abs(b) * 0.005));\nconst gleich = (m, n) => nah(m.wert, n.wert) && nah(m.wert_bis, n.wert_bis) && (m.wert != null || norm(m.beschreibung) === norm(n.beschreibung));\nconst nByid = Object.fromEntries(upd.marken.map(n => [n.id, n]));\nconst benutzt = new Set();\nconst neuIds = [], bestIds = [], nichtIds = [], geaendert = [], aufgehoben = [];\nconst neueMarke = (n) => {\n  const m = { id: 'M' + st.next_id++, art: n.art, wert: n.wert, wert_bis: n.wert_bis, waehrung: n.waehrung || 'USD', beschreibung: n.beschreibung,\n    status: 'aktiv', erstmals: { ...U }, zuletzt: { ...U } };\n  st.marken.push(m); benutzt.add(n.id); return m;\n};\nfor (const m of st.marken.filter(x => x.status === 'aktiv')) {\n  let d = entsch.get(m.id) || { aktion: 'nicht_erwaehnt' };\n  let n = d.neue_marke && nByid[d.neue_marke] && !benutzt.has(d.neue_marke) ? nByid[d.neue_marke] : null;\n  const auto = upd.marken.find(x => !benutzt.has(x.id) && x.art === m.art && gleich(m, x));\n  if (d.aktion === 'bestaetigt' || d.aktion === 'geaendert') {\n    if (!n || (d.aktion === 'bestaetigt' && !gleich(m, n))) n = auto || n;\n    if (!n) d = { aktion: 'nicht_erwaehnt' };\n    else if (gleich(m, n)) d = { ...d, aktion: 'bestaetigt' };\n    else if (d.aktion === 'bestaetigt') d = { aktion: 'nicht_erwaehnt' };\n  } else if (d.aktion === 'aufgehoben') {\n    if (!belegOk(d.beleg)) { hinweise.push(`${m.id} (${m.wert}): \"aufgehoben\" ohne nachvollziehbaren Beleg im Update – bleibt gültig`); d = auto ? { aktion: 'bestaetigt' } : { aktion: 'nicht_erwaehnt' }; n = auto; }\n  } else { d = auto ? { aktion: 'bestaetigt' } : { aktion: 'nicht_erwaehnt' }; n = auto; }\n  if (nachtrag && (d.aktion === 'geaendert' || d.aktion === 'aufgehoben')) { d = auto ? { aktion: 'bestaetigt' } : { aktion: 'nicht_erwaehnt' }; n = auto; }\n\n  if (d.aktion === 'bestaetigt') {\n    benutzt.add(n.id);\n    if (U.datum < m.erstmals.datum) m.erstmals = { ...U };\n    if (U.datum >= m.zuletzt.datum) { m.zuletzt = { ...U }; if (!nachtrag && n.beschreibung) m.beschreibung = n.beschreibung; }\n    bestIds.push(m.id);\n  } else if (d.aktion === 'geaendert') {\n    const nm = neueMarke(n);\n    m.status = 'ersetzt'; m.ende = { ...U, grund: d.beleg || '' }; m.ersetzt_durch = nm.id; nm.ersetzt = m.id;\n    if (!d.beleg) hinweise.push(`${m.id} → ${nm.id}: Änderung ohne Zitat`);\n    geaendert.push({ alt: m.id, neu: nm.id });\n  } else if (d.aktion === 'aufgehoben') {\n    m.status = 'aufgehoben'; m.ende = { ...U, grund: d.beleg };\n    aufgehoben.push(m.id);\n  } else nichtIds.push(m.id);\n}\nfor (const n of upd.marken) {\n  if (benutzt.has(n.id)) continue;\n  // Nachtrag: keine Marke wiederbeleben, die ein neueres Update bereits beendet hat – nur \"erstmals\" vorziehen\n  const beendet = nachtrag && st.marken.find(m => m.status !== 'aktiv' && m.art === n.art && gleich(m, n) && m.ende && m.ende.datum > U.datum);\n  if (beendet) { if (U.datum < beendet.erstmals.datum) beendet.erstmals = { ...U }; benutzt.add(n.id); continue; }\n  neuIds.push(neueMarke(n).id);\n}\n\n// ---------- Abschnitte ----------\nconst KEYS = ['kurzueberblick', 'primaerszenario', 'alternatives_szenario', 'trigger', 'elliott', 'trend', 'gleitende_durchschnitte', 'fibonacci', 'ausstehende_bestaetigungen', 'risiken'];\nconst LISTEN = ['trigger', 'gleitende_durchschnitte', 'fibonacci', 'ausstehende_bestaetigungen', 'risiken'];\nconst aktualisiert = [];\nfor (const k of KEYS) {\n  const d = parseMaybe(abschn[k]) || { aktion: 'unveraendert' };\n  const old = st.abschnitte[k] && st.abschnitte[k].text ? st.abschnitte[k] : null;\n  let text = clean(d.text);\n  if (LISTEN.includes(k) && text) text = text.split('\\n').map(l => l.trim()).filter(Boolean).map(l => l.startsWith('- ') ? l : `- ${l.replace(/^[-*•]\\s*/, '')}`).join('\\n');\n  const aktion = String(d.aktion || '').trim();\n  if (nachtrag) {\n    if (!old && aktion === 'aktualisiert' && text) { st.abschnitte[k] = { text, stand: { ...U }, bestaetigt: null }; aktualisiert.push(k); pruefeZahlen(k, text); }\n    else if (old && aktion === 'bestaetigt' && U.datum < old.stand.datum) { /* ältere Bestätigung ändert nichts */ }\n    continue;\n  }\n  if (aktion === 'aktualisiert' && text) { st.abschnitte[k] = { text, stand: { ...U }, bestaetigt: null }; aktualisiert.push(k); pruefeZahlen(k, text); }\n  else if (aktion === 'bestaetigt' && old) old.bestaetigt = { ...U };\n}\n\n// ---------- Kopfdaten, Verlauf, Konzepte ----------\nfor (const l of ctx.links || []) if (!st.konzepte.some(x => x.ziel === l.ziel)) st.konzepte.push(l);\nst.updates.push({ ...U, nachtrag, neu: neuIds.length, bestaetigt: bestIds.length, geaendert: geaendert.length, aufgehoben: aufgehoben.length,\n  abschnitte: aktualisiert.length, verarbeitet_am: new Date().toISOString(), kosten_cent: kostenCent });\nst.updates.sort((a, b) => (a.datum + a.update).localeCompare(b.datum + b.update));\nif (!nachtrag) {\n  st.stand = { ...U };\n  st.letzte_aenderung = { ...U, neu: neuIds, bestaetigt: bestIds, nicht_erwaehnt: nichtIds, geaendert, aufgehoben, abschnitte: aktualisiert };\n} else if (st.letzte_aenderung) {\n  st.letzte_aenderung.nachtraege = [...(st.letzte_aenderung.nachtraege || []), { ...U, neu: neuIds }];\n}\nst.pruefhinweise = [...(st.pruefhinweise || []), ...hinweise.map(h => `${U.datum}: ${h}`)].slice(-15);\nst.aktualisiert_am = new Date().toISOString();\nst.verarbeitung = { workflow: WORKFLOW, prompt_version: ctx.prompt_version, modell: ctx.model, kosten_cent: kostenCent };\n\n// ---------- Rendern nach Template ----------\nfunction parseTemplate(t) {\n  const txt = String(t).replace(/\\r/g, '').split('\\n').map(l => l.replace(/\\s+$/, '')).join('\\n');\n  const m = txt.match(/^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n?([\\s\\S]*)$/);\n  const fmKeys = [];\n  if (m) for (const l of m[1].split('\\n')) { const k = l.match(/^([^\\s:#-][^:]*):/); if (k) fmKeys.push(k[1].trim()); }\n  const blocks = []; let cur = null;\n  for (const l of (m ? m[2] : txt).split('\\n')) {\n    const h = l.match(/^(#{1,6})\\s+(.*)$/);\n    if (h) { cur = { level: h[1].length, title: h[2].trim(), lines: [] }; blocks.push(cur); continue; }\n    if (cur && l.trim()) cur.lines.push(l);\n  }\n  return { fmKeys, blocks };\n}\nconst TPL = parseTemplate(ctx.template);\nconst ART = { unterstuetzung: 'Unterstützung', widerstand: 'Widerstand', zone: 'Kauf-/Beobachtungszone', kursziel: 'Kursziel', invalidation: 'Invalidation' };\nconst NAMEN = { kurzueberblick: 'Kurzüberblick', primaerszenario: 'Primärszenario', alternatives_szenario: 'Alternatives Szenario', trigger: 'Trigger', elliott: 'Elliott-Wellen-Stand', trend: 'Trendstruktur', gleitende_durchschnitte: 'Gleitende Durchschnitte', fibonacci: 'Fibonacci-Niveaus', ausstehende_bestaetigungen: 'Ausstehende Bestätigungen', risiken: 'Unsicherheiten und Risiken' };\nconst q = s => JSON.stringify(s == null ? '' : String(s));\nconst deD = d => d ? `${d.slice(8, 10)}.${d.slice(5, 7)}.${d.slice(0, 4)}` : '';\nconst lk = u => u ? `[[${u.update}|${deD(u.datum)}]]` : '';\nconst tage = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 864e5);\nconst deN = v => Number(v).toLocaleString('de-DE', { maximumFractionDigits: 2 });\nconst wertTxt = m => m.wert == null ? '' : (m.wert_bis != null ? `${deN(m.wert)} – ${deN(m.wert_bis)}` : deN(m.wert)) + ` ${m.waehrung || 'USD'}`;\nconst kurz = m => [wertTxt(m) ? `**${wertTxt(m)}**` : '', m.beschreibung].filter(Boolean).join(' – ');\n\nfunction render(s, archiv) {\n  const latest = s.stand ? s.stand.datum : U.datum;\n  const alter = d => { const t = d ? tage(d, latest) : 0; return t > ALTERUNG_TAGE ? ` · ⚠️ seit ${t} Tagen nicht bestätigt` : ''; };\n  const byId = Object.fromEntries(s.marken.map(m => [m.id, m]));\n  const markenListe = art => {\n    const akt = s.marken.filter(m => m.art === art && m.status === 'aktiv').sort((a, b) => (b.wert ?? -1) - (a.wert ?? -1));\n    const weg = s.marken.filter(m => m.art === art && m.status !== 'aktiv' && m.ende && tage(m.ende.datum, latest) <= 60);\n    return [\n      ...akt.map(m => `- ${kurz(m)} · gültig · erstmals ${lk(m.erstmals)} · zuletzt bestätigt ${lk(m.zuletzt)}${alter(m.zuletzt.datum)}`),\n      ...weg.map(m => `- ~~${kurz(m)}~~ · ${m.status === 'ersetzt' && byId[m.ersetzt_durch] ? `ersetzt durch **${wertTxt(byId[m.ersetzt_durch]) || byId[m.ersetzt_durch].beschreibung}**` : 'nicht mehr gültig'} seit ${lk(m.ende)}${m.ende.grund ? ` („${m.ende.grund}“)` : ''}`),\n    ].join('\\n');\n  };\n  const abschnitt = k => {\n    const a = s.abschnitte[k];\n    if (!a || !a.text) return '';\n    const best = a.bestaetigt && a.bestaetigt.datum > a.stand.datum ? a.bestaetigt : null;\n    return `${a.text}\\n\\n*Stand: ${lk(a.stand)}${best ? ` · zuletzt bestätigt ${lk(best)}` : ''}${alter((best || a.stand).datum)}*`;\n  };\n  const la = s.letzte_aenderung;\n  const aenderung = sub => {\n    if (!la) return '';\n    const t = norm(sub);\n    if (t === 'neu') return la.neu.map(id => byId[id]).filter(Boolean).map(m => `- ${kurz(m)} · ${ART[m.art]}`).join('\\n');\n    if (t.startsWith('weiterhin')) return [\n      ...la.bestaetigt.map(id => byId[id]).filter(m => m && m.status === 'aktiv').map(m => `- ${kurz(m)} · ${ART[m.art]} · bestätigt`),\n      ...la.nicht_erwaehnt.map(id => byId[id]).filter(m => m && m.status === 'aktiv').map(m => `- ${kurz(m)} · ${ART[m.art]} · nicht erwähnt, gilt weiter`),\n    ].join('\\n');\n    if (t.startsWith('geandert')) return [\n      ...la.geaendert.map(g => [byId[g.alt], byId[g.neu]]).filter(x => x[0] && x[1]).map(([a, b]) => `- ${ART[a.art]}: ${wertTxt(a) || a.beschreibung} → **${wertTxt(b) || b.beschreibung}**${a.ende && a.ende.grund ? ` („${a.ende.grund}“)` : ''}`),\n      ...(la.abschnitte.length ? [`- Aktualisierte Abschnitte: ${la.abschnitte.map(k => NAMEN[k]).join(', ')}`] : []),\n    ].join('\\n');\n    if (t.startsWith('nicht mehr')) return la.aufgehoben.map(id => byId[id]).filter(Boolean).map(m => `- ${kurz(m)} · ${ART[m.art]}${m.ende && m.ende.grund ? ` („${m.ende.grund}“)` : ''}`).join('\\n');\n    return '';\n  };\n  const content = (title) => {\n    const t = norm(title);\n    if (t.startsWith('kurzuberblick')) return abschnitt('kurzueberblick');\n    if (t.includes('primarszenario')) return abschnitt('primaerszenario');\n    if (t.startsWith('alternatives')) return abschnitt('alternatives_szenario');\n    if (t.includes('trigger')) return abschnitt('trigger');\n    if (t.startsWith('unterstutzung')) return markenListe('unterstuetzung');\n    if (t.startsWith('widerstand')) return markenListe('widerstand');\n    if (t.startsWith('kauf')) return markenListe('zone');\n    if (t.startsWith('kursziel')) return markenListe('kursziel');\n    if (t.startsWith('invalidation')) return markenListe('invalidation');\n    if (t.startsWith('elliott')) return abschnitt('elliott');\n    if (t.startsWith('trend')) return abschnitt('trend');\n    if (t.startsWith('gleitende')) return abschnitt('gleitende_durchschnitte');\n    if (t.startsWith('fibonacci')) return abschnitt('fibonacci');\n    if (t.includes('ausstehende')) return abschnitt('ausstehende_bestaetigungen');\n    if (t.startsWith('anderungen durch')) return la ? `Bezug: ${lk(la)}${(la.nachtraege || []).length ? ` · ergänzt durch Nachtrag ${la.nachtraege.map(lk).join(', ')}` : ''}` : '';\n    if (t.startsWith('unsicherheiten')) return abschnitt('risiken');\n    if (t.startsWith('verwendete')) return [...s.updates].reverse().map(u => `- ${lk(u)} – neu ${u.neu}, bestätigt ${u.bestaetigt}, geändert ${u.geaendert}, nicht mehr gültig ${u.aufgehoben}, Abschnitte aktualisiert ${u.abschnitte}${u.nachtrag ? ' (Nachtrag)' : ''}`).join('\\n');\n    return null;\n  };\n  // Frontmatter: Template-Felder in Template-Reihenfolge, danach Zusatzfelder\n  const known = {\n    typ: 'analysten-wertpapierstatus', status: archiv ? 'archiviert' : 'review', quelle: 'Patreon', analyst: 'The Long Investor',\n    instrument: q(s.instrument || s.ticker), ticker: s.ticker, letztes_update: s.stand ? q(`[[${s.stand.update}]]`) : '\"\"', zeiteinheit: '\"\"',\n  };\n  const fm = ['---'];\n  for (const k of TPL.fmKeys) fm.push(`${k}: ${known[norm(k).replace(/ /g, '_')] ?? ''}`.replace(/\\s+$/, ''));\n  fm.push(\n    `stand: ${s.stand ? s.stand.datum : ''}`,\n    `erstes_update: ${s.updates.length ? q(`[[${s.updates[0].update}]]`) : '\"\"'}`,\n    `anzahl_updates: ${s.updates.length}`,\n    `theorie:${s.konzepte.length ? '\\n' + s.konzepte.map(c => `  - ${q(`[[${c.ziel}|${c.begriff}]]`)}`).join('\\n') : ' []'}`,\n    `pruefhinweise:${(s.pruefhinweise || []).length ? '\\n' + s.pruefhinweise.map(h => `  - ${q(h)}`).join('\\n') : ' []'}`,\n    `aktualisiert_am: ${s.aktualisiert_am || ''}`,\n    'verarbeitung:',\n    `  workflow: ${q(WORKFLOW)}`,\n    `  prompt_version: ${q((s.verarbeitung || {}).prompt_version || '')}`,\n    `  modell: ${q((s.verarbeitung || {}).modell || '')}`,\n    '---', '');\n  const out = [fm.join('\\n')];\n  let inVerwendet = false;\n  for (const b of TPL.blocks) {\n    if (b.level === 1) {\n      out.push('# ' + b.title.replace(/\\{\\{\\s*instrument\\s*\\}\\}/gi, s.ticker) + (archiv ? ` (Stand ${deD(s.stand && s.stand.datum)})` : ''), '');\n      out.push(`> **Datei-Stand:** ${s.stand ? lk(s.stand) : '–'} · ${s.updates.length} Update(s) seit ${deD(s.updates[0] && s.updates[0].datum)} · Einschätzungen des Analysten, keine Anlageempfehlung.`, '');\n      continue;\n    }\n    out.push(`${'#'.repeat(b.level)} ${b.title}`);\n    let c = null;\n    const parent = TPL.blocks.slice(0, TPL.blocks.indexOf(b)).reverse().find(x => x.level < b.level);\n    if (b.level === 3 && parent && norm(parent.title).startsWith('anderungen durch')) c = aenderung(b.title);\n    else c = content(b.title);\n    if (c == null) c = b.lines.filter(l => !/\\[\\[[^\\]]*\\]\\]/.test(l)).join('\\n');\n    out.push(c ? c + '\\n' : '');\n  }\n  let text = out.join('\\n').replace(/\\n{3,}/g, '\\n\\n').trimEnd() + '\\n';\n  // Theorie-Links: je Begriff das erste Vorkommen im Text verlinken (nicht in Überschriften, Kopfzeile, Updateliste)\n  const esc = x => x.replace(/[.*+?^${}()|[\\]\\\\]/g, '\\\\$&');\n  const [head, ...rest] = text.split(/\\n---\\n/);\n  let body = rest.join('\\n---\\n');\n  const lines = body.split('\\n');\n  for (const c of [...s.konzepte].sort((a, b) => b.begriff.length - a.begriff.length)) {\n    const re = new RegExp(`(?<![\\\\p{L}\\\\p{N}])${esc(c.begriff)}(?![\\\\p{L}\\\\p{N}])`, 'iu');\n    let stop = false;\n    for (let i = 0; i < lines.length && !stop; i++) {\n      const l = lines[i];\n      if (/^#{1,6}\\s/.test(l) && /verwendete/i.test(l)) break;\n      if (/^#{1,6}\\s/.test(l) || /^>/.test(l)) continue;\n      const parts = l.split(/(\\[\\[[^\\]]*\\]\\])/);\n      for (let j = 0; j < parts.length; j += 2) {\n        if (re.test(parts[j])) { parts[j] = parts[j].replace(re, x => `[[${c.ziel}|${x}]]`); stop = true; break; }\n      }\n      if (stop) lines[i] = parts.join('');\n    }\n  }\n  return head + '\\n---\\n' + lines.join('\\n');\n}\n\n// ---------- Ausgabe ----------\nconst T = st.ticker;\nconst statusDir = `${st.ticker_dir}/Aktueller Stand`;\nif (!statusDir.startsWith(ROOT + '/') || statusDir.includes('..') || !/^[A-Za-z0-9 ._\\/&-]+$/.test(statusDir)) throw new Error('Unzulässiger Status-Pfad: ' + statusDir);\nconst b64 = s => Buffer.from(s, 'utf8').toString('base64');\nconst files = [];\nlet cmd = `mkdir -p \"${statusDir}\"`;\nif (!alt) cmd += ` && if [ -f \"${statusDir}/${T} - Aktueller Analystenstand.md\" ]; then mkdir -p \"${statusDir}/_History\" && mv \"${statusDir}/${T} - Aktueller Analystenstand.md\" \"${statusDir}/_History/${T} - Aktueller Analystenstand (alter Flow).md\"; fi`;\nfiles.push({ kind: 'status', target_dir: statusDir, command: cmd, target_path: `${statusDir}/${T} - Aktueller Stand.md`, file_name: `${T} - Aktueller Stand.md`, content_b64: b64(render(st, false)) });\nif (alt && alt.stand) {\n  const hn = `${T} - Stand ${alt.stand.datum} (${alt.updates.length} Updates).md`;\n  files.push({ kind: 'history', target_dir: `${statusDir}/_History`, command: `mkdir -p \"${statusDir}/_History\"`, target_path: `${statusDir}/_History/${hn}`, file_name: hn, content_b64: b64(render(alt, true)) });\n}\nfiles.push({ kind: 'state', target_dir: STATE_DIR, command: `mkdir -p \"${STATE_DIR}\"`, target_path: `${STATE_DIR}/${T}.json`, file_name: `${T}.json`, content_b64: b64(JSON.stringify(st, null, 2) + '\\n') });\nreturn files.map(f => ({ json: { ...f, ticker: T, update: U.update, nachtrag, neu: neuIds.length, bestaetigt: bestIds.length, geaendert: geaendert.length, aufgehoben: aufgehoben.length, hinweise: hinweise.length } }));\n"
+      },
+      "position": [
+        3360,
+        688
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "5376e902-dcf7-4e44-b386-0399cd2ce005",
+      "name": "Status-Daten auswerten",
+      "parameters": {
+        "jsCode": "// Flow B – Status-Daten auswerten (v0.3): bisherigen Stand (JSON) laden, falls vorhanden\n// Neuaufbau (erster Auftrag eines Tickers mit neuaufbau=true): bisherigen Stand NICHT verwenden,\n// sondern von vorne beginnen. Der alte Stand wird vorher gesichert (siehe Node \"Ordner anlegen\").\nconst pfad = $('Update auswerten').first().json.update_path;\nconst job = ($('Vorbereitung').all().map(i => i.json).find(j => j.update_path === pfad)) || {};\nconst it = $input.first();\nlet state = null;\nif (it.binary && it.binary.data) {\n  const txt = (await this.helpers.getBinaryDataBuffer(0, 'data')).toString('utf8');\n  try { state = JSON.parse(txt); } catch (e) { throw new Error('Status-Daten sind kein gültiges JSON: ' + e.message); }\n}\nif (job.neuaufbau) return [{ json: { state: null, neuaufbau: true, state_vorher_stand: state && state.stand ? state.stand.datum : '', grund: job.grund || '' } }];\nreturn [{ json: { state, neuaufbau: false } }];\n"
+      },
+      "position": [
+        2160,
+        784
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "alwaysOutputData": true,
+      "id": "7c72e8e2-5612-40c0-82e8-51f3ad565c98",
+      "name": "Status-Daten lesen",
+      "parameters": {
+        "fileSelector": "={{ $json.state_path }}",
+        "options": {}
+      },
+      "position": [
+        1920,
+        784
+      ],
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1
+    },
+    {
+      "executeOnce": true,
+      "id": "d1f8eaa3-8d58-4787-ba5a-77e1dfed716c",
+      "name": "Status-Template lesen",
+      "parameters": {
+        "fileSelector": "/vault/Finanzen/Trading/Templates/Analysten-Wertpapierstatus.md",
+        "options": {}
+      },
+      "position": [
+        720,
+        624
+      ],
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "400bacb7-a11e-4255-8e8c-34835effe465",
+      "name": "Update auswerten",
+      "parameters": {
+        "jsCode": "// Flow B – Update auswerten (v0.1): Update-Datei zerlegen (Frontmatter, Abschnitte, Marken)\nconst it = $input.first();\nconst b = it.binary && it.binary.data;\nif (!b) throw new Error('Update-Datei nicht gefunden');\nconst text = (await this.helpers.getBinaryDataBuffer(0, 'data')).toString('utf8').replace(/\\r/g, '');\nconst path = `${b.directory}/${b.fileName}`;\nconst name = b.fileName.replace(/\\.md$/, '');\nconst norm = s => String(s || '').toLowerCase().normalize('NFKD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();\n\n// Frontmatter (einfaches YAML: key: wert / Listen mit \"  - \")\nconst fm = {};\nconst m = text.match(/^---\\s*\\n([\\s\\S]*?)\\n---\\s*\\n?([\\s\\S]*)$/);\nconst body = m ? m[2] : text;\nif (m) {\n  let cur = null;\n  for (const l of m[1].split('\\n')) {\n    const kv = l.match(/^([^\\s:#-][^:]*):\\s*(.*)$/);\n    if (kv) { cur = norm(kv[1]).replace(/ /g, '_'); const v = kv[2].trim(); fm[cur] = v === '' ? [] : v.replace(/^\"(.*)\"$/, '$1'); continue; }\n    const li = l.match(/^\\s+-\\s+(.*)$/);\n    if (li && cur && Array.isArray(fm[cur])) fm[cur].push(li[1].trim().replace(/^\"(.*)\"$/, '$1'));\n  }\n}\n// Abschnitte (## und ###)\nconst sec = {}; let cur = null;\nfor (const l of body.split('\\n')) {\n  const h = l.match(/^(#{2,3})\\s+(.*)$/);\n  if (h) { cur = norm(h[2]); sec[cur] = []; continue; }\n  if (cur) sec[cur].push(l);\n}\nconst get = (...keys) => { for (const k of Object.keys(sec)) if (keys.some(x => k.startsWith(x))) return sec[k].join('\\n').trim(); return ''; };\n\n// Marken aus den Listen (\"- 143 USD – Text (Notiz)\" bzw. \"- 140 – 150 USD – Text\")\nconst toNum = s => Number(String(s).replace(/\\./g, '').replace(',', '.'));\nconst NUM = '(\\\\d{1,3}(?:\\\\.\\\\d{3})*(?:,\\\\d+)?|\\\\d+(?:,\\\\d+)?)';\nconst reLevel = new RegExp(`^${NUM}(?:\\\\s*–\\\\s*${NUM})?\\\\s+([A-Z]{3}|\\\\$|€)(?:\\\\s+–\\\\s+(.*))?$`);\nconst marken = [];\nconst ARTEN = [['unterstutzung', 'unterstuetzung'], ['widerstand', 'widerstand'], ['kauf', 'zone'], ['invalidation', 'invalidation'], ['kursziel', 'kursziel']];\nfor (const [prefix, art] of ARTEN) {\n  for (const l of get(prefix).split('\\n')) {\n    const s = l.replace(/^\\s*-\\s+/, '').trim();\n    if (!l.trim().startsWith('-') || !s || /^nicht genannt/i.test(s)) continue;\n    const x = s.match(reLevel);\n    const mk = x\n      ? { art, wert: toNum(x[1]), wert_bis: x[2] ? toNum(x[2]) : null, waehrung: x[3] === '$' ? 'USD' : x[3] === '€' ? 'EUR' : x[3], beschreibung: (x[4] || '').trim() }\n      : { art, wert: null, wert_bis: null, waehrung: '', beschreibung: s };\n    mk.id = 'N' + (marken.length + 1);\n    marken.push(mk);\n  }\n}\n// Inhalt für den Abgleich: alles außer Verwaltungsabschnitten (Originaltext bleibt für Belege drin)\nconst SKIP = ['anderungen gegenuber', 'quellenangabe', 'verknupfungen'];\nlet kern = [], skip = false;\nfor (const l of body.split('\\n')) {\n  const h = l.match(/^(#{1,3})\\s+(.*)$/);\n  if (h) skip = SKIP.some(x => norm(h[2]).startsWith(x));\n  if (skip || /^!\\[\\[/.test(l)) continue;\n  kern.push(l);\n}\nconst datum = String(fm.veroffentlicht || fm.veroeffentlicht || name.slice(0, 10)).slice(0, 10);\nconst ticker = String(fm.ticker || name.split(' - ')[1] || '').toUpperCase().replace(/[^A-Z0-9._-]/g, '');\nif (!/^\\d{4}-\\d{2}-\\d{2}$/.test(datum) || !ticker) throw new Error('Datum oder Ticker fehlt in ' + name);\nconst tickerDir = b.directory.replace(/\\/Updates$/, '');\nconst kategorie = 'Technisch'; // v0.2: <TICKER>/1 technische Analyse – Status nur für technische Analysen\nreturn [{ json: {\n  update_path: path, name, datum, ticker, kategorie, ticker_dir: tickerDir,\n  instrument: typeof fm.instrument === 'string' ? fm.instrument : '',\n  konzepte: Array.isArray(fm.konzepte) ? fm.konzepte : [],\n  marken, kern: kern.join('\\n').replace(/\\n{3,}/g, '\\n\\n').trim(),\n  state_path: `/vault/Finanzen/Trading/System/Automation/status-state/${ticker}.json`,\n} }];\n"
+      },
+      "position": [
+        1680,
+        784
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    },
+    {
+      "id": "74fceeaf-0d60-4040-96a3-24261b4a484d",
+      "name": "Update lesen",
+      "parameters": {
+        "fileSelector": "={{ $json.update_path }}",
+        "options": {}
+      },
+      "position": [
+        1440,
+        784
+      ],
+      "type": "n8n-nodes-base.readWriteFile",
+      "typeVersion": 1
+    },
+    {
+      "id": "4e6c46ea-235f-4277-bd0a-3bf317b80d41",
+      "name": "Vorbereitung",
+      "parameters": {
+        "jsCode": "// Flow B – Vorbereitung (v0.1): Status-Template einlesen und an jeden Auftrag hängen\nconst bin = $input.first().binary && $input.first().binary.data;\nif (!bin) throw new Error('Template Trading/Templates/Analysten-Wertpapierstatus.md nicht gefunden');\nconst template = (await this.helpers.getBinaryDataBuffer(0, 'data')).toString('utf8');\nreturn $('Aufträge sammeln').all().map(i => ({ json: { ...i.json, template } }));\n"
+      },
+      "position": [
+        960,
+        624
+      ],
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2
+    }
+  ],
+  "settings": {
+    "availableInMCP": true,
+    "binaryMode": "separate",
+    "executionOrder": "v1"
+  },
+  "sourceWorkflowId": null,
+  "tags": [],
+  "versionCounter": 5,
+  "versionMetadata": {
+    "description": "Neue Regel 4: ausdrücklich verworfene Zählung/Szenario hebt alle zugehörigen Marken auf; ausgelöste Invalidation wird aufgehoben; Abschnitte werden dann aktualisiert.",
+    "name": "v0.3: Prompt status-abgleich-v2"
+  }
+}
