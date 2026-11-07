@@ -11,7 +11,7 @@ analyseart:
   - technisch
 zeithorizont: ""
 quell_url: "https://www.patreon.com/thelonginvestor/posts/amd-top-10-20-174558438"
-vorgänger: ""
+vorgänger: "[[2026-11-05 - AMD - Analysten-Update]]"
 nachfolger: ""
 hauptkategorie: Technisch
 kategorie: "1 Analyse"

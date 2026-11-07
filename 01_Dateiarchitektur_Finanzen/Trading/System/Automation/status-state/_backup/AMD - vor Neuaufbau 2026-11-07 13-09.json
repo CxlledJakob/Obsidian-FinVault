@@ -1,0 +1,199 @@
+{
+  "schema": "status-v1",
+  "ticker": "AMD",
+  "kategorie": "Technisch",
+  "instrument": "",
+  "ticker_dir": "/vault/Finanzen/Trading/Research/Analysten/The Long Investor/AMD/1 technische Analyse",
+  "stand": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - AMD - Analysten-Update"
+  },
+  "next_id": 4,
+  "marken": [
+    {
+      "id": "M1",
+      "art": "unterstuetzung",
+      "wert": 414,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "200 Day MA (Unterstützung, kurz unterschritten)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      }
+    },
+    {
+      "id": "M2",
+      "art": "unterstuetzung",
+      "wert": null,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "Buy Zone (Zone vom Vortag erreicht, Grenzen nicht genannt)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      }
+    },
+    {
+      "id": "M3",
+      "art": "invalidation",
+      "wert": 356,
+      "wert_bis": null,
+      "waehrung": "USD",
+      "beschreibung": "0.5 Fib (Abwärtsrisiko, Ausschluss zu früh)",
+      "status": "aktiv",
+      "erstmals": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "zuletzt": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      }
+    }
+  ],
+  "abschnitte": {
+    "kurzueberblick": {
+      "text": "Nach einem Einbruch von 17% in einer Sitzung sieht der Analyst die 200 Day MA bei 414 USD als Unterstützung, die kurz unterschritten wurde. Im Premarket steigt die Aktie um 8%, was er als Value-Käufer deutet. Entscheidend ist, ob der Kurs über der 200 Day MA stabilisiert und ein Higher Low bildet; das Abwärtsrisiko bei 356 USD (0.5 Fib) hält er noch nicht für ausgeschlossen.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "primaerszenario": {
+      "text": "Der Analyst sieht den Pullback als beendet an, wenn der Kurs über der 200 Day MA bei 414 USD hält und ein Higher Low entsteht.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "alternatives_szenario": {
+      "text": "Der Analyst hält es für möglich, dass es sich nur um eine kurze Erholung nach einem sehr großen Rücksetzer handelt, mit Abwärtsrisiko bis zum 0.5 Fib bei 356 USD.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "trigger": {
+      "text": "- Stabilisierung und Halten über der 200 Day MA bei 414 USD\n- Bildung eines Higher Low\n- Kurs fällt in Richtung 356 USD (0.5 Fib), was das Abwärtsszenario stützen würde",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "elliott": {
+      "text": "Wave A ist abwärts gerichtet, Wave B hat eine Erholung bis zum 0.5 Fib bei 580 USD gebracht, danach folgte eine Ablehnung und ein Rückgang tiefer.",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "gleitende_durchschnitte": {
+      "text": "- 200 Day MA bei 414 USD: Unterstützung, wurde kurz unterschritten; der Analyst beobachtet, ob der Kurs darüber stabilisiert",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "fibonacci": {
+      "text": "- 0.5 Fib bei 580 USD: Wave-B-Erholung, danach Ablehnung\n- 0.5 Fib bei 356 USD: mögliches Abwärtsrisiko, Ausschluss laut Analyst zu früh",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "ausstehende_bestaetigungen": {
+      "text": "- Stabilisierung und Halten über der 200 Day MA bei 414 USD\n- Bildung eines Higher Low\n- Buy Zone: Zone vom Vortag wurde erreicht, Grenzen nicht genannt",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    },
+    "risiken": {
+      "text": "- Zu frühe Entwarnung; Abwärtsrisiko bei 356 USD (0.5 Fib) nicht ausgeschlossen\n- Kein Kursziel genannt\n- Kein Zeithorizont genannt\n- Buy-Zone-Grenzen nicht genannt",
+      "stand": {
+        "datum": "2026-11-06",
+        "update": "2026-11-06 - AMD - Analysten-Update"
+      },
+      "bestaetigt": null
+    }
+  },
+  "updates": [
+    {
+      "datum": "2026-11-06",
+      "update": "2026-11-06 - AMD - Analysten-Update",
+      "nachtrag": false,
+      "neu": 3,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 9,
+      "verarbeitet_am": "2026-11-06T23:41:25.019Z",
+      "kosten_cent": 0.1063
+    }
+  ],
+  "konzepte": [
+    {
+      "begriff": "Elliott-Wellen",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/10 - Elliott-Wellen"
+    },
+    {
+      "begriff": "Fibonacci-Retracement",
+      "ziel": "Trading/Notes/10 - Elliott-Wellen/Fibonacci-Retracement"
+    },
+    {
+      "begriff": "Unterstützungen & Widerstände",
+      "ziel": "Trading/Notes/03 - Unterstützungen & Widerstände/03 - Unterstützungen & Widerstände"
+    }
+  ],
+  "letzte_aenderung": {
+    "datum": "2026-11-06",
+    "update": "2026-11-06 - AMD - Analysten-Update",
+    "neu": [
+      "M1",
+      "M2",
+      "M3"
+    ],
+    "bestaetigt": [],
+    "nicht_erwaehnt": [],
+    "geaendert": [],
+    "aufgehoben": [],
+    "abschnitte": [
+      "kurzueberblick",
+      "primaerszenario",
+      "alternatives_szenario",
+      "trigger",
+      "elliott",
+      "gleitende_durchschnitte",
+      "fibonacci",
+      "ausstehende_bestaetigungen",
+      "risiken"
+    ]
+  },
+  "pruefhinweise": [],
+  "aktualisiert_am": "2026-11-06T23:41:25.019Z",
+  "verarbeitung": {
+    "workflow": "FinVault Status fortschreiben v0.2",
+    "prompt_version": "status-abgleich-v1",
+    "modell": "claude-haiku-5-5",
+    "kosten_cent": 0.1063
+  }
+}

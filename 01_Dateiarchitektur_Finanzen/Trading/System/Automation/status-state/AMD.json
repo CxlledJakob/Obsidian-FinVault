@@ -64,7 +64,7 @@
   ],
   "abschnitte": {
     "kurzueberblick": {
-      "text": "Nach einem Einbruch von 17% in einer Sitzung sieht der Analyst die 200 Day MA bei 414 USD als Unterstützung, die kurz unterschritten wurde. Im Premarket steigt die Aktie um 8%, was er als Value-Käufer deutet. Entscheidend ist, ob der Kurs über der 200 Day MA stabilisiert und ein Higher Low bildet; das Abwärtsrisiko bei 356 USD (0.5 Fib) hält er noch nicht für ausgeschlossen.",
+      "text": "Nach einem Einbruch von 17% in einer Sitzung sieht der Analyst die 200 Day MA bei 414 USD als Unterstützung, die kurz unterschritten wurde. Im Premarket steigt die Aktie um 8%, was der Analyst als Einstieg von Value-Käufern deutet. Entscheidend ist, ob der Kurs über der 200 Day MA stabilisiert und ein Higher Low bildet; das Abwärtsrisiko bei 356 USD (0.5 Fib) sieht er noch nicht als ausgeschlossen.",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -72,7 +72,7 @@
       "bestaetigt": null
     },
     "primaerszenario": {
-      "text": "Der Analyst sieht den Pullback als beendet an, wenn der Kurs über der 200 Day MA bei 414 USD hält und ein Higher Low entsteht.",
+      "text": "Der Analyst erwartet, dass der Pullback beendet ist, wenn der Kurs über der 200 Day MA bei 414 USD hält und ein Higher Low entsteht.",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -80,7 +80,7 @@
       "bestaetigt": null
     },
     "alternatives_szenario": {
-      "text": "Der Analyst hält es für möglich, dass es sich nur um eine kurze Erholung nach einem sehr großen Rücksetzer handelt, mit Abwärtsrisiko bis zum 0.5 Fib bei 356 USD.",
+      "text": "Der Analyst sieht die aktuelle Erholung als möglicherweise nur kurze Gegenbewegung nach einem sehr großen Rücksetzer, mit Abwärtsrisiko bis zum 0.5 Fib bei 356 USD.",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -88,7 +88,7 @@
       "bestaetigt": null
     },
     "trigger": {
-      "text": "- Stabilisierung und Halten über der 200 Day MA bei 414 USD\n- Bildung eines Higher Low\n- Kurs fällt in Richtung 356 USD (0.5 Fib), was das Abwärtsszenario stützen würde",
+      "text": "- Stabilisierung und Halten über der 200 Day MA bei 414 USD\n- Bildung eines Higher Low",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -96,7 +96,7 @@
       "bestaetigt": null
     },
     "elliott": {
-      "text": "Wave A ist abwärts gerichtet, Wave B hat eine Erholung bis zum 0.5 Fib bei 580 USD gebracht, danach folgte eine Ablehnung und ein Rückgang tiefer.",
+      "text": "Der Analyst beschreibt Wave A abwärts und eine Wave B Erholung bis zum 0.5 Fib bei 580 USD mit anschließender Ablehnung und einem weiteren Rückgang.",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -104,7 +104,7 @@
       "bestaetigt": null
     },
     "gleitende_durchschnitte": {
-      "text": "- 200 Day MA bei 414 USD: Unterstützung, wurde kurz unterschritten; der Analyst beobachtet, ob der Kurs darüber stabilisiert",
+      "text": "- 200 Day MA bei 414 USD: Unterstützung, die kurz unterschritten wurde",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -112,7 +112,7 @@
       "bestaetigt": null
     },
     "fibonacci": {
-      "text": "- 0.5 Fib bei 580 USD: Wave-B-Erholung, danach Ablehnung\n- 0.5 Fib bei 356 USD: mögliches Abwärtsrisiko, Ausschluss laut Analyst zu früh",
+      "text": "- 0.5 Fib bei 580 USD: Wave-B-Erholung, danach Ablehnung\n- 0.5 Fib bei 356 USD: Abwärtsrisiko, Ausschluss laut Analyst zu früh",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -120,7 +120,7 @@
       "bestaetigt": null
     },
     "ausstehende_bestaetigungen": {
-      "text": "- Stabilisierung und Halten über der 200 Day MA bei 414 USD\n- Bildung eines Higher Low\n- Buy Zone: Zone vom Vortag wurde erreicht, Grenzen nicht genannt",
+      "text": "- Stabilisierung des Kurses über der 200 Day MA bei 414 USD\n- Bildung eines Higher Low\n- Buy Zone (Grenzen nicht genannt) wurde am Vortag erreicht",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -128,7 +128,7 @@
       "bestaetigt": null
     },
     "risiken": {
-      "text": "- Zu frühe Entwarnung; Abwärtsrisiko bei 356 USD (0.5 Fib) nicht ausgeschlossen\n- Kein Kursziel genannt\n- Kein Zeithorizont genannt\n- Buy-Zone-Grenzen nicht genannt",
+      "text": "- Zu frühe Entwarnung; Abwärtsrisiko bis 356 USD (0.5 Fib) nicht ausgeschlossen\n- Kurs-, Zeithorizont- und Buy-Zone-Grenzen nicht genannt",
       "stand": {
         "datum": "2026-11-06",
         "update": "2026-11-06 - AMD - Analysten-Update"
@@ -138,6 +138,18 @@
   },
   "updates": [
     {
+      "datum": "2026-11-05",
+      "update": "2026-11-05 - AMD - Analysten-Update",
+      "nachtrag": false,
+      "neu": 0,
+      "bestaetigt": 0,
+      "geaendert": 0,
+      "aufgehoben": 0,
+      "abschnitte": 0,
+      "verarbeitet_am": "2026-11-07T12:09:28.981Z",
+      "kosten_cent": 0.0606
+    },
+    {
       "datum": "2026-11-06",
       "update": "2026-11-06 - AMD - Analysten-Update",
       "nachtrag": false,
@@ -146,8 +158,8 @@
       "geaendert": 0,
       "aufgehoben": 0,
       "abschnitte": 9,
-      "verarbeitet_am": "2026-11-06T23:41:25.019Z",
-      "kosten_cent": 0.1063
+      "verarbeitet_am": "2026-11-07T12:09:33.199Z",
+      "kosten_cent": 0.1094
     }
   ],
   "konzepte": [
@@ -189,11 +201,11 @@
     ]
   },
   "pruefhinweise": [],
-  "aktualisiert_am": "2026-11-06T23:41:25.019Z",
+  "aktualisiert_am": "2026-11-07T12:09:33.199Z",
   "verarbeitung": {
     "workflow": "FinVault Status fortschreiben v0.2",
-    "prompt_version": "status-abgleich-v1",
+    "prompt_version": "status-abgleich-v2",
     "modell": "claude-haiku-5-5",
-    "kosten_cent": 0.1063
+    "kosten_cent": 0.1094
   }
 }
