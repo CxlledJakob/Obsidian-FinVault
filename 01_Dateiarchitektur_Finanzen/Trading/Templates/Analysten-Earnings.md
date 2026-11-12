@@ -37,29 +37,28 @@ nachfolger:
 
 ## Umsatz
 
-| Kennzahl | Wert | QoQ | YoY | Anmerkung |
+| Position | Quartal | QoQ | YoY | Anmerkungen |
 |---|---|---|---|---|
-| | | | | |
+| Gesamt | | | | |
 
-## Operative Kennzahlen
+## Profitabilität
 
-| Kennzahl | Wert | QoQ | YoY | Anmerkung |
+| Kennzahl | Quartal | QoQ | YoY | Anmerkungen |
 |---|---|---|---|---|
-| | | | | |
+| Bereinigtes EBITDA | | | | |
+| Nettoergebnis | | | | |
 
-## Profitabilität und Cashflow
+## Liquidität und Verschuldung
 
-| Kennzahl | Wert | QoQ | YoY | Anmerkung |
+| Kennzahl | Quartal | QoQ | YoY | Anmerkungen |
 |---|---|---|---|---|
-| | | | | |
+| Freier Cashflow | | | | |
+| Zahlungsmittel | | | | |
+| Schulden | | | | |
 
-## Ausblick (Guidance)
+## Kommentar
 
-## Kommentar des Analysten
-
-## Bezug zum technischen Stand
-
-## Unsicherheiten und Risiken
+-
 
 ## Originalabbildungen und Anhänge
 
